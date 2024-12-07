@@ -24,7 +24,7 @@ An **Icon** component can be used to add icons(sourced from icon library). It su
 | On hover                                    | Triggers whenever the cursor is hovered over the icon. |
 | On click                                    | Triggers whenever the icon is clicked.                 |
 
-Just like any other event on ToolJet, you can set multiple handlers for any of the above-mentioned events.
+Just like any other event on JumpStart, you can set multiple handlers for any of the above-mentioned events.
 
 :::info
 Check [Action Reference](/docs/category/actions-reference) docs to get the detailed information about all the **Actions**.

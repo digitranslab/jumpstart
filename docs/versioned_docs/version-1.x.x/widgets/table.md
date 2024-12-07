@@ -6,13 +6,13 @@ title: Table
 
 Tables can be used for both displaying and editing data.
 
-<iframe height="500" src="https://www.youtube.com/embed/hTrdkUtz3aA" title="ToolJet Table Widget" frameborder="0" allowfullscreen width="100%"></iframe>
+<iframe height="500" src="https://www.youtube.com/embed/hTrdkUtz3aA" title="JumpStart Table Widget" frameborder="0" allowfullscreen width="100%"></iframe>
 
 ## Table data
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/table/data.png" alt="ToolJet - Widget Reference - Table" width="400" />
+<img className="screenshot-full" src="/img/widgets/table/data.png" alt="JumpStart - Widget Reference - Table" width="400" />
 
 </div>
 
@@ -28,7 +28,7 @@ The table component will **auto-generate all the columns** as soon as the expect
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/table/columns.png" alt="ToolJet - Widget Reference - Table" width="400" />
+<img className="screenshot-full" src="/img/widgets/table/columns.png" alt="JumpStart - Widget Reference - Table" width="400" />
 
 </div>
 
@@ -128,7 +128,7 @@ If the condition is true, the validation passes, otherwise return a string that 
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/table/action.png" alt="ToolJet - Widget Reference - Table" width="400" />
+<img className="screenshot-full" src="/img/widgets/table/action.png" alt="JumpStart - Widget Reference - Table" width="400" />
 
 </div>
 

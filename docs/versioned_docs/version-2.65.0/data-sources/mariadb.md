@@ -3,15 +3,15 @@ id: mariadb
 title: MariaDB
 ---
 
-ToolJet can connect to both self-hosted and cloud-based MariaDB servers to read and write data.
+JumpStart can connect to both self-hosted and cloud-based MariaDB servers to read and write data.
 
 <div style={{paddingTop:'24px'}}>
 
 ## Connection
 
-To establish a connection with the MariaDB global datasource, you can either click on the **+ Add new global datasource** button located on the query panel or navigate to the **[Global Datasources](/docs/data-sources/overview)** page through the ToolJet dashboard.
+To establish a connection with the MariaDB global datasource, you can either click on the **+ Add new global datasource** button located on the query panel or navigate to the **[Global Datasources](/docs/data-sources/overview)** page through the JumpStart dashboard.
 
-**ToolJet requires the following connection details to connect to MariaDB:**
+**JumpStart requires the following connection details to connect to MariaDB:**
 
 - **Host:** The hostname or IP address of the MariaDB server.
 - **Username:** The username for the MariaDB account.
@@ -33,7 +33,7 @@ To establish a connection with the MariaDB global datasource, you can either cli
 
 ## Querying MariaDB
 
-Once you have connected to the MariaDB datasource, follow these steps to write queries and interact with a MariaDB database from the ToolJet application:
+Once you have connected to the MariaDB datasource, follow these steps to write queries and interact with a MariaDB database from the JumpStart application:
 
 1. Click the **+ Add** button to open the list of available datasources.
 2. Select **MariaDB** from the global datasource section.
@@ -182,11 +182,11 @@ Remember to adjust the values and conditions based on your specific needs. These
 <div style={{paddingTop:'24px'}}>
 
 ## Troubleshooting Tips
-If you are having trouble connecting a MariaDB data source to ToolJet, try the following:
-- Make sure that your MariaDB server is running and accessible from the ToolJet server.
+If you are having trouble connecting a MariaDB data source to JumpStart, try the following:
+- Make sure that your MariaDB server is running and accessible from the JumpStart server.
 - Check the spelling and capitalization of your credentials.
-- Try restarting the ToolJet server.
+- Try restarting the JumpStart server.
 
-If you are still having trouble, please contact [ToolJet support](mailto:hello@tooljet.com) or ask on [slack](https://tooljet.com/slack) for assistance.
+If you are still having trouble, please contact [JumpStart support](mailto:hello@jumpstart.com) or ask on [slack](https://jumpstart.com/slack) for assistance.
 
 </div>

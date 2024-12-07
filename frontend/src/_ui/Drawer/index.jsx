@@ -10,7 +10,7 @@ import Toast from '@/_ui/Toast';
 
 function createPortalRoot() {
   const drawerRoot = document.createElement('div');
-  drawerRoot.setAttribute('id', 'tooljet-drawer-root');
+  drawerRoot.setAttribute('id', 'jumpstart-drawer-root');
 
   return drawerRoot;
 }
@@ -27,7 +27,7 @@ const Drawer = ({
   isForeignKeyRelation = false,
 }) => {
   const bodyRef = useRef(document.querySelector('body'));
-  const portalRootRef = useRef(document.getElementById('tooljet-drawer-root') || createPortalRoot());
+  const portalRootRef = useRef(document.getElementById('jumpstart-drawer-root') || createPortalRoot());
   const isTransitioning = useMountTransition(isOpen, 300);
 
   // Append portal root on mount

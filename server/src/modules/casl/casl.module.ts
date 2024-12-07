@@ -16,7 +16,7 @@ import { CaslAbilityFactory } from './casl-ability.factory';
 import { FoldersAbilityFactory } from './abilities/folders-ability.factory';
 import { FilesService } from '@services/files.service';
 import { OrgEnvironmentVariablesAbilityFactory } from './abilities/org-environment-variables-ability.factory';
-import { TooljetDbAbilityFactory } from './abilities/tooljet-db-ability.factory';
+import { JumpstartDbAbilityFactory } from './abilities/jumpstart-db-ability.factory';
 import { GlobalDataSourceAbilityFactory } from './abilities/global-datasource-ability.factory';
 import { OrganizationConstantsAbilityFactory } from './abilities/organization-constants-ability.factory';
 
@@ -34,7 +34,7 @@ import { OrganizationConstantsAbilityFactory } from './abilities/organization-co
     PluginsAbilityFactory,
     FoldersAbilityFactory,
     OrgEnvironmentVariablesAbilityFactory,
-    TooljetDbAbilityFactory,
+    JumpstartDbAbilityFactory,
     GlobalDataSourceAbilityFactory,
     OrganizationConstantsAbilityFactory,
   ],
@@ -46,7 +46,7 @@ import { OrganizationConstantsAbilityFactory } from './abilities/organization-co
     PluginsAbilityFactory,
     FoldersAbilityFactory,
     OrgEnvironmentVariablesAbilityFactory,
-    TooljetDbAbilityFactory,
+    JumpstartDbAbilityFactory,
     GlobalDataSourceAbilityFactory,
     OrganizationConstantsAbilityFactory,
   ],

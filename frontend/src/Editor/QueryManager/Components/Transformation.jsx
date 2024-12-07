@@ -123,10 +123,10 @@ return data.filter(row => row.amount > 1000);
       <p className={`transformation-popover`} data-cy={`transformation-popover`}>
         {t(
           'editor.queryManager.transformation.transformationToolTip',
-          'Transformations can be enabled on queries to transform the query results. ToolJet allows you to transform the query results using two programming languages: JavaScript and Python'
+          'Transformations can be enabled on queries to transform the query results. JumpStart allows you to transform the query results using two programming languages: JavaScript and Python'
         )}
         <br />
-        <a href="https://docs.tooljet.io/docs/tutorial/transformations" target="_blank" rel="noreferrer">
+        <a href="https://docs.jumpstart.io/docs/tutorial/transformations" target="_blank" rel="noreferrer">
           {t('globals.readDocumentation', 'Read documentation')}
         </a>
         .
@@ -236,14 +236,14 @@ const EducativeLabel = ({ darkMode }) => {
       <div className={`transformation-popover card text-center ${darkMode && 'tj-dark-mode'}`}>
         <img src="/assets/images/icons/copilot.svg" alt="AI copilot" height={64} width={64} />
         <div className="d-flex flex-column card-body">
-          <h4 className="mb-2">ToolJet x OpenAI</h4>
+          <h4 className="mb-2">JumpStart x OpenAI</h4>
           <p className="mb-2">
             <strong style={{ fontWeight: 700, color: '#3E63DD' }}>AI copilot</strong> helps you write your queries
             faster. It uses OpenAI&apos;s GPT-3.5 to suggest queries based on your data.
           </p>
 
           <Button
-            onClick={() => window.open('https://docs.tooljet.com/docs/tooljet-copilot', '_blank')}
+            onClick={() => window.open('https://docs.jumpstart.com/docs/jumpstart-copilot', '_blank')}
             darkMode={darkMode}
             size="sm"
             classNames="default-secondary-button"

@@ -3,19 +3,19 @@ id: heroku
 title: Heroku
 ---
 
-# Deploying ToolJet on Heroku
+# Deploying JumpStart on Heroku
 
 <iframe width="800" height="500" src="https://www.youtube.com/embed/ApDtwE1OXY0" frameborder="0" allowfullscreen width="100%"></iframe>
 
-*If you have any questions feel free to join our [Slack Community](https://tooljet.com/slack) or send us an email at hello@tooljet.com.*
+*If you have any questions feel free to join our [Slack Community](https://jumpstart.com/slack) or send us an email at hello@jumpstart.com.*
 
 
-### Follow the steps below to deploy ToolJet on Heroku:
+### Follow the steps below to deploy JumpStart on Heroku:
 
 1. Click the button below to start one click deployment.  
    <div style={{textAlign: 'center'}}>
 
-   [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/tooljet/tooljet/tree/main)
+   [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/digitranslab/jumpstart/tree/main)
 
    </div>
 
@@ -28,12 +28,12 @@ title: Heroku
 </div>
 
 3. Now let's enter the `Config vars` to configure additional [environment variables](/docs/setup/env-vars) that are required for the installation.
-   - **LOCKBOX_MASTER_KEY**: ToolJet server uses lockbox to encrypt datasource credentials. You should set the environment variable LOCKBOX_MASTER_KEY with a 32 byte hexadecimal string. If you have OpenSSL installed, you can run the command `openssl rand -hex 32` to generate the key.
+   - **LOCKBOX_MASTER_KEY**: JumpStart server uses lockbox to encrypt datasource credentials. You should set the environment variable LOCKBOX_MASTER_KEY with a 32 byte hexadecimal string. If you have OpenSSL installed, you can run the command `openssl rand -hex 32` to generate the key.
    - **NODE_ENV**: By default NODE_ENV is set to production. 
    - **NODE_OPTIONS**: Node options are configured to increase node memory to support app build.
-   - **SECRET_KEY_BASE**: ToolJet server uses a secure 64 byte hexadecimal string to encrypt session cookies. You should set the environment variable SECRET_KEY_BASE. If you have OpenSSL installed, you can run the command `openssl rand -hex 64` to generate the key.
-   - **TOOLJET_HOST**: Public URL of ToolJet installation. This is usually `https://<app-name-in-first-step\>.herokuapp.com`.
-   - **TOOLJET_SERVER_URL**: URL of ToolJet server installation. (This is same as the TOOLJET_HOST for Heroku deployments)
+   - **SECRET_KEY_BASE**: JumpStart server uses a secure 64 byte hexadecimal string to encrypt session cookies. You should set the environment variable SECRET_KEY_BASE. If you have OpenSSL installed, you can run the command `openssl rand -hex 64` to generate the key.
+   - **JUMPSTART_HOST**: Public URL of JumpStart installation. This is usually `https://<app-name-in-first-step\>.herokuapp.com`.
+   - **JUMPSTART_SERVER_URL**: URL of JumpStart server installation. (This is same as the JUMPSTART_HOST for Heroku deployments)
 
 
 4. Click on `Deploy app` button at the bottom to initiate the build.
@@ -46,7 +46,7 @@ title: Heroku
 
 </div>
 
-6. The default username of the admin is `dev@tooljet.io` and the password is `password`.
+6. The default username of the admin is `dev@jumpstart.io` and the password is `password`.
 
 <div style={{textAlign: 'center'}}>
 
@@ -59,7 +59,7 @@ The one click deployment will create a **free dyno** and a **free postgresql dat
 :::
 
 :::tip
-ToolJet server and client can be deployed as standalone applications. If you do not want to deploy the client on Heroku, modify `package.json` accordingly. We have a [guide](/docs/setup/client) on deploying ToolJet client using services such as Firebase.
+JumpStart server and client can be deployed as standalone applications. If you do not want to deploy the client on Heroku, modify `package.json` accordingly. We have a [guide](/docs/setup/client) on deploying JumpStart client using services such as Firebase.
 :::
 
 ## Upgrading to the Latest Version
@@ -76,4 +76,4 @@ If this is a new installation of the application, you may start directly with th
 
 - Users on versions earlier than v2.23.0-ee2.10.2 must first upgrade to this version before proceeding to the latest version.
 
-For specific issues or questions, refer to our **[Slack](https://tooljet.slack.com/join/shared_invite/zt-25438diev-mJ6LIZpJevG0LXCEcL0NhQ#)**.
+For specific issues or questions, refer to our **[Slack](https://jumpstart.slack.com/join/shared_invite/zt-25438diev-mJ6LIZpJevG0LXCEcL0NhQ#)**.

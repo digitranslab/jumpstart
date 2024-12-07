@@ -4,12 +4,12 @@ title: Docker
 ---
 
 :::warning
-The following guide is intended for contributors to set up ToolJet locally. If you're interested in **self-hosting** ToolJet, please refer to the **[Setup](/docs/setup/)** section.
+The following guide is intended for contributors to set up JumpStart locally. If you're interested in **self-hosting** JumpStart, please refer to the **[Setup](/docs/setup/)** section.
 :::
 
-Docker Compose is the easiest way to set up the ToolJet server and client locally.
+Docker Compose is the easiest way to set up the JumpStart server and client locally.
 
-*If you just want to try out ToolJet locally with docker, you can follow the steps [here](https://docs.tooljet.com/docs/setup/try-tooljet).*
+*If you just want to try out JumpStart locally with docker, you can follow the steps [here](https://docs.jumpstart.com/docs/setup/try-jumpstart).*
 
 ## Prerequisites
 
@@ -30,7 +30,7 @@ Make sure to run it within the WSL2 terminal.
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/tooljet/tooljet.git
+git clone https://github.com/digitranslab/jumpstart.git
 ```
 
 2. Create a `.env` file by copying `.env.example`. More information on the variables that can be set is given in the **[environment variables reference](/docs/setup/env-vars)**.
@@ -56,13 +56,13 @@ docker compose build
 docker compose run --rm  plugins npm run build:plugins
 ```
 
-5. Run ToolJet.
+5. Run JumpStart.
 
 ```bash
 docker compose up
 ```
 
-   ToolJet should now be served locally at `http://localhost:8082`.
+   JumpStart should now be served locally at `http://localhost:8082`.
 
 8. To shut down the containers, use the below commands:
 
@@ -72,18 +72,18 @@ docker compose stop
 
 ## Making changes to the codebase
 
-If you make any changes to the codebase or pull the latest changes from upstream, the ToolJet server container will hot reload the application without any action required from you.
+If you make any changes to the codebase or pull the latest changes from upstream, the JumpStart server container will hot reload the application without any action required from you.
 
 **Note:**
 
-1. If the changes include database migrations or new npm package additions in `package.json`, you need to restart the ToolJet server container by running `docker compose restart server`.
+1. If the changes include database migrations or new npm package additions in `package.json`, you need to restart the JumpStart server container by running `docker compose restart server`.
 
 
-2. If you need to add a new binary or system library to the container itself, you would need to add those dependencies in `docker/server.Dockerfile.dev` and then rebuild the ToolJet server image. You can do that by running `docker compose build server`. After the build completes, you can start all services by running `docker compose up`.
+2. If you need to add a new binary or system library to the container itself, you would need to add those dependencies in `docker/server.Dockerfile.dev` and then rebuild the JumpStart server image. You can do that by running `docker compose build server`. After the build completes, you can start all services by running `docker compose up`.
 
 
 Example:
-Let's say you need to install the `imagemagick` binary in your ToolJet server's container. You'd then need to make sure that `apt` installs `imagemagick` while building the image. The Dockerfile at `docker/server.Dockerfile.dev` for the server would then look something like this:
+Let's say you need to install the `imagemagick` binary in your JumpStart server's container. You'd then need to make sure that `apt` installs `imagemagick` while building the image. The Dockerfile at `docker/server.Dockerfile.dev` for the server would then look something like this:
 
 ```bash
 FROM node:18.18.2-buster AS builder
@@ -143,4 +143,4 @@ docker compose run --rm server npm --prefix server run test <path-to-file>
 
 ## Troubleshooting
 
-Please open a new issue at https://github.com/ToolJet/ToolJet/issues or join our [Slack Community](https://tooljet.com/slack) if you encounter any issues when trying to run ToolJet locally.
+Please open a new issue at https://github.com/digitranslab/jumpstart/issues or join our [Slack Community](https://jumpstart.com/slack) if you encounter any issues when trying to run JumpStart locally.

@@ -11,6 +11,6 @@ You can also trigger actions from the **JavaScript code**. Check it out [here](/
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - Action reference - Open webpage](/img/actions/copytoclipboard/copytoclipboard.png)
+![JumpStart - Action reference - Open webpage](/img/actions/copytoclipboard/copytoclipboard.png)
 
 </div>

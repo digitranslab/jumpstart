@@ -13,7 +13,7 @@ import {
   fetchHttpsCertsForCustomCA,
   getRefreshedToken,
   getAuthUrl,
-} from '@tooljet-plugins/common';
+} from '@jumpstart-plugins/common';
 import { QueryOptions, SourceOptions } from './types';
 
 export default class GraphqlQueryService implements QueryService {

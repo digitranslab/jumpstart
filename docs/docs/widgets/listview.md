@@ -72,7 +72,7 @@ There are two events that you can use with the List View component:
 
 ### Row clicked
 
-The **Row clicked** event is triggered when any row inside the List View is clicked. Similar to other events in ToolJet, you can define multiple actions for this event.
+The **Row clicked** event is triggered when any row inside the List View is clicked. Similar to other events in JumpStart, you can define multiple actions for this event.
 
 When a row is clicked in the List View component, certain related data is made available through the **selectedRowId** and **selectedRow** variables. For the List View component's available exposed variables, refer to the **[here](#exposed-variables)** section.
 
@@ -165,7 +165,7 @@ Any property having **fx** button next to its field can be **programmatically co
 
     <div style={{textAlign: 'center'}}>
 
-    <img className="screenshot-full" src="/img/widgets/list-view/emptylist.png" alt="ToolJet - List view component" />
+    <img className="screenshot-full" src="/img/widgets/list-view/emptylist.png" alt="JumpStart - List view component" />
 
     </div>
 
@@ -173,7 +173,7 @@ Any property having **fx** button next to its field can be **programmatically co
 
     <div style={{textAlign: 'center'}}>
 
-    <img className="screenshot-full" src="/img/widgets/list-view/data.gif" alt="ToolJet - List view component" />
+    <img className="screenshot-full" src="/img/widgets/list-view/data.gif" alt="JumpStart - List view component" />
 
     </div>
 
@@ -182,7 +182,7 @@ Any property having **fx** button next to its field can be **programmatically co
 
     <div style={{textAlign: 'center'}}>
 
-    <img className="screenshot-full" src="/img/widgets/list-view/datadisplay.png" alt="ToolJet - List view component" />
+    <img className="screenshot-full" src="/img/widgets/list-view/datadisplay.png" alt="JumpStart - List view component" />
 
     </div>
 
@@ -191,7 +191,7 @@ Any property having **fx** button next to its field can be **programmatically co
 
     <div style={{textAlign: 'center'}}>
 
-    <img className="screenshot-full" src="/img/widgets/list-view/addingwidgets.gif" alt="ToolJet - List view component" />
+    <img className="screenshot-full" src="/img/widgets/list-view/addingwidgets.gif" alt="JumpStart - List view component" />
 
     </div>
 

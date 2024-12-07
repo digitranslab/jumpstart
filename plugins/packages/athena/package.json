@@ -1,5 +1,5 @@
 {
-  "name": "@tooljet-plugins/athena",
+  "name": "@jumpstart-plugins/athena",
   "version": "1.0.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -15,10 +15,10 @@
     "build": "tsc -b",
     "clean": "rimraf ./dist && rimraf tsconfig.tsbuildinfo"
   },
-  "homepage": "https://github.com/tooljet/tooljet#readme",
+  "homepage": "https://github.com/digitranslab/jumpstart#readme",
   "dependencies": {
     "@aws-sdk/credential-providers": "^3.267.0",
-    "@tooljet-plugins/common": "file:../common",
+    "@jumpstart-plugins/common": "file:../common",
     "athena-express": "^7.1.5",
     "aws-sdk": "^2.1309.0",
     "react": "^17.0.2"

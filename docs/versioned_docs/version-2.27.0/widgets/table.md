@@ -10,7 +10,7 @@ Tables can be used for both displaying and editing data. You can use the table w
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/table/newuitable1.png" alt="ToolJet - Widget Reference - Table" />
+<img className="screenshot-full" src="/img/widgets/table/newuitable1.png" alt="JumpStart - Widget Reference - Table" />
 
 </div>
 
@@ -80,7 +80,7 @@ You can sort the table data in ascending or descending order by clicking on the 
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/table/tabledata1.png" alt="ToolJet - Widget Reference - Table" />
+<img className="screenshot-full" src="/img/widgets/table/tabledata1.png" alt="JumpStart - Widget Reference - Table" />
 
 </div>
 <br/>
@@ -141,7 +141,7 @@ Whenever data is loaded into a table, the columns are automatically generated. Y
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/table/columnsnew.png" alt="ToolJet - Widget Reference - Table" />
+<img className="screenshot-full" src="/img/widgets/table/columnsnew.png" alt="JumpStart - Widget Reference - Table" />
 
 </div>
 
@@ -167,7 +167,7 @@ The **column data** field expects a JSON value:
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/table/dynamicnew.png" alt="ToolJet - Widget Reference - Table" />
+<img className="screenshot-full" src="/img/widgets/table/dynamicnew.png" alt="JumpStart - Widget Reference - Table" />
 
 </div>
 
@@ -217,7 +217,7 @@ Selecting the column type as **Number** will only load numerical data in the col
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/table/numbernew.png" alt="ToolJet - Widget Reference - Table" />
+<img className="screenshot-full" src="/img/widgets/table/numbernew.png" alt="JumpStart - Widget Reference - Table" />
 
 </div>
 
@@ -237,7 +237,7 @@ The **Badge** column type is utilized to exhibit labels on the columns using the
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/table/badgenew.png" alt="ToolJet - Widget Reference - Table" />
+<img className="screenshot-full" src="/img/widgets/table/badgenew.png" alt="JumpStart - Widget Reference - Table" />
 
 </div>
 
@@ -257,7 +257,7 @@ Similar to the **Badge** column type, the **Multiple Badges** type is used to di
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/table/multibadgetype.png" alt="ToolJet - Widget Reference - Table" />
+<img className="screenshot-full" src="/img/widgets/table/multibadgetype.png" alt="JumpStart - Widget Reference - Table" />
 
 </div>
 
@@ -275,7 +275,7 @@ The **Tags** column type is utilized to display tags within the column cells usi
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/table/tagtype.png" alt="ToolJet - Widget Reference - Table" />
+<img className="screenshot-full" src="/img/widgets/table/tagtype.png" alt="JumpStart - Widget Reference - Table" />
 
 </div>
 
@@ -295,7 +295,7 @@ The **Dropdown** column type is used to display a dropdown in the column cells u
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/table/droptype.png" alt="ToolJet - Widget Reference - Table" />
+<img className="screenshot-full" src="/img/widgets/table/droptype.png" alt="JumpStart - Widget Reference - Table" />
 
 </div>
 
@@ -315,7 +315,7 @@ The **Radio** column type is used to show radio buttons in the column cells usin
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/table/radiotype.png" alt="ToolJet - Widget Reference - Table" />
+<img className="screenshot-full" src="/img/widgets/table/radiotype.png" alt="JumpStart - Widget Reference - Table" />
 
 </div>
 
@@ -335,7 +335,7 @@ The **Multiselect** column type is used to show a multiselect dropdown in the co
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/table/multiselecttype.png" alt="ToolJet - Widget Reference - Table" />
+<img className="screenshot-full" src="/img/widgets/table/multiselecttype.png" alt="JumpStart - Widget Reference - Table" />
 
 </div>
 
@@ -355,7 +355,7 @@ The **Toggle Switch** column type is used to display a toggle switch in the colu
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/table/toggletype.png" alt="ToolJet - Widget Reference - Table" />
+<img className="screenshot-full" src="/img/widgets/table/toggletype.png" alt="JumpStart - Widget Reference - Table" />
 
 </div>
 
@@ -378,7 +378,7 @@ The **Date Picker** column type is used to display a date picker in the column c
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/table/datetype.png" alt="ToolJet - Widget Reference - Table" />
+<img className="screenshot-full" src="/img/widgets/table/datetype.png" alt="JumpStart - Widget Reference - Table" />
 
 </div>
 
@@ -399,7 +399,7 @@ The **Image** column type is used to display images in the column cells using th
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/table/imagetype.png" alt="ToolJet - Widget Reference - Table" />
+<img className="screenshot-full" src="/img/widgets/table/imagetype.png" alt="JumpStart - Widget Reference - Table" />
 
 </div>
 
@@ -420,7 +420,7 @@ For more information on using cellValue and rowData, refer to the **[how-to guid
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/table/linkupd.png" alt="ToolJet - Widget Reference - Table" />
+<img className="screenshot-full" src="/img/widgets/table/linkupd.png" alt="JumpStart - Widget Reference - Table" />
 
 </div>
 
@@ -430,7 +430,7 @@ You can add a new column to the table by clicking on the **+ Add Column** button
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/table/addcolumn.png" alt="ToolJet - Widget Reference - Table" />
+<img className="screenshot-full" src="/img/widgets/table/addcolumn.png" alt="JumpStart - Widget Reference - Table" />
 
 </div>
 
@@ -440,7 +440,7 @@ Hover on the column under the columns section and click on the three dots icon, 
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/table/deletecolumn.png" alt="ToolJet - Widget Reference - Table" />
+<img className="screenshot-full" src="/img/widgets/table/deletecolumn.png" alt="JumpStart - Widget Reference - Table" />
 
 </div>
 
@@ -524,7 +524,7 @@ If the condition is true, the validation passes, otherwise return a string that 
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/table/actionnew.png" alt="ToolJet - Widget Reference - Table" />
+<img className="screenshot-full" src="/img/widgets/table/actionnew.png" alt="JumpStart - Widget Reference - Table" />
 
 </div>
 
@@ -553,7 +553,7 @@ Action buttons will be displayed as the last column of the table. The styles of 
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/table/newevents.png" alt="ToolJet - Widget Reference - Table" />
+<img className="screenshot-full" src="/img/widgets/table/newevents.png" alt="JumpStart - Widget Reference - Table" />
 
 </div>
 
@@ -601,7 +601,7 @@ This event is triggered when the **Save** button is clicked from the **Add new r
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/table/rowselection.png" alt="ToolJet - Widget Reference - Table" />
+<img className="screenshot-full" src="/img/widgets/table/rowselection.png" alt="JumpStart - Widget Reference - Table" />
 
 </div>
 
@@ -637,7 +637,7 @@ Please ensure that the value provided in the object corresponds to a valid id in
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/table/searchsort.png" alt="ToolJet - Widget Reference - Table" />
+<img className="screenshot-full" src="/img/widgets/table/searchsort.png" alt="JumpStart - Widget Reference - Table" />
 
 </div>
 
@@ -670,7 +670,7 @@ When Server-side filter is enabled, applying filters will not automatically filt
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/table/paginationnew.png" alt="ToolJet - Widget Reference - Table" />
+<img className="screenshot-full" src="/img/widgets/table/paginationnew.png" alt="JumpStart - Widget Reference - Table" />
 
 </div>
 
@@ -695,7 +695,7 @@ Check this how-to guide to learn more about [server-side pagination](/docs/how-t
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/table/additionalactions.png" alt="ToolJet - Widget Reference - Table" />
+<img className="screenshot-full" src="/img/widgets/table/additionalactions.png" alt="JumpStart - Widget Reference - Table" />
 
 </div>
 

@@ -1,9 +1,9 @@
 {
-  "name": "ToolJet",
-  "description": "ToolJet is an open-source low-code framework to build and deploy internal tools.",
-  "website": "https://tooljet.io/",
-  "repository": "https://github.com/tooljet/tooljet",
-  "logo": "https://tooljet.com/blue-logo.png",
+  "name": "JumpStart",
+  "description": "JumpStart is an open-source low-code framework to build and deploy internal tools.",
+  "website": "https://jumpstart.io/",
+  "repository": "https://github.com/digitranslab/jumpstart",
+  "logo": "https://jumpstart.com/blue-logo.png",
   "success_url": "/",
   "scripts": {
     "postdeploy": "export NODE_OPTIONS=\"--max_old_space_size=1024\"; npm run db:migrate"
@@ -13,12 +13,12 @@
       "description": "Environment [production/development]",
       "value": "production"
     },
-    "TOOLJET_HOST": {
-      "description": "Public URL of ToolJet installation. This is usually https://<app-name-in-first-step>.herokuapp.com",
+    "JUMPSTART_HOST": {
+      "description": "Public URL of JumpStart installation. This is usually https://<app-name-in-first-step>.herokuapp.com",
       "value": "https://<app-name-in-first-step>.herokuapp.com"
     },
-    "TOOLJET_SERVER_URL": {
-      "description": "URL of ToolJet server installation. (This is same as the TOOLJET_HOST for Heroku deployments)",
+    "JUMPSTART_SERVER_URL": {
+      "description": "URL of JumpStart server installation. (This is same as the JUMPSTART_HOST for Heroku deployments)",
       "value": "https://<app-name-in-first-step>.herokuapp.com"
     },
     "LOCKBOX_MASTER_KEY": {
@@ -26,7 +26,7 @@
       "value": ""
     },
     "SECRET_KEY_BASE": {
-      "description": "Used by ToolJet server as the input secret to the application's key generator.",
+      "description": "Used by JumpStart server as the input secret to the application's key generator.",
       "value": ""
     },
     "NODE_OPTIONS": {
@@ -37,12 +37,12 @@
       "description": "Disable sign up in login page only applicable if Multi-Workspace feature is turned on",
       "value": "false"
     },
-    "ENABLE_TOOLJET_DB": {
-      "description": "To enable Tooljet Database feature",
+    "ENABLE_JUMPSTART_DB": {
+      "description": "To enable Jumpstart Database feature",
       "value": "false"
     },    
     "DEPLOYMENT_PLATFORM": {
-      "description": "Platform ToolJet is deployed on",
+      "description": "Platform JumpStart is deployed on",
       "value": "heroku"
     }
   },

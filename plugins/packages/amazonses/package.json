@@ -1,5 +1,5 @@
 {
-  "name": "@tooljet-plugins/amazonses",
+  "name": "@jumpstart-plugins/amazonses",
   "version": "1.0.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -15,11 +15,11 @@
     "build": "tsc -b",
     "clean": "rimraf ./dist && rimraf tsconfig.tsbuildinfo"
   },
-  "homepage": "https://github.com/tooljet/tooljet#readme",
+  "homepage": "https://github.com/digitranslab/jumpstart#readme",
   "dependencies": {
     "@aws-sdk/client-sesv2": "^3.264.0",
     "@aws-sdk/credential-providers": "^3.267.0",
-    "@tooljet-plugins/common": "file:../common",
+    "@jumpstart-plugins/common": "file:../common",
     "react": "^17.0.2",
     "rimraf": "^3.0.2"
   }

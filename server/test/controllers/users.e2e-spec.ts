@@ -23,7 +23,7 @@ describe('users controller', () => {
 
   describe('PATCH /api/users/change_password', () => {
     it('should allow users to update their password', async () => {
-      const userData = await createUser(app, { email: 'admin@tooljet.io' });
+      const userData = await createUser(app, { email: 'admin@jumpstart.io' });
       const { user } = userData;
 
       const oldPassword = user.password;
@@ -43,7 +43,7 @@ describe('users controller', () => {
     });
 
     it('should not allow users to update their password if entered current password is wrong', async () => {
-      const userData = await createUser(app, { email: 'admin@tooljet.io' });
+      const userData = await createUser(app, { email: 'admin@jumpstart.io' });
       const { user } = userData;
 
       const oldPassword = user.password;
@@ -69,7 +69,7 @@ describe('users controller', () => {
 
   describe('PATCH /api/users/update', () => {
     it('should allow users to update their firstName, lastName and password', async () => {
-      const userData = await createUser(app, { email: 'admin@tooljet.io' });
+      const userData = await createUser(app, { email: 'admin@jumpstart.io' });
       const { user } = userData;
 
       const [firstName, lastName] = ['Daenerys', 'Targaryen'];
@@ -93,7 +93,7 @@ describe('users controller', () => {
 
   describe('POST /api/users/avatar', () => {
     it('should allow users to add a avatar', async () => {
-      const userData = await createUser(app, { email: 'admin@tooljet.io' });
+      const userData = await createUser(app, { email: 'admin@jumpstart.io' });
 
       const { user } = userData;
       const filePath = path.join(__dirname, '../__mocks__/avatar.png');

@@ -9,7 +9,7 @@ Color Picker widget is used to select the desired color from the color picker
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/color-picker/picker.png" alt="ToolJet - Widget Reference - Color Picker" />
+<img className="screenshot-full" src="/img/widgets/color-picker/picker.png" alt="JumpStart - Widget Reference - Color Picker" />
 
 </div>
 
@@ -30,7 +30,7 @@ Invalid Color : #0000, "black" , rgb(0,0,0) ,
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/color-picker/colorpickerdefaultvalue.png" alt="ToolJet - Widget Reference - Color Picker" />
+<img className="screenshot-full" src="/img/widgets/color-picker/colorpickerdefaultvalue.png" alt="JumpStart - Widget Reference - Color Picker" />
 
 </div>
 
@@ -40,7 +40,7 @@ To add an event to a color-picker component, click on the widget handle to open 
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/color-picker/events.png" alt="ToolJet - Widget Reference - Color Picker" />
+<img className="screenshot-full" src="/img/widgets/color-picker/events.png" alt="JumpStart - Widget Reference - Color Picker" />
 
 </div>
 
@@ -79,6 +79,6 @@ Any property having `Fx` button next to its field can be **programmatically conf
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/color-picker/colorpickerinspector.png" alt="ToolJet - Widget Reference - Color Picker" />
+<img className="screenshot-full" src="/img/widgets/color-picker/colorpickerinspector.png" alt="JumpStart - Widget Reference - Color Picker" />
 
 </div>

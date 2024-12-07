@@ -10,7 +10,7 @@ Developers prefer having SVG **(Scalable Vector Graphics)** files as they are sc
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/svg-image/svg-image.png" alt="ToolJet - Widget Reference - SVG" />
+<img className="screenshot-full" src="/img/widgets/svg-image/svg-image.png" alt="JumpStart - Widget Reference - SVG" />
 
 </div>
 
@@ -39,7 +39,7 @@ Under the <b>General</b> accordion, you can set the value in the string format. 
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/tooltip.png" alt="ToolJet - Widget Reference - SVG" />
+<img className="screenshot-full" src="/img/tooltip.png" alt="JumpStart - Widget Reference - SVG" />
 
 </div>
 

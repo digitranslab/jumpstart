@@ -5,29 +5,29 @@ title: Stripe
 
 # Stripe
 
-ToolJet can connect to your Stripe account to read or write customers' and payments' data.
+JumpStart can connect to your Stripe account to read or write customers' and payments' data.
 
 :::info
-Check out the **[Stripe Refund App tutorial](https://blog.tooljet.com/build-a-stripe-refund-tool-using-low-code/)**
+Check out the **[Stripe Refund App tutorial](https://blog.jumpstart.com/build-a-stripe-refund-tool-using-low-code/)**
 :::
 
 ## Connection
 
 To add a new Stripe data source, click on the `+` button on data sources panel at the left-bottom corner of the app editor. Select Stripe from the modal that pops up.
 
-ToolJet requires the **Stripe API key** to connect to your database.
+JumpStart requires the **Stripe API key** to connect to your database.
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - Data source - Stripe](/img/datasource-reference/stripe/connect.png)
+![JumpStart - Data source - Stripe](/img/datasource-reference/stripe/connect.png)
 
 </div>
 
-You can get the Stripe API key from the dashboard of your Stripe account. Go to the Stripe account dashboard, click on the **Developers** on the top right, then on the left-sidebar go to the **API Keys**, you can simple reveal the **Secret Key** and copy-paste on ToolJet.
+You can get the Stripe API key from the dashboard of your Stripe account. Go to the Stripe account dashboard, click on the **Developers** on the top right, then on the left-sidebar go to the **API Keys**, you can simple reveal the **Secret Key** and copy-paste on JumpStart.
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - Data source - Stripe](/img/datasource-reference/stripe/apikey.png)
+![JumpStart - Data source - Stripe](/img/datasource-reference/stripe/apikey.png)
 
 </div>
 
@@ -44,7 +44,7 @@ Query results can be transformed using transformations. Read our transformations
 ## Supported operations
 
 
-You can check out the some of the operations mentioned below. All the operations for Stripe are available and can be performed from ToolJet. Check out the **[Stripe API documentation](https://stripe.com/docs/api/)** for the detailed information about each operation.
+You can check out the some of the operations mentioned below. All the operations for Stripe are available and can be performed from JumpStart. Check out the **[Stripe API documentation](https://stripe.com/docs/api/)** for the detailed information about each operation.
 
 - **delete,/v1/account**
 - **get,/v1/account**
@@ -125,7 +125,7 @@ This operation can be used to delete the accounts that you manage in Stripe.
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - Data source - Firestore](/img/datasource-reference/stripe/delete-account.png)
+![JumpStart - Data source - Firestore](/img/datasource-reference/stripe/delete-account.png)
 
 </div>
 
@@ -135,7 +135,7 @@ This operation returns the basic account information such as account id, capabil
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - Data source - Firestore](/img/datasource-reference/stripe/get-account.png)
+![JumpStart - Data source - Firestore](/img/datasource-reference/stripe/get-account.png)
 
 </div>
 

@@ -1,5 +1,5 @@
 {
-  "tooljet_database": [
+  "jumpstart_database": [
     {
       "id": "33e9f0e1-7c56-4dcd-b332-176c86fbcf82",
       "table_name": "ett_employee_details",
@@ -8528,8 +8528,8 @@
             },
             {
               "id": "a0dd79a3-13e6-4b2f-b5f7-1b8caa9cc2fa",
-              "name": "tooljetdbdefault",
-              "kind": "tooljetdb",
+              "name": "jumpstartdbdefault",
+              "kind": "jumpstartdb",
               "type": "static",
               "pluginId": null,
               "appVersionId": "5738883b-f401-4d8d-958f-35b5f6057025",
@@ -14341,5 +14341,5 @@
       }
     }
   ],
-  "tooljet_version": "2.28.4-ee2.15.0-cloud2.3.1"
+  "jumpstart_version": "2.28.4-ee2.15.0-cloud2.3.1"
 }

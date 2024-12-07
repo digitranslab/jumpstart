@@ -9,7 +9,7 @@ By default, the debounce field is left empty. However, you can input a numeric v
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/actions/page/switchpage2.png" alt="ToolJet - Action Reference - Page Switching" width="500"/>
+<img className="screenshot-full" src="/img/actions/page/switchpage2.png" alt="JumpStart - Action Reference - Page Switching" width="500"/>
 
 </div>
 
@@ -21,7 +21,7 @@ Query parameters are composed of key-value pairs, where the `key` and `value` ar
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/actions/page/queryparam1.png" alt="ToolJet - Action Reference - Page Switching"/>
+<img className="screenshot-full" src="/img/actions/page/queryparam1.png" alt="JumpStart - Action Reference - Page Switching"/>
 
 </div>
 
@@ -31,7 +31,7 @@ They are commonly used to provide additional information to the server or to mod
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/actions/page/queryparam2.png" alt="ToolJet - Action Reference - Page Switching"/>
+<img className="screenshot-full" src="/img/actions/page/queryparam2.png" alt="JumpStart - Action Reference - Page Switching"/>
 
 </div>
 

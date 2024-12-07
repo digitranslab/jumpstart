@@ -5,7 +5,7 @@ title: Engagespot
 
 # Engagespot
 
-ToolJet connects to your Engagespot account, allowing you to send notifications, create or update users from within your ToolJet application.
+JumpStart connects to your Engagespot account, allowing you to send notifications, create or update users from within your JumpStart application.
 
 :::info
 **NOTE:** **Before following this guide, it is assumed that you have already completed the process of [Using Marketplace plugins](/docs/marketplace/marketplace-overview#using-marketplace-plugins)**.
@@ -15,9 +15,9 @@ ToolJet connects to your Engagespot account, allowing you to send notifications,
 
 ## Connection
 
-- Establish a connection to Engagespot by either clicking `+Add new Data source` on the query panel or navigating to the [Data Sources](/docs/data-sources/overview/) page from the ToolJet dashboard.
+- Establish a connection to Engagespot by either clicking `+Add new Data source` on the query panel or navigating to the [Data Sources](/docs/data-sources/overview/) page from the JumpStart dashboard.
 
-- Enter your Engagespot API key and API secret into their designated fields. To generate user tokens directly from ToolJet, you can optionally provide a signing key.
+- Enter your Engagespot API key and API secret into their designated fields. To generate user tokens directly from JumpStart, you can optionally provide a signing key.
 
 - Click **Test Connection** to validate your credentials. Click **Save** to store the data source.
 
@@ -116,7 +116,7 @@ To generate user tokens, ensure you provide a Signing Key when establishing a co
 
 <div style={{paddingTop:'24px', paddingBottom:'24px'}}>
 
-### Adding the In-App Inbox element to your ToolJet app
-   To set up an In-App Inbox element in your ToolJet application, refer to the [Adding In-App](https://docs.engagespot.co/docs/plugins/tooljet/adding-the-inbox-component) guide.
+### Adding the In-App Inbox element to your JumpStart app
+   To set up an In-App Inbox element in your JumpStart application, refer to the [Adding In-App](https://docs.engagespot.co/docs/plugins/jumpstart/adding-the-inbox-component) guide.
 
 </div>

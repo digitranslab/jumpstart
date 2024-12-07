@@ -1,5 +1,5 @@
 {
-  "tooljet_database": [
+  "jumpstart_database": [
     {
       "id": "29e763d1-b148-4b93-a9f4-7354b4b5786f",
       "table_name": "saas_license_management",
@@ -29514,8 +29514,8 @@
             },
             {
               "id": "a2908b03-d7ba-480e-899c-b994781cab7a",
-              "name": "tooljetdbdefault",
-              "kind": "tooljetdb",
+              "name": "jumpstartdbdefault",
+              "kind": "jumpstartdb",
               "type": "static",
               "pluginId": null,
               "appVersionId": "55ed0317-d461-44aa-a933-c31640ff2c38",
@@ -53649,5 +53649,5 @@
       }
     }
   ],
-  "tooljet_version": "2.28.4-ee2.15.0-cloud2.3.1"
+  "jumpstart_version": "2.28.4-ee2.15.0-cloud2.3.1"
 }

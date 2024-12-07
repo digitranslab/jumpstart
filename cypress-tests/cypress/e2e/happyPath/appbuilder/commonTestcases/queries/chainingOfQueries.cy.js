@@ -19,7 +19,7 @@ describe("Chaining of queries", () => {
     resizeQueryPanel("80");
   });
 
-  it("should verify the chainig of runjs, restapi, runpy, tooljetdb and postgres", () => {
+  it("should verify the chainig of runjs, restapi, runpy, jumpstartdb and postgres", () => {
     const data = {};
     let dsName = fake.companyName;
     data.customText = randomString(12);
@@ -53,7 +53,7 @@ describe("Chaining of queries", () => {
         enableTransformation: false,
       },
       null,
-      "tooljetdb"
+      "jumpstartdb"
     );
 
     cy.apiCreateGDS(

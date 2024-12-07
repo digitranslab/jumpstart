@@ -1,4 +1,4 @@
-import { QueryError, QueryResult, QueryService } from '@tooljet-plugins/common';
+import { QueryError, QueryResult, QueryService } from '@jumpstart-plugins/common';
 import { SendEmailCommand, SendEmailCommandInput, SESv2Client } from '@aws-sdk/client-sesv2';
 import { fromInstanceMetadata } from '@aws-sdk/credential-providers';
 import { SourceOptions, QueryOptions, AssumeRoleCredentials } from './types';

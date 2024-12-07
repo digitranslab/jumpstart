@@ -11,6 +11,6 @@ You can also trigger actions from the **JavaScript code**. Check it out [here](/
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - Action reference -Set variable](/img/actions/unsetvar/unsetvar.png)
+![JumpStart - Action reference -Set variable](/img/actions/unsetvar/unsetvar.png)
 
 </div>

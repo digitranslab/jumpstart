@@ -3,14 +3,14 @@ id: import-external-libraries-using-runpy
 title: Import External Libraries Using RunPy
 ---
 
-ToolJet allows you to utilize python packages in your app by importing them using the [RunPy query](/docs/data-sources/run-py). 
+JumpStart allows you to utilize python packages in your app by importing them using the [RunPy query](/docs/data-sources/run-py). 
 In this how-to guide, we will import a few packages and use them in the application.
 
 :::caution Unsupported modules
 Modules with C/C++ extensions needing system libraries won't work in Pyodide, as it runs in a web browser without system library access. Pyodide, based on WebAssembly-compiled Python, also doesn't support certain system calls.
 :::
 
-- Start by creating a new application in ToolJet.
+- Start by creating a new application in JumpStart.
 - From the Query Panel, add a new RunPy query - it will be named *runpy1* by default.
 
 <div style={{textAlign: 'left', marginBotton: '15px'}}>

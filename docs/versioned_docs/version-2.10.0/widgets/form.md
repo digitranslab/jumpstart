@@ -807,7 +807,7 @@ To add an event to a button group, click on the widget handle to open the widget
 
 ### On submit
 
-**On submit** event is triggered when the button on the form component is clicked. Just like any other event on ToolJet, you can set multiple handlers for on submit event.
+**On submit** event is triggered when the button on the form component is clicked. Just like any other event on JumpStart, you can set multiple handlers for on submit event.
 
 ### On invalid
 

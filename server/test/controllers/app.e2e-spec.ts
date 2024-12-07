@@ -41,7 +41,7 @@ describe('Authentication', () => {
   describe('Multi organization', () => {
     beforeEach(async () => {
       const { organization, user } = await createUser(app, {
-        email: 'admin@tooljet.io',
+        email: 'admin@jumpstart.io',
         firstName: 'user',
         lastName: 'name',
       });
@@ -68,7 +68,7 @@ describe('Authentication', () => {
         });
       });
       it('should not create new users', async () => {
-        const response = await request(app.getHttpServer()).post('/api/signup').send({ email: 'test@tooljet.io' });
+        const response = await request(app.getHttpServer()).post('/api/signup').send({ email: 'test@jumpstart.io' });
         expect(response.statusCode).toBe(403);
       });
     });
@@ -76,11 +76,11 @@ describe('Authentication', () => {
       it('should create new users', async () => {
         const response = await request(app.getHttpServer())
           .post('/api/signup')
-          .send({ email: 'test@tooljet.io', name: 'test', password: 'password' });
+          .send({ email: 'test@jumpstart.io', name: 'test', password: 'password' });
         expect(response.statusCode).toBe(201);
 
         const user = await userRepository.findOneOrFail({
-          where: { email: 'test@tooljet.io' },
+          where: { email: 'test@jumpstart.io' },
           relations: ['organizationUsers'],
         });
 
@@ -119,7 +119,7 @@ describe('Authentication', () => {
       it('authenticate if valid credentials', async () => {
         const response = await request(app.getHttpServer())
           .post('/api/authenticate')
-          .send({ email: 'admin@tooljet.io', password: 'password' });
+          .send({ email: 'admin@jumpstart.io', password: 'password' });
 
         expect(response.statusCode).toBe(201);
         expect(response.headers['set-cookie'][0]).toMatch(/^tj_auth_token=/);
@@ -127,7 +127,7 @@ describe('Authentication', () => {
       it('authenticate to organization if valid credentials', async () => {
         const response = await request(app.getHttpServer())
           .post('/api/authenticate/' + current_organization.id)
-          .send({ email: 'admin@tooljet.io', password: 'password' });
+          .send({ email: 'admin@jumpstart.io', password: 'password' });
 
         expect(response.statusCode).toBe(201);
         expect(response.headers['set-cookie'][0]).toMatch(/^tj_auth_token=/);
@@ -135,55 +135,55 @@ describe('Authentication', () => {
       it('throw unauthorized error if user does not exist in given organization if valid credentials', async () => {
         await request(app.getHttpServer())
           .post('/api/authenticate/82249621-efc1-4cd2-9986-5c22182fa8a7')
-          .send({ email: 'admin@tooljet.io', password: 'password' })
+          .send({ email: 'admin@jumpstart.io', password: 'password' })
           .expect(401);
       });
       it('throw 401 if user is archived', async () => {
-        const { orgUser } = await createUser(app, { email: 'user@tooljet.io', status: 'archived' });
+        const { orgUser } = await createUser(app, { email: 'user@jumpstart.io', status: 'archived' });
 
         await request(app.getHttpServer())
           .post(`/api/authenticate/${orgUser.organizationId}`)
-          .send({ email: 'user@tooljet.io', password: 'password' })
+          .send({ email: 'user@jumpstart.io', password: 'password' })
           .expect(401);
 
         const adminUser = await userRepository.findOneOrFail({
-          email: 'admin@tooljet.io',
+          email: 'admin@jumpstart.io',
         });
         await orgUserRepository.update({ userId: adminUser.id }, { status: 'archived' });
 
         await request(app.getHttpServer()).get('/api/organizations/users').expect(401);
       });
       it('throw 401 if user is invited', async () => {
-        const { orgUser } = await createUser(app, { email: 'user@tooljet.io', status: 'invited' });
+        const { orgUser } = await createUser(app, { email: 'user@jumpstart.io', status: 'invited' });
 
         const response = await request(app.getHttpServer())
           .post(`/api/authenticate/${orgUser.organizationId}`)
-          .send({ email: 'user@tooljet.io', password: 'password' })
+          .send({ email: 'user@jumpstart.io', password: 'password' })
           .expect(401);
 
         const adminUser = await userRepository.findOneOrFail({
-          email: 'admin@tooljet.io',
+          email: 'admin@jumpstart.io',
         });
         await orgUserRepository.update({ userId: adminUser.id }, { status: 'invited' });
 
         await request(app.getHttpServer()).get('/api/organizations/users').expect(401);
       });
       it('login to new organization if user is archived', async () => {
-        const { orgUser } = await createUser(app, { email: 'user@tooljet.io', status: 'archived' });
+        const { orgUser } = await createUser(app, { email: 'user@jumpstart.io', status: 'archived' });
 
         const response = await request(app.getHttpServer())
           .post('/api/authenticate')
-          .send({ email: 'user@tooljet.io', password: 'password' });
+          .send({ email: 'user@jumpstart.io', password: 'password' });
 
         expect(response.statusCode).toBe(201);
         expect(response.body.current_organization_id).not.toBe(orgUser.organizationId);
       });
       it('login to new organization if user is invited', async () => {
-        const { orgUser } = await createUser(app, { email: 'user@tooljet.io', status: 'invited' });
+        const { orgUser } = await createUser(app, { email: 'user@jumpstart.io', status: 'invited' });
 
         const response = await request(app.getHttpServer())
           .post('/api/authenticate')
-          .send({ email: 'user@tooljet.io', password: 'password' });
+          .send({ email: 'user@jumpstart.io', password: 'password' });
 
         expect(response.statusCode).toBe(201);
         expect(response.body.current_organization_id).not.toBe(orgUser.organizationId);
@@ -191,42 +191,42 @@ describe('Authentication', () => {
       it('throw 401 if invalid credentials', async () => {
         await request(app.getHttpServer())
           .post('/api/authenticate')
-          .send({ email: 'amdin@tooljet.io', password: 'password' })
+          .send({ email: 'amdin@jumpstart.io', password: 'password' })
           .expect(401);
       });
       it('throw 401 if invalid credentials, maximum retry limit reached error after 5 retries', async () => {
-        await createUser(app, { email: 'user@tooljet.io', status: 'active' });
+        await createUser(app, { email: 'user@jumpstart.io', status: 'active' });
 
         await request(app.getHttpServer())
           .post('/api/authenticate')
-          .send({ email: 'user@tooljet.io', password: 'psswrd' })
+          .send({ email: 'user@jumpstart.io', password: 'psswrd' })
           .expect(401);
 
         await request(app.getHttpServer())
           .post('/api/authenticate')
-          .send({ email: 'user@tooljet.io', password: 'psswrd' })
+          .send({ email: 'user@jumpstart.io', password: 'psswrd' })
           .expect(401);
 
         await request(app.getHttpServer())
           .post('/api/authenticate')
-          .send({ email: 'user@tooljet.io', password: 'psswrd' })
+          .send({ email: 'user@jumpstart.io', password: 'psswrd' })
           .expect(401);
 
         await request(app.getHttpServer())
           .post('/api/authenticate')
-          .send({ email: 'user@tooljet.io', password: 'psswrd' })
+          .send({ email: 'user@jumpstart.io', password: 'psswrd' })
           .expect(401);
 
         const invalidCredentialResp = await request(app.getHttpServer())
           .post('/api/authenticate')
-          .send({ email: 'user@tooljet.io', password: 'psswrd' });
+          .send({ email: 'user@jumpstart.io', password: 'psswrd' });
 
         expect(invalidCredentialResp.statusCode).toBe(401);
         expect(invalidCredentialResp.body.message).toBe('Invalid credentials');
 
         const response = await request(app.getHttpServer())
           .post('/api/authenticate')
-          .send({ email: 'user@tooljet.io', password: 'psswrd' });
+          .send({ email: 'user@jumpstart.io', password: 'psswrd' });
         expect(response.statusCode).toBe(401);
         expect(response.body.message).toBe(
           'Maximum password retry limit reached, please reset your password using forgot password option'
@@ -241,36 +241,36 @@ describe('Authentication', () => {
               return process.env[key];
           }
         });
-        await createUser(app, { email: 'user@tooljet.io', status: 'active' });
+        await createUser(app, { email: 'user@jumpstart.io', status: 'active' });
 
         await request(app.getHttpServer())
           .post('/api/authenticate')
-          .send({ email: 'user@tooljet.io', password: 'pssword' })
+          .send({ email: 'user@jumpstart.io', password: 'pssword' })
           .expect(401);
 
         await request(app.getHttpServer())
           .post('/api/authenticate')
-          .send({ email: 'user@tooljet.io', password: 'psswrd' })
+          .send({ email: 'user@jumpstart.io', password: 'psswrd' })
           .expect(401);
 
         await request(app.getHttpServer())
           .post('/api/authenticate')
-          .send({ email: 'user@tooljet.io', password: 'psswrd' })
+          .send({ email: 'user@jumpstart.io', password: 'psswrd' })
           .expect(401);
 
         await request(app.getHttpServer())
           .post('/api/authenticate')
-          .send({ email: 'user@tooljet.io', password: 'psswrd' })
+          .send({ email: 'user@jumpstart.io', password: 'psswrd' })
           .expect(401);
 
         await request(app.getHttpServer())
           .post('/api/authenticate')
-          .send({ email: 'user@tooljet.io', password: 'psswrd' })
+          .send({ email: 'user@jumpstart.io', password: 'psswrd' })
           .expect(401);
 
         const response = await request(app.getHttpServer())
           .post('/api/authenticate')
-          .send({ email: 'user@tooljet.io', password: 'psswrd' });
+          .send({ email: 'user@jumpstart.io', password: 'psswrd' });
 
         expect(response.statusCode).toBe(401);
         expect(response.body.message).toBe('Invalid credentials');
@@ -284,28 +284,28 @@ describe('Authentication', () => {
               return process.env[key];
           }
         });
-        await createUser(app, { email: 'user@tooljet.io', status: 'active' });
+        await createUser(app, { email: 'user@jumpstart.io', status: 'active' });
 
         await request(app.getHttpServer())
           .post('/api/authenticate')
-          .send({ email: 'admin@tooljet.io', password: 'psswrd' })
+          .send({ email: 'admin@jumpstart.io', password: 'psswrd' })
           .expect(401);
 
         await request(app.getHttpServer())
           .post('/api/authenticate')
-          .send({ email: 'admin@tooljet.io', password: 'psswrd' })
+          .send({ email: 'admin@jumpstart.io', password: 'psswrd' })
           .expect(401);
 
         const invalidCredentialResp = await request(app.getHttpServer())
           .post('/api/authenticate')
-          .send({ email: 'admin@tooljet.io', password: 'psswrd' });
+          .send({ email: 'admin@jumpstart.io', password: 'psswrd' });
 
         expect(invalidCredentialResp.statusCode).toBe(401);
         expect(invalidCredentialResp.body.message).toBe('Invalid credentials');
 
         const response = await request(app.getHttpServer())
           .post('/api/authenticate')
-          .send({ email: 'admin@tooljet.io', password: 'psswrd' });
+          .send({ email: 'admin@jumpstart.io', password: 'psswrd' });
 
         expect(response.statusCode).toBe(401);
         expect(response.body.message).toBe(
@@ -316,14 +316,14 @@ describe('Authentication', () => {
         await ssoConfigsRepository.update({ organizationId: current_organization.id }, { enabled: false });
         await request(app.getHttpServer())
           .post('/api/authenticate/' + current_organization.id)
-          .send({ email: 'admin@tooljet.io', password: 'password' })
+          .send({ email: 'admin@jumpstart.io', password: 'password' })
           .expect(401);
       });
       it('should create new organization if login is disabled for default organization', async () => {
         await ssoConfigsRepository.update({ organizationId: current_organization.id }, { enabled: false });
         const response = await request(app.getHttpServer())
           .post('/api/authenticate')
-          .send({ email: 'admin@tooljet.io', password: 'password' });
+          .send({ email: 'admin@jumpstart.io', password: 'password' });
         expect(response.statusCode).toBe(201);
         expect(response.body.current_organization_id).not.toBe(current_organization.id);
       });
@@ -336,7 +336,7 @@ describe('Authentication', () => {
 
         const authResponse = await request(app.getHttpServer())
           .post('/api/authenticate')
-          .send({ email: 'admin@tooljet.io', password: 'password' });
+          .send({ email: 'admin@jumpstart.io', password: 'password' });
 
         const response = await request(app.getHttpServer())
           .get('/api/switch/' + invited_organization.id)
@@ -365,7 +365,7 @@ describe('Authentication', () => {
 
         const authResponse = await request(app.getHttpServer())
           .post('/api/authenticate')
-          .send({ email: 'admin@tooljet.io', password: 'password' });
+          .send({ email: 'admin@jumpstart.io', password: 'password' });
 
         const response = await request(app.getHttpServer())
           .get('/api/switch/' + invited_organization.id)
@@ -392,7 +392,7 @@ describe('Authentication', () => {
   describe('POST /api/forgot-password', () => {
     beforeEach(async () => {
       await createUser(app, {
-        email: 'admin@tooljet.io',
+        email: 'admin@jumpstart.io',
         firstName: 'user',
         lastName: 'name',
       });
@@ -410,12 +410,12 @@ describe('Authentication', () => {
 
       const response = await request(app.getHttpServer())
         .post('/api/forgot-password')
-        .send({ email: 'admin@tooljet.io' });
+        .send({ email: 'admin@jumpstart.io' });
 
       expect(response.statusCode).toBe(201);
 
       const user = await getManager().findOne(User, {
-        where: { email: 'admin@tooljet.io' },
+        where: { email: 'admin@jumpstart.io' },
       });
 
       expect(emailServiceMock).toHaveBeenCalledWith(user.email, user.forgotPasswordToken);
@@ -425,7 +425,7 @@ describe('Authentication', () => {
   describe('POST /api/reset-password', () => {
     beforeEach(async () => {
       await createUser(app, {
-        email: 'admin@tooljet.io',
+        email: 'admin@jumpstart.io',
         firstName: 'user',
         lastName: 'name',
       });
@@ -445,7 +445,7 @@ describe('Authentication', () => {
 
     it('should reset password', async () => {
       const user = await getManager().findOne(User, {
-        where: { email: 'admin@tooljet.io' },
+        where: { email: 'admin@jumpstart.io' },
       });
 
       user.forgotPasswordToken = 'token';
@@ -460,7 +460,7 @@ describe('Authentication', () => {
 
       await request(app.getHttpServer())
         .post('/api/authenticate')
-        .send({ email: 'admin@tooljet.io', password: 'new_password' })
+        .send({ email: 'admin@jumpstart.io', password: 'new_password' })
         .expect(201);
     });
   });
@@ -480,7 +480,7 @@ describe('Authentication', () => {
 
       it('should allow users to accept invitation when Multi-Workspace is enabled', async () => {
         const userData = await createUser(app, {
-          email: 'organizationUser@tooljet.io',
+          email: 'organizationUser@jumpstart.io',
           status: 'invited',
         });
 
@@ -498,7 +498,7 @@ describe('Authentication', () => {
 
       it('should not allow users to accept invitation when user sign up is not completed', async () => {
         const userData = await createUser(app, {
-          email: 'organizationUser@tooljet.io',
+          email: 'organizationUser@jumpstart.io',
           invitationToken: uuidv4(),
           status: 'invited',
         });
@@ -520,7 +520,7 @@ describe('Authentication', () => {
     describe('Multi-Workspace Enabled', () => {
       beforeEach(async () => {
         const { organization, user, orgUser } = await createUser(app, {
-          email: 'admin@tooljet.io',
+          email: 'admin@jumpstart.io',
           firstName: 'user',
           lastName: 'name',
         });
@@ -541,7 +541,7 @@ describe('Authentication', () => {
 
       it('should return user info while verifying invitation token', async () => {
         const userData = await createUser(app, {
-          email: 'organizationUser@tooljet.io',
+          email: 'organizationUser@jumpstart.io',
           invitationToken: uuidv4(),
           status: 'invited',
         });
@@ -554,7 +554,7 @@ describe('Authentication', () => {
           status,
         } = response;
         expect(status).toBe(200);
-        expect(email).toEqual('organizationUser@tooljet.io');
+        expect(email).toEqual('organizationUser@jumpstart.io');
         expect(name).toEqual('test test');
         expect(Object.keys(onboarding_details)).toEqual(['password', 'questions']);
         await userData.user.reload();
@@ -563,7 +563,7 @@ describe('Authentication', () => {
 
       it('should return redirect url while verifying invitation token, organization token is available and user does not exist', async () => {
         const { orgUser } = await createUser(app, {
-          email: 'organizationUser@tooljet.io',
+          email: 'organizationUser@jumpstart.io',
           invitationToken: uuidv4(),
           status: 'invited',
         });
@@ -578,13 +578,13 @@ describe('Authentication', () => {
         } = response;
         expect(status).toBe(200);
         expect(redirect_url).toBe(
-          `${process.env['TOOLJET_HOST']}/organization-invitations/${invitationToken}?oid=${orgUser.organizationId}`
+          `${process.env['JUMPSTART_HOST']}/organization-invitations/${invitationToken}?oid=${orgUser.organizationId}`
         );
       });
 
       it('should return redirect url while verifying invitation token, organization token is not available and user exist', async () => {
         const { user } = await createUser(app, {
-          email: 'organizationUser@tooljet.io',
+          email: 'organizationUser@jumpstart.io',
           invitationToken: uuidv4(),
           status: 'invited',
         });
@@ -598,7 +598,7 @@ describe('Authentication', () => {
           status,
         } = response;
         expect(status).toBe(200);
-        expect(redirect_url).toBe(`${process.env['TOOLJET_HOST']}/invitations/${invitationToken}`);
+        expect(redirect_url).toBe(`${process.env['JUMPSTART_HOST']}/invitations/${invitationToken}`);
       });
     });
   });

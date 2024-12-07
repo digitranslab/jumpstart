@@ -9,7 +9,7 @@ title: Setup
 # Configure OpenId Connect Single Sign-on
 
 
-- Go to the **Workspace Settings** (⚙️) from the left sidebar in the ToolJet dashboard
+- Go to the **Workspace Settings** (⚙️) from the left sidebar in the JumpStart dashboard
   <div style={{textAlign: 'center'}}>
 
   <img className="screenshot-full" src="/img/sso/general/workside.png" alt="General Settings: SSO" width="500"/>

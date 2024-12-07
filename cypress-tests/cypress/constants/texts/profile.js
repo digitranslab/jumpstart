@@ -13,7 +13,7 @@ export const profileText = {
   },
   userName: "The Developer",
   updateButton: "Update",
-  email: "dev@tooljet.io",
+  email: "dev@jumpstart.io",
   firstNameErrorToast: "First name can't be empty!",
   lastNameNameErrorToast: "Last name can't be empty!",
   nameSuccessToast: "Details updated!",

@@ -1,4 +1,4 @@
-import { QueryError, QueryResult, QueryService } from '@tooljet-marketplace/common';
+import { QueryError, QueryResult, QueryService } from '@jumpstart-marketplace/common';
 import { LambdaClient, InvokeCommand } from '@aws-sdk/client-lambda';
 import { SourceOptions, QueryOptions } from './types';
 

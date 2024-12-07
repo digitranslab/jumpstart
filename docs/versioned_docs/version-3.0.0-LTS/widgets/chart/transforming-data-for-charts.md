@@ -3,13 +3,13 @@ id: transforming-data-for-charts
 title: Transforming Data for Charts
 ---
 
-This guide explains how to transform data using RunJS and RunPy in ToolJet and visualize it using the chart component. The chart component in ToolJet enables the creation of various types of charts, with the option to integrate with Plotly for enhanced customization and advanced visualizations. While ToolJet provides the ability to connect to multiple databases, APIs, and data sources for integration, this guide will focus on using ToolJet DB to fetch the required data.
+This guide explains how to transform data using RunJS and RunPy in JumpStart and visualize it using the chart component. The chart component in JumpStart enables the creation of various types of charts, with the option to integrate with Plotly for enhanced customization and advanced visualizations. While JumpStart provides the ability to connect to multiple databases, APIs, and data sources for integration, this guide will focus on using JumpStart DB to fetch the required data.
 
 <div style={{paddingTop:'24px'}}>
 
 ## Plotting a Simple Pie Chart
 
-To create a simple pie chart, the data has been stored in the table with the following structure in ToolJet DB:
+To create a simple pie chart, the data has been stored in the table with the following structure in JumpStart DB:
 
 | <div style={{ width:"100px"}}> id </div> | <div style={{ width:"550px"}}> course </div> |
 |:-- | :---- |
@@ -31,14 +31,14 @@ To create a simple pie chart, the data has been stored in the table with the fol
 ### Query to Fetch Data
 
 1. Click on **+ Add** button of the query manager at the bottom panel of the editor.
-2. Select the ToolJet Database as the data source.
+2. Select the JumpStart Database as the data source.
 3. Select your table from the dropdown. 
 4. Select the **List rows** operation.
 5. Click on the **Preview** button to preview the output or Click on the **Run** button to trigger the query.
 
 <img className="screenshot-full" src="/img/widgets/chart/transforming-data/pie-fetch-data.png" alt="Fetch Data Query" />
 
-This query will fetch the data from the ToolJet DB.
+This query will fetch the data from the JumpStart DB.
 
 ### Transform the Data
 
@@ -84,7 +84,7 @@ This query will calculate the number of each course and return an array of objec
 
 ## Plotting a Line Chart with RunJS Transformation
 
-To create the line chart, the data has been stored in the table with the following structure in ToolJet DB:
+To create the line chart, the data has been stored in the table with the following structure in JumpStart DB:
 
 | <div style={{ width:"20px"}}> id </div> | <div style={{ width:"300px"}}> x </div> | <div style={{ width:"80px"}}> y </div> | <div style={{ width:"150px"}}> region </div> | <div style={{ width:"100px"}}> rdate </div>|
 |:---|:--|:--|:-------|:-----|
@@ -102,14 +102,14 @@ To create the line chart, the data has been stored in the table with the followi
 ### Query to Fetch Data
 
 1. Click on **+ Add** button of the query manager at the bottom panel of the editor.
-2. Select the ToolJet Database as the data source.
+2. Select the JumpStart Database as the data source.
 3. Select your table from the dropdown. 
 4. Select the **List rows** operation.
 5. Click on the **Preview** button to preview the output or Click on the **Run** button to trigger the query.
 
 <img className="screenshot-full" src="/img/widgets/chart/transforming-data/line-fetch-data.png" alt="Fetch Data Query" />
 
-This query will fetch the data from the ToolJet DB.
+This query will fetch the data from the JumpStart DB.
 
 ### Transform the Data
 
@@ -166,7 +166,7 @@ return finalData;
 
 ## Plotting Candle Stick Chart Using Plotly
 
-To create a candlestick chart, the data has been stored in the table with the following structure in ToolJet DB:
+To create a candlestick chart, the data has been stored in the table with the following structure in JumpStart DB:
 
 | <div style={{ width:"60px"}}> id </div> | <div style={{ width:"150px"}}> sdate </div> | <div style={{ width:"100px"}}> open </div> | <div style={{ width:"100px"}}> high </div> | <div style={{ width:"100px"}}> low </div> | <div style={{ width:"100px"}}> sclose </div> |
 |:---|:------|:-----|:-----|:----|:-------|
@@ -177,14 +177,14 @@ To create a candlestick chart, the data has been stored in the table with the fo
 ### Query to Fetch Data
 
 1. Click on **+ Add** button of the query manager at the bottom panel of the editor.
-2. Select the ToolJet Database as the data source.
+2. Select the JumpStart Database as the data source.
 3. Select your table from the dropdown. 
 4. Select the **List rows** operation.
 5. Click on the **Preview** button to preview the output or Click on the **Run** button to trigger the query.
 
 <img className="screenshot-full" src="/img/widgets/chart/transforming-data/cs-fetch-data.png" alt="Fetch Data Query" />
 
-This query will fetch the data from the ToolJet DB.
+This query will fetch the data from the JumpStart DB.
 
 ### Transform the Data
 
@@ -247,7 +247,7 @@ return JSON.stringify(result)
 
 ## Plotting heatmap Chart Using Plotly
 
-To create a heatmap chart, the data has been stored in the table with the following structure in ToolJet DB:
+To create a heatmap chart, the data has been stored in the table with the following structure in JumpStart DB:
 
 | <div style={{ width:"60px"}}> id </div> | <div style={{ width:"150px"}}> x </div> | <div style={{ width:"100px"}}> y </div> | <div style={{ width:"100px"}}> value </div> |
 |:---|:------|:-----|:-----|
@@ -265,14 +265,14 @@ To create a heatmap chart, the data has been stored in the table with the follow
 ### Query to Fetch Data
 
 1. Click on **+ Add** button of the query manager at the bottom panel of the editor.
-2. Select the ToolJet Database as the data source.
+2. Select the JumpStart Database as the data source.
 3. Select your table from the dropdown. 
 4. Select the **List rows** operation.
 5. Click on the **Preview** button to preview the output or Click on the **Run** button to trigger the query.
 
 <img className="screenshot-full" src="/img/widgets/chart/transforming-data/hm-fetch-data.png" alt="Fetch Data Query" />
 
-This query will fetch the data from the ToolJet DB.
+This query will fetch the data from the JumpStart DB.
 
 ### Transform the Data
 

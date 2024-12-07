@@ -84,7 +84,7 @@ describe(
         "be.visible"
       );
 
-      cy.clearAndType(commonSelectors.workEmailInputField, "dev@tooljet.io");
+      cy.clearAndType(commonSelectors.workEmailInputField, "dev@jumpstart.io");
       cy.clearAndType(commonSelectors.passwordInputField, "password");
       cy.get(commonSelectors.loginButton).click();
 
@@ -155,7 +155,7 @@ describe(
 
       cy.visitSlug({ actualUrl: `/applications/${data.slug}` });
 
-      cy.login("test@tooljet.com", "password");
+      cy.login("test@jumpstart.com", "password");
       cy.get(commonSelectors.allApplicationLink).verifyVisibleElement(
         "have.text",
         commonText.allApplicationLink

@@ -9,7 +9,7 @@ describe('session & new apis', () => {
   beforeEach(async () => {
     await clearDB();
     const { organization } = await createUser(app, {
-      email: 'admin@tooljet.io',
+      email: 'admin@jumpstart.io',
       firstName: 'user',
       lastName: 'name',
     });
@@ -48,7 +48,7 @@ describe('session & new apis', () => {
 
     it('should return 404 if the user not in the specific organization', async () => {
       const { organization } = await createUser(app, {
-        email: 'admin2@tooljet.io',
+        email: 'admin2@jumpstart.io',
         firstName: 'user',
         lastName: 'name',
       });

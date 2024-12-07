@@ -3,7 +3,7 @@ id: marketplace-plugin-github
 title: GitHub
 ---
 
-ToolJet offers seamless integration with GitHub. This connection allows you to directly interact with GitHub repositories and data.
+JumpStart offers seamless integration with GitHub. This connection allows you to directly interact with GitHub repositories and data.
 
 ## Connection
 

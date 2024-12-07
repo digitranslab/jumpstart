@@ -37,17 +37,17 @@ export class LibraryAppCreationService {
     const importDto = new ImportResourcesDto();
     importDto.organization_id = currentUser.organizationId;
     importDto.app = templateDefinition.app || templateDefinition.appV2;
-    importDto.tooljet_database = templateDefinition.tooljet_database;
-    importDto.tooljet_version = templateDefinition.tooljet_version;
+    importDto.jumpstart_database = templateDefinition.jumpstart_database;
+    importDto.jumpstart_version = templateDefinition.jumpstart_version;
 
-    if (isVersionGreaterThanOrEqual(templateDefinition.tooljet_version, '2.16.0')) {
+    if (isVersionGreaterThanOrEqual(templateDefinition.jumpstart_version, '2.16.0')) {
       importDto.app[0].appName = appName;
       return await this.importExportResourcesService.import(currentUser, importDto);
     } else {
       const importedApp = await this.appImportExportService.import(currentUser, templateDefinition, appName);
       return {
         app: [importedApp],
-        tooljet_database: [],
+        jumpstart_database: [],
       };
     }
   }

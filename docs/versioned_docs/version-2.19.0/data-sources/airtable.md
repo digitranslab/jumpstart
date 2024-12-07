@@ -5,7 +5,7 @@ title: Airtable
 
 # Airtable
 
-ToolJet can connect to your Airtable account to read and write data. Airtable Personal Access Token is required to connect to the Airtable data source on ToolJet. You can generate the PAT by visiting [Developer Hub from your Airtable profile](https://support.airtable.com/docs/creating-and-using-api-keys-and-access-tokens#understanding-personal-access-token-basic-actions).
+JumpStart can connect to your Airtable account to read and write data. Airtable Personal Access Token is required to connect to the Airtable data source on JumpStart. You can generate the PAT by visiting [Developer Hub from your Airtable profile](https://support.airtable.com/docs/creating-and-using-api-keys-and-access-tokens#understanding-personal-access-token-basic-actions).
 
 <img className="screenshot-full" src="/img/datasource-reference/airtable/add_creds.gif" alt="irtable record"/>
 

@@ -1,5 +1,5 @@
 {
-    "tooljet_database": [],
+    "jumpstart_database": [],
     "app": [
         {
             "definition": {
@@ -7095,8 +7095,8 @@
                         },
                         {
                             "id": "194891f1-624b-408d-918e-a29a2ea3fb4e",
-                            "name": "tooljetdbdefault",
-                            "kind": "tooljetdb",
+                            "name": "jumpstartdbdefault",
+                            "kind": "jumpstartdb",
                             "type": "static",
                             "pluginId": null,
                             "appVersionId": "a56899d0-25d6-4f60-862d-cf613ee7fcb0",
@@ -11720,5 +11720,5 @@
             }
         }
     ],
-    "tooljet_version": "2.26.2-ee2.11.2-cloud2.1.11"
+    "jumpstart_version": "2.26.2-ee2.11.2-cloud2.1.11"
 }

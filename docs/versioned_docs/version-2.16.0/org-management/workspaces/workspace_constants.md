@@ -30,7 +30,7 @@ To use a workspace constant, you need to follow the syntax: **`{{constants.const
 ## Creating Workspace Constants
 
 To create workspace constants, follow these steps:
-- Access the ToolJet Dashboard and navigate to Workspace Settings.
+- Access the JumpStart Dashboard and navigate to Workspace Settings.
 - Select the Workspace Constants tab.
 - Click on the **Create New Constant** button.
 - A drawer will appear; enter the desired name and value for the constant.

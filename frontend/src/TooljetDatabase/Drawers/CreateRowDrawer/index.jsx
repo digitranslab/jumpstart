@@ -2,9 +2,9 @@ import React, { useContext, useState } from 'react';
 import Drawer from '@/_ui/Drawer';
 import { toast } from 'react-hot-toast';
 import CreateRowForm from '../../Forms/RowForm';
-import { TooljetDatabaseContext } from '../../index';
-import { tooljetDatabaseService } from '@/_services';
-import { listAllPrimaryKeyColumns } from '@/TooljetDatabase/constants';
+import { JumpstartDatabaseContext } from '../../index';
+import { jumpstartDatabaseService } from '@/_services';
+import { listAllPrimaryKeyColumns } from '@/JumpstartDatabase/constants';
 import PostgrestQueryBuilder from '@/_helpers/postgrestQueryBuilder';
 
 const CreateRowDrawer = ({
@@ -22,7 +22,7 @@ const CreateRowDrawer = ({
     setSortFilters,
     setQueryFilters,
     columns,
-  } = useContext(TooljetDatabaseContext);
+  } = useContext(JumpstartDatabaseContext);
   const [shouldResetRowForm, setShouldResetRowForm] = useState(0);
 
   return (
@@ -45,7 +45,7 @@ const CreateRowDrawer = ({
               sortQuery.order(primaryKeyColumnName, 'desc');
             });
 
-            tooljetDatabaseService
+            jumpstartDatabaseService
               .findOne(organizationId, selectedTable.id, `${sortQuery.url.toString()}&limit=${limit}`)
               .then(({ headers, data = [], error }) => {
                 if (error) {

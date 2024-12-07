@@ -4,7 +4,7 @@ title: Print Data from Multiple Tabs
 ---
 <div style={{paddingBottom:'24px'}}>
 
-In this guide, we will implement printing data from multiple tabs in ToolJet. This will be useful when printing an invoice or a report from your ToolJet application. For example, a ToolJet app that has a set of tabs for each invoice, and you want to print all the tabs in one go.
+In this guide, we will implement printing data from multiple tabs in JumpStart. This will be useful when printing an invoice or a report from your JumpStart application. For example, a JumpStart app that has a set of tabs for each invoice, and you want to print all the tabs in one go.
 
 
 </div>
@@ -13,7 +13,7 @@ In this guide, we will implement printing data from multiple tabs in ToolJet. Th
 
 ## UI of the App
 
-On the ToolJet homepage, click on the ellipses on the `Create new app` button. Choose an app with a set of tabs for each record. Each tab will have a set of fields to display. For this guide, we will be using the **Lead Management System** app.
+On the JumpStart homepage, click on the ellipses on the `Create new app` button. Choose an app with a set of tabs for each record. Each tab will have a set of fields to display. For this guide, we will be using the **Lead Management System** app.
 
 In the example below, we have the **Tabs** component and each tab has a set of fields to display the record details.
 

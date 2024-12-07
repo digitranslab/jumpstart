@@ -1,4 +1,4 @@
-import { QueryError, QueryResult, QueryService, ConnectionTestResult } from '@tooljet-marketplace/common';
+import { QueryError, QueryResult, QueryService, ConnectionTestResult } from '@jumpstart-marketplace/common';
 import { createClient } from '@supabase/supabase-js';
 import {
   SourceOptions,

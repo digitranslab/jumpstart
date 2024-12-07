@@ -8,7 +8,7 @@ Steps are used to guide users through complex processes, making them easier and 
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/steps/steps.png" alt="ToolJet - Widget Reference - Steps" />
+<img className="screenshot-full" src="/img/widgets/steps/steps.png" alt="JumpStart - Widget Reference - Steps" />
 
 </div>
 
@@ -16,7 +16,7 @@ Steps are used to guide users through complex processes, making them easier and 
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/steps/props.png" alt="ToolJet - Widget Reference - Steps" />
+<img className="screenshot-full" src="/img/widgets/steps/props.png" alt="JumpStart - Widget Reference - Steps" />
 
 </div>
 
@@ -57,7 +57,7 @@ Under the <b>General</b> accordion, you can set the value in the string format. 
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/tooltip.png" alt="ToolJet - Widget Reference - Steps" />
+<img className="screenshot-full" src="/img/tooltip.png" alt="JumpStart - Widget Reference - Steps" />
 
 </div>
 

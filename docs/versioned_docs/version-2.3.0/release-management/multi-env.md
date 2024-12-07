@@ -5,7 +5,7 @@ title: Multi-Environment
 
 <div className='badge badge--primary heading-badge'>Available on: Enterprise Edition</div>
 
-ToolJet's **multi-environment** helps in streamlining workflows, thereby minimizing the chances of errors, and enables effective application management. Using multi-environment ensures that your ToolJet application is rigorously tested before it is made available to users.
+JumpStart's **multi-environment** helps in streamlining workflows, thereby minimizing the chances of errors, and enables effective application management. Using multi-environment ensures that your JumpStart application is rigorously tested before it is made available to users.
 
 <div style={{textAlign: 'center'}}>
 
@@ -15,7 +15,7 @@ ToolJet's **multi-environment** helps in streamlining workflows, thereby minimiz
 
 ### Environments
 
-ToolJet provides three default **environments**:
+JumpStart provides three default **environments**:
 - **Production**
 - **Development**
 - **Staging**
@@ -52,7 +52,7 @@ To switch between environments, follow these steps:
 
 </div>
 
-ToolJet's app builder remembers your last editing state. When you reopen an app, it resumes from where you left off, ensuring a seamless experience. For instance, if you edited an app in the staging environment, it will open in the staging environment when you return.
+JumpStart's app builder remembers your last editing state. When you reopen an app, it resumes from where you left off, ensuring a seamless experience. For instance, if you edited an app in the staging environment, it will open in the staging environment when you return.
 
 :::info
 The default environment for released apps is **Production**.

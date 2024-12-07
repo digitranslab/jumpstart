@@ -4,14 +4,14 @@ title: Use Form Component
 ---
 <div style={{paddingBottom:'24px'}}>
 
-In this guide, we'll create a simple app that uses a **[Form](/docs/widgets/form)** component to add records to a database. We'll use **[ToolJet Database](/docs/tooljet-db/tooljet-database/)** as our data source. 
+In this guide, we'll create a simple app that uses a **[Form](/docs/widgets/form)** component to add records to a database. We'll use **[JumpStart Database](/docs/jumpstart-db/jumpstart-database/)** as our data source. 
 
 </div>
 
 <div style={{paddingBottom:'24px'}}>
 
-## 1. Create a Table in ToolJet Database 
-- Create a table named *products* in ToolJet Database. 
+## 1. Create a Table in JumpStart Database 
+- Create a table named *products* in JumpStart Database. 
 - Create three columns - `name`, `quantity` and `price`. 
 - Add some sample data to the table.
 
@@ -40,7 +40,7 @@ In this guide, we'll create a simple app that uses a **[Form](/docs/widgets/form
 
 ## 3. Load the Table Component With Data
 
-- Click on the Add button in the **[Query Panel](/docs/app-builder/query-panel/)**, select ToolJet Database
+- Click on the Add button in the **[Query Panel](/docs/app-builder/query-panel/)**, select JumpStart Database
 - Rename the query to *getProducts*
 - Choose *products* as Table name, List rows as Operations
 - Enable `Run this query on application load?` to automatically run the query when the app starts
@@ -58,7 +58,7 @@ In this guide, we'll create a simple app that uses a **[Form](/docs/widgets/form
 <div style={{paddingTop:'24px', paddingBottom:'24px'}}>
 
 ## 4. Write Data Using the Form Component 
-- Click on the Add button in the Query Panel, select ToolJet Database
+- Click on the Add button in the Query Panel, select JumpStart Database
 - Select *products* as Table name, Create row as Operations
 - Rename the query to *addProduct*
 - Click on Add Column and add three columns - **name**, **quantity** and **price**
@@ -90,13 +90,13 @@ To ensure the Table component updates with new data after adding products, trigg
     <img className="screenshot-full" src="/img/how-to/use-form/write-data-query.png" alt="Table with Data" width="100%" />
 </div>
 
-Now if you enter the product data on the form and click on Submit. The `addProduct` query will run and the entered data will be written to the `products` table in the ToolJet Database.
+Now if you enter the product data on the form and click on Submit. The `addProduct` query will run and the entered data will be written to the `products` table in the JumpStart Database.
 
 <div style={{textAlign: 'center', marginBotton: '15px', marginTop: '15px'}}>
     <img className="screenshot-full" src="/img/how-to/use-form/final-preview.png" alt="Final Preview" width="100%" />
 </div>
 <br/>
 
-In this how-to guide, we have explored a practical application of the Form component in ToolJet. You can apply the same principles for a variety of use cases that requires data input from the end-user.
+In this how-to guide, we have explored a practical application of the Form component in JumpStart. You can apply the same principles for a variety of use cases that requires data input from the end-user.
 
 </div>

@@ -9,5 +9,5 @@ spec:
     protocol: TCP
     targetPort: 3000
   selector:
-    component: tooljet
+    component: jumpstart
   type: NodePort

@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react';
-import { TooljetDatabaseContext } from '@/TooljetDatabase/index';
+import { JumpstartDatabaseContext } from '@/JumpstartDatabase/index';
 import Select from '@/_ui/Select';
 import { v4 as uuidv4 } from 'uuid';
 import { isEmpty } from 'lodash';
@@ -9,7 +9,7 @@ import CodeHinter from '@/Editor/CodeEditor';
 
 export const CreateRow = React.memo(({ optionchanged, options, darkMode }) => {
   const mounted = useMounted();
-  const { columns } = useContext(TooljetDatabaseContext);
+  const { columns } = useContext(JumpstartDatabaseContext);
   const [columnOptions, setColumnOptions] = useState(options['create_row'] || {});
 
   useEffect(() => {

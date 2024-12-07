@@ -1,5 +1,5 @@
 {
-  "tooljet_database": [],
+  "jumpstart_database": [],
   "app": [
     {
       "definition": {
@@ -204,7 +204,7 @@
               "parent": "8afe5277-bc65-4992-9105-fdf38224e4a8",
               "properties": {
                 "source": {
-                  "value": "{{globals.theme.name == \"dark\" ? \"https://docs.tooljet.com/img/Logomark_white.svg\" : \"https://docs.tooljet.com/img/Logomark.svg\"}}"
+                  "value": "{{globals.theme.name == \"dark\" ? \"https://docs.jumpstart.com/img/Logomark_white.svg\" : \"https://docs.jumpstart.com/img/Logomark.svg\"}}"
                 }
               },
               "general": null,
@@ -250,7 +250,7 @@
               "parent": "a7765137-be9b-44fe-b48c-b17d1f57a7cd",
               "properties": {
                 "source": {
-                  "value": "{{components.fileUploader.file[0] ? 'data:image;base64,' + components.fileUploader.file[0].base64Data :   'https://blog.tooljet.com/wp-content/uploads/2024/01/ToolJet-Year-In-Review.webp'; }}"
+                  "value": "{{components.fileUploader.file[0] ? 'data:image;base64,' + components.fileUploader.file[0].base64Data :   'https://blog.jumpstart.com/wp-content/uploads/2024/01/JumpStart-Year-In-Review.webp'; }}"
                 },
                 "zoomButtons": {
                   "value": "{{true}}"
@@ -1131,8 +1131,8 @@
             },
             {
               "id": "c7f85556-c4b6-4717-84b9-0054d3a3fdb9",
-              "name": "tooljetdbdefault",
-              "kind": "tooljetdb",
+              "name": "jumpstartdbdefault",
+              "kind": "jumpstartdb",
               "type": "static",
               "pluginId": null,
               "appVersionId": "e536f62b-3189-4236-975a-299e6515a8bf",
@@ -1340,5 +1340,5 @@
       }
     }
   ],
-  "tooljet_version": "2.28.4-ee2.15.0-cloud2.3.1"
+  "jumpstart_version": "2.28.4-ee2.15.0-cloud2.3.1"
 }

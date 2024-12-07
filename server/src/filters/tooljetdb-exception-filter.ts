@@ -1,13 +1,13 @@
 import { ArgumentsHost, Catch, ExceptionFilter } from '@nestjs/common';
-import { TooljetDatabaseError } from 'src/modules/tooljet_db/tooljet-db.types';
+import { JumpstartDatabaseError } from 'src/modules/jumpstart_db/jumpstart-db.types';
 
 @Catch()
-export class TooljetDbExceptionFilter implements ExceptionFilter {
+export class JumpstartDbExceptionFilter implements ExceptionFilter {
   catch(exception: any, host: ArgumentsHost) {
     const ctx = host.switchToHttp();
     const next = ctx.getNext();
 
-    if (exception instanceof TooljetDatabaseError) {
+    if (exception instanceof JumpstartDatabaseError) {
       next(exception);
     } else {
       if (Array.isArray(exception?.response?.message)) {

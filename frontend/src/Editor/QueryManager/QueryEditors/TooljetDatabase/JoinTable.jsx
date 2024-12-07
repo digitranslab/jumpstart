@@ -4,7 +4,7 @@ import { ButtonSolid } from '@/_ui/AppButton/AppButton';
 import Trash from '@/_ui/Icon/solidIcons/Trash';
 import AddRectangle from '@/_ui/Icon/bulkIcons/AddRectangle';
 import { clone } from 'lodash';
-import { TooljetDatabaseContext } from '@/TooljetDatabase/index';
+import { JumpstartDatabaseContext } from '@/JumpstartDatabase/index';
 import DropDownSelect from './DropDownSelect';
 import JoinConstraint from './JoinConstraint';
 import JoinSelect from './JoinSelect';
@@ -29,7 +29,7 @@ const SelectTableMenu = ({ darkMode }) => {
     joinTableOptions,
     joinTableOptionsChange,
     deleteJoinTableOptions,
-  } = useContext(TooljetDatabaseContext);
+  } = useContext(JumpstartDatabaseContext);
 
   const joins = clone(joinOptions);
 
@@ -198,7 +198,7 @@ const SelectTableMenu = ({ darkMode }) => {
 // Component to Render Filter Section
 const RenderFilterSection = ({ darkMode }) => {
   const { tableInfo, joinTableOptions, joinTableOptionsChange, deleteJoinTableOptions, joinOptions, findTableDetails } =
-    useContext(TooljetDatabaseContext);
+    useContext(JumpstartDatabaseContext);
   const { conditions = {} } = joinTableOptions;
   const { conditionsList = [] } = conditions;
 

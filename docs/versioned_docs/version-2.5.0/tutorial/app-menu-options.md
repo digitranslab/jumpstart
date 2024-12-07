@@ -31,7 +31,7 @@ The icon on the app cards can be customised by selecting the `Change Icon` optio
 
 ## Add to folder
 
-ToolJet allows you to create folders (`+ Create new folder` from the left sidebar) on the dashboard, and any application can be added to these folders.
+JumpStart allows you to create folders (`+ Create new folder` from the left sidebar) on the dashboard, and any application can be added to these folders.
 
 <div style={{textAlign: 'center'}}>
 
@@ -41,7 +41,7 @@ ToolJet allows you to create folders (`+ Create new folder` from the left sideba
 
 ## Clone app
 
-Any application created on ToolJet can be cloned using the `Clone app` option. The cloned application is the exact copy of the original app except that the user will have to re-enter the datasource credentials in cloned app.
+Any application created on JumpStart can be cloned using the `Clone app` option. The cloned application is the exact copy of the original app except that the user will have to re-enter the datasource credentials in cloned app.
 
 ## Export app
 

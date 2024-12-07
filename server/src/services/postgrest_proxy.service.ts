@@ -6,7 +6,7 @@ import * as proxy from 'express-http-proxy';
 import * as jwt from 'jsonwebtoken';
 import { ConfigService } from '@nestjs/config';
 import { maybeSetSubPath } from '../helpers/utils.helper';
-import { PostgrestError, TooljetDatabaseError, TooljetDbActions } from 'src/modules/tooljet_db/tooljet-db.types';
+import { PostgrestError, JumpstartDatabaseError, JumpstartDbActions } from 'src/modules/jumpstart_db/jumpstart-db.types';
 import { QueryError } from 'src/modules/data_sources/query.errors';
 import got from 'got';
 
@@ -95,7 +95,7 @@ export class PostgrestProxyService {
         const postgrestResponse = JSON.parse(error.response.rawBody.toString().toString('utf8'));
         const errorMessage = postgrestResponse.message;
         const errorContext: {
-          origin: TooljetDbActions;
+          origin: JumpstartDbActions;
           internalTables: { id: string; tableName: string }[];
         } = {
           origin: 'proxy_postgrest',
@@ -106,8 +106,8 @@ export class PostgrestProxyService {
         };
         const errorObj = new QueryFailedError(postgrestResponse, [], new PostgrestError(postgrestResponse));
 
-        const tooljetDbError = new TooljetDatabaseError(errorMessage, errorContext, errorObj);
-        throw new QueryError(tooljetDbError.toString(), { code: tooljetDbError.code }, {});
+        const jumpstartDbError = new JumpstartDatabaseError(errorMessage, errorContext, errorObj);
+        throw new QueryError(jumpstartDbError.toString(), { code: jumpstartDbError.code }, {});
       }
 
       throw new QueryError('Query could not be completed', error.message, {});
@@ -126,7 +126,7 @@ export class PostgrestProxyService {
 
         const errorMessage = postgrestResponse.message;
         const errorContext: {
-          origin: TooljetDbActions;
+          origin: JumpstartDbActions;
           internalTables: { id: string; tableName: string }[];
         } = {
           origin: 'proxy_postgrest',
@@ -137,7 +137,7 @@ export class PostgrestProxyService {
         };
         const errorObj = new QueryFailedError(postgrestResponse, [], new PostgrestError(postgrestResponse));
 
-        throw new TooljetDatabaseError(errorMessage, errorContext, errorObj);
+        throw new JumpstartDatabaseError(errorMessage, errorContext, errorObj);
       }
 
       return proxyResData;
@@ -211,7 +211,7 @@ export class PostgrestProxyService {
 }
 
 function replaceUrlForPostgrest(url: string) {
-  const path = '/api/tooljet-db';
+  const path = '/api/jumpstart-db';
   const pathRegex = new RegExp(`${maybeSetSubPath(path)}/proxy`);
   const parts = url.split('?');
   const queryString = parts[1];

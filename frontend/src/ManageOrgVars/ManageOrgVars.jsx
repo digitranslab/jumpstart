@@ -273,7 +273,7 @@ class RawManageOrgVarsComponent extends React.Component {
           variables immediately to safeguard your applications from this breaking change. Please refer to the migration
           guide{' '}
           <a
-            href="https://docs.tooljet.com/docs/org-management/workspaces/workspace-variables-migration"
+            href="https://docs.jumpstart.com/docs/org-management/workspaces/workspace-variables-migration"
             target="_blank"
             rel="noreferrer"
           >

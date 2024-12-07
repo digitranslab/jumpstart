@@ -33,7 +33,7 @@ describe('folders controller', () => {
 
     it('should list all folders in an organization', async () => {
       const adminUserData = await createUser(nestApp, {
-        email: 'admin@tooljet.io',
+        email: 'admin@jumpstart.io',
       });
       const { user } = adminUserData;
 
@@ -137,11 +137,11 @@ describe('folders controller', () => {
 
   it('should scope folders and app for user based on permission', async () => {
     const adminUserData = await createUser(nestApp, {
-      email: 'admin@tooljet.io',
+      email: 'admin@jumpstart.io',
     });
 
     const newUserData = await createUser(nestApp, {
-      email: 'developer@tooljet.io',
+      email: 'developer@jumpstart.io',
       groups: ['all_users'],
       organization: adminUserData.organization,
     });
@@ -297,7 +297,7 @@ describe('folders controller', () => {
 
     it('should create new folder in an organization', async () => {
       const adminUserData = await createUser(nestApp, {
-        email: 'admin@tooljet.io',
+        email: 'admin@jumpstart.io',
       });
       const { user } = adminUserData;
 
@@ -323,17 +323,17 @@ describe('folders controller', () => {
   describe('PUT /api/folders/:id', () => {
     it('should be able to update an existing folder if group is admin or has update permission in the same organization', async () => {
       const adminUserData = await createUser(nestApp, {
-        email: 'admin@tooljet.io',
+        email: 'admin@jumpstart.io',
         groups: ['all_users', 'admin'],
       });
       const developerUserData = await createUser(nestApp, {
-        email: 'dev@tooljet.io',
+        email: 'dev@jumpstart.io',
         groups: ['all_users', 'developer'],
         organization: adminUserData.organization,
       });
 
       const viewerUserData = await createUser(nestApp, {
-        email: 'viewer@tooljet.io',
+        email: 'viewer@jumpstart.io',
         groups: ['viewer', 'all_users'],
         organization: adminUserData.organization,
       });
@@ -386,17 +386,17 @@ describe('folders controller', () => {
   describe('DELETE /api/folders/:id', () => {
     it('should be able to delete an existing folder if group is admin or has delete permission in the same organization', async () => {
       const adminUserData = await createUser(nestApp, {
-        email: 'admin@tooljet.io',
+        email: 'admin@jumpstart.io',
         groups: ['all_users', 'admin'],
       });
       const developerUserData = await createUser(nestApp, {
-        email: 'dev@tooljet.io',
+        email: 'dev@jumpstart.io',
         groups: ['all_users', 'developer'],
         organization: adminUserData.organization,
       });
 
       const viewerUserData = await createUser(nestApp, {
-        email: 'viewer@tooljet.io',
+        email: 'viewer@jumpstart.io',
         groups: ['viewer', 'all_users'],
         organization: adminUserData.organization,
       });

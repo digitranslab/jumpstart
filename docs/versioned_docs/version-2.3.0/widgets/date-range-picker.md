@@ -33,7 +33,7 @@ Under the <b>General</b> accordion, you can set the value in the string format. 
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/tooltip.png" alt="ToolJet - Widget Reference - Date range picker" />
+<img className="screenshot-full" src="/img/tooltip.png" alt="JumpStart - Widget Reference - Date range picker" />
 
 </div>
 
@@ -43,7 +43,7 @@ Date range picker supports the following events:
 
 ### On select
 
-The On select event is triggered when the a start date and end date is selected on the picker. Just like any other event on ToolJet, you can set multiple handlers for on select event.
+The On select event is triggered when the a start date and end date is selected on the picker. Just like any other event on JumpStart, you can set multiple handlers for on select event.
 
 :::info
 Check [Action Reference](/docs/category/actions-reference) docs to get the detailed information about all the **Actions**.
@@ -51,7 +51,7 @@ Check [Action Reference](/docs/category/actions-reference) docs to get the detai
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/date-range/event.png" alt="ToolJet - Widget Reference - Date range picker" />
+<img className="screenshot-full" src="/img/widgets/date-range/event.png" alt="JumpStart - Widget Reference - Date range picker" />
 
 </div>
 

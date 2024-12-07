@@ -11,7 +11,7 @@ Password login is enabled by default for all workspaces. User with admin privile
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - SSO configs](/img/password-login/organization-menu.png)
+![JumpStart - SSO configs](/img/password-login/organization-menu.png)
 
 </div>
 
@@ -19,7 +19,7 @@ Password login is enabled by default for all workspaces. User with admin privile
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - Password Login configs](/img/password-login/password-login.png)
+![JumpStart - Password Login configs](/img/password-login/password-login.png)
 
 </div>
 

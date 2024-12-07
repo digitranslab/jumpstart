@@ -49,11 +49,11 @@ function AdminSetup({ formData, setFormData, setPage, page, setCompleted, isLoad
         By continuing you are agreeing to the
         <br />
         <span>
-          <a href="https://www.tooljet.com/terms" data-cy="terms-of-service-link">
+          <a href="https://www.jumpstart.com/terms" data-cy="terms-of-service-link">
             Terms of Service{' '}
           </a>
           &
-          <a href="https://www.tooljet.com/privacy" data-cy="privacy-policy-link">
+          <a href="https://www.jumpstart.com/privacy" data-cy="privacy-policy-link">
             {' '}
             Privacy Policy
           </a>

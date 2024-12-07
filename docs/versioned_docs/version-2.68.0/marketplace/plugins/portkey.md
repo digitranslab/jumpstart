@@ -3,7 +3,7 @@ id: marketplace-plugin-portkey
 title: Portkey
 ---
 
-ToolJet can integrate with Portkey to access AI services such as text completion, chat completion, prompt completion, and embedding creation. This integration enables ToolJet to leverage Portkey's LMOps platform to develop, launch, maintain, and iterate on generative AI features.
+JumpStart can integrate with Portkey to access AI services such as text completion, chat completion, prompt completion, and embedding creation. This integration enables JumpStart to leverage Portkey's LMOps platform to develop, launch, maintain, and iterate on generative AI features.
 
 <div style={{textAlign: 'center', paddingBottom: '24px'}}>
     <img className="screenshot-full" src="/img/marketplace/plugins/portkey/overview.png" alt="Portkey Dashboard Overview" />
@@ -23,12 +23,12 @@ To connect to Portkey, the following credentials are required:
 - **Gateway URL** (Optional): Your default Portkey Gateway URL. See the **[Portkey API Authentication Documentation](https://docs.portkey.ai/docs/api-reference/authentication#obtaining-your-api-key)** for details on how to obtain your Gateway URL.
 
 <div style={{textAlign: 'center'}}>
-    <img className="screenshot-full" src="/img/marketplace/plugins/portkey/configuration.png" alt="Configuring Portkey in ToolJet" />
+    <img className="screenshot-full" src="/img/marketplace/plugins/portkey/configuration.png" alt="Configuring Portkey in JumpStart" />
 </div>
 
 ## Supported Operations
 
-Portkey in ToolJet supports the following operations:
+Portkey in JumpStart supports the following operations:
 
 - **[Completion](#completion)**
 - **[Chat](#chat)**

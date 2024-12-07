@@ -1,4 +1,4 @@
-import { QueryError, QueryResult, QueryService } from '@tooljet-marketplace/common';
+import { QueryError, QueryResult, QueryService } from '@jumpstart-marketplace/common';
 import { SourceOptions, QueryOptions, Operation } from './types';
 import { TextractClient } from '@aws-sdk/client-textract';
 import { analyzeDocument, analyzeS3Document } from './query_operations';

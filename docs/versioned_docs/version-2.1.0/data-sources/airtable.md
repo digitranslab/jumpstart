@@ -6,7 +6,7 @@ title: Airtable
 # Airtable
 
 
-ToolJet can connect to your Airtable account to read and write data. **Airtable API key** is required to create an Airtable data source on ToolJet. You can generate API key by visiting [Airtable account page](https://airtable.com/account). 
+JumpStart can connect to your Airtable account to read and write data. **Airtable API key** is required to create an Airtable data source on JumpStart. You can generate API key by visiting [Airtable account page](https://airtable.com/account). 
 
 
 <img className="screenshot-full" src="/img/datasource-reference/airtable/add_creds.gif" alt="irtable record"/>

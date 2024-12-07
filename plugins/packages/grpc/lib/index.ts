@@ -1,4 +1,4 @@
-import { QueryError, QueryResult, QueryService } from '@tooljet-plugins/common';
+import { QueryError, QueryResult, QueryService } from '@jumpstart-plugins/common';
 import { SourceOptions, QueryOptions } from './types';
 
 import * as grpc from '@grpc/grpc-js';

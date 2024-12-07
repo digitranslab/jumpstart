@@ -1,4 +1,4 @@
-import { ConnectionTestResult, QueryService, QueryResult, QueryError } from '@tooljet-plugins/common';
+import { ConnectionTestResult, QueryService, QueryResult, QueryError } from '@jumpstart-plugins/common';
 import { getDocument, updateDocument } from './operations';
 import { indexDocument, search } from './operations';
 import { Client, ClientOptions } from '@opensearch-project/opensearch';

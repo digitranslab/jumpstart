@@ -3,7 +3,7 @@ id: build-dynamic-forms
 title: Build Dynamic Forms
 ---
 
-This guide walks you through the process of building dynamic, interactive forms in ToolJet through validations.   
+This guide walks you through the process of building dynamic, interactive forms in JumpStart through validations.   
 
 <div style={{paddingBottom:'24px'}}>
 

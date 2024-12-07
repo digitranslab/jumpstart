@@ -1,4 +1,4 @@
-import { QueryError, QueryResult, QueryService } from '@tooljet-plugins/common';
+import { QueryError, QueryResult, QueryService } from '@jumpstart-plugins/common';
 import sgMail from '@sendgrid/mail';
 import { EmailOptions, SourceOptions, QueryOptions } from './types';
 

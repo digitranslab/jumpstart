@@ -788,10 +788,10 @@ class DataSourceManagerComponent extends React.Component {
       : true;
     this.props.setGlobalDataSourceStatus({ isEditing: !isSaveDisabled });
     const docLink = isSampleDb
-      ? 'https://docs.tooljet.com/docs/data-sources/sample-data-sources'
+      ? 'https://docs.jumpstart.com/docs/data-sources/sample-data-sources'
       : selectedDataSource?.pluginId && selectedDataSource.pluginId.trim() !== ''
-      ? `https://docs.tooljet.com/docs/marketplace/plugins/marketplace-plugin-${selectedDataSource?.kind}/`
-      : `https://docs.tooljet.com/docs/data-sources/${selectedDataSource?.kind}`;
+      ? `https://docs.jumpstart.com/docs/marketplace/plugins/marketplace-plugin-${selectedDataSource?.kind}/`
+      : `https://docs.jumpstart.com/docs/data-sources/${selectedDataSource?.kind}`;
     return (
       pluginsLoaded && (
         <div>
@@ -848,7 +848,7 @@ class DataSourceManagerComponent extends React.Component {
                   ) : (
                     <div className="row">
                       <div className="col-md-2">
-                        <SolidIcon name="tooljet" />
+                        <SolidIcon name="jumpstart" />
                       </div>
                       <div className="col-md-10"> Sample data source</div>
                     </div>
@@ -992,8 +992,8 @@ class DataSourceManagerComponent extends React.Component {
                     className="color-primary tj-docs-link tj-text-sm"
                     href={
                       selectedDataSource?.pluginId && selectedDataSource.pluginId.trim() !== ''
-                        ? `https://docs.tooljet.com/docs/marketplace/plugins/marketplace-plugin-${selectedDataSource.kind}/`
-                        : `https://docs.tooljet.com/docs/data-sources/${selectedDataSource.kind}`
+                        ? `https://docs.jumpstart.com/docs/marketplace/plugins/marketplace-plugin-${selectedDataSource.kind}/`
+                        : `https://docs.jumpstart.com/docs/data-sources/${selectedDataSource.kind}`
                     }
                     target="_blank"
                     rel="noreferrer"

@@ -5,7 +5,7 @@ title: Google
 
 # Google Single Sign-on
 
-- Go to the **Workspace Settings** (⚙️) from the left sidebar in the ToolJet dashboard
+- Go to the **Workspace Settings** (⚙️) from the left sidebar in the JumpStart dashboard
   <div style={{textAlign: 'center'}}>
 
   <img className="screenshot-full" src="/img/sso/general/workside.png" alt="General Settings: SSO" width="500"/>
@@ -49,7 +49,7 @@ select 'External'.
   </div>
 
 - You'll be led to an app registration page where you can set OAuth scopes. Select 'Add or remove scopes' and add the scopes
-userinfo.email and userinfo.profile as shown in the image. This will allow ToolJet to store the email and name of the
+userinfo.email and userinfo.profile as shown in the image. This will allow JumpStart to store the email and name of the
 user who is signing in
   <div style={{textAlign: 'center'}}>
 
@@ -57,7 +57,7 @@ user who is signing in
 
   </div>
 
-- Set the domain on which ToolJet is hosted as an authorized domain
+- Set the domain on which JumpStart is hosted as an authorized domain
   <div style={{textAlign: 'center'}}>
 
   <img className="screenshot-full" src="/img/sso/google/authorized-urls.png" alt="General Settings: SSO" width="700"/>
@@ -73,7 +73,7 @@ user who is signing in
 
 Lastly, set the `client id` in google manage SSO page. This value will be available from your [Google cloud console credentials page](https://console.cloud.google.com/apis/credentials)
 
-The Google sign-in button will now be available in your ToolJet login screen, if you are not enabled Multi-Workspace.
+The Google sign-in button will now be available in your JumpStart login screen, if you are not enabled Multi-Workspace.
 
 ## Multi-Workspace
 If you have enabled Multi-Workspace you can configure Google SSO as mentioned above, for setting default SSO for the instance use environment variable.

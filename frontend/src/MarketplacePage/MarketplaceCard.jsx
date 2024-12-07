@@ -39,7 +39,7 @@ export const MarketplaceCard = ({ id, name, repo, description, version, isInstal
   if (repo) {
     iconSrc = `https://raw.githubusercontent.com/${repo}/main/lib/icon.svg`;
   } else {
-    iconSrc = `${config.TOOLJET_MARKETPLACE_URL}/marketplace-assets/${id}/lib/icon.svg`;
+    iconSrc = `${config.JUMPSTART_MARKETPLACE_URL}/marketplace-assets/${id}/lib/icon.svg`;
   }
 
   return (

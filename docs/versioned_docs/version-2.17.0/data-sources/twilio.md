@@ -5,11 +5,11 @@ title: Twilio
 
 # Twilio
 
-ToolJet can connect to your Twilio account to send sms.
+JumpStart can connect to your Twilio account to send sms.
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - Data source - Twilio](/img/datasource-reference/twilio/connect.png)
+![JumpStart - Data source - Twilio](/img/datasource-reference/twilio/connect.png)
 
 </div>
 
@@ -22,7 +22,7 @@ ToolJet can connect to your Twilio account to send sms.
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - Data source - Twilio](/img/datasource-reference/twilio/auth.png)
+![JumpStart - Data source - Twilio](/img/datasource-reference/twilio/auth.png)
 
 </div>
 
@@ -30,7 +30,7 @@ ToolJet can connect to your Twilio account to send sms.
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - Data source - Twilio](/img/datasource-reference/twilio/sid.png)
+![JumpStart - Data source - Twilio](/img/datasource-reference/twilio/sid.png)
 
 </div>
 
@@ -46,7 +46,7 @@ This operation will send the specified message to specified mobile number.
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - Data source - Twilio](/img/datasource-reference/twilio/sms.png)
+![JumpStart - Data source - Twilio](/img/datasource-reference/twilio/sms.png)
 
 </div>
 

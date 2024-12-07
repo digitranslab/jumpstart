@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: tooljet-postgrest
+  name: jumpstart-postgrest
 spec:
   replicas: 1
   strategy:
@@ -11,11 +11,11 @@ spec:
       maxSurge: 1
   selector:
     matchLabels:
-      component: tooljet-postgrest
+      component: jumpstart-postgrest
   template:
     metadata:
       labels:
-        component: tooljet-postgrest
+        component: jumpstart-postgrest
     spec:
       containers:
       - name: postgrest
@@ -39,9 +39,9 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: tooljet-postgrest-service
+  name: jumpstart-postgrest-service
   labels:
-    name: tooljet-postgrest
+    name: jumpstart-postgrest
 spec:
   type: NodePort
   ports:
@@ -49,4 +49,4 @@ spec:
       protocol: TCP
       targetPort: 3000
   selector:
-    component: tooljet-postgrest
+    component: jumpstart-postgrest

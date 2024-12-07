@@ -9,7 +9,7 @@ title: Custom Component
 
 <div style={{textAlign: 'center'}}>
 
-<img style={{ border:'0', marginBottom:'15px', borderRadius:'5px', boxShadow: '0px 1px 3px rgba(0, 0, 0, 0.2)' }} className="screenshot-full" src="/img/widgets/custom-component/custom-component-v2.png" alt="ToolJet - Widget Reference - Custom Component" />
+<img style={{ border:'0', marginBottom:'15px', borderRadius:'5px', boxShadow: '0px 1px 3px rgba(0, 0, 0, 0.2)' }} className="screenshot-full" src="/img/widgets/custom-component/custom-component-v2.png" alt="JumpStart - Widget Reference - Custom Component" />
 
 </div>
 
@@ -35,9 +35,9 @@ The data needs to be an objects which needs to be passed as `data` props to the 
 
 This field is used to add a React code for your custom component. The packages for the custom component can be imported from [Skypack](https://www.skypack.dev/) or [esm](https://esm.sh/). For example, to import `React` package into the custom component it can be imported as `import React from 'https://cdn.skypack.dev/react'`.
 
-Tooljet provides 3 props to interact with the app: `data`, `updateData` and `runQuery`.
+Jumpstart provides 3 props to interact with the app: `data`, `updateData` and `runQuery`.
 
-- `data` is a shared object between custom component and Tooljet app.
+- `data` is a shared object between custom component and Jumpstart app.
 - `updateData` is a function which accepts a single object used to update the data passed to the custom component.
 - `runQuery` is a function which accepts a query name as a string used to run the query from the custom component.
 
@@ -67,13 +67,13 @@ const MyCustomComponent = ({data, updateData, runQuery}) => (
     </Container>
 );
 
-const ConnectedComponent = Tooljet.connectComponent(MyCustomComponent);
+const ConnectedComponent = Jumpstart.connectComponent(MyCustomComponent);
 
 ReactDOM.render(<ConnectedComponent />, document.body);
 ```
 
 :::info
-`Tooljet.connectComponent` acts as a HOC and it is required to get access to the data passed into the custom component and run the query
+`Jumpstart.connectComponent` acts as a HOC and it is required to get access to the data passed into the custom component and run the query
 :::
 
 </div>

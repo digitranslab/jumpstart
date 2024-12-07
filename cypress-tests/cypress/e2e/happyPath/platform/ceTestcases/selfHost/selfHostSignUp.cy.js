@@ -21,8 +21,8 @@ describe("Self host onboarding", () => {
       "have.text",
       commonText.selfHostSetUpCardSubHeader
     );
-    cy.get(commonSelectors.setUpToolJetButton)
-      .verifyVisibleElement("have.text", commonText.setUpToolJetButton)
+    cy.get(commonSelectors.setUpJumpStartButton)
+      .verifyVisibleElement("have.text", commonText.setUpJumpStartButton)
       .click();
 
     signup.selfHostCommonElements();
@@ -60,14 +60,14 @@ describe("Self host onboarding", () => {
     cy.get(commonSelectors.termsOfServiceLink)
       .verifyVisibleElement("have.text", commonText.termsOfServiceLink)
       .and("have.attr", "href")
-      .and("equal", "https://www.tooljet.com/terms");
+      .and("equal", "https://www.jumpstart.com/terms");
     cy.get(commonSelectors.privacyPolicyLink)
       .verifyVisibleElement("have.text", commonText.privacyPolicyLink)
       .and("have.attr", "href")
-      .and("equal", "https://www.tooljet.com/privacy");
+      .and("equal", "https://www.jumpstart.com/privacy");
 
     cy.clearAndType(commonSelectors.nameInputField, "The Developer");
-    cy.clearAndType(commonSelectors.emailInputField, "dev@tooljet.io");
+    cy.clearAndType(commonSelectors.emailInputField, "dev@jumpstart.io");
     cy.clearAndType(commonSelectors.passwordInputField, "password");
     cy.get(commonSelectors.continueButton).click();
 
@@ -92,7 +92,7 @@ describe("Self host onboarding", () => {
       commonText.companyPageHeader("The Developer")
     );
     cy.get(commonSelectors.companyNameInputField).should("be.visible");
-    cy.clearAndType(commonSelectors.companyNameInputField, "ToolJet");
+    cy.clearAndType(commonSelectors.companyNameInputField, "JumpStart");
     cy.get(commonSelectors.continueButton).click();
 
     signup.selfHostCommonElements();

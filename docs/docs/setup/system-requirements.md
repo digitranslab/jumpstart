@@ -3,21 +3,21 @@ id: system-requirements
 title: System Requirements 
 ---
 
-This document covers all the system requirements for self-hosting ToolJet. 
+This document covers all the system requirements for self-hosting JumpStart. 
 
 :::info
-The official Docker tag for the Enterprise Edition is tooljet/tooljet:ee-lts-latest.
+The official Docker tag for the Enterprise Edition is digitranslab/jumpstart:ee-lts-latest.
 :::
 
 ## Operating Systems
 
 ### Supported Linux distribution
 
-[ToolJet images](https://hub.docker.com/r/tooljet/tooljet/tags) can run on any Linux machine with x86 architecture (64-bit). Ensure that your system meets the minimum requirements specified below before installing ToolJet.
+[JumpStart images](https://hub.docker.com/r/digitranslab/jumpstart/tags) can run on any Linux machine with x86 architecture (64-bit). Ensure that your system meets the minimum requirements specified below before installing JumpStart.
 
 ### Microsoft Windows
 
-ToolJet is developed for Linux-based operating systems. Please consider using a virtual machine or Windows Subsystem for Linux 2 (WSL2) to run ToolJet on Windows.
+JumpStart is developed for Linux-based operating systems. Please consider using a virtual machine or Windows Subsystem for Linux 2 (WSL2) to run JumpStart on Windows.
 
 ## VM deployments:
 
@@ -29,12 +29,12 @@ ToolJet is developed for Linux-based operating systems. Please consider using a 
 
 ## Orchestrated Deployments:
 
-- When employing container orchestration frameworks like Kubernetes, it's imperative to ensure that your cluster hosts at least one node equipped with the above specifications for seamlessly executing ToolJet deployments.
+- When employing container orchestration frameworks like Kubernetes, it's imperative to ensure that your cluster hosts at least one node equipped with the above specifications for seamlessly executing JumpStart deployments.
 
 Note: Adjustments can be made based on specific needs and the expected load on the server.
 
 :::info
-To enable multiplayer editing and background jobs in ToolJet, you need to configure Redis. It is recommended to use Redis version 6.x.
+To enable multiplayer editing and background jobs in JumpStart, you need to configure Redis. It is recommended to use Redis version 6.x.
 :::
 
 ## Database software:

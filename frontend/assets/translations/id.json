@@ -41,7 +41,7 @@
     "viewer":"Maaf! Aplikasi ini sedang dalam pemeliharaan",
     "app":{
         "updateAvailable":"Pembaruan tersedia",
-        "newVersionReleased":"Versi baru ToolJet telah dirilis.",
+        "newVersionReleased":"Versi baru JumpStart telah dirilis.",
         "readReleaseNotes":"Baca catatan rilis & pembaruan",
         "skipVersion":"Lewati versi ini"
     },
@@ -53,17 +53,17 @@
     },
     "slack":{
         "authorize":"Mengizinkan",
-        "connectToolJetToSlack":"ToolJet dapat terhubung ke Slack dan membuat daftar pengguna, mengirim pesan, dll. Pilih cakupan izin yang sesuai.",
+        "connectJumpStartToSlack":"JumpStart dapat terhubung ke Slack dan membuat daftar pengguna, mengirim pesan, dll. Pilih cakupan izin yang sesuai.",
         "chatWrite":"chat:write",
-        "listUsersAndSendMessage":"Aplikasi ToolJet Anda akan dapat membuat daftar pengguna dan mengirim pesan ke pengguna & saluran.",
+        "listUsersAndSendMessage":"Aplikasi JumpStart Anda akan dapat membuat daftar pengguna dan mengirim pesan ke pengguna & saluran.",
         "connectSlack":"Hubungkan ke Slack"
     },
     "googleSheets":{
         "readOnly":"Read only",
-        "enableReadAndWrite":"Jika Anda ingin aplikasi ToolJet Anda mengubah Google Spreadsheet Anda, pastikan untuk memilih akses baca dan tulis",
-        "readDataFromSheets":"Aplikasi ToolJet Anda hanya dapat membaca data dari Google Spreadsheet",
+        "enableReadAndWrite":"Jika Anda ingin aplikasi JumpStart Anda mengubah Google Spreadsheet Anda, pastikan untuk memilih akses baca dan tulis",
+        "readDataFromSheets":"Aplikasi JumpStart Anda hanya dapat membaca data dari Google Spreadsheet",
         "readWrite":"Baca dan tulis",
-        "readModifySheets":"Aplikasi ToolJet Anda dapat membaca data dari sheet, memodifikasi sheet, dan banyak lagi.",
+        "readModifySheets":"Aplikasi JumpStart Anda dapat membaca data dari sheet, memodifikasi sheet, dan banyak lagi.",
         "toGoogleSheets":"ke Google Sheets"
 
     },
@@ -78,7 +78,7 @@
         "dontHaveAccount":"Belum punya akun?",
         "signIn":"Masuk",
         "signUp":"Daftar",
-        "createToolJetAccount":"Buat akun ToolJet",
+        "createJumpStartAccount":"Buat akun JumpStart",
         "enterBusinessEmail":"Masukkan email bisnis Anda",
         "alreadyHaveAnAccount":"Sudah memiliki akun?",
         "password":"Kata sandi",
@@ -265,7 +265,7 @@
                         "newAccountWillBeCreated":"Akun baru akan dibuat untuk pengguna pertama kali masuk SSO",
                         "allowedDomains":"Domain yang diizinkan",
                         "enterDomains":"Masukkan Domain",
-                        "supportMultiDomains":"Mendukung banyak domain. Masukkan nama domain yang dipisahkan dengan koma. contoh: tooljet.com,tooljet.io,organisasianda.com",
+                        "supportMultiDomains":"Mendukung banyak domain. Masukkan nama domain yang dipisahkan dengan koma. contoh: jumpstart.com,jumpstart.io,organisasianda.com",
                         "loginUrl":"Login URL",
                         "workspaceLogin":"Gunakan URL ini untuk masuk langsung ke ruang kerja ini",
                         "allowDefaultSso":"Izinkan SSO default",
@@ -354,8 +354,8 @@
           "removeFromFolder": "Hapus dari folder"
         },
         "blankPage": {
-          "welcomeToToolJet": "Selamat datang di ToolJet!",
-          "getStartedCreateNewApp": "Anda dapat memulai dengan membuat aplikasi baru atau dengan membuat aplikasi menggunakan templat di pustaka ToolJet.",
+          "welcomeToJumpStart": "Selamat datang di JumpStart!",
+          "getStartedCreateNewApp": "Anda dapat memulai dengan membuat aplikasi baru atau dengan membuat aplikasi menggunakan templat di pustaka JumpStart.",
           "importApplication": "Impor aplikasi"
         },
         "foldersSection": {
@@ -415,11 +415,11 @@
         "and": "dan"
       },
       "onBoarding": {
-        "finishToolJetInstallation": "Selesaikan instalasi ToolJet",
+        "finishJumpStartInstallation": "Selesaikan instalasi JumpStart",
         "organization": "Organisasi",
         "name": "Nama",
         "email": "Surel",
-        "receiveUpdatesFromToolJet": "Anda akan menerima pembaruan dari tim ToolJet (1-2 email setiap bulan, kami tidak spam)",
+        "receiveUpdatesFromJumpStart": "Anda akan menerima pembaruan dari tim JumpStart (1-2 email setiap bulan, kami tidak spam)",
         "finishSetup": "Selesaikan pengaturan",
         "skip": "Melewati"
       },

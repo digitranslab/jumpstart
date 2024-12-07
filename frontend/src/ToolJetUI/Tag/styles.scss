@@ -1,6 +1,6 @@
 @import "../../_styles/designtheme.scss";
 
-.tooljet-tag-base {
+.jumpstart-tag-base {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -25,14 +25,14 @@
     }
 }
 
-.tooljet-tag-default {
-    @extend .tooljet-tag-base;
+.jumpstart-tag-default {
+    @extend .jumpstart-tag-base;
     background: var(--indigo5);
     border: 1px solid var(--indigo5);
 }
 
-.tooljet-tag-filter {
-    @extend .tooljet-tag-base;
+.jumpstart-tag-filter {
+    @extend .jumpstart-tag-base;
     background: var(--slate6);
     border-color: var(--slate6);
 }

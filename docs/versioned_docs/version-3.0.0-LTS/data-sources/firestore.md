@@ -3,15 +3,15 @@ id: firestore
 title: Cloud Firestore
 ---
 
-ToolJet can connect to **Cloud Firestore** databases to read and write data.
+JumpStart can connect to **Cloud Firestore** databases to read and write data.
 
 <div style={{paddingTop:'24px'}}>
 
 ## Connection 
 
-To establish a connection with the **Cloud Firestore** data source, you can either click on the **+ Add new Data source** button located on the query panel or navigate to the **[Data Sources](/docs/data-sources/overview)** page from the ToolJet dashboard and choose Cloud Firestore as the data source.
+To establish a connection with the **Cloud Firestore** data source, you can either click on the **+ Add new Data source** button located on the query panel or navigate to the **[Data Sources](/docs/data-sources/overview)** page from the JumpStart dashboard and choose Cloud Firestore as the data source.
 
-ToolJet requires the following to connect to your BigQuery:
+JumpStart requires the following to connect to your BigQuery:
 - **Private key**
 
 For generating a private key check out **[Firestore's official documentation](https://cloud.google.com/iam/docs/creating-managing-service-account-keys#iam-service-account-keys-create-console)**.

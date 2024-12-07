@@ -8,7 +8,7 @@ The map widget can be used to pick or select locations on the Google map with th
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/map/map.png" alt="ToolJet - Widget Reference - Map" />
+<img className="screenshot-full" src="/img/widgets/map/map.png" alt="JumpStart - Widget Reference - Map" />
 
 </div>
 
@@ -53,7 +53,7 @@ Under the <b>General</b> accordion, you can set the value in the string format. 
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/tooltip.png" alt="ToolJet - Widget Reference - Map" />
+<img className="screenshot-full" src="/img/tooltip.png" alt="JumpStart - Widget Reference - Map" />
 
 </div>
 

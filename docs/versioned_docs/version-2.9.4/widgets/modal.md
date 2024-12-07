@@ -8,7 +8,7 @@ Modal widget renders in front of a backdrop, and it blocks interaction with the 
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/modal/modal2.png" alt="ToolJet - Widget Reference - Modal" />
+<img className="screenshot-full" src="/img/widgets/modal/modal2.png" alt="JumpStart - Widget Reference - Modal" />
 
 </div>
 
@@ -75,7 +75,7 @@ Modal supports the following two events:
 - **On close**
 
 :::info
-Just like any other event on ToolJet, you can set multiple handlers for the events supported by Modal. Check all the [actions here](/docs/category/actions-reference).
+Just like any other event on JumpStart, you can set multiple handlers for the events supported by Modal. Check all the [actions here](/docs/category/actions-reference).
 :::
 
 ## Layout

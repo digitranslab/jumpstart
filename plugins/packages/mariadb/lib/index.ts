@@ -1,4 +1,4 @@
-import { QueryError, QueryResult, QueryService, ConnectionTestResult } from '@tooljet-plugins/common';
+import { QueryError, QueryResult, QueryService, ConnectionTestResult } from '@jumpstart-plugins/common';
 import { SourceOptions, QueryOptions } from './types';
 const mariadb = require('mariadb');
 export default class Mariadb implements QueryService {

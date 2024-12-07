@@ -3,10 +3,10 @@ id: ecs
 title: AWS ECS
 ---
 
-# Deploying ToolJet on Amazon ECS
+# Deploying JumpStart on Amazon ECS
 
 :::info
-You should setup a PostgreSQL database manually to be used by ToolJet.
+You should setup a PostgreSQL database manually to be used by JumpStart.
 :::
 
 You can effortlessly deploy Amazon Elastic Container Service (ECS) by utilizing a [CloudFormation template](https://aws.amazon.com/cloudformation/):
@@ -14,19 +14,19 @@ You can effortlessly deploy Amazon Elastic Container Service (ECS) by utilizing 
 To deploy all the services at once, simply employ the following template:
 
 ```
-curl -LO https://tooljet-deployments.s3.us-west-1.amazonaws.com/cloudformation/Cloudfomation-template-one-click.yml
+curl -LO https://jumpstart-deployments.s3.us-west-1.amazonaws.com/cloudformation/Cloudfomation-template-one-click.yml
 ```
 
-If you already have existing services and wish to integrate ToolJet seamlessly into your current Virtual Private Cloud (VPC) or other setups, you can opt for the following template:
+If you already have existing services and wish to integrate JumpStart seamlessly into your current Virtual Private Cloud (VPC) or other setups, you can opt for the following template:
 
 ```
-curl -LO https://tooljet-deployments.s3.us-west-1.amazonaws.com/cloudformation/Cloudformation-deploy.yml
+curl -LO https://jumpstart-deployments.s3.us-west-1.amazonaws.com/cloudformation/Cloudformation-deploy.yml
 ``` 
 
 ## Redis
 
 :::info
-ToolJet requires configuring Redis which is used for enabling multiplayer editing and for background jobs.
+JumpStart requires configuring Redis which is used for enabling multiplayer editing and for background jobs.
 :::
 
 To deploy Redis on an ECS cluster, please follow the steps outlined below.
@@ -40,25 +40,25 @@ Please note that if you already have an existing Redis setup, you can continue u
   **Make sure that you are using redis version 6.x.x**
   <img className="screenshot-full" src="/img/setup/ecs/ecs-2.png" alt="ECS Setup" />
 
-- Ensure that when creating a service, Redis is integrated into the same cluster where your ToolJet app will be deployed. <br/>
+- Ensure that when creating a service, Redis is integrated into the same cluster where your JumpStart app will be deployed. <br/>
   **Note: Please enable public IP**
   <img className="screenshot-full" src="/img/setup/ecs/ecs-3.png" alt="ECS Setup" />
 
-## ToolJet
+## JumpStart
 
-Follow the steps below to deploy ToolJet on a ECS cluster.
+Follow the steps below to deploy JumpStart on a ECS cluster.
 
-1. Setup a PostgreSQL database ToolJet uses a postgres database as the persistent storage for storing data related to users and apps.
-2. Create a target group and an application load balancer to route traffic onto ToolJet containers. You can [reference](https://docs.aws.amazon.com/AmazonECS/latest/userguide/create-application-load-balancer.html) AWS docs to set it up. Please note that ToolJet server exposes `/api/health`, which you can configure for health checks.
+1. Setup a PostgreSQL database JumpStart uses a postgres database as the persistent storage for storing data related to users and apps.
+2. Create a target group and an application load balancer to route traffic onto JumpStart containers. You can [reference](https://docs.aws.amazon.com/AmazonECS/latest/userguide/create-application-load-balancer.html) AWS docs to set it up. Please note that JumpStart server exposes `/api/health`, which you can configure for health checks.
 
-3. Create task definition for deploying ToolJet app as a service on your preconfigured cluster.
+3. Create task definition for deploying JumpStart app as a service on your preconfigured cluster.
     1. Select Fargate as launch type compatibility
     2. Configure IAM roles and set operating system family as Linux. 
     3. Select task size to have 3GB of memory and 1vCpu
         <img className="screenshot-full" src="/img/setup/ecs/ecs-4.png" alt="ECS Setup" />
     4. Add container details that is shown: <br/>
-       Specify your container name ex: `ToolJet` <br/>
-       Set the image you intend to deploy. ex: `tooljet/tooljet:EE-LTS-latest` <br/>
+       Specify your container name ex: `JumpStart` <br/>
+       Set the image you intend to deploy. ex: `digitranslab/jumpstart:EE-LTS-latest` <br/>
        Update port mappings at container port `3000` for tcp protocol. 
         <img className="screenshot-full" src="/img/setup/ecs/ecs-5.png" alt="ECS Setup" />
 
@@ -66,12 +66,12 @@ Follow the steps below to deploy ToolJet on a ECS cluster.
         <img className="screenshot-full" src="/img/setup/ecs/ecs-6.png" alt="ECS Setup" />
 
         :::info
-        For the setup, ToolJet requires:
+        For the setup, JumpStart requires:
         <ul> 
-        - **TOOLJET_DB** 
-        - **TOOLJET_DB_HOST**
-        - **TOOLJET_DB_USER**
-        - **TOOLJET_DB_PASS**
+        - **JUMPSTART_DB** 
+        - **JUMPSTART_DB_HOST**
+        - **JUMPSTART_DB_USER**
+        - **JUMPSTART_DB_PASS**
         - **PG_HOST**
         - **PG_DB**
         - **PG_USER**
@@ -83,7 +83,7 @@ Follow the steps below to deploy ToolJet on a ECS cluster.
         Read **[environment variables reference](/docs/setup/env-vars)**
         :::
 
-        Additionally, include the Redis environment variables within the ToolJet container mentioned above if you have followed the previous steps to create Redis.
+        Additionally, include the Redis environment variables within the JumpStart container mentioned above if you have followed the previous steps to create Redis.
         ```
         REDIS_HOST=<public ip of redis task>
         REDIS_PORT=6379
@@ -111,9 +111,9 @@ Follow the steps below to deploy ToolJet on a ECS cluster.
 The setup above is just a template. Feel free to update the task definition and configure parameters for resources and environment variables according to your needs.
 :::
 
-## ToolJet Database
+## JumpStart Database
 
-To use ToolJet Database, you'd have to set up and deploy PostgREST server which helps querying ToolJet Database. You can learn more about this feature [here](/docs/tooljet-db/tooljet-database).
+To use JumpStart Database, you'd have to set up and deploy PostgREST server which helps querying JumpStart Database. You can learn more about this feature [here](/docs/jumpstart-db/jumpstart-database).
 
 Follow the steps below to deploy PostgREST on a ECS cluster. 
 
@@ -142,7 +142,7 @@ Follow the steps below to deploy PostgREST on a ECS cluster.
   </div>
 
 
-2. Create service and make sure the postgrest is within the same cluster as ToolJet app. 
+2. Create service and make sure the postgrest is within the same cluster as JumpStart app. 
 
   <div style={{textAlign: 'center'}}>
 
@@ -159,7 +159,7 @@ Follow the steps below to deploy PostgREST on a ECS cluster.
 
   </div>
 
-4. Ensure that the PostgREST service resides within the same Virtual Private Cloud (VPC), and confirm that port 3001 is included in the security group used by the ToolJet app. **Note: Please enable public IP**
+4. Ensure that the PostgREST service resides within the same Virtual Private Cloud (VPC), and confirm that port 3001 is included in the security group used by the JumpStart app. **Note: Please enable public IP**
 
   <div style={{textAlign: 'center'}}>
 
@@ -167,11 +167,11 @@ Follow the steps below to deploy PostgREST on a ECS cluster.
 
   </div>
 
-Update ToolJet deployment with the appropriate env variables [here](/docs/setup/env-vars/#enable-tooljet-database-required) and apply the changes.
+Update JumpStart deployment with the appropriate env variables [here](/docs/setup/env-vars/#enable-jumpstart-database-required) and apply the changes.
 
 ## Upgrading to the Latest LTS Version
 
-New LTS versions are released every 3-5 months with an end-of-life of atleast 18 months. To check the latest LTS version, visit the [ToolJet Docker Hub](https://hub.docker.com/r/tooljet/tooljet/tags) page. The LTS tags follow a naming convention with the prefix `LTS-` followed by the version number, for example `tooljet/tooljet:EE-LTS-latest`.
+New LTS versions are released every 3-5 months with an end-of-life of atleast 18 months. To check the latest LTS version, visit the [JumpStart Docker Hub](https://hub.docker.com/r/digitranslab/jumpstart/tags) page. The LTS tags follow a naming convention with the prefix `LTS-` followed by the version number, for example `digitranslab/jumpstart:EE-LTS-latest`.
 
 If this is a new installation of the application, you may start directly with the latest version. This guide is not required for new installations.
 
@@ -181,4 +181,4 @@ If this is a new installation of the application, you may start directly with th
 
 - Users on versions earlier than **v2.23.0-ee2.10.2** must first upgrade to this version before proceeding to the LTS version.
 
-*If you have any questions feel free to join our [Slack Community](https://tooljet.com/slack) or send us an email at hello@tooljet.com.*
+*If you have any questions feel free to join our [Slack Community](https://jumpstart.com/slack) or send us an email at hello@jumpstart.com.*

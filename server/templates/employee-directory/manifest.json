@@ -1,14 +1,14 @@
 {
   "name": "Employee directory",
-  "description": "Manage employee contact information and profiles in a centralized database built on the ToolJet database.",
+  "description": "Manage employee contact information and profiles in a centralized database built on the JumpStart database.",
   "widgets": [
     "Table",
     "Chart"
   ],
   "sources": [
     {
-      "name": "ToolJet Database",
-      "id": "tooljetdb"
+      "name": "JumpStart Database",
+      "id": "jumpstartdb"
     }
   ],
   "id": "employee-directory",

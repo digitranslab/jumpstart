@@ -91,7 +91,7 @@ You can also use **[Keyboard Shortcuts](/docs/tutorial/keyboard-shortcuts)** to 
 The Share button allows you to share your applications with a unique URL generated automatically or edit the URL slug to personalize it. The share button will only be active when your application is released. 
 
 :::tip
-Learn more about **[Sharing](/docs/app-builder/share)** your ToolJet applications.
+Learn more about **[Sharing](/docs/app-builder/share)** your JumpStart applications.
 :::
 
 <div style={{textAlign: 'center'}}>
@@ -111,7 +111,7 @@ The Preview button allows you to view the current app version in a new tab, faci
 Use the Release button on the right to publish the current app version. The Release button, used to publish the current app version, becomes visible only in the Production environment, ensuring that only finalized versions are made public.
 
 :::caution
-ToolJet will block editing of the Released version of an app and will display a prompt to create a new version to make the changes. This is to prevent accidentally pushing an unfinished app to the live version.
+JumpStart will block editing of the Released version of an app and will display a prompt to create a new version to make the changes. This is to prevent accidentally pushing an unfinished app to the live version.
 :::
 
 <div style={{textAlign: 'center'}}>

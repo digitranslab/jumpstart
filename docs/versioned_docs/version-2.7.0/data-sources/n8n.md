@@ -5,7 +5,7 @@ title: n8n
 
 # n8n
 
-ToolJet can trigger n8n workflows using webhook URLs. Please refer [this](https://docs.n8n.io/) to know more about n8n.
+JumpStart can trigger n8n workflows using webhook URLs. Please refer [this](https://docs.n8n.io/) to know more about n8n.
 
 ## Connection
 

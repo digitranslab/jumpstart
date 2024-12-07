@@ -3,9 +3,9 @@ id: ldap
 title: LDAP
 ---
 
-To set up LDAP as Single Sign-On (SSO) for ToolJet, follow these steps:
+To set up LDAP as Single Sign-On (SSO) for JumpStart, follow these steps:
 
-1. Access the ToolJet dashboard and click on the ⚙️ icon to open **Workspace Settings** from the left sidebar.
+1. Access the JumpStart dashboard and click on the ⚙️ icon to open **Workspace Settings** from the left sidebar.
 
   <div style={{textAlign: 'center'}}>
 
@@ -46,7 +46,7 @@ To set up LDAP as Single Sign-On (SSO) for ToolJet, follow these steps:
 
   </div>
 
-6. The **Login URL** obtained can be utilized for accessing the workspace. Please note that ToolJet supports LDAP login at the workspace level and not at the instance level. Thus, users will be logged in specifically to the chosen workspace.
+6. The **Login URL** obtained can be utilized for accessing the workspace. Please note that JumpStart supports LDAP login at the workspace level and not at the instance level. Thus, users will be logged in specifically to the chosen workspace.
 
   <div style={{textAlign: 'center'}}>
 
@@ -54,7 +54,7 @@ To set up LDAP as Single Sign-On (SSO) for ToolJet, follow these steps:
 
   </div>
 
-7. Click on the **Sign in with `<LDAP Name>`** button, and provide your username and password to log in to the workspace. For signing in, ToolJet uses the **common name (cn)** associated with each LDAP server user as the **Username**. Upon the initial login, users will be redirected to the **Workspace Invite** page, while subsequent logins will lead them directly to the ToolJet dashboard.
+7. Click on the **Sign in with `<LDAP Name>`** button, and provide your username and password to log in to the workspace. For signing in, JumpStart uses the **common name (cn)** associated with each LDAP server user as the **Username**. Upon the initial login, users will be redirected to the **Workspace Invite** page, while subsequent logins will lead them directly to the JumpStart dashboard.
 
   <div style={{textAlign: 'center'}}>
 
@@ -63,5 +63,5 @@ To set up LDAP as Single Sign-On (SSO) for ToolJet, follow these steps:
   </div>
 
 :::info
-During the first login, ToolJet performs additional checks. It verifies the user groups in the LDAP server, and if the corresponding group exists in the ToolJet workspace, the user will be automatically added to that group. Additionally, ToolJet also looks for the user's profile picture in the LDAP server and updates the ToolJet account accordingly.
+During the first login, JumpStart performs additional checks. It verifies the user groups in the LDAP server, and if the corresponding group exists in the JumpStart workspace, the user will be automatically added to that group. Additionally, JumpStart also looks for the user's profile picture in the LDAP server and updates the JumpStart account accordingly.
 :::

@@ -1,7 +1,7 @@
 import React, { useState, useContext, useCallback, useRef } from 'react';
 import Drawer from '@/_ui/Drawer';
 import { toast } from 'react-hot-toast';
-import { TooljetDatabaseContext } from '../../index';
+import { JumpstartDatabaseContext } from '../../index';
 import { ButtonSolid } from '@/_ui/AppButton/AppButton';
 import { FileDropzone } from './FileDropzone';
 import SolidIcon from '@/_ui/Icon/SolidIcons';
@@ -18,7 +18,7 @@ function BulkUploadDrawer({
 }) {
   const [isDownloadingTemplate, setIsDownloadingTemplate] = useState(false);
   const [progress, setProgress] = useState(0);
-  const { columns, selectedTable } = useContext(TooljetDatabaseContext);
+  const { columns, selectedTable } = useContext(JumpstartDatabaseContext);
   const hiddenFileInput = useRef(null);
 
   const onDrop = useCallback((acceptedFiles) => {
@@ -96,7 +96,7 @@ function BulkUploadDrawer({
                   </div>
                   <div>
                     <p className="tj-text tj-text-sm" data-cy="helper-text-bulk-upload">
-                      Download the template to add your data or format your file in the same as the template. ToolJet
+                      Download the template to add your data or format your file in the same as the template. JumpStart
                       won’t be able to recognise files in any other format.
                     </p>
                     <ButtonSolid

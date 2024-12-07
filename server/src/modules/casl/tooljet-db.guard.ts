@@ -1,6 +1,6 @@
 import { Injectable, CanActivate, ExecutionContext } from '@nestjs/common';
 import { Reflector } from '@nestjs/core';
-import { TooljetDbAbility, TooljetDbAbilityFactory } from './abilities/tooljet-db-ability.factory';
+import { JumpstartDbAbility, JumpstartDbAbilityFactory } from './abilities/jumpstart-db-ability.factory';
 import { CHECK_POLICIES_KEY } from './check_policies.decorator';
 import { PolicyHandler } from './policyhandler.interface';
 import { isEmpty } from 'lodash';
@@ -8,10 +8,10 @@ import { EntityManager } from 'typeorm';
 import { DataQuery } from 'src/entities/data_query.entity';
 
 @Injectable()
-export class TooljetDbGuard implements CanActivate {
+export class JumpstartDbGuard implements CanActivate {
   constructor(
     private reflector: Reflector,
-    private tooljetDbAbilityFactory: TooljetDbAbilityFactory,
+    private jumpstartDbAbilityFactory: JumpstartDbAbilityFactory,
     private manager: EntityManager
   ) {}
 
@@ -32,12 +32,12 @@ export class TooljetDbGuard implements CanActivate {
     }
     request.dataQuery = dataQuery;
 
-    const ability = await this.tooljetDbAbilityFactory.actions(request.user, { dataQuery, organizationId });
+    const ability = await this.jumpstartDbAbilityFactory.actions(request.user, { dataQuery, organizationId });
 
     return policyHandlers.every((handler) => this.execPolicyHandler(handler, ability));
   }
 
-  private execPolicyHandler(handler: PolicyHandler, ability: TooljetDbAbility) {
+  private execPolicyHandler(handler: PolicyHandler, ability: JumpstartDbAbility) {
     if (typeof handler === 'function') {
       return handler(ability);
     }

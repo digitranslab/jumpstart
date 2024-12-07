@@ -21,24 +21,24 @@ const sidebars = {
     },
     {
       'type': 'category',
-      'label': 'ToolJet Concepts',
+      'label': 'JumpStart Concepts',
       'items': [
-        'tooljet-concepts/what-are-components',
-        'tooljet-concepts/what-are-datasources',
-        'tooljet-concepts/what-are-queries',
-        'tooljet-concepts/inspector',
-        'tooljet-concepts/what-are-events',
-        'tooljet-concepts/actions',
-        'tooljet-concepts/variables',
-        'tooljet-concepts/how-to-access-values',
-        'tooljet-concepts/component-specific-actions',
-        'tooljet-concepts/exposed-variables',
-        'tooljet-concepts/pages',
-        'tooljet-concepts/run-js',
-        'tooljet-concepts/styling-components',
-        'tooljet-concepts/workspace-constants',
-        'tooljet-concepts/permissions',
-        'tooljet-concepts/super-admin',
+        'jumpstart-concepts/what-are-components',
+        'jumpstart-concepts/what-are-datasources',
+        'jumpstart-concepts/what-are-queries',
+        'jumpstart-concepts/inspector',
+        'jumpstart-concepts/what-are-events',
+        'jumpstart-concepts/actions',
+        'jumpstart-concepts/variables',
+        'jumpstart-concepts/how-to-access-values',
+        'jumpstart-concepts/component-specific-actions',
+        'jumpstart-concepts/exposed-variables',
+        'jumpstart-concepts/pages',
+        'jumpstart-concepts/run-js',
+        'jumpstart-concepts/styling-components',
+        'jumpstart-concepts/workspace-constants',
+        'jumpstart-concepts/permissions',
+        'jumpstart-concepts/super-admin',
       ],
     },
     {
@@ -49,8 +49,8 @@ const sidebars = {
         'id': 'setup/index',
       },
       'items': [
-        'setup/try-tooljet',
-        'setup/choose-your-tooljet',
+        'setup/try-jumpstart',
+        'setup/choose-your-jumpstart',
         'setup/system-requirements',
         'setup/digitalocean',
         'setup/docker',
@@ -67,7 +67,7 @@ const sidebars = {
         'setup/client',
         'setup/env-vars',
         'setup/http-proxy',
-        'setup/tooljet-subpath',
+        'setup/jumpstart-subpath',
         'setup/v2-migration-guide',
         'setup/upgrade-to-lts',
         'setup/upgrade-to-v3',
@@ -351,21 +351,21 @@ const sidebars = {
     },
     {
       'type': 'category',
-      'label': 'ToolJet Database',
+      'label': 'JumpStart Database',
       'items': [
-        'tooljet-db/tooljet-database',
-        'tooljet-db/database-editor',
+        'jumpstart-db/jumpstart-database',
+        'jumpstart-db/database-editor',
         {
           'type': 'category',
           'label': 'Column Constraints',
           'items': [
-            'tooljet-db/constraints/primary-key',
-            'tooljet-db/constraints/foreign-key'
+            'jumpstart-db/constraints/primary-key',
+            'jumpstart-db/constraints/foreign-key'
           ]
         },
-        'tooljet-db/data-types',
-        'tooljet-db/table-operations',
-        'tooljet-db/querying-tooljet-db',
+        'jumpstart-db/data-types',
+        'jumpstart-db/table-operations',
+        'jumpstart-db/querying-jumpstart-db',
       ]
     },
     {
@@ -426,7 +426,7 @@ const sidebars = {
         },
         'org-management/permissions',
         'tutorial/manage-users-groups',
-        'tutorial/tooljet-api',
+        'tutorial/jumpstart-api',
         'Enterprise/audit_logs',
         'Enterprise/white-label',
         'Enterprise/superadmin',
@@ -434,7 +434,7 @@ const sidebars = {
           "type": "category",
           "label": "Licensing",
           "items": [
-            "org-management/licensing/tooljet-cloud",
+            "org-management/licensing/jumpstart-cloud",
             "org-management/licensing/self-hosted"
           ]
         },
@@ -499,7 +499,7 @@ const sidebars = {
         },
       ],
     },
-    'tooljet-copilot',
+    'jumpstart-copilot',
     'security',
     'tracking',
     {
@@ -511,7 +511,7 @@ const sidebars = {
         {
           'type': 'link',
           'label': 'Roadmap',
-          'href': 'https://github.com/orgs/ToolJet/projects/15',
+          'href': 'https://github.com/orgs/digitranslab/projects/15',
         },
         'versions'
       ],
@@ -552,7 +552,7 @@ const sidebars = {
 
           ],
         },
-        'tooljet-cli',
+        'jumpstart-cli',
         'contributing-guide/testing',
         'contributing-guide/l10n',
         {

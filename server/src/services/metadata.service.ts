@@ -62,11 +62,11 @@ export class MetadataService {
     metadata: Metadata
   ) {
     try {
-      return await got('https://hub.tooljet.io/subscribe', {
+      return await got('https://hub.jumpstart.io/subscribe', {
         method: 'post',
         json: {
           id: metadata.id,
-          installed_version: globalThis.TOOLJET_VERSION,
+          installed_version: globalThis.JUMPSTART_VERSION,
           name,
           email,
           org,
@@ -75,7 +75,7 @@ export class MetadataService {
         },
       });
     } catch (error) {
-      console.error('Error while connecting to URL https://hub.tooljet.io/subscribe', error);
+      console.error('Error while connecting to URL https://hub.jumpstart.io/subscribe', error);
     }
   }
 
@@ -89,7 +89,7 @@ export class MetadataService {
     const totalDatasourcesByKindCount = await this.fetchDatasourcesByKindCount(manager);
 
     try {
-      return await got('https://hub.tooljet.io/telemetry', {
+      return await got('https://hub.jumpstart.io/telemetry', {
         method: 'post',
         json: {
           id: metadata.id,
@@ -97,23 +97,23 @@ export class MetadataService {
           total_editors: totalEditorCount,
           total_viewers: totalViewerCount,
           total_apps: totalAppCount,
-          tooljet_db_table_count: totalInternalTableCount,
-          tooljet_version: globalThis.TOOLJET_VERSION,
+          jumpstart_db_table_count: totalInternalTableCount,
+          jumpstart_version: globalThis.JUMPSTART_VERSION,
           data_sources_count: totalDatasourcesByKindCount,
           deployment_platform: this.configService.get<string>('DEPLOYMENT_PLATFORM'),
         },
       });
     } catch (error) {
-      console.error('Error while connecting to URL https://hub.tooljet.io/telemetry', error);
+      console.error('Error while connecting to URL https://hub.jumpstart.io/telemetry', error);
     }
   }
 
   async checkForUpdates(metadata: Metadata) {
-    const installedVersion = globalThis.TOOLJET_VERSION;
+    const installedVersion = globalThis.JUMPSTART_VERSION;
     let latestVersion;
 
     try {
-      const response = await got('https://hub.tooljet.io/updates', {
+      const response = await got('https://hub.jumpstart.io/updates', {
         method: 'post',
       });
       const data = JSON.parse(response.body);
@@ -130,7 +130,7 @@ export class MetadataService {
 
       await this.updateMetaData(newOptions);
     } catch (error) {
-      console.error('Error while connecting to URL https://hub.tooljet.io/updates', error);
+      console.error('Error while connecting to URL https://hub.jumpstart.io/updates', error);
     }
     return { latestVersion: latestVersion || installedVersion };
   }

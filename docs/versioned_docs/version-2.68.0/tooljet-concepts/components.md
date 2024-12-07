@@ -3,7 +3,7 @@ id: what-are-components
 title: Components
 ---
 
-Components in ToolJet serve as the building blocks for creating applications. They are pre-designed elements that you can drag and drop onto the canvas in the App-Builder. ToolJet comes with 45+ built-in components. 
+Components in JumpStart serve as the building blocks for creating applications. They are pre-designed elements that you can drag and drop onto the canvas in the App-Builder. JumpStart comes with 45+ built-in components. 
 
 <div class="video-container">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/J3-wpo4J76U?si=D2ovxqa42HUGZ4PC&rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -16,7 +16,7 @@ Components in ToolJet serve as the building blocks for creating applications. Th
 Components are highly customizable and interactive. Once you place a component on the canvas, you can easily modify its properties, styles, and behaviors through the properties panel on the right side of the App-Builder. This allows you to make your application dynamic and responsive. 
 
 <div style={{textAlign: 'center'}}>
-    <img className="screenshot-full" src="/img/tooljet-concepts/what-are-components/component-config.gif" alt="Component Configuration" />
+    <img className="screenshot-full" src="/img/jumpstart-concepts/what-are-components/component-config.gif" alt="Component Configuration" />
 </div>
 
 </div>
@@ -25,10 +25,10 @@ Components are highly customizable and interactive. Once you place a component o
 
 ### Using Components With Data
 
-In ToolJet, components can be easily connected to various data sources like databases, APIs, and third-party services through **[queries](what-are-queries)**. Once the data is fetched, you can bind it to components like tables, charts, and more. 
+In JumpStart, components can be easily connected to various data sources like databases, APIs, and third-party services through **[queries](what-are-queries)**. Once the data is fetched, you can bind it to components like tables, charts, and more. 
 
 <div style={{textAlign: 'center'}}>
-    <img className="screenshot-full" src="/img/tooljet-concepts/what-are-components/adding-data-to-component.png" alt="Adding Data To Component" />
+    <img className="screenshot-full" src="/img/jumpstart-concepts/what-are-components/adding-data-to-component.png" alt="Adding Data To Component" />
 </div>
 
 </div>
@@ -37,17 +37,17 @@ In ToolJet, components can be easily connected to various data sources like data
 
 ## Custom Components
 
-ToolJet allows for the creation of custom components using React. This feature is invaluable for developers who require functionalities beyond the 45+ built-in components that ToolJet offers. To create a custom component, you can drag and drop a **[Custom Component](/docs/widgets/custom-component/)** on the canvas and configure its data and code. 
+JumpStart allows for the creation of custom components using React. This feature is invaluable for developers who require functionalities beyond the 45+ built-in components that JumpStart offers. To create a custom component, you can drag and drop a **[Custom Component](/docs/widgets/custom-component/)** on the canvas and configure its data and code. 
 
 <div style={{textAlign: 'center'}}>
-    <img className="screenshot-full" src="/img/tooljet-concepts/what-are-components/custom-components.png" alt="Custom Components" />
+    <img className="screenshot-full" src="/img/jumpstart-concepts/what-are-components/custom-components.png" alt="Custom Components" />
 </div>
-By incorporating custom React components, you can significantly extend the capabilities of your ToolJet applications, allowing for a more tailored and unique user experience. 
+By incorporating custom React components, you can significantly extend the capabilities of your JumpStart applications, allowing for a more tailored and unique user experience. 
 
 </div>
 
 
-To explore the full list of components in ToolJet, go through the **[Component Library](/docs/widgets/bounded-box)**.
+To explore the full list of components in JumpStart, go through the **[Component Library](/docs/widgets/bounded-box)**.
 
 
 

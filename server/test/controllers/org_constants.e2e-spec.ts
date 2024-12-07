@@ -39,20 +39,20 @@ describe('organization environment constants controller', () => {
 
     it('should list decrypted organization environment variables', async () => {
       const adminUserData = await createUser(app, {
-        email: 'admin@tooljet.io',
+        email: 'admin@jumpstart.io',
         groups: ['admin', 'all_users'],
       });
 
       const organization = adminUserData.organization;
 
       const developerUserData = await createUser(app, {
-        email: 'developer@tooljet.io',
+        email: 'developer@jumpstart.io',
         groups: ['developer', 'all_users'],
         organization,
       });
 
       const viewerUserData = await createUser(app, {
-        email: 'viewer@tooljet.io',
+        email: 'viewer@jumpstart.io',
         groups: ['viewer', 'all_users'],
         organization,
       });
@@ -70,10 +70,10 @@ describe('organization environment constants controller', () => {
       let loggedUser = await authenticateUser(app);
       adminUserData['tokenCookie'] = loggedUser.tokenCookie;
 
-      loggedUser = await authenticateUser(app, 'developer@tooljet.io');
+      loggedUser = await authenticateUser(app, 'developer@jumpstart.io');
       developerUserData['tokenCookie'] = loggedUser.tokenCookie;
 
-      loggedUser = await authenticateUser(app, 'viewer@tooljet.io');
+      loggedUser = await authenticateUser(app, 'viewer@jumpstart.io');
       viewerUserData['tokenCookie'] = loggedUser.tokenCookie;
 
       const constantArray = [];
@@ -129,17 +129,17 @@ describe('organization environment constants controller', () => {
   describe('POST /api/organization-constants/', () => {
     it('should be able to create a new constant if group is admin or has create permission in the same organization', async () => {
       const adminUserData = await createUser(app, {
-        email: 'admin@tooljet.io',
+        email: 'admin@jumpstart.io',
         groups: ['all_users', 'admin'],
       });
       const developerUserData = await createUser(app, {
-        email: 'dev@tooljet.io',
+        email: 'dev@jumpstart.io',
         groups: ['all_users', 'developer'],
         organization: adminUserData.organization,
       });
 
       const viewerUserData = await createUser(app, {
-        email: 'viewer@tooljet.io',
+        email: 'viewer@jumpstart.io',
         groups: ['viewer', 'all_users'],
         organization: adminUserData.organization,
       });
@@ -155,10 +155,10 @@ describe('organization environment constants controller', () => {
       let loggedUser = await authenticateUser(app);
       adminUserData['tokenCookie'] = loggedUser.tokenCookie;
 
-      loggedUser = await authenticateUser(app, 'dev@tooljet.io');
+      loggedUser = await authenticateUser(app, 'dev@jumpstart.io');
       developerUserData['tokenCookie'] = loggedUser.tokenCookie;
 
-      loggedUser = await authenticateUser(app, 'viewer@tooljet.io');
+      loggedUser = await authenticateUser(app, 'viewer@jumpstart.io');
       viewerUserData['tokenCookie'] = loggedUser.tokenCookie;
 
       const appEnvironments = await createAppEnvironments(app, adminUserData.user.organizationId);
@@ -169,7 +169,7 @@ describe('organization environment constants controller', () => {
         .set('tj-workspace-id', adminUserData.user.defaultOrganizationId)
         .send({
           constant_name: 'email',
-          value: 'test@tooljet.com',
+          value: 'test@jumpstart.com',
           environments: [appEnvironments[0].id],
         })
         .expect(201);
@@ -201,17 +201,17 @@ describe('organization environment constants controller', () => {
   describe('PATCH /api/organization-constants/:id', () => {
     it('should be able to update an existing variable if group is admin or has update permission in the same organization', async () => {
       const adminUserData = await createUser(app, {
-        email: 'admin@tooljet.io',
+        email: 'admin@jumpstart.io',
         groups: ['all_users', 'admin'],
       });
       const developerUserData = await createUser(app, {
-        email: 'dev@tooljet.io',
+        email: 'dev@jumpstart.io',
         groups: ['all_users', 'developer'],
         organization: adminUserData.organization,
       });
 
       const viewerUserData = await createUser(app, {
-        email: 'viewer@tooljet.io',
+        email: 'viewer@jumpstart.io',
         groups: ['viewer', 'all_users'],
         organization: adminUserData.organization,
       });
@@ -219,10 +219,10 @@ describe('organization environment constants controller', () => {
       let loggedUser = await authenticateUser(app);
       adminUserData['tokenCookie'] = loggedUser.tokenCookie;
 
-      loggedUser = await authenticateUser(app, 'dev@tooljet.io');
+      loggedUser = await authenticateUser(app, 'dev@jumpstart.io');
       developerUserData['tokenCookie'] = loggedUser.tokenCookie;
 
-      loggedUser = await authenticateUser(app, 'viewer@tooljet.io');
+      loggedUser = await authenticateUser(app, 'viewer@jumpstart.io');
       viewerUserData['tokenCookie'] = loggedUser.tokenCookie;
 
       const developerGroup = await getManager().findOneOrFail(GroupPermission, {
@@ -276,17 +276,17 @@ describe('organization environment constants controller', () => {
   describe('DELETE /api/organization-constants/:id', () => {
     it('should be able to delete an existing constant if group is admin or has delete permission in the same organization', async () => {
       const adminUserData = await createUser(app, {
-        email: 'admin@tooljet.io',
+        email: 'admin@jumpstart.io',
         groups: ['all_users', 'admin'],
       });
       const developerUserData = await createUser(app, {
-        email: 'dev@tooljet.io',
+        email: 'dev@jumpstart.io',
         groups: ['all_users', 'developer'],
         organization: adminUserData.organization,
       });
 
       const viewerUserData = await createUser(app, {
-        email: 'viewer@tooljet.io',
+        email: 'viewer@jumpstart.io',
         groups: ['viewer', 'all_users'],
         organization: adminUserData.organization,
       });
@@ -294,10 +294,10 @@ describe('organization environment constants controller', () => {
       let loggedUser = await authenticateUser(app);
       adminUserData['tokenCookie'] = loggedUser.tokenCookie;
 
-      loggedUser = await authenticateUser(app, 'dev@tooljet.io');
+      loggedUser = await authenticateUser(app, 'dev@jumpstart.io');
       developerUserData['tokenCookie'] = loggedUser.tokenCookie;
 
-      loggedUser = await authenticateUser(app, 'viewer@tooljet.io');
+      loggedUser = await authenticateUser(app, 'viewer@jumpstart.io');
       viewerUserData['tokenCookie'] = loggedUser.tokenCookie;
 
       const developerGroup = await getManager().findOneOrFail(GroupPermission, {
@@ -332,7 +332,7 @@ describe('organization environment constants controller', () => {
 
       const response = await createConstant(app, adminUserData, {
         constant_name: 'email',
-        value: 'dev@tooljet.io',
+        value: 'dev@jumpstart.io',
         environments: appEnvironments.map((env) => env.id),
       });
 

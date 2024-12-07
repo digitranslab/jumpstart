@@ -22,15 +22,15 @@ Check how to run **[generate file action using RunJS](/docs/how-to/run-actions-f
 
 ### CSV Data Format
 
-To use the `CSV` file format, the data field should contain an array of objects. ToolJet assumes that the keys in each object are the same and represent the column headers of the CSV file.
+To use the `CSV` file format, the data field should contain an array of objects. JumpStart assumes that the keys in each object are the same and represent the column headers of the CSV file.
 
 Example:
 
 ```javascript
 {{
   [
-    { name: 'John', email: 'john@tooljet.com' },
-    { name: 'Sarah', email: 'sarah@tooljet.com' },
+    { name: 'John', email: 'john@jumpstart.com' },
+    { name: 'Sarah', email: 'sarah@jumpstart.com' },
   ]
 }}
 ```
@@ -39,8 +39,8 @@ Using the above code snippet will generate a CSV file with the following content
 
 ```csv
 name,email
-John,john@tooljet.com
-Sarah,sarah@tooljet.com
+John,john@jumpstart.com
+Sarah,sarah@jumpstart.com
 ```
 
 ### Text Data Format

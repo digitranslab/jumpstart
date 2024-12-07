@@ -3,7 +3,7 @@ id: codespaces
 title: GitHub Codespaces
 ---
 
-Follow the steps below to set up ToolJet on GitHub Codespaces. We recommend reading our guide on [architecture](https://docs.tooljet.com/docs/contributing-guide/setup/architecture) of ToolJet before proceeding.
+Follow the steps below to set up JumpStart on GitHub Codespaces. We recommend reading our guide on [architecture](https://docs.jumpstart.com/docs/contributing-guide/setup/architecture) of JumpStart before proceeding.
 
 Open the terminal and run the commands below.
 
@@ -51,12 +51,12 @@ sudo -u postgres psql
 
 ### 2. Set up environment variables
 
-Create a `.env` file by running the command `touch .env`. More information on the variables that can be set is given in the [environment variables reference](https://docs.tooljet.com/docs/setup/env-vars)
+Create a `.env` file by running the command `touch .env`. More information on the variables that can be set is given in the [environment variables reference](https://docs.jumpstart.com/docs/setup/env-vars)
 
 **For basic set-up you add the below env variables:**
 
 ```
-TOOLJET_HOST=http://localhost:3000
+JUMPSTART_HOST=http://localhost:3000
 
 LOCKBOX_MASTER_KEY=
 
@@ -68,9 +68,9 @@ PG_HOST=localhost
 
 PG_PASS=postgres
 
-PG_DB=tooljet_prod
+PG_DB=jumpstart_prod
 
-SUB_PATH=/apps/tooljet/
+SUB_PATH=/apps/jumpstart/
 
 NODE_ENV=production
 
@@ -114,4 +114,4 @@ cd ./frontend && NODE=production npm run build
 cd ./server && npm run start:prod
 ```
 
-The client will start on the **port 3000**, you can access the client by visiting the url created by codespace - `https://<url>/apps/tooljet`
+The client will start on the **port 3000**, you can access the client by visiting the url created by codespace - `https://<url>/apps/jumpstart`

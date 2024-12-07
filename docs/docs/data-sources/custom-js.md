@@ -2,7 +2,7 @@
 id: run-js
 title: Run JavaScript Code
 ---
-The **Run JavaScript Code** feature in ToolJet allows custom JavaScript code to be executed to enhance application interactivity. This feature is useful for performing calculations, generating values, or interacting with queries and components.
+The **Run JavaScript Code** feature in JumpStart allows custom JavaScript code to be executed to enhance application interactivity. This feature is useful for performing calculations, generating values, or interacting with queries and components.
 
 <div style={{paddingTop:'24px'}}>
 
@@ -138,7 +138,7 @@ This ID will be longer than the one generated earlier, and it could look like "2
 <img className="screenshot-full" src="/img/datasource-reference/custom-javascript/unique-id-2.png" alt="Run JavaScript code" />
 
 :::tip Resources
-- You can also write custom JavaScript code to get the data from **External APIs** and manipulate the response for graphical representation. Here's the [tutorial](https://blog.tooljet.com/build-github-stars-history-app-in-5-minutes-using-low-code/) on how we used custom JavaScript code to build an app using GitHub API.
+- You can also write custom JavaScript code to get the data from **External APIs** and manipulate the response for graphical representation. Here's the [tutorial](https://blog.jumpstart.com/build-github-stars-history-app-in-5-minutes-using-low-code/) on how we used custom JavaScript code to build an app using GitHub API.
 - [Import external libraries](/docs/how-to/import-external-libraries-using-runjs) using RunJS.
 - [Intentionally Fail](/docs/how-to/intentionally-fail-js-query) a RunJS query.
 - [Trigger query at specified intervals](/docs/how-to/run-query-at-specified-intervals) using RunJS.
@@ -150,7 +150,7 @@ This ID will be longer than the one generated earlier, and it could look like "2
 
 ## Libraries
 
-ToolJet allows you to internally utilize these libraries:
+JumpStart allows you to internally utilize these libraries:
 
 | Name        | Documentation |
 | ----------- | ----------- |
@@ -159,7 +159,7 @@ ToolJet allows you to internally utilize these libraries:
 | Axios       | [https://axios-http.com/docs/intro](https://axios-http.com/docs/intro) |
 
 :::info
-Issues with writing custom JavaScript code? Ask in our [Slack Community](https://tooljet.com/slack).
+Issues with writing custom JavaScript code? Ask in our [Slack Community](https://jumpstart.com/slack).
 :::
 
 </div>

@@ -9,7 +9,7 @@ Now build applications on top of your Appwrite database.
 
 ## Connection 
 
-ToolJet connects to your Appwrite app using :
+JumpStart connects to your Appwrite app using :
 - **Host (API endpoint)**
 - **Project ID**
 - **Secret key**
@@ -20,7 +20,7 @@ You'll find the Secret key and other credentials on your Appwrite's project sett
 You should also set the scope for access to a particular resource. Learn more about the **API keys and scopes** [here](https://appwrite.io/docs/keys).
 :::
 
-To connect Appwrite datasource to your ToolJet application, go to the data source manager on the left-sidebar and click on the `+` button. Select Appwrite from the list of available datasources, provide the credentials and click **Save**. It is recommended to check the connection by clicking on 'Test connection' button to verify if the service account can access Appwrite from the ToolJet server.
+To connect Appwrite datasource to your JumpStart application, go to the data source manager on the left-sidebar and click on the `+` button. Select Appwrite from the list of available datasources, provide the credentials and click **Save**. It is recommended to check the connection by clicking on 'Test connection' button to verify if the service account can access Appwrite from the JumpStart server.
 
 <div style={{textAlign: 'center'}}>
 

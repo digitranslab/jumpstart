@@ -1,20 +1,20 @@
 apiVersion: autoscaling/v2beta1
 kind: HorizontalPodAutoscaler
 metadata:
-  name: tooljet
+  name: jumpstart
 spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: tooljet
-  minReplicas: {{ .Values.apps.tooljet.hpa.min }}
-  maxReplicas: {{ .Values.apps.tooljet.hpa.max }}
+    name: jumpstart
+  minReplicas: {{ .Values.apps.jumpstart.hpa.min }}
+  maxReplicas: {{ .Values.apps.jumpstart.hpa.max }}
   metrics:
   - type: Resource
     resource:
       name: cpu
-      targetAverageValue: {{ .Values.apps.tooljet.hpa.threshold.cpu }}
+      targetAverageValue: {{ .Values.apps.jumpstart.hpa.threshold.cpu }}
   - type: Resource
     resource:
       name: memory
-      targetAverageValue: {{ .Values.apps.tooljet.hpa.threshold.ram }}
+      targetAverageValue: {{ .Values.apps.jumpstart.hpa.threshold.ram }}

@@ -11,11 +11,11 @@ export const TJDB = {
   boolean: 'boolean' as const,
 };
 
-export type TooljetDatabaseDataTypes = (typeof TJDB)[keyof typeof TJDB];
+export type JumpstartDatabaseDataTypes = (typeof TJDB)[keyof typeof TJDB];
 
-export type TooljetDatabaseColumn = {
+export type JumpstartDatabaseColumn = {
   column_name: string;
-  data_type: TooljetDatabaseDataTypes;
+  data_type: JumpstartDatabaseDataTypes;
   column_default: string | null;
   character_maximum_length: number | null;
   numeric_precision: number | null;
@@ -27,7 +27,7 @@ export type TooljetDatabaseColumn = {
   keytype: string | null;
 };
 
-export type TooljetDatabaseForeignKey = {
+export type JumpstartDatabaseForeignKey = {
   column_names: string[];
   referenced_table_name: string;
   referenced_column_names: string[];
@@ -37,12 +37,12 @@ export type TooljetDatabaseForeignKey = {
   referenced_table_id: string;
 };
 
-export type TooljetDatabaseTable = {
+export type JumpstartDatabaseTable = {
   id: string;
   table_name: string;
   schema: {
-    columns: TooljetDatabaseColumn[];
-    foreign_keys: TooljetDatabaseForeignKey[];
+    columns: JumpstartDatabaseColumn[];
+    foreign_keys: JumpstartDatabaseForeignKey[];
   };
 };
 
@@ -55,7 +55,7 @@ enum PostgresErrorCode {
   UndefinedTable = '42P01',
 }
 
-export type TooljetDbActions =
+export type JumpstartDbActions =
   | 'add_column'
   | 'create_foreign_key'
   | 'create_table'
@@ -70,7 +70,7 @@ export type TooljetDbActions =
   | 'view_tables'
   | 'proxy_postgrest';
 
-type ErrorCodeMappingItem = Partial<Record<TooljetDbActions | 'default', string>>;
+type ErrorCodeMappingItem = Partial<Record<JumpstartDbActions | 'default', string>>;
 type ErrorCodeMapping = {
   [key in PostgresErrorCode]: ErrorCodeMappingItem;
 };
@@ -113,17 +113,17 @@ export class PostgrestError extends Error {
   }
 }
 
-export class TooljetDatabaseError extends QueryFailedError {
+export class JumpstartDatabaseError extends QueryFailedError {
   public readonly code: string;
   public readonly context: {
-    origin: TooljetDbActions;
+    origin: JumpstartDbActions;
     internalTables: (InternalTable | { id: string; tableName: string })[];
   };
   public readonly queryError: QueryFailedError;
 
   constructor(
     message: string,
-    context: { origin: TooljetDbActions; internalTables: InternalTable[] | { id: string; tableName: string }[] },
+    context: { origin: JumpstartDbActions; internalTables: InternalTable[] | { id: string; tableName: string }[] },
     errorObj: QueryFailedError
   ) {
     super(message, errorObj.parameters, errorObj.driverError);

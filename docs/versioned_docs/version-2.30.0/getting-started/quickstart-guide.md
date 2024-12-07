@@ -5,7 +5,7 @@ title: Quickstart Guide
 
 <!-- <div style={{paddingTop:'24px', paddingBottom:'24px'}}> -->
 
-This tutorial will show you how to create an employee directory application in minutes using ToolJet. This app will let you track and update employee information with a beautiful user interface. Here are the step-by-step instructions:
+This tutorial will show you how to create an employee directory application in minutes using JumpStart. This app will let you track and update employee information with a beautiful user interface. Here are the step-by-step instructions:
 
 **[1. Create Your First Application](#1-create-your-first-application)**  <br/>
 **[2. Create a Database Table](#2-create-a-database-table)**  <br/>
@@ -21,7 +21,7 @@ This tutorial will show you how to create an employee directory application in m
 
 ### 1. Create Your First Application
 
-Once you have created your ToolJet account, follow the steps below.
+Once you have created your JumpStart account, follow the steps below.
 
 <div class="video-container">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/LNvd7pZ72Yk?si=h0YzQeC6frmx6pcB&rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -42,7 +42,7 @@ Optionally, you can also create a header by placing **[Text](/docs/widgets/text)
 <div style={{paddingTop:'24px', paddingBottom:'24px'}}>
 
 ### 2. Create a Database Table
-Now, create a new table in **[ToolJet’s Database](/docs/tooljet-db/tooljet-database/)** to store employee records. 
+Now, create a new table in **[JumpStart’s Database](/docs/jumpstart-db/jumpstart-database/)** to store employee records. 
 
 <div class="video-container">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/sxmXZesw2is?si=HARRc9ILmfLFGNZQ&rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -66,7 +66,7 @@ To display employees in the application, we first need to fetch data from the da
 <br/>
 
 - Click on the **Add** button in the **[Query Panel](/docs/app-builder/query-panel/)** to create a new query.
-- Select **ToolJet Database** as the data source for the query.
+- Select **JumpStart Database** as the data source for the query.
 - Rename the query to `getEmployees`.
 - Choose `employees` as the Table name, and **List rows** as the Operation.
 - Toggle `Run this query on application load?` setting to automatically run the query when the app starts.
@@ -108,7 +108,7 @@ In the bottom-right corner of the Table component, there is a `+` (Add new row) 
 </div>
 <br/>
 
-- Click on the **Add** button in the query panel, and select **ToolJet Database** as the data source.
+- Click on the **Add** button in the query panel, and select **JumpStart Database** as the data source.
 - Select `employees` as the Table name, and **Create row** as the Operation.
 - Rename the query to `addEmployee`.
 - Click on **Add Column** to add required columns.
@@ -138,7 +138,7 @@ The `addEmployees` query should run when you click on the **Save** button on the
 - Click on the Table component, go to Events in properties panel and add a **New event handler**.
 - Choose **Add new rows** as the Event, **Run Query** as the Action, and `addEmployee` as the Query.
 
-Now when you click the `+` (Add new row) button, enter the employee data, and click **Save**, the `addEmployee` query will execute, adding the data to the `employees` table in the ToolJet Database. This will be followed by the Table component reloading with the new data.
+Now when you click the `+` (Add new row) button, enter the employee data, and click **Save**, the `addEmployee` query will execute, adding the data to the `employees` table in the JumpStart Database. This will be followed by the Table component reloading with the new data.
 
 </div>
 
@@ -156,9 +156,9 @@ The preview, release and share buttons are at the top-right of the App-Builder.
 - Once the development is done and you are ready to use the application, click on the **Release** button to deploy the app.
 - Finally, share your application with your end users using the **Share** button.
 
-Congratulations on completing the tutorial! You've successfully built an employee directory application and, in the process, learnt the fundamentals of ToolJet. 
+Congratulations on completing the tutorial! You've successfully built an employee directory application and, in the process, learnt the fundamentals of JumpStart. 
 
-To learn more about how ToolJet works, explore the subjects covered in **[ToolJet Concepts](/docs/tooljet-concepts/what-are-components)**.
+To learn more about how JumpStart works, explore the subjects covered in **[JumpStart Concepts](/docs/jumpstart-concepts/what-are-components)**.
 
 </div>
 

@@ -4,7 +4,7 @@ import {
   getCachedConnection,
   QueryService,
   QueryResult,
-} from '@tooljet-plugins/common';
+} from '@jumpstart-plugins/common';
 
 const { Pool } = require('pg');
 import { SourceOptions, QueryOptions } from './types';

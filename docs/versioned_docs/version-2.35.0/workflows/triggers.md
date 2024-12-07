@@ -3,7 +3,7 @@ id: workflow-triggers
 title: Triggers
 ---
 
-Triggers can be used to execute a workflow. Currently, ToolJet supports two types of triggers: [Webhooks](#webhooks) and [Manual](#manual).
+Triggers can be used to execute a workflow. Currently, JumpStart supports two types of triggers: [Webhooks](#webhooks) and [Manual](#manual).
 
 <div style={{textAlign: 'center'}}>
     <img style={{ border:'0', marginBottom:'15px', borderRadius:'5px', boxShadow: '0px 1px 3px rgba(0, 0, 0, 0.2)' }} className="screenshot-full" src="/img/workflows/triggers/triggers.png" alt="Triggers" />
@@ -47,7 +47,7 @@ A webhook trigger allows you to run the workflow when a webhook is received. You
 - Find the API endpoint URL in the **Endpoint** field. You can use this URL to send a POST request to trigger the workflow. You can also click on the **Copy** button to copy the URL to the clipboard. You can either select `Copy URL` or `Copy as cURL` from the dropdown menu. The `Copy as cURL` option copies the URL as a cURL command which will include details such as the `API token` and `Environment`. An example of the Endpoint URL is as follows:
 
   ```
-  http://{TOOLJET_HOST}/api/v2/webhooks/workflows/:id/trigger
+  http://{JUMPSTART_HOST}/api/v2/webhooks/workflows/:id/trigger
   ```
 
   <div style={{textAlign: 'center'}}>
@@ -115,7 +115,7 @@ For limiting parallel executions, the following environment variables can be use
 | WEBHOOK_THROTTLE_LIMIT | 100 | Maximum number of requests within the TTL that will be throttled |
 
 :::tip Whitelisting API endpoints
-For Virtual Private Clouds (VPCs), restrict access only to the `{TOOLJET_HOST}/api/v2/workflows/*` endpoint.
+For Virtual Private Clouds (VPCs), restrict access only to the `{JUMPSTART_HOST}/api/v2/workflows/*` endpoint.
 :::
 
 </div>
@@ -124,7 +124,7 @@ For Virtual Private Clouds (VPCs), restrict access only to the `{TOOLJET_HOST}/a
 
 ## Manual
 
-Manual triggers can be used to run a workflow manually from the ToolJet apps. Manual triggers work similar to the queries of a data source. You can add a trigger to an application from the query panel. 
+Manual triggers can be used to run a workflow manually from the JumpStart apps. Manual triggers work similar to the queries of a data source. You can add a trigger to an application from the query panel. 
 
 In the application, simply click on the `+ Add` button in the query panel and select **Run Workflow**. Then select the desired workflow from the dropdown. Rename the query if required and click on the **Run** button to trigger the workflow or add this query to a event handler to trigger the workflow on a specific event.
 
@@ -145,7 +145,7 @@ Parameters can be passed to the workflow from the **Params** field in the query.
 "age": 30
 ```
 
-Assume a scenario where teams manage multiple ToolJet apps, each requiring queries to the same database for specific data. Instead of duplicating these steps across various apps, a workflow can be created once and seamlessly integrated wherever needed.
+Assume a scenario where teams manage multiple JumpStart apps, each requiring queries to the same database for specific data. Instead of duplicating these steps across various apps, a workflow can be created once and seamlessly integrated wherever needed.
 
 <div style={{textAlign: 'center'}}>
   <img style={{ border:'0', marginBottom:'15px', borderRadius:'5px', boxShadow: '0px 1px 3px rgba(0, 0, 0, 0.2)' }} className="screenshot-full" src="/img/workflows/triggers/paramui.png" alt="Triggers" />

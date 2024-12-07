@@ -1,4 +1,4 @@
 
 # Appwrite
 
-Documentation on: https://docs.tooljet.com/docs/data-sources/appwrite
+Documentation on: https://docs.jumpstart.com/docs/data-sources/appwrite

@@ -5,9 +5,9 @@ title: Mailgun
 
 # Mailgun
 
-ToolJet can connect to your Mailgun account to send emails.
+JumpStart can connect to your Mailgun account to send emails.
 
-<img class="screenshot-full" src="/img/datasource-reference/mailgun/mailgun-datasource.png" alt="ToolJet - Data source - Mailgun" height="420" />
+<img class="screenshot-full" src="/img/datasource-reference/mailgun/mailgun-datasource.png" alt="JumpStart - Data source - Mailgun" height="420" />
 
 :::info
 The Mailgun API Datasource supports for interaction with the mail endpoint of the [Mailgun API](https://documentation.mailgun.com/en/latest/api-intro.html#authentication-1).
@@ -20,7 +20,7 @@ To add a new Mailgun API datasource, click the **Datasource manager** icon on th
 Enter your **Mailgun API key** in the "API key" field.
 
 :::tip
-Mailgun API key is required to create an Mailgun datasource on ToolJet. You can generate API key by visiting [Mailgun account page](https://app.mailgun.com/app/account/security/api_keys).
+Mailgun API key is required to create an Mailgun datasource on JumpStart. You can generate API key by visiting [Mailgun account page](https://app.mailgun.com/app/account/security/api_keys).
 :::
 
 Click on the 'Save' button to save the data source.
@@ -42,15 +42,15 @@ Optional parameters:
 
 - Body as HTML
 
-<img class="screenshot-full" src="/img/datasource-reference/MailGun/mailgun_query_body.png" alt="ToolJet - Query Mailgun" height="420"/>
+<img class="screenshot-full" src="/img/datasource-reference/MailGun/mailgun_query_body.png" alt="JumpStart - Query Mailgun" height="420"/>
 
 :::info
 **Send mail to** - accepts a single email id. 
 For example:
-`{{"dev@tooljet.io"}}`.
+`{{"dev@jumpstart.io"}}`.
 
 **Send mail from** - accepts a string.
-For example: `admin@tooljet.io`
+For example: `admin@jumpstart.io`
 :::
 
 :::tip

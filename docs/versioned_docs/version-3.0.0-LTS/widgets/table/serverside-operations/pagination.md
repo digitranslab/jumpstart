@@ -3,7 +3,7 @@ id: pagination
 title: Pagination
 ---
 
-This guide explains how to perform serverside pagination on a **Table** component in ToolJet.
+This guide explains how to perform serverside pagination on a **Table** component in JumpStart.
 
 <div style={{paddingTop:'24px'}}>
 
@@ -13,7 +13,7 @@ Before performing the serverside pagination, lets setup the **Table** component 
 
 1. Drag a **Table** component from right component library to the canvas.
 2. Select the data source and create a new query from the query panel at the bottom. (Refer to [data source](/docs/data-sources/overview) docs for more details) <br/>
-    We are going to use ToolJet’s Sample data source (Postgres) in this guide.<br/>
+    We are going to use JumpStart’s Sample data source (Postgres) in this guide.<br/>
     Add the following query to fetch the data from database:
 
     ```sql
@@ -81,6 +81,6 @@ Follow the following steps to perform server side pagination on **Table**:
 
     <img className="screenshot-full" src="/img/widgets/table/serverside-operations/pagiation-loading.png" alt="Fetch data from the data source" />
 
-This is how serverside pagination is implemented in ToolJet's **Table** component. When pagination is used, the query is executed on the server, retrieving only the relevant set of records for the current page. This ensures that data is fetched efficiently from the server, rather than loading the entire dataset at once, improving performance and scalability.
+This is how serverside pagination is implemented in JumpStart's **Table** component. When pagination is used, the query is executed on the server, retrieving only the relevant set of records for the current page. This ensures that data is fetched efficiently from the server, rather than loading the entire dataset at once, improving performance and scalability.
 
 </div>

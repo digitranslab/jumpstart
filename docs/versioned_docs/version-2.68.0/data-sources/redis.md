@@ -3,17 +3,17 @@ id: redis
 title: Redis
 ---
 
-ToolJet enables you to execute Redis commands on your Redis instances.
+JumpStart enables you to execute Redis commands on your Redis instances.
 
 <div style={{paddingTop:'24px'}}>
 
 ## Connecting to Redis
 
-To establish a connection with the Redis data source, you can either click on the **+ Add new Data source** button located on the query panel or navigate to the **[Data Sources](/docs/data-sources/overview)** page from the ToolJet dashboard and choose Redis as the data source.
+To establish a connection with the Redis data source, you can either click on the **+ Add new Data source** button located on the query panel or navigate to the **[Data Sources](/docs/data-sources/overview)** page from the JumpStart dashboard and choose Redis as the data source.
 
 <img className="screenshot-full" src="/img/datasource-reference/redis/connect-v2.png" alt="Redis Connection" style={{marginBottom:'15px'}} />
 
-To connect ToolJet with Redis, you need to provide the following connection details:
+To connect JumpStart with Redis, you need to provide the following connection details:
 
 - **Host**: The address or hostname of the Redis server.
 - **Port**: The port number used by the Redis server (default is 6379).

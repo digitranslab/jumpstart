@@ -18,12 +18,12 @@ handlebars.registerHelper('highlightMentionedUser', function (comment) {
 @Injectable()
 export class EmailService {
   private FROM_EMAIL;
-  private TOOLJET_HOST;
+  private JUMPSTART_HOST;
   private NODE_ENV;
 
   constructor(private readonly mailerService: MailerService) {
-    this.FROM_EMAIL = process.env.DEFAULT_FROM_EMAIL || 'hello@tooljet.io';
-    this.TOOLJET_HOST = this.stripTrailingSlash(process.env.TOOLJET_HOST);
+    this.FROM_EMAIL = process.env.DEFAULT_FROM_EMAIL || 'hello@jumpstart.io';
+    this.JUMPSTART_HOST = this.stripTrailingSlash(process.env.JUMPSTART_HOST);
     this.NODE_ENV = process.env.NODE_ENV || 'development';
   }
 
@@ -95,9 +95,9 @@ export class EmailService {
   ) {
     const isOrgInvite = organizationInvitationToken && sender && organizationName;
     const inviteUrl = generateInviteURL(invitationtoken, organizationInvitationToken, organizationId, null, redirectTo);
-    const subject = isOrgInvite ? `Welcome to ${organizationName || 'ToolJet'}` : 'Set up your account!';
+    const subject = isOrgInvite ? `Welcome to ${organizationName || 'JumpStart'}` : 'Set up your account!';
     const footerText = isOrgInvite
-      ? 'You have received this email as an invitation to join ToolJet’s workspace'
+      ? 'You have received this email as an invitation to join JumpStart’s workspace'
       : 'You have received this email to confirm your email address';
 
     const templateData = {
@@ -126,7 +126,7 @@ export class EmailService {
     organizationId: string,
     redirectTo?: string
   ) {
-    const subject = `Welcome to ${organizationName || 'ToolJet'}`;
+    const subject = `Welcome to ${organizationName || 'JumpStart'}`;
     const inviteUrl = generateOrgInviteURL(invitationtoken, organizationId, true, redirectTo);
     const templateData = {
       name: name || '',
@@ -140,14 +140,14 @@ export class EmailService {
     return await this.sendEmail(to, subject, {
       bodyHeader: subject,
       bodyContent: htmlEmailContent,
-      footerText: 'You have received this email as an invitation to join ToolJet’s workspace',
+      footerText: 'You have received this email as an invitation to join JumpStart’s workspace',
       inviteUrl,
     });
   }
 
   async sendPasswordResetEmail(to: string, token: string, firstName?: string) {
     const subject = 'Reset your password';
-    const url = `${this.TOOLJET_HOST}/reset-password/${token}`;
+    const url = `${this.JUMPSTART_HOST}/reset-password/${token}`;
     const templateData = {
       name: firstName || '',
       resetLink: url,

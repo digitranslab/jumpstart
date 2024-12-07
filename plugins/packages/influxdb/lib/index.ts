@@ -1,4 +1,4 @@
-import { ConnectionTestResult, QueryError, QueryResult, QueryService } from '@tooljet-plugins/common';
+import { ConnectionTestResult, QueryError, QueryResult, QueryService } from '@jumpstart-plugins/common';
 import { SourceOptions, QueryOptions } from './types';
 import got, { Headers } from 'got';
 const JSON5 = require('json5');

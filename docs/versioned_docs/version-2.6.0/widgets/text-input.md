@@ -28,7 +28,7 @@ It specifies a hint that describes the expected value.
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/text-input/events.png" alt="ToolJet - Widget Reference - Text input" />
+<img className="screenshot-full" src="/img/widgets/text-input/events.png" alt="JumpStart - Widget Reference - Text input" />
 
 </div>
 
@@ -75,7 +75,7 @@ Under the <b>General</b> accordion, you can set the value in the string format. 
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/tooltip.png" alt="ToolJet - Widget Reference - Text input" />
+<img className="screenshot-full" src="/img/tooltip.png" alt="JumpStart - Widget Reference - Text input" />
 
 </div>
 

@@ -6,14 +6,14 @@ const fs = require('fs');
 const rimraf = require('rimraf');
 
 export default class Delete extends Command {
-  static description = 'Delete a tooljet plugin';
+  static description = 'Delete a jumpstart plugin';
 
   static flags = {
     build: Flags.boolean({ char: 'b' }),
     marketplace: Flags.boolean({ char: 'm' }), // TODO: remove this flag, and make it default
   };
 
-  static examples = [`$ tooljet plugin delete <name> [--build]`];
+  static examples = [`$ jumpstart plugin delete <name> [--build]`];
 
   static args = [{ name: 'plugin_name', description: 'Name of the plugin', required: true }];
 
@@ -48,7 +48,7 @@ export default class Delete extends Command {
     ) {
       this.log(
         '\x1b[41m%s\x1b[0m',
-        'Error : Plugin not found, make sure that you are running this command in Tooljet directory'
+        'Error : Plugin not found, make sure that you are running this command in Jumpstart directory'
       );
       process.exit(1);
     }

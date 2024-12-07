@@ -5,11 +5,11 @@ title: Appwrite
 
 # Appwrite
 
-ToolJet can connect to appwrite database to read/write data.
+JumpStart can connect to appwrite database to read/write data.
 
 ## Connection 
 
-ToolJet connects to your Appwrite app using :
+JumpStart connects to your Appwrite app using :
 - **Host (API endpoint)**
 - **Project ID**
 - **Secret key**
@@ -20,7 +20,7 @@ You'll find the Secret key and other credentials on your Appwrite's project sett
 You should also set the scope for access to a particular resource. Learn more about the **API keys and scopes** [here](https://appwrite.io/docs/keys).
 :::
 
-To establish a connection with the Appwrite data source, you can either click on the `+Add new data source` button located on the query panel or navigate to the [Data Sources](https://docs.tooljet.com/docs/data-sources/overview) page from the ToolJet dashboard.
+To establish a connection with the Appwrite data source, you can either click on the `+Add new data source` button located on the query panel or navigate to the [Data Sources](https://docs.jumpstart.com/docs/data-sources/overview) page from the JumpStart dashboard.
 
 <div style={{textAlign: 'center'}}>
 

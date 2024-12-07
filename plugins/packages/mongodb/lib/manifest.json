@@ -1,5 +1,5 @@
 {
-  "$schema": "https://raw.githubusercontent.com/ToolJet/ToolJet/develop/plugins/schemas/manifest.schema.json",
+  "$schema": "https://raw.githubusercontent.com/digitranslab/jumpstart/develop/plugins/schemas/manifest.schema.json",
   "title": "Mongodb datasource",
   "description": "A schema defining mongodb datasource",
   "type": "database",
@@ -112,7 +112,7 @@
         "key": "connection_string",
         "type": "text",
         "encrypted": true,
-        "description": "mongodb+srv://tooljet:<password>@cluster0.i1vq4.mongodb.net/mydb?retryWrites=true&w=majority"
+        "description": "mongodb+srv://jumpstart:<password>@cluster0.i1vq4.mongodb.net/mydb?retryWrites=true&w=majority"
       }
     }
   }

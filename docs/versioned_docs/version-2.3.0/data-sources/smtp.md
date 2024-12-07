@@ -5,7 +5,7 @@ title: SMTP
 
 # SMTP
 
-SMTP plugin can connect ToolJet applications to **SMTP servers** for sending emails.
+SMTP plugin can connect JumpStart applications to **SMTP servers** for sending emails.
 
 ## Connection
 

@@ -36,7 +36,7 @@ import { Metadata } from 'src/entities/metadata.entity';
 import { MetadataService } from '@services/metadata.service';
 import { SessionService } from '@services/session.service';
 import { SessionScheduler } from 'src/schedulers/session.scheduler';
-import { TooljetDbModule } from '../tooljet_db/tooljet_db.module';
+import { JumpstartDbModule } from '../jumpstart_db/jumpstart_db.module';
 
 @Module({
   imports: [
@@ -66,7 +66,7 @@ import { TooljetDbModule } from '../tooljet_db/tooljet_db.module';
       },
       inject: [ConfigService],
     }),
-    TooljetDbModule,
+    JumpstartDbModule,
   ],
   providers: [
     AuthService,

@@ -11,7 +11,7 @@ In this how-to guide, we will build an app that will use a sample RestAPI to dis
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - How To - Change text color in columns of the table](/img/how-to/change-text-color/newapp.gif)
+![JumpStart - How To - Change text color in columns of the table](/img/how-to/change-text-color/newapp.gif)
 
 </div>
 
@@ -20,7 +20,7 @@ In this how-to guide, we will build an app that will use a sample RestAPI to dis
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - How To - Change text color in columns of the table](/img/how-to/change-text-color/restapi.png)
+![JumpStart - How To - Change text color in columns of the table](/img/how-to/change-text-color/restapi.png)
 
 </div>
 
@@ -30,7 +30,7 @@ https://api.coinstats.app/public/v1/coins?skip=0&limit=100&currency=USD
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - How To - Change text color in columns of the table](/img/how-to/change-text-color/apiendpoint.png)
+![JumpStart - How To - Change text color in columns of the table](/img/how-to/change-text-color/apiendpoint.png)
 
 </div>
 
@@ -38,7 +38,7 @@ https://api.coinstats.app/public/v1/coins?skip=0&limit=100&currency=USD
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - How To - Change text color in columns of the table](/img/how-to/change-text-color/runquery.png)
+![JumpStart - How To - Change text color in columns of the table](/img/how-to/change-text-color/runquery.png)
 
 </div>
 
@@ -46,7 +46,7 @@ https://api.coinstats.app/public/v1/coins?skip=0&limit=100&currency=USD
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - How To - Change text color in columns of the table](/img/how-to/change-text-color/inspectord.png)
+![JumpStart - How To - Change text color in columns of the table](/img/how-to/change-text-color/inspectord.png)
 
 </div>
 
@@ -55,7 +55,7 @@ https://api.coinstats.app/public/v1/coins?skip=0&limit=100&currency=USD
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - How To - Change text color in columns of the table](/img/how-to/change-text-color/data.png)
+![JumpStart - How To - Change text color in columns of the table](/img/how-to/change-text-color/data.png)
 
 </div>
 
@@ -63,7 +63,7 @@ https://api.coinstats.app/public/v1/coins?skip=0&limit=100&currency=USD
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - How To - Change text color in columns of the table](/img/how-to/change-text-color/columns.png)
+![JumpStart - How To - Change text color in columns of the table](/img/how-to/change-text-color/columns.png)
 
 </div>
 
@@ -71,7 +71,7 @@ https://api.coinstats.app/public/v1/coins?skip=0&limit=100&currency=USD
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - How To - Change text color in columns of the table](/img/how-to/change-text-color/table.png)
+![JumpStart - How To - Change text color in columns of the table](/img/how-to/change-text-color/table.png)
 
 </div>
 
@@ -84,7 +84,7 @@ Now that we have our data on the table, we will change the color of the text in 
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - How To - Change text color in columns of the table](/img/how-to/change-text-color/price.png)
+![JumpStart - How To - Change text color in columns of the table](/img/how-to/change-text-color/price.png)
 
 </div>
 
@@ -93,7 +93,7 @@ Now that we have our data on the table, we will change the color of the text in 
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - How To - Change text color in columns of the table](/img/how-to/change-text-color/cellvalue.png)
+![JumpStart - How To - Change text color in columns of the table](/img/how-to/change-text-color/cellvalue.png)
 
 </div>
 
@@ -110,6 +110,6 @@ You can also use Hex Color Code instead of mentioning color in plane text.
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - How To - Change text color in columns of the table](/img/how-to/change-text-color/rowData.png)
+![JumpStart - How To - Change text color in columns of the table](/img/how-to/change-text-color/rowData.png)
 
 </div>

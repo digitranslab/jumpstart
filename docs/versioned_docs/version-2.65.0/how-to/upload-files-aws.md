@@ -17,7 +17,7 @@ Once you have successfully added the AWS data source, build a basic UI using the
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - How To - Upload files on AWS S3 bucket](/img/how-to/upload-files-aws/ui.png)
+![JumpStart - How To - Upload files on AWS S3 bucket](/img/how-to/upload-files-aws/ui.png)
 
 </div>
 
@@ -44,7 +44,7 @@ This query will fetch the list of all the buckets in your S3. Just create a new 
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - How To - Upload files on AWS S3 bucket](/img/how-to/upload-files-aws/getBuckets.png)
+![JumpStart - How To - Upload files on AWS S3 bucket](/img/how-to/upload-files-aws/getBuckets.png)
 
 </div>
 
@@ -58,7 +58,7 @@ You can later add an event handler for running the **listObject** query whenever
 
 <div style={{textAlign: 'left'}}>
 
-![ToolJet - How To - Upload files on AWS S3 bucket](/img/how-to/upload-files-aws/dropdown.png)
+![JumpStart - How To - Upload files on AWS S3 bucket](/img/how-to/upload-files-aws/dropdown.png)
 
 </div>
 
@@ -72,7 +72,7 @@ This query will list all the objects inside the selected Bucket in dropdown. Sel
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - How To - Upload files on AWS S3 bucket](/img/how-to/upload-files-aws/listObjects.png)
+![JumpStart - How To - Upload files on AWS S3 bucket](/img/how-to/upload-files-aws/listObjects.png)
 
 </div>
 
@@ -86,7 +86,7 @@ Edit the properties of **table** widget:
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - How To - Upload files on AWS S3 bucket](/img/how-to/upload-files-aws/table.png)
+![JumpStart - How To - Upload files on AWS S3 bucket](/img/how-to/upload-files-aws/table.png)
 
 </div>
 
@@ -100,7 +100,7 @@ Create a new query and select **Signed URL for download** operation. In the Buck
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - How To - Upload files on AWS S3 bucket](/img/how-to/upload-files-aws/download.png)
+![JumpStart - How To - Upload files on AWS S3 bucket](/img/how-to/upload-files-aws/download.png)
 
 </div>
 
@@ -121,7 +121,7 @@ Create a new query, select the **Upload object** operation. Enter the following 
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - How To - Upload files on AWS S3 bucket](/img/how-to/upload-files-aws/uploadToS3.png)
+![JumpStart - How To - Upload files on AWS S3 bucket](/img/how-to/upload-files-aws/uploadToS3.png)
 
 </div>
 
@@ -137,7 +137,7 @@ Click on the widget handle to edit the file picker properties:
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - How To - Upload files using GCS](/img/how-to/upload-files-gcs/result-filepicker.png)
+![JumpStart - How To - Upload files using GCS](/img/how-to/upload-files-gcs/result-filepicker.png)
 
 </div>
 
@@ -153,7 +153,7 @@ Click on the widget handle to edit the file picker properties:
 
 <div style={{textAlign: 'left'}}>
 
-![ToolJet - How To - Upload files using GCS](/img/how-to/upload-files-gcs/config-filepicker.png)
+![JumpStart - How To - Upload files using GCS](/img/how-to/upload-files-gcs/config-filepicker.png)
 
 </div>
 

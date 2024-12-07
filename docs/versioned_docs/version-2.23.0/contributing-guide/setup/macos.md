@@ -4,10 +4,10 @@ title: Mac OS
 ---
 
 :::warning
-The following guide is intended for contributors to set-up ToolJet locally. If you're interested in **self-hosting** ToolJet, please refer to the **[Setup](/docs/setup/)** section.
+The following guide is intended for contributors to set-up JumpStart locally. If you're interested in **self-hosting** JumpStart, please refer to the **[Setup](/docs/setup/)** section.
 :::
 
-Follow these steps to setup and run ToolJet on macOS for development purposes. Open terminal and run the commands below. We recommend reading our guide on [architecture](/docs/contributing-guide/setup/architecture) of ToolJet before proceeding.
+Follow these steps to setup and run JumpStart on macOS for development purposes. Open terminal and run the commands below. We recommend reading our guide on [architecture](/docs/contributing-guide/setup/architecture) of JumpStart before proceeding.
 
 ## Setting up
 
@@ -30,7 +30,7 @@ Follow these steps to setup and run ToolJet on macOS for development purposes. O
 
     1.3 Install Postgres
     :::tip
-    ToolJet uses a postgres database as the persistent storage for storing data related to users and apps. We do not plan to support other databases such as MySQL.
+    JumpStart uses a postgres database as the persistent storage for storing data related to users and apps. We do not plan to support other databases such as MySQL.
     :::
 
     ```bash
@@ -40,7 +40,7 @@ Follow these steps to setup and run ToolJet on macOS for development purposes. O
     1.4 Install PostgREST(optional)
 
     :::info 
-    Required only if Tooljet Database is being used. 
+    Required only if Jumpstart Database is being used. 
 
     Please use PostgREST version 10.1.1.x
     :::       
@@ -51,7 +51,7 @@ Follow these steps to setup and run ToolJet on macOS for development purposes. O
 
     1.5 Clone the repository
     ```bash
-    git clone https://github.com/tooljet/tooljet.git
+    git clone https://github.com/digitranslab/jumpstart.git
     ```
 
 2. Set up environment variables
@@ -71,7 +71,7 @@ Follow these steps to setup and run ToolJet on macOS for development purposes. O
    Example:
    ```bash
    cat .env
-   TOOLJET_HOST=http://localhost:8082
+   JUMPSTART_HOST=http://localhost:8082
    LOCKBOX_MASTER_KEY=1d291a926ddfd221205a23adb4cc1db66cb9fcaf28d97c8c1950e3538e3b9281
    SECRET_KEY_BASE=4229d5774cfe7f60e75d6b3bf3a1dbb054a696b6d21b6d5de7b73291899797a222265e12c0a8e8d844f83ebacdf9a67ec42584edf1c2b23e1e7813f8a3339041
    NODE_ENV=development
@@ -80,7 +80,7 @@ Follow these steps to setup and run ToolJet on macOS for development purposes. O
    PG_PORT=5432
    PG_USER=postgres
    PG_PASS=postgres
-   PG_DB=tooljet_development
+   PG_DB=jumpstart_development
    ORM_LOGGING=all
    ```
 

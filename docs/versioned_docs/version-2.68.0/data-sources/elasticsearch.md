@@ -3,14 +3,14 @@ id: elasticsearch
 title: Elasticsearch
 ---
 
-ToolJet allows you to connect to your Elasticsearch cluster to perform data read/write operations and execute various queries.
+JumpStart allows you to connect to your Elasticsearch cluster to perform data read/write operations and execute various queries.
 
 ## Connection
 
-To connect to an Elasticsearch data source in ToolJet, you can either click the **+ Add new data source** button on the query panel or navigate to the **[Data Sources](/docs/data-sources/overview)** page in the ToolJet dashboard.
+To connect to an Elasticsearch data source in JumpStart, you can either click the **+ Add new data source** button on the query panel or navigate to the **[Data Sources](/docs/data-sources/overview)** page in the JumpStart dashboard.
 
 :::info
-Please make sure the **Host/IP** of the database is accessible from your VPC if you have self-hosted ToolJet. If you are using ToolJet cloud, please **whitelist** our IP.
+Please make sure the **Host/IP** of the database is accessible from your VPC if you have self-hosted JumpStart. If you are using JumpStart cloud, please **whitelist** our IP.
 :::
 
 To connect to your Elasticsearch cluster, the following details are required:
@@ -23,7 +23,7 @@ To connect to your Elasticsearch cluster, the following details are required:
     <img className="screenshot-full" src="/img/datasource-reference/elasticsearch/connect-v2.png" alt="Elastic Connect" />
 </div>
 
-ToolJet also supports SSL certificate-based connections:
+JumpStart also supports SSL certificate-based connections:
 - You can use either CA or Client certificates.
 
 <div style={{textAlign: 'center'}}>
@@ -47,7 +47,7 @@ Query results can be transformed using transformations. Refer to our transformat
 
 ## Supported Operations
 
-ToolJet supports the following Elasticsearch operations:
+JumpStart supports the following Elasticsearch operations:
 
 - **[Search](#search)**
 - **[Index a Document](#index-a-document)**

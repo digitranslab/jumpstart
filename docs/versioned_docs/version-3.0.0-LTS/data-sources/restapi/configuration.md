@@ -4,17 +4,17 @@ title: Configuration
 slug: /data-sources/restapi/
 ---
 
-ToolJet can establish connections with any available REST API endpoint, allowing you to create queries and interact with external data sources seamlessly.
+JumpStart can establish connections with any available REST API endpoint, allowing you to create queries and interact with external data sources seamlessly.
 
 ## Setting up a REST API Data Source 
 
 <div>
 
-To establish a connection with the REST API data source, you can either click on the **+ Add new Data source** button located on the query panel or navigate to the **[Data Sources](/docs/data-sources/overview)** page through the ToolJet dashboard.
+To establish a connection with the REST API data source, you can either click on the **+ Add new Data source** button located on the query panel or navigate to the **[Data Sources](/docs/data-sources/overview)** page through the JumpStart dashboard.
 
-<img className="screenshot-full" src="/img/datasource-reference/rest-api/restconnect.gif" alt="ToolJet - Data source - REST API" style={{marginBottom:'15px'}} />
+<img className="screenshot-full" src="/img/datasource-reference/rest-api/restconnect.gif" alt="JumpStart - Data source - REST API" style={{marginBottom:'15px'}} />
 
-ToolJet requires the following to connect to a REST API data source:
+JumpStart requires the following to connect to a REST API data source:
 
 - **[Credentials](#credentials)**
 - **[Authentication](#authentication)**
@@ -42,7 +42,7 @@ ToolJet requires the following to connect to a REST API data source:
 For a detailed explanation of the authentication types supported by REST API data sources, refer to the **[Authentication](/docs/data-sources/restapi/authentication)** section.
 :::
 
-ToolJet supports the following authentication types for REST API data sources:
+JumpStart supports the following authentication types for REST API data sources:
 
 - **None**: No authentication required.
 - **Basic**: Requires Username and Password.

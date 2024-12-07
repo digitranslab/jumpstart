@@ -10,7 +10,7 @@ import MenuIcon from '../Icons/Unique-menu.svg';
 import ArrowRight from '../Icons/ArrowRight.svg';
 import Tick from '../Icons/Tick.svg';
 import Information from '@/_ui/Icon/solidIcons/Information';
-import DropDownSelect from '../../Editor/QueryManager/QueryEditors/TooljetDatabase/DropDownSelect';
+import DropDownSelect from '../../Editor/QueryManager/QueryEditors/JumpstartDatabase/DropDownSelect';
 import tjdbDropdownStyles, { dataTypes, formatOptionLabel, serialDataType, checkDefaultValue } from '../constants';
 import Select, { components } from 'react-select';
 import Skeleton from 'react-loading-skeleton';

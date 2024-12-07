@@ -1,7 +1,7 @@
 import { Catch, ArgumentsHost, ExceptionFilter, BadRequestException } from '@nestjs/common';
 
 @Catch(BadRequestException)
-export class TooljetDbJoinExceptionFilter implements ExceptionFilter {
+export class JumpstartDbJoinExceptionFilter implements ExceptionFilter {
   catch(exception: any, host: ArgumentsHost) {
     const next = host.switchToHttp().getNext();
 

@@ -9,7 +9,7 @@ jest.mock('got');
 const mockedGot = jest.mocked(got);
 
 //TODO: this spec will need postgrest instance to run (skipping for now)
-describe.skip('Tooljet DB controller', () => {
+describe.skip('Jumpstart DB controller', () => {
   let nestApp: INestApplication;
   let mockConfig;
 
@@ -27,32 +27,32 @@ describe.skip('Tooljet DB controller', () => {
 
     const internalTables = await getManager().find(InternalTable);
     for (const internalTable of internalTables) {
-      await getManager('tooljetDb').query(`TRUNCATE "${internalTable.id}" RESTART IDENTITY CASCADE;`);
+      await getManager('jumpstartDb').query(`TRUNCATE "${internalTable.id}" RESTART IDENTITY CASCADE;`);
     }
   });
 
-  describe('GET /api/tooljet_db/organizations/:organizationId/proxy/*', () => {
+  describe('GET /api/jumpstart_db/organizations/:organizationId/proxy/*', () => {
     it('should allow only authenticated users', async () => {
       const mockId = 'c8657683-b112-4a36-9ce7-79ebf68c8098';
       await request(nestApp.getHttpServer())
-        .get(`/api/tooljet_db/organizations/${mockId}/proxy/table_name`)
+        .get(`/api/jumpstart_db/organizations/${mockId}/proxy/table_name`)
         .expect(401);
     });
 
     it('should allow only active users in workspace', async () => {
       const adminUserData = await createUser(nestApp, {
-        email: 'admin@tooljet.io',
+        email: 'admin@jumpstart.io',
       });
 
       const archivedUserData = await createUser(nestApp, {
-        email: 'developer@tooljet.io',
+        email: 'developer@jumpstart.io',
         groups: ['all_users'],
         status: 'archived',
         organization: adminUserData.organization,
       });
 
       await request(nestApp.getHttpServer())
-        .get(`/api/tooljet_db/organizations/${archivedUserData.organization.id}/proxy/table_name`)
+        .get(`/api/jumpstart_db/organizations/${archivedUserData.organization.id}/proxy/table_name`)
         .set('tj-workspace-id', archivedUserData.user.defaultOrganizationId)
         .set('Authorization', authHeaderForUser(archivedUserData.user))
         .expect(401);
@@ -60,11 +60,11 @@ describe.skip('Tooljet DB controller', () => {
 
     it('should throw error when internal table is not found', async () => {
       const adminUserData = await createUser(nestApp, {
-        email: 'admin@tooljet.io',
+        email: 'admin@jumpstart.io',
       });
 
       const response = await request(nestApp.getHttpServer())
-        .get(`/api/tooljet_db/organizations/${adminUserData.organization.id}/proxy/\${table_name}`)
+        .get(`/api/jumpstart_db/organizations/${adminUserData.organization.id}/proxy/\${table_name}`)
         .set('tj-workspace-id', adminUserData.user.defaultOrganizationId)
         .set('Authorization', authHeaderForUser(adminUserData.user));
 
@@ -84,7 +84,7 @@ describe.skip('Tooljet DB controller', () => {
       });
 
       const adminUserData = await createUser(nestApp, {
-        email: 'admin@tooljet.io',
+        email: 'admin@jumpstart.io',
       });
 
       const actorsTable = getManager().create(InternalTable, {
@@ -114,7 +114,7 @@ describe.skip('Tooljet DB controller', () => {
 
       const response = await request(nestApp.getHttpServer())
         .get(
-          `/api/tooljet_db/organizations/${adminUserData.organization.id}/proxy/\${actors}?select=first_name,last_name,\${films}(title)}`
+          `/api/jumpstart_db/organizations/${adminUserData.organization.id}/proxy/\${actors}?select=first_name,last_name,\${films}(title)}`
         )
         .set('tj-workspace-id', adminUserData.user.defaultOrganizationId)
         .set('Authorization', authHeaderForUser(adminUserData.user));
@@ -127,29 +127,29 @@ describe.skip('Tooljet DB controller', () => {
     });
   });
 
-  describe('GET /api/tooljet_db/organizations/table', () => {
+  describe('GET /api/jumpstart_db/organizations/table', () => {
     it('should allow only authenticated users', async () => {
       const mockId = 'c8657683-b112-4a36-9ce7-79ebf68c8098';
       await request(nestApp.getHttpServer())
-        .get(`/api/tooljet_db/organizations/${mockId}/tables`)
+        .get(`/api/jumpstart_db/organizations/${mockId}/tables`)
         .send({ action: 'view_tables' })
         .expect(401);
     });
 
     it('should allow only active users in workspace', async () => {
       const adminUserData = await createUser(nestApp, {
-        email: 'admin@tooljet.io',
+        email: 'admin@jumpstart.io',
       });
 
       const archivedUserData = await createUser(nestApp, {
-        email: 'developer@tooljet.io',
+        email: 'developer@jumpstart.io',
         groups: ['all_users'],
         status: 'archived',
         organization: adminUserData.organization,
       });
 
       await request(nestApp.getHttpServer())
-        .post(`/api/tooljet_db/organizations/${archivedUserData.organization.id}/table`)
+        .post(`/api/jumpstart_db/organizations/${archivedUserData.organization.id}/table`)
         .set('tj-workspace-id', archivedUserData.user.defaultOrganizationId)
         .set('Authorization', authHeaderForUser(archivedUserData.user))
         .expect(401);
@@ -157,11 +157,11 @@ describe.skip('Tooljet DB controller', () => {
 
     it('should be able to create table', async () => {
       const adminUserData = await createUser(nestApp, {
-        email: 'admin@tooljet.io',
+        email: 'admin@jumpstart.io',
       });
 
       const { statusCode } = await request(nestApp.getHttpServer())
-        .post(`/api/tooljet_db/organizations/${adminUserData.organization.id}/table`)
+        .post(`/api/jumpstart_db/organizations/${adminUserData.organization.id}/table`)
         .set('tj-workspace-id', adminUserData.user.defaultOrganizationId)
         .set('Authorization', authHeaderForUser(adminUserData.user))
         .send({
@@ -179,17 +179,17 @@ describe.skip('Tooljet DB controller', () => {
       expect(createdInternalTable.tableName).toEqual('test_table');
 
       await expect(
-        getManager('tooljetDb').query(`SELECT * from "${createdInternalTable.id}"`)
+        getManager('jumpstartDb').query(`SELECT * from "${createdInternalTable.id}"`)
       ).resolves.not.toThrowError(QueryFailedError);
     });
 
     it('should be able to view tables', async () => {
       const adminUserData = await createUser(nestApp, {
-        email: 'admin@tooljet.io',
+        email: 'admin@jumpstart.io',
       });
 
       await request(nestApp.getHttpServer())
-        .post(`/api/tooljet_db/organizations/${adminUserData.organization.id}/table`)
+        .post(`/api/jumpstart_db/organizations/${adminUserData.organization.id}/table`)
         .set('tj-workspace-id', adminUserData.user.defaultOrganizationId)
         .set('Authorization', authHeaderForUser(adminUserData.user))
         .send({
@@ -199,7 +199,7 @@ describe.skip('Tooljet DB controller', () => {
         });
 
       await request(nestApp.getHttpServer())
-        .post(`/api/tooljet_db/organizations/${adminUserData.organization.id}/table`)
+        .post(`/api/jumpstart_db/organizations/${adminUserData.organization.id}/table`)
         .set('tj-workspace-id', adminUserData.user.defaultOrganizationId)
         .set('Authorization', authHeaderForUser(adminUserData.user))
         .send({
@@ -209,7 +209,7 @@ describe.skip('Tooljet DB controller', () => {
         });
 
       const { statusCode, body } = await request(nestApp.getHttpServer())
-        .get(`/api/tooljet_db/organizations/${adminUserData.organization.id}/tables`)
+        .get(`/api/jumpstart_db/organizations/${adminUserData.organization.id}/tables`)
         .set('Authorization', authHeaderForUser(adminUserData.user))
         .send({ action: 'view_tables' });
 
@@ -221,11 +221,11 @@ describe.skip('Tooljet DB controller', () => {
 
     it('should be able to add column to table', async () => {
       const adminUserData = await createUser(nestApp, {
-        email: 'admin@tooljet.io',
+        email: 'admin@jumpstart.io',
       });
 
       await request(nestApp.getHttpServer())
-        .post(`/api/tooljet_db/organizations/${adminUserData.organization.id}/table`)
+        .post(`/api/jumpstart_db/organizations/${adminUserData.organization.id}/table`)
         .set('tj-workspace-id', adminUserData.user.defaultOrganizationId)
         .set('Authorization', authHeaderForUser(adminUserData.user))
         .send({
@@ -238,12 +238,12 @@ describe.skip('Tooljet DB controller', () => {
 
       expect(internalTable.tableName).toEqual('test_table');
 
-      await expect(getManager('tooljetDb').query(`SELECT name from "${internalTable.id}"`)).rejects.toThrowError(
+      await expect(getManager('jumpstartDb').query(`SELECT name from "${internalTable.id}"`)).rejects.toThrowError(
         QueryFailedError
       );
 
       const { statusCode } = await request(nestApp.getHttpServer())
-        .post(`/api/tooljet_db/organizations/${adminUserData.organization.id}/table/test_table/column`)
+        .post(`/api/jumpstart_db/organizations/${adminUserData.organization.id}/table/test_table/column`)
         .set('tj-workspace-id', adminUserData.user.defaultOrganizationId)
         .set('Authorization', authHeaderForUser(adminUserData.user))
         .send({
@@ -254,7 +254,7 @@ describe.skip('Tooljet DB controller', () => {
 
       expect(statusCode).toBe(201);
 
-      await expect(getManager('tooljetDb').query(`SELECT name from "${internalTable.id}"`)).resolves.not.toThrowError(
+      await expect(getManager('jumpstartDb').query(`SELECT name from "${internalTable.id}"`)).resolves.not.toThrowError(
         QueryFailedError
       );
     });

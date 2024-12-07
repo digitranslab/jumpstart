@@ -5,7 +5,7 @@ title: Baserow
 
 # Baserow
 
-ToolJet can connect to your Baserow account to read and write data.
+JumpStart can connect to your Baserow account to read and write data.
 
 ## Connection
 

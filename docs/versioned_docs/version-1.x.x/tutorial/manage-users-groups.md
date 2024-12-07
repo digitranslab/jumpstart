@@ -71,7 +71,7 @@ Similar to archiving a user's access, you can enable it again by clicking on **U
 
 ## Managing Groups
 
-On ToolJet, Admins can create groups for users added in a workspace and grant them access to particular app(s) with specific permissions. To manage groups, just go to the **Account menu** on top right corner and click on the **Manage Groups**.
+On JumpStart, Admins can create groups for users added in a workspace and grant them access to particular app(s) with specific permissions. To manage groups, just go to the **Account menu** on top right corner and click on the **Manage Groups**.
 
 
 
@@ -81,7 +81,7 @@ On ToolJet, Admins can create groups for users added in a workspace and grant th
 
 ### Group properties
 
-Every group on ToolJet has three components:
+Every group on JumpStart has three components:
 
 #### Apps: 
 

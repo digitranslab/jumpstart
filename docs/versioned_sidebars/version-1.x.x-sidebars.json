@@ -9,7 +9,7 @@
         "id": "setup/index"
       },
       "items": [
-        "setup/try-tooljet",
+        "setup/try-jumpstart",
         "setup/digitalocean",
         "setup/docker",
         "setup/heroku",
@@ -24,7 +24,7 @@
         "setup/client",
         "setup/env-vars",
         "setup/http-proxy",
-        "setup/tooljet-subpath"
+        "setup/jumpstart-subpath"
       ]
     },
     "security",
@@ -34,8 +34,8 @@
       "label": "Tutorial",
       "link": {
         "type": "generated-index",
-        "title": "Getting Started with ToolJet",
-        "description": "A primer on getting started with building an application with ToolJet!",
+        "title": "Getting Started with JumpStart",
+        "description": "A primer on getting started with building an application with JumpStart!",
         "keywords": [
           "tutorial"
         ]
@@ -203,7 +203,7 @@
       "link": {
         "type": "generated-index",
         "title": "How To Guides",
-        "description": "How To Guides for all the things ToolJet",
+        "description": "How To Guides for all the things JumpStart",
         "keywords": [
           "how to"
         ]
@@ -285,7 +285,7 @@
       "link": {
         "type": "generated-index",
         "title": "Contributing Guide",
-        "description": "Guides for contributing to ToolJet",
+        "description": "Guides for contributing to JumpStart",
         "keywords": [
           "contribute",
           "contributing"

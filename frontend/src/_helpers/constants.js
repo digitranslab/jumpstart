@@ -101,5 +101,5 @@ export const DATA_SOURCE_TYPE = {
 
 export const SAMPLE_DB_KIND = {
   POSTGRESQL: 'postgresql',
-  TOOLJET_DB: 'tooljetdb',
+  JUMPSTART_DB: 'jumpstartdb',
 };

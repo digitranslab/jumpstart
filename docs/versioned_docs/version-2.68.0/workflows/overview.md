@@ -5,23 +5,23 @@ title: Overview
 <div className='badge badge--primary heading-badge' style={{marginBottom:'10px'}}>Available on: Paid plans</div>
 <br/>
 
-ToolJet Workflows is a visual, node-based platform tailored for data-centric automation tasks. With its intuitive design, users can create detailed queries across diverse data sources, manage conditional flows, and execute custom JavaScript code while making the processes presentable and easy to manage. 
+JumpStart Workflows is a visual, node-based platform tailored for data-centric automation tasks. With its intuitive design, users can create detailed queries across diverse data sources, manage conditional flows, and execute custom JavaScript code while making the processes presentable and easy to manage. 
 
 <div style={{textAlign: 'center'}}>
     <img className="screenshot-full" src="/img/workflows/overview/hero.png" alt="Workflows Preview" />
 </div>
 
-Whether you're delving into data integration, generating detailed reports, or ensuring rigorous validation, ToolJet Workflows is your go-to solution. 
+Whether you're delving into data integration, generating detailed reports, or ensuring rigorous validation, JumpStart Workflows is your go-to solution. 
 
 :::danger
-You're currently exploring the beta version of ToolJet Workflows. Please be aware that this version is experimental, and is not recommended for production use at the moment.
+You're currently exploring the beta version of JumpStart Workflows. Please be aware that this version is experimental, and is not recommended for production use at the moment.
 :::
 
 <div style={{paddingTop:'24px', paddingBottom:'24px'}}>
 
 ## Quickstart Guide
 
-This introductory guide will help you understand the basics of ToolJet Workflows. We'll create a workflow that fetches the sales data from the database, transforms the data using JavaScript and sends an SMS notification to the Sales Manager using Twilio. The workflow will also conditionally return a success/failure message that can be used in a ToolJet Application to show a pop-up alert. 
+This introductory guide will help you understand the basics of JumpStart Workflows. We'll create a workflow that fetches the sales data from the database, transforms the data using JavaScript and sends an SMS notification to the Sales Manager using Twilio. The workflow will also conditionally return a success/failure message that can be used in a JumpStart Application to show a pop-up alert. 
 
 :::info
 All data sources that are configured in **Global Datasources** will be available in Workflows.
@@ -199,9 +199,9 @@ With this basic workflow, we've essentially isolated a complex data-centric task
 
 <div style={{paddingTop:'24px', paddingBottom:'24px'}}>
 
-### Adding Workflows to ToolJet Applications
+### Adding Workflows to JumpStart Applications
 
-You can now use this workflow in your ToolJet Application from the query panel. In your application, simply click on the **+ Add** button in the query panel and select **Run Workflow**. Then select **Quickstart Guide** in the **Workflow** dropdown. Rename the query to *sendNotification*.
+You can now use this workflow in your JumpStart Application from the query panel. In your application, simply click on the **+ Add** button in the query panel and select **Run Workflow**. Then select **Quickstart Guide** in the **Workflow** dropdown. Rename the query to *sendNotification*.
 
 <div style={{textAlign: 'center'}}>
     <img className="screenshot-full" src="/img/workflows/overview/add-workflow-in-app.gif" alt="Add workflow to application" />
@@ -230,9 +230,9 @@ The above code will return success or failure message based on the output we rec
 </div>
 <br/>
 
-We've now successfully used a workflow in our ToolJet Application. You can also use **[webhooks](/docs/workflows/workflow-triggers#webhooks)** to execute workflows from third party apps.
+We've now successfully used a workflow in our JumpStart Application. You can also use **[webhooks](/docs/workflows/workflow-triggers#webhooks)** to execute workflows from third party apps.
 
-Continue learning about the different elements of ToolJet Workflows using the below links:
+Continue learning about the different elements of JumpStart Workflows using the below links:
 
 **[Types of Nodes](/docs/workflows/nodes)** <br/>
 **[Triggers](/docs/workflows/workflow-triggers)** <br/>

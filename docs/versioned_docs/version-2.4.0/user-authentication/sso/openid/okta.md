@@ -39,7 +39,7 @@ title: Okta
 To change the Login flow to **Redirect to app to initiate login (OIDC Compliant)**, you must change the **Grant type** in the **Client acting on behalf of a user** section to **Implicit (hybrid)** and enable **Allow Access Token with implicit grant type**.
 :::
 
-7. The Okta sign-in button will now appear on your ToolJet login screen.
+7. The Okta sign-in button will now appear on your JumpStart login screen.
 
 :::info Find Well Known URL
 For more information on finding the Well Known URL, refer to the [Okta Auth Servers documentation](https://developer.okta.com/docs/concepts/auth-servers/#org-authorization-server).

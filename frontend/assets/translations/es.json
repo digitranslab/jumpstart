@@ -45,7 +45,7 @@
     "viewer": "¡Lo sentimos!. Esta aplicación está bajo mantenimiento.",
     "app": {
         "updateAvailable": "Actualización disponible",
-        "newVersionReleased": "Una nueva versión de Tooljet ha sido lanzada.",
+        "newVersionReleased": "Una nueva versión de Jumpstart ha sido lanzada.",
         "readReleaseNotes": "Leer las notas del lanzamiento y actualizar.",
         "skipVersion": "Saltar esta versión."
     },
@@ -57,17 +57,17 @@
     },
     "slack": {
         "authorize": "Autorizar",
-        "connectToolJetToSlack": "ToolJet puede conectarse a Slack, listar usuarios, enviar mensajes, etc. Por favor seleccione los permisos apropiados.",
+        "connectJumpStartToSlack": "JumpStart puede conectarse a Slack, listar usuarios, enviar mensajes, etc. Por favor seleccione los permisos apropiados.",
         "chatWrite": "chat:escribir",
-        "listUsersAndSendMessage": "Tu aplicación de Tooljet será capaz de listar usuarios y enviar mensajes a ellos y a los canales.",
+        "listUsersAndSendMessage": "Tu aplicación de Jumpstart será capaz de listar usuarios y enviar mensajes a ellos y a los canales.",
         "connectSlack": "Conectar a Slack"
     },
     "googleSheets": {
         "readOnly": "Solo lectura",
-        "enableReadAndWrite": "Si deseas que ToolJet pueda modificar tus hojas de Google Sheet, asegurate de seleccionar permisos de lectura y escritura.",
-        "readDataFromSheets": "Tus aplicaciones de ToolJet sólo pueden leer datos de tus hojas de Google Sheets.",
+        "enableReadAndWrite": "Si deseas que JumpStart pueda modificar tus hojas de Google Sheet, asegurate de seleccionar permisos de lectura y escritura.",
+        "readDataFromSheets": "Tus aplicaciones de JumpStart sólo pueden leer datos de tus hojas de Google Sheets.",
         "readWrite": "Lectura y escritura",
-        "readModifySheets": "Tus aplicaciones de ToolJet pueden leer, modificar y más en tus hojas de Google Sheets.",
+        "readModifySheets": "Tus aplicaciones de JumpStart pueden leer, modificar y más en tus hojas de Google Sheets.",
         "toGoogleSheets": "a Google Sheets"
     },
     "profile": {
@@ -81,7 +81,7 @@
         "password": "Contraseña",
         "acceptInvite": "Aceptar invitación",
         "successfullyVerifiedEmail": "Correo verificado con éxito",
-        "setupTooljet": "Configurar ToolJet"
+        "setupJumpstart": "Configurar JumpStart"
     },
     "loginSignupPage": {
         "forgotPassword": "Olvidaste la contraseña",
@@ -93,7 +93,7 @@
         "resetPassword": "Reiniciar contraseña",
         "signIn": "Iniciar sesión",
         "signUp": "Registrarse",
-        "createToolJetAccount": "Crea una cuenta",
+        "createJumpStartAccount": "Crea una cuenta",
         "password": "Contraseña",
         "showPassword": "Mostrar contraseña",
         "loginTo": "Iniciar sesión",
@@ -102,13 +102,13 @@
         "emailConfirmLink": "Por favor revisa tu correo para el link de confirmación",
         "newPassword": "Nueva contraseña",
         "passwordConfirmation": "Confirmar contraseña",
-        "newToTooljet": "¿Nuevo en ToolJet?",
+        "newToJumpstart": "¿Nuevo en JumpStart?",
         "newToWorkspace": "¿Nuevo en este espacio de trabajo?",
         "enterWorkEmail": "Ingresa tu correo electrónico",
         "enterPassword": "Ingresa tu contraseña",
         "forgot": "¿Lo olvidaste?",
         "workEmail": "Correo electrónico",
-        "joinTooljet": "Unete a ToolJet",
+        "joinJumpstart": "Unete a JumpStart",
         "getStartedForFree": "Empieza gratis",
         "passwordCharacter": "La contraseña debe contener al menos 5 carácteres",
         "enterFullName": "Ingresa tu nombre completo",
@@ -297,7 +297,7 @@
                         "newAccountWillBeCreated": "Una nueva cuenta será creada para el primer inicio de sesión SSO del usuario",
                         "allowedDomains": "Dominios permitidos",
                         "enterDomains": "Ingresar los dominios",
-                        "supportMultiDomains": "Soporta múltiples dominios. Ingrese los nombres de dominio separados por coma. ejemplo: tooljet.com,tooljet.io,suorganizacion.com",
+                        "supportMultiDomains": "Soporta múltiples dominios. Ingrese los nombres de dominio separados por coma. ejemplo: jumpstart.com,jumpstart.io,suorganizacion.com",
                         "loginUrl": "URL de inicio de sesión",
                         "workspaceLogin": "Use esta URL para iniciar sesión en el espacio de trabajo",
                         "allowDefaultSso": "Permitir SSO por defecto",
@@ -387,8 +387,8 @@
             "removeFromFolder": "Borrar de la carpeta"
         },
         "blankPage": {
-            "welcomeToToolJet": "¡Bienvenido a ToolJet!",
-            "getStartedCreateNewApp": "Puedes empezar creando una nueva aplicación o creando una aplicación usando una plantilla en la biblioteca de ToolJet.",
+            "welcomeToJumpStart": "¡Bienvenido a JumpStart!",
+            "getStartedCreateNewApp": "Puedes empezar creando una nueva aplicación o creando una aplicación usando una plantilla en la biblioteca de JumpStart.",
             "importApplication": "Importar una aplicación"
         },
         "foldersSection": {
@@ -448,11 +448,11 @@
         "and": "y"
     },
     "onBoarding": {
-        "finishToolJetInstallation": "Finalizar instalación de ToolJet",
+        "finishJumpStartInstallation": "Finalizar instalación de JumpStart",
         "organization": "Organización",
         "name": "Nombre",
         "email": "Email",
-        "receiveUpdatesFromToolJet": "Recibirás actualizaciones de parte del equipo de ToolJet (1-2 correos electrónicos al mes, no hacemos spam)",
+        "receiveUpdatesFromJumpStart": "Recibirás actualizaciones de parte del equipo de JumpStart (1-2 correos electrónicos al mes, no hacemos spam)",
         "finishSetup": "Finalizar configuración",
         "skip": "Saltar"
     },

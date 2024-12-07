@@ -8,7 +8,7 @@ Code Editor widget is a versatile text editor for editing code and supports seve
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/code-editor/editor.png" alt="ToolJet - Widget Reference - Code editor" />
+<img className="screenshot-full" src="/img/widgets/code-editor/editor.png" alt="JumpStart - Widget Reference - Code editor" />
 
 </div>
 
@@ -20,7 +20,7 @@ Any property having `Fx` button next to its field can be **programmatically conf
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/code-editor/prop.png" alt="ToolJet - Widget Reference - Code editor" />
+<img className="screenshot-full" src="/img/widgets/code-editor/prop.png" alt="JumpStart - Widget Reference - Code editor" />
 
 </div>
 
@@ -177,7 +177,7 @@ Under the <b>General</b> accordion, you can set the value in the string format. 
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/tooltip.png" alt="ToolJet - Widget Reference - Code editor" />
+<img className="screenshot-full" src="/img/tooltip.png" alt="JumpStart - Widget Reference - Code editor" />
 
 </div>
 
@@ -185,7 +185,7 @@ Under the <b>General</b> accordion, you can set the value in the string format. 
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/code-editor/layout.png" alt="ToolJet - Widget Reference - Code editor" />
+<img className="screenshot-full" src="/img/widgets/code-editor/layout.png" alt="JumpStart - Widget Reference - Code editor" />
 
 </div>
 
@@ -198,7 +198,7 @@ Under the <b>General</b> accordion, you can set the value in the string format. 
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/code-editor/styles.png" alt="ToolJet - Widget Reference - Code editor" />
+<img className="screenshot-full" src="/img/widgets/code-editor/styles.png" alt="JumpStart - Widget Reference - Code editor" />
 
 </div>
 

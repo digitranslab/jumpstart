@@ -25,7 +25,7 @@ It offers four different modes:
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/chart/barmodes.png" alt="ToolJet - Widget Reference - Chart" />
+<img className="screenshot-full" src="/img/widgets/chart/barmodes.png" alt="JumpStart - Widget Reference - Chart" />
 
 </div>
 
@@ -55,7 +55,7 @@ Displays trends and patterns in data over time.
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/chart/plotly/line-v2.png" alt="ToolJet - Widget Reference - Line Chart" />
+<img className="screenshot-full" src="/img/widgets/chart/plotly/line-v2.png" alt="JumpStart - Widget Reference - Line Chart" />
 
 </div>
 
@@ -115,7 +115,7 @@ Displays trends and patterns in data over time with annotations.
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/chart/plotly/line-chart-with-annotations.png" alt="ToolJet - Widget Reference - Line Chart With Annotations" />
+<img className="screenshot-full" src="/img/widgets/chart/plotly/line-chart-with-annotations.png" alt="JumpStart - Widget Reference - Line Chart With Annotations" />
 
 </div>
 
@@ -161,7 +161,7 @@ Compares categories of data or visualizes changes in a variable across different
 ```
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/chart/plotly/bar-v2.png" alt="ToolJet - Widget Reference - Bar" />
+<img className="screenshot-full" src="/img/widgets/chart/plotly/bar-v2.png" alt="JumpStart - Widget Reference - Bar" />
 
 </div>
 
@@ -184,7 +184,7 @@ Analyzes the price movement of financial instruments (stocks, currencies, etc.) 
 ```
 
 <div style={{textAlign: 'center'}}>
-    <img className="screenshot-full" src="/img/widgets/chart/plotly/candlestick.png" alt="ToolJet - Widget Reference - Candlestick" />
+    <img className="screenshot-full" src="/img/widgets/chart/plotly/candlestick.png" alt="JumpStart - Widget Reference - Candlestick" />
 </div>
 
 ### Contour
@@ -205,7 +205,7 @@ Typically used to represent three-dimensional data in two dimensions using conto
 ```
 
 <div style={{textAlign: 'center'}}>
-    <img className="screenshot-full" src="/img/widgets/chart/plotly/contour.png" alt="ToolJet - Widget Reference - Contour" />
+    <img className="screenshot-full" src="/img/widgets/chart/plotly/contour.png" alt="JumpStart - Widget Reference - Contour" />
 </div>
 
 ### Heatmap
@@ -226,7 +226,7 @@ Reveals the density or magnitude of data points across two dimensions, using col
 ```
 
 <div style={{textAlign: 'center'}}>
-    <img className="screenshot-full" src="/img/widgets/chart/plotly/heatmap.png" alt="ToolJet - Widget Reference - Heatmap" />
+    <img className="screenshot-full" src="/img/widgets/chart/plotly/heatmap.png" alt="JumpStart - Widget Reference - Heatmap" />
 </div>
 
 ### Icicle
@@ -246,7 +246,7 @@ Displays hierarchical data in a nested structure, ideal for understanding the re
 ```
 
 <div style={{textAlign: 'center'}}>
-    <img className="screenshot-full" src="/img/widgets/chart/plotly/icicle.png" alt="ToolJet - Widget Reference - Icicle" />
+    <img className="screenshot-full" src="/img/widgets/chart/plotly/icicle.png" alt="JumpStart - Widget Reference - Icicle" />
 </div>
 
 ### 3D Mesh
@@ -269,7 +269,7 @@ Represents three-dimensional surfaces, often used in scientific or engineering d
 ```
 
 <div style={{textAlign: 'center'}}>
-    <img className="screenshot-full" src="/img/widgets/chart/plotly/3d-mesh.png" alt="ToolJet - Widget Reference - 3D Mesh" />
+    <img className="screenshot-full" src="/img/widgets/chart/plotly/3d-mesh.png" alt="JumpStart - Widget Reference - 3D Mesh" />
 </div>
 
 

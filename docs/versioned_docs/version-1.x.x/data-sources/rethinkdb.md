@@ -4,13 +4,13 @@ title: RethinkDB
 ---
 # RethinkDB
 
-ToolJet can connect to RethinkDB databases to read and write data. For more info visit::https://rethinkdb.com/api/javascript
+JumpStart can connect to RethinkDB databases to read and write data. For more info visit::https://rethinkdb.com/api/javascript
 
-<img class="screenshot-full" src="/img/datasource-reference/rethink/rethink_auth.png" alt="ToolJet - Data source - RethinkDB" height="420" />
+<img class="screenshot-full" src="/img/datasource-reference/rethink/rethink_auth.png" alt="JumpStart - Data source - RethinkDB" height="420" />
 
 ## Connection
 
-ToolJet connects to InfluxDB using :
+JumpStart connects to InfluxDB using :
 
 - **Database**
 - **Host**

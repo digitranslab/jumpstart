@@ -124,7 +124,7 @@ const Plot = createPlotlyComponent(Plotly);
         />
     </Container>
 )}
-const ConnectedComponent = Tooljet.connectComponent(MyCustomComponent);
+const ConnectedComponent = Jumpstart.connectComponent(MyCustomComponent);
 ReactDOM.render(<ConnectedComponent />, document.body);
 ```
 
@@ -252,7 +252,7 @@ Next, we render the chart using the `Plot` component. We pass the data and layou
 Finally, we render the `MyCustomComponent` component using the `ReactDOM.render` function.
 
 ```js
-const ConnectedComponent = Tooljet.connectComponent(MyCustomComponent); // connect the component to the Tooljet store
+const ConnectedComponent = Jumpstart.connectComponent(MyCustomComponent); // connect the component to the Jumpstart store
 ReactDOM.render(<ConnectedComponent />, document.body); // render the component
 ```
 

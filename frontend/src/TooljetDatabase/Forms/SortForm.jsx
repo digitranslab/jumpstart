@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
 import Select from '@/_ui/Select';
-import { TooljetDatabaseContext } from '../index';
+import { JumpstartDatabaseContext } from '../index';
 import SolidIcon from '@/_ui/Icon/SolidIcons';
 
 export const SortForm = ({ filters, setFilters, index, column = '', order = '' }) => {
-  const { columns } = useContext(TooljetDatabaseContext);
+  const { columns } = useContext(JumpstartDatabaseContext);
 
   const orders = [
     { value: 'asc', label: 'Ascending' },

@@ -1,5 +1,5 @@
 {
-  "name": "@tooljet-plugins/databricks",
+  "name": "@jumpstart-plugins/databricks",
   "version": "1.0.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -15,11 +15,11 @@
     "build": "tsc -b",
     "clean": "rimraf ./dist && rimraf tsconfig.tsbuildinfo"
   },
-  "homepage": "https://github.com/tooljet/tooljet#readme",
+  "homepage": "https://github.com/digitranslab/jumpstart#readme",
   "dependencies": {
     "@types/node-int64": "^0.4.32",
     "@databricks/sql": "^1.8.2",
-    "@tooljet-plugins/common": "file:../common"
+    "@jumpstart-plugins/common": "file:../common"
   },
   "devDependencies": {
     "@vercel/ncc": "^0.34.0",

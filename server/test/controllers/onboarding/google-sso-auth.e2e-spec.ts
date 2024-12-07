@@ -59,9 +59,9 @@ describe.skip('Google SSO Onboarding', () => {
           googleVerifyMock.mockImplementation(() => ({
             getPayload: () => ({
               sub: 'someSSOId',
-              email: 'ssouser@tooljet.com',
+              email: 'ssouser@jumpstart.com',
               name: 'SSO User',
-              hd: 'tooljet.io',
+              hd: 'jumpstart.io',
             }),
           }));
 
@@ -69,13 +69,13 @@ describe.skip('Google SSO Onboarding', () => {
 
           const manager = getManager();
           const user = await manager.findOneOrFail(User, {
-            where: { email: 'ssouser@tooljet.com' },
+            where: { email: 'ssouser@jumpstart.com' },
             relations: ['organization'],
           });
           current_user = user;
           current_organization = user.organization;
 
-          const redirect_url = await generateRedirectUrl('ssouser@tooljet.com');
+          const redirect_url = await generateRedirectUrl('ssouser@jumpstart.com');
 
           expect(response.statusCode).toBe(201);
           expect(response.body.redirect_url).toEqual(redirect_url);
@@ -83,7 +83,7 @@ describe.skip('Google SSO Onboarding', () => {
 
         it('should return user info while verifying invitation token', async () => {
           const { body } = await verifyInviteToken(app, current_user, true);
-          expect(body?.email).toEqual('ssouser@tooljet.com');
+          expect(body?.email).toEqual('ssouser@jumpstart.com');
           expect(body?.name).toEqual('SSO User');
         });
 
@@ -111,7 +111,7 @@ describe.skip('Google SSO Onboarding', () => {
         it('should send invitation link to the user', async () => {
           const response = await request(app.getHttpServer())
             .post('/api/organization_users')
-            .send({ email: 'org_user@tooljet.com', first_name: 'test', last_name: 'test' })
+            .send({ email: 'org_user@jumpstart.com', first_name: 'test', last_name: 'test' })
             .set('tj-workspace-id', current_user?.defaultOrganizationId)
             .set('Cookie', loggedUser.tokenCookie);
           const { status } = response;
@@ -119,10 +119,10 @@ describe.skip('Google SSO Onboarding', () => {
         });
 
         it('should verify token', async () => {
-          const user = await userRepository.findOneOrFail({ where: { email: 'org_user@tooljet.com' } });
+          const user = await userRepository.findOneOrFail({ where: { email: 'org_user@jumpstart.com' } });
           org_user = user;
           const { body } = await verifyInviteToken(app, org_user);
-          expect(body?.email).toEqual('org_user@tooljet.com');
+          expect(body?.email).toEqual('org_user@jumpstart.com');
           expect(body?.name).toEqual('test test');
         });
 
@@ -163,7 +163,7 @@ describe.skip('Google SSO Onboarding', () => {
         it('should send invitation link to the user', async () => {
           const response = await request(app.getHttpServer())
             .post('/api/organization_users')
-            .send({ email: 'ssouser@tooljet.com' })
+            .send({ email: 'ssouser@jumpstart.com' })
             .set('tj-workspace-id', org_user?.defaultOrganizationId)
             .set('Cookie', loggedOrgUser.tokenCookie);
           const { status } = response;
@@ -193,7 +193,7 @@ describe.skip('Google SSO Onboarding', () => {
           expect(Object.keys(onboarding_details)).toEqual(['password']);
           await invitedUser.reload();
           expect(invitedUser.status).toBe('active');
-          expect(email).toEqual('ssouser@tooljet.com');
+          expect(email).toEqual('ssouser@jumpstart.com');
           expect(name).toEqual('SSO User');
         });
 
@@ -222,11 +222,11 @@ describe.skip('Google SSO Onboarding', () => {
           await createFirstUser(app);
           const response = await request(app.getHttpServer())
             .post('/api/signup')
-            .send({ email: 'admin@tooljet.com', name: 'admin admin', password: 'password' });
+            .send({ email: 'admin@jumpstart.com', name: 'admin admin', password: 'password' });
           expect(response.statusCode).toBe(201);
 
           const user = await userRepository.findOneOrFail({
-            where: { email: 'admin@tooljet.com' },
+            where: { email: 'admin@jumpstart.com' },
             relations: ['organizationUsers'],
           });
           current_user = user;
@@ -246,9 +246,9 @@ describe.skip('Google SSO Onboarding', () => {
           googleVerifyMock.mockImplementation(() => ({
             getPayload: () => ({
               sub: 'someSSOId',
-              email: 'admin@tooljet.com',
+              email: 'admin@jumpstart.com',
               name: 'SSO User',
-              hd: 'tooljet.io',
+              hd: 'jumpstart.io',
             }),
           }));
 
@@ -256,19 +256,19 @@ describe.skip('Google SSO Onboarding', () => {
 
           const manager = getManager();
           const user = await manager.findOneOrFail(User, {
-            where: { email: 'admin@tooljet.com' },
+            where: { email: 'admin@jumpstart.com' },
             relations: ['organization'],
           });
           current_user = user;
           current_organization = user.organization;
 
-          ssoRedirectUrl = await generateRedirectUrl('admin@tooljet.com');
+          ssoRedirectUrl = await generateRedirectUrl('admin@jumpstart.com');
           expect(response.statusCode).toBe(201);
           expect(response.body.redirect_url).toEqual(ssoRedirectUrl);
         });
 
         it('should verify if base signup url and redirect url are equal', async () => {
-          signupUrl = await generateRedirectUrl('admin@tooljet.com', undefined, undefined, false);
+          signupUrl = await generateRedirectUrl('admin@jumpstart.com', undefined, undefined, false);
           expect(getPathFromUrl(ssoRedirectUrl)).toEqual(signupUrl);
         });
       });
@@ -283,20 +283,20 @@ describe.skip('Google SSO Onboarding', () => {
           googleVerifyMock.mockImplementation(() => ({
             getPayload: () => ({
               sub: 'someSSOId',
-              email: 'admin@tooljet.com',
+              email: 'admin@jumpstart.com',
               name: 'SSO User',
-              hd: 'tooljet.io',
+              hd: 'jumpstart.io',
             }),
           }));
 
           const response = await request(app.getHttpServer()).post('/api/oauth/sign-in/common/google').send({ token });
 
-          ssoRedirectUrl = await generateRedirectUrl('admin@tooljet.com');
+          ssoRedirectUrl = await generateRedirectUrl('admin@jumpstart.com');
           expect(response.statusCode).toBe(201);
           expect(response.body.redirect_url).toEqual(ssoRedirectUrl);
 
           const user = await userRepository.findOneOrFail({
-            where: { email: 'admin@tooljet.com' },
+            where: { email: 'admin@jumpstart.com' },
             relations: ['organizationUsers'],
           });
           current_user = user;
@@ -314,7 +314,7 @@ describe.skip('Google SSO Onboarding', () => {
         it('should not signup same user', async () => {
           const response = await request(app.getHttpServer())
             .post('/api/signup')
-            .send({ email: 'admin@tooljet.com', name: 'admin admin', password: 'password' });
+            .send({ email: 'admin@jumpstart.com', name: 'admin admin', password: 'password' });
           expect(response.statusCode).toBe(406);
         });
 
@@ -340,7 +340,7 @@ describe.skip('Google SSO Onboarding', () => {
           const { user, organization } = await createUser(app, {
             firstName: 'admin',
             lastName: 'admin',
-            email: 'admin@tooljet.com',
+            email: 'admin@jumpstart.com',
             status: 'active',
           });
           current_user = user;
@@ -351,7 +351,7 @@ describe.skip('Google SSO Onboarding', () => {
           loggedUser = await authenticateUser(app, current_user.email);
           const response = await request(app.getHttpServer())
             .post('/api/organization_users')
-            .send({ email: 'org_user@tooljet.com', first_name: 'test', last_name: 'test' })
+            .send({ email: 'org_user@jumpstart.com', first_name: 'test', last_name: 'test' })
             .set('tj-workspace-id', current_user?.defaultOrganizationId)
             .set('Cookie', loggedUser.tokenCookie);
           const { status } = response;
@@ -363,21 +363,21 @@ describe.skip('Google SSO Onboarding', () => {
           googleVerifyMock.mockImplementation(() => ({
             getPayload: () => ({
               sub: 'someSSOId',
-              email: 'org_user@tooljet.com',
+              email: 'org_user@jumpstart.com',
               name: 'SSO User',
-              hd: 'tooljet.io',
+              hd: 'jumpstart.io',
             }),
           }));
 
           const response = await request(app.getHttpServer()).post('/api/oauth/sign-in/common/google').send({ token });
 
-          ssoRedirectUrl = await generateRedirectUrl('org_user@tooljet.com');
+          ssoRedirectUrl = await generateRedirectUrl('org_user@jumpstart.com');
           expect(response.statusCode).toBe(201);
           expect(response.body.redirect_url).toEqual(ssoRedirectUrl);
         });
 
         it('should setup account for user using sso link', async () => {
-          const user = await userRepository.findOneOrFail({ where: { email: 'org_user@tooljet.com' } });
+          const user = await userRepository.findOneOrFail({ where: { email: 'org_user@jumpstart.com' } });
           org_user = user;
           const { invitationToken } = org_user;
           const { invitationToken: orgInviteToken } = await orgUserRepository.findOneOrFail({

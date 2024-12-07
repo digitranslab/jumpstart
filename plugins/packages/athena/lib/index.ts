@@ -1,4 +1,4 @@
-import { QueryError, QueryResult, QueryService, ConnectionTestResult } from '@tooljet-plugins/common';
+import { QueryError, QueryResult, QueryService, ConnectionTestResult } from '@jumpstart-plugins/common';
 import { SourceOptions, QueryOptions } from './types';
 const AthenaExpress = require('athena-express');
 const AWS = require('aws-sdk');

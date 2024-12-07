@@ -3,7 +3,7 @@ id: databricks
 title: Databricks
 ---
 
-Databricks is a cloud-based platform for data processing, analytics, and machine learning. ToolJet connects to Databricks, allowing your applications to access and update your data in your Databricks Warehouses directly using SQL queries.
+Databricks is a cloud-based platform for data processing, analytics, and machine learning. JumpStart connects to Databricks, allowing your applications to access and update your data in your Databricks Warehouses directly using SQL queries.
 
 <div style={{textAlign: 'center'}}>
     <img style={{ border:'0', borderRadius:'5px', boxShadow: '0px 1px 3px rgba(0, 0, 0, 0.2)' }} className="screenshot-full" src="/img/datasource-reference/databricks/install.gif" alt="Install Databricks" />
@@ -13,7 +13,7 @@ Databricks is a cloud-based platform for data processing, analytics, and machine
 
 ## Configuration
 
-ToolJet's Databricks integration relies on a configuration form that supports the following parameters:
+JumpStart's Databricks integration relies on a configuration form that supports the following parameters:
 
 #### Required Parameters
 
@@ -37,7 +37,7 @@ ToolJet's Databricks integration relies on a configuration form that supports th
 
 <img style={{ border:'0', borderRadius:'5px', boxShadow: '0px 1px 3px rgba(0, 0, 0, 0.2)' }} className="screenshot-full" src="/img/datasource-reference/databricks/generate-token.png" alt="Databricks: Access Tokens" />
 
-- Navigate to the Databricks datasource configuration form in ToolJet, fill in the required parameters, and click the **Save** button. You can test the connection by clicking the **Test Connection** button.
+- Navigate to the Databricks datasource configuration form in JumpStart, fill in the required parameters, and click the **Save** button. You can test the connection by clicking the **Test Connection** button.
 
 <img style={{ border:'0', borderRadius:'5px', boxShadow: '0px 1px 3px rgba(0, 0, 0, 0.2)' }} className="screenshot-full" src="/img/datasource-reference/databricks/setup-parameters.png" alt="Databricks: Setup Paramaters" />
 
@@ -49,7 +49,7 @@ ToolJet's Databricks integration relies on a configuration form that supports th
 
 1. Click on **+ Add** button of the query manager at the bottom panel of the editor.
 2. Select the **Databricks** datasource added in previous step.
-3. Select the **SQL Mode** from the dropdown. (ToolJet currently supports only SQL mode for Databricks interactions.)
+3. Select the **SQL Mode** from the dropdown. (JumpStart currently supports only SQL mode for Databricks interactions.)
 4. Click on the **Preview** button to preview the output or Click on the **Run** button to create and trigger the query.
 
 <div style={{textAlign: 'center'}}>

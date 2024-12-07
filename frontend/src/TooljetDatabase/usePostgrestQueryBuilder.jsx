@@ -1,9 +1,9 @@
 import { useRef, useContext } from 'react';
 import PostgrestQueryBuilder from '@/_helpers/postgrestQueryBuilder';
-import { tooljetDatabaseService } from '@/_services';
+import { jumpstartDatabaseService } from '@/_services';
 import { isEmpty } from 'lodash';
 import { toast } from 'react-hot-toast';
-import { TooljetDatabaseContext } from './index';
+import { JumpstartDatabaseContext } from './index';
 
 export const usePostgrestQueryBuilder = ({
   organizationId,
@@ -12,7 +12,7 @@ export const usePostgrestQueryBuilder = ({
   setTotalRecords,
   setLoadingState,
 }) => {
-  const { pageSize } = useContext(TooljetDatabaseContext);
+  const { pageSize } = useContext(JumpstartDatabaseContext);
 
   const postgrestQueryBuilder = useRef({
     filterQuery: new PostgrestQueryBuilder(),
@@ -43,7 +43,7 @@ export const usePostgrestQueryBuilder = ({
     }
     query = query + '&' + postgrestQueryBuilder.current.paginationQuery.url.toString();
 
-    const { headers, data, error } = await tooljetDatabaseService.findOne(organizationId, selectedTable.id, query);
+    const { headers, data, error } = await jumpstartDatabaseService.findOne(organizationId, selectedTable.id, query);
 
     if (error) {
       toast.error(error?.message ?? 'Something went wrong');

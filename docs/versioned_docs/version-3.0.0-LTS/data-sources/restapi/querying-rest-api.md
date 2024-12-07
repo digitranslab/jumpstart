@@ -5,7 +5,7 @@ title: Querying REST API
 
 ## Creating Queries
 
-Once you have connected to the REST API data source, you can easily write queries and interact with the REST API in the ToolJet application. Follow these steps to get started:
+Once you have connected to the REST API data source, you can easily write queries and interact with the REST API in the JumpStart application. Follow these steps to get started:
 
 1. Click on the **+ Add** button in the query manager at the bottom panel of the editor.
 2. Select **REST API** from the Data Source section.
@@ -16,22 +16,22 @@ Once you have connected to the REST API data source, you can easily write querie
 You can also transform the query results using the **[Transformations](/docs/tutorial/transformations)** feature.
 :::
 
-ToolJet supports the following REST HTTP methods:
+JumpStart supports the following REST HTTP methods:
 - **GET**
 - **POST**
 - **PUT**
 - **PATCH**
 - **DELETE**
 
-<img className="screenshot-full" src="/img/datasource-reference/rest-api/restquery.png" alt="ToolJet - Data source - REST API" />
+<img className="screenshot-full" src="/img/datasource-reference/rest-api/restquery.png" alt="JumpStart - Data source - REST API" />
 
 <div style={{paddingTop:'24px'}}>
 
 ### Additional header
 
-Whenever a request is made to the REST API, a **tj-x-forwarded-for** header is added to the request, the value of the header will be the IP address of the user who is logged in to the ToolJet application. This header can be used to identify the user who is making the request to the REST API.
+Whenever a request is made to the REST API, a **tj-x-forwarded-for** header is added to the request, the value of the header will be the IP address of the user who is logged in to the JumpStart application. This header can be used to identify the user who is making the request to the REST API.
 
-<img className="screenshot-full" src="/img/datasource-reference/rest-api/header.png" alt="ToolJet - Data source - REST API"/>
+<img className="screenshot-full" src="/img/datasource-reference/rest-api/header.png" alt="JumpStart - Data source - REST API"/>
 
 </div>
 
@@ -46,9 +46,9 @@ For example, to send a **multipart/form-data** body, you can add the following h
   Content-Type: multipart/form-data;
 ```
 
-<img className="screenshot-full" src="/img/datasource-reference/rest-api/form-headers.png" alt="ToolJet - Data source - REST API" />
+<img className="screenshot-full" src="/img/datasource-reference/rest-api/form-headers.png" alt="JumpStart - Data source - REST API" />
 
-<img className="screenshot-full" src="/img/datasource-reference/rest-api/form-body.png" alt="ToolJet - Data source - REST API" />
+<img className="screenshot-full" src="/img/datasource-reference/rest-api/form-body.png" alt="JumpStart - Data source - REST API" />
 
 
 ## Response Types and Handling
@@ -118,7 +118,7 @@ The JSON response can be easily loaded on the components like **table** and **li
 
 You can also use JS methods like **map** to load data on components like **dropdown** using **`{{queries.restapi1.data.map(i => i.title)}}`**
 
-<img className="screenshot-full" src="/img/datasource-reference/rest-api/map.png" alt="ToolJet - Data source - REST API" style={{marginBottom:'15px'}} />
+<img className="screenshot-full" src="/img/datasource-reference/rest-api/map.png" alt="JumpStart - Data source - REST API" style={{marginBottom:'15px'}} />
 
 <details>
 <summary>**Example base64 response**</summary>
@@ -129,12 +129,12 @@ iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAA/FBMVEVAYt79/f1AYt/9/f79/ftAY9s/
 
 Read the guide on **[loading base64 data](/docs/how-to/loading-image-pdf-from-db)**
 
-<img className="screenshot-full" src="/img/datasource-reference/rest-api/base64.png" alt="ToolJet - Data source - REST API" />
+<img className="screenshot-full" src="/img/datasource-reference/rest-api/base64.png" alt="JumpStart - Data source - REST API" />
 
 
 ## Retry on Network Errors
 
-ToolJet provides an option to automatically retry REST API requests in case of certain network errors or specific HTTP status codes. By default, this feature is enabled and will retry the request up to 3 times in case of failure. This feature can be toggled on or off at both the data source level and the individual query level. When enabled, retries will occur for the following scenarios:
+JumpStart provides an option to automatically retry REST API requests in case of certain network errors or specific HTTP status codes. By default, this feature is enabled and will retry the request up to 3 times in case of failure. This feature can be toggled on or off at both the data source level and the individual query level. When enabled, retries will occur for the following scenarios:
 
 1. Specific HTTP status codes: 408, 413, 429, 500, 502, 503, 504, 521, 522, 524.
 2. Network errors:
@@ -152,12 +152,12 @@ You can configure this feature at two levels:
 ### Data Source Level
  In the REST API data source configuration, you'll find a toggle for **Retry on network errors** This sets the default behavior for all queries using this data source.
 
-<img className="screenshot-full" src="/img/datasource-reference/rest-api/rest-api-data-source.png" alt="ToolJet - Data source - REST API" />
+<img className="screenshot-full" src="/img/datasource-reference/rest-api/rest-api-data-source.png" alt="JumpStart - Data source - REST API" />
 
 ### Query Level
  In the query builder for each REST API query, you'll find a similar toggle for for **Retry on network errors** under the **Settings** tab. This sets the behavior for that specific query.
 
-<img className="screenshot-full" src="/img/datasource-reference/rest-api/query-builder-retry.png" alt="ToolJet - Data source - REST API" />
+<img className="screenshot-full" src="/img/datasource-reference/rest-api/query-builder-retry.png" alt="JumpStart - Data source - REST API" />
 
 :::info
 If the data source-level configuration is enabled but a specific query has it disabled, the query-level setting takes precedence.

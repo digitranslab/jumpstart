@@ -335,7 +335,7 @@ export const filterOperation = (
   value = []
 ) => {
   navigateToTable(tableName);
-  cy.intercept("GET", "api/tooljet_db/organizations/**").as("dbLoad");
+  cy.intercept("GET", "api/jumpstart_db/organizations/**").as("dbLoad");
 
   cy.get(filterSelectors.filterButton).should("be.visible").click();
   cy.get(filterSelectors.selectColumnField).should("be.visible");
@@ -447,7 +447,7 @@ export const editRowAndVerify = (
   rowFieldData = []
 ) => {
   cy.reload();
-  cy.intercept("GET", "api/tooljet_db/organizations/**").as("dbLoad");
+  cy.intercept("GET", "api/jumpstart_db/organizations/**").as("dbLoad");
   navigateToTable(tableName);
   cy.wait(1000);
   //cy.wait("@dbLoad");
@@ -503,7 +503,7 @@ export const editRowWithInvalidData = (
   columnName,
   rowFieldData
 ) => {
-  cy.intercept("GET", "api/tooljet_db/organizations/**").as("dbLoad");
+  cy.intercept("GET", "api/jumpstart_db/organizations/**").as("dbLoad");
   navigateToTable(tableName);
   //cy.wait("@dbLoad");
 
@@ -567,7 +567,7 @@ export const verifyDownloadedTableSchema = (tableName, columnName) => {
             .should("be.visible")
             .and(
               "contain.text",
-              exportedTableData.tooljet_database[0].schema.columns[
+              exportedTableData.jumpstart_database[0].schema.columns[
                 i
               ].column_name.toLowerCase()
             );
@@ -582,7 +582,7 @@ export const bulkUploadDataTemplateDownloadAndVerify = (
 ) => {
   deleteDownloadsFolder();
   cy.reload();
-  cy.intercept("GET", "api/tooljet_db/organizations/**").as("dbLoad");
+  cy.intercept("GET", "api/jumpstart_db/organizations/**").as("dbLoad");
   navigateToTable(tableName);
   cy.wait(1000);
   cy.get(bulkUploadDataSelectors.bulkUploadbuttonText).verifyVisibleElement(

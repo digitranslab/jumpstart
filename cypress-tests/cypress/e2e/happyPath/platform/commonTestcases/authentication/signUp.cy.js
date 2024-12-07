@@ -44,7 +44,7 @@ describe("User signup", () => {
     });
 
     verifyConfirmPageElements();
-    cy.get(commonSelectors.setUpToolJetButton).click();
+    cy.get(commonSelectors.setUpJumpStartButton).click();
     cy.wait(4000);
     verifyOnboardingQuestions(data.fullName, data.workspaceName);
   });
@@ -81,7 +81,7 @@ describe("User signup", () => {
       invitationLink = `/invitations/${resp.rows[0].invitation_token}`;
       cy.visit(invitationLink);
     });
-    cy.get(commonSelectors.setUpToolJetButton).click();
+    cy.get(commonSelectors.setUpJumpStartButton).click();
     cy.clearAndType(commonSelectors.companyNameInputField, data.workspaceName);
     cy.get(commonSelectors.continueButton).focus().type('{enter}');
 

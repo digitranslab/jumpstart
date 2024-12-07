@@ -5,7 +5,7 @@ title: Overview
 
 # App-Builder: Overview
 
-ToolJet's App-Builder is a visual development platform that lets you create business applications in minutes. Transform your ideas into working solutions using an intuitive drag-and-drop interface that helps you design everything from simple forms to complex dashboards.
+JumpStart's App-Builder is a visual development platform that lets you create business applications in minutes. Transform your ideas into working solutions using an intuitive drag-and-drop interface that helps you design everything from simple forms to complex dashboards.
 
 <div style={{textAlign: 'center', marginBottom:'15px'}}>
     <img className="screenshot-full" src="/img/v2-beta/app-builder/app-builder-preview.png" alt="App Builder Preview" />

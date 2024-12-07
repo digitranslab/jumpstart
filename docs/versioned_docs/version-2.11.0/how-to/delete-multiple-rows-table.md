@@ -3,7 +3,7 @@ id: delete-multiple-rows
 title: Delete multiple rows in table
 ---
 
-The table component in the ToolJet has the option for bulk selection of rows that can have various use cases such as **updating** or **deleting** records. However, the datasources does not support bulk delete or bulk update operations. 
+The table component in the JumpStart has the option for bulk selection of rows that can have various use cases such as **updating** or **deleting** records. However, the datasources does not support bulk delete or bulk update operations. 
 
 In this guide, we will learn how we can delete multiple rows in a table. We have assumed that you have successfully connected the data source. For this guide, we will be using the PostgreSQL data source as an example database, currently, this workaround can be used only for PostgreSQL and MySQL.
 
@@ -11,7 +11,7 @@ In this guide, we will learn how we can delete multiple rows in a table. We have
 
 Create a new query, name it `getRecords` and use SQL mode:
 ```sql
-SELECT * FROM tooljet // replace tooljet with your table name
+SELECT * FROM jumpstart // replace jumpstart with your table name
 ```
 
 <div style={{textAlign: 'center'}}>
@@ -54,7 +54,7 @@ Now, we will enable the bulk row selection on the table. For this, go to the tab
 
 ## 4. Create a custom javascript query
 
-Now, we will create a custom javascript query that will **generate a SQL statement** to delete the selected rows from the table component based on a list of selected IDs, assuming the IDs are stored in the **id** column and that the name of the table component is **table1**. The actual database name should be replaced with **tooljet** as indicated in the SQL statemnent in the code below:
+Now, we will create a custom javascript query that will **generate a SQL statement** to delete the selected rows from the table component based on a list of selected IDs, assuming the IDs are stored in the **id** column and that the name of the table component is **table1**. The actual database name should be replaced with **jumpstart** as indicated in the SQL statemnent in the code below:
 
 ```js
 const uniqueIdentifier = "id";
@@ -62,7 +62,7 @@ const idsToDelete = Object.values(components.table1.selectedRows).map(dataUpdate
 
 const idsString = idsToDelete.map(id => `'${id}'`).join(', ');
 
-const SQL = `DELETE FROM tooljet WHERE ${uniqueIdentifier} IN (${idsString});`;
+const SQL = `DELETE FROM jumpstart WHERE ${uniqueIdentifier} IN (${idsString});`;
 
 return SQL;
 ```

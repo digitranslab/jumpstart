@@ -20,7 +20,7 @@ echo "
     \_/\___/ \___/|_\____/ \___|\__|
 
 Everything you need to build internal tools!
-GitHub: https://github.com/ToolJet/ToolJet
+GitHub: https://github.com/digitranslab/jumpstart
 "
 
 npm run start:prod --silent

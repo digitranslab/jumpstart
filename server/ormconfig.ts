@@ -19,12 +19,12 @@ function dbSslConfig(envVars) {
   return config;
 }
 
-function tooljetDbSslConfig(envVars) {
+function jumpstartDbSslConfig(envVars) {
   let config = {};
 
-  if (envVars?.TOOLJET_DB_URL)
+  if (envVars?.JUMPSTART_DB_URL)
     config = {
-      url: envVars.TOOLJET_DB_URL,
+      url: envVars.JUMPSTART_DB_URL,
       ssl: { rejectUnauthorized: false },
     };
 
@@ -71,23 +71,23 @@ function buildConnectionOptions(data): TypeOrmModuleOptions {
   };
 }
 
-function buildToolJetDbConnectionOptions(data): TypeOrmModuleOptions {
+function buildJumpStartDbConnectionOptions(data): TypeOrmModuleOptions {
   const connectionParams = {
-    database: data.TOOLJET_DB,
-    port: +data.TOOLJET_DB_PORT || 5432,
-    username: data.TOOLJET_DB_USER,
-    password: data.TOOLJET_DB_PASS,
-    host: data.TOOLJET_DB_HOST,
+    database: data.JUMPSTART_DB,
+    port: +data.JUMPSTART_DB_PORT || 5432,
+    username: data.JUMPSTART_DB_USER,
+    password: data.JUMPSTART_DB_PASS,
+    host: data.JUMPSTART_DB_HOST,
     connectTimeoutMS: 5000,
     logging: data.ORM_LOGGING || false,
     extra: {
       max: 25,
     },
-    ...tooljetDbSslConfig(data),
+    ...jumpstartDbSslConfig(data),
   };
 
   return {
-    name: 'tooljetDb',
+    name: 'jumpstartDb',
     type: 'postgres',
     ...connectionParams,
     synchronize: false,
@@ -104,13 +104,13 @@ function fetchConnectionOptions(type: string): TypeOrmModuleOptions {
   switch (type) {
     case 'postgres':
       return buildConnectionOptions(data);
-    case 'tooljetDb':
-      return buildToolJetDbConnectionOptions(data);
+    case 'jumpstartDb':
+      return buildJumpStartDbConnectionOptions(data);
   }
 }
 
 const ormconfig: TypeOrmModuleOptions = fetchConnectionOptions('postgres');
-const tooljetDbOrmconfig: TypeOrmModuleOptions = fetchConnectionOptions('tooljetDb');
+const jumpstartDbOrmconfig: TypeOrmModuleOptions = fetchConnectionOptions('jumpstartDb');
 
-export { ormconfig, tooljetDbOrmconfig };
+export { ormconfig, jumpstartDbOrmconfig };
 export default ormconfig;

@@ -13,8 +13,8 @@ const version = fs.readFileSync(versionPath, 'utf-8').trim();
 const environment = process.env.NODE_ENV === 'production' ? 'production' : 'development';
 
 const API_URL = {
-  production: process.env.TOOLJET_SERVER_URL || (process.env.SERVE_CLIENT !== 'false' ? '__REPLACE_SUB_PATH__' : ''),
-  development: `http://localhost:${process.env.TOOLJET_SERVER_PORT || 3000}`,
+  production: process.env.JUMPSTART_SERVER_URL || (process.env.SERVE_CLIENT !== 'false' ? '__REPLACE_SUB_PATH__' : ''),
+  development: `http://localhost:${process.env.JUMPSTART_SERVER_PORT || 3000}`,
 };
 
 const ASSET_PATH = process.env.ASSET_PATH || '';
@@ -49,7 +49,7 @@ if (process.env.APM_VENDOR === 'sentry') {
       project: process.env.SENTRY_PROJECT,
       release: {
         // The version should be same as what its when we are sending error events
-        name: `tooljet-${version}`,
+        name: `jumpstart-${version}`,
       },
     })
   );
@@ -194,12 +194,12 @@ module.exports = {
       apiUrl: `${stripTrailingSlash(API_URL[environment]) || ''}/api`,
       SERVER_IP: process.env.SERVER_IP,
       COMMENT_FEATURE_ENABLE: process.env.COMMENT_FEATURE_ENABLE ?? true,
-      ENABLE_TOOLJET_DB: process.env.ENABLE_TOOLJET_DB ?? true,
+      ENABLE_JUMPSTART_DB: process.env.ENABLE_JUMPSTART_DB ?? true,
       ENABLE_MULTIPLAYER_EDITING: true,
       ENABLE_MARKETPLACE_FEATURE: process.env.ENABLE_MARKETPLACE_FEATURE ?? true,
       ENABLE_MARKETPLACE_DEV_MODE: process.env.ENABLE_MARKETPLACE_DEV_MODE,
-      TOOLJET_MARKETPLACE_URL:
-        process.env.TOOLJET_MARKETPLACE_URL || 'https://tooljet-plugins-production.s3.us-east-2.amazonaws.com',
+      JUMPSTART_MARKETPLACE_URL:
+        process.env.JUMPSTART_MARKETPLACE_URL || 'https://jumpstart-plugins-production.s3.us-east-2.amazonaws.com',
     }),
   },
 };

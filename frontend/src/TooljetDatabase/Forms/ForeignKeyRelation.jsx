@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react';
-import { tooljetDatabaseService } from '@/_services';
+import { jumpstartDatabaseService } from '@/_services';
 import Information from '../Icons/information.svg';
 import ForeignKeyRelationIcon from '../Icons/Fk-relation.svg';
 import AddRectangle from '@/_ui/Icon/bulkIcons/AddRectangle';
@@ -12,7 +12,7 @@ import _, { isEmpty } from 'lodash';
 import { ConfirmDialog } from '@/_components';
 import { Tooltip } from 'react-tooltip';
 import { getColumnDataType, dataTypes } from '../constants';
-import { TooljetDatabaseContext } from '../index';
+import { JumpstartDatabaseContext } from '../index';
 import cx from 'classnames';
 
 function ForeignKeyRelation({
@@ -81,7 +81,7 @@ function ForeignKeyRelation({
   };
 
   const fetchMetaDataApi = async () => {
-    tooljetDatabaseService.viewTable(organizationId, selectedTable.table_name).then(({ data = [], error }) => {
+    jumpstartDatabaseService.viewTable(organizationId, selectedTable.table_name).then(({ data = [], error }) => {
       if (error) {
         toast.error(error?.message ?? `Error fetching columns for table "${selectedTable}"`);
         return;
@@ -121,7 +121,7 @@ function ForeignKeyRelation({
         on_update: onUpdate?.value,
       },
     ];
-    const { error } = await tooljetDatabaseService.createForeignKey(organizationId, tableName, data);
+    const { error } = await jumpstartDatabaseService.createForeignKey(organizationId, tableName, data);
 
     if (error) {
       toast.error(error?.message ?? `Failed to edit foreign key`);
@@ -160,7 +160,7 @@ function ForeignKeyRelation({
       },
     ];
 
-    const { error } = await tooljetDatabaseService.editForeignKey(organizationId, tableName, id, data);
+    const { error } = await jumpstartDatabaseService.editForeignKey(organizationId, tableName, id, data);
 
     if (error) {
       toast.error(error?.message ?? `Failed to edit foreign key`);
@@ -194,7 +194,7 @@ function ForeignKeyRelation({
 
   const handleDeleteForeignKeyColumn = async () => {
     const id = existingForeignKeyDetails[selectedForeignkeyIndex]?.constraint_name;
-    const { error } = await tooljetDatabaseService.deleteForeignKey(organizationId, tableName, id);
+    const { error } = await jumpstartDatabaseService.deleteForeignKey(organizationId, tableName, id);
 
     if (error) {
       toast.error(error?.message ?? `Failed to delete foreign key`);
@@ -284,7 +284,7 @@ function ForeignKeyRelation({
 
   // const isMatchingForeignKeyColumns = checkMatchingColumnNamesInForeignKey(foreignKeyDetails, columns);
 
-  const { tables } = useContext(TooljetDatabaseContext);
+  const { tables } = useContext(JumpstartDatabaseContext);
 
   const checkTablelength = (tableLength, editMode) => {
     if (editMode) {
@@ -499,7 +499,7 @@ function ForeignKeyRelation({
         footerStyle={footerStyle}
         // currentPrimaryKeyIcons={currentPrimaryKeyIcons}
         // newPrimaryKeyIcons={newPrimaryKeyIcons}
-        isEditToolJetDbTable={true}
+        isEditJumpStartDbTable={true}
         foreignKeyChanges={newChangesInForeignKey}
         existingReferencedTableName={existingReferencedTableName}
         existingReferencedColumnName={existingReferencedColumnName}

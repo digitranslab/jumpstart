@@ -1,6 +1,6 @@
 
 {
-  "$schema": "https://raw.githubusercontent.com/ToolJet/ToolJet/develop/plugins/schemas/manifest.schema.json",
+  "$schema": "https://raw.githubusercontent.com/digitranslab/jumpstart/develop/plugins/schemas/manifest.schema.json",
   "title": "Supabase datasource",
   "description": "A schema defining Supabase datasource",
   "type": "api",

@@ -17,13 +17,13 @@ describe('organization users controller', () => {
   it('should allow only admin to be able to invite new users', async () => {
     // setup a pre existing user of different organization
     await createUser(app, {
-      email: 'someUser@tooljet.io',
+      email: 'someUser@jumpstart.io',
       groups: ['admin', 'all_users'],
     });
 
     // setup organization and user setup to test against
     const adminUserData = await createUser(app, {
-      email: 'admin@tooljet.io',
+      email: 'admin@jumpstart.io',
       groups: ['admin', 'all_users'],
     });
 
@@ -33,42 +33,42 @@ describe('organization users controller', () => {
     adminUserData['tokenCookie'] = loggedUser.tokenCookie;
 
     const developerUserData = await createUser(app, {
-      email: 'developer@tooljet.io',
+      email: 'developer@jumpstart.io',
       groups: ['developer', 'all_users'],
       organization,
     });
 
-    loggedUser = await authenticateUser(app, 'developer@tooljet.io');
+    loggedUser = await authenticateUser(app, 'developer@jumpstart.io');
     developerUserData['tokenCookie'] = loggedUser.tokenCookie;
 
     const viewerUserData = await createUser(app, {
-      email: 'viewer@tooljet.io',
+      email: 'viewer@jumpstart.io',
       groups: ['viewer', 'all_users'],
       organization,
     });
 
-    loggedUser = await authenticateUser(app, 'viewer@tooljet.io');
+    loggedUser = await authenticateUser(app, 'viewer@jumpstart.io');
     viewerUserData['tokenCookie'] = loggedUser.tokenCookie;
 
     await request(app.getHttpServer())
       .post(`/api/organization_users/`)
       .set('tj-workspace-id', adminUserData.user.defaultOrganizationId)
       .set('Cookie', adminUserData['tokenCookie'])
-      .send({ email: 'test@tooljet.io' })
+      .send({ email: 'test@jumpstart.io' })
       .expect(201);
 
     await request(app.getHttpServer())
       .post(`/api/organization_users/`)
       .set('tj-workspace-id', developerUserData.user.defaultOrganizationId)
       .set('Cookie', developerUserData['tokenCookie'])
-      .send({ email: 'test2@tooljet.io' })
+      .send({ email: 'test2@jumpstart.io' })
       .expect(403);
 
     await request(app.getHttpServer())
       .post(`/api/organization_users/`)
       .set('tj-workspace-id', viewerUserData.user.defaultOrganizationId)
       .set('Cookie', viewerUserData['tokenCookie'])
-      .send({ email: 'test3@tooljet.io' })
+      .send({ email: 'test3@jumpstart.io' })
       .expect(403);
   });
 
@@ -79,7 +79,7 @@ describe('organization users controller', () => {
 
     it('should throw error when trying to remove last active admin', async () => {
       const adminUserData = await createUser(app, {
-        email: 'admin@tooljet.io',
+        email: 'admin@jumpstart.io',
         groups: ['admin', 'all_users'],
         status: 'active',
       });
@@ -89,14 +89,14 @@ describe('organization users controller', () => {
 
       const organization = adminUserData.organization;
       const anotherAdminUserData = await createUser(app, {
-        email: 'another-admin@tooljet.io',
+        email: 'another-admin@jumpstart.io',
         groups: ['admin', 'all_users'],
         status: 'active',
         organization,
       });
 
       const _archivedAdmin = await createUser(app, {
-        email: 'archived-admin@tooljet.io',
+        email: 'archived-admin@jumpstart.io',
         groups: ['admin', 'all_users'],
         status: 'archived',
         organization,
@@ -119,7 +119,7 @@ describe('organization users controller', () => {
 
     it('should allow only admin users to archive org users', async () => {
       const adminUserData = await createUser(app, {
-        email: 'admin@tooljet.io',
+        email: 'admin@jumpstart.io',
         groups: ['admin', 'all_users'],
       });
 
@@ -128,16 +128,16 @@ describe('organization users controller', () => {
 
       const organization = adminUserData.organization;
       const developerUserData = await createUser(app, {
-        email: 'developer@tooljet.io',
+        email: 'developer@jumpstart.io',
         groups: ['developer', 'all_users'],
         organization,
       });
 
-      loggedUser = await authenticateUser(app, 'developer@tooljet.io');
+      loggedUser = await authenticateUser(app, 'developer@jumpstart.io');
       developerUserData['tokenCookie'] = loggedUser.tokenCookie;
 
       const viewerUserData = await createUser(app, {
-        email: 'viewer@tooljet.io',
+        email: 'viewer@jumpstart.io',
         groups: ['viewer', 'all_users'],
         organization,
         status: 'invited',
@@ -170,7 +170,7 @@ describe('organization users controller', () => {
 
     it('should allow only admin users to unarchive org users', async () => {
       const adminUserData = await createUser(app, {
-        email: 'admin@tooljet.io',
+        email: 'admin@jumpstart.io',
         status: 'active',
         groups: ['admin', 'all_users'],
       });
@@ -180,23 +180,23 @@ describe('organization users controller', () => {
 
       const organization = adminUserData.organization;
       const developerUserData = await createUser(app, {
-        email: 'developer@tooljet.io',
+        email: 'developer@jumpstart.io',
         status: 'active',
         groups: ['developer', 'all_users'],
         organization,
       });
 
-      loggedUser = await authenticateUser(app, 'developer@tooljet.io');
+      loggedUser = await authenticateUser(app, 'developer@jumpstart.io');
       developerUserData['tokenCookie'] = loggedUser.tokenCookie;
 
       const viewerUserData = await createUser(app, {
-        email: 'viewer@tooljet.io',
+        email: 'viewer@jumpstart.io',
         status: 'archived',
         groups: ['viewer', 'all_users'],
         organization,
       });
 
-      loggedUser = await authenticateUser(app, 'viewer@tooljet.io');
+      loggedUser = await authenticateUser(app, 'viewer@jumpstart.io');
       viewerUserData['tokenCookie'] = loggedUser.tokenCookie;
 
       await request(app.getHttpServer())
@@ -232,7 +232,7 @@ describe('organization users controller', () => {
 
     it('should not allow unarchive if user status is not archived', async () => {
       const adminUserData = await createUser(app, {
-        email: 'admin@tooljet.io',
+        email: 'admin@jumpstart.io',
         status: 'active',
         groups: ['admin', 'all_users'],
       });
@@ -242,7 +242,7 @@ describe('organization users controller', () => {
 
       const organization = adminUserData.organization;
       const developerUserData = await createUser(app, {
-        email: 'developer@tooljet.io',
+        email: 'developer@jumpstart.io',
         status: 'active',
         groups: ['developer', 'all_users'],
         organization,
@@ -260,13 +260,13 @@ describe('organization users controller', () => {
 
     it('should not allow unarchive if user status is not archived', async () => {
       const adminUserData = await createUser(app, {
-        email: 'admin@tooljet.io',
+        email: 'admin@jumpstart.io',
         status: 'active',
         groups: ['admin', 'all_users'],
       });
       const organization = adminUserData.organization;
       const developerUserData = await createUser(app, {
-        email: 'developer@tooljet.io',
+        email: 'developer@jumpstart.io',
         status: 'invited',
         groups: ['developer', 'all_users'],
         organization,

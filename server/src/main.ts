@@ -15,8 +15,8 @@ import { join } from 'path';
 
 const fs = require('fs');
 
-globalThis.TOOLJET_VERSION = fs.readFileSync('./.version', 'utf8').trim();
-process.env['RELEASE_VERSION'] = globalThis.TOOLJET_VERSION;
+globalThis.JUMPSTART_VERSION = fs.readFileSync('./.version', 'utf8').trim();
+process.env['RELEASE_VERSION'] = globalThis.JUMPSTART_VERSION;
 
 function replaceSubpathPlaceHoldersInStaticAssets() {
   const filesToReplaceAssetPath = ['index.html', 'runtime.js', 'main.js'];
@@ -46,7 +46,7 @@ async function bootstrap() {
     abortOnError: false,
   });
   const configService = app.get<ConfigService>(ConfigService);
-  const host = new URL(process.env.TOOLJET_HOST);
+  const host = new URL(process.env.JUMPSTART_HOST);
   const domain = host.hostname;
 
   app.useLogger(app.get(Logger));
@@ -136,14 +136,14 @@ async function bootstrap() {
   }
 
   await app.listen(port, listen_addr, function () {
-    const tooljetHost = configService.get<string>('TOOLJET_HOST');
-    console.log(`Ready to use at ${tooljetHost} 🚀`);
+    const jumpstartHost = configService.get<string>('JUMPSTART_HOST');
+    console.log(`Ready to use at ${jumpstartHost} 🚀`);
   });
 }
 
-// Bootstrap global agent only if TOOLJET_HTTP_PROXY is set
-if (process.env.TOOLJET_HTTP_PROXY) {
-  process.env['GLOBAL_AGENT_HTTP_PROXY'] = process.env.TOOLJET_HTTP_PROXY;
+// Bootstrap global agent only if JUMPSTART_HTTP_PROXY is set
+if (process.env.JUMPSTART_HTTP_PROXY) {
+  process.env['GLOBAL_AGENT_HTTP_PROXY'] = process.env.JUMPSTART_HTTP_PROXY;
   globalAgentBootstrap();
 }
 // eslint-disable-next-line @typescript-eslint/no-floating-promises

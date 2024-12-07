@@ -1,6 +1,6 @@
 import React from 'react';
-import ToggleGroup from '@/ToolJetUI/SwitchGroup/ToggleGroup';
-import ToggleGroupItem from '@/ToolJetUI/SwitchGroup/ToggleGroupItem';
+import ToggleGroup from '@/JumpStartUI/SwitchGroup/ToggleGroup';
+import ToggleGroupItem from '@/JumpStartUI/SwitchGroup/ToggleGroupItem';
 import { useTranslation } from 'react-i18next';
 import useAppDarkMode from '@/_hooks/useAppDarkMode';
 import { useCurrentStateStore } from '@/_stores/currentStateStore';

@@ -1,5 +1,5 @@
 {
-    "tooljet_database": [
+    "jumpstart_database": [
         {
             "id": "7d98bd02-b2d5-4e79-bcc4-c9a102211124",
             "table_name": "employee_expense",
@@ -5926,7 +5926,7 @@
                                                     "height": 100
                                                 },
                                                 "exposedVariables": {
-                                                    "value": "ToolJet is an open-source low-code platform for building and deploying internal tools with minimal engineering efforts 🚀"
+                                                    "value": "JumpStart is an open-source low-code platform for building and deploying internal tools with minimal engineering efforts 🚀"
                                                 },
                                                 "actions": [
                                                     {
@@ -12901,7 +12901,7 @@
                                             "height": 100
                                         },
                                         "exposedVariables": {
-                                            "value": "ToolJet is an open-source low-code platform for building and deploying internal tools with minimal engineering efforts 🚀"
+                                            "value": "JumpStart is an open-source low-code platform for building and deploying internal tools with minimal engineering efforts 🚀"
                                         },
                                         "actions": [
                                             {
@@ -20385,8 +20385,8 @@
                         },
                         {
                             "id": "807078ad-734f-4f6a-b01a-03cdef79f2e1",
-                            "name": "tooljetdbdefault",
-                            "kind": "tooljetdb",
+                            "name": "jumpstartdbdefault",
+                            "kind": "jumpstartdb",
                             "type": "static",
                             "pluginId": null,
                             "appVersionId": "f9428e66-fb29-4de4-afb2-b5141a62f905",
@@ -26217,7 +26217,7 @@
                                                         "height": 100
                                                     },
                                                     "exposedVariables": {
-                                                        "value": "ToolJet is an open-source low-code platform for building and deploying internal tools with minimal engineering efforts 🚀"
+                                                        "value": "JumpStart is an open-source low-code platform for building and deploying internal tools with minimal engineering efforts 🚀"
                                                     },
                                                     "actions": [
                                                         {
@@ -33192,7 +33192,7 @@
                                                 "height": 100
                                             },
                                             "exposedVariables": {
-                                                "value": "ToolJet is an open-source low-code platform for building and deploying internal tools with minimal engineering efforts 🚀"
+                                                "value": "JumpStart is an open-source low-code platform for building and deploying internal tools with minimal engineering efforts 🚀"
                                             },
                                             "actions": [
                                                 {
@@ -37556,5 +37556,5 @@
             }
         }
     ],
-    "tooljet_version": "2.25.0-ee2.11.1-cloud2.1.8"
+    "jumpstart_version": "2.25.0-ee2.11.1-cloud2.1.8"
 }

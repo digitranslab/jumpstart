@@ -3,7 +3,7 @@ id: import-external-libraries-using-runjs
 title: Import external libraries using RunJS
 ---
 
-ToolJet allows you to integrate external JavaScript libraries into your application using RunJS queries. This guide walks you through the process of importing and utilizing these libraries effectively.
+JumpStart allows you to integrate external JavaScript libraries into your application using RunJS queries. This guide walks you through the process of importing and utilizing these libraries effectively.
 
 <div style={{paddingTop:'24px', paddingBottom:'24px'}}>
 
@@ -13,7 +13,7 @@ You can import various JavaScript libraries using their Content Delivery Network
 
 ## Creating a new app and runJS query
 
-Start by creating a new application in ToolJet. Then, proceed to create a new RunJS query from the query panel.
+Start by creating a new application in JumpStart. Then, proceed to create a new RunJS query from the query panel.
 
 <div style={{textAlign: 'center'}}>
  <img style={{ border:'0', marginBottom:'15px', borderRadius:'5px', boxShadow: '0px 1px 3px rgba(0, 0, 0, 0.2)' }} className="screenshot-full" src="/img/how-to/import-js/create-new-query.png" alt="Create a new RunJS query" />
@@ -115,4 +115,4 @@ Preview the output, or Run the query to see the result of the calculation.
 
 </div>
 
-This guide provides a clear and detailed walkthrough for importing external JavaScript libraries into your ToolJet application.
+This guide provides a clear and detailed walkthrough for importing external JavaScript libraries into your JumpStart application.

@@ -9,7 +9,7 @@ A Tabs widget contains a number of defined containers that can be navigated thro
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/tabs/tabs.png" alt="ToolJet - Widget Reference - Tabs" />
+<img className="screenshot-full" src="/img/widgets/tabs/tabs.png" alt="JumpStart - Widget Reference - Tabs" />
 
 </div>
 

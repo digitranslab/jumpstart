@@ -1,4 +1,4 @@
-import { QueryError, QueryResult, QueryService, ConnectionTestResult } from '@tooljet-marketplace/common';
+import { QueryError, QueryResult, QueryService, ConnectionTestResult } from '@jumpstart-marketplace/common';
 import { SourceOptions, QueryOptions, Operation, TextCompletionQueryOptions, ChatCompletionQueryOptions, PromptCompletionQueryOptions, EmbeddingQueryOptions } from './types';
 import * as PortKeyAi from 'portkey-ai';
 import { createEmbedding, getChatCompletion, getCompletion, getPromptCompletion } from './portkey_operations';

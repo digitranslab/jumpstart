@@ -1,7 +1,7 @@
 {
-  "$schema": "https://raw.githubusercontent.com/ToolJet/ToolJet/develop/plugins/schemas/operations.schema.json",
-  "title": "ToolJetDb datasource",
-  "description": "A schema defining TooljetDb datasource",
+  "$schema": "https://raw.githubusercontent.com/digitranslab/jumpstart/develop/plugins/schemas/operations.schema.json",
+  "title": "JumpStartDb datasource",
+  "description": "A schema defining JumpstartDb datasource",
   "type": "database",
   "defaults": {
     "table_name": "",
@@ -10,9 +10,9 @@
   "properties": {
     "operations": {
       "label": "",
-      "key": "tooljetdb_operations",
-      "type": "tooljetdb-operations",
-      "description": "Component for ToolJetDb operations"
+      "key": "jumpstartdb_operations",
+      "type": "jumpstartdb-operations",
+      "description": "Component for JumpStartDb operations"
     }
   }
 }

@@ -91,25 +91,25 @@ if [[ -z "$PG_USER" ]] || [[ -z "$PG_HOST" ]] || [[ -z "$PG_PASS" ]] || [[ -z "$
   echo "Successfully updated postgresql database values .env file"
 fi
 
-# Copy values from PG to TOOLJET_DB
-TOOLJET_DB_USER=$PG_USER
-TOOLJET_DB_HOST=$PG_HOST
-TOOLJET_DB_PASS=$PG_PASS
+# Copy values from PG to JUMPSTART_DB
+JUMPSTART_DB_USER=$PG_USER
+JUMPSTART_DB_HOST=$PG_HOST
+JUMPSTART_DB_PASS=$PG_PASS
 
-# Update .env file for TOOLJET_DB
-awk -v tj_user="$TOOLJET_DB_USER" -v tj_host="$TOOLJET_DB_HOST" -v tj_pass="$TOOLJET_DB_PASS" '
+# Update .env file for JUMPSTART_DB
+awk -v tj_user="$JUMPSTART_DB_USER" -v tj_host="$JUMPSTART_DB_HOST" -v tj_pass="$JUMPSTART_DB_PASS" '
   BEGIN { FS=OFS="=" }
-  /^TOOLJET_DB_USER=/ { $2=tj_user; found=1 }
-  /^TOOLJET_DB_HOST=/ { $2=tj_host; found=1 }
-  /^TOOLJET_DB_PASS=/ { $2=tj_pass; found=1 }
+  /^JUMPSTART_DB_USER=/ { $2=tj_user; found=1 }
+  /^JUMPSTART_DB_HOST=/ { $2=tj_host; found=1 }
+  /^JUMPSTART_DB_PASS=/ { $2=tj_pass; found=1 }
   1
-  END { if (!found) print "TOOLJET_DB_USER="tj_user ORS "TOOLJET_DB_HOST="tj_host ORS "TOOLJET_DB_PASS="tj_pass }
+  END { if (!found) print "JUMPSTART_DB_USER="tj_user ORS "JUMPSTART_DB_HOST="tj_host ORS "JUMPSTART_DB_PASS="tj_pass }
 ' .env > temp.env && mv temp.env .env
 
-echo "Successfully updated tooljet database values in the .env file"
+echo "Successfully updated jumpstart database values in the .env file"
 
 # Construct PGRST_DB_URI with user-provided values
-PGRST_DB_URI="postgres://$PG_USER:$PG_PASS@$PG_HOST/tooljet_db"
+PGRST_DB_URI="postgres://$PG_USER:$PG_PASS@$PG_HOST/jumpstart_db"
 
 # Update .env file for PGRST_DB_URI
 awk -v uri="$PGRST_DB_URI" '

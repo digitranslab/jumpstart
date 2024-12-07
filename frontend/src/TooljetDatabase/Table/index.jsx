@@ -2,8 +2,8 @@ import React, { useEffect, useState, useContext, useRef, useMemo } from 'react';
 import cx from 'classnames';
 import { useTable, useRowSelect } from 'react-table';
 import { isBoolean, isEmpty } from 'lodash';
-import { tooljetDatabaseService } from '@/_services';
-import { TooljetDatabaseContext } from '../index';
+import { jumpstartDatabaseService } from '@/_services';
+import { JumpstartDatabaseContext } from '../index';
 import { toast } from 'react-hot-toast';
 import { TablePopover } from './ActionsPopover';
 import { CellEditMenu } from '../Menu/CellEditMenu';
@@ -49,7 +49,7 @@ const Table = ({ collapseSidebar }) => {
     loadingState,
     setForeignKeys,
     foreignKeys,
-  } = useContext(TooljetDatabaseContext);
+  } = useContext(JumpstartDatabaseContext);
   const [isEditColumnDrawerOpen, setIsEditColumnDrawerOpen] = useState(false);
   const [selectedColumn, setSelectedColumn] = useState();
   const [loading, _setLoading] = useState(false);
@@ -103,7 +103,7 @@ const Table = ({ collapseSidebar }) => {
       orderQuery.order(foreignKey?.referenced_column_names[0], 'nullsfirst');
       selectQuery.select(foreignKey?.referenced_column_names[0]);
 
-      tooljetDatabaseService
+      jumpstartDatabaseService
         .findOne(
           organizationId,
           foreignKeys?.length > 0 && foreignKey?.referenced_table_id,
@@ -168,7 +168,7 @@ const Table = ({ collapseSidebar }) => {
   }, [foreignKeys]);
 
   const prevSelectedTableRef = useRef({});
-  const tooljetDbTableRef = useRef(null);
+  const jumpstartDbTableRef = useRef(null);
   const duration = 300;
   const darkMode = localStorage.getItem('darkMode') === 'true';
 
@@ -231,38 +231,38 @@ const Table = ({ collapseSidebar }) => {
   const manageScrollWhileNavigation = () => {
     // Table Scroll based on Content overlfow is handled here
     const selectedCellElem = document.querySelector('.tjdb-selected-cell');
-    if (selectedCellElem && tooljetDbTableRef.current) {
-      const tableBoundingRect = tooljetDbTableRef?.current?.getBoundingClientRect();
+    if (selectedCellElem && jumpstartDbTableRef.current) {
+      const tableBoundingRect = jumpstartDbTableRef?.current?.getBoundingClientRect();
       const cellBoundingRect = selectedCellElem.getBoundingClientRect();
 
       // Scroll when we reach the bottom of the table and when content overflows
       if (cellBoundingRect.bottom > tableBoundingRect.bottom) {
-        tooljetDbTableRef.current.scrollTo({
-          top: tooljetDbTableRef.current.scrollTop + (cellBoundingRect.bottom - tableBoundingRect.bottom),
+        jumpstartDbTableRef.current.scrollTo({
+          top: jumpstartDbTableRef.current.scrollTop + (cellBoundingRect.bottom - tableBoundingRect.bottom),
           behavior: 'instant',
         });
       }
 
       // Scroll when we reach the top of the table. Added 32 for considering table header space
       if (cellBoundingRect.top < tableBoundingRect.top + 32) {
-        tooljetDbTableRef.current.scrollTo({
-          top: tooljetDbTableRef.current.scrollTop + (cellBoundingRect.top - (tableBoundingRect.top + 32)),
+        jumpstartDbTableRef.current.scrollTo({
+          top: jumpstartDbTableRef.current.scrollTop + (cellBoundingRect.top - (tableBoundingRect.top + 32)),
           behavior: 'instant',
         });
       }
 
       // Scroll when we reach right end of the table and if content gets overflow
       if (cellBoundingRect.right > tableBoundingRect.right) {
-        tooljetDbTableRef.current.scrollTo({
-          left: tooljetDbTableRef.current.scrollLeft + (cellBoundingRect.right - tableBoundingRect.right),
+        jumpstartDbTableRef.current.scrollTo({
+          left: jumpstartDbTableRef.current.scrollLeft + (cellBoundingRect.right - tableBoundingRect.right),
           behavior: 'instant',
         });
       }
 
       // Scroll when we reach left end of the table and if content gets overflow. Added 296 for width of two sticky columns
       if (cellBoundingRect.left < tableBoundingRect.left + 296) {
-        tooljetDbTableRef.current.scrollTo({
-          left: tooljetDbTableRef.current.scrollLeft + (cellBoundingRect.left - (tableBoundingRect.left + 296)),
+        jumpstartDbTableRef.current.scrollTo({
+          left: jumpstartDbTableRef.current.scrollLeft + (cellBoundingRect.left - (tableBoundingRect.left + 296)),
           behavior: 'instant',
         });
       }
@@ -356,7 +356,7 @@ const Table = ({ collapseSidebar }) => {
 
   const fetchTableMetadata = () => {
     if (!isEmpty(selectedTable)) {
-      tooljetDatabaseService.viewTable(organizationId, selectedTable.table_name).then(({ data = [], error }) => {
+      jumpstartDatabaseService.viewTable(organizationId, selectedTable.table_name).then(({ data = [], error }) => {
         if (error) {
           toast.error(error?.message ?? `Error fetching metadata for table "${selectedTable.table_name}"`);
           return;
@@ -659,7 +659,7 @@ const Table = ({ collapseSidebar }) => {
 
         let query = `?${primaryKey?.accessor}=in.(${deletionKeys.toString()})`;
 
-        const { error } = await tooljetDatabaseService.deleteRows(organizationId, selectedTable.id, query);
+        const { error } = await jumpstartDatabaseService.deleteRows(organizationId, selectedTable.id, query);
 
         if (error) {
           toast.error(error?.message ?? `Error deleting rows from table "${selectedTable.table_name}"`);
@@ -681,7 +681,7 @@ const Table = ({ collapseSidebar }) => {
       ...prevState,
       deletePopupModal: false,
     }));
-    const { error } = await tooljetDatabaseService.deleteColumn(organizationId, selectedTable.table_name, columnName);
+    const { error } = await jumpstartDatabaseService.deleteColumn(organizationId, selectedTable.table_name, columnName);
     if (error) {
       toast.error(error?.message ?? `Error deleting column "${columnName}" from table "${selectedTable}"`);
       return;
@@ -733,7 +733,7 @@ const Table = ({ collapseSidebar }) => {
     const query = `${filterQuery.url.toString()}&${sortQuery.url.toString()}`;
     const cellData = directToggle === true ? { [cellKey]: !cellValue } : { [cellKey]: cellVal };
 
-    const { error } = await tooljetDatabaseService.updateRows(organizationId, selectedTable.id, cellData, query);
+    const { error } = await jumpstartDatabaseService.updateRows(organizationId, selectedTable.id, cellData, query);
 
     if (error) {
       handleProgressAnimation(
@@ -1094,7 +1094,7 @@ const Table = ({ collapseSidebar }) => {
         className={cx(
           `table-responsive border-0 tj-db-table animation-fade ${rows.length === 0 ? 'tj-table-empty' : 'tj-table'}`
         )}
-        ref={tooljetDbTableRef}
+        ref={jumpstartDbTableRef}
       >
         <div
           className={cx(`tjdb-th-bg`, {

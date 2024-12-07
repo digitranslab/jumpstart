@@ -3,7 +3,7 @@ id: marketplace-plugin-redshift
 title: Amazon Redshift
 ---
 
-ToolJet can connect to Amazon Redshift, enabling your applications to query data directly from a Redshift cluster.
+JumpStart can connect to Amazon Redshift, enabling your applications to query data directly from a Redshift cluster.
 
 
 <div style={{textAlign: 'center'}}>

@@ -50,9 +50,9 @@ export const verifyConfirmPageElements = () => {
     "have.text",
     commonText.continueToSetUp
   );
-  cy.get(commonSelectors.setUpToolJetButton).verifyVisibleElement(
+  cy.get(commonSelectors.setUpJumpStartButton).verifyVisibleElement(
     "have.text",
-    commonText.setUpToolJetButton
+    commonText.setUpJumpStartButton
   );
 };
 
@@ -159,7 +159,7 @@ export const userSignUp = (fullName, email, workspaceName) => {
   }).then((resp) => {
     invitationLink = `/invitations/${resp.rows[0].invitation_token}`;
     cy.visit(invitationLink);
-    cy.get(commonSelectors.setUpToolJetButton).click();
+    cy.get(commonSelectors.setUpJumpStartButton).click();
     cy.wait(4000);
     verifyOnboardingQuestions(fullName, workspaceName);
     updateWorkspaceName(email, workspaceName);
@@ -236,7 +236,7 @@ export const updateWorkspaceName = (email, workspaceName = email) => {
 
     cy.task("updateId", {
       dbconfig: Cypress.env("app_db"),
-      sql: "select id from users where email='dev@tooljet.io';",
+      sql: "select id from users where email='dev@jumpstart.io';",
     }).then((resp) => {
       defuserId = resp.rows[0].id;
 
@@ -325,11 +325,11 @@ export const SignUpPageElements = () => {
   cy.get(commonSelectors.termsOfServiceLink)
     .verifyVisibleElement("have.text", commonText.termsOfServiceLink)
     .and("have.attr", "href")
-    .and("equal", "https://www.tooljet.com/terms");
+    .and("equal", "https://www.jumpstart.com/terms");
   cy.get(commonSelectors.privacyPolicyLink)
     .verifyVisibleElement("have.text", commonText.privacyPolicyLink)
     .and("have.attr", "href")
-    .and("equal", "https://www.tooljet.com/privacy");
+    .and("equal", "https://www.jumpstart.com/privacy");
   cy.get("body").then(($el) => {
     if ($el.text().includes("Google")) {
       cy.get(ssoSelector.googleSSOText).verifyVisibleElement(

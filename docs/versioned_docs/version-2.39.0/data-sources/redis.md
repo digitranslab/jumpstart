@@ -3,11 +3,11 @@ id: redis
 title: Redis
 ---
 
-ToolJet enables you to execute Redis commands on your Redis instances.
+JumpStart enables you to execute Redis commands on your Redis instances.
 
 ## Connecting to Redis
 
-To establish a connection with the Redis global datasource, you have two options. You can either click on the **`+Add new global datasource`** button on the query panel or access the **[Global Datasources](/docs/data-sources/overview)** page from the ToolJet dashboard.
+To establish a connection with the Redis global datasource, you have two options. You can either click on the **`+Add new global datasource`** button on the query panel or access the **[Global Datasources](/docs/data-sources/overview)** page from the JumpStart dashboard.
 
 <div style={{textAlign: 'center'}}>
 
@@ -15,7 +15,7 @@ To establish a connection with the Redis global datasource, you have two options
 
 </div>
 
-**To connect ToolJet with Redis, you need to provide the following connection details:**
+**To connect JumpStart with Redis, you need to provide the following connection details:**
 
 - **Host**: The address or hostname of the Redis server
 - **Port**: The port number used by the Redis server (default is 6379)
@@ -23,7 +23,7 @@ To establish a connection with the Redis global datasource, you have two options
 - **Password**: The password used for authentication
 
 :::info
-Click on **Test connection** button to verify if the credentials are correct and that the Redis is accessible to ToolJet server. Click on **Save** button to save the data source.
+Click on **Test connection** button to verify if the credentials are correct and that the Redis is accessible to JumpStart server. Click on **Save** button to save the data source.
 :::
 
 ## Redis Queries

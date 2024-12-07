@@ -1,17 +1,17 @@
 import React, { useState, useContext, useEffect, useRef } from 'react';
 import { toast } from 'react-hot-toast';
 import DrawerFooter from '@/_ui/Drawer/DrawerFooter';
-import { TooljetDatabaseContext } from '../index';
-import { tooljetDatabaseService } from '@/_services';
+import { JumpstartDatabaseContext } from '../index';
+import { jumpstartDatabaseService } from '@/_services';
 import _ from 'lodash';
 import { renderDatatypeIcon, listAllPrimaryKeyColumns, postgresErrorCode } from '../constants';
 import PostgrestQueryBuilder from '@/_helpers/postgrestQueryBuilder';
-import DropDownSelect from '../../Editor/QueryManager/QueryEditors/TooljetDatabase/DropDownSelect';
+import DropDownSelect from '../../Editor/QueryManager/QueryEditors/JumpstartDatabase/DropDownSelect';
 import Information from '@/_ui/Icon/solidIcons/Information';
 import SolidIcon from '@/_ui/Icon/SolidIcons';
 import { ToolTip } from '@/_components/ToolTip';
 import './styles.scss';
-// import Maximize from '@/TooljetDatabase/Icons/maximize.svg';
+// import Maximize from '@/JumpstartDatabase/Icons/maximize.svg';
 // import { Link } from 'react-router-dom';
 // import { getPrivateRoute } from '@/_helpers/routes';
 import ForeignKeyIndicator from '../Icons/ForeignKeyIndicator.svg';
@@ -27,7 +27,7 @@ const EditRowForm = ({
   initiator,
 }) => {
   const darkMode = localStorage.getItem('darkMode') === 'true';
-  const { organizationId, selectedTable, columns, foreignKeys } = useContext(TooljetDatabaseContext);
+  const { organizationId, selectedTable, columns, foreignKeys } = useContext(JumpstartDatabaseContext);
   const inputRefs = useRef({});
   const [fetching, setFetching] = useState(false);
   const [activeTab, setActiveTab] = useState(Array.isArray(columns) ? columns.map(() => 'Custom') : []);
@@ -238,7 +238,7 @@ const EditRowForm = ({
     });
 
     const query = `${filterQuery.url.toString()}&${sortQuery.url.toString()}`;
-    const { error } = await tooljetDatabaseService.updateRows(organizationId, selectedTable.id, rowData, query);
+    const { error } = await jumpstartDatabaseService.updateRows(organizationId, selectedTable.id, rowData, query);
     // TODO: Need all of this logic on the backend should ideally just get list of columns with error messages to map over
     if (error) {
       if (error?.code === postgresErrorCode.UniqueViolation) {

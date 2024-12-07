@@ -26,27 +26,27 @@ describe('data queries controller', () => {
 
   it('should be able to update queries of an app only if group is admin or group has app update permission', async () => {
     const adminUserData = await createUser(app, {
-      email: 'admin@tooljet.io',
+      email: 'admin@jumpstart.io',
       groups: ['all_users', 'admin'],
     });
     let loggedUser = await authenticateUser(app, adminUserData.user.email);
     adminUserData['tokenCookie'] = loggedUser.tokenCookie;
     const developerUserData = await createUser(app, {
-      email: 'developer@tooljet.io',
+      email: 'developer@jumpstart.io',
       groups: ['all_users', 'developer'],
       organization: adminUserData.organization,
     });
     loggedUser = await authenticateUser(app, developerUserData.user.email);
     developerUserData['tokenCookie'] = loggedUser.tokenCookie;
     const viewerUserData = await createUser(app, {
-      email: 'viewer@tooljet.io',
+      email: 'viewer@jumpstart.io',
       groups: ['all_users', 'viewer'],
       organization: adminUserData.organization,
     });
     loggedUser = await authenticateUser(app, viewerUserData.user.email);
     viewerUserData['tokenCookie'] = loggedUser.tokenCookie;
     const anotherOrgAdminUserData = await createUser(app, {
-      email: 'another@tooljet.io',
+      email: 'another@jumpstart.io',
       groups: ['all_users', 'admin'],
     });
     loggedUser = await authenticateUser(app, anotherOrgAdminUserData.user.email);
@@ -112,23 +112,23 @@ describe('data queries controller', () => {
 
   it('should be able to delete queries of an app only if admin/developer of same organization', async () => {
     const adminUserData = await createUser(app, {
-      email: 'admin@tooljet.io',
+      email: 'admin@jumpstart.io',
       groups: ['all_users', 'admin'],
     });
     let loggedUser = await authenticateUser(app, adminUserData.user.email);
     adminUserData['tokenCookie'] = loggedUser.tokenCookie;
     const developerUserData = await createUser(app, {
-      email: 'developer@tooljet.io',
+      email: 'developer@jumpstart.io',
       groups: ['all_users', 'developer'],
       organization: adminUserData.organization,
     });
     const viewerUserData = await createUser(app, {
-      email: 'viewer@tooljet.io',
+      email: 'viewer@jumpstart.io',
       groups: ['all_users', 'viewer'],
       organization: adminUserData.organization,
     });
     const anotherOrgAdminUserData = await createUser(app, {
-      email: 'another@tooljet.io',
+      email: 'another@jumpstart.io',
       groups: ['all_users', 'admin'],
     });
     const { application, dataSource, appVersion } = await generateAppDefaults(app, adminUserData.user, {
@@ -160,7 +160,7 @@ describe('data queries controller', () => {
         appVersion,
         options: {
           method: 'get',
-          url: 'https://api.github.com/repos/tooljet/tooljet/stargazers',
+          url: 'https://api.github.com/repos/digitranslab/jumpstart/stargazers',
           url_params: [],
           headers: [],
           body: [],
@@ -186,7 +186,7 @@ describe('data queries controller', () => {
         appVersion,
         options: {
           method: 'get',
-          url: 'https://api.github.com/repos/tooljet/tooljet/stargazers',
+          url: 'https://api.github.com/repos/digitranslab/jumpstart/stargazers',
           url_params: [],
           headers: [],
           body: [],
@@ -210,16 +210,16 @@ describe('data queries controller', () => {
 
   it('should be able to get queries only if the user has app read permission and belongs to the same organization', async () => {
     const adminUserData = await createUser(app, {
-      email: 'admin@tooljet.io',
+      email: 'admin@jumpstart.io',
       groups: ['all_users', 'admin'],
     });
     const developerUserData = await createUser(app, {
-      email: 'developer@tooljet.io',
+      email: 'developer@jumpstart.io',
       groups: ['all_users', 'developer'],
       organization: adminUserData.organization,
     });
     const viewerUserData = await createUser(app, {
-      email: 'viewer@tooljet.io',
+      email: 'viewer@jumpstart.io',
       groups: ['all_users', 'viewer'],
       organization: adminUserData.organization,
     });
@@ -235,7 +235,7 @@ describe('data queries controller', () => {
     viewerUserData['tokenCookie'] = loggedUser.tokenCookie;
 
     const anotherOrgAdminUserData = await createUser(app, {
-      email: 'another@tooljet.io',
+      email: 'another@jumpstart.io',
       groups: ['all_users', 'admin'],
     });
     loggedUser = await authenticateUser(app, anotherOrgAdminUserData.user.email);
@@ -297,7 +297,7 @@ describe('data queries controller', () => {
 
   it('should be able to search queries with application version id', async () => {
     const adminUserData = await createUser(app, {
-      email: 'admin@tooljet.io',
+      email: 'admin@jumpstart.io',
       groups: ['all_users', 'admin'],
     });
     const { dataSource, appVersion } = await generateAppDefaults(app, adminUserData.user, {
@@ -332,16 +332,16 @@ describe('data queries controller', () => {
 
   it('should be able to create queries for an app only if the user has admin group or update permission', async () => {
     const adminUserData = await createUser(app, {
-      email: 'admin@tooljet.io',
+      email: 'admin@jumpstart.io',
       groups: ['all_users', 'admin'],
     });
     const developerUserData = await createUser(app, {
-      email: 'developer@tooljet.io',
+      email: 'developer@jumpstart.io',
       groups: ['all_users', 'developer'],
       organization: adminUserData.organization,
     });
     const viewerUserData = await createUser(app, {
-      email: 'viewer@tooljet.io',
+      email: 'viewer@jumpstart.io',
       groups: ['all_users', 'viewer'],
       organization: adminUserData.organization,
     });
@@ -353,7 +353,7 @@ describe('data queries controller', () => {
       isQueryNeeded: false,
     });
     const anotherOrgAdminUserData = await createUser(app, {
-      email: 'another@tooljet.io',
+      email: 'another@jumpstart.io',
       groups: ['all_users', 'admin'],
     });
 
@@ -415,7 +415,7 @@ describe('data queries controller', () => {
 
   it('should be able to get queries sorted created wise', async () => {
     const adminUserData = await createUser(app, {
-      email: 'admin@tooljet.io',
+      email: 'admin@jumpstart.io',
       groups: ['all_users', 'admin'],
     });
 
@@ -482,16 +482,16 @@ describe('data queries controller', () => {
 
   it('should be able to run queries of an app if the user belongs to the same organization', async () => {
     const adminUserData = await createUser(app, {
-      email: 'admin@tooljet.io',
+      email: 'admin@jumpstart.io',
       groups: ['all_users', 'admin'],
     });
     const developerUserData = await createUser(app, {
-      email: 'developer@tooljet.io',
+      email: 'developer@jumpstart.io',
       groups: ['all_users', 'developer'],
       organization: adminUserData.organization,
     });
     const viewerUserData = await createUser(app, {
-      email: 'viewer@tooljet.io',
+      email: 'viewer@jumpstart.io',
       groups: ['all_users', 'viewer'],
       organization: adminUserData.organization,
     });
@@ -542,11 +542,11 @@ describe('data queries controller', () => {
 
   it('should not be able to run queries of an app if the user belongs to another organization', async () => {
     const adminUserData = await createUser(app, {
-      email: 'admin@tooljet.io',
+      email: 'admin@jumpstart.io',
       groups: ['all_users', 'admin'],
     });
     const anotherOrgAdminUserData = await createUser(app, {
-      email: 'another@tooljet.io',
+      email: 'another@jumpstart.io',
       groups: ['all_users', 'admin'],
     });
 
@@ -564,7 +564,7 @@ describe('data queries controller', () => {
 
   it('should be able to run queries of an app if a public app ( even if an unauthenticated user )', async () => {
     const adminUserData = await createUser(app, {
-      email: 'admin@tooljet.io',
+      email: 'admin@jumpstart.io',
       groups: ['all_users', 'admin'],
     });
     const { dataQuery } = await generateAppDefaults(app, adminUserData.user, { isAppPublic: true });
@@ -577,7 +577,7 @@ describe('data queries controller', () => {
 
   it('should not be able to run queries if app not not public and user is not authenticated', async () => {
     const adminUserData = await createUser(app, {
-      email: 'admin@tooljet.io',
+      email: 'admin@jumpstart.io',
       groups: ['all_users', 'admin'],
     });
     const { dataQuery } = await generateAppDefaults(app, adminUserData.user, {});

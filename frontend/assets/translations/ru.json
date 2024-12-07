@@ -41,7 +41,7 @@
   "viewer":"Извините! Это приложение находится на тех.обслуживании",
   "app":{
     "updateAvailable":"Доступно обновление",
-    "newVersionReleased":"Новая версия Tooljet была выпущена",
+    "newVersionReleased":"Новая версия Jumpstart была выпущена",
     "readReleaseNotes":"Прочитать, что нового было добавлено",
     "skipVersion":"Пропустить эту версию"
   },
@@ -53,17 +53,17 @@
   },
   "slack":{
     "authorize":"Авторизоваться",
-    "connectToolJetToSlack":"ToolJet может подключиться к Slack и получить список пользователей, отправлять сообщения, и др. Пожалуйста, настройте подходящие права доступа.",
+    "connectJumpStartToSlack":"JumpStart может подключиться к Slack и получить список пользователей, отправлять сообщения, и др. Пожалуйста, настройте подходящие права доступа.",
     "chatWrite":"chat:написать",
-    "listUsersAndSendMessage":"Ваше приложение ToolJet сможет получить список пользователей, а также отправлять сообщения пользователям и в чаты.",
+    "listUsersAndSendMessage":"Ваше приложение JumpStart сможет получить список пользователей, а также отправлять сообщения пользователям и в чаты.",
     "connectSlack":"Подключиться к Slack"
   },
   "googleSheets":{
     "readOnly":"Только чтение",
-    "enableReadAndWrite":"Если вы хотите, чтобы приложения ToolJet могли изменять ваши Google-таблицы, удостоверьтесь, что были даны права на чтение и запись",
-    "readDataFromSheets":"Ваши ToolJet приложения могут только читать данные из Google-таблиц",
+    "enableReadAndWrite":"Если вы хотите, чтобы приложения JumpStart могли изменять ваши Google-таблицы, удостоверьтесь, что были даны права на чтение и запись",
+    "readDataFromSheets":"Ваши JumpStart приложения могут только читать данные из Google-таблиц",
     "readWrite":"Чтение и запись",
-    "readModifySheets":"Ваши ToolJet приложения могут только читать данные из Google-таблиц, изменять их, и др",
+    "readModifySheets":"Ваши JumpStart приложения могут только читать данные из Google-таблиц, изменять их, и др",
     "toGoogleSheets":"к Google-таблицам"
 
   },
@@ -78,7 +78,7 @@
     "dontHaveAccount":"У вас еще нет аккаунта??",
     "signIn":"Войти",
     "signUp":"Зарегистрироваться",
-    "createToolJetAccount":"Создать аккаунт ToolJet",
+    "createJumpStartAccount":"Создать аккаунт JumpStart",
     "enterBusinessEmail":"Введите свою бизнес почту",
     "alreadyHaveAnAccount":"У вас уже есть аккаунт?",
     "password":"Пароль",
@@ -265,7 +265,7 @@
             "newAccountWillBeCreated":"Новый аккаунт будет создан для первого логина пользователя через SSO",
             "allowedDomains":"Разрешенные домены",
             "enterDomains":"Домены входа",
-            "supportMultiDomains":"Поддержка множества доменов. Введите доменные имена, разделенные запятой. Например: tooljet.com,tooljet.io,yourorganization.com",
+            "supportMultiDomains":"Поддержка множества доменов. Введите доменные имена, разделенные запятой. Например: jumpstart.com,jumpstart.io,yourorganization.com",
             "loginUrl":"Ссылка на логин",
             "workspaceLogin":"Используйте эту чтобы напрямую залогиниться в рабочую область",
             "allowDefaultSso":"Разрешить стандартный SSO",
@@ -354,8 +354,8 @@
       "removeFromFolder":"Удалить из папки"
     },
     "blankPage":{
-      "welcomeToToolJet":"Добро пожаловать в ToolJet!",
-      "getStartedCreateNewApp":"Вы можете начать создание нового приложения или создание нового приложения используя шаблон из библиотеки ToolJet",
+      "welcomeToJumpStart":"Добро пожаловать в JumpStart!",
+      "getStartedCreateNewApp":"Вы можете начать создание нового приложения или создание нового приложения используя шаблон из библиотеки JumpStart",
       "importApplication":"Импортировать приложение"
     },
     "foldersSection":{
@@ -417,11 +417,11 @@
 
   },
   "onBoarding":{
-    "finishToolJetInstallation":"Закончить установку ToolJet",
+    "finishJumpStartInstallation":"Закончить установку JumpStart",
     "organization":"Организация",
     "name":"Имя",
     "email":"Электронная почта",
-    "receiveUpdatesFromToolJet":"Вы будете получать обновления от команды ToolJet ( 1-2 письма каждый месяц, мы не спамим )",
+    "receiveUpdatesFromJumpStart":"Вы будете получать обновления от команды JumpStart ( 1-2 письма каждый месяц, мы не спамим )",
     "finishSetup":"Закончить настройку",
     "skip":"Пропустить"
   },

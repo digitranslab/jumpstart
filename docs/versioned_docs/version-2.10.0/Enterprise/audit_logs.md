@@ -6,7 +6,7 @@ title: Audit logs
 <div className='badge badge--primary heading-badge'>Available on: Paid plans</div>
 
 
-The audit log is the report of all the activities done in your ToolJet account. It will capture and display events automatically by recording who performed an activity, what when, and where the activity was performed, along with other information such as IP address.
+The audit log is the report of all the activities done in your JumpStart account. It will capture and display events automatically by recording who performed an activity, what when, and where the activity was performed, along with other information such as IP address.
 
 <div style={{textAlign: 'center'}}>
 
@@ -85,9 +85,9 @@ The dropdown will display all the apps associated with your account. Select an a
 | created_at | Shows the date and time when the event was logged.  |
 | id | Each logged event is assigned a unique event ID. |
 | ip_address | Displays the IP address from which the event was logged. |
-| metadata | The metadata includes two sub-properties: `tooljet_version` and `user_agent`. `tooljet_version` shows the version of ToolJet used for the event, while `user_agent` contains information about the device and browser used. |
-| organization_id | Every organization in ToolJet has a unique ID associated with it, which is recorded when an event occurs. |
+| metadata | The metadata includes two sub-properties: `jumpstart_version` and `user_agent`. `jumpstart_version` shows the version of JumpStart used for the event, while `user_agent` contains information about the device and browser used. |
+| organization_id | Every organization in JumpStart has a unique ID associated with it, which is recorded when an event occurs. |
 | resource_id | Different [resources](#select-resources) have their respective IDs associated with them. These IDs are assigned when the resources are created. |
 | resource_name | Shows the name of the [resources](#select-resources) that were involved in the logged event. For example, if an app was created or deleted, it will display the name of that app. |
 | resource_type | Indicates the type of the [resources](#select-resources) involved in the logged event. |
-| user_id | Each user account in ToolJet has a unique ID associated with it, which is recorded when an event occurs. |
+| user_id | Each user account in JumpStart has a unique ID associated with it, which is recorded when an event occurs. |

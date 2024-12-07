@@ -30,7 +30,7 @@ To add an event to a checkbox component, click on the widget handle to open the 
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/checkbox/events.png" alt="ToolJet - Widget Reference - Checkbox" />
+<img className="screenshot-full" src="/img/widgets/checkbox/events.png" alt="JumpStart - Widget Reference - Checkbox" />
 
 </div>
 
@@ -54,7 +54,7 @@ Under the <b>General</b> accordion, you can set the value in the string format. 
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/tooltip.png" alt="ToolJet - Widget Reference - Checkbox" />
+<img className="screenshot-full" src="/img/tooltip.png" alt="JumpStart - Widget Reference - Checkbox" />
 
 </div>
 
@@ -62,7 +62,7 @@ Under the <b>General</b> accordion, you can set the value in the string format. 
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/checkbox/layout.png" alt="ToolJet - Widget Reference - Checkbox" />
+<img className="screenshot-full" src="/img/widgets/checkbox/layout.png" alt="JumpStart - Widget Reference - Checkbox" />
 
 </div>
 
@@ -77,7 +77,7 @@ Toggle on or off to display the widget in mobile view. You can programmatically 
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/checkbox/styles.png" alt="ToolJet - Widget Reference - Checkbox" />
+<img className="screenshot-full" src="/img/widgets/checkbox/styles.png" alt="JumpStart - Widget Reference - Checkbox" />
 
 </div>
 

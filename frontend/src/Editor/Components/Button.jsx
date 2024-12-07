@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import cx from 'classnames';
 const tinycolor = require('tinycolor2');
 import * as Icons from '@tabler/icons-react';
-import Loader from '@/ToolJetUI/Loader/Loader';
+import Loader from '@/JumpStartUI/Loader/Loader';
 
 export const Button = function Button(props) {
   const { height, properties, styles, fireEvent, id, dataCy, setExposedVariable, setExposedVariables } = props;

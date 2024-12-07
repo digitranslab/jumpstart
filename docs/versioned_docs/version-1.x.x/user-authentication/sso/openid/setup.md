@@ -14,7 +14,7 @@ NOTE: This feature is available <b>only for Enterprise edition</b>.
 
     <div style={{textAlign: 'center'}}>
 
-    ![ToolJet - SSO configs](/img/password-login/organization-menu.png)
+    ![JumpStart - SSO configs](/img/password-login/organization-menu.png)
 
     </div>
 
@@ -22,13 +22,13 @@ NOTE: This feature is available <b>only for Enterprise edition</b>.
 
     <div style={{textAlign: 'center'}}>
 
-    ![ToolJet - SSO configs](/img/sso/openid/openid-select.png)
+    ![JumpStart - SSO configs](/img/sso/openid/openid-select.png)
 
     </div>
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - SSO configs](/img/sso/openid/openid.png)
+![JumpStart - SSO configs](/img/sso/openid/openid.png)
 
 </div>
 

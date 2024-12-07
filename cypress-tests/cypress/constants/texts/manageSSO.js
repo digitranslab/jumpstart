@@ -8,7 +8,7 @@ export const ssoText = {
       "Allow users to authenticate via default SSO. Default SSO configurations can be overridden by \n workspace level SSO.",
     allowedDomainLabel: "Allowed domains",
     allowedDomainHelperText:
-      "Support multiple domains. Enter domain names separated by comma. example: tooljet.com,tooljet.io,yourorganization.com",
+      "Support multiple domains. Enter domain names separated by comma. example: jumpstart.com,jumpstart.io,yourorganization.com",
     workspaceLoginUrl: "Login URL",
     workspaceLoginHelpText: "Use this URL to login directly to this workspace",
     ssoHeader: "SSO",
@@ -19,7 +19,7 @@ export const ssoText = {
   },
   cancelButton: "Cancel",
   saveButton: "Save changes",
-  allowedDomain: "tooljet.io,gmail.com",
+  allowedDomain: "jumpstart.io,gmail.com",
   ssoToast: "Organization settings have been updated",
   ssoToast2: "updated SSO configurations",
   googleTitle: "Google",
@@ -45,7 +45,7 @@ export const ssoText = {
     "Disable password login only if you have configured SSO or else you will get locked out.",
   hostNameLabel: "Host name",
   hostNameHelpText: "Required if GitHub is self hosted",
-  hostName: "Tooljet",
+  hostName: "Jumpstart",
   signInHeader: "Sign in",
   workspaceSubHeader: (workspaceName) => {
     return `Sign in to your workspace - ${workspaceName}`;

@@ -3,10 +3,10 @@ id: ecs
 title: AWS ECS
 ---
 
-# Deploying ToolJet on Amazon ECS
+# Deploying JumpStart on Amazon ECS
 
 :::info
-You should setup a PostgreSQL database manually to be used by ToolJet.
+You should setup a PostgreSQL database manually to be used by JumpStart.
 :::
 
 You can effortlessly deploy Amazon Elastic Container Service (ECS) by utilizing a [CloudFormation template](https://aws.amazon.com/cloudformation/):
@@ -14,19 +14,19 @@ You can effortlessly deploy Amazon Elastic Container Service (ECS) by utilizing 
 To deploy all the services at once, simply employ the following template:
 
 ```
-curl -LO https://tooljet-deployments.s3.us-west-1.amazonaws.com/cloudformation/Cloudfomation-template-one-click.yml
+curl -LO https://jumpstart-deployments.s3.us-west-1.amazonaws.com/cloudformation/Cloudfomation-template-one-click.yml
 ```
 
-If you already have existing services and wish to integrate ToolJet seamlessly into your current Virtual Private Cloud (VPC) or other setups, you can opt for the following template:
+If you already have existing services and wish to integrate JumpStart seamlessly into your current Virtual Private Cloud (VPC) or other setups, you can opt for the following template:
 
 ```
-curl -LO https://tooljet-deployments.s3.us-west-1.amazonaws.com/cloudformation/Cloudformation-deploy.yml
+curl -LO https://jumpstart-deployments.s3.us-west-1.amazonaws.com/cloudformation/Cloudformation-deploy.yml
 ``` 
 
 ## Redis
 
 :::info
-ToolJet requires configuring Redis which is used for enabling multiplayer editing and for background jobs.
+JumpStart requires configuring Redis which is used for enabling multiplayer editing and for background jobs.
 :::
 
 To deploy Redis on an ECS cluster, please follow the steps outlined below.
@@ -52,7 +52,7 @@ Please note that if you already have an existing Redis setup, you can continue u
 
   </div>
 
-- Ensure that when creating a service, Redis is integrated into the same cluster where your ToolJet app will be deployed. 
+- Ensure that when creating a service, Redis is integrated into the same cluster where your JumpStart app will be deployed. 
 
   **Note: Please enable public IP**
 
@@ -62,14 +62,14 @@ Please note that if you already have an existing Redis setup, you can continue u
 
   </div>
 
-## ToolJet
+## JumpStart
 
-Follow the steps below to deploy ToolJet on a ECS cluster.
+Follow the steps below to deploy JumpStart on a ECS cluster.
 
-1. Setup a PostgreSQL database ToolJet uses a postgres database as the persistent storage for storing data related to users and apps.
-2. Create a target group and an application load balancer to route traffic onto ToolJet containers. You can [reference](https://docs.aws.amazon.com/AmazonECS/latest/userguide/create-application-load-balancer.html) AWS docs to set it up. Please note that ToolJet server exposes `/api/health`, which you can configure for health checks.
+1. Setup a PostgreSQL database JumpStart uses a postgres database as the persistent storage for storing data related to users and apps.
+2. Create a target group and an application load balancer to route traffic onto JumpStart containers. You can [reference](https://docs.aws.amazon.com/AmazonECS/latest/userguide/create-application-load-balancer.html) AWS docs to set it up. Please note that JumpStart server exposes `/api/health`, which you can configure for health checks.
 
-3. Create task definition for deploying ToolJet app as a service on your preconfigured cluster.
+3. Create task definition for deploying JumpStart app as a service on your preconfigured cluster.
 
   i. Select Fargate as launch type compatibility
    
@@ -85,9 +85,9 @@ Follow the steps below to deploy ToolJet on a ECS cluster.
   
   iv. Add container details that is shown: 
 
-  Specify your container name ex: `ToolJet`
+  Specify your container name ex: `JumpStart`
 
-  Set the image you intend to deploy. ex: `tooljet/tooljet:EE-LTS-latest`
+  Set the image you intend to deploy. ex: `digitranslab/jumpstart:EE-LTS-latest`
 
   Update port mappings at container port `3000` for tcp protocol.
 
@@ -106,12 +106,12 @@ Follow the steps below to deploy ToolJet on a ECS cluster.
   </div>
   
   :::info
-  For the minimal setup, ToolJet requires: `TOOLJET_HOST`, `PG_HOST`, `PG_DB`, `PG_USER`, `PG_PASSWORD`, `SECRET_KEY_BASE` & `LOCKBOX_MASTER_KEY` keys in the secret.
+  For the minimal setup, JumpStart requires: `JUMPSTART_HOST`, `PG_HOST`, `PG_DB`, `PG_USER`, `PG_PASSWORD`, `SECRET_KEY_BASE` & `LOCKBOX_MASTER_KEY` keys in the secret.
   
-  Read **[environment variables reference](https://docs.tooljet.com/docs/setup/env-vars)**
+  Read **[environment variables reference](https://docs.jumpstart.com/docs/setup/env-vars)**
   :::
   
-  Additionally, include the Redis environment variables within the ToolJet container mentioned above if you have followed the previous steps to create Redis.
+  Additionally, include the Redis environment variables within the JumpStart container mentioned above if you have followed the previous steps to create Redis.
   
   ```
   REDIS_HOST=<public ip of redis task>
@@ -169,9 +169,9 @@ The setup above is just a template. Feel free to update the task definition and 
 :::
 
 
-## ToolJet Database
+## JumpStart Database
 
-If you intend to use this feature, you'd have to set up and deploy PostgREST server which helps querying ToolJet Database. You can learn more about this feature [here](https://docs.tooljet.com/docs/tooljet-database).
+If you intend to use this feature, you'd have to set up and deploy PostgREST server which helps querying JumpStart Database. You can learn more about this feature [here](https://docs.jumpstart.com/docs/jumpstart-database).
 
 Follow the steps below to deploy PostgREST on a ECS cluster. 
 
@@ -191,7 +191,7 @@ Follow the steps below to deploy PostgREST on a ECS cluster.
 
   </div>
   
-  Under environmental variable please add corresponding PostgREST env variables. You can also refer [env variable](https://docs.tooljet.com/docs/setup/env-vars/#postgrest-server-optional).
+  Under environmental variable please add corresponding PostgREST env variables. You can also refer [env variable](https://docs.jumpstart.com/docs/setup/env-vars/#postgrest-server-optional).
 
   <div style={{textAlign: 'center'}}>
 
@@ -200,7 +200,7 @@ Follow the steps below to deploy PostgREST on a ECS cluster.
   </div>
 
 
-2. Create service and make sure the postgrest is within the same cluster as ToolJet app. 
+2. Create service and make sure the postgrest is within the same cluster as JumpStart app. 
 
   <div style={{textAlign: 'center'}}>
 
@@ -217,7 +217,7 @@ Follow the steps below to deploy PostgREST on a ECS cluster.
 
   </div>
 
-4. Ensure that the PostgREST service resides within the same Virtual Private Cloud (VPC), and confirm that port 3001 is included in the security group used by the ToolJet app. **Note: Please enable public IP**
+4. Ensure that the PostgREST service resides within the same Virtual Private Cloud (VPC), and confirm that port 3001 is included in the security group used by the JumpStart app. **Note: Please enable public IP**
 
   <div style={{textAlign: 'center'}}>
 
@@ -225,7 +225,7 @@ Follow the steps below to deploy PostgREST on a ECS cluster.
 
   </div>
 
-Update ToolJet deployment with the appropriate env variables [here](https://docs.tooljet.com/docs/setup/env-vars/#enable-tooljet-database--optional-) and apply the changes.
+Update JumpStart deployment with the appropriate env variables [here](https://docs.jumpstart.com/docs/setup/env-vars/#enable-jumpstart-database--optional-) and apply the changes.
 
 ## Upgrading to the Latest Version
 
@@ -241,4 +241,4 @@ If this is a new installation of the application, you may start directly with th
 
 - Users on versions earlier than v2.23.0-ee2.10.2 must first upgrade to this version before proceeding to the latest version.
 
-For specific issues or questions, refer to our **[Slack](https://tooljet.slack.com/join/shared_invite/zt-25438diev-mJ6LIZpJevG0LXCEcL0NhQ#)**.
+For specific issues or questions, refer to our **[Slack](https://jumpstart.slack.com/join/shared_invite/zt-25438diev-mJ6LIZpJevG0LXCEcL0NhQ#)**.

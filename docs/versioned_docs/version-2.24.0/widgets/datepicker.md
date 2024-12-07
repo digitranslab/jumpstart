@@ -8,7 +8,7 @@ The Datepicker widget allows users to select a single value for date and time fr
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/datepicker/date-picker.png" alt="ToolJet - Widget Reference - Date picker" />
+<img className="screenshot-full" src="/img/widgets/datepicker/date-picker.png" alt="JumpStart - Widget Reference - Date picker" />
 
 </div>
 
@@ -76,7 +76,7 @@ Under the <b>General</b> accordion, you can set the value in the string format. 
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/tooltip.png" alt="ToolJet - Widget Reference - Date picker" />
+<img className="screenshot-full" src="/img/tooltip.png" alt="JumpStart - Widget Reference - Date picker" />
 
 </div>
 

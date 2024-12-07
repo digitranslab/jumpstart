@@ -71,7 +71,7 @@ const MyCustomComponent = ({ data, updateData, runQuery }) => {
   );
 };
 
-const ConnectedComponent = Tooljet.connectComponent(MyCustomComponent);
+const ConnectedComponent = Jumpstart.connectComponent(MyCustomComponent);
 
 ReactDOM.render(<ConnectedComponent />, document.body);
 ```

@@ -37,7 +37,7 @@ To create a Foreign Key relationship, follow these steps:
  - Under the Actions section, select the desired action to be performed when the referenced row is updated or deleted.
  - Click on the `Create` button to create the Foreign Key relationship.
 
-<img className="screenshot-full" src="/img/v2-beta/database/ux2/create-fk.gif" alt="ToolJet database"/>
+<img className="screenshot-full" src="/img/v2-beta/database/ux2/create-fk.gif" alt="JumpStart database"/>
 
 </div>
 
@@ -45,7 +45,7 @@ To create a Foreign Key relationship, follow these steps:
 
 ## Foreign Key Actions
 
-When creating a foreign key relationship, ToolJet Database lets you choose from several actions to be performed on the source row when the referenced row in the target table is updated or deleted.
+When creating a foreign key relationship, JumpStart Database lets you choose from several actions to be performed on the source row when the referenced row in the target table is updated or deleted.
 
 ### On Update
 
@@ -75,17 +75,17 @@ The foreign key constraint ensures referential integrity between the source and 
 - When creating a new row in the source table the column with the foreign key relation will have a dropdown with the unique values present in the target table. This ensures that the data in the source table is always consistent with the data in the target table. 
 - On the bottom of the dropdown, there is a button to **Open referenced table** which will take you to the target table.
 
-<img className="screenshot-full" src="/img/v2-beta/database/ux2/create-new-row-fk.png" alt="ToolJet database" />
+<img className="screenshot-full" src="/img/v2-beta/database/ux2/create-new-row-fk.png" alt="JumpStart database" />
 
 - When editing the value of a foreign key cell in an existing row of the source table, the dropdown will show the unique values present in the target table. This ensures that even when the data in the source table is being updated, it is always consistent with the data in the target table.
 
-<img className="screenshot-full" src="/img/v2-beta/database/ux2/edit-row-fk.png" alt="ToolJet database" style={{marginBottom:'15px'}}/>
+<img className="screenshot-full" src="/img/v2-beta/database/ux2/edit-row-fk.png" alt="JumpStart database" style={{marginBottom:'15px'}}/>
 
 ### Example
 
 Let's consider an example where we want to create a foreign key relationship between the `Orders` and `Customers` tables in an e-commerce application.
 
-First, create the following two tables in the ToolJet Database:
+First, create the following two tables in the JumpStart Database:
 
 **Customers**
 

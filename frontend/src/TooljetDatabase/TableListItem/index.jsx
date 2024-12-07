@@ -1,9 +1,9 @@
 import React, { useState, useContext, useCallback, useEffect } from 'react';
 import cx from 'classnames';
 import { toast } from 'react-hot-toast';
-import { tooljetDatabaseService, appsService } from '@/_services';
+import { jumpstartDatabaseService, appsService } from '@/_services';
 import { ListItemPopover } from './ActionsPopover';
-import { TooljetDatabaseContext } from '../index';
+import { JumpstartDatabaseContext } from '../index';
 import { ToolTip } from '@/_components';
 import Drawer from '@/_ui/Drawer';
 import EditTableForm from '../Forms/TableForm';
@@ -23,7 +23,7 @@ export const ListItem = ({ active, onClick, text = '', onDeleteCallback }) => {
     pageSize,
     setColumns,
     setForeignKeys,
-  } = useContext(TooljetDatabaseContext);
+  } = useContext(JumpstartDatabaseContext);
   const [isEditTableDrawerOpen, setIsEditTableDrawerOpen] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
   const [showDropDownMenu, setShowDropDownMenu] = useState(false);
@@ -38,7 +38,7 @@ export const ListItem = ({ active, onClick, text = '', onDeleteCallback }) => {
   const handleExportTable = () => {
     appsService
       .exportResource({
-        tooljet_database: [{ table_id: selectedTable.id }],
+        jumpstart_database: [{ table_id: selectedTable.id }],
         organization_id: organizationId,
       })
       .then((data) => {
@@ -65,7 +65,7 @@ export const ListItem = ({ active, onClick, text = '', onDeleteCallback }) => {
   const handleDeleteTable = async () => {
     const shouldDelete = confirm(`Are you sure you want to delete the table "${text}"?`);
     if (shouldDelete) {
-      const { error } = await tooljetDatabaseService.deleteTable(organizationId, text);
+      const { error } = await jumpstartDatabaseService.deleteTable(organizationId, text);
 
       if (error) {
         toast.error(error?.message ?? `Failed to delete table "${text}"`);
@@ -104,7 +104,7 @@ export const ListItem = ({ active, onClick, text = '', onDeleteCallback }) => {
   };
 
   const isEditTable = (tableName) => {
-    tooljetDatabaseService.viewTable(organizationId, tableName).then(({ data = [], error }) => {
+    jumpstartDatabaseService.viewTable(organizationId, tableName).then(({ data = [], error }) => {
       if (error) {
         toast.error(error?.message ?? `Error fetching columns for table "${selectedTable}"`);
         return;

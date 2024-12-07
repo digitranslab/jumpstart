@@ -6,7 +6,7 @@ title: Button
 
 Button component can be used to trigger an action. It can be used to submit a form, navigate to another page, or trigger a query.
 
-<iframe height="500" src="https://www.youtube.com/embed/zw3yxC7WUOg" title="Tooljet Button Widget" frameborder="0" allowfullscreen width="100%"></iframe>
+<iframe height="500" src="https://www.youtube.com/embed/zw3yxC7WUOg" title="Jumpstart Button Widget" frameborder="0" allowfullscreen width="100%"></iframe>
 
 ## Properties
 
@@ -22,7 +22,7 @@ Events are actions that can be triggered programmatically when the user interact
 | Event      | Description |
 | :----------- | :----------- |
 | **On click** | The On click event is triggered when the button is clicked. |
-| **On hover** | The On hover event is triggered when the mouse cursor is moved over the button. Just like any other event on ToolJet, you can set multiple handlers for on click event. |
+| **On hover** | The On hover event is triggered when the mouse cursor is moved over the button. Just like any other event on JumpStart, you can set multiple handlers for on click event. |
 
 :::info
 Check [Action Reference](/docs/category/actions-reference) docs to get the detailed information about all the **Actions**.
@@ -35,7 +35,7 @@ A Tooltip is often used to display additional information when the user hovers t
 
 <div style={{textAlign: 'left'}}>
 
-<img className="screenshot-full" src="/img/widgets/button/buttontooltip.png" alt="ToolJet - Widget Reference - Tooltip" />
+<img className="screenshot-full" src="/img/widgets/button/buttontooltip.png" alt="JumpStart - Widget Reference - Tooltip" />
 
 </div>
 

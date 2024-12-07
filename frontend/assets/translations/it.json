@@ -41,7 +41,7 @@
     "viewer": "Spiacente! L'app è al momento in fase di manutenzione.",
     "app": {
         "updateAvailable": "Aggiornamento disponibilee",
-        "newVersionReleased": "È disponibile una nuova versione di ToolJet.",
+        "newVersionReleased": "È disponibile una nuova versione di JumpStart.",
         "readReleaseNotes": "Leggi le note di rilascio e gli aggiornamenti",
         "skipVersion": "Salta questa versione"
     },
@@ -53,17 +53,17 @@
     },
     "slack": {
         "authorize": "Autorizza",
-        "connectToolJetToSlack": "ToolJet può connettersi a Slack ed elencare gli utenti, inviare messaggi, ecc. Selezionare i permessi desiderati.",
+        "connectJumpStartToSlack": "JumpStart può connettersi a Slack ed elencare gli utenti, inviare messaggi, ecc. Selezionare i permessi desiderati.",
         "chatWrite": "chat:scrivi",
-        "listUsersAndSendMessage": "L'applicazione ToolJet sarà in grado di elencare gli utenti e di inviare messaggi agli utenti e al canale.",
+        "listUsersAndSendMessage": "L'applicazione JumpStart sarà in grado di elencare gli utenti e di inviare messaggi agli utenti e al canale.",
         "connectSlack": "Connetti a Slack"
     },
     "googleSheets": {
         "readOnly": "Sola Lettura",
-        "enableReadAndWrite": "Se volete che le vostre applicazioni ToolJet modifichino i vostri fogli di lavoro su Google Sheets, assicuratevi di selezionare gli accessi di lettura e scrittura.",
-        "readDataFromSheets": "Le applicazioni ToolJet possono leggere i dati solo dal foglio di lavoro Google Sheets",
+        "enableReadAndWrite": "Se volete che le vostre applicazioni JumpStart modifichino i vostri fogli di lavoro su Google Sheets, assicuratevi di selezionare gli accessi di lettura e scrittura.",
+        "readDataFromSheets": "Le applicazioni JumpStart possono leggere i dati solo dal foglio di lavoro Google Sheets",
         "readWrite": "Lettura e Scrittura",
-        "readModifySheets": "Le applicazioni ToolJet possono leggere i dati dai fogli di lavoro, modificarli e molto altro ancora.",
+        "readModifySheets": "Le applicazioni JumpStart possono leggere i dati dai fogli di lavoro, modificarli e molto altro ancora.",
         "toGoogleSheets": "vai a Google Sheets"
     },
     "profile": {
@@ -77,7 +77,7 @@
         "dontHaveAccount": "Non disponi ancora di un account?",
         "signIn": "Accedi",
         "signUp": "Registrati",
-        "createToolJetAccount": "Crea un acocunt ToolJet",
+        "createJumpStartAccount": "Crea un acocunt JumpStart",
         "enterBusinessEmail": "Inserisci la tua email di lavoro",
         "alreadyHaveAnAccount": "Hai già un account?",
         "password": "Password",
@@ -264,7 +264,7 @@
                         "newAccountWillBeCreated": "Verrà creato un nuovo account per il primo accesso SSO dell'utente.",
                         "allowedDomains": "Domini consentiti",
                         "enterDomains": "Inserisci domini",
-                        "supportMultiDomains": "Supporta moltepici domini. Inserire i nomi di dominio separati da una virgola. Esempio: tooljet.com,tooljet.io,yourorganization.com",
+                        "supportMultiDomains": "Supporta moltepici domini. Inserire i nomi di dominio separati da una virgola. Esempio: jumpstart.com,jumpstart.io,yourorganization.com",
                         "loginUrl": "URL di accesso",
                         "workspaceLogin": "Utilizza questo URL per accedere direttamente a questo spazio di lavoro",
                         "allowDefaultSso": "Consenti SSO predefinitoO",
@@ -353,8 +353,8 @@
             "removeFromFolder": "Rimuovi dalla cartella"
         },
         "blankPage": {
-            "welcomeToToolJet": "Benvenuti su ToolJet!",
-            "getStartedCreateNewApp": "Inizia creando una nuova applicazione o creando un'applicazione utilizzando un modello della ToolJet Library.",
+            "welcomeToJumpStart": "Benvenuti su JumpStart!",
+            "getStartedCreateNewApp": "Inizia creando una nuova applicazione o creando un'applicazione utilizzando un modello della JumpStart Library.",
             "importApplication": "Importa un'applicazione"
         },
         "foldersSection": {
@@ -414,11 +414,11 @@
         "and": "e"
     },
     "onBoarding": {
-        "finishToolJetInstallation": "Completa l'installazione di ToolJet",
+        "finishJumpStartInstallation": "Completa l'installazione di JumpStart",
         "organization": "Organizzazione",
         "name": "Nome",
         "email": "Email",
-        "receiveUpdatesFromToolJet": "Riceverete aggiornamenti dal team di ToolJet (1-2 email al mese, non facciamo spam).",
+        "receiveUpdatesFromJumpStart": "Riceverete aggiornamenti dal team di JumpStart (1-2 email al mese, non facciamo spam).",
         "finishSetup": "Completa la configurazione",
         "skip": "Salta"
     },

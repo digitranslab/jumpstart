@@ -13,7 +13,7 @@ This action allows you to specify a `key` and its corresponding `value` to be st
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - Action reference -Set local storage sample app](/img/actions/localstorage/1.png)
+![JumpStart - Action reference -Set local storage sample app](/img/actions/localstorage/1.png)
 
 </div>
 
@@ -21,7 +21,7 @@ This action allows you to specify a `key` and its corresponding `value` to be st
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - Action reference -Set local storage sample app](/img/actions/localstorage/2.png)
+![JumpStart - Action reference -Set local storage sample app](/img/actions/localstorage/2.png)
 
 </div>
 
@@ -29,7 +29,7 @@ This action allows you to specify a `key` and its corresponding `value` to be st
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - Action reference -Set local storage sample app](/img/actions/localstorage/3.png)
+![JumpStart - Action reference -Set local storage sample app](/img/actions/localstorage/3.png)
 
 </div>
 
@@ -40,7 +40,7 @@ This action allows you to specify a `key` and its corresponding `value` to be st
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - Action reference -Set local storage sample app](/img/actions/localstorage/5.png)
+![JumpStart - Action reference -Set local storage sample app](/img/actions/localstorage/5.png)
 
 </div>
 
@@ -49,7 +49,7 @@ This action allows you to specify a `key` and its corresponding `value` to be st
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - Action reference -Set local storage sample app](/img/actions/localstorage/6.png)
+![JumpStart - Action reference -Set local storage sample app](/img/actions/localstorage/6.png)
 
 </div>
 

@@ -3,21 +3,21 @@ id: graphql
 title: GraphQL
 ---
 
-ToolJet can establish connections with GraphQL endpoints, enabling the execution of queries and mutations.
+JumpStart can establish connections with GraphQL endpoints, enabling the execution of queries and mutations.
 
 <div style={{paddingTop:'24px'}}>
 
 ## Connection
 
-To establish a connection with the GraphQL global datasource, you can either click on the **+ Add new global datasource** button located on the query panel or navigate to the **[Data Sources](/docs/data-sources/overview)** page through the ToolJet dashboard.
+To establish a connection with the GraphQL global datasource, you can either click on the **+ Add new global datasource** button located on the query panel or navigate to the **[Data Sources](/docs/data-sources/overview)** page through the JumpStart dashboard.
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/datasource-reference/graphql/graphgds-v2.png" alt="ToolJet - Data source - GraphQL" style={{marginBottom:'15px'}}/>
+<img className="screenshot-full" src="/img/datasource-reference/graphql/graphgds-v2.png" alt="JumpStart - Data source - GraphQL" style={{marginBottom:'15px'}}/>
 
 </div>
 
-ToolJet requires the following to connect to a GraphQL datasource:
+JumpStart requires the following to connect to a GraphQL datasource:
 
 - **URL**: URL of the GraphQL endpoint.
 - **Headers**: Any headers the GraphQL source requires.
@@ -48,7 +48,7 @@ ToolJet requires the following to connect to a GraphQL datasource:
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/datasource-reference/graphql/headers-v2.png" alt="ToolJet - Data source - GraphQl" style={{marginBottom:'15px'}}/>
+<img className="screenshot-full" src="/img/datasource-reference/graphql/headers-v2.png" alt="JumpStart - Data source - GraphQl" style={{marginBottom:'15px'}}/>
 
 </div>
 

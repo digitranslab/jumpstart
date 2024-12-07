@@ -5,11 +5,11 @@ title: Local Data Sources Migration Guide
 
 ---
 
-Starting with ToolJet version 3.0.0, **Local Data Sources** have been fully discontinued. These were deprecated in earlier versions, and now support for them has been completely removed. This guide will help you migrate your queries that were connected to Local Data Sources to the new **Data Sources**.
+Starting with JumpStart version 3.0.0, **Local Data Sources** have been fully discontinued. These were deprecated in earlier versions, and now support for them has been completely removed. This guide will help you migrate your queries that were connected to Local Data Sources to the new **Data Sources**.
 
-## Migration Process for Existing ToolJet 3.0.0 Users
+## Migration Process for Existing JumpStart 3.0.0 Users
 
-After upgrading to ToolJet 3.0.0, any queries connected to Local Data Sources will display an error message indicating that the Local Data Source is no longer supported. Follow these steps to resolve this issue:
+After upgrading to JumpStart 3.0.0, any queries connected to Local Data Sources will display an error message indicating that the Local Data Source is no longer supported. Follow these steps to resolve this issue:
 
 ## Step-by-Step Migration Guide:
 

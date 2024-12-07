@@ -64,11 +64,11 @@ To release a version:
 
 :::tip 
 
-ToolJet will block editing of the `Released version` of an app and will display a prompt to create a new version to make the changes. This is to prevent accidentally pushing an unfinished app to the live version.
+JumpStart will block editing of the `Released version` of an app and will display a prompt to create a new version to make the changes. This is to prevent accidentally pushing an unfinished app to the live version.
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - Managing Users and Groups](/img/tutorial/versioning-and-release/prompt.png)
+![JumpStart - Managing Users and Groups](/img/tutorial/versioning-and-release/prompt.png)
 
 </div>
 

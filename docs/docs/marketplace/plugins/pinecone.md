@@ -3,7 +3,7 @@ id: marketplace-plugin-pinecone
 title: Pinecone
 ---
 
-ToolJet integrates with Pinecone to utilize its vector database capabilities. This integration enables ToolJet to perform vector operations such as updating, querying, and managing vector embeddings in Pinecone indexes.
+JumpStart integrates with Pinecone to utilize its vector database capabilities. This integration enables JumpStart to perform vector operations such as updating, querying, and managing vector embeddings in Pinecone indexes.
 
 :::note
 Before following this guide, it is assumed that you have already completed the process of **[Using Marketplace plugins](/docs/marketplace/marketplace-overview#using-marketplace-plugins)**.
@@ -15,7 +15,7 @@ For connecting to Pinecone, the following credential is required:
 
 - **API Key**: API key for Pinecone can be generated from the [Pinecone Console](https://app.pinecone.io/organizations/-/projects/-/keys).
 
-<img className="screenshot-full" src="/img/marketplace/plugins/pinecone/connection.png" alt="Configuring Pinecone in ToolJet" />
+<img className="screenshot-full" src="/img/marketplace/plugins/pinecone/connection.png" alt="Configuring Pinecone in JumpStart" />
 
 
 ## Supported Operations

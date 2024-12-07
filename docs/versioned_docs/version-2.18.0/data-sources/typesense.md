@@ -4,12 +4,12 @@ title: TypeSense
 ---
 
 # TypeSense
-ToolJet can connect to your TypeSense deployment to read and write data.
+JumpStart can connect to your TypeSense deployment to read and write data.
 
 ## Connection 
-Please make sure the host/IP of the TypeSense deployment is accessible from your VPC if you have self-hosted ToolJet. If you are using ToolJet cloud, please **whitelist our IP**.
+Please make sure the host/IP of the TypeSense deployment is accessible from your VPC if you have self-hosted JumpStart. If you are using JumpStart cloud, please **whitelist our IP**.
 
-ToolJet requires the following to connect to your TypeSense deployment: 
+JumpStart requires the following to connect to your TypeSense deployment: 
 - **Host**
 - **Port**
 - **API Key**

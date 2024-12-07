@@ -1,4 +1,4 @@
-import { QueryResult } from '@tooljet-plugins/common';
+import { QueryResult } from '@jumpstart-plugins/common';
 
 // eslint-disable-next-line @typescript-eslint/ban-types
 export type SourceOptions = {

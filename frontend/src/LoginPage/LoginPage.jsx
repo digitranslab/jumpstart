@@ -132,7 +132,7 @@ class LoginPageComponent extends React.Component {
     const signUpCTA = workspaceSignUpEnabled ? 'Sign up' : 'Create an account';
     const signupText = workspaceSignUpEnabled
       ? this.props.t('loginSignupPage.newToWorkspace', `New to this workspace?`)
-      : this.props.t('loginSignupPage.newToTooljet', ` New to ${this.whiteLabelText}?`, {
+      : this.props.t('loginSignupPage.newToJumpstart', ` New to ${this.whiteLabelText}?`, {
           whiteLabelText: this.whiteLabelText,
         });
     const signUpUrl = `/signup${this.paramOrganizationSlug ? `/${this.paramOrganizationSlug}` : ''}${
@@ -186,14 +186,14 @@ class LoginPageComponent extends React.Component {
                                   })}
                                   data-cy="sign-in-sub-header"
                                 >
-                                  {this.props.t('newToTooljet', signupText)}
+                                  {this.props.t('newToJumpstart', signupText)}
                                   <Link
                                     to={signUpUrl}
                                     tabIndex="-1"
                                     style={{ marginLeft: '4px' }}
                                     data-cy="create-an-account-link"
                                   >
-                                    {this.props.t('createToolJetAccount', signUpCTA)}
+                                    {this.props.t('createJumpStartAccount', signUpCTA)}
                                   </Link>
                                 </div>
                               )}

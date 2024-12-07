@@ -14,7 +14,7 @@ import { useEditorStore } from '@/_stores/editorStore';
 import DataSourceIcon from '@/Editor/QueryManager/Components/DataSourceIcon';
 
 const staticDataSources = [
-  { kind: 'tooljetdb', id: 'null', name: 'Tooljet Database' },
+  { kind: 'jumpstartdb', id: 'null', name: 'Jumpstart Database' },
   { kind: 'restapi', id: 'null', name: 'REST API' },
   { kind: 'runjs', id: 'runjs', name: 'Run JavaScript code' },
   { kind: 'runpy', id: 'runpy', name: 'Run Python code' },

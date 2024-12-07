@@ -8,7 +8,7 @@ Filepicker widget allows the user to drag and drop files or upload files by brow
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/filepicker/picker.png" alt="ToolJet - Widget Reference - File Picker" />
+<img className="screenshot-full" src="/img/widgets/filepicker/picker.png" alt="JumpStart - Widget Reference - File Picker" />
 
 </div>
 
@@ -20,7 +20,7 @@ Filepicker widget allows the user to drag and drop files or upload files by brow
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/filepicker/file-type.gif" alt="ToolJet - Widget Reference - File Picker" />
+<img className="screenshot-full" src="/img/widgets/filepicker/file-type.gif" alt="JumpStart - Widget Reference - File Picker" />
 
 </div>
 
@@ -32,7 +32,7 @@ Filepicker widget allows the user to drag and drop files or upload files by brow
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/filepicker/events.png" alt="ToolJet - Widget Reference - File Picker" />
+<img className="screenshot-full" src="/img/widgets/filepicker/events.png" alt="JumpStart - Widget Reference - File Picker" />
 
 </div>
 
@@ -96,7 +96,7 @@ Any file that does not have a size in the range of `Max size limit` and `Min siz
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/filepicker/options.png" alt="ToolJet - Widget Reference - File Picker" />
+<img className="screenshot-full" src="/img/widgets/filepicker/options.png" alt="JumpStart - Widget Reference - File Picker" />
 
 </div>
 
@@ -122,7 +122,7 @@ Under the <b>General</b> accordion, you can set the value in the string format. 
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/tooltip.png" alt="ToolJet - Widget Reference - File Picker" />
+<img className="screenshot-full" src="/img/tooltip.png" alt="JumpStart - Widget Reference - File Picker" />
 
 </div>
 
@@ -130,7 +130,7 @@ Under the <b>General</b> accordion, you can set the value in the string format. 
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/filepicker/layout.png" alt="ToolJet - Widget Reference - File Picker" />
+<img className="screenshot-full" src="/img/widgets/filepicker/layout.png" alt="JumpStart - Widget Reference - File Picker" />
 
 </div>
 
@@ -145,7 +145,7 @@ Toggle on or off to display the widget in mobile view. You can programmatically 
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/filepicker/styles.png" alt="ToolJet - Widget Reference - File Picker" />
+<img className="screenshot-full" src="/img/widgets/filepicker/styles.png" alt="JumpStart - Widget Reference - File Picker" />
 
 </div>
 

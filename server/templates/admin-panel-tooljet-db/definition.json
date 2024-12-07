@@ -1,5 +1,5 @@
 {
-  "tooljet_database": [
+  "jumpstart_database": [
     {
       "id": "7fdc48d2-6aee-47a8-8e6c-ab6a920a0fc6",
       "table_name": "tj_admin_panel",
@@ -99,7 +99,7 @@
         "appV2": {
           "id": "3469c521-8e1e-41e3-9b65-5fff3a58f65b",
           "type": "front-end",
-          "name": "Admin Panel (ToolJet Database)",
+          "name": "Admin Panel (JumpStart Database)",
           "slug": "3469c521-8e1e-41e3-9b65-5fff3a58f65b",
           "isPublic": false,
           "isMaintenanceOn": false,
@@ -25927,7 +25927,7 @@
               "parent": "21cc53fd-0fb4-41af-bf81-679fc998b58b",
               "properties": {
                 "text": {
-                  "value": "ToolJet admin panel"
+                  "value": "JumpStart admin panel"
                 },
                 "loadingState": {
                   "value": "{{false}}"
@@ -30282,8 +30282,8 @@
             },
             {
               "id": "87ba6c71-17ab-4265-a99b-9ab20a149949",
-              "name": "tooljetdbdefault",
-              "kind": "tooljetdb",
+              "name": "jumpstartdbdefault",
+              "kind": "jumpstartdb",
               "type": "static",
               "pluginId": null,
               "appVersionId": "f7e47a4f-dda8-488b-82e5-3ad78bc316c0",
@@ -54417,5 +54417,5 @@
       }
     }
   ],
-  "tooljet_version": "2.38.0-ee2.15.28-cloud2.3.11"
+  "jumpstart_version": "2.38.0-ee2.15.28-cloud2.3.11"
 }

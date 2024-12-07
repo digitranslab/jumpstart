@@ -3,7 +3,7 @@ id: overview
 title: Overview
 ---
 
-This guide explains how to perform server-side operations on a table component in ToolJet.  While most databases offer support for server-side operations, the specific implementation can vary depending on the database. For the purposes of this guide, PostgreSQL will be used as the data source to demonstrate the process.
+This guide explains how to perform server-side operations on a table component in JumpStart.  While most databases offer support for server-side operations, the specific implementation can vary depending on the database. For the purposes of this guide, PostgreSQL will be used as the data source to demonstrate the process.
 
 <div style={{paddingTop:'24px'}}>
 
@@ -29,13 +29,13 @@ Server-side operations refer to tasks executed on the server, such as data fetch
 
 ## Supported Operations
 
-Following server side operations can be performed on a Table in ToolJet:
+Following server side operations can be performed on a Table in JumpStart:
 
 - [Search](/docs/widgets/table/serverside-operations/search/)
 - [Sort](/docs/widgets/table/serverside-operations/sort/)
 - [Filter](/docs/widgets/table/serverside-operations/filter/)
 - [Pagination](/docs/widgets/table/serverside-operations/pagination/)
 
-<img className="screenshot-full" src="/img/widgets/table/serverside-operations/serverside-operations.png" alt="Serverside Operations Present for Table Component in ToolJet" />
+<img className="screenshot-full" src="/img/widgets/table/serverside-operations/serverside-operations.png" alt="Serverside Operations Present for Table Component in JumpStart" />
 
 </div>

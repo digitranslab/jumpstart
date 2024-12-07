@@ -8,7 +8,7 @@ Code Editor widget is a versatile text editor for editing code and supports seve
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/code-editor/editor.png" alt="ToolJet - Widget Reference - Code editor" />
+<img className="screenshot-full" src="/img/widgets/code-editor/editor.png" alt="JumpStart - Widget Reference - Code editor" />
 
 </div>
 

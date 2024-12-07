@@ -1,6 +1,6 @@
 import React from 'react';
 
-const TooljetLogoText = ({ fill = '#11181C', width = '15', className = '', viewBox = '0 0 25 25', style }) => (
+const JumpstartLogoText = ({ fill = '#11181C', width = '15', className = '', viewBox = '0 0 25 25', style }) => (
   <svg xmlns="http://www.w3.org/2000/svg" width="64" height="16" viewBox="0 0 64 16" fill="none">
     <path d="M4.55 14.7506V3.80059H0.5V1.85059H10.85V3.95059H6.8V14.9006H4.55V14.7506Z" fill={fill} />
     <path
@@ -27,4 +27,4 @@ const TooljetLogoText = ({ fill = '#11181C', width = '15', className = '', viewB
   </svg>
 );
 
-export default TooljetLogoText;
+export default JumpstartLogoText;

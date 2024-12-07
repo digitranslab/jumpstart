@@ -17,7 +17,7 @@ export class SeedsService {
     await this.entityManager.transaction(async (manager) => {
       const defaultUser = await manager.findOne(User, {
         where: {
-          email: 'dev@tooljet.io',
+          email: 'dev@jumpstart.io',
         },
       });
 
@@ -39,7 +39,7 @@ export class SeedsService {
       const user = manager.create(User, {
         firstName: 'The',
         lastName: 'Developer',
-        email: 'dev@tooljet.io',
+        email: 'dev@jumpstart.io',
         password: 'password',
         defaultOrganizationId: organization.id,
         status: USER_STATUS.ACTIVE,
@@ -50,9 +50,9 @@ export class SeedsService {
 
       // Create test user
       const testUser = manager.create(User, {
-        firstName: 'ToolJet',
+        firstName: 'JumpStart',
         lastName: 'User',
-        email: 'test@tooljet.com',
+        email: 'test@jumpstart.com',
         password: 'password',
         defaultOrganizationId: organization.id,
         status: USER_STATUS.ACTIVE,
@@ -91,7 +91,7 @@ export class SeedsService {
       this.addToGroup(manager, testUser);
 
       console.log(
-        'Seeding complete. Use default credentials to login.\n' + 'email: dev@tooljet.io\n' + 'password: password'
+        'Seeding complete. Use default credentials to login.\n' + 'email: dev@jumpstart.io\n' + 'password: password'
       );
     });
   }

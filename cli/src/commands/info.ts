@@ -20,7 +20,7 @@ function getBinaryVersion(binaryName: string) {
 }
 
 export class InfoCommand extends Command {
-  static description = 'This command returns the information about where tooljet is being run';
+  static description = 'This command returns the information about where jumpstart is being run';
 
   async run() {
     console.log(`
@@ -32,7 +32,7 @@ export class InfoCommand extends Command {
       node: ${chalk.green(process.versions.node)}
       npm: ${chalk.green(getBinaryVersion('npm'))}
     Relevant packages:
-      tooljet: ${chalk.green(getPackageVersion())}
+      jumpstart: ${chalk.green(getPackageVersion())}
     `);
   }
 }

@@ -11,7 +11,7 @@ WORKDIR /app
 
 COPY ./package.json ./package.json
 
-# Building ToolJet plugins
+# Building JumpStart plugins
 COPY ./plugins/package.json ./plugins/package-lock.json ./plugins/
 RUN npm --prefix plugins install
 COPY ./plugins/ ./plugins/
@@ -19,7 +19,7 @@ ENV NODE_ENV=production
 RUN npm --prefix plugins run build
 RUN npm --prefix plugins prune --production
 
-# Building ToolJet server
+# Building JumpStart server
 COPY ./server/package.json ./server/package-lock.json ./server/
 RUN npm --prefix server install --only=production
 COPY ./server/ ./server/
@@ -46,8 +46,8 @@ RUN apt-get update && apt-get install -y postgresql-client freetds-dev libaio1 w
 
 # Install Instantclient Basic Light Oracle and Dependencies
 WORKDIR /opt/oracle
-RUN wget https://tooljet-plugins-production.s3.us-east-2.amazonaws.com/marketplace-assets/oracledb/instantclients/instantclient-basiclite-linuxx64.zip && \
-    wget https://tooljet-plugins-production.s3.us-east-2.amazonaws.com/marketplace-assets/oracledb/instantclients/instantclient-basiclite-linux.x64-11.2.0.4.0.zip && \
+RUN wget https://jumpstart-plugins-production.s3.us-east-2.amazonaws.com/marketplace-assets/oracledb/instantclients/instantclient-basiclite-linuxx64.zip && \
+    wget https://jumpstart-plugins-production.s3.us-east-2.amazonaws.com/marketplace-assets/oracledb/instantclients/instantclient-basiclite-linux.x64-11.2.0.4.0.zip && \
     unzip instantclient-basiclite-linuxx64.zip && rm -f instantclient-basiclite-linuxx64.zip && \
     unzip instantclient-basiclite-linux.x64-11.2.0.4.0.zip && rm -f instantclient-basiclite-linux.x64-11.2.0.4.0.zip && \
     cd /opt/oracle/instantclient_21_10 && rm -f *jdbc* *occi* *mysql* *mql1* *ipc1* *jar uidrvci genezi adrci && \

@@ -3,9 +3,9 @@ id: marketplace
 title: Marketplace
 ---
 
-# ToolJet Marketplace
+# JumpStart Marketplace
 
-ToolJet marketplace for plugins will allow users to install the custom plugins (datasources) for their ToolJet instances. This will allow ToolJet users to build their own custom plugins according to their requirements and then easily connect them to ToolJet.
+JumpStart marketplace for plugins will allow users to install the custom plugins (datasources) for their JumpStart instances. This will allow JumpStart users to build their own custom plugins according to their requirements and then easily connect them to JumpStart.
 
 ## Enabling the marketplace for your instance
 
@@ -15,7 +15,7 @@ Users must add the following environment variable to the [`.env`](/docs/setup/en
 ENABLE_MARKETPLACE_FEATURE=true
 ```
 
-Once the marketplace feature is enabled, users can open the **Marketplace** page from the dropdown on the navbar of the dashboard. Users can also directly access the marketplace using the URL: `https://tooljet.yourcompany.com/integrations`
+Once the marketplace feature is enabled, users can open the **Marketplace** page from the dropdown on the navbar of the dashboard. Users can also directly access the marketplace using the URL: `https://jumpstart.yourcompany.com/integrations`
 
 :::info
 The user logged-in should be the **Administrator** to access the marketplace page.
@@ -23,7 +23,7 @@ The user logged-in should be the **Administrator** to access the marketplace pag
 
 ## Installing a plugin
 
-When you [create a plugin](#creating-a-marketplace-plugin) using the [tooljet cli](https://www.npmjs.com/package/@tooljet/cli), an object is created in the **plugins.json** (`ToolJet/server/src/assets/marketplace/plugins.json`) file for that particular plugin.
+When you [create a plugin](#creating-a-marketplace-plugin) using the [jumpstart cli](https://www.npmjs.com/package/@jumpstart/cli), an object is created in the **plugins.json** (`JumpStart/server/src/assets/marketplace/plugins.json`) file for that particular plugin.
 
 Here's an example of an entry created for AWS S3 plugin:
 
@@ -35,7 +35,7 @@ Here's an example of an entry created for AWS S3 plugin:
     "version": "1.0.0",
     "id": "s3",
     "repo": "",
-    "author": "Tooljet",
+    "author": "Jumpstart",
     "timestamp": "Mon, 31 Oct 2022 11:02:10 GMT"
   }
 ]
@@ -59,7 +59,7 @@ Once done, you'll find the plugin on the marketplace page.
 
 ## Removing a plugin
 
-To remove a plugin from the marketplace, you can simply remove the object entry of the plugin from the **plugins.json**(`ToolJet/server/src/assets/marketplace/plugins.json`) and then re-run the build commands.
+To remove a plugin from the marketplace, you can simply remove the object entry of the plugin from the **plugins.json**(`JumpStart/server/src/assets/marketplace/plugins.json`) and then re-run the build commands.
 
 ## Using a plugin as datasource
 
@@ -87,17 +87,17 @@ The flow for installing and using a plugin as a datasource is really simple. The
 
 ## Creating a marketplace plugin
 
-The steps for creating a Marketplace plugin are similar to those for creating [plugins for ToolJet](/docs/1.x.x/contributing-guide/tutorials/creating-a-plugin/) except that for a Marketplace plugin, the user will have to type `yes` when prompted `Is it a marketplace integration?` in the `tooljet command line`.
+The steps for creating a Marketplace plugin are similar to those for creating [plugins for JumpStart](/docs/1.x.x/contributing-guide/tutorials/creating-a-plugin/) except that for a Marketplace plugin, the user will have to type `yes` when prompted `Is it a marketplace integration?` in the `jumpstart command line`.
 
 The steps to create a marketplace plugin are:
 
-- Install [tooljet-cli](https://www.npmjs.com/package/@tooljet/cli):
+- Install [jumpstart-cli](https://www.npmjs.com/package/@jumpstart/cli):
   ```bash
-  npm i -g @tooljet/cli
+  npm i -g @jumpstart/cli
   ```
 - Bootstrap a new plugin using cli
   ```bash
-  tooljet plugin create bigquery
+  jumpstart plugin create bigquery
   ```
 - On the CLI, you'll be prompted to enter a display name:
   ```bash
@@ -116,5 +116,5 @@ The steps to create a marketplace plugin are:
   ```
 
 :::info
-For more information on **[creating plugin for ToolJet](/docs/contributing-guide/tutorials/creating-a-plugin)**, please see the documentation on creating plugins.
+For more information on **[creating plugin for JumpStart](/docs/contributing-guide/tutorials/creating-a-plugin)**, please see the documentation on creating plugins.
 :::

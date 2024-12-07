@@ -3,19 +3,19 @@ id: typesense
 title: TypeSense
 ---
 
-ToolJet can connect to your TypeSense deployment to read and write data.
+JumpStart can connect to your TypeSense deployment to read and write data.
 
 <div style={{paddingTop:'24px'}}>
 
 ## Connection 
 
-To establish a connection with the Typesense data source, you can either click on the **+ Add new Data source** button located on the query panel or navigate to the **[Data Sources](/docs/data-sources/overview)** page from the ToolJet dashboard and choose Typesense as the data source.
+To establish a connection with the Typesense data source, you can either click on the **+ Add new Data source** button located on the query panel or navigate to the **[Data Sources](/docs/data-sources/overview)** page from the JumpStart dashboard and choose Typesense as the data source.
 
 :::info
-Please make sure the **Host/IP** of the database is accessible from your VPC if you have self-hosted ToolJet. If you are using ToolJet cloud, please **whitelist** our IP.
+Please make sure the **Host/IP** of the database is accessible from your VPC if you have self-hosted JumpStart. If you are using JumpStart cloud, please **whitelist** our IP.
 :::
 
-ToolJet requires the following to connect to TypeSense deployment: 
+JumpStart requires the following to connect to TypeSense deployment: 
 - **Host**
 - **Port**
 - **API Key**

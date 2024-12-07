@@ -15,7 +15,7 @@ The syntax for using **Workspace Constants** is different from **Workspace Varia
 
 To migrate from Workspace Variables to Workspace Constants, follow these steps:
 
-- Access the ToolJet Dashboard and navigate to Workspace Settings.
+- Access the JumpStart Dashboard and navigate to Workspace Settings.
 - Select the Workspace Constants tab.
 - Click on the **Create New Constant** button.
 - A drawer will appear. Enter the desired name and value for the constant.

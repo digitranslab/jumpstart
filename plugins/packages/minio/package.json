@@ -1,5 +1,5 @@
 {
-  "name": "@tooljet-plugins/minio",
+  "name": "@jumpstart-plugins/minio",
   "version": "1.0.0",
   "directories": {
     "lib": "lib",
@@ -14,7 +14,7 @@
     "clean": "rimraf ./dist && rimraf tsconfig.tsbuildinfo"
   },
   "dependencies": {
-    "@tooljet-plugins/common": "file:../common",
+    "@jumpstart-plugins/common": "file:../common",
     "minio": "^7.0.32",
     "react": "^17.0.2"
   },

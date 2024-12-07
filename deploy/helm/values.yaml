@@ -1,5 +1,5 @@
 apps:
-  tooljet:
+  jumpstart:
     service:
       type: ClusterIP
       host: "http://localhost"
@@ -18,11 +18,11 @@ apps:
         cpu: 0.75
         ram: 768Mi
     secret:
-      name: tooljet-server
+      name: jumpstart-server
       data:
         pg_user: "postgresql"
         pg_password: "postgresql"
-        pg_db: "tooljet"
+        pg_db: "jumpstart"
         lockbox_key: "0123456789ABCDEF"
         secret_key_base: "0123456789ABCDEF"
 

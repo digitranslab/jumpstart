@@ -5,19 +5,19 @@ title: Amazon SES
 
 # Amazon SES
 
-ToolJet can connect to your Amazon SES account to send emails.
+JumpStart can connect to your Amazon SES account to send emails.
 
 
 ## Connection
 To add a new Amazon SES API datasource, click the **Datasource manager** icon on the left-sidebar of the app builder and click on the `Add datasource` button, then select Amazon SES from the modal that pops up.
 
-ToolJet requires the following to connect to Amazon SES:
+JumpStart requires the following to connect to Amazon SES:
 
 - **Region**
 - **Access key**
 - **Secret key**
 
-It is recommended to create a new IAM user for the database so that you can control the access levels of ToolJet.
+It is recommended to create a new IAM user for the database so that you can control the access levels of JumpStart.
 
 Click on the 'Save' button to save the data source.
 
@@ -42,10 +42,10 @@ Optional parameters:
 :::info
 **Send mail to** - accepts an array/list of emails separated by comma.
 For example:
-`{{["dev@tooljet.io", "admin@tooljet.io"]}}`.
+`{{["dev@jumpstart.io", "admin@jumpstart.io"]}}`.
 
 **Send mail from** - accepts a string.
-For example: `admin@tooljet.io`
+For example: `admin@jumpstart.io`
 :::
 
 :::tip

@@ -9,5 +9,5 @@ export const mongoDbText = {
   errorInvalisScheme:
     'Invalid scheme, expected connection string to start with "mongodb://" or "mongodb+srv://"',
   connectionStringPlaceholder:
-    "mongodb+srv://tooljet:<password>@cluster0.i1vq4.mongodb.net/mydb?retryWrites=true&w=majority",
+    "mongodb+srv://jumpstart:<password>@cluster0.i1vq4.mongodb.net/mydb?retryWrites=true&w=majority",
 };

@@ -33,7 +33,7 @@ describe('AppImportExportService', () => {
   describe('.export', () => {
     it('should export app with empty related associations', async () => {
       const adminUserData = await createUser(nestApp, {
-        email: 'admin@tooljet.io',
+        email: 'admin@jumpstart.io',
         groups: ['all_users', 'admin'],
       });
       const adminUser = adminUserData.user;
@@ -56,7 +56,7 @@ describe('AppImportExportService', () => {
 
     it('should export app', async () => {
       const adminUserData = await createUser(nestApp, {
-        email: 'admin@tooljet.io',
+        email: 'admin@jumpstart.io',
         groups: ['all_users', 'admin'],
       });
       const adminUser = adminUserData.user;
@@ -80,7 +80,7 @@ describe('AppImportExportService', () => {
 
     it('should export app with filtered version', async () => {
       const adminUserData = await createUser(nestApp, {
-        email: 'admin@tooljet.io',
+        email: 'admin@jumpstart.io',
         groups: ['all_users', 'admin'],
       });
       const adminUser = adminUserData.user;
@@ -160,7 +160,7 @@ describe('AppImportExportService', () => {
   describe('.import', () => {
     it('should throw error with invalid params', async () => {
       const adminUserData = await createUser(nestApp, {
-        email: 'admin@tooljet.io',
+        email: 'admin@jumpstart.io',
         groups: ['all_users', 'admin'],
       });
       const adminUser = adminUserData.user;
@@ -170,7 +170,7 @@ describe('AppImportExportService', () => {
 
     it('should import app with empty related associations', async () => {
       const adminUserData = await createUser(nestApp, {
-        email: 'admin@tooljet.io',
+        email: 'admin@jumpstart.io',
         groups: ['all_users', 'admin'],
       });
       const adminUser = adminUserData.user;
@@ -209,7 +209,7 @@ describe('AppImportExportService', () => {
 
     it('should import app with related associations', async () => {
       const adminUserData = await createUser(nestApp, {
-        email: 'admin@tooljet.io',
+        email: 'admin@jumpstart.io',
         groups: ['all_users', 'admin'],
       });
       const adminUser = adminUserData.user;
@@ -241,8 +241,8 @@ describe('AppImportExportService', () => {
       });
 
       await createDataSource(nestApp, {
-        name: 'tooljetdbdefault',
-        kind: 'tooljetdb',
+        name: 'jumpstartdbdefault',
+        kind: 'jumpstartdb',
         type: 'static',
         appVersion: applicationVersion,
       });

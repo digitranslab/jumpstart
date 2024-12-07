@@ -3,7 +3,7 @@ id: athena
 title: Athena
 ---
 
-ToolJet can connect to **Amazon Athena** which is an interactive query service that makes it easy to analyze data in Amazon S3 using standard SQL.
+JumpStart can connect to **Amazon Athena** which is an interactive query service that makes it easy to analyze data in Amazon S3 using standard SQL.
 
 - **[Connection](#connection)**
 - **[Querying-athena](#querying-amazon-athena)**
@@ -13,9 +13,9 @@ ToolJet can connect to **Amazon Athena** which is an interactive query service t
 
 ## Connection
 
-To establish a connection with the **Amazon Athena** data source, you can either click on the **+ Add new Data source** button located on the query panel or navigate to the **[Data Sources](https://docs.tooljet.com/docs/data-sources/overview)** page from the ToolJet dashboard and choose **Amazon Athena** as the data source.
+To establish a connection with the **Amazon Athena** data source, you can either click on the **+ Add new Data source** button located on the query panel or navigate to the **[Data Sources](https://docs.jumpstart.com/docs/data-sources/overview)** page from the JumpStart dashboard and choose **Amazon Athena** as the data source.
 
-ToolJet requires the following to connect to your Athena.
+JumpStart requires the following to connect to your Athena.
 
 - **Database**
 - **S3 output location**
@@ -23,7 +23,7 @@ ToolJet requires the following to connect to your Athena.
 - **Secret key**
 - **Region**
 
-Click on the **Test Connection** button to verify the correctness of the provided credentials and the accessibility of the database to the ToolJet server. Finally, click on the **Save** button to save the data source configuration.
+Click on the **Test Connection** button to verify the correctness of the provided credentials and the accessibility of the database to the JumpStart server. Finally, click on the **Save** button to save the data source configuration.
 
 :::info
 You can also configure for **[additional optional parameters](https://github.com/ghdna/athena-express)**.

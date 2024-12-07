@@ -4,10 +4,10 @@ title: How to Access Values?
 ---
 
 
-In ToolJet, double curly braces `{{}}` can be used to retrieve data returned by queries, access values related to components and pass custom code. You can see the list of all accessible values in the **[Inspector](/docs/how-to/use-inspector/)** tab in the left sidebar. 
+In JumpStart, double curly braces `{{}}` can be used to retrieve data returned by queries, access values related to components and pass custom code. You can see the list of all accessible values in the **[Inspector](/docs/how-to/use-inspector/)** tab in the left sidebar. 
 
 <div style={{textAlign: 'center'}}>
-    <img style={{padding: '10px'}} className="screenshot-full" src="/img/tooljet-concepts/writing-custom-code/inspector.png" alt="Check Available Values Using Inspector" />
+    <img style={{padding: '10px'}} className="screenshot-full" src="/img/jumpstart-concepts/writing-custom-code/inspector.png" alt="Check Available Values Using Inspector" />
 </div>
 
 <div style={{paddingTop:'24px', paddingBottom:'24px'}}>

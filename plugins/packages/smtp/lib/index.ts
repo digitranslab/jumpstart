@@ -1,4 +1,4 @@
-import { QueryError, QueryResult, QueryService, ConnectionTestResult } from '@tooljet-plugins/common';
+import { QueryError, QueryResult, QueryService, ConnectionTestResult } from '@jumpstart-plugins/common';
 import { SourceOptions, QueryOptions } from './types';
 import nodemailer from 'nodemailer';
 

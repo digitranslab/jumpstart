@@ -5,7 +5,7 @@ export class CloneResourcesDto {
   app: CloneAppDto[];
 
   @IsOptional()
-  tooljet_database: CloneTooljetDatabaseDto[];
+  jumpstart_database: CloneJumpstartDatabaseDto[];
 
   @IsUUID()
   organization_id: string;
@@ -19,7 +19,7 @@ export class CloneAppDto {
   name: string;
 }
 
-export class CloneTooljetDatabaseDto {
+export class CloneJumpstartDatabaseDto {
   @IsUUID()
   id: string;
 }

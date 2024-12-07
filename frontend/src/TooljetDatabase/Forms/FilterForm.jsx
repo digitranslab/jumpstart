@@ -1,12 +1,12 @@
 import React, { useContext, useEffect, useState } from 'react';
 import Select from '@/_ui/Select';
-import { TooljetDatabaseContext } from '../index';
+import { JumpstartDatabaseContext } from '../index';
 import { operators } from '../constants';
 import { debounce } from 'lodash';
 import SolidIcon from '@/_ui/Icon/SolidIcons';
 
 export const FilterForm = ({ filters, setFilters, index, column = '', operator = '', value = '' }) => {
-  const { columns, setPageCount } = useContext(TooljetDatabaseContext);
+  const { columns, setPageCount } = useContext(JumpstartDatabaseContext);
 
   const [filterInputValue, setFilterInputValue] = useState(value);
 

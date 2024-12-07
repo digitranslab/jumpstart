@@ -1,5 +1,5 @@
 {
-  "tooljet_database": [
+  "jumpstart_database": [
     {
       "id": "bf1d637c-aa1b-4ea0-a1ea-610bca305e03",
       "table_name": "leave_applications",
@@ -285,7 +285,7 @@
               "parent": "1eea8cc0-2287-4df6-9a18-95f811c6fabc",
               "properties": {
                 "source": {
-                  "value": "{{globals.theme.name == \"dark\" ? \"https://docs.tooljet.com/img/Logomark_white.svg\" : \"https://docs.tooljet.com/img/Logomark.svg\"}}"
+                  "value": "{{globals.theme.name == \"dark\" ? \"https://docs.jumpstart.com/img/Logomark_white.svg\" : \"https://docs.jumpstart.com/img/Logomark.svg\"}}"
                 }
               },
               "general": null,
@@ -3536,8 +3536,8 @@
             },
             {
               "id": "9a202cea-4a49-463b-8771-f9d68053a3ba",
-              "name": "tooljetdbdefault",
-              "kind": "tooljetdb",
+              "name": "jumpstartdbdefault",
+              "kind": "jumpstartdb",
               "type": "static",
               "pluginId": null,
               "appVersionId": "0d16a7ba-902f-48ee-b5f0-1e580eabae97",
@@ -3745,5 +3745,5 @@
       }
     }
   ],
-  "tooljet_version": "2.28.4-ee2.15.0-cloud2.3.1"
+  "jumpstart_version": "2.28.4-ee2.15.0-cloud2.3.1"
 }

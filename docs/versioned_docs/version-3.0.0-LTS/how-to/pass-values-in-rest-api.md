@@ -41,7 +41,7 @@ In the following JSON code, the `${}` syntax is used for JavaScript string inter
 
 ## Entering Key Value Pairs
 
-In this example, simple key-value pairs are entered in the provided input fields. Here, the values can simply be passed using double curly braces as is typically done in ToolJet. Take note of the status key. A string is combined with another value that is referred using double curly braces.
+In this example, simple key-value pairs are entered in the provided input fields. Here, the values can simply be passed using double curly braces as is typically done in JumpStart. Take note of the status key. A string is combined with another value that is referred using double curly braces.
 
 <div style={{textAlign: 'center'}}>
     <img style={{ border:'0', marginBottom:'15px' }} className="screenshot-full" src="/img/how-to/pass-values-in-rest-api/key-value-pairs-example.png" alt="Passing Values Using The Key Value Inputs" />
@@ -51,5 +51,5 @@ In this example, simple key-value pairs are entered in the provided input fields
 
 To see REST API queries in action, check out the following tutorials: 
 
-1. **[Gemini AI Content Generator](https://blog.tooljet.com/build-an-ai-content-generator-using-gemini-api-and-tooljet-in-10-minutes/)** 
-2. **[Open AI Audio Transcriber](https://blog.tooljet.com/building-an-audio-transcriber-and-analyzer-using-tooljet-and-openai/)**
+1. **[Gemini AI Content Generator](https://blog.jumpstart.com/build-an-ai-content-generator-using-gemini-api-and-jumpstart-in-10-minutes/)** 
+2. **[Open AI Audio Transcriber](https://blog.jumpstart.com/building-an-audio-transcriber-and-analyzer-using-jumpstart-and-openai/)**

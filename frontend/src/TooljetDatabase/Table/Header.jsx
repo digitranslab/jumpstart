@@ -1,5 +1,5 @@
 import React, { useState, useContext, useEffect } from 'react';
-import { TooljetDatabaseContext } from '../index';
+import { JumpstartDatabaseContext } from '../index';
 import EditRowDrawer from '../Drawers/EditRowDrawer';
 import CreateColumnDrawer from '../Drawers/CreateColumnDrawer';
 import CreateRowDrawer from '../Drawers/CreateRowDrawer';
@@ -11,7 +11,7 @@ import { ButtonSolid } from '@/_ui/AppButton/AppButton';
 import { AddNewDataPopOver } from './ActionsPopover/AddNewDataPopOver';
 import { pluralize } from '@/_helpers/utils';
 import { toast } from 'react-hot-toast';
-import { tooljetDatabaseService } from '@/_services';
+import { jumpstartDatabaseService } from '@/_services';
 import { isEmpty } from 'lodash';
 import DeleteIcon from '../Icons/DeleteIcon.svg';
 
@@ -52,7 +52,7 @@ const Header = ({
     organizationId,
     handleRefetchQuery,
     pageSize,
-  } = useContext(TooljetDatabaseContext);
+  } = useContext(JumpstartDatabaseContext);
 
   useEffect(() => {
     setErrors({ client: [], server: [] });
@@ -88,7 +88,7 @@ const Header = ({
     const formData = new FormData();
     formData.append('file', bulkUploadFile);
     try {
-      const { error, data } = await tooljetDatabaseService.bulkUpload(
+      const { error, data } = await jumpstartDatabaseService.bulkUpload(
         organizationId,
         selectedTable.table_name,
         formData

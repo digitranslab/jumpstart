@@ -24,7 +24,7 @@ export function getEnvVars() {
 
   data = {
     ...data,
-    ...((data.DATABASE_URL || data.TOOLJET_DB_URL) && buildDbConfigFromDatabaseURL(data)),
+    ...((data.DATABASE_URL || data.JUMPSTART_DB_URL) && buildDbConfigFromDatabaseURL(data)),
   };
 
   return data;
@@ -32,7 +32,7 @@ export function getEnvVars() {
 
 function buildDbConfigFromDatabaseURL(data): any {
   const config = buildDbConfigFromUrl(data.DATABASE_URL);
-  const TJDBconfig = buildDbConfigFromUrl(data.TOOLJET_DB_URL);
+  const TJDBconfig = buildDbConfigFromUrl(data.JUMPSTART_DB_URL);
 
   const { value: dbConfig, error } = validateDatabaseConfig({
     DATABASE_URL: data.DATBASE_URL,
@@ -42,13 +42,13 @@ function buildDbConfigFromDatabaseURL(data): any {
     PG_USER: config?.user || data.PG_USER,
     PG_DB: config?.database || data.PG_DB,
     PG_DB_OWNER: data.PG_DB_OWNER,
-    ENABLE_TOOLJET_DB: data.ENABLE_TOOLJET_DB,
-    TOOLJET_DB: TJDBconfig?.database || data.TOOLJET_DB,
-    TOOLJET_DB_OWNER: data.TOOLJET_DB_OWNER,
-    TOOLJET_DB_HOST: TJDBconfig?.host || data.TOOLJET_DB_HOST,
-    TOOLJET_DB_PORT: TJDBconfig?.port || data.TOOLJET_DB_PORT,
-    TOOLJET_DB_PASS: TJDBconfig?.password || data.TOOLJET_DB_PASS,
-    TOOLJET_DB_USER: TJDBconfig?.user || data.TOOLJET_DB_USER,
+    ENABLE_JUMPSTART_DB: data.ENABLE_JUMPSTART_DB,
+    JUMPSTART_DB: TJDBconfig?.database || data.JUMPSTART_DB,
+    JUMPSTART_DB_OWNER: data.JUMPSTART_DB_OWNER,
+    JUMPSTART_DB_HOST: TJDBconfig?.host || data.JUMPSTART_DB_HOST,
+    JUMPSTART_DB_PORT: TJDBconfig?.port || data.JUMPSTART_DB_PORT,
+    JUMPSTART_DB_PASS: TJDBconfig?.password || data.JUMPSTART_DB_PASS,
+    JUMPSTART_DB_USER: TJDBconfig?.user || data.JUMPSTART_DB_USER,
     SAMPLE_DB: data.SAMPLE_DB || 'sample_db',
     SAMPLE_PG_DB_HOST: config?.host || data.PG_HOST || data.SAMPLE_PG_DB_HOST,
     SAMPLE_PG_DB_PORT: config?.port || data.PG_PORT || data.SAMPLE_PG_DB_PORT,
@@ -95,15 +95,15 @@ function validateDatabaseConfig(dbConfig: any): Joi.ValidationResult {
       PG_PORT: Joi.number().positive().default(5432),
       PG_PASS: Joi.string().default(''),
       PG_USER: Joi.string().required(),
-      PG_DB: Joi.string().default('tooljet_production'),
+      PG_DB: Joi.string().default('jumpstart_production'),
       PG_DB_OWNER: Joi.string().default('true'),
-      ...(dbConfig.ENABLE_TOOLJET_DB === 'true' && {
-        TOOLJET_DB_HOST: Joi.string().default('localhost'),
-        TOOLJET_DB_PORT: Joi.number().positive().default(5432),
-        TOOLJET_DB_PASS: Joi.string().default(''),
-        TOOLJET_DB_USER: Joi.string().required(),
-        TOOLJET_DB: Joi.string().default('tooljet_db'),
-        TOOLJET_DB_OWNER: Joi.string().default('true'),
+      ...(dbConfig.ENABLE_JUMPSTART_DB === 'true' && {
+        JUMPSTART_DB_HOST: Joi.string().default('localhost'),
+        JUMPSTART_DB_PORT: Joi.number().positive().default(5432),
+        JUMPSTART_DB_PASS: Joi.string().default(''),
+        JUMPSTART_DB_USER: Joi.string().required(),
+        JUMPSTART_DB: Joi.string().default('jumpstart_db'),
+        JUMPSTART_DB_OWNER: Joi.string().default('true'),
       }),
       ...{
         SAMPLE_PG_DB_HOST: Joi.string().default('localhost'),
@@ -127,13 +127,13 @@ export function buildAndValidateDatabaseConfig(): Joi.ValidationResult {
     PG_USER: config.PG_USER,
     PG_DB: config.PG_DB,
     PG_DB_OWNER: config.PG_DB_OWNER,
-    ENABLE_TOOLJET_DB: config.ENABLE_TOOLJET_DB,
-    TOOLJET_DB: config.TOOLJET_DB,
-    TOOLJET_DB_HOST: config.TOOLJET_DB_HOST,
-    TOOLJET_DB_PORT: config.TOOLJET_DB_PORT,
-    TOOLJET_DB_PASS: config.TOOLJET_DB_PASS,
-    TOOLJET_DB_USER: config.TOOLJET_DB_USER,
-    TOOLJET_DB_OWNER: config.TOOLJET_DB_OWNER,
+    ENABLE_JUMPSTART_DB: config.ENABLE_JUMPSTART_DB,
+    JUMPSTART_DB: config.JUMPSTART_DB,
+    JUMPSTART_DB_HOST: config.JUMPSTART_DB_HOST,
+    JUMPSTART_DB_PORT: config.JUMPSTART_DB_PORT,
+    JUMPSTART_DB_PASS: config.JUMPSTART_DB_PASS,
+    JUMPSTART_DB_USER: config.JUMPSTART_DB_USER,
+    JUMPSTART_DB_OWNER: config.JUMPSTART_DB_OWNER,
     ENABLE_SAMPLE_PG_DB: config.ENABLE_SAMPLE_PG_DB,
     SAMPLE_DB: config.SAMPLE_DB || 'sample_db',
     SAMPLE_PG_DB_HOST: config.SAMPLE_PG_DB_HOST || config.PG_HOST,

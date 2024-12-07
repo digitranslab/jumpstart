@@ -3,12 +3,12 @@ id: sharing-apps
 title: Previewing, Testing and Sharing Apps 
 ---
 
- ToolJet's App-Builder provides critical tools for app preview, development and deployment. Let's take a look at how you can use it throughout the development process.
+ JumpStart's App-Builder provides critical tools for app preview, development and deployment. Let's take a look at how you can use it throughout the development process.
 
 ## Preview
 You can use Preview to ensure the app functions correctly on both mobile and desktop platforms.
 
-- Open the ToolJet App-Builder and navigate to your app.
+- Open the JumpStart App-Builder and navigate to your app.
 - Click the `Preview` icon located at the top-right corner to enter preview mode.
 - Use the **Mobile** and **Desktop** view options to toggle between different screen settings.
 - Observe component behavior and layout differences across devices.
@@ -31,7 +31,7 @@ To release an app to the users, you need to promote it to `Production` environme
 You can share the application with external users via a user-friendly, accessible URL.
 
 - Click the `Share` button on the top-bar.
-- In the Share modal, toggle on `Make application public` to allow access without a ToolJet login.
+- In the Share modal, toggle on `Make application public` to allow access without a JumpStart login.
 - Edit the default URL slug to a more memorable and relevant one for easier access.
 - Copy the newly customized URL and distribute it to your intended audience.
 
@@ -39,14 +39,14 @@ This provides external users easy and direct access to the application, enhancin
 
 <!-- ## Embedding the App into a Website
 
-**Objective**: Integrate the ToolJet app within an existing web application to provide seamless user interaction.
+**Objective**: Integrate the JumpStart app within an existing web application to provide seamless user interaction.
 
 **Steps**:
 1. Ensure the app is set to public or set `ENABLE_PRIVATE_APP_EMBED` to `true` in the `.env` file for private apps.
 2. Navigate to the Share modal and copy the embeddable link.
 3. Paste the embed link into the `iframe` tag of your website's HTML code.
 
-**Benefit**: Users can interact with the ToolJet app directly from your website, improving the user experience and retaining user engagement. -->
+**Benefit**: Users can interact with the JumpStart app directly from your website, improving the user experience and retaining user engagement. -->
 
 
 ### Efficient Development with Gitsync
@@ -54,7 +54,7 @@ This provides external users easy and direct access to the application, enhancin
 Gitsync can be used to maintain application version control and facilitate collaborative development.
 
 - Click on the `Gitsync` icon in the top-bar.
-- Follow the prompts to connect your ToolJet app with a GitHub repository.
+- Follow the prompts to connect your JumpStart app with a GitHub repository.
 - Utilize git operations to manage app development across different branches and versions.
 
 Read more about Gitsync **[here](/docs/gitsync)**.

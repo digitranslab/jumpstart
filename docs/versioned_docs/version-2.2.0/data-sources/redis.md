@@ -4,13 +4,13 @@ title: Redis
 ---
 
 # Redis
-ToolJet can run Redis commands on your Redis instances.
+JumpStart can run Redis commands on your Redis instances.
 
 ## Connection
 
-ToolJet requires the following to connect to your Redis instances. 
+JumpStart requires the following to connect to your Redis instances. 
 
-<img class="screenshot-full" src="/img/redis/connect.png" alt="ToolJet - Redis connection" height="250"/>
+<img class="screenshot-full" src="/img/redis/connect.png" alt="JumpStart - Redis connection" height="250"/>
 
 - **Host**
 - **Port** - The default port for Redis server is 6379

@@ -7,7 +7,7 @@ The Table component displays and manages data, connecting seamlessly with databa
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/table/table-preview-v2.png" alt="ToolJet - Component Reference - Table Preview" />
+<img className="screenshot-full" src="/img/widgets/table/table-preview-v2.png" alt="JumpStart - Component Reference - Table Preview" />
 
 </div>
 
@@ -40,7 +40,7 @@ Any property having `fx` button next to its field can be **programmatically conf
 ## Action Buttons
 
 <div style={{textAlign: 'center'}}>
-    <img className="screenshot-full" src="/img/widgets/table/action-v2.png" alt="ToolJet - Component Reference - Actions" />
+    <img className="screenshot-full" src="/img/widgets/table/action-v2.png" alt="JumpStart - Component Reference - Actions" />
 </div>
 
 Action buttons are positioned in the Table's final column. These buttons' appearance can be customized, and specific actions can be defined for when they are clicked using the `On click` action. Upon clicking an action button, the `selectedRow` exposed variable of the Table is updated to reflect the data of the selected row.
@@ -145,7 +145,7 @@ Enabling the `Make editable` property for a column allows the app users to edit 
 ## Search, Sort and Filter
 
 <div style={{textAlign: 'center'}}>
-    <img className="screenshot-full" src="/img/widgets/table/searchsort.png" alt="ToolJet - Component Reference - Table" /> 
+    <img className="screenshot-full" src="/img/widgets/table/searchsort.png" alt="JumpStart - Component Reference - Table" /> 
 </div>
 
 ### Show search

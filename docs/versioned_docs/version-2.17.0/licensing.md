@@ -7,14 +7,14 @@ title: Licensing
 
 ## Setting up for Licensing
 
-This comprehensive guide aims to assist you in the process of configuring paid plans on your self-hosted platform. We offer three different licenses tailored to your specific requirements. Let's explore how to get the most out of ToolJet's powerful features! 🚀
+This comprehensive guide aims to assist you in the process of configuring paid plans on your self-hosted platform. We offer three different licenses tailored to your specific requirements. Let's explore how to get the most out of JumpStart's powerful features! 🚀
 
 Let's look into three types of licenses:
 
 1. **Trial License**: This is a free license that grants access to premium features for a 14-day trial period.
  - **New Users**: Choose the 14-day trial during onboarding.
  - **Existing Users**: Request a trial license key from our sales or support team.
-2. **Business License**: This is a paid license that you can purchase **[directly](https://www.tooljet.com/pricing)**.
+2. **Business License**: This is a paid license that you can purchase **[directly](https://www.jumpstart.com/pricing)**.
 3. **Enterprise License**: This is a paid license with customizable options. To obtain this license, you have to contact our sales team.
 
 ---
@@ -29,7 +29,7 @@ If you are an existing user and wish to update your trial license key, follow th
 4. Within the license tab of the instance settings page, you can access the limit tab, which displays the current status of available super admins, builders, and end users.
 
 :::caution Note 
-The trial license key will be valid for 14 days. To fully enjoy ToolJet, we recommend upgrading to premium plans within this period. If you wish to upgrade from the trial to the business or enterprise edition, you can click the **Upgrade or Renew** button or contact our team via **[Slack](https://tooljet.com/slack)**. Upon expiration, access to premium features like OpenID SSO login and Audit logs will be restricted, ensuring no data loss occurs. However, don't worry! You can still upgrade to any of our premium plans and enjoy the benefits of ToolJet.
+The trial license key will be valid for 14 days. To fully enjoy JumpStart, we recommend upgrading to premium plans within this period. If you wish to upgrade from the trial to the business or enterprise edition, you can click the **Upgrade or Renew** button or contact our team via **[Slack](https://jumpstart.com/slack)**. Upon expiration, access to premium features like OpenID SSO login and Audit logs will be restricted, ensuring no data loss occurs. However, don't worry! You can still upgrade to any of our premium plans and enjoy the benefits of JumpStart.
 :::
 
 <div style={{textAlign: 'center'}}>
@@ -71,7 +71,7 @@ As a super admin, you can conveniently view the remaining days of your enterpris
 </div>
 
 :::warning Important
-The business license key will be valid for 3 months only. You can renew it to continue using ToolJet to its fullest potential.
+The business license key will be valid for 3 months only. You can renew it to continue using JumpStart to its fullest potential.
 :::
 
 
@@ -90,7 +90,7 @@ As a super admin, you can conveniently view the remaining days of your enterpris
 ## Frequently Asked Questions (FAQs)
 
 ### 1) How can I upgrade or renew my license?
-If your business or enterprise edition license key is nearing expiration, please click the **Upgrade or Renew** button or contact us via email at hello@tooljet.com to obtain an extended license key. If you intend to increase the number of users, please reach out to us via **[Slack](https://tooljet.com/slack)** or review our pricing page at https://www.tooljet.com/pricing before making a request.
+If your business or enterprise edition license key is nearing expiration, please click the **Upgrade or Renew** button or contact us via email at hello@jumpstart.com to obtain an extended license key. If you intend to increase the number of users, please reach out to us via **[Slack](https://jumpstart.com/slack)** or review our pricing page at https://www.jumpstart.com/pricing before making a request.
 
 <div style={{textAlign: 'center'}}>
 
@@ -107,13 +107,13 @@ If you have an active license, you can find its validity period in the instance 
 - Enterprise licenses can be customized to suit your needs.
 
 ### 3) What happens if my license expires?
-If your business or enterprise license key expires, your instance will revert to operating as a free plan. While you can still create unlimited apps, workspaces, and add users, premium features such as OpenID and Audit logs will no longer be accessible. For further information, please refer to the relevant **[plans](https://www.tooljet.com/pricing)**.
+If your business or enterprise license key expires, your instance will revert to operating as a free plan. While you can still create unlimited apps, workspaces, and add users, premium features such as OpenID and Audit logs will no longer be accessible. For further information, please refer to the relevant **[plans](https://www.jumpstart.com/pricing)**.
 
 ### 4) How can I add more users? 
 There are different methods to do this:
 
-**a)** You can renew directly using the **[business plan](https://www.tooljet.com/pricing)**. (Note: Please do check the list of premium features available with this plan)
+**a)** You can renew directly using the **[business plan](https://www.jumpstart.com/pricing)**. (Note: Please do check the list of premium features available with this plan)
 
-**b)** You can directly reach out to us via **[Slack](https://tooljet.com/slack)** or **[email](mailto:hello@tooljet.com)** and we will be happy to provide you the support. 
+**b)** You can directly reach out to us via **[Slack](https://jumpstart.com/slack)** or **[email](mailto:hello@jumpstart.com)** and we will be happy to provide you the support. 
 
 ***Lastly, please keep in mind that your license key is private and strictly prohibited from being shared with any third parties.***

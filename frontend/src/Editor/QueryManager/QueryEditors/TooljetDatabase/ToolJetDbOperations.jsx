@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import cx from 'classnames';
-import { tooljetDatabaseService, authenticationService } from '@/_services';
-import { TooljetDatabaseContext } from '@/TooljetDatabase/index';
+import { jumpstartDatabaseService, authenticationService } from '@/_services';
+import { JumpstartDatabaseContext } from '@/JumpstartDatabase/index';
 import { ListRows } from './ListRows';
 import { CreateRow } from './CreateRow';
 import { UpdateRows } from './UpdateRows';
@@ -16,7 +16,7 @@ import { getPrivateRoute } from '@/_helpers/routes';
 import { useNavigate } from 'react-router-dom';
 import { deepClone } from '@/_helpers/utilities/utils.helpers';
 
-const ToolJetDbOperations = ({ optionchanged, options, darkMode, isHorizontalLayout }) => {
+const JumpStartDbOperations = ({ optionchanged, options, darkMode, isHorizontalLayout }) => {
   const computeSelectStyles = (darkMode, width) => {
     return queryManagerSelectComponentStyle(darkMode, width);
   };
@@ -222,7 +222,7 @@ const ToolJetDbOperations = ({ optionchanged, options, darkMode, isHorizontalLay
     const tableDetails = findTableDetails(tableId);
     if (tableDetails?.table_name && !tableInfo[tableDetails?.table_name]) {
       const { table_name } = tableDetails;
-      const { data } = await tooljetDatabaseService.viewTable(organizationId, table_name);
+      const { data } = await jumpstartDatabaseService.viewTable(organizationId, table_name);
 
       setTableInfo((info) => ({
         ...info,
@@ -337,7 +337,7 @@ const ToolJetDbOperations = ({ optionchanged, options, darkMode, isHorizontalLay
   );
 
   const fetchTables = async () => {
-    const { error, data } = await tooljetDatabaseService.findAll(organizationId);
+    const { error, data } = await jumpstartDatabaseService.findAll(organizationId);
 
     if (error) {
       toast.error(error?.message ?? 'Failed to fetch tables');
@@ -366,7 +366,7 @@ const ToolJetDbOperations = ({ optionchanged, options, darkMode, isHorizontalLay
     const tableDetails = findTableDetailsWithTableList(tableId, tableList);
     if (tableDetails?.table_name) {
       const { table_name } = tableDetails;
-      const { error, data } = await tooljetDatabaseService.viewTable(organizationId, table_name);
+      const { error, data } = await jumpstartDatabaseService.viewTable(organizationId, table_name);
 
       if (error) {
         toast.error(error?.message ?? 'Failed to fetch table information');
@@ -469,7 +469,7 @@ const ToolJetDbOperations = ({ optionchanged, options, darkMode, isHorizontalLay
     }
   };
 
-  const tooljetDbOperationList = [
+  const jumpstartDbOperationList = [
     { label: 'List rows', value: 'list_rows' },
     { label: 'Create row', value: 'create_row' },
     { label: 'Update rows', value: 'update_rows' },
@@ -480,7 +480,7 @@ const ToolJetDbOperations = ({ optionchanged, options, darkMode, isHorizontalLay
   const ComponentToRender = getComponent(operation);
 
   return (
-    <TooljetDatabaseContext.Provider value={value}>
+    <JumpstartDatabaseContext.Provider value={value}>
       {/* table name dropdown */}
       <div className={cx({ row: !isHorizontalLayout })}>
         <div className={cx({ 'col-4': !isHorizontalLayout, 'd-flex': isHorizontalLayout })}>
@@ -512,12 +512,12 @@ const ToolJetDbOperations = ({ optionchanged, options, darkMode, isHorizontalLay
           <div className={cx({ 'flex-grow-1': isHorizontalLayout }, 'border', 'rounded', 'overflow-hidden')}>
             <DropDownSelect
               showPlaceHolder
-              options={tooljetDbOperationList}
+              options={jumpstartDbOperationList}
               darkMode={darkMode}
               onChange={(value) => {
                 value?.value && setOperation(value?.value);
               }}
-              value={tooljetDbOperationList.find((val) => val?.value === operation)}
+              value={jumpstartDbOperationList.find((val) => val?.value === operation)}
             />
           </div>
         </div>
@@ -525,8 +525,8 @@ const ToolJetDbOperations = ({ optionchanged, options, darkMode, isHorizontalLay
 
       {/* component to render based on the operation */}
       {ComponentToRender && <ComponentToRender options={options} optionchanged={optionchanged} darkMode={darkMode} />}
-    </TooljetDatabaseContext.Provider>
+    </JumpstartDatabaseContext.Provider>
   );
 };
 
-export default ToolJetDbOperations;
+export default JumpStartDbOperations;

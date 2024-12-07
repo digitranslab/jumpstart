@@ -1,13 +1,13 @@
 import React, { createContext, useState, useMemo, useEffect, useContext } from 'react';
 import Layout from '@/_ui/Layout';
-import TooljetDatabasePage from './TooljetDatabasePage';
+import JumpstartDatabasePage from './JumpstartDatabasePage';
 import { usePostgrestQueryBuilder } from './usePostgrestQueryBuilder';
 import { authenticationService } from '../_services/authentication.service';
 import { BreadCrumbContext } from '@/App/App';
 import { useNavigate } from 'react-router-dom';
 import { pageTitles, fetchAndSetWindowTitle } from '@white-label/whiteLabelling';
 
-export const TooljetDatabaseContext = createContext({
+export const JumpstartDatabaseContext = createContext({
   organizationId: null,
   setOrganizationId: () => {},
   selectedTable: '',
@@ -44,7 +44,7 @@ export const TooljetDatabaseContext = createContext({
   setForeignKeys: () => [],
 });
 
-export const TooljetDatabase = (props) => {
+export const JumpstartDatabase = (props) => {
   const [organizationId, setOrganizationId] = useState(
     authenticationService?.currentSessionValue?.current_organization_id
   );
@@ -167,10 +167,10 @@ export const TooljetDatabase = (props) => {
       collapseSidebar={collapseSidebar}
       toggleCollapsibleSidebar={toggleCollapsibleSidebar}
     >
-      <div className="page-wrapper tooljet-database">
-        <TooljetDatabaseContext.Provider value={value}>
-          <TooljetDatabasePage totalTables={tables.length || 0} collapseSidebar={collapseSidebar} />
-        </TooljetDatabaseContext.Provider>
+      <div className="page-wrapper jumpstart-database">
+        <JumpstartDatabaseContext.Provider value={value}>
+          <JumpstartDatabasePage totalTables={tables.length || 0} collapseSidebar={collapseSidebar} />
+        </JumpstartDatabaseContext.Provider>
       </div>
     </Layout>
   );

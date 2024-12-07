@@ -42,7 +42,7 @@ export class AppsImportExportController {
     const app = await this.appImportExportService.export(user, id, query);
     return {
       ...app,
-      tooljetVersion: globalThis.TOOLJET_VERSION,
+      jumpstartVersion: globalThis.JUMPSTART_VERSION,
     };
   }
 }

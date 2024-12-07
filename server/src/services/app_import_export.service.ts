@@ -16,7 +16,7 @@ import {
   defaultAppEnvironments,
   catchDbException,
   extractMajorVersion,
-  isTooljetVersionWithNormalizedAppDefinitionSchem,
+  isJumpstartVersionWithNormalizedAppDefinitionSchem,
   isVersionGreaterThanOrEqual,
 } from 'src/helpers/utils.helper';
 import { LayoutDimensionUnits, resolveGridPositionForComponent } from 'src/helpers/components.helper';
@@ -43,12 +43,12 @@ interface AppResourceMappings {
   componentsMapping: Record<string, string>;
 }
 
-type DefaultDataSourceKind = 'restapi' | 'runjs' | 'runpy' | 'tooljetdb' | 'workflows';
+type DefaultDataSourceKind = 'restapi' | 'runjs' | 'runpy' | 'jumpstartdb' | 'workflows';
 type DefaultDataSourceName =
   | 'restapidefault'
   | 'runjsdefault'
   | 'runpydefault'
-  | 'tooljetdbdefault'
+  | 'jumpstartdbdefault'
   | 'workflowsdefault';
 
 type NewRevampedComponent = 'Text' | 'TextInput' | 'PasswordInput' | 'NumberInput' | 'Table' | 'Button' | 'Checkbox';
@@ -57,10 +57,10 @@ const DefaultDataSourceNames: DefaultDataSourceName[] = [
   'restapidefault',
   'runjsdefault',
   'runpydefault',
-  'tooljetdbdefault',
+  'jumpstartdbdefault',
   'workflowsdefault',
 ];
-const DefaultDataSourceKinds: DefaultDataSourceKind[] = ['restapi', 'runjs', 'runpy', 'tooljetdb', 'workflows'];
+const DefaultDataSourceKinds: DefaultDataSourceKind[] = ['restapi', 'runjs', 'runpy', 'jumpstartdb', 'workflows'];
 const NewRevampedComponents: NewRevampedComponent[] = [
   'Text',
   'TextInput',
@@ -219,7 +219,7 @@ export class AppImportExportService {
     appParamsObj: any,
     appName: string,
     externalResourceMappings = {},
-    tooljetVersion = '',
+    jumpstartVersion = '',
     cloning = false
   ): Promise<App> {
     if (typeof appParamsObj !== 'object') {
@@ -241,13 +241,13 @@ export class AppImportExportService {
       : convertSinglePageSchemaToMultiPageSchema(appParams);
     schemaUnifiedAppParams.name = appName;
 
-    const importedAppTooljetVersion = !cloning && extractMajorVersion(tooljetVersion);
+    const importedAppJumpstartVersion = !cloning && extractMajorVersion(jumpstartVersion);
     const isNormalizedAppDefinitionSchema = cloning
       ? true
-      : isTooljetVersionWithNormalizedAppDefinitionSchem(importedAppTooljetVersion);
+      : isJumpstartVersionWithNormalizedAppDefinitionSchem(importedAppJumpstartVersion);
 
     const importedApp = await this.createImportedAppForUser(this.entityManager, schemaUnifiedAppParams, user);
-    const currentTooljetVersion = !cloning ? tooljetVersion : null;
+    const currentJumpstartVersion = !cloning ? jumpstartVersion : null;
 
     const resourceMapping = await this.setupImportedAppAssociations(
       this.entityManager,
@@ -256,7 +256,7 @@ export class AppImportExportService {
       user,
       externalResourceMappings,
       isNormalizedAppDefinitionSchema,
-      currentTooljetVersion
+      currentJumpstartVersion
     );
     await this.createAdminGroupPermissions(this.entityManager, importedApp);
     await this.updateEntityReferencesForImportedApp(this.entityManager, resourceMapping);
@@ -394,12 +394,12 @@ export class AppImportExportService {
     user: User,
     externalResourceMappings: Record<string, unknown>,
     isNormalizedAppDefinitionSchema: boolean,
-    tooljetVersion: string | null
+    jumpstartVersion: string | null
   ) {
     // Old version without app version
     // Handle exports prior to 0.12.0
     // TODO: have version based conditional based on app versions
-    // isLessThanExportVersion(appParams.tooljet_version, 'v0.12.0')
+    // isLessThanExportVersion(appParams.jumpstart_version, 'v0.12.0')
     if (!appParams?.appVersions) {
       await this.performLegacyAppImport(manager, importedApp, appParams, externalResourceMappings, user);
       return;
@@ -458,7 +458,7 @@ export class AppImportExportService {
         importingPages,
         importingComponents,
         importingEvents,
-        tooljetVersion
+        jumpstartVersion
       );
 
       if (!isNormalizedAppDefinitionSchema) {
@@ -488,7 +488,7 @@ export class AppImportExportService {
                 componentEvents,
                 appResourceMappings.componentsMapping,
                 isNormalizedAppDefinitionSchema,
-                tooljetVersion
+                jumpstartVersion
               );
 
               const componentLayouts = [];
@@ -662,7 +662,7 @@ export class AppImportExportService {
     importingPages: Page[],
     importingComponents: Component[],
     importingEvents: EventHandler[],
-    tooljetVersion: string | null
+    jumpstartVersion: string | null
   ): Promise<AppResourceMappings> {
     appResourceMappings = { ...appResourceMappings };
 
@@ -708,7 +708,7 @@ export class AppImportExportService {
         // TODO: Have version based conditional based on app versions
         // currently we are checking on existence of keys and handling
         // imports accordingly. Would be pragmatic to do:
-        // isLessThanExportVersion(appParams.tooljet_version, 'v2.0.0')
+        // isLessThanExportVersion(appParams.jumpstart_version, 'v2.0.0')
         // Will need to have JSON schema setup for each versions
         if (importingDataSource.options) {
           const convertedOptions = this.convertToArrayOfKeyValuePairs(importingDataSource.options);
@@ -819,7 +819,7 @@ export class AppImportExportService {
               component.type as NewRevampedComponent,
               component,
               NewRevampedComponents,
-              tooljetVersion
+              jumpstartVersion
             );
             newComponent.id = newComponentIdsMap[component.id];
             newComponent.name = component.name;
@@ -1018,10 +1018,10 @@ export class AppImportExportService {
 
     for (const importingQuery of importingQueriesForSource) {
       const options =
-        importingDataSource.kind === 'tooljetdb'
-          ? this.replaceTooljetDbTableIds(
+        importingDataSource.kind === 'jumpstartdb'
+          ? this.replaceJumpstartDbTableIds(
               importingQuery.options,
-              externalResourceMappings['tooljet_database'],
+              externalResourceMappings['jumpstart_database'],
               organizationId
             )
           : importingQuery.options;
@@ -1590,10 +1590,10 @@ export class AppImportExportService {
         dataSourceId: !dataSourceId ? defaultDataSourceIds[query.kind] : dataSourceId,
         appVersionId: query.appVersionId,
         options:
-          dataSourceId == defaultDataSourceIds['tooljetdb']
-            ? this.replaceTooljetDbTableIds(
+          dataSourceId == defaultDataSourceIds['jumpstartdb']
+            ? this.replaceJumpstartDbTableIds(
                 query.options,
-                externalResourceMappings['tooljet_database'],
+                externalResourceMappings['jumpstart_database'],
                 user.organizationId
               )
             : query.options,
@@ -1633,12 +1633,12 @@ export class AppImportExportService {
   }
 
   // Entire function should be santised for Undefined values
-  replaceTooljetDbTableIds(queryOptions, tooljetDatabaseMapping, organizationId: string) {
+  replaceJumpstartDbTableIds(queryOptions, jumpstartDatabaseMapping, organizationId: string) {
     let transformedQueryOptions;
     if (Object.keys(queryOptions).includes('join_table')) {
-      transformedQueryOptions = this.replaceTooljetDbTableIdOnJoin(
+      transformedQueryOptions = this.replaceJumpstartDbTableIdOnJoin(
         queryOptions,
-        tooljetDatabaseMapping,
+        jumpstartDatabaseMapping,
         organizationId
       );
     }
@@ -1646,7 +1646,7 @@ export class AppImportExportService {
       return transformedQueryOptions;
     }
 
-    const mappedTableId = tooljetDatabaseMapping[transformedQueryOptions.table_id]?.id;
+    const mappedTableId = jumpstartDatabaseMapping[transformedQueryOptions.table_id]?.id;
     return {
       ...transformedQueryOptions,
       ...(mappedTableId && { table_id: mappedTableId }),
@@ -1654,9 +1654,9 @@ export class AppImportExportService {
     };
   }
 
-  replaceTooljetDbTableIdOnJoin(
+  replaceJumpstartDbTableIdOnJoin(
     queryOptions,
-    tooljetDatabaseMapping,
+    jumpstartDatabaseMapping,
     organizationId: string
   ): Partial<{
     table_id: string;
@@ -1672,12 +1672,12 @@ export class AppImportExportService {
         // Updating Join tableId
         if (updatedJoinCondition.table)
           updatedJoinCondition.table =
-            tooljetDatabaseMapping[updatedJoinCondition.table]?.id ?? updatedJoinCondition.table;
+            jumpstartDatabaseMapping[updatedJoinCondition.table]?.id ?? updatedJoinCondition.table;
         // Updating TableId on Conditions in Join Query
         if (updatedJoinCondition.conditions) {
           const updatedJoinConditionFilter = this.updateNewTableIdForFilter(
             updatedJoinCondition.conditions,
-            tooljetDatabaseMapping
+            jumpstartDatabaseMapping
           );
           updatedJoinCondition.conditions = updatedJoinConditionFilter.conditions;
         }
@@ -1691,7 +1691,7 @@ export class AppImportExportService {
     if (joinOptions?.conditions) {
       joinOptions.conditions = this.updateNewTableIdForFilter(
         joinOptions.conditions,
-        tooljetDatabaseMapping
+        jumpstartDatabaseMapping
       ).conditions;
     }
 
@@ -1699,7 +1699,7 @@ export class AppImportExportService {
     if (joinOptions?.fields) {
       joinOptions.fields = joinOptions.fields.map((eachField) => {
         if (eachField.table) {
-          eachField.table = tooljetDatabaseMapping[eachField.table]?.id ?? eachField.table;
+          eachField.table = jumpstartDatabaseMapping[eachField.table]?.id ?? eachField.table;
           return eachField;
         }
         return eachField;
@@ -1709,14 +1709,14 @@ export class AppImportExportService {
     // From Section
     if (joinOptions?.from) {
       const { name = '' } = joinOptions.from;
-      joinOptions.from = { ...joinOptions.from, name: tooljetDatabaseMapping[name]?.id ?? name };
+      joinOptions.from = { ...joinOptions.from, name: jumpstartDatabaseMapping[name]?.id ?? name };
     }
 
     // Sort Section
     if (joinOptions?.order_by) {
       joinOptions.order_by = joinOptions.order_by.map((eachOrderBy) => {
         if (eachOrderBy.table) {
-          eachOrderBy.table = tooljetDatabaseMapping[eachOrderBy.table]?.id ?? eachOrderBy.table;
+          eachOrderBy.table = jumpstartDatabaseMapping[eachOrderBy.table]?.id ?? eachOrderBy.table;
           return eachOrderBy;
         }
         return eachOrderBy;
@@ -1725,21 +1725,21 @@ export class AppImportExportService {
 
     return {
       ...queryOptions,
-      table_id: tooljetDatabaseMapping[queryOptions.table_id]?.id,
+      table_id: jumpstartDatabaseMapping[queryOptions.table_id]?.id,
       join_table: joinOptions,
       organization_id: organizationId,
     };
   }
 
-  updateNewTableIdForFilter(joinConditions, tooljetDatabaseMapping) {
+  updateNewTableIdForFilter(joinConditions, jumpstartDatabaseMapping) {
     const { conditionsList = [] } = { ...joinConditions };
     const updatedConditionList = conditionsList.map((condition) => {
       if (condition.conditions) {
-        return this.updateNewTableIdForFilter(condition.conditions, tooljetDatabaseMapping);
+        return this.updateNewTableIdForFilter(condition.conditions, jumpstartDatabaseMapping);
       } else {
         const { operator = '=', leftField = {}, rightField = {} } = { ...condition };
-        if (leftField?.table) leftField['table'] = tooljetDatabaseMapping[leftField.table]?.id ?? leftField.table;
-        if (rightField?.table) rightField['table'] = tooljetDatabaseMapping[rightField.table]?.id ?? rightField.table;
+        if (leftField?.table) leftField['table'] = jumpstartDatabaseMapping[leftField.table]?.id ?? leftField.table;
+        if (rightField?.table) rightField['table'] = jumpstartDatabaseMapping[rightField.table]?.id ?? rightField.table;
         return { operator, leftField, rightField };
       }
     });
@@ -1813,7 +1813,7 @@ function migrateProperties(
   componentType: NewRevampedComponent,
   component: Component,
   componentTypes: NewRevampedComponent[],
-  tooljetVersion: string | null
+  jumpstartVersion: string | null
 ) {
   const properties = { ...component.properties };
   const styles = { ...component.styles };
@@ -1821,11 +1821,11 @@ function migrateProperties(
   const validation = { ...component.validation };
   const generalStyles = { ...component.generalStyles };
 
-  if (!tooljetVersion) {
+  if (!jumpstartVersion) {
     return { properties, styles, general, generalStyles, validation };
   }
 
-  const shouldHandleBackwardCompatibility = isVersionGreaterThanOrEqual(tooljetVersion, '2.29.0') ? false : true;
+  const shouldHandleBackwardCompatibility = isVersionGreaterThanOrEqual(jumpstartVersion, '2.29.0') ? false : true;
 
   // Check if the component type is included in the specified component types
   if (componentTypes.includes(componentType as NewRevampedComponent)) {
@@ -1876,7 +1876,7 @@ function transformComponentData(
   componentEvents: any[],
   componentsMapping: Record<string, string>,
   isNormalizedAppDefinitionSchema = true,
-  tooljetVersion: string
+  jumpstartVersion: string
 ): Component[] {
   const transformedComponents: Component[] = [];
 
@@ -1926,7 +1926,7 @@ function transformComponentData(
         componentData.component,
         componentData.definition,
         NewRevampedComponents,
-        tooljetVersion
+        jumpstartVersion
       );
       transformedComponent.id = uuid();
       transformedComponent.name = componentData.name;

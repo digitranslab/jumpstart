@@ -1,4 +1,4 @@
 
 # CouchDB
 
-Documentation on: https://docs.tooljet.com/docs/data-sources/couchdb
+Documentation on: https://docs.jumpstart.com/docs/data-sources/couchdb

@@ -5,7 +5,7 @@ export const verifyElemtsNoGds = (option) => {
   );
   cy.get('[data-cy="querymanager-description"]').verifyVisibleElement(
     "contain.text",
-    "Select a Data Source to start creating a new query. To know more about queries in ToolJet, you can read our"
+    "Select a Data Source to start creating a new query. To know more about queries in JumpStart, you can read our"
   );
   cy.get('[data-cy="querymanager-doc-link"]').verifyVisibleElement(
     "have.text",
@@ -28,9 +28,9 @@ export const verifyElemtsNoGds = (option) => {
     "contain.text",
     " Python"
   );
-  cy.get('[data-cy="tooljetdb-add-query-card"]').verifyVisibleElement(
+  cy.get('[data-cy="jumpstartdb-add-query-card"]').verifyVisibleElement(
     "have.text",
-    " ToolJet DB"
+    " JumpStart DB"
   );
 
   cy.get('[data-cy="label-avilable-ds"]').verifyVisibleElement(

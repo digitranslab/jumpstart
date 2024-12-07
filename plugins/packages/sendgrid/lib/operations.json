@@ -1,5 +1,5 @@
 {
-  "$schema": "https://raw.githubusercontent.com/ToolJet/ToolJet/develop/plugins/schemas/operations.schema.json",
+  "$schema": "https://raw.githubusercontent.com/digitranslab/jumpstart/develop/plugins/schemas/operations.schema.json",
   "title": "Airtable datasource",
   "description": "A schema defining Sendgrid datasource",
   "type": "api",
@@ -35,7 +35,7 @@
         "type": "codehinter",
         "lineNumbers": false,
         "description": "Enter email recipient(s)",
-        "placeholder": "{{['dev@tooljet.io']}}",
+        "placeholder": "{{['dev@jumpstart.io']}}",
         "width": "320px",
         "height": "36px",
         "className": "codehinter-plugins"

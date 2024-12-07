@@ -1,5 +1,5 @@
 {
-    "tooljet_database": [
+    "jumpstart_database": [
         {
             "id": "5bdc260f-e3fa-429a-b9dc-d08c9956e8c9",
             "table_name": "kpi_management",
@@ -135,8 +135,8 @@
                 "appV2": {
                     "id": "5ee1a0bb-ca7e-49a9-b635-16e81df41b78",
                     "type": "front-end",
-                    "name": "KPI Management Dashboard - ToolJet DB",
-                    "slug": "kpi-management-dashboard-tooljet-db",
+                    "name": "KPI Management Dashboard - JumpStart DB",
+                    "slug": "kpi-management-dashboard-jumpstart-db",
                     "isPublic": false,
                     "isMaintenanceOn": false,
                     "icon": "table",
@@ -19079,8 +19079,8 @@
                         },
                         {
                             "id": "98e7a666-eb65-4098-93d7-6d480fe7a753",
-                            "name": "tooljetdbdefault",
-                            "kind": "tooljetdb",
+                            "name": "jumpstartdbdefault",
+                            "kind": "jumpstartdb",
                             "type": "static",
                             "pluginId": null,
                             "appVersionId": "0f2113fe-5ba2-455d-b92b-26cd11242e96",
@@ -33780,5 +33780,5 @@
             }
         }
     ],
-    "tooljet_version": "2.25.0-ee2.11.1-cloud2.1.8"
+    "jumpstart_version": "2.25.0-ee2.11.1-cloud2.1.8"
 }

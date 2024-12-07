@@ -31,7 +31,7 @@ The chart will look like this:
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/chart/linec.png" alt="ToolJet - Widget Reference - Chart" />
+<img className="screenshot-full" src="/img/widgets/chart/linec.png" alt="JumpStart - Widget Reference - Chart" />
 
 </div>
 
@@ -59,7 +59,7 @@ The chart will look like this:
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/chart/barc.png" alt="ToolJet - Widget Reference - Chart" />
+<img className="screenshot-full" src="/img/widgets/chart/barc.png" alt="JumpStart - Widget Reference - Chart" />
 
 </div>
 
@@ -84,7 +84,7 @@ The chart will look like this:
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/chart/piec.png" alt="ToolJet - Widget Reference - Chart" />
+<img className="screenshot-full" src="/img/widgets/chart/piec.png" alt="JumpStart - Widget Reference - Chart" />
 
 </div>
 
@@ -108,7 +108,7 @@ The resulting chart will be generated based on the provided JSON data, allowing 
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/chart/pfjson.png" alt="ToolJet - Widget Reference - Chart" />
+<img className="screenshot-full" src="/img/widgets/chart/pfjson.png" alt="JumpStart - Widget Reference - Chart" />
 
 </div>
 
@@ -116,7 +116,7 @@ You can refer to the [JSON Chart Schema](https://plotly.com/chart-studio-help/js
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/chart/jsonschema.png" alt="ToolJet - Widget Reference - Chart" />
+<img className="screenshot-full" src="/img/widgets/chart/jsonschema.png" alt="JumpStart - Widget Reference - Chart" />
 
 </div>
 
@@ -142,7 +142,7 @@ It offers four different modes:
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/chart/barmodes.png" alt="ToolJet - Widget Reference - Chart" />
+<img className="screenshot-full" src="/img/widgets/chart/barmodes.png" alt="JumpStart - Widget Reference - Chart" />
 
 </div>
 
@@ -186,7 +186,7 @@ In the **JSON description**, the value needs to be the `data` array with x and y
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/chart/plotly/line.png" alt="ToolJet - Widget Reference - Chart" />
+<img className="screenshot-full" src="/img/widgets/chart/plotly/line.png" alt="JumpStart - Widget Reference - Chart" />
 
 </div>
 
@@ -248,7 +248,7 @@ In the **JSON description**, the value needs to be the `data` array with x and y
 ```
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/chart/plotly/bar2.png" alt="ToolJet - Widget Reference - Chart" />
+<img className="screenshot-full" src="/img/widgets/chart/plotly/bar2.png" alt="JumpStart - Widget Reference - Chart" />
 
 </div>
 
@@ -336,7 +336,7 @@ In the **JSON description**, the value needs to be the `data` array with x and y
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/chart/plotly/area.png" alt="ToolJet - Widget Reference - Chart" />
+<img className="screenshot-full" src="/img/widgets/chart/plotly/area.png" alt="JumpStart - Widget Reference - Chart" />
 
 </div>
 
@@ -346,7 +346,7 @@ In the **JSON description**, the value needs to be the `data` array with x and y
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/chart/plotly/chart1.png" alt="ToolJet - Widget Reference - Chart" />
+<img className="screenshot-full" src="/img/widgets/chart/plotly/chart1.png" alt="JumpStart - Widget Reference - Chart" />
 
 </div>
 
@@ -354,7 +354,7 @@ In the **JSON description**, the value needs to be the `data` array with x and y
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/chart/plotly/chart2.png" alt="ToolJet - Widget Reference - Chart" />
+<img className="screenshot-full" src="/img/widgets/chart/plotly/chart2.png" alt="JumpStart - Widget Reference - Chart" />
 
 </div>
 
@@ -383,7 +383,7 @@ Toggle `on` or `off` to show or hide the grid lines on the chart. You can also p
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/chart/layout.png" alt="ToolJet - Widget Reference - Chart" />
+<img className="screenshot-full" src="/img/widgets/chart/layout.png" alt="JumpStart - Widget Reference - Chart" />
 
 </div>
 
@@ -398,7 +398,7 @@ Toggle on or off to display the widget in mobile view. You can programmatically 
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/chart/styles.png" alt="ToolJet - Widget Reference - Chart" />
+<img className="screenshot-full" src="/img/widgets/chart/styles.png" alt="JumpStart - Widget Reference - Chart" />
 
 </div>
 

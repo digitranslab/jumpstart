@@ -1,5 +1,5 @@
 {
-  "tooljet_database": [
+  "jumpstart_database": [
     {
       "id": "0768da7c-0fb9-41dc-893f-c8cc2cd00b13",
       "table_name": "bugs",
@@ -2292,8 +2292,8 @@
           "dataSources": [
             {
               "id": "704a0114-0b79-4a7b-90ab-1b9db4e0a436",
-              "name": "tooljetdbdefault",
-              "kind": "tooljetdb",
+              "name": "jumpstartdbdefault",
+              "kind": "jumpstartdb",
               "type": "static",
               "pluginId": null,
               "appVersionId": "5c473a85-91c1-4b6f-acb6-fa60bb9e6ad8",
@@ -2429,5 +2429,5 @@
       }
     }
   ],
-  "tooljet_version": "2.28.4-ee2.15.0-cloud2.3.1"
+  "jumpstart_version": "2.28.4-ee2.15.0-cloud2.3.1"
 }

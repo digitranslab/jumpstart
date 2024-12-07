@@ -3,7 +3,7 @@ id: pages
 title: Pages
 ---
 
-Pages allows you to have multiple pages in a single application, making your ToolJet applications more robust and user-friendly.
+Pages allows you to have multiple pages in a single application, making your JumpStart applications more robust and user-friendly.
 
 <div style={{textAlign: 'center'}}>
 
@@ -191,7 +191,7 @@ If a page is **Marked Home** then you won't be able to delete and the delete pag
 
 ### Event Handlers
 
-Just like other Event Handlers on ToolJet, you can add event handlers too pages too.
+Just like other Event Handlers on JumpStart, you can add event handlers too pages too.
 
 Currently, there is **On page load** event available. You can use all the available actions for this event along with the new actions added specifically for the pages:
 - **[switch page](/docs/actions/switch-page)**

@@ -1,7 +1,7 @@
 import React from 'react';
 import Accordion from '@/_ui/Accordion';
-import AddNewButton from '@/ToolJetUI/Buttons/AddNewButton/AddNewButton';
-import List from '@/ToolJetUI/List/List';
+import AddNewButton from '@/JumpStartUI/Buttons/AddNewButton/AddNewButton';
+import List from '@/JumpStartUI/List/List';
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 import NoListItem from '../NoListItem';
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';

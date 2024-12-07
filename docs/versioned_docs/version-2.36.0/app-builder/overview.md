@@ -5,7 +5,7 @@ title: Overview
 
 # App-Builder: Overview
 
-ToolJet's App Builder allows you to build applications. ToolJet's app builder has the following major components:
+JumpStart's App Builder allows you to build applications. JumpStart's app builder has the following major components:
 
 - **[Topbar](/docs/app-builder/topbar)**: Configure app settings such as application name, layout, app environment, version management, Gitsync and much more.
 - **[Canvas](/docs/app-builder/canvas)**: Arrange and customize components to build the user interface of your app.

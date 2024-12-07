@@ -1,4 +1,4 @@
-import { QueryError, QueryResult, QueryService, OAuthUnauthorizedClientError } from '@tooljet-plugins/common';
+import { QueryError, QueryResult, QueryService, OAuthUnauthorizedClientError } from '@jumpstart-plugins/common';
 import { SourceOptions, QueryOptions } from './types';
 import got, { Headers } from 'got';
 
@@ -29,7 +29,7 @@ export default class Zendesk implements QueryService {
     const { clientId, clientSecret, subdomain, scope } = this.sanitizeOptions(options);
 
     const accessTokenUrl = `https://${subdomain}.zendesk.com/oauth/tokens`;
-    const host = process.env.TOOLJET_HOST;
+    const host = process.env.JUMPSTART_HOST;
     const subpath = process.env.SUB_PATH;
     const fullUrl = `${host}${subpath ? subpath : '/'}`;
     const redirectUri = `${fullUrl}oauth2/authorize`;

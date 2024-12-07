@@ -5,7 +5,7 @@ title: Slack Code of Conduct
 
 # Slack Code of Conduct
 
-This code of conduct governs ToolJet's Slack Community events and discussions.
+This code of conduct governs JumpStart's Slack Community events and discussions.
 
 ---
 
@@ -37,7 +37,7 @@ This code of conduct governs ToolJet's Slack Community events and discussions.
 
 ## Where does the Code of Conduct apply?
 
-This Code of Conduct applies to all spaces managed by ToolJet. This includes:
+This Code of Conduct applies to all spaces managed by JumpStart. This includes:
 
 - Conferences (including social events and peripheral activities)
 - Unconferences and sprints
@@ -47,16 +47,16 @@ This Code of Conduct applies to all spaces managed by ToolJet. This includes:
 - Slack
 - GitHub
 - Twitter hashtag and mentions
-- Any forums created by the ToolJet which the community uses for communication.
+- Any forums created by the JumpStart which the community uses for communication.
 
-The Code of Conduct does not exclusively apply to slack or events on an official agenda. For example, if after a scheduled social event you go to a bar with a group of fellow participants, and someone harasses you there, we would still treat that as a CoC violation. Similarly, harassment in Twitter direct messages related to ToolJet can still be covered under this Code of Conduct.
+The Code of Conduct does not exclusively apply to slack or events on an official agenda. For example, if after a scheduled social event you go to a bar with a group of fellow participants, and someone harasses you there, we would still treat that as a CoC violation. Similarly, harassment in Twitter direct messages related to JumpStart can still be covered under this Code of Conduct.
 
 In addition, violations of this code outside our spaces may affect a person’s ability to participate in them.
 
 ## Enforcement
 
 - Understand that speech and actions have consequences, and unacceptable behavior will not be tolerated.
-- If you are the subject of, or witness to any violations of this Code of Conduct, please contact us via email at hello@tooljet.com or dm @navaneeth on slack.
+- If you are the subject of, or witness to any violations of this Code of Conduct, please contact us via email at hello@jumpstart.com or dm @navaneeth on slack.
 - If violations occur, organizers will take any action they deem appropriate for the infraction, up to and including expulsion.
 
 :::info
@@ -79,11 +79,11 @@ If you have asked a question and have not got a response in 24hrs, please review
 
 #### 4. Post in public
 
-Please don't direct message any individual member of ToolJet community without their explicit permission, independent of reason. Your question might be helpful for other community members.
+Please don't direct message any individual member of JumpStart community without their explicit permission, independent of reason. Your question might be helpful for other community members.
 
 #### 5. Don't spam tags
 
-ToolJet's community of volunteer is very active and helpful, generally avoid tagging members unless it is urgent.
+JumpStart's community of volunteer is very active and helpful, generally avoid tagging members unless it is urgent.
 
 #### 6. Use threads for discussion
 

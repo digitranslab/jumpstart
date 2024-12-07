@@ -18,7 +18,7 @@ describe('files controller', () => {
   });
 
   it('should allow only authenticated users to fetch a file', async () => {
-    const userData = await createUser(app, { email: 'admin@tooljet.io' });
+    const userData = await createUser(app, { email: 'admin@jumpstart.io' });
 
     const { user } = userData;
 

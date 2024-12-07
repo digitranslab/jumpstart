@@ -1,4 +1,4 @@
-# Tooljet marketplace
+# Jumpstart marketplace
 
 ## Steps to install npm package to a plugin
 

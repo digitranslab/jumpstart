@@ -2,7 +2,7 @@ import React, { useRef, useEffect, useState } from 'react';
 import './numberinput.scss';
 import SolidIcon from '@/_ui/Icon/SolidIcons';
 import * as Icons from '@tabler/icons-react';
-import Loader from '@/ToolJetUI/Loader/Loader';
+import Loader from '@/JumpStartUI/Loader/Loader';
 import { resolveWidgetFieldValue } from '@/_helpers/utils';
 
 const tinycolor = require('tinycolor2');

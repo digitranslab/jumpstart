@@ -120,7 +120,7 @@ DELETE FROM feature_requests WHERE votes < {{parameters.minimumVotes}};
 
 ## Using Transformations and Events
 
-**Transformations**: After fetching data, you might want to format it (e.g., filtering out unnecessary fields or converting data types). ToolJet allows using JavaScript or Python for these transformations.
+**Transformations**: After fetching data, you might want to format it (e.g., filtering out unnecessary fields or converting data types). JumpStart allows using JavaScript or Python for these transformations.
 
 **Event Handling**: Link queries with application events for dynamic interactions. For example, in the *updateRequest* query, you can set up an event to automatically run the *getAllRequests* query right after *updateRequest*. This ensures that the application retrieves and displays the updated data in the relevant components.
 

@@ -5,13 +5,13 @@ title: GraphQL
 
 # GraphQL
 
-ToolJet can connect to GraphQL endpoints to execute queries and mutations.
+JumpStart can connect to GraphQL endpoints to execute queries and mutations.
 
 ## Connection
 
 To add a new GraphQL datasource, click the `+` button on  data sources panel at the bottom-left corner of the app builder and then select GraphQL from the modal that pops up.
 
-ToolJet requires the following to connect to a GraphQL datasource:
+JumpStart requires the following to connect to a GraphQL datasource:
 
 - **URL of the GraphQL endpoint**
 
@@ -24,7 +24,7 @@ The following optional parameters are also supported:
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - Data source - GraphQl](/img/datasource-reference/graphql/graphql-ds.png)
+![JumpStart - Data source - GraphQl](/img/datasource-reference/graphql/graphql-ds.png)
 
 </div>
 

@@ -1,11 +1,11 @@
-import { QueryError, QueryResult, QueryService, OAuthUnauthorizedClientError } from '@tooljet-plugins/common';
+import { QueryError, QueryResult, QueryService, OAuthUnauthorizedClientError } from '@jumpstart-plugins/common';
 import { readData, appendData, deleteData, batchUpdateToSheet } from './operations';
 import got, { Headers } from 'got';
 import { SourceOptions, QueryOptions } from './types';
 
 export default class GooglesheetsQueryService implements QueryService {
   authUrl(): string {
-    const host = process.env.TOOLJET_HOST;
+    const host = process.env.JUMPSTART_HOST;
     const subpath = process.env.SUB_PATH;
     const fullUrl = `${host}${subpath ? subpath : '/'}`;
     const clientId = process.env.GOOGLE_CLIENT_ID;
@@ -26,7 +26,7 @@ export default class GooglesheetsQueryService implements QueryService {
     const accessTokenUrl = 'https://oauth2.googleapis.com/token';
     const clientId = process.env.GOOGLE_CLIENT_ID;
     const clientSecret = process.env.GOOGLE_CLIENT_SECRET;
-    const host = process.env.TOOLJET_HOST;
+    const host = process.env.JUMPSTART_HOST;
     const subpath = process.env.SUB_PATH;
     const fullUrl = `${host}${subpath ? subpath : '/'}`;
     const redirectUri = `${fullUrl}oauth2/authorize`;

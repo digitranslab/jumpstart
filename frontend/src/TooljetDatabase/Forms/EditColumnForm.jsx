@@ -2,8 +2,8 @@ import React, { useState, useContext, useEffect } from 'react';
 import Select from 'react-select';
 import DrawerFooter from '@/_ui/Drawer/DrawerFooter';
 import { toast } from 'react-hot-toast';
-import { tooljetDatabaseService } from '@/_services';
-import { TooljetDatabaseContext } from '../index';
+import { jumpstartDatabaseService } from '@/_services';
+import { JumpstartDatabaseContext } from '../index';
 import tjdbDropdownStyles, {
   dataTypes,
   formatOptionLabel,
@@ -23,7 +23,7 @@ import { ToolTip } from '@/_components/ToolTip';
 import { ConfirmDialog } from '@/_components';
 import ForeignKeyIndicator from '../Icons/ForeignKeyIndicator.svg';
 import ArrowRight from '../Icons/ArrowRight.svg';
-import DropDownSelect from '../../Editor/QueryManager/QueryEditors/TooljetDatabase/DropDownSelect';
+import DropDownSelect from '../../Editor/QueryManager/QueryEditors/JumpstartDatabase/DropDownSelect';
 import Skeleton from 'react-loading-skeleton';
 
 const ColumnForm = ({
@@ -49,7 +49,7 @@ const ColumnForm = ({
     sortFilters,
     setForeignKeys,
     foreignKeys,
-  } = useContext(TooljetDatabaseContext);
+  } = useContext(JumpstartDatabaseContext);
 
   const [columnName, setColumnName] = useState(selectedColumn?.Header);
   const [defaultValue, setDefaultValue] = useState(selectedColumn?.column_default);
@@ -155,7 +155,7 @@ const ColumnForm = ({
         on_update: onUpdate?.value,
       },
     ];
-    const { error } = await tooljetDatabaseService.createForeignKey(organizationId, selectedTable.table_name, data);
+    const { error } = await jumpstartDatabaseService.createForeignKey(organizationId, selectedTable.table_name, data);
 
     if (error) {
       toast.error(error?.message ?? `Failed to edit foreign key`);
@@ -214,7 +214,7 @@ const ColumnForm = ({
   };
 
   const fetchMetaDataApi = async () => {
-    tooljetDatabaseService.viewTable(organizationId, selectedTable.table_name).then(({ data = [], error }) => {
+    jumpstartDatabaseService.viewTable(organizationId, selectedTable.table_name).then(({ data = [], error }) => {
       if (error) {
         toast.error(error?.message ?? `Error fetching columns for table "${selectedTable}"`);
         return;
@@ -277,7 +277,7 @@ const ColumnForm = ({
       !isForeignKey
     ) {
       setFetching(true);
-      const { error } = await tooljetDatabaseService.updateColumn(organizationId, selectedTable.table_name, colDetails);
+      const { error } = await jumpstartDatabaseService.updateColumn(organizationId, selectedTable.table_name, colDetails);
       setFetching(false);
       if (error) {
         toast.error(error?.message ?? `Failed to edit a column in "${selectedTable.table_name}" table`);
@@ -297,7 +297,7 @@ const ColumnForm = ({
 
   const handleDeleteForeignKeyColumn = async () => {
     const id = foreignKeys[selectedForeignkeyIndex]?.constraint_name;
-    const { error } = await tooljetDatabaseService.deleteForeignKey(organizationId, selectedTable.table_name, id);
+    const { error } = await jumpstartDatabaseService.deleteForeignKey(organizationId, selectedTable.table_name, id);
 
     if (error) {
       toast.error(error?.message ?? `Failed to delete foreign key`);
@@ -330,7 +330,7 @@ const ColumnForm = ({
       },
     ];
 
-    const { error } = await tooljetDatabaseService.editForeignKey(organizationId, selectedTable.table_name, id, data);
+    const { error } = await jumpstartDatabaseService.editForeignKey(organizationId, selectedTable.table_name, id, data);
 
     if (error) {
       toast.error(error?.message ?? `Failed to edit foreign key`);
@@ -874,7 +874,7 @@ const ColumnForm = ({
         footerStyle={footerStyle}
         // currentPrimaryKeyIcons={currentPrimaryKeyIcons}
         // newPrimaryKeyIcons={newPrimaryKeyIcons}
-        isEditToolJetDbTable={true}
+        isEditJumpStartDbTable={true}
         foreignKeyChanges={newChangesInForeignKey}
         existingReferencedTableName={existingReferencedTableName}
         existingReferencedColumnName={existingReferencedColumnName}

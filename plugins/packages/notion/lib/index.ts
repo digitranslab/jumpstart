@@ -1,4 +1,4 @@
-import { QueryResult, QueryService, ConnectionTestResult } from '@tooljet-plugins/common';
+import { QueryResult, QueryService, ConnectionTestResult } from '@jumpstart-plugins/common';
 import { SourceOptions, QueryOptions } from './types';
 import { Client } from '@notionhq/client';
 import { blockOperations, databaseOperations, pageOperations, userOperations } from './operations';

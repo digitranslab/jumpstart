@@ -2,7 +2,7 @@ export const staticDataSources = [
   { kind: 'restapi', id: 'null', name: 'REST API', shortName: 'REST API' },
   { kind: 'runjs', id: 'runjs', name: 'Run JavaScript code', shortName: 'JavaScript' },
   { kind: 'runpy', id: 'runpy', name: 'Run Python code', shortName: 'Python' },
-  { kind: 'tooljetdb', id: 'null', name: 'ToolJet Database', shortName: 'ToolJet DB' },
+  { kind: 'jumpstartdb', id: 'null', name: 'JumpStart Database', shortName: 'JumpStart DB' },
 ];
 
 export const tabs = ['JSON', 'Raw'];
@@ -74,7 +74,7 @@ export const schemaUnavailableOptions = {
     body_toggle: false,
   },
   stripe: {},
-  tooljetdb: {
+  jumpstartdb: {
     operation: '',
   },
   runjs: {
@@ -87,6 +87,6 @@ export const schemaUnavailableOptions = {
 export const defaultSources = {
   restapi: { kind: 'restapi', id: 'null', name: 'REST API' },
   runjs: { kind: 'runjs', id: 'runjs', name: 'Run JavaScript code' },
-  tooljetdb: { kind: 'tooljetdb', id: 'null', name: 'Tooljet Database' },
+  jumpstartdb: { kind: 'jumpstartdb', id: 'null', name: 'Jumpstart Database' },
   runpy: { kind: 'runpy', id: 'runpy', name: 'Run Python code' },
 };

@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
-import { TooljetDatabaseContext } from '@/TooljetDatabase/index';
+import { JumpstartDatabaseContext } from '@/JumpstartDatabase/index';
 import Select from '@/_ui/Select';
-import { operators } from '@/TooljetDatabase/constants';
+import { operators } from '@/JumpstartDatabase/constants';
 import { v4 as uuidv4 } from 'uuid';
 import { isEmpty } from 'lodash';
 import { isOperatorOptions } from './util';
@@ -9,7 +9,7 @@ import { ButtonSolid } from '@/_ui/AppButton/AppButton';
 import CodeHinter from '@/Editor/CodeEditor';
 
 export const UpdateRows = React.memo(({ darkMode }) => {
-  const { columns, updateRowsOptions, handleUpdateRowsOptionsChange } = useContext(TooljetDatabaseContext);
+  const { columns, updateRowsOptions, handleUpdateRowsOptionsChange } = useContext(JumpstartDatabaseContext);
 
   function handleColumnOptionChange(columnOptions) {
     handleUpdateRowsOptionsChange('columns', columnOptions);

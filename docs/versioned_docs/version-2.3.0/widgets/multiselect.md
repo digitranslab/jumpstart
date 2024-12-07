@@ -8,7 +8,7 @@ Multiselect widget can be used to collect multiple user inputs from a list of op
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/multiselect/multi.gif" alt="ToolJet - Widget Reference - Multiselect" />
+<img className="screenshot-full" src="/img/widgets/multiselect/multi.gif" alt="JumpStart - Widget Reference - Multiselect" />
 
 </div>
 
@@ -48,7 +48,7 @@ Under the <b>General</b> accordion, you can set the value in the string format. 
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/tooltip.png" alt="ToolJet - Widget Reference - Multiselect" />
+<img className="screenshot-full" src="/img/tooltip.png" alt="JumpStart - Widget Reference - Multiselect" />
 
 </div>
 

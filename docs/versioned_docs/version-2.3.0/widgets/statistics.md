@@ -9,7 +9,7 @@ Statistics can be used to display different statistical information.
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/statistics/stats.png" alt="ToolJet - Widget Reference - Statistics" />
+<img className="screenshot-full" src="/img/widgets/statistics/stats.png" alt="JumpStart - Widget Reference - Statistics" />
 
 </div>
 
@@ -52,7 +52,7 @@ Under the <b>General</b> accordion, you can set the value in the string format. 
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/tooltip.png" alt="ToolJet - Widget Reference - Statistics" />
+<img className="screenshot-full" src="/img/tooltip.png" alt="JumpStart - Widget Reference - Statistics" />
 
 </div>
 

@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import TableDetailsDropdown from './TableDetailsDropdown';
-import { tooljetDatabaseService } from '@/_services';
-import { TooljetDatabaseContext } from '../index';
+import { jumpstartDatabaseService } from '@/_services';
+import { JumpstartDatabaseContext } from '../index';
 import Source from '../Icons/Source.svg';
 import Setting from '../Icons/setting.svg';
 import Target from '../Icons/Target.svg';
@@ -33,11 +33,11 @@ function SourceKeyRelation({
   setOnUpdate,
   onUpdate,
 }) {
-  const { tables, organizationId, selectedTable, setTables } = useContext(TooljetDatabaseContext);
+  const { tables, organizationId, selectedTable, setTables } = useContext(JumpstartDatabaseContext);
   const [targetColumnList, setTargetColumnList] = useState([]);
 
   async function fetchTables() {
-    const { error, data } = await tooljetDatabaseService.findAll(organizationId);
+    const { error, data } = await jumpstartDatabaseService.findAll(organizationId);
 
     if (error) {
       toast.error(error?.message ?? 'Failed to fetch tables');
@@ -154,7 +154,7 @@ function SourceKeyRelation({
 
   const handleSelectColumn = (table_name = '') => {
     if (table_name?.length > 0) {
-      tooljetDatabaseService.viewTable(organizationId, table_name).then(({ data = [], error }) => {
+      jumpstartDatabaseService.viewTable(organizationId, table_name).then(({ data = [], error }) => {
         if (error) {
           toast.error(error?.message ?? `Error fetching columns for table "${selectedTable}"`);
           return;
@@ -211,7 +211,7 @@ function SourceKeyRelation({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isEditColumn, isCreateColumn]);
 
-  const handleNavigateToToolJetDatabase = () => {
+  const handleNavigateToJumpStartDatabase = () => {
     window.open(getPrivateRoute('database'), '_blank');
   };
 
@@ -282,7 +282,7 @@ function SourceKeyRelation({
           handleSelectColumn={handleSelectColumn}
           showColumnInfo={true}
           showRedirection={true}
-          onAdd={handleNavigateToToolJetDatabase}
+          onAdd={handleNavigateToJumpStartDatabase}
           foreignKeyDetails={foreignKeyDetails}
           setForeignKeyDetails={setForeignKeyDetails}
           setTargetTable={setTargetTable}

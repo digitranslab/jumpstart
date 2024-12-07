@@ -2,8 +2,8 @@ import React, { useContext, useState, useEffect } from 'react';
 import { toast } from 'react-hot-toast';
 import DrawerFooter from '@/_ui/Drawer/DrawerFooter';
 import CreateColumnsForm from './ColumnsForm';
-import { tooljetDatabaseService } from '@/_services';
-import { TooljetDatabaseContext } from '../index';
+import { jumpstartDatabaseService } from '@/_services';
+import { JumpstartDatabaseContext } from '../index';
 import _, { isEmpty } from 'lodash';
 import { BreadCrumbContext } from '@/App/App';
 import WarningInfo from '../Icons/Edit-information.svg';
@@ -40,7 +40,7 @@ const TableForm = ({
   const [createForeignKeyInEdit, setCreateForeignKeyInEdit] = useState(false);
   const [tableName, setTableName] = useState(selectedTable.table_name);
   const [columns, setColumns] = useState(deepClone(selectedTableColumns));
-  const { organizationId, foreignKeys, setForeignKeys } = useContext(TooljetDatabaseContext);
+  const { organizationId, foreignKeys, setForeignKeys } = useContext(JumpstartDatabaseContext);
   const { updateSidebarNAV } = useContext(BreadCrumbContext);
 
   const [foreignKeyDetails, setForeignKeyDetails] = useState([]);
@@ -153,7 +153,7 @@ const TableForm = ({
     const checkingValues = isEmpty(foreignKeyDetails) ? false : true;
 
     setFetching(true);
-    const { error, data } = await tooljetDatabaseService.createTable(
+    const { error, data } = await jumpstartDatabaseService.createTable(
       organizationId,
       tableName,
       Object.values(columns),
@@ -175,7 +175,7 @@ const TableForm = ({
     if (!validateTableName()) return;
 
     setFetching(true);
-    const { error } = await tooljetDatabaseService.renameTable(
+    const { error } = await jumpstartDatabaseService.renameTable(
       organizationId,
       selectedTable.table_name,
       tableName,
@@ -344,7 +344,7 @@ const TableForm = ({
         footerStyle={footerStyle}
         currentPrimaryKeyIcons={currentPrimaryKeyIcons}
         newPrimaryKeyIcons={newPrimaryKeyIcons}
-        isEditToolJetDbTable={true}
+        isEditJumpStartDbTable={true}
       />
     </div>
   );

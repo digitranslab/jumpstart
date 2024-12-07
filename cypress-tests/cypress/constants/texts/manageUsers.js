@@ -8,7 +8,7 @@ export const usersText = {
   usersPageTitle: "users",
   breadcrumbUsersPageTitle: " Users",
   adminUserName: "The Developer",
-  adminUserEmail: "dev@tooljet.io",
+  adminUserEmail: "dev@jumpstart.io",
   adminUserState: "Archive",
   buttonAddUsers: "Add users",
   addUsersCardTitle: "Add users",
@@ -56,7 +56,7 @@ export const usersText = {
   buttonUploadCsvFile: "Upload CSV file",
 
   helperTextBulkUpload:
-    "Download the ToolJet template to add user details or format your file in the same as the template. ToolJet won’t be able to recognise files in any other format. ",
+    "Download the JumpStart template to add user details or format your file in the same as the template. JumpStart won’t be able to recognise files in any other format. ",
   helperTextSelectFile: "Select a CSV file to upload",
   helperTextDropFile: "Or drag and drop it here",
 };

@@ -3,21 +3,21 @@ id: snowflake
 title: Snowflake
 ---
 
-ToolJet can connect to Snowflake databases to read and write data.
+JumpStart can connect to Snowflake databases to read and write data.
 
 <div style={{paddingTop:'24px'}}>
 
 ## Connection
 
-To establish a connection with the Snowflake data source, you can either click on the **+ Add new Data source** button located on the query panel or navigate to the **[Data Sources](/docs/data-sources/overview/)** page from the ToolJet dashboard and choose Snowflake as the data source.
+To establish a connection with the Snowflake data source, you can either click on the **+ Add new Data source** button located on the query panel or navigate to the **[Data Sources](/docs/data-sources/overview/)** page from the JumpStart dashboard and choose Snowflake as the data source.
 
 :::info
-Please make sure the **Host/IP** of the database is accessible from your VPC if you have self-hosted ToolJet. If you are using ToolJet cloud, please **whitelist** our IP.
+Please make sure the **Host/IP** of the database is accessible from your VPC if you have self-hosted JumpStart. If you are using JumpStart cloud, please **whitelist** our IP.
 
 You can find snowflake docs on network policies **[here](https://docs.snowflake.com/en/user-guide/network-policies.html)**.
 :::
 
-ToolJet requires the following to connect to Snowflake database.
+JumpStart requires the following to connect to Snowflake database.
 
 - **Account**
 - **Username**
@@ -27,7 +27,7 @@ ToolJet requires the following to connect to Snowflake database.
 You can also configure for **[additional optional parameters](https://docs.snowflake.com/en/user-guide/nodejs-driver-use.html#additional-connection-options)**.
 :::
 
-<img className="screenshot-full" src="/img/datasource-reference/snowflake/snowflake-connect-v2.png" alt="ToolJet - Snowflake connection" />
+<img className="screenshot-full" src="/img/datasource-reference/snowflake/snowflake-connect-v2.png" alt="JumpStart - Snowflake connection" />
 
 </div>
 
@@ -40,7 +40,7 @@ You can also configure for **[additional optional parameters](https://docs.snowf
 3. Select the **SQL Mode** form the dropdown and enter the query.
 4. Click on the **Preview** button to preview the output or Click on the **Run** button to trigger the query.
 
-<img className="screenshot-full" src="/img/datasource-reference/snowflake/snowflake-query-v2.png" alt="ToolJet - Snowflake query" />
+<img className="screenshot-full" src="/img/datasource-reference/snowflake/snowflake-query-v2.png" alt="JumpStart - Snowflake query" />
 
 ```sql
 select * from "SNOWFLAKE_SAMPLE_DATA"."WEATHER"."DAILY_14_TOTAL" limit 10;

@@ -1,6 +1,6 @@
 
 {
-  "$schema": "https://raw.githubusercontent.com/ToolJet/ToolJet/develop/plugins/schemas/manifest.schema.json",
+  "$schema": "https://raw.githubusercontent.com/digitranslab/jumpstart/develop/plugins/schemas/manifest.schema.json",
   "title": "Databricks datasource",
   "description": "A schema defining Databricks datasource",
   "type": "database",
@@ -38,7 +38,7 @@
       "label": "Default Catalog",
       "key": "default_catalog",
       "type": "text",
-      "description": "tooljet_metastore"
+      "description": "jumpstart_metastore"
     },
     "default_schema": {
       "label": "Default Schema",

@@ -3,7 +3,7 @@ id: share
 title: Share
 ---
 
-ToolJet apps offer two sharing options: they can either be shared privately with workspace users or publicly by generating a shareable link. To obtain the shareable URL, you can easily do so by clicking on the Share button located on the top bar of the App builder.
+JumpStart apps offer two sharing options: they can either be shared privately with workspace users or publicly by generating a shareable link. To obtain the shareable URL, you can easily do so by clicking on the Share button located on the top bar of the App builder.
 
 <div style={{textAlign: 'center'}}>
 
@@ -13,7 +13,7 @@ ToolJet apps offer two sharing options: they can either be shared privately with
 
 ### Making the app public
 
-To share the app with external end users and make it accessible to anyone on the internet without requiring a ToolJet login, you can toggle on the Switch for "Make application public" in the Share modal.
+To share the app with external end users and make it accessible to anyone on the internet without requiring a JumpStart login, you can toggle on the Switch for "Make application public" in the Share modal.
 
 :::info
 Only released apps can be accessed using the Shareable app link.
@@ -27,7 +27,7 @@ Only released apps can be accessed using the Shareable app link.
 
 ### Customizing the app URL
 
-By default, ToolJet will generate a unique URL for your application. However, you also have the option to edit the slug of the URL to make it more customized and user-friendly.
+By default, JumpStart will generate a unique URL for your application. However, you also have the option to edit the slug of the URL to make it more customized and user-friendly.
 
 <div style={{textAlign: 'center'}}>
 
@@ -35,12 +35,12 @@ By default, ToolJet will generate a unique URL for your application. However, yo
 
 </div>
 
-### Embedding ToolJet Apps
+### Embedding JumpStart Apps
 
-ToolJet apps can be directly shared with end users and embedded into web apps using `iframes`. If you want to make your application public, you can use the Share modal to obtain the embeddable link.
+JumpStart apps can be directly shared with end users and embedded into web apps using `iframes`. If you want to make your application public, you can use the Share modal to obtain the embeddable link.
 
 :::info
-For embedding private ToolJet apps, you'll need to set an environment variable in the `.env` file.
+For embedding private JumpStart apps, you'll need to set an environment variable in the `.env` file.
 
 | Variable        | Description                           |
 |:-------------- |:------------------------------------ |

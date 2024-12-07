@@ -5,22 +5,22 @@ title: MySQL
 
 # MySQL
 
-ToolJet can connect to MySQL databases to read and write data. 
+JumpStart can connect to MySQL databases to read and write data. 
 
 ## Connection
 
-ToolJet requires the following to connect to your MySQL database. Please make sure the host/ip of the database is accessible from your VPC if you have self-hosted ToolJet. If you are using ToolJet cloud, please whitelist our IP.
+JumpStart requires the following to connect to your MySQL database. Please make sure the host/ip of the database is accessible from your VPC if you have self-hosted JumpStart. If you are using JumpStart cloud, please whitelist our IP.
 
 To add a new MySQL database, click on the `+` button on data sources panel at left sidebar in the app editor. Select MySQL from the modal that pops up.
 
-ToolJet requires the following to connect to your MySQL database.
+JumpStart requires the following to connect to your MySQL database.
 
 - **Host**
 - **Port**
 - **Username**
 - **Password**
 
-It is recommended to create a new MySQL database user so that you can control the access levels of ToolJet. 
+It is recommended to create a new MySQL database user so that you can control the access levels of JumpStart. 
 
 <div style={{textAlign: 'center'}}>
 
@@ -28,7 +28,7 @@ It is recommended to create a new MySQL database user so that you can control th
 
 </div>
 
-Click on **Test connection** button to verify if the credentials are correct and that the database is accessible to ToolJet server. Click on **Save** button to save the data source.
+Click on **Test connection** button to verify if the credentials are correct and that the database is accessible to JumpStart server. Click on **Save** button to save the data source.
 
 ## Querying MySQL
 

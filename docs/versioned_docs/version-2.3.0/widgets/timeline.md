@@ -8,7 +8,7 @@ Timeline widget can be used to do a visual representation of a sequence of event
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/timeline/timeline.png" alt="ToolJet - Widget Reference - Timeline" />
+<img className="screenshot-full" src="/img/widgets/timeline/timeline.png" alt="JumpStart - Widget Reference - Timeline" />
 
 </div>
 
@@ -41,7 +41,7 @@ Under the <b>General</b> accordion, you can set the value in the string format. 
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/tooltip.png" alt="ToolJet - Widget Reference - Timeline" />
+<img className="screenshot-full" src="/img/tooltip.png" alt="JumpStart - Widget Reference - Timeline" />
 
 </div>
 

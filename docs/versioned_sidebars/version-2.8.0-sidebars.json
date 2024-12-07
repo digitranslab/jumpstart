@@ -9,7 +9,7 @@
         "id": "setup/index"
       },
       "items": [
-        "setup/try-tooljet",
+        "setup/try-jumpstart",
         "setup/digitalocean",
         "setup/docker",
         "setup/heroku",
@@ -25,12 +25,12 @@
         "setup/client",
         "setup/env-vars",
         "setup/http-proxy",
-        "setup/tooljet-subpath",
+        "setup/jumpstart-subpath",
         "setup/v2-migration-guide"
       ]
     },
-    "tooljet-database",
-    "tooljet-copilot",
+    "jumpstart-database",
+    "jumpstart-copilot",
     {
       "type": "category",
       "label": "Datasource Catalog",
@@ -311,7 +311,7 @@
       "link": {
         "type": "generated-index",
         "title": "How To Guides",
-        "description": "How To Guides for all the things ToolJet",
+        "description": "How To Guides for all the things JumpStart",
         "keywords": [
           "how to"
         ]
@@ -346,7 +346,7 @@
       "link": {
         "type": "generated-index",
         "title": "Contributing Guide",
-        "description": "Guides for contributing to ToolJet",
+        "description": "Guides for contributing to JumpStart",
         "keywords": [
           "contribute",
           "contributing"
@@ -373,7 +373,7 @@
             "contributing-guide/marketplace/creating-a-plugin"
           ]
         },
-        "tooljet-cli",
+        "jumpstart-cli",
         "contributing-guide/testing",
         "contributing-guide/l10n",
         {
@@ -398,12 +398,12 @@
         {
           "type": "link",
           "label": "Releases",
-          "href": "https://github.com/ToolJet/ToolJet/releases"
+          "href": "https://github.com/digitranslab/jumpstart/releases"
         },
         {
           "type": "link",
           "label": "Roadmap",
-          "href": "https://github.com/tooljet/tooljet/milestones"
+          "href": "https://github.com/digitranslab/jumpstart/milestones"
         }
       ]
     }

@@ -53,7 +53,7 @@ return
 
 ## Workflow Execution
 
-When executing workflows with triggers, the configured data in the **Response** node will be included in the API response. When triggered inside a ToolJet app, the data will be returned in the same format as a regular query.
+When executing workflows with triggers, the configured data in the **Response** node will be included in the API response. When triggered inside a JumpStart app, the data will be returned in the same format as a regular query.
 
 
 

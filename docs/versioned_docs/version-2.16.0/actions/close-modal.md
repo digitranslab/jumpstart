@@ -13,7 +13,7 @@ You can also trigger actions from the **JavaScript code**. Check it out [here](/
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/actions/closemodal/closemodal2.png" alt="ToolJet - Action reference - Close modal" width="700" />
+<img className="screenshot-full" src="/img/actions/closemodal/closemodal2.png" alt="JumpStart - Action reference - Close modal" width="700" />
 
 </div>
 

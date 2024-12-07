@@ -1,9 +1,9 @@
 ---
 id: trigger-workflow-from-app
-title: Trigger Workflows Within ToolJet
+title: Trigger Workflows Within JumpStart
 ---
 
-This guide will show you how to set up a workflow and trigger it from a ToolJet application. 
+This guide will show you how to set up a workflow and trigger it from a JumpStart application. 
 <div style={{paddingTop:'24px'}}>
 
 ## Create Workflow
@@ -28,7 +28,7 @@ To create a workflow follow the following steps:
 
 ## Configure Workflow Query
 
-1. Within your ToolJet application, create a new query and select **Run Workflow**.
+1. Within your JumpStart application, create a new query and select **Run Workflow**.
 <img style={{marginBottom:'15px'}} className="screenshot-full" src="/img/workflows/trigger-from-app/run-wf.png" alt="Create a workflow query" />
 
 2. Select your workflow from the dropdown and configure the parameters (if required).

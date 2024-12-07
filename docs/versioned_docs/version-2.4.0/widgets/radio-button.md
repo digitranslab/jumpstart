@@ -55,7 +55,7 @@ Under the <b>General</b> accordion, you can set the value in the string format. 
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/tooltip.png" alt="ToolJet - Widget Reference - Radio button" />
+<img className="screenshot-full" src="/img/tooltip.png" alt="JumpStart - Widget Reference - Radio button" />
 
 </div>
 
@@ -90,7 +90,7 @@ This is `off` by default, toggle `on` the switch to lock the widget and make it 
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/radio-button/radio-ex.gif" alt="ToolJet - Widget Reference - Radio button" />
+<img className="screenshot-full" src="/img/widgets/radio-button/radio-ex.gif" alt="JumpStart - Widget Reference - Radio button" />
 
 </div>
 

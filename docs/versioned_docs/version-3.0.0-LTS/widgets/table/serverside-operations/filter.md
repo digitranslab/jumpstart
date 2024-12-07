@@ -3,7 +3,7 @@ id: filter
 title: Filter Operation
 ---
 
-This guide explains how to perform serverside filter operation on a **Table** component in ToolJet.
+This guide explains how to perform serverside filter operation on a **Table** component in JumpStart.
 
 <div style={{paddingTop:'24px'}}>
 
@@ -13,7 +13,7 @@ Before performing the filter operation, let's setup the table component and popu
 
 1. Drag a **Table** component from the right component library to the canvas.
 2. Select the data source and create a new query from the query panel at the bottom. (Refer to [data source](/docs/data-sources/overview) docs for more details) <br/>
-    This guide will use ToolJet’s Sample data source (Postgres).<br/>
+    This guide will use JumpStart’s Sample data source (Postgres).<br/>
     Add the following query to fetch the data from the database:
 
     ```sql
@@ -117,6 +117,6 @@ Follow the following steps to perform server-side filter operation on the **Tabl
 
     <img className="screenshot-full" src="/img/widgets/table/serverside-operations/filter-loading.png" alt="Fetch data from the data source" />
 
-This is how serverside filtering is implemented in ToolJet's **Table** component. When one or more filters are applied to the **Table**, the query is executed on the server, ensuring that the filtering affects all records in the dataset, not just the data currently loaded into the **Table**.
+This is how serverside filtering is implemented in JumpStart's **Table** component. When one or more filters are applied to the **Table**, the query is executed on the server, ensuring that the filtering affects all records in the dataset, not just the data currently loaded into the **Table**.
 
 </div>

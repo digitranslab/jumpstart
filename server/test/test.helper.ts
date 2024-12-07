@@ -105,7 +105,7 @@ export function authHeaderForUser(user: User, organizationId?: string, isPasswor
 
 export async function clearDB() {
   if (process.env.NODE_ENV !== 'test') return;
-  if (process.env.ENABLE_TOOLJET_DB === 'true') await dropTooljetDbTables();
+  if (process.env.ENABLE_JUMPSTART_DB === 'true') await dropJumpstartDbTables();
 
   const connection = getConnection();
   for (const entity of connection.entityMetadatas) {
@@ -114,14 +114,14 @@ export async function clearDB() {
   }
 }
 
-async function dropTooljetDbTables() {
+async function dropJumpstartDbTables() {
   const connection = getConnection();
-  const tooljetDbConnection = getConnection('tooljetDb');
+  const jumpstartDbConnection = getConnection('jumpstartDb');
 
   const internalTables = (await connection.manager.find(InternalTable, { select: ['id'] })) as InternalTable[];
 
   for (const table of internalTables) {
-    await tooljetDbConnection.query(`DROP TABLE IF EXISTS "${table.id}" CASCADE`);
+    await jumpstartDbConnection.query(`DROP TABLE IF EXISTS "${table.id}" CASCADE`);
   }
 }
 
@@ -284,7 +284,7 @@ export async function createUser(
       userRepository.create({
         firstName: firstName || 'test',
         lastName: lastName || 'test',
-        email: email || 'dev@tooljet.io',
+        email: email || 'dev@jumpstart.io',
         password: 'password',
         invitationToken,
         defaultOrganizationId: organization.id,
@@ -598,13 +598,13 @@ export async function createThread(_nestApp, { appId, x, y, userId, organization
 
 export async function setupOrganization(nestApp) {
   const adminUserData = await createUser(nestApp, {
-    email: 'admin@tooljet.io',
+    email: 'admin@jumpstart.io',
     groups: ['all_users', 'admin'],
   });
   const adminUser = adminUserData.user;
   const organization = adminUserData.organization;
   const defaultUserData = await createUser(nestApp, {
-    email: 'developer@tooljet.io',
+    email: 'developer@jumpstart.io',
     groups: ['all_users'],
     organization,
   });
@@ -632,7 +632,7 @@ export const generateRedirectUrl = async (
     (ou) => ou.organizationId === current_organization?.id
   )?.invitationToken;
 
-  return `${process.env['TOOLJET_HOST']}${
+  return `${process.env['JUMPSTART_HOST']}${
     isOrgInvitation ? `/organization-invitations/${organizationToken}` : `/invitations/${user.invitationToken}`
   }${
     organizationToken
@@ -653,7 +653,7 @@ export const createSSOMockConfig = (mockConfig) => {
       case 'SSO_GIT_OAUTH2_CLIENT_SECRET':
         return 'git-secret';
       case 'SSO_ACCEPTED_DOMAINS':
-        return 'tooljet.io,tooljet.com';
+        return 'jumpstart.io,jumpstart.com';
       default:
         return process.env[key];
     }
@@ -710,10 +710,10 @@ export const createFirstUser = async (app: INestApplication) => {
 
   await request(app.getHttpServer())
     .post('/api/setup-admin')
-    .send({ email: 'firstuser@tooljet.com', name: 'Admin', password: 'password', workspace: 'tooljet' });
+    .send({ email: 'firstuser@jumpstart.com', name: 'Admin', password: 'password', workspace: 'jumpstart' });
 
   return await userRepository.findOneOrFail({
-    where: { email: 'firstuser@tooljet.com' },
+    where: { email: 'firstuser@jumpstart.com' },
     relations: ['organizationUsers'],
   });
 };
@@ -752,7 +752,7 @@ export const generateAppDefaults = async (
         appVersion,
         options: {
           method: 'get',
-          url: 'https://api.github.com/repos/tooljet/tooljet/stargazers',
+          url: 'https://api.github.com/repos/digitranslab/jumpstart/stargazers',
           url_params: [],
           headers: [],
           body: [],
@@ -788,7 +788,7 @@ export const getAppWithAllDetails = async (id: string) => {
   return app;
 };
 
-export const authenticateUser = async (app: INestApplication, email = 'admin@tooljet.io', password = 'password') => {
+export const authenticateUser = async (app: INestApplication, email = 'admin@jumpstart.io', password = 'password') => {
   const sessionResponse = await request
     .agent(app.getHttpServer())
     .post('/api/authenticate')

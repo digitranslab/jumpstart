@@ -1,4 +1,4 @@
-import { QueryResult, QueryService, QueryError, ConnectionTestResult } from '@tooljet-plugins/common';
+import { QueryResult, QueryService, QueryError, ConnectionTestResult } from '@jumpstart-plugins/common';
 const { MongoClient } = require('mongodb');
 const JSON5 = require('json5');
 import { EJSON } from 'bson';

@@ -13,7 +13,7 @@ Topbar is present at the top of the app-builder, and is used to configure the ap
 
 ### App name
 
-App name can be edited from the left side of the topbar next to the ToolJet logo.
+App name can be edited from the left side of the topbar next to the JumpStart logo.
 
 When a new app is created, by default its name is set to **Untitled app**
 
@@ -27,7 +27,7 @@ When a new app is created, by default its name is set to **Untitled app**
 
 To configure the app's global settings, click on the kebab menu(three vertical dots) on the left of the app name. Global settings include:
 
-- **Hide header for launched apps**: Toggle this on to the hide the tooljet's header when the applications are launched
+- **Hide header for launched apps**: Toggle this on to the hide the jumpstart's header when the applications are launched
 - **Maintenance mode**: Toggle this on to put the application in maintenance mode. When in **maintenance mode**, on launching the app, the user will get an error message that **the app is under maintenance**.
 - **Max width of canvas**: Modify the width of the canvas in **px** or **%**. The default width is 1292 px.
 - **Max height of canvas**: Modify the width of the canvas in **px** or **%**. The default height is 2400 px and currently it is the maximum height limit.
@@ -99,8 +99,8 @@ Comment anywhere on the canvas and collaborate with other users in the workspace
 
 Share your applications with a unique URL generated automatically or edit the URL slug to personalize it.
 
-- When **Make the application public** is off and URL is shared then the users will have to login to ToolJet to use the application. Toggle on the option then anyone on the internet will be able to access the application without logging in to ToolJet.
-- ToolJet generates the **Embedded link** which can be used to embed application on the webpages.
+- When **Make the application public** is off and URL is shared then the users will have to login to JumpStart to use the application. Toggle on the option then anyone on the internet will be able to access the application without logging in to JumpStart.
+- JumpStart generates the **Embedded link** which can be used to embed application on the webpages.
 
 <div style={{textAlign: 'center'}}>
 
@@ -123,7 +123,7 @@ Clicking on **Preview** button will open up the currently opened version of the 
 Release the app to publish the current version of the app and push the changes into the production.
 
 :::caution
-ToolJet will block editing of the Released version of an app and will display a prompt to create a new version to make the changes. This is to prevent accidentally pushing an unfinished app to the live version.
+JumpStart will block editing of the Released version of an app and will display a prompt to create a new version to make the changes. This is to prevent accidentally pushing an unfinished app to the live version.
 :::
 
 <div style={{textAlign: 'center'}}>

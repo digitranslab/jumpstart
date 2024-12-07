@@ -82,8 +82,8 @@ function OnBoardingForm({ userDetails = {}, token = '', organizationToken = '', 
   return (
     <div className="flex">
       <div className="onboarding-navbar onboarding-navbar-layout">
-        <div className="tooljet-nav-logo">
-          <Logo height="23" width="92" alt="tooljet logo" data-cy="page-logo" />
+        <div className="jumpstart-nav-logo">
+          <Logo height="23" width="92" alt="jumpstart logo" data-cy="page-logo" />
         </div>
         <div></div>
         {/*Do not remove used for styling*/}

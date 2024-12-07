@@ -1,14 +1,14 @@
 {
   "name": "Expense tracker portal",
-  "description": "Submit and track personal expenses through an easy portal built with a ToolJet web UI and database.",
+  "description": "Submit and track personal expenses through an easy portal built with a JumpStart web UI and database.",
   "widgets": [
     "Table",
     "Chart"
   ],
   "sources": [
     {
-      "name": "ToolJet Database",
-      "id": "tooljetdb"
+      "name": "JumpStart Database",
+      "id": "jumpstartdb"
     }
   ],
   "id": "expense-tracker-portal",

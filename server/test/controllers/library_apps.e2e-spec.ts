@@ -16,12 +16,12 @@ describe('library apps controller', () => {
   describe('POST /api/library_apps', () => {
     it('should be able to create app if user has app create permission', async () => {
       const adminUserData = await createUser(app, {
-        email: 'admin@tooljet.io',
+        email: 'admin@jumpstart.io',
         groups: ['all_users', 'admin'],
       });
       const organization = adminUserData.organization;
       const nonAdminUserData = await createUser(app, {
-        email: 'developer@tooljet.io',
+        email: 'developer@jumpstart.io',
         groups: ['all_users'],
         organization,
       });
@@ -29,7 +29,7 @@ describe('library apps controller', () => {
       let loggedUser = await authenticateUser(app);
       adminUserData['tokenCookie'] = loggedUser.tokenCookie;
 
-      loggedUser = await authenticateUser(app, 'developer@tooljet.io');
+      loggedUser = await authenticateUser(app, 'developer@jumpstart.io');
       nonAdminUserData['tokenCookie'] = loggedUser.tokenCookie;
 
       let response = await request(app.getHttpServer())
@@ -52,7 +52,7 @@ describe('library apps controller', () => {
 
     it('should return error if template identifier is not found', async () => {
       const adminUserData = await createUser(app, {
-        email: 'admin@tooljet.io',
+        email: 'admin@jumpstart.io',
         groups: ['all_users', 'admin'],
       });
 
@@ -79,7 +79,7 @@ describe('library apps controller', () => {
   describe('GET /api/library_apps', () => {
     it('should be get app manifests', async () => {
       const adminUserData = await createUser(app, {
-        email: 'admin@tooljet.io',
+        email: 'admin@jumpstart.io',
         groups: ['all_users', 'admin'],
       });
 

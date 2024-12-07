@@ -300,11 +300,11 @@ export const VerificationSuccessInfoScreen = function VerificationSuccessInfoScr
                         By signing up you are agreeing to the
                         <br />
                         <span>
-                          <a href="https://www.tooljet.com/terms" data-cy="terms-of-service-link">
+                          <a href="https://www.jumpstart.com/terms" data-cy="terms-of-service-link">
                             Terms of Service{' '}
                           </a>
                           &
-                          <a href="https://www.tooljet.com/privacy" data-cy="privacy-policy-link">
+                          <a href="https://www.jumpstart.com/privacy" data-cy="privacy-policy-link">
                             {' '}
                             Privacy Policy
                           </a>
@@ -348,7 +348,7 @@ export const VerificationSuccessInfoScreen = function VerificationSuccessInfoScr
                   onClick={(e) => {
                     clickContinue(e);
                   }}
-                  data-cy="setup-tooljet-button"
+                  data-cy="setup-jumpstart-button"
                 >
                   {isLoading ? (
                     <div className="spinner-center">
@@ -356,7 +356,7 @@ export const VerificationSuccessInfoScreen = function VerificationSuccessInfoScr
                     </div>
                   ) : (
                     <>
-                      {t('verificationSuccessPage.setupTooljet', `Set up ${whiteLabelText}`, {
+                      {t('verificationSuccessPage.setupJumpstart', `Set up ${whiteLabelText}`, {
                         whiteLabelText,
                       })}
 

@@ -11,7 +11,7 @@ By default, the debounce field is left empty. However, you can input a numeric v
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/actions/page/setpagevar2.png" alt="ToolJet - Action reference - Switch page" width="600"/>
+<img className="screenshot-full" src="/img/actions/page/setpagevar2.png" alt="JumpStart - Action reference - Switch page" width="600"/>
 
 </div>
 
@@ -26,7 +26,7 @@ await actions.setPageVariable('<variablekey>',<variablevalue>)
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/actions/page/setpagevar33.png" alt="ToolJet - Action reference - Switch page" />
+<img className="screenshot-full" src="/img/actions/page/setpagevar33.png" alt="JumpStart - Action reference - Switch page" />
 
 </div>
 

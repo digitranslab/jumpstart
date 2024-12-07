@@ -5,9 +5,9 @@ title: Google
 
 # Google Single Sign-on Configuration
 
-To enable Google Single Sign-on (SSO) for your ToolJet instance, follow these steps:
+To enable Google Single Sign-on (SSO) for your JumpStart instance, follow these steps:
 
-1. From the ToolJet dashboard, go to **Settings** (⚙️) from the bottom of the left sidebar and select the **Workspace Settings**.
+1. From the JumpStart dashboard, go to **Settings** (⚙️) from the bottom of the left sidebar and select the **Workspace Settings**.
 
 2. In the **Workspace Settings**, select **Workspace login** from the sidebar. On the right, you'll see toggles to enable SSO via different clients. All the client toggles are disabled by default. Turn on the Google toggle, a modal will appear with the input field for the parameter Client ID. At the top left of the modal, there is a toggle to enable this modal. Turn it on, and then, without entering the Client ID, click on the **Save changes** button. This will generate a `Redirect URL` that you will need to utilize in the Google Cloud console. 
 
@@ -36,7 +36,7 @@ select 'External'.
   </div>
 
 - You'll be led to an app registration page where you can set OAuth scopes. Select 'Add or remove scopes' and add the scopes
-`userinfo.email` and `userinfo.profile` as shown in the image. This will allow ToolJet to store the email and name of the
+`userinfo.email` and `userinfo.profile` as shown in the image. This will allow JumpStart to store the email and name of the
 user who is signing in.
   <div style={{textAlign: 'center'}}>
 
@@ -44,23 +44,23 @@ user who is signing in.
 
   </div>
 
-- Set the domain on which ToolJet is hosted as an authorized domain.
+- Set the domain on which JumpStart is hosted as an authorized domain.
   <div style={{textAlign: 'center'}}>
 
   <img className="screenshot-full" src="/img/sso/google/authorized-urls.png" alt="General Settings: SSO" width="700"/>
 
   </div>
 
-- Under Authorized redirect URIs, enter the `Redirect URL` which was generated in ToolJet's Google SSO settings.
+- Under Authorized redirect URIs, enter the `Redirect URL` which was generated in JumpStart's Google SSO settings.
   <div style={{textAlign: 'center'}}>
 
   <img className="screenshot-full" src="/img/sso/google/authorized-redirect-urls.png" alt="General Settings: SSO" width="700"/>
 
   </div>
 
-Lastly, set the `Client ID` in ToolJet's Google SSO settings. This value will be available from your [Google Cloud console credentials page](https://console.cloud.google.com/apis/credentials).
+Lastly, set the `Client ID` in JumpStart's Google SSO settings. This value will be available from your [Google Cloud console credentials page](https://console.cloud.google.com/apis/credentials).
 
-The Google sign-in button will now be available in your ToolJet login screen.
+The Google sign-in button will now be available in your JumpStart login screen.
 
 ## Setting default SSO
 To set Google as default SSO for the instance use environment variable.

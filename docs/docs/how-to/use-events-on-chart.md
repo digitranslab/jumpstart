@@ -119,7 +119,7 @@ const MyCustomComponent = ({ data, updateData, runQuery }) => {
 };
 
 // Connect the component
-const ConnectedComponent = Tooljet.connectComponent(MyCustomComponent);
+const ConnectedComponent = Jumpstart.connectComponent(MyCustomComponent);
 
 // Render the connected component to the DOM
 ReactDOM.render(<ConnectedComponent />, document.body);
@@ -227,7 +227,7 @@ const Plot = createPlotlyComponent(Plotly); // create a Plotly component
 - Render the `MyCustomComponent` component using the `ReactDOM.render` function.
 
 ```js
-const ConnectedComponent = Tooljet.connectComponent(MyCustomComponent); // connect the component to the Tooljet store
+const ConnectedComponent = Jumpstart.connectComponent(MyCustomComponent); // connect the component to the Jumpstart store
 ReactDOM.render(<ConnectedComponent />, document.body); // render the component
 ```
 

@@ -6,12 +6,12 @@ title: Map
 The **Map** component enables users to display a map on the app. It can be used to display or choose a single location or multiple locations on the map. The Map component can be used to display the location of a business, a store, or a restaurant. It can also be used to display the location of a user on the map. It allows users to interact with the map interface and pick specific points of interest.
 
 :::tip Using Self-hosted 
-If you are utilizing the self-hosted version of ToolJet, it is necessary to configure the Google Maps API key as an environment variable. Please refer to the [environment variable setup documentation](/docs/setup/env-vars/#google-maps-configuration--optional-).
+If you are utilizing the self-hosted version of JumpStart, it is necessary to configure the Google Maps API key as an environment variable. Please refer to the [environment variable setup documentation](/docs/setup/env-vars/#google-maps-configuration--optional-).
 :::
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/map/map2.png" alt="ToolJet - Component Reference - Map" />
+<img className="screenshot-full" src="/img/widgets/map/map2.png" alt="JumpStart - Component Reference - Map" />
 
 </div>
 

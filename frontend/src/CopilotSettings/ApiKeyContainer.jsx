@@ -25,14 +25,14 @@ export const ApiKeyContainer = ({
       <>
         <h4 class="alert-title"> Don&apos;t have an API key?</h4>
         <div class="text-muted">
-          <strong style={{ fontWeight: 700, color: '#3E63DD' }}>ToolJet Copilot </strong>
+          <strong style={{ fontWeight: 700, color: '#3E63DD' }}>JumpStart Copilot </strong>
           is currently in <strong style={{ fontWeight: 700, color: '#3E63DD' }}>beta</strong> and provided on request.
           Join our waitlist to be notified when API keys become available, or sign up for beta access to get started
           today.
         </div>
         <div className="mt-2 w-25">
           <Button
-            onClick={() => window.open('https://tooljet.com/copilot', '_blank')}
+            onClick={() => window.open('https://jumpstart.com/copilot', '_blank')}
             darkMode={darkMode}
             size="sm"
             styles={{ width: '100%', fontSize: '12px', fontWeight: 500, borderColor: darkMode && 'transparent' }}
@@ -85,7 +85,7 @@ export const ApiKeyContainer = ({
           ) : (
             <>
               <div class="text-muted">
-                <strong style={{ fontWeight: 700, color: '#3E63DD' }}>ToolJet Copilot </strong>
+                <strong style={{ fontWeight: 700, color: '#3E63DD' }}>JumpStart Copilot </strong>
                 is currently in <strong style={{ fontWeight: 700, color: '#3E63DD' }}>beta</strong> and provided on
                 request. Join our waitlist to be notified when API keys become available, or sign up for beta access to
                 get started today.

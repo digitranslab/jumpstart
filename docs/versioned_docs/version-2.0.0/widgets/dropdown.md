@@ -16,7 +16,7 @@ Dropdown options can be referred to your query data with dynamic variables.
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/dropdown/dropdown-dynamicvalues.gif" alt="ToolJet - Widget Reference - Dropdown" />
+<img className="screenshot-full" src="/img/widgets/dropdown/dropdown-dynamicvalues.gif" alt="JumpStart - Widget Reference - Dropdown" />
 
 </div>
 
@@ -24,7 +24,7 @@ Dropdown options can be referred to your query data with dynamic variables.
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/dropdown/event.png" alt="ToolJet - Widget Reference - Dropdown" />
+<img className="screenshot-full" src="/img/widgets/dropdown/event.png" alt="JumpStart - Widget Reference - Dropdown" />
 
 </div>
 
@@ -40,7 +40,7 @@ This event is triggered whenever the user searches through the options by typing
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/dropdown/prop.png" alt="ToolJet - Widget Reference - Dropdown" />
+<img className="screenshot-full" src="/img/widgets/dropdown/prop.png" alt="JumpStart - Widget Reference - Dropdown" />
 
 </div>
 
@@ -79,7 +79,7 @@ Under the <b>General</b> accordion, you can set the value in the string format. 
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/tooltip.png" alt="ToolJet - Widget Reference - Dropdown" />
+<img className="screenshot-full" src="/img/tooltip.png" alt="JumpStart - Widget Reference - Dropdown" />
 
 </div>
 
@@ -96,7 +96,7 @@ Toggle on or off to display the widget in mobile view. You can programmatically 
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/dropdown/style.png" alt="ToolJet - Widget Reference - Dropdown" />
+<img className="screenshot-full" src="/img/widgets/dropdown/style.png" alt="JumpStart - Widget Reference - Dropdown" />
 
 </div>
 

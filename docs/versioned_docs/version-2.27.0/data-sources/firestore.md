@@ -4,10 +4,10 @@ title: Cloud Firestore
 ---
 
 # Cloud Firestore
-ToolJet can connect to Cloud Firestore databases to read and write data.
+JumpStart can connect to Cloud Firestore databases to read and write data.
 
 ## Connection 
-ToolJet connects to your Cloud Firestore using JSON key of your GCP service account. Get your service account key as JSON from GCP console. For generating a new key, check out [Firestore's official documentation](https://cloud.google.com/iam/docs/creating-managing-service-account-keys#iam-service-account-keys-create-console).
+JumpStart connects to your Cloud Firestore using JSON key of your GCP service account. Get your service account key as JSON from GCP console. For generating a new key, check out [Firestore's official documentation](https://cloud.google.com/iam/docs/creating-managing-service-account-keys#iam-service-account-keys-create-console).
 
 Once you have the key, open it in a text editor and copy the contents. Paste the contents in the **Private key** field of the Firestore data source modal.
 

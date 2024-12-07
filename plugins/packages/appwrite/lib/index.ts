@@ -1,4 +1,4 @@
-import { QueryError, QueryResult, QueryService, ConnectionTestResult } from '@tooljet-plugins/common';
+import { QueryError, QueryResult, QueryService, ConnectionTestResult } from '@jumpstart-plugins/common';
 import { SourceOptions, QueryOptions, ReturnObject } from './types';
 import sdk from 'node-appwrite';
 import { createDocument, deleteDocument, getDocument, queryCollection, updateDocument } from './operations';

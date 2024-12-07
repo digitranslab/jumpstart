@@ -2,8 +2,8 @@ import React, { useContext, useState } from 'react';
 import Drawer from '@/_ui/Drawer';
 import { toast } from 'react-hot-toast';
 import EditRowForm from '../../Forms/EditRowForm';
-import { TooljetDatabaseContext } from '../../index';
-import { tooljetDatabaseService } from '@/_services';
+import { JumpstartDatabaseContext } from '../../index';
+import { jumpstartDatabaseService } from '@/_services';
 import { ButtonSolid } from '@/_ui/AppButton/AppButton';
 import { listAllPrimaryKeyColumns } from '../../constants';
 import PostgrestQueryBuilder from '@/_helpers/postgrestQueryBuilder';
@@ -26,7 +26,7 @@ const EditRowDrawer = ({
     // totalRecords,
     pageSize,
     // selectedTableData,
-  } = useContext(TooljetDatabaseContext);
+  } = useContext(JumpstartDatabaseContext);
   const [selectedRowObj, setSelectedRowObj] = useState({});
 
   React.useEffect(() => {
@@ -88,7 +88,7 @@ const EditRowDrawer = ({
               }
             });
 
-            tooljetDatabaseService
+            jumpstartDatabaseService
               .findOne(
                 organizationId,
                 selectedTable.id,

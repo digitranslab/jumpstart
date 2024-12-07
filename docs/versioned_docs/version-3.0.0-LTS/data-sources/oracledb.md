@@ -3,15 +3,15 @@ id: oracledb
 title: Oracle DB
 ---
 
-ToolJet can connect to Oracle databases to read and write data.
+JumpStart can connect to Oracle databases to read and write data.
 
 <div style={{paddingTop:'24px'}}>
 
 ## Connection
 
-To establish a connection with the OracleDB datasource, you can either click on the **+ Add new Data source** button located on the query panel or navigate to the **[Data sources](/docs/data-sources/overview)** page through the ToolJet dashboard.
+To establish a connection with the OracleDB datasource, you can either click on the **+ Add new Data source** button located on the query panel or navigate to the **[Data sources](/docs/data-sources/overview)** page through the JumpStart dashboard.
 
-ToolJet requires the following to connect to a OracleDB datasource:
+JumpStart requires the following to connect to a OracleDB datasource:
 
 - **Host**
 - **Port**
@@ -22,19 +22,19 @@ ToolJet requires the following to connect to a OracleDB datasource:
 - **Password**
 - **Client Library Path**
 
-<img className="screenshot-full" src="/img/datasource-reference/oracledb/oracleauth-v3.png" alt="ToolJet - Data source - OracleDB" />
+<img className="screenshot-full" src="/img/datasource-reference/oracledb/oracleauth-v3.png" alt="JumpStart - Data source - OracleDB" />
 
 :::info
-ToolJet includes Oracle Instant Client versions 21.10 and 11.2. If you need to use a different client library version:
+JumpStart includes Oracle Instant Client versions 21.10 and 11.2. If you need to use a different client library version:
 - For cloud deployments: You can add a custom client library to a directory of your choice or mount it as a volume in the container.
 - For local setups: You can specify the path to your custom Oracle Client Library.
 
-This allows ToolJet to locate and use the specific drivers for Oracle database connections.
+This allows JumpStart to locate and use the specific drivers for Oracle database connections.
 :::
 
 ### Client Versions and Compatibility
 
-ToolJet runs Oracle DB connections in thick mode. By default, ToolJet includes Oracle instant client versions 21.10 and 11.2. These client versions determine which Oracle Database versions you can connect to.
+JumpStart runs Oracle DB connections in thick mode. By default, JumpStart includes Oracle instant client versions 21.10 and 11.2. These client versions determine which Oracle Database versions you can connect to.
 
 #### Available Client Versions
 - Oracle Instant Client 21.10
@@ -67,7 +67,7 @@ The instant client version affects which Oracle Database versions you can connec
 - **[SQL mode](/docs/data-sources/oracledb#sql-mode)**
 - **[GUI mode](/docs/data-sources/oracledb#gui-mode)**
 
-<img className="screenshot-full" src="/img/datasource-reference/oracledb/operations.png" alt="ToolJet - Data source - OracleDB" style={{marginBottom:'15px'}}/>
+<img className="screenshot-full" src="/img/datasource-reference/oracledb/operations.png" alt="JumpStart - Data source - OracleDB" style={{marginBottom:'15px'}}/>
 
 ### SQL mode
 
@@ -80,7 +80,7 @@ WHERE department_id = 10
 ORDER BY last_name;
 ```
 
-<img className="screenshot-full" src="/img/datasource-reference/oracledb/sql.png" alt="ToolJet - Data source - OracleDB" style={{marginBottom:'15px'}}/>
+<img className="screenshot-full" src="/img/datasource-reference/oracledb/sql.png" alt="JumpStart - Data source - OracleDB" style={{marginBottom:'15px'}}/>
 
 ### GUI mode
 
@@ -104,7 +104,7 @@ GUI mode can be used to query Oracle database without writing queries.
 ]
 ```
 
-<img className="screenshot-full" src="/img/datasource-reference/oracledb/gui.png" alt="ToolJet - Data source - OracleDB" style={{marginBottom:'15px'}}/>
+<img className="screenshot-full" src="/img/datasource-reference/oracledb/gui.png" alt="JumpStart - Data source - OracleDB" style={{marginBottom:'15px'}}/>
 
 :::tip
 Query results can be transformed using transformations. Read our transformations documentation to see how: **[link](/docs/tutorial/transformations)**

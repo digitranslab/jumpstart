@@ -24,8 +24,8 @@ export const BlankPage = function BlankPage({
 
   const staticTemplates = [
     { id: 'customer-ticketing-form', name: 'Customer ticketing form' },
-    { id: 'inventory-management-tooljet-db', name: 'Inventory management' },
-    { id: 'kpi-management-dashboard-tooljet-db', name: 'KPI management dashboard' },
+    { id: 'inventory-management-jumpstart-db', name: 'Inventory management' },
+    { id: 'kpi-management-dashboard-jumpstart-db', name: 'KPI management dashboard' },
   ];
 
   const appCreationDisabled = !canCreateApp();
@@ -58,7 +58,7 @@ export const BlankPage = function BlankPage({
               <div className="row homepage-empty-container">
                 <div className="col-7">
                   <h3 className="empty-welcome-header" data-cy="empty-homepage-welcome-header">
-                    {t('blankPage.welcomeToToolJet', `Welcome to your new ${whiteLabelText} workspace`, {
+                    {t('blankPage.welcomeToJumpStart', `Welcome to your new ${whiteLabelText} workspace`, {
                       whiteLabelText,
                     })}
                   </h3>

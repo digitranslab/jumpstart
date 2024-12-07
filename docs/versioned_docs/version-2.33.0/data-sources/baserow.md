@@ -5,7 +5,7 @@ title: Baserow
 
 <div style={{paddingBottom:'24px'}}>
 
-ToolJet can connect to your Baserow account to read and write data.
+JumpStart can connect to your Baserow account to read and write data.
 
 </div>
 

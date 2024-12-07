@@ -9,7 +9,7 @@ import { commonText } from "Texts/common";
 describe("Profile Settings", () => {
   const randomFirstName = fake.firstName;
   const randomLastName = fake.lastName;
-  const avatarImage = "cypress/fixtures/Image/tooljet.png";
+  const avatarImage = "cypress/fixtures/Image/jumpstart.png";
   beforeEach(() => {
     cy.defaultWorkspaceLogin();
     common.navigateToProfile();
@@ -51,7 +51,7 @@ describe("Profile Settings", () => {
       profileText.userName
     );
     common.navigateToManageUsers();
-    cy.clearAndType(commonSelectors.inputUserSearch, "dev@tooljet.io");
+    cy.clearAndType(commonSelectors.inputUserSearch, "dev@jumpstart.io");
     cy.get(commonSelectors.avatarImage).should("have.css", "background-image");
     common.logout();
   });

@@ -22,7 +22,7 @@ describe("User permissions", () => {
     data.appName = `${fake.companyName}-App`;
 
     cy.logoutApi();
-    cy.apiLogin("test@tooljet.com", usersText.password);
+    cy.apiLogin("test@jumpstart.com", usersText.password);
     cy.visit("/my-workspace");
     cy.get(commonSelectors.dashboardAppCreateButton).should("be.disabled");
     cy.logoutApi();
@@ -50,7 +50,7 @@ describe("User permissions", () => {
     cy.get(groupsSelector.appsDeleteCheck).check();
 
     cy.logoutApi();
-    cy.apiLogin("test@tooljet.com", usersText.password);
+    cy.apiLogin("test@jumpstart.com", usersText.password);
     cy.visit("/my-workspace");
     cy.get(commonSelectors.appCreateButton).should("exist");
     common.viewAppCardOptions(data.appName);
@@ -63,7 +63,7 @@ describe("User permissions", () => {
     cy.get(groupsSelector.appsDeleteCheck).uncheck();
 
     cy.logoutApi();
-    cy.apiLogin("test@tooljet.com", usersText.password);
+    cy.apiLogin("test@jumpstart.com", usersText.password);
     cy.visit("/my-workspace");
     cy.wait(1000);
     common.viewAppCardOptions(data.appName);
@@ -86,7 +86,7 @@ describe("User permissions", () => {
     cy.get(groupsSelector.appsCreateCheck).uncheck();
 
     cy.logoutApi();
-    cy.apiLogin("test@tooljet.com", usersText.password);
+    cy.apiLogin("test@jumpstart.com", usersText.password);
     cy.visit("/my-workspace");
     cy.wait(1000);
     cy.contains("Create new application").should("not.exist");
@@ -111,7 +111,7 @@ describe("User permissions", () => {
       });
 
     cy.logoutApi();
-    cy.apiLogin("test@tooljet.com", usersText.password);
+    cy.apiLogin("test@jumpstart.com", usersText.password);
     cy.visit("/my-workspace");
     cy.wait(500);
     cy.contains(data.appName).should("exist");
@@ -145,7 +145,7 @@ describe("User permissions", () => {
     );
 
     cy.logoutApi();
-    cy.apiLogin("test@tooljet.com", usersText.password);
+    cy.apiLogin("test@jumpstart.com", usersText.password);
     cy.visit("/my-workspace");
     cy.wait(500);
     cy.get(commonSelectors.appCard(data.appName)).should(
@@ -172,7 +172,7 @@ describe("User permissions", () => {
     cy.get(groupsSelector.foldersCreateCheck).check();
 
     cy.logoutApi();
-    cy.apiLogin("test@tooljet.com", usersText.password);
+    cy.apiLogin("test@jumpstart.com", usersText.password);
     cy.visit("/my-workspace");
     cy.wait(500);
 
@@ -198,7 +198,7 @@ describe("User permissions", () => {
     cy.get(groupsSelector.foldersCreateCheck).uncheck();
 
     common.logout();
-    cy.apiLogin("test@tooljet.com", usersText.password);
+    cy.apiLogin("test@jumpstart.com", usersText.password);
     cy.visit("/my-workspace");
     cy.get(commonSelectors.createNewFolderButton).should("not.exist");
   });

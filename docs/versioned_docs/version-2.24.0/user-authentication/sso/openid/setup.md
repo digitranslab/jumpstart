@@ -8,7 +8,7 @@ title: Setup
 # Configure OpenId Connect Single Sign-on
 
 
-- Go to the **Workspace Settings** (⚙️) from the left sidebar in the ToolJet dashboard
+- Go to the **Workspace Settings** (⚙️) from the left sidebar in the JumpStart dashboard
   <div style={{textAlign: 'center'}}>
 
   <img className="screenshot-full" src="/img/sso/general/workside2.png" alt="General Settings: SSO" width="500"/>
@@ -33,7 +33,7 @@ title: Setup
 
 ### Exposed User Info
 
-If OpenID is configured on ToolJet version **`v2.6.2-ee2.1.0`** or above, the ToolJet apps will expose the `ssoUserInfo` property under the `currentUser` variables. Check the **[Inspector](/docs/app-builder/left-sidebar#inspector)** doc to learn more.
+If OpenID is configured on JumpStart version **`v2.6.2-ee2.1.0`** or above, the JumpStart apps will expose the `ssoUserInfo` property under the `currentUser` variables. Check the **[Inspector](/docs/app-builder/left-sidebar#inspector)** doc to learn more.
 
 The exposed user info can be dynamically accessed throughout the apps using JS **`{{globals.currentUser.ssoUserInfo.<key>}}`**
 

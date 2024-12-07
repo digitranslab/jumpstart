@@ -109,7 +109,7 @@ export const QueryCard = ({ dataQuery, darkMode = false, editorRef, appId, local
                   <a
                     className="text-truncate"
                     data-tooltip-id="query-card-local-ds-info"
-                    href="https://docs.tooljet.com/docs/data-sources/overview/#changing-scope-of-data-sources-on-an-app-created-on-older-versions-of-tooljet"
+                    href="https://docs.jumpstart.com/docs/data-sources/overview/#changing-scope-of-data-sources-on-an-app-created-on-older-versions-of-jumpstart"
                     target="_blank"
                     rel="noreferrer"
                   >

@@ -4,7 +4,7 @@ title: Setup Log File Generation (Rsyslog)
 ---
 <div style={{paddingBottom:'24px'}}>
 
-The **log file** serves as a comprehensive record of audit logs, capturing crucial information about various activities within the ToolJet. Follow the guide below to set up and utilize the log file feature effectively.
+The **log file** serves as a comprehensive record of audit logs, capturing crucial information about various activities within the JumpStart. Follow the guide below to set up and utilize the log file feature effectively.
 
 </div>
 
@@ -24,7 +24,7 @@ The **log file** serves as a comprehensive record of audit logs, capturing cruci
     <img style={{ border:'0', marginBottom:'15px', borderRadius:'5px', boxShadow: '0px 1px 3px rgba(0, 0, 0, 0.2)' }} className="screenshot-full" src="/img/how-to/setup-rsyslog/envfile.png" alt="Setup log file generation" />
   </div>
 
-- The log file path is relative to the home directory of the machine. For instance, if the home directory is `/home/tooljet`, the log file path will be `/home/tooljet/rsyslog`.
+- The log file path is relative to the home directory of the machine. For instance, if the home directory is `/home/jumpstart`, the log file path will be `/home/jumpstart/rsyslog`.
 
 ### Server Restart
    
@@ -81,7 +81,7 @@ The log data captures essential details, such as user ID, organization ID, resou
     ipAddress: '::1',
     metadata: {
       userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36',
-      tooljetVersion: '2.22.2-ee2.8.3'
+      jumpstartVersion: '2.22.2-ee2.8.3'
     }
   },
   label: 'APP'

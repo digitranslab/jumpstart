@@ -1,7 +1,7 @@
 // This file contains the transformation required for creating
-// ToolJet Database from older versions.
+// JumpStart Database from older versions.
 
-import { ImportTooljetDatabaseDto } from '@dto/import-resources.dto';
+import { ImportJumpstartDatabaseDto } from '@dto/import-resources.dto';
 import { isVersionGreaterThanOrEqual } from './utils.helper';
 
 // Transformations required to make schema corresponding to the
@@ -9,9 +9,9 @@ import { isVersionGreaterThanOrEqual } from './utils.helper';
 //
 // dto.schema here is the result of export from the view table API
 // and the transformations done here is to make the creation work
-// with create table API within TooljetDbService
+// with create table API within JumpstartDbService
 const transformationsByVersion = {
-  '2.30.0': (dto: ImportTooljetDatabaseDto) => {
+  '2.30.0': (dto: ImportJumpstartDatabaseDto) => {
     const transformedColumns = dto.schema.columns.map((col) => {
       col.constraints_type = {
         is_primary_key: col.constraint_type === 'PRIMARY KEY',
@@ -22,7 +22,7 @@ const transformationsByVersion = {
     dto.schema.columns = transformedColumns;
     return dto;
   },
-  '2.42.0': (dto: ImportTooljetDatabaseDto) => {
+  '2.42.0': (dto: ImportJumpstartDatabaseDto) => {
     const transformedColumns = dto.schema.columns.map((col) => {
       col.constraints_type = {
         ...col.constraints_type,
@@ -39,9 +39,9 @@ const transformationsByVersion = {
 };
 
 export function transformTjdbImportDto(
-  dto: ImportTooljetDatabaseDto,
+  dto: ImportJumpstartDatabaseDto,
   importingVersion: string
-): ImportTooljetDatabaseDto {
+): ImportJumpstartDatabaseDto {
   const versionsWithTransformations = Object.keys(transformationsByVersion);
 
   const transformedDto = versionsWithTransformations.reduce((acc, version) => {

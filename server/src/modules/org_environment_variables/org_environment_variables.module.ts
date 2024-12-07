@@ -28,7 +28,7 @@ import { CredentialsService } from '@services/credentials.service';
 import { Credential } from 'src/entities/credential.entity';
 import { PluginsHelper } from 'src/helpers/plugins.helper';
 import { AppEnvironmentService } from '@services/app_environments.service';
-import { TooljetDbModule } from '../tooljet_db/tooljet_db.module';
+import { JumpstartDbModule } from '../jumpstart_db/jumpstart_db.module';
 
 @Module({
   controllers: [OrgEnvironmentVariablesController],
@@ -51,7 +51,7 @@ import { TooljetDbModule } from '../tooljet_db/tooljet_db.module';
       Credential,
     ]),
     CaslModule,
-    TooljetDbModule,
+    JumpstartDbModule,
   ],
   providers: [
     OrgEnvironmentVariablesService,

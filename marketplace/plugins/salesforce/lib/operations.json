@@ -1,6 +1,6 @@
 
 {
-  "$schema": "https://raw.githubusercontent.com/ToolJet/ToolJet/develop/plugins/schemas/operations.schema.json",
+  "$schema": "https://raw.githubusercontent.com/digitranslab/jumpstart/develop/plugins/schemas/operations.schema.json",
   "title": "Salesforce datasource",
   "description": "A schema defining Salesforce datasource",
   "type": "api",
@@ -85,7 +85,7 @@
           "key": "resource_body",
           "type": "codehinter",
           "lineNumbers": true,
-          "placeholder": "{{ {name: “ToolJet”} }}",
+          "placeholder": "{{ {name: “JumpStart”} }}",
           "description": "Enter the resource body",
           "height": "100px"
         }
@@ -105,7 +105,7 @@
           "label": "Resource Body",
           "key": "resource_body",
           "type": "codehinter",
-          "placeholder": "{{ {Id:”0012F3E4R56487900N”, name: “ToolJet”} }}",
+          "placeholder": "{{ {Id:”0012F3E4R56487900N”, name: “JumpStart”} }}",
           "description": "Enter the resource body",
           "height": "100px"
         }

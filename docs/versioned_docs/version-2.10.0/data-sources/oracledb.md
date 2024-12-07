@@ -5,7 +5,7 @@ title: Oracle DB
 
 # Oracle DB
 
-ToolJet can connect to Oracle databases to read and write data. 
+JumpStart can connect to Oracle databases to read and write data. 
 
 ## Connection
 
@@ -21,11 +21,11 @@ A Oracle DB can be connected with the following credentails:
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - Data source - OracleDB](/img/datasource-reference/oracledb/oracleauth.png)
+![JumpStart - Data source - OracleDB](/img/datasource-reference/oracledb/oracleauth.png)
 
 </div>
 
-Click on **Test connection** button to verify if the credentials are correct and that the database is accessible to ToolJet server. Click on **Save** button to save the data source.
+Click on **Test connection** button to verify if the credentials are correct and that the database is accessible to JumpStart server. Click on **Save** button to save the data source.
 
 ## Querying Oracle DB
 

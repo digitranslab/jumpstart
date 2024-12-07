@@ -2819,8 +2819,8 @@
             },
             {
               "id": "40e59686-2dc3-4a93-9e9f-73beec8dea0c",
-              "name": "tooljetdbdefault",
-              "kind": "tooljetdb",
+              "name": "jumpstartdbdefault",
+              "kind": "jumpstartdb",
               "type": "static",
               "pluginId": null,
               "appVersionId": "5b421d21-8820-42aa-9fe8-d42e783309fe",
@@ -3040,5 +3040,5 @@
       }
     }
   ],
-  "tooljet_version": "2.28.4-ee2.15.0-cloud2.3.1"
+  "jumpstart_version": "2.28.4-ee2.15.0-cloud2.3.1"
 }

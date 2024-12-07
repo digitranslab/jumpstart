@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema",
   "title": "Manifest schema",
-  "description": "Tooljet manifest schema",
+  "description": "Jumpstart manifest schema",
   "type": "object",
   "additionalProperties": false,
   "properties": {

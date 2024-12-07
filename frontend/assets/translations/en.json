@@ -45,7 +45,7 @@
     "viewer": "Sorry!. This app is under maintenance",
     "app": {
         "updateAvailable": "Update available",
-        "newVersionReleased": "A new version of ToolJet has been released.",
+        "newVersionReleased": "A new version of JumpStart has been released.",
         "readReleaseNotes": "Read release notes & update",
         "skipVersion": "Skip this version"
     },
@@ -57,17 +57,17 @@
     },
     "slack": {
         "authorize": "Authorize",
-        "connectToolJetToSlack": "ToolJet can connect to Slack and list users, send messages, etc. Please select appropriate permission scopes.",
+        "connectJumpStartToSlack": "JumpStart can connect to Slack and list users, send messages, etc. Please select appropriate permission scopes.",
         "chatWrite": "chat:write",
-        "listUsersAndSendMessage": "Your ToolJet app will be able to list users and send messages to users & channels.",
+        "listUsersAndSendMessage": "Your JumpStart app will be able to list users and send messages to users & channels.",
         "connectSlack": "Connect to Slack"
     },
     "googleSheets": {
         "readOnly": "Read only",
-        "enableReadAndWrite": "If you want your ToolJet apps to modify your Google sheets, make sure to select read and write access",
-        "readDataFromSheets": "Your ToolJet apps can only read data from Google sheets",
+        "enableReadAndWrite": "If you want your JumpStart apps to modify your Google sheets, make sure to select read and write access",
+        "readDataFromSheets": "Your JumpStart apps can only read data from Google sheets",
         "readWrite": "Read and write",
-        "readModifySheets": "Your ToolJet apps can read data from sheets, modify sheets, and more.",
+        "readModifySheets": "Your JumpStart apps can read data from sheets, modify sheets, and more.",
         "toGoogleSheets": "to Google Sheets"
     },
     "profile": {
@@ -81,7 +81,7 @@
         "password": "Password",
         "acceptInvite": "Accept invite",
         "successfullyVerifiedEmail": "Successfully verified email",
-        "setupTooljet": "Set up ToolJet"
+        "setupJumpstart": "Set up JumpStart"
     },
     "loginSignupPage": {
         "forgotPassword": "Forgot Password",
@@ -93,7 +93,7 @@
         "resetPassword": "Reset Password",
         "signIn": "Sign in",
         "signUp": "Sign up",
-        "createToolJetAccount": "Create an account",
+        "createJumpStartAccount": "Create an account",
         "password": "Password",
         "showPassword": "show password",
         "loginTo": "Login",
@@ -102,13 +102,13 @@
         "emailConfirmLink": "Please check your email for confirmation link",
         "newPassword": "New Password",
         "passwordConfirmation": "Password Confirmation",
-        "newToTooljet": "New to ToolJet?",
+        "newToJumpstart": "New to JumpStart?",
         "newToWorkspace": "New to this workspace?",
         "enterWorkEmail": "Enter your email",
         "enterPassword": "Enter password",
         "forgot": "Forgot?",
         "workEmail": "Email",
-        "joinTooljet": "Join ToolJet",
+        "joinJumpstart": "Join JumpStart",
         "getStartedForFree": "Get started for free",
         "passwordCharacter": "Password must be at least 5 characters",
         "enterFullName": "Enter your full name",
@@ -182,7 +182,7 @@
             "notificationDuration": "Notification duration (s)",
             "events": "Events",
             "transformation": {
-                "transformationToolTip": "Transformations can be enabled on queries to transform the query results. ToolJet allows you to transform the query results using two programming languages: JavaScript and Python",
+                "transformationToolTip": "Transformations can be enabled on queries to transform the query results. JumpStart allows you to transform the query results using two programming languages: JavaScript and Python",
                 "transformations": "Transformations"
             }
         },
@@ -299,7 +299,7 @@
                         "newAccountWillBeCreated": "New account will be created for user's first time SSO sign in",
                         "allowedDomains": "Allowed domains",
                         "enterDomains": "Enter Domains",
-                        "supportMultiDomains": "Support multiple domains. Enter domain names separated by comma. example: tooljet.com,tooljet.io,yourorganization.com",
+                        "supportMultiDomains": "Support multiple domains. Enter domain names separated by comma. example: jumpstart.com,jumpstart.io,yourorganization.com",
                         "loginUrl": "Login URL",
                         "workspaceLogin": "Use this URL to login directly to this workspace",
                         "allowDefaultSso": "Allow default SSO",
@@ -389,8 +389,8 @@
             "removeFromFolder": "Remove from folder"
         },
         "blankPage": {
-            "welcomeToToolJet": "Welcome to your new ToolJet workspace",
-            "getStartedCreateNewApp": "You can get started by creating a new application or by creating an application using a template in ToolJet Library.",
+            "welcomeToJumpStart": "Welcome to your new JumpStart workspace",
+            "getStartedCreateNewApp": "You can get started by creating a new application or by creating an application using a template in JumpStart Library.",
             "importApplication": "Import an app"
         },
         "foldersSection": {
@@ -450,11 +450,11 @@
         "and": "and"
     },
     "onBoarding": {
-        "finishToolJetInstallation": "Finish ToolJet installation",
+        "finishJumpStartInstallation": "Finish JumpStart installation",
         "organization": "Organization",
         "name": "Name",
         "email": "Email",
-        "receiveUpdatesFromToolJet": "You will receive updates from the ToolJet team ( 1-2 emails every month, we do not spam )",
+        "receiveUpdatesFromJumpStart": "You will receive updates from the JumpStart team ( 1-2 emails every month, we do not spam )",
         "finishSetup": "Finish setup",
         "skip": "Skip"
     },

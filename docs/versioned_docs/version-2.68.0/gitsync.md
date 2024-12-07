@@ -9,13 +9,13 @@ import TabItem from '@theme/TabItem';
 <div className='badge badge--primary heading-badge'>Available on: Paid plans</div>
 
 
-The GitSync feature enables synchronization of workspace applications with a git repository, streamlining application management and version control on ToolJet.
+The GitSync feature enables synchronization of workspace applications with a git repository, streamlining application management and version control on JumpStart.
 
 <div style={{paddingTop:'24px', paddingBottom:'24px'}}>
 
 ## Overview
 
-ToolJet applications can be synchronized with a Git repository, offering the flexibility to tailor your application development and deployment processes across various environments while aligning with best practices for the application development lifecycle.
+JumpStart applications can be synchronized with a Git repository, offering the flexibility to tailor your application development and deployment processes across various environments while aligning with best practices for the application development lifecycle.
 
 </div>
 
@@ -29,7 +29,7 @@ GitSync provides a straightforward solution for creating backups of your applica
 
 #### Environment Migration
 
-Facilitating the movement of applications across different ToolJet deployments (e.g., from development to staging to production), GitSync acts as a pivotal tool for environment migration. Users can effortlessly transfer their applications across environments by pushing changes to a Git repository.
+Facilitating the movement of applications across different JumpStart deployments (e.g., from development to staging to production), GitSync acts as a pivotal tool for environment migration. Users can effortlessly transfer their applications across environments by pushing changes to a Git repository.
 
 <div style={{textAlign: 'center'}}>
     <img style={{ border:'0', marginBottom:'15px', borderRadius:'5px', boxShadow: '0px 1px 3px rgba(0, 0, 0, 0.2)' }} className="screenshot-full" src="/img/gitsync/envmigration.png" alt="GitSync" />
@@ -49,7 +49,7 @@ Facilitating the movement of applications across different ToolJet deployments (
 ## Setting up GitSyncing with GitHub
 
 :::caution
-- ToolJet support git repo managers like GitHub, GitLab, Bitbucket, AWS CodeCommit, and Azure Repos.
+- JumpStart support git repo managers like GitHub, GitLab, Bitbucket, AWS CodeCommit, and Azure Repos.
 - Only Admins have the permission to configure the GitSync feature on workspace level.
 - The default branch name for the git repository should be `master`.
 :::
@@ -70,10 +70,10 @@ Obtain the **SSH URL** of the repository. When a repository is created, GitHub s
     <img style={{ border:'0', marginBottom:'15px', borderRadius:'5px', boxShadow: '0px 1px 3px rgba(0, 0, 0, 0.2)' }} className="screenshot-full" src="/img/gitsync/github2.png" alt="GitSync" />
 </div>
 
-### Step 3: Configure the GitSync feature on ToolJet
+### Step 3: Configure the GitSync feature on JumpStart
 
 Go to the **Workspace settings**, and click on the **Configure git** tab.
-Enter the **SSH URL** of the repository (obtained in Step 2) in the **Git repository URL** field. Click on the **Generate SSH key** button, and copy the SSH key that is generated. The SSH key is used to authenticate ToolJet with the repository.
+Enter the **SSH URL** of the repository (obtained in Step 2) in the **Git repository URL** field. Click on the **Generate SSH key** button, and copy the SSH key that is generated. The SSH key is used to authenticate JumpStart with the repository.
 
 There are two types of generated SSH keys: **
 - **ED25519**: This is a secure and efficient algorithm that is used for generating SSH keys. It is recommended to use this key type. VCS providers like GitHub and GitLab recommend using this key type
@@ -97,9 +97,9 @@ Enter a title for the SSH key in the **Title** field. Paste the SSH key that you
     <img style={{ border:'0', marginBottom:'15px', borderRadius:'5px', boxShadow: '0px 1px 3px rgba(0, 0, 0, 0.2)' }} className="screenshot-full" src="/img/gitsync/github4.png" alt="GitSync" />
 </div>
 
-### Step 5: Finish the GitSync configuration on ToolJet
+### Step 5: Finish the GitSync configuration on JumpStart
 
-Go back to the **Configure git** tab on ToolJet, and click on the **Finalize setup** button. If the SSH key is configured correctly, you will see a success message.
+Go back to the **Configure git** tab on JumpStart, and click on the **Finalize setup** button. If the SSH key is configured correctly, you will see a success message.
 
 <div style={{textAlign: 'center'}}>
     <img style={{ border:'0', marginBottom:'15px', borderRadius:'5px', boxShadow: '0px 1px 3px rgba(0, 0, 0, 0.2)' }} className="screenshot-full" src="/img/gitsync/finalize-ssh2-configuration-v2.png" alt="GitSync" />
@@ -153,7 +153,7 @@ On clicking the GitSync button, the users will be able to commit changes to the 
 
 ## Delete GitSync Configuration
 
-To delete the GitSync configuration, go to the **Configure git** tab on the **Workspace settings** page, and click on the **Delete configuration** button. This will delete the SSH key from the ToolJet configuration and the GitSync feature will be disabled.
+To delete the GitSync configuration, go to the **Configure git** tab on the **Workspace settings** page, and click on the **Delete configuration** button. This will delete the SSH key from the JumpStart configuration and the GitSync feature will be disabled.
 
 **Note:**
 - Deleting the GitSync configuration will not delete the apps from the git repository. The apps will still be available in the git repository in the same state as they were before the GitSync configuration was deleted.
@@ -254,7 +254,7 @@ Whenever a user creates a new app version and creates a commit to git repository
 
 You can configure the GitSync feature on another workspace to pull the changes from the git repository. To configure the GitSync feature on another workspace, follow the steps mentioned in the [Setting up GitSyncing with GitHub](#setting-up-gitsyncing-with-github) section.
 
-Once the GitSync feature is configured, go to the ToolJet dashboard and click on the three dots on the right side of the **Create new app** button. Click on the **Import from git repository** option.
+Once the GitSync feature is configured, go to the JumpStart dashboard and click on the three dots on the right side of the **Create new app** button. Click on the **Import from git repository** option.
 
 <div style={{textAlign: 'center'}}>
     <img style={{ border:'0', marginBottom:'15px', borderRadius:'5px', boxShadow: '0px 1px 3px rgba(0, 0, 0, 0.2)' }} className="screenshot-full" src="/img/gitsync/importgit-v2.png" alt="GitSync" />
@@ -293,7 +293,7 @@ You can check for updates in the git repository by clicking on the **GitSync** b
 ## Setting up GitSyncing with GitLab
 
 :::caution
-- ToolJet support git repo managers like GitHub, GitLab, Bitbucket, AWS CodeCommit, and Azure Repos.
+- JumpStart support git repo managers like GitHub, GitLab, Bitbucket, AWS CodeCommit, and Azure Repos.
 - Only Admins have the permission to configure the GitSync feature on workspace level.
 - The default branch name for the git repository should be `master`.
 :::
@@ -326,7 +326,7 @@ Obtain the **SSH URL** of the repository. On GitLab, you can obtain the URL by c
 
 <div style={{paddingTop:'24px', paddingBottom:'24px'}}>
 
-### Step 3: Configure the GitSync feature on ToolJet
+### Step 3: Configure the GitSync feature on JumpStart
 
 Go to the **Workspace settings**, and click on the **Configure git** tab.
 
@@ -335,7 +335,7 @@ Go to the **Workspace settings**, and click on the **Configure git** tab.
 </div>
 <br/>
 
-Enter the **SSH URL** of the repository (obtained in Step 2) in the **Git repository URL** field. Click on the **Generate SSH key** button, and copy the SSH key that is generated. The SSH key is used to authenticate ToolJet with the gitlab repository.
+Enter the **SSH URL** of the repository (obtained in Step 2) in the **Git repository URL** field. Click on the **Generate SSH key** button, and copy the SSH key that is generated. The SSH key is used to authenticate JumpStart with the gitlab repository.
 
 There are two types of generated SSH keys: **
 - **ED25519**: This is a secure and efficient algorithm that is used for generating SSH keys. It is recommended to use this key type. VCS providers like GitHub and GitLab recommend using this key type
@@ -364,7 +364,7 @@ Option 1: Add as a user-wide SSH key (for access to all your repositories)
 </div>
 <br/>
 
-- In the **Key** field, paste the SSH key you generated in ToolJet's Configure Git tab during the previous step..
+- In the **Key** field, paste the SSH key you generated in JumpStart's Configure Git tab during the previous step..
 - Give your key a descriptive title.
 - Set **Usage type** to **Authentication & signing**.
 - Optionally, set an expiration date.
@@ -382,7 +382,7 @@ Option 2: Add as a deploy key (for access to a specific repository only)
 - Once you are in the **Repository Settings**, expand the **Deploy Keys** section.
 - Click on the **Add new deploy key** button.
 - Give your key a descriptive title.
-- In the **Key** field, paste the SSH key you generated in ToolJet's Configure Git tab during the previous step.
+- In the **Key** field, paste the SSH key you generated in JumpStart's Configure Git tab during the previous step.
 - Enable the **Grant write permissions to this key** checkbox. We need this permission to push changes to the repository.
 - Click **Add key** to save.
 
@@ -395,9 +395,9 @@ Option 2: Add as a deploy key (for access to a specific repository only)
 
 <div style={{paddingTop:'24px', paddingBottom:'24px'}}>
 
-### Step 5: Finish the GitSync configuration on ToolJet
+### Step 5: Finish the GitSync configuration on JumpStart
 
-Go back to the **Configure git** tab on ToolJet, and click on the **Finalize setup** button. If the SSH key is configured correctly, you will see a success message.
+Go back to the **Configure git** tab on JumpStart, and click on the **Finalize setup** button. If the SSH key is configured correctly, you will see a success message.
 
 <div style={{textAlign: 'center'}}>
     <img style={{ border:'0', marginBottom:'15px', borderRadius:'5px', boxShadow: '0px 1px 3px rgba(0, 0, 0, 0.2)' }} className="screenshot-full" src="/img/gitsync/gitlab/configfin.png" alt="GitLab SSH Key" />
@@ -445,7 +445,7 @@ On clicking the GitSync button, the users will be able to commit changes to the 
 
 ## Delete GitSync configuration
 
-To delete the GitSync configuration, go to the **Configure git** tab on the **Workspace settings** page, and click on the **Delete configuration** button. This will delete the SSH key from the ToolJet configuration and the GitSync feature will be disabled.
+To delete the GitSync configuration, go to the **Configure git** tab on the **Workspace settings** page, and click on the **Delete configuration** button. This will delete the SSH key from the JumpStart configuration and the GitSync feature will be disabled.
 
 **Note:** Deleting the GitSync configuration will not delete the apps from the git repository. The apps will still be available in the git repository in the same state as they were before the GitSync configuration was deleted.
 
@@ -563,7 +563,7 @@ The **JSON** file in the app folder will be replaced with the new version of the
 
 You can configure the GitSync feature on another workspace to pull the changes from the git repository. To configure the GitSync feature on another workspace, follow the steps mentioned in the [Setting up GitSyncing with GitLab](#setting-up-gitsyncing-with-gitlab) section.
 
-Once the GitSync feature is configured, go to the ToolJet dashboard and click on the three dots on the right side of the **Create new app** button. Click on the **Import from git repository** option.
+Once the GitSync feature is configured, go to the JumpStart dashboard and click on the three dots on the right side of the **Create new app** button. Click on the **Import from git repository** option.
 
 <div style={{textAlign: 'center'}}>
     <img style={{padding: '10px', marginBottom:'15px', borderRadius: '6px' }} className="screenshot-full" src="/img/gitsync/importgit.png" alt="GitLab SSH Key" />

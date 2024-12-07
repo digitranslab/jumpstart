@@ -5,7 +5,7 @@ title: Multi-Environment
 
 <div className='badge badge--primary heading-badge'>Available on: Enterprise Edition</div>
 
-ToolJet's **multi-environment** helps in streamlining workflows, thereby minimizing the chances of errors, and enables effective application management. Using multi-environment ensures that your ToolJet application is rigorously tested before it is made available to users.
+JumpStart's **multi-environment** helps in streamlining workflows, thereby minimizing the chances of errors, and enables effective application management. Using multi-environment ensures that your JumpStart application is rigorously tested before it is made available to users.
 
 <div style={{textAlign: 'center'}}>
 
@@ -15,7 +15,7 @@ ToolJet's **multi-environment** helps in streamlining workflows, thereby minimiz
 
 ## Using Multi-environments
 
-ToolJet comes with three default **environments**:
+JumpStart comes with three default **environments**:
 - **Production**
 - **Development**
 - **Staging**

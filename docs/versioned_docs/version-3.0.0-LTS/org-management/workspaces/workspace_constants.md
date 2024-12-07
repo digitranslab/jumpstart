@@ -11,7 +11,7 @@ Workspace constants and secrets are predefined values that can be used across yo
 
 ## Types of Constants
 
-ToolJet offers two types of constants:
+JumpStart offers two types of constants:
 
 1. **Global Constants**: Used for reusable values that can be applied consistently across the product.
 2. **Secrets**: Used for secure storage of sensitive data.
@@ -71,7 +71,7 @@ Creating, updating, and deleting constants and secrets are exclusive privileges 
 
 To create workspace constants or secrets, follow these steps:
 
-1. Access the ToolJet Dashboard and click on the Workspace Constants tab from the left sidebar.
+1. Access the JumpStart Dashboard and click on the Workspace Constants tab from the left sidebar.
 3. Click on the **Create new constant** button.
 4. A drawer will appear. Enter the desired name and value for the constant or secret.
 5. Select one of the following types:

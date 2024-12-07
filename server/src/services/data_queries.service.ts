@@ -1,5 +1,5 @@
 import got from 'got';
-import { QueryError } from '@tooljet/plugins/dist/server';
+import { QueryError } from '@jumpstart/plugins/dist/server';
 import { Injectable, BadRequestException, UnauthorizedException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { EntityManager, Repository } from 'typeorm';
@@ -14,7 +14,7 @@ import { EncryptionService } from './encryption.service';
 import { App } from 'src/entities/app.entity';
 import { AppEnvironmentService } from './app_environments.service';
 import { dbTransactionWrap } from 'src/helpers/utils.helper';
-import allPlugins from '@tooljet/plugins/dist/server';
+import allPlugins from '@jumpstart/plugins/dist/server';
 import { DataSourceScopes } from 'src/helpers/data_source.constants';
 import { EventHandler } from 'src/entities/event_handler.entity';
 import { IUpdatingReferencesOptions } from '@dto/data-query.dto';
@@ -298,7 +298,7 @@ export class DataQueriesService {
 
   /* This function fetches the access token from the token url set in REST API (oauth) datasource */
   async fetchOAuthToken(sourceOptions: any, code: string, userId: any, isMultiAuthEnabled: boolean): Promise<any> {
-    const tooljetHost = process.env.TOOLJET_HOST;
+    const jumpstartHost = process.env.JUMPSTART_HOST;
     const isUrlEncoded = this.checkIfContentTypeIsURLenc(sourceOptions['access_token_custom_headers']);
     const accessTokenUrl = sourceOptions['access_token_url'];
 
@@ -310,7 +310,7 @@ export class DataQueriesService {
       client_id: sourceOptions['client_id'],
       client_secret: sourceOptions['client_secret'],
       grant_type: sourceOptions['grant_type'],
-      redirect_uri: `${tooljetHost}/oauth2/authorize`,
+      redirect_uri: `${jumpstartHost}/oauth2/authorize`,
       ...customParams,
     };
     try {

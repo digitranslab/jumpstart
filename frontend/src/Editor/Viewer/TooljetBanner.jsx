@@ -1,10 +1,10 @@
 import React from 'react';
 import { useAppDataStore } from '@/_stores/appDataStore';
-import TooljetLogoIcon from '@/_ui/Icon/solidIcons/TooljetLogoIcon';
-import TooljetLogoText from '@/_ui/Icon/solidIcons/TooljetLogoText';
+import JumpstartLogoIcon from '@/_ui/Icon/solidIcons/JumpstartLogoIcon';
+import JumpstartLogoText from '@/_ui/Icon/solidIcons/JumpstartLogoText';
 import { shallow } from 'zustand/shallow';
 
-const TooljetBanner = ({ isDarkMode }) => {
+const JumpstartBanner = ({ isDarkMode }) => {
   const instanceId = useAppDataStore(
     (state) => ({
       instance_id: state.metadata?.instance_id,
@@ -16,17 +16,17 @@ const TooljetBanner = ({ isDarkMode }) => {
     <div
       className="powered-with-tj"
       onClick={() => {
-        const url = `https://tooljet.com/?utm_source=powered_by_banner&utm_medium=${instanceId}&utm_campaign=self_hosted`;
+        const url = `https://jumpstart.com/?utm_source=powered_by_banner&utm_medium=${instanceId}&utm_campaign=self_hosted`;
         window.open(url, '_blank');
       }}
     >
       Built with
       <span className={'powered-with-tj-icon'}>
-        <TooljetLogoIcon />
+        <JumpstartLogoIcon />
       </span>
-      <TooljetLogoText fill={isDarkMode ? '#ECEDEE' : '#11181C'} />
+      <JumpstartLogoText fill={isDarkMode ? '#ECEDEE' : '#11181C'} />
     </div>
   );
 };
 
-export default TooljetBanner;
+export default JumpstartBanner;

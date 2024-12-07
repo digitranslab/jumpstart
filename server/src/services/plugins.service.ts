@@ -174,8 +174,8 @@ export class PluginsService {
   async fetchPluginFilesFromS3(id: string) {
     if (process.env.NODE_ENV === 'production') {
       const host = this.configService.get<string>(
-        'TOOLJET_MARKETPLACE_URL',
-        'https://tooljet-plugins-production.s3.us-east-2.amazonaws.com'
+        'JUMPSTART_MARKETPLACE_URL',
+        'https://jumpstart-plugins-production.s3.us-east-2.amazonaws.com'
       );
 
       const promises = await Promise.all([

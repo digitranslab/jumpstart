@@ -5,7 +5,7 @@ title: Use Inspector
 
 In this how-to guide, we will take a look at **Inspector** of the app-builder and see how it can be helpful in building applications.
 
-The Inspector can be used to inspect the data of the queries, properties and values of the components that are there on the canvas, ToolJet's global variables and the variables that have been set by the user.
+The Inspector can be used to inspect the data of the queries, properties and values of the components that are there on the canvas, JumpStart's global variables and the variables that have been set by the user.
 
 <div style={{textAlign: 'center'}}>
 
@@ -92,7 +92,7 @@ globals section includes the following sub-sections:
 - **urlparam:** The urlparams contains the information about the url parameters of the application.
 
 :::info
-All the global variables can be accessed anywhere inside the ToolJet applications. Here's an **[example use-case](/docs/how-to/access-currentuser)** of using these variables.
+All the global variables can be accessed anywhere inside the JumpStart applications. Here's an **[example use-case](/docs/how-to/access-currentuser)** of using these variables.
 :::
 
 <div style={{textAlign: 'center'}}>

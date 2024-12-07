@@ -1,4 +1,4 @@
-import { QueryError, QueryResult, QueryService } from '@tooljet-marketplace/common';
+import { QueryError, QueryResult, QueryService } from '@jumpstart-marketplace/common';
 import { SourceOptions, QueryOptions } from './types';
 import jsforce from 'jsforce';
 
@@ -12,7 +12,7 @@ export default class Salesforce implements QueryService {
     const instanceUrl = sourceOptions.instance_url;
     const access_token = sourceOptions.access_token;
     const operation = queryOptions.operation;
-    const host = process.env.TOOLJET_HOST;
+    const host = process.env.JUMPSTART_HOST;
     const subpath = process.env.SUB_PATH;
     const fullUrl = `${host}${subpath ? subpath : '/'}`;
     const redirect_uri = `${fullUrl}oauth2/authorize`;
@@ -79,7 +79,7 @@ export default class Salesforce implements QueryService {
 
   authUrl(source_options): string {
     const client_id = source_options.client_id.value;
-    const host = process.env.TOOLJET_HOST;
+    const host = process.env.JUMPSTART_HOST;
     const subpath = process.env.SUB_PATH;
     const fullUrl = `${host}${subpath ? subpath : '/'}`;
     const redirectUri = `${fullUrl}oauth2/authorize`;
@@ -107,7 +107,7 @@ export default class Salesforce implements QueryService {
       }
     }
 
-    const host = process.env.TOOLJET_HOST;
+    const host = process.env.JUMPSTART_HOST;
     const subpath = process.env.SUB_PATH;
     const fullUrl = `${host}${subpath ? subpath : '/'}`;
     const redirectUri = `${fullUrl}oauth2/authorize`;

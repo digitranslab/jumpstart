@@ -10,7 +10,7 @@ title: OIDC Group Sync
 
 ## Overview
 
-ToolJet's OIDC (OpenID Connect) group synchronization feature enables seamless integration between your Identity Provider (IdP) and ToolJet's user management system. This functionality automates the process of synchronizing user groups, enhancing security and streamlining user access management.
+JumpStart's OIDC (OpenID Connect) group synchronization feature enables seamless integration between your Identity Provider (IdP) and JumpStart's user management system. This functionality automates the process of synchronizing user groups, enhancing security and streamlining user access management.
 
 ## Key Features
 
@@ -31,9 +31,9 @@ Set up an OIDC application in your Identity Provider with the following details:
 - Optionally limit access to specific groups for filtering
 
 
-### 2. Configure OIDC Group Sync in ToolJet
+### 2. Configure OIDC Group Sync in JumpStart
 
-To set up OIDC group synchronization in ToolJet follow these steps:
+To set up OIDC group synchronization in JumpStart follow these steps:
 
 1. Navigate to the **Workspace Settings** > **Workspace Login** Tab.
 2. Click on the **OpenID Connect** under the **SSO** section.
@@ -49,7 +49,7 @@ To set up OIDC group synchronization in ToolJet follow these steps:
   </div>
 
 :::info
-For a detailed guide on setting up OIDC in ToolJet, refer to our [OIDC](/docs/category/openid-connect/) documentation.
+For a detailed guide on setting up OIDC in JumpStart, refer to our [OIDC](/docs/category/openid-connect/) documentation.
 :::
 
 4. Once you have entered the information related to your IdP credentials, you can proceed to configure group synchronization settings.
@@ -57,9 +57,9 @@ For a detailed guide on setting up OIDC in ToolJet, refer to our [OIDC](/docs/ca
 5. Enable the **Group Sync** toggle and provide the following information:
 
 - **Claim name**: Enter the name of the claim in the OIDC token that contains group information (e.g., `groups`).
-- **Group mapping**: Configure how IdP groups map to ToolJet groups. Use the format:
+- **Group mapping**: Configure how IdP groups map to JumpStart groups. Use the format:
    ```
-   IdP Group -> ToolJet Group, Another IdP Group -> Another ToolJet Group
+   IdP Group -> JumpStart Group, Another IdP Group -> Another JumpStart Group
    ```
    For example:
    ```
@@ -72,7 +72,7 @@ For a detailed guide on setting up OIDC in ToolJet, refer to our [OIDC](/docs/ca
 
 ## Group Mapping
 
-Group mapping in ToolJet follows these principles:
+Group mapping in JumpStart follows these principles:
 
 - Default 1:1 mapping based on group names (case-sensitive)
 - Custom group mapping options available
@@ -81,7 +81,7 @@ Group mapping in ToolJet follows these principles:
 
 ### Group Mapping Scenarios
 
-| Groups in IdP | Groups in ToolJet | Role Mapping Settings | Result |
+| Groups in IdP | Groups in JumpStart | Role Mapping Settings | Result |
 |---------------|-------------------|------------------------|--------|
 | **admin**, **builder**, **end-user** | Exists | None | User added to corresponding default user group |
 | **engineers** | Exists (no permissions) | None | User added to **engineers** custom group and **end-users** default group |
@@ -104,4 +104,4 @@ Group mapping in ToolJet follows these principles:
 - Users will need to log in via alternative SSO methods or email/password.
 - If the license limit is reached, new users will not be allowed to log in.
 
-For more information on managing users and groups in ToolJet, please refer to our [Managing Users and Groups](/docs/tutorial/manage-users-groups/) documentation.
+For more information on managing users and groups in JumpStart, please refer to our [Managing Users and Groups](/docs/tutorial/manage-users-groups/) documentation.

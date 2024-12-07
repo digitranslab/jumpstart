@@ -3,11 +3,11 @@ id: mysql
 title: MySQL
 ---
 
-ToolJet can connect to MySQL databases to read and write data.
+JumpStart can connect to MySQL databases to read and write data.
 
 ## Connection
 
-To establish a connection with the MySQL datasource, you can either click on the `+Add New` button located on the query panel or navigate to the **[Global Datasources](/docs/data-sources/overview)** page through the ToolJet dashboard.
+To establish a connection with the MySQL datasource, you can either click on the `+Add New` button located on the query panel or navigate to the **[Global Datasources](/docs/data-sources/overview)** page through the JumpStart dashboard.
 
 <div style={{textAlign: 'center'}}>
 
@@ -17,11 +17,11 @@ To establish a connection with the MySQL datasource, you can either click on the
 <br/>
 
 :::info
-Please make sure the **Host/IP** of the database is accessible from your VPC if you have self-hosted ToolJet. If you are using ToolJet cloud, please **whitelist** our IP.
+Please make sure the **Host/IP** of the database is accessible from your VPC if you have self-hosted JumpStart. If you are using JumpStart cloud, please **whitelist** our IP.
 :::
 
 
-**ToolJet requires the following to connect to your MySQL database:**
+**JumpStart requires the following to connect to your MySQL database:**
 
 | Parameter | Description |
 |:--- |:--- |
@@ -44,7 +44,7 @@ If you are using **Socket** as the connection type, you will need to provide the
 |:--- |:--- |
 | Socket path | Path of the socket file |
 
-It is recommended to create a new MySQL database user so that you can control the access levels of ToolJet. 
+It is recommended to create a new MySQL database user so that you can control the access levels of JumpStart. 
 
 <div style={{textAlign: 'center'}}>
 
@@ -52,7 +52,7 @@ It is recommended to create a new MySQL database user so that you can control th
 
 </div>
 
-Click on **Test connection** to verify the correctness of the provided credentials and the accessibility of the database to the ToolJet server. Finally, click the **Save** button to save the data source configuration.
+Click on **Test connection** to verify the correctness of the provided credentials and the accessibility of the database to the JumpStart server. Finally, click the **Save** button to save the data source configuration.
 
 ## Querying MySQL
 

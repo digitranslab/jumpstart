@@ -1,7 +1,7 @@
 {
-  "name": "tooljet",
+  "name": "jumpstart",
   "version": "1.18.0",
-  "description": "ToolJet is an open-source low-code framework to build and deploy internal tools.",
+  "description": "JumpStart is an open-source low-code framework to build and deploy internal tools.",
   "engines": {
     "node": "18.18.2",
     "npm": "9.8.1"
@@ -18,7 +18,7 @@
     ]
   },
   "devDependencies": {
-    "@tooljet/cli": "^0.0.13",
+    "@jumpstart/cli": "file:./cli",
     "eslint": "^8.56.0",
     "husky": "^8.0.3",
     "lint-staged": "^13.1.2"

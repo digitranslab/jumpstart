@@ -5,17 +5,17 @@ title: ClickHouse
 
 # ClickHouse
 
-ToolJet can connect to the ClickHouse to read and write data.
+JumpStart can connect to the ClickHouse to read and write data.
 
 :::info
-ToolJet uses this [NodeJS](https://github.com/TimonKK/clickhouse) client for ClickHouse.
+JumpStart uses this [NodeJS](https://github.com/TimonKK/clickhouse) client for ClickHouse.
 :::
 
 ## Connection
 
-To establish a connection with the Clickhouse data source, you can either click on the `+Add new data source` button located on the query panel or navigate to the **[Data Sources](/docs/data-sources/overview)** page through the ToolJet dashboard.
+To establish a connection with the Clickhouse data source, you can either click on the `+Add new data source` button located on the query panel or navigate to the **[Data Sources](/docs/data-sources/overview)** page through the JumpStart dashboard.
 
-ToolJet requires the following to connect to your ClickHouse Database:
+JumpStart requires the following to connect to your ClickHouse Database:
 
 - **Username**
 - **Password**

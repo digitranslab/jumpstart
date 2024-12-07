@@ -15,7 +15,7 @@ Datasources pull in and push data to any source including databases, external AP
 
 ## Connecting datasources
 
-1. After logging in to ToolJet, create a new app from the dashboard
+1. After logging in to JumpStart, create a new app from the dashboard
 
 2. There are two ways for connecting a datasource. You can connect from:
     1. **Left-sidebar**: On the left sidebar, click on the `datasource` icon and then click on the `+ add datasource` button
@@ -37,6 +37,6 @@ Datasources pull in and push data to any source including databases, external AP
 3. Follow the steps in the **[Datasource Library](/docs/data-sources/airtable)** specific to the desired datasource
 
 :::info
-ToolJet allows you to transform the data returned by datasources using **[Transformations](/docs/tutorial/transformations)**
+JumpStart allows you to transform the data returned by datasources using **[Transformations](/docs/tutorial/transformations)**
 :::
 

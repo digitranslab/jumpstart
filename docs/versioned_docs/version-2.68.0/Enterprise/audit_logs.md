@@ -6,7 +6,7 @@ title: Audit logs
 <div className='badge badge--primary heading-badge'>Available on: Paid plans</div>
 
 
-The audit log is the report of all the activities done in your ToolJet account. It will capture and display events automatically by recording who performed an activity, what when, and where the activity was performed, along with other information such as IP address.
+The audit log is the report of all the activities done in your JumpStart account. It will capture and display events automatically by recording who performed an activity, what when, and where the activity was performed, along with other information such as IP address.
 
 <div style={{textAlign: 'center'}}>
 
@@ -95,12 +95,12 @@ The dropdown will display all the apps associated with your account. Select an a
 | created_at | Shows the date and time when the event was logged.  |
 | id | Each logged event is assigned a unique event ID. |
 | ip_address | Displays the IP address from which the event was logged. |
-| metadata | The metadata includes two sub-properties: `tooljet_version` and `user_agent`. `tooljet_version` shows the version of ToolJet used for the event, while `user_agent` contains information about the device and browser used. |
-| organization_id | Every organization in ToolJet has a unique ID associated with it, which is recorded when an event occurs. |
+| metadata | The metadata includes two sub-properties: `jumpstart_version` and `user_agent`. `jumpstart_version` shows the version of JumpStart used for the event, while `user_agent` contains information about the device and browser used. |
+| organization_id | Every organization in JumpStart has a unique ID associated with it, which is recorded when an event occurs. |
 | resource_id | Different [resources](#select-resources) have their respective IDs associated with them. These IDs are assigned when the resources are created. |
 | resource_name | Shows the name of the [resources](#select-resources) that were involved in the logged event. For example, if an app was created or deleted, it will display the name of that app. |
 | resource_type | Indicates the type of the [resources](#select-resources) involved in the logged event. |
-| user_id | Each user account in ToolJet has a unique ID associated with it, which is recorded when an event occurs. |
+| user_id | Each user account in JumpStart has a unique ID associated with it, which is recorded when an event occurs. |
 
 </div>
 
@@ -118,7 +118,7 @@ The log file is configured to rotate on a daily basis. This means that a new log
 
 ### Log Redaction
 
-ToolJet implements log redaction to protect sensitive information. By default, the following headers are masked in the logs:
+JumpStart implements log redaction to protect sensitive information. By default, the following headers are masked in the logs:
 
 - authorization
 - cookie
@@ -144,13 +144,13 @@ LOGGER_REDACT=res.headers["x-rate-limit-remaining"],res.headers["x-request-id"]
 
 The path for the log file is defined using the `LOG_FILE_PATH` variable in the environment. It's important to understand that this path is relative to the home directory of the machine. For instance, if `LOG_FILE_PATH` is set to `hsbc/dashboard/log`, the resulting log file path will be structured as follows:
 ```
-homepath/hsbc/dashboard/log/tooljet_log/{process_id}-{date}/audit.log
+homepath/hsbc/dashboard/log/jumpstart_log/{process_id}-{date}/audit.log
 ```
 Here, `{process_id}` is a placeholder for the unique process identifier, and `{date}` represents the current date. This structured path ensures that audit logs are organized by both process and date, facilitating easy traceability and analysis.
 
 | <div style={{ width:"100px"}}> Variable </div>| <div style={{ width:"100px"}}> Description </div>                                                                |
 | -------- | --------------------------------------------------------------------------- |
-| LOG_FILE_PATH | the path where the log file will be created ( eg: tooljet/log/tooljet-audit.log) |
+| LOG_FILE_PATH | the path where the log file will be created ( eg: jumpstart/log/jumpstart-audit.log) |
 
 <details>
 <summary>Example Log file data</summary>
@@ -170,7 +170,7 @@ Here, `{process_id}` is a placeholder for the unique process identifier, and `{d
     ipAddress: '::1',
     metadata: {
       userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36',
-      tooljetVersion: '2.22.2-ee2.8.3'
+      jumpstartVersion: '2.22.2-ee2.8.3'
     }
   },
   label: 'APP'

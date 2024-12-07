@@ -11,7 +11,7 @@ Calendar widget comes with the following features:
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/calendar/calendar.png" alt="ToolJet - Widget Reference - Calendar" />
+<img className="screenshot-full" src="/img/widgets/calendar/calendar.png" alt="JumpStart - Widget Reference - Calendar" />
 
 </div>
 
@@ -83,7 +83,7 @@ If we specify the `resourceId` of any of the events as `1`, then that event will
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/calendar/calendar-resource.png" alt="ToolJet - Widget Reference - Calendar" />
+<img className="screenshot-full" src="/img/widgets/calendar/calendar-resource.png" alt="JumpStart - Widget Reference - Calendar" />
 
 </div>
 
@@ -121,7 +121,7 @@ Determines whether to display a popover whenever an event is clicked. Click on `
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/calendar/events.png" alt="ToolJet - Widget Reference - Calendar" />
+<img className="screenshot-full" src="/img/widgets/calendar/events.png" alt="JumpStart - Widget Reference - Calendar" />
 
 </div>
 
@@ -160,7 +160,7 @@ A Tooltip is often used to specify extra information about something when the us
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/tooltip.png" alt="ToolJet - Widget Reference - Calendar" />
+<img className="screenshot-full" src="/img/tooltip.png" alt="JumpStart - Widget Reference - Calendar" />
 
 </div>
 
@@ -168,7 +168,7 @@ A Tooltip is often used to specify extra information about something when the us
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/calendar/layout.png" alt="ToolJet - Widget Reference - Calendar" />
+<img className="screenshot-full" src="/img/widgets/calendar/layout.png" alt="JumpStart - Widget Reference - Calendar" />
 
 </div>
 
@@ -183,7 +183,7 @@ Toggle on or off to display the widget in mobile view. You can programmatically 
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/calendar/styles.png" alt="ToolJet - Widget Reference - Calendar" />
+<img className="screenshot-full" src="/img/widgets/calendar/styles.png" alt="JumpStart - Widget Reference - Calendar" />
 
 </div>
 
@@ -199,7 +199,7 @@ If we set this property to `compact`, the cell sizes will be smaller in `week` a
 
 ### Header date format on week view
 
-This format determines how the column header for each day in week view will be displayed. As with every other date format field in ToolJet, this follows the **momentjs** standard of date formatting. By default, its set to `DD MMM`.
+This format determines how the column header for each day in week view will be displayed. As with every other date format field in JumpStart, this follows the **momentjs** standard of date formatting. By default, its set to `DD MMM`.
 
 :::info
 Any property having `Fx` button next to its field can be **programmatically configured**.

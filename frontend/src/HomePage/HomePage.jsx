@@ -253,9 +253,9 @@ class HomePageComponent extends React.Component {
     this.setState({ isImportingApp: true });
     // For backward compatibility with legacy app import
     const organization_id = this.state.currentUser?.organization_id;
-    const isLegacyImport = isEmpty(importJSON.tooljet_version);
+    const isLegacyImport = isEmpty(importJSON.jumpstart_version);
     if (isLegacyImport) {
-      importJSON = { app: [{ definition: importJSON, appName: appName }], tooljet_version: importJSON.tooljetVersion };
+      importJSON = { app: [{ definition: importJSON, appName: appName }], jumpstart_version: importJSON.jumpstartVersion };
     } else {
       importJSON.app[0].appName = appName;
     }
@@ -268,7 +268,7 @@ class HomePageComponent extends React.Component {
       });
       if (!isEmpty(data.imports.app)) {
         this.props.navigate(`/${getWorkspaceId()}/apps/${data.imports.app[0].id}`);
-      } else if (!isEmpty(data.imports.tooljet_database)) {
+      } else if (!isEmpty(data.imports.jumpstart_database)) {
         this.props.navigate(`/${getWorkspaceId()}/database`);
       }
     } catch (error) {

@@ -57,12 +57,12 @@ function DataSourcePicker({ dataSources, sampleDataSource, staticDataSources, da
         Connect to a Data source
       </h4>
       <p className="mb-3" style={{ textAlign: 'center' }}>
-        Select a Data source to start creating a new query. To know more about queries in ToolJet, you can read our
+        Select a Data source to start creating a new query. To know more about queries in JumpStart, you can read our
         &nbsp;
         <a
           data-cy="querymanager-doc-link"
           target="_blank"
-          href="https://docs.tooljet.com/docs/app-builder/query-panel"
+          href="https://docs.jumpstart.com/docs/app-builder/query-panel"
           rel="noreferrer"
         >
           documentation
@@ -108,7 +108,7 @@ function DataSourcePicker({ dataSources, sampleDataSource, staticDataSources, da
                 data-cy={`${sampleDataSource.kind.toLowerCase().replace(/\s+/g, '-')}-sample-db-add-query-card`}
               >
                 <DataSourceIcon source={sampleDataSource} height={14} />{' '}
-                {sampleDataSource.kind == 'postgresql' ? 'PostgreSQL' : 'ToolJetDB'}
+                {sampleDataSource.kind == 'postgresql' ? 'PostgreSQL' : 'JumpStartDB'}
               </ButtonSolid>
             </div>
 

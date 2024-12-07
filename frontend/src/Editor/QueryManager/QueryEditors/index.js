@@ -1,7 +1,7 @@
 import React from 'react';
 import DynamicForm from '@/_components/DynamicForm';
 
-import { allOperations } from '@tooljet/plugins/client';
+import { allOperations } from '@jumpstart/plugins/client';
 import { Restapi } from './Restapi';
 // eslint-disable-next-line import/no-unresolved
 import { Runjs } from './Runjs';
@@ -9,7 +9,7 @@ import { Runpy } from './Runpy';
 import { Stripe } from './Stripe';
 import { Openapi } from './Openapi';
 import Grpc from './GRPC';
-import tooljetDbOperations from './TooljetDatabase/operations.json';
+import jumpstartDbOperations from './JumpstartDatabase/operations.json';
 
 import { queryManagerSelectComponentStyle } from '@/_ui/Select/styles';
 
@@ -32,7 +32,7 @@ export const allSources = {
     );
     return accumulator;
   }, {}),
-  Tooljetdb: (props) => <DynamicForm schema={tooljetDbOperations} {...props} layout="horizontal" />,
+  Jumpstartdb: (props) => <DynamicForm schema={jumpstartDbOperations} {...props} layout="horizontal" />,
   Restapi,
   Runjs,
   Runpy,

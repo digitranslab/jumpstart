@@ -269,7 +269,7 @@ export const QueryManagerBody = ({
   return (
     <div
       className={`row row-deck px-2 mt-0 query-details ${
-        selectedDataSource?.kind === 'tooljetdb' ? 'tooljetdb-query-details' : ''
+        selectedDataSource?.kind === 'jumpstartdb' ? 'jumpstartdb-query-details' : ''
       }`}
     >
       {selectedQuery?.data_source_id && selectedDataSource !== null ? renderChangeDataSource() : null}

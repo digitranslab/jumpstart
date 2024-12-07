@@ -55,7 +55,7 @@ describe.skip('Form Onboarding', () => {
         it('should throw error if the user is trying to signup as first user', async () => {
           const response = await request(app.getHttpServer())
             .post('/api/signup')
-            .send({ email: 'admin@tooljet.com', name: 'Admin', password: 'password' });
+            .send({ email: 'admin@jumpstart.com', name: 'Admin', password: 'password' });
 
           expect(response.statusCode).toBe(403);
         });
@@ -63,7 +63,7 @@ describe.skip('Form Onboarding', () => {
         it('first user should only be sign up through /setup-admin api', async () => {
           const response = await request(app.getHttpServer())
             .post('/api/setup-admin')
-            .send({ email: 'firstuser@tooljet.com', name: 'Admin', password: 'password', workspace: 'tooljet' });
+            .send({ email: 'firstuser@jumpstart.com', name: 'Admin', password: 'password', workspace: 'jumpstart' });
           expect(response.statusCode).toBe(201);
         });
       });
@@ -72,11 +72,11 @@ describe.skip('Form Onboarding', () => {
         it('should signup organization admin', async () => {
           const response = await request(app.getHttpServer())
             .post('/api/signup')
-            .send({ email: 'admin@tooljet.com', name: 'Admin', password: 'password' });
+            .send({ email: 'admin@jumpstart.com', name: 'Admin', password: 'password' });
           expect(response.statusCode).toBe(201);
 
           const user = await userRepository.findOneOrFail({
-            where: { email: 'admin@tooljet.com' },
+            where: { email: 'admin@jumpstart.com' },
             relations: ['organizationUsers'],
           });
           current_user = user;
@@ -91,7 +91,7 @@ describe.skip('Form Onboarding', () => {
 
         it('should verify invitation token of user', async () => {
           const { body } = await verifyInviteToken(app, current_user);
-          expect(body?.email).toEqual('admin@tooljet.com');
+          expect(body?.email).toEqual('admin@jumpstart.com');
           expect(body?.name).toEqual('Admin');
         });
 
@@ -118,7 +118,7 @@ describe.skip('Form Onboarding', () => {
         it('should send invitation link to the user', async () => {
           const response = await request(app.getHttpServer())
             .post('/api/organization_users')
-            .send({ email: 'org_user@tooljet.com', first_name: 'test', last_name: 'test' })
+            .send({ email: 'org_user@jumpstart.com', first_name: 'test', last_name: 'test' })
             .set('tj-workspace-id', current_user?.defaultOrganizationId)
             .set('Cookie', loggedUser.tokenCookie);
           const { status } = response;
@@ -126,10 +126,10 @@ describe.skip('Form Onboarding', () => {
         });
 
         it('should verify token', async () => {
-          const user = await userRepository.findOneOrFail({ where: { email: 'org_user@tooljet.com' } });
+          const user = await userRepository.findOneOrFail({ where: { email: 'org_user@jumpstart.com' } });
           org_user = user;
           const { body } = await verifyInviteToken(app, org_user);
-          expect(body?.email).toEqual('org_user@tooljet.com');
+          expect(body?.email).toEqual('org_user@jumpstart.com');
           expect(body?.name).toEqual('test test');
         });
 
@@ -169,7 +169,7 @@ describe.skip('Form Onboarding', () => {
         it('should send invitation link to the user', async () => {
           const response = await request(app.getHttpServer())
             .post('/api/organization_users')
-            .send({ email: 'admin@tooljet.com' })
+            .send({ email: 'admin@jumpstart.com' })
             .set('tj-workspace-id', org_user?.defaultOrganizationId)
             .set('Cookie', loggedOrgUser.tokenCookie);
           const { status } = response;
@@ -199,7 +199,7 @@ describe.skip('Form Onboarding', () => {
           expect(Object.keys(onboarding_details)).toEqual(['password']);
           await invitedUser.reload();
           expect(invitedUser.status).toBe('active');
-          expect(email).toEqual('admin@tooljet.com');
+          expect(email).toEqual('admin@jumpstart.com');
           expect(name).toEqual('Admin');
         });
 
@@ -224,7 +224,7 @@ describe.skip('Form Onboarding', () => {
           const { user, organization } = await createUser(app, {
             firstName: 'admin',
             lastName: 'admin',
-            email: 'admin@tooljet.com',
+            email: 'admin@jumpstart.com',
             status: 'active',
           });
           current_user = user;
@@ -234,11 +234,11 @@ describe.skip('Form Onboarding', () => {
         it('should signup user', async () => {
           const response = await request(app.getHttpServer())
             .post('/api/signup')
-            .send({ email: 'another_user@tooljet.com', name: 'another user', password: 'password' });
+            .send({ email: 'another_user@jumpstart.com', name: 'another user', password: 'password' });
           expect(response.statusCode).toBe(201);
 
           const user = await userRepository.findOneOrFail({
-            where: { email: 'another_user@tooljet.com' },
+            where: { email: 'another_user@jumpstart.com' },
             relations: ['organizationUsers'],
           });
           org_user = user;
@@ -256,7 +256,7 @@ describe.skip('Form Onboarding', () => {
         it('should invite signed up user to another workspace', async () => {
           const response = await request(app.getHttpServer())
             .post('/api/organization_users')
-            .send({ email: 'another_user@tooljet.com' })
+            .send({ email: 'another_user@jumpstart.com' })
             .set('tj-workspace-id', current_user?.defaultOrganizationId)
             .set('Cookie', loggedUser.tokenCookie);
           const { status } = response;
@@ -264,11 +264,11 @@ describe.skip('Form Onboarding', () => {
         });
 
         it('should verify if signup url is still valid for the invited user', async () => {
-          const user = await userRepository.findOneOrFail({ where: { email: 'another_user@tooljet.com' } });
+          const user = await userRepository.findOneOrFail({ where: { email: 'another_user@jumpstart.com' } });
           org_user = user;
           const { body, status } = await verifyInviteToken(app, org_user, true);
           expect(status).toBe(200);
-          expect(body?.email).toEqual('another_user@tooljet.com');
+          expect(body?.email).toEqual('another_user@jumpstart.com');
           expect(body?.name).toEqual('another user');
           const { invitationToken } = org_user;
           const organization = await orgRepository.findOneOrFail({
@@ -290,7 +290,7 @@ describe.skip('Form Onboarding', () => {
           const { user, organization } = await createUser(app, {
             firstName: 'admin',
             lastName: 'admin',
-            email: 'admin@tooljet.com',
+            email: 'admin@jumpstart.com',
             status: 'active',
           });
           current_user = user;
@@ -300,11 +300,11 @@ describe.skip('Form Onboarding', () => {
         it('should signup user', async () => {
           const response = await request(app.getHttpServer())
             .post('/api/signup')
-            .send({ email: 'another_user@tooljet.com', name: 'another user', password: 'password' });
+            .send({ email: 'another_user@jumpstart.com', name: 'another user', password: 'password' });
           expect(response.statusCode).toBe(201);
 
           const user = await userRepository.findOneOrFail({
-            where: { email: 'another_user@tooljet.com' },
+            where: { email: 'another_user@jumpstart.com' },
             relations: ['organizationUsers'],
           });
           org_user = user;
@@ -322,7 +322,7 @@ describe.skip('Form Onboarding', () => {
         it('should invite a user to another workspace', async () => {
           const response = await request(app.getHttpServer())
             .post('/api/organization_users')
-            .send({ email: 'another_user@tooljet.com' })
+            .send({ email: 'another_user@jumpstart.com' })
             .set('tj-workspace-id', current_user?.defaultOrganizationId)
             .set('Cookie', loggedUser.tokenCookie);
           const { status } = response;
@@ -330,11 +330,11 @@ describe.skip('Form Onboarding', () => {
         });
 
         it('should verify if invite url is still valid for the invited user', async () => {
-          const user = await userRepository.findOneOrFail({ where: { email: 'another_user@tooljet.com' } });
+          const user = await userRepository.findOneOrFail({ where: { email: 'another_user@jumpstart.com' } });
           org_user = user;
           const { body, status } = await verifyInviteToken(app, org_user);
           expect(status).toBe(200);
-          expect(body?.email).toEqual('another_user@tooljet.com');
+          expect(body?.email).toEqual('another_user@jumpstart.com');
           expect(body?.name).toEqual('another user');
           const { invitationToken } = org_user;
           const { invitationToken: orgInviteToken } = await orgUserRepository.findOneOrFail({
@@ -360,24 +360,24 @@ describe.skip('Form Onboarding', () => {
           const { user, organization } = await createUser(app, {
             firstName: 'admin',
             lastName: 'admin',
-            email: 'admin@tooljet.com',
+            email: 'admin@jumpstart.com',
             status: 'active',
           });
           current_user = user;
           current_organization = organization;
-          loggedUser = await authenticateUser(app, 'admin@tooljet.com');
+          loggedUser = await authenticateUser(app, 'admin@jumpstart.com');
         });
         it('should invite user to another workspace', async () => {
           const response = await request(app.getHttpServer())
             .post('/api/organization_users')
-            .send({ email: 'another_user@tooljet.com', first_name: 'another', last_name: 'user', password: 'password' })
+            .send({ email: 'another_user@jumpstart.com', first_name: 'another', last_name: 'user', password: 'password' })
             .set('tj-workspace-id', current_user?.defaultOrganizationId)
             .set('Cookie', loggedUser.tokenCookie);
           const { status } = response;
           expect(status).toBe(201);
 
           const user = await userRepository.findOneOrFail({
-            where: { email: 'another_user@tooljet.com' },
+            where: { email: 'another_user@jumpstart.com' },
             relations: ['organizationUsers'],
           });
           org_user = user;
@@ -395,16 +395,16 @@ describe.skip('Form Onboarding', () => {
         it('should not signup the same invited user', async () => {
           const response = await request(app.getHttpServer())
             .post('/api/signup')
-            .send({ email: 'another_user@tooljet.com', name: 'another user', password: 'password' });
+            .send({ email: 'another_user@jumpstart.com', name: 'another user', password: 'password' });
           expect(response.statusCode).toBe(406);
         });
 
         it('should verify if invite url is still valid for the signed up user', async () => {
-          const user = await userRepository.findOneOrFail({ where: { email: 'another_user@tooljet.com' } });
+          const user = await userRepository.findOneOrFail({ where: { email: 'another_user@jumpstart.com' } });
           org_user = user;
           const { body, status } = await verifyInviteToken(app, org_user);
           expect(status).toBe(200);
-          expect(body?.email).toEqual('another_user@tooljet.com');
+          expect(body?.email).toEqual('another_user@jumpstart.com');
           expect(body?.name).toEqual('another user');
           const { invitationToken } = org_user;
           const { invitationToken: orgInviteToken } = await orgUserRepository.findOneOrFail({
@@ -430,7 +430,7 @@ describe.skip('Form Onboarding', () => {
           const { user, organization } = await createUser(app, {
             firstName: 'admin',
             lastName: 'admin',
-            email: 'admin@tooljet.com',
+            email: 'admin@jumpstart.com',
             status: 'active',
           });
           current_user = user;
@@ -440,14 +440,14 @@ describe.skip('Form Onboarding', () => {
         it('should invite user to another workspace', async () => {
           const response = await request(app.getHttpServer())
             .post('/api/organization_users')
-            .send({ email: 'another_user@tooljet.com', first_name: 'another', last_name: 'user', password: 'password' })
+            .send({ email: 'another_user@jumpstart.com', first_name: 'another', last_name: 'user', password: 'password' })
             .set('tj-workspace-id', current_user?.defaultOrganizationId)
             .set('Cookie', loggedUser.tokenCookie);
           const { status } = response;
           expect(status).toBe(201);
 
           const user = await userRepository.findOneOrFail({
-            where: { email: 'another_user@tooljet.com' },
+            where: { email: 'another_user@jumpstart.com' },
             relations: ['organizationUsers'],
           });
           org_user = user;
@@ -466,16 +466,16 @@ describe.skip('Form Onboarding', () => {
           const response = await request(app.getHttpServer())
             .post('/api/signup')
             .set('tj-workspace-id', current_user?.defaultOrganizationId)
-            .send({ email: 'another_user@tooljet.com', name: 'another user', password: 'password' });
+            .send({ email: 'another_user@jumpstart.com', name: 'another user', password: 'password' });
           expect(response.statusCode).toBe(406);
         });
 
         it('should verify if signup url is still valid for the invited user', async () => {
-          const user = await userRepository.findOneOrFail({ where: { email: 'another_user@tooljet.com' } });
+          const user = await userRepository.findOneOrFail({ where: { email: 'another_user@jumpstart.com' } });
           org_user = user;
           const { body, status } = await verifyInviteToken(app, org_user, true);
           expect(status).toBe(200);
-          expect(body?.email).toEqual('another_user@tooljet.com');
+          expect(body?.email).toEqual('another_user@jumpstart.com');
           expect(body?.name).toEqual('another user');
           const { invitationToken } = org_user;
           const organization = await orgRepository.findOneOrFail({

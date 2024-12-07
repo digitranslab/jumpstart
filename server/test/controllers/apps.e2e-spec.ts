@@ -50,7 +50,7 @@ describe('apps controller', () => {
     describe('authorization', () => {
       it('should be able to create app if user has admin group', async () => {
         const adminUserData = await createUser(app, {
-          email: 'admin@tooljet.io',
+          email: 'admin@jumpstart.io',
           groups: ['all_users', 'admin'],
         });
 
@@ -59,21 +59,21 @@ describe('apps controller', () => {
 
         const organization = adminUserData.organization;
         const developerUserData = await createUser(app, {
-          email: 'developer@tooljet.io',
+          email: 'developer@jumpstart.io',
           groups: ['all_users', 'developer'],
           organization,
         });
 
-        loggedUser = await authenticateUser(app, 'developer@tooljet.io');
+        loggedUser = await authenticateUser(app, 'developer@jumpstart.io');
         developerUserData['tokenCookie'] = loggedUser.tokenCookie;
 
         const viewerUserData = await createUser(app, {
-          email: 'viewer@tooljet.io',
+          email: 'viewer@jumpstart.io',
           groups: ['all_users', 'viewer'],
           organization,
         });
 
-        loggedUser = await authenticateUser(app, 'viewer@tooljet.io');
+        loggedUser = await authenticateUser(app, 'viewer@jumpstart.io');
         viewerUserData['tokenCookie'] = loggedUser.tokenCookie;
 
         const application = await createApplication(app, {
@@ -114,7 +114,7 @@ describe('apps controller', () => {
 
     it('should create app with default values', async () => {
       const adminUserData = await createUser(app, {
-        email: 'admin@tooljet.io',
+        email: 'admin@jumpstart.io',
         groups: ['all_users', 'admin'],
       });
 
@@ -154,7 +154,7 @@ describe('apps controller', () => {
     describe('without folder', () => {
       it('should return all permissible apps with metadata', async () => {
         const adminUserData = await createUser(app, {
-          email: 'admin@tooljet.io',
+          email: 'admin@jumpstart.io',
           groups: ['all_users', 'admin'],
         });
 
@@ -169,20 +169,20 @@ describe('apps controller', () => {
           },
         });
         const developerUserData = await createUser(app, {
-          email: 'developer@tooljet.io',
+          email: 'developer@jumpstart.io',
           groups: ['all_users', 'developer'],
           organization,
         });
 
-        loggedUser = await authenticateUser(app, 'developer@tooljet.io');
+        loggedUser = await authenticateUser(app, 'developer@jumpstart.io');
         developerUserData['tokenCookie'] = loggedUser.tokenCookie;
 
         const anotherOrgAdminUserData = await createUser(app, {
-          email: 'another@tooljet.io',
+          email: 'another@jumpstart.io',
           groups: ['all_users', 'admin'],
         });
 
-        loggedUser = await authenticateUser(app, 'another@tooljet.io');
+        loggedUser = await authenticateUser(app, 'another@jumpstart.io');
         anotherOrgAdminUserData['tokenCookie'] = loggedUser.tokenCookie;
 
         const anotherApplication = await createApplication(app, {
@@ -358,7 +358,7 @@ describe('apps controller', () => {
     describe('with folder', () => {
       it('should return all permissible apps with metadata within folder', async () => {
         const adminUserData = await createUser(app, {
-          email: 'admin@tooljet.io',
+          email: 'admin@jumpstart.io',
           groups: ['all_users', 'admin'],
         });
         let loggedUser = await authenticateUser(app);
@@ -369,14 +369,14 @@ describe('apps controller', () => {
           organizationId: adminUserData.organization.id,
         });
         const developerUserData = await createUser(app, {
-          email: 'developer@tooljet.io',
+          email: 'developer@jumpstart.io',
           groups: ['all_users', 'developer'],
           organization,
         });
-        loggedUser = await authenticateUser(app, 'developer@tooljet.io');
+        loggedUser = await authenticateUser(app, 'developer@jumpstart.io');
         developerUserData['tokenCookie'] = loggedUser.tokenCookie;
         const anotherOrgAdminUserData = await createUser(app, {
-          email: 'another@tooljet.io',
+          email: 'another@jumpstart.io',
           groups: ['all_users', 'admin'],
         });
         await createApplication(app, {
@@ -511,7 +511,7 @@ describe('apps controller', () => {
   describe('POST /api/v2/resources/clone', () => {
     it('should be able to clone the app if user group is admin', async () => {
       const adminUserData = await createUser(app, {
-        email: 'admin@tooljet.io',
+        email: 'admin@jumpstart.io',
         groups: ['all_users', 'admin'],
       });
 
@@ -519,21 +519,21 @@ describe('apps controller', () => {
       adminUserData['tokenCookie'] = loggedUser.tokenCookie;
 
       const developerUserData = await createUser(app, {
-        email: 'dev@tooljet.io',
+        email: 'dev@jumpstart.io',
         groups: ['all_users', 'developer'],
         organization: adminUserData.organization,
       });
 
-      loggedUser = await authenticateUser(app, 'dev@tooljet.io');
+      loggedUser = await authenticateUser(app, 'dev@jumpstart.io');
       developerUserData['tokenCookie'] = loggedUser.tokenCookie;
 
       const viewerUserData = await createUser(app, {
-        email: 'viewer@tooljet.io',
+        email: 'viewer@jumpstart.io',
         groups: ['all_users', 'viewer'],
         organization: adminUserData.organization,
       });
 
-      loggedUser = await authenticateUser(app, 'viewer@tooljet.io');
+      loggedUser = await authenticateUser(app, 'viewer@jumpstart.io');
       viewerUserData['tokenCookie'] = loggedUser.tokenCookie;
 
       const application = await createApplication(app, {
@@ -584,16 +584,16 @@ describe('apps controller', () => {
 
     it('should not be able to clone the app if app is of another organization', async () => {
       const adminUserData = await createUser(app, {
-        email: 'admin@tooljet.io',
+        email: 'admin@jumpstart.io',
         groups: ['all_users', 'admin'],
       });
 
       const anotherOrgAdminUserData = await createUser(app, {
-        email: 'another@tooljet.io',
+        email: 'another@jumpstart.io',
         groups: ['all_users', 'admin'],
       });
 
-      const loggedUser = await authenticateUser(app, 'another@tooljet.io');
+      const loggedUser = await authenticateUser(app, 'another@jumpstart.io');
 
       const application = await createApplication(app, {
         name: 'name',
@@ -615,7 +615,7 @@ describe('apps controller', () => {
   describe('PUT /api/apps/:id', () => {
     it('should be able to update name of the app if admin of same organization', async () => {
       const adminUserData = await createUser(app, {
-        email: 'admin@tooljet.io',
+        email: 'admin@jumpstart.io',
         groups: ['all_users', 'admin'],
       });
 
@@ -640,11 +640,11 @@ describe('apps controller', () => {
 
     it('should not be able to update name of the app if admin of another organization', async () => {
       const adminUserData = await createUser(app, {
-        email: 'admin@tooljet.io',
+        email: 'admin@jumpstart.io',
         groups: ['all_users', 'admin'],
       });
       const anotherOrgAdminUserData = await createUser(app, {
-        email: 'another@tooljet.io',
+        email: 'another@jumpstart.io',
         groups: ['all_users', 'admin'],
       });
       const application = await createApplication(app, {
@@ -652,7 +652,7 @@ describe('apps controller', () => {
         user: adminUserData.user,
       });
 
-      const loggedUser = await authenticateUser(app, 'another@tooljet.io');
+      const loggedUser = await authenticateUser(app, 'another@jumpstart.io');
 
       const response = await request(app.getHttpServer())
         .put(`/api/apps/${application.id}`)
@@ -669,7 +669,7 @@ describe('apps controller', () => {
 
     it('should not allow custom groups without app create permission to change the name of apps', async () => {
       const adminUserData = await createUser(app, {
-        email: 'admin@tooljet.io',
+        email: 'admin@jumpstart.io',
         groups: ['all_users', 'admin'],
       });
       const application = await createApplication(app, {
@@ -678,21 +678,21 @@ describe('apps controller', () => {
       });
 
       const developerUserData = await createUser(app, {
-        email: 'dev@tooljet.io',
+        email: 'dev@jumpstart.io',
         groups: ['all_users', 'developer'],
         organization: adminUserData.organization,
       });
 
-      let loggedUser = await authenticateUser(app, 'dev@tooljet.io');
+      let loggedUser = await authenticateUser(app, 'dev@jumpstart.io');
       developerUserData['tokenCookie'] = loggedUser.tokenCookie;
 
       const viewerUserData = await createUser(app, {
-        email: 'viewer@tooljet.io',
+        email: 'viewer@jumpstart.io',
         groups: ['all_users', 'viewer'],
         organization: adminUserData.organization,
       });
 
-      loggedUser = await authenticateUser(app, 'viewer@tooljet.io');
+      loggedUser = await authenticateUser(app, 'viewer@jumpstart.io');
       viewerUserData['tokenCookie'] = loggedUser.tokenCookie;
 
       let response = await request(app.getHttpServer())
@@ -720,7 +720,7 @@ describe('apps controller', () => {
   describe('DELETE delete app', () => {
     it('should be possible for the admin to delete an app, cascaded with its versions, queries, data sources and comments', async () => {
       const admin = await createUser(app, {
-        email: 'admin@tooljet.io',
+        email: 'admin@jumpstart.io',
         groups: ['all_users', 'admin'],
       });
 
@@ -730,7 +730,7 @@ describe('apps controller', () => {
       const { user } = await createUser(app, {
         firstName: 'mention',
         lastName: 'user',
-        email: 'user@tooljet.io',
+        email: 'user@jumpstart.io',
         groups: ['all_users'],
         organization: admin.organization,
       });
@@ -794,11 +794,11 @@ describe('apps controller', () => {
 
     it('should be possible for app creator to delete an app', async () => {
       const developer = await createUser(app, {
-        email: 'developer@tooljet.io',
+        email: 'developer@jumpstart.io',
         groups: ['all_users', 'developer'],
       });
 
-      const loggedUser = await authenticateUser(app, 'developer@tooljet.io');
+      const loggedUser = await authenticateUser(app, 'developer@jumpstart.io');
       developer['tokenCookie'] = loggedUser.tokenCookie;
 
       const application = await createApplication(app, {
@@ -826,7 +826,7 @@ describe('apps controller', () => {
 
     it('should not be possible for non admin to delete an app', async () => {
       const adminUserData = await createUser(app, {
-        email: 'admin@tooljet.io',
+        email: 'admin@jumpstart.io',
         groups: ['all_users', 'admin'],
       });
 
@@ -836,12 +836,12 @@ describe('apps controller', () => {
       });
 
       const developerUserData = await createUser(app, {
-        email: 'dev@tooljet.io',
+        email: 'dev@jumpstart.io',
         groups: ['all_users', 'developer'],
         organization: adminUserData.organization,
       });
 
-      const loggedUser = await authenticateUser(app, 'dev@tooljet.io');
+      const loggedUser = await authenticateUser(app, 'dev@jumpstart.io');
       developerUserData['tokenCookie'] = loggedUser.tokenCookie;
 
       const response = await request(app.getHttpServer())
@@ -866,16 +866,16 @@ describe('apps controller', () => {
   describe('/api/apps/:id/users', () => {
     xit('should not be able to fetch app users if admin of another organization', async () => {
       const adminUserData = await createUser(app, {
-        email: 'admin@tooljet.io',
+        email: 'admin@jumpstart.io',
         groups: ['all_users', 'admin'],
       });
 
       const anotherOrgAdminUserData = await createUser(app, {
-        email: 'another@tooljet.io',
+        email: 'another@jumpstart.io',
         groups: ['all_users', 'admin'],
       });
 
-      const loggedUser = await authenticateUser(app, 'another@tooljet.io');
+      const loggedUser = await authenticateUser(app, 'another@jumpstart.io');
       anotherOrgAdminUserData['tokenCookie'] = loggedUser.tokenCookie;
 
       const application = await createApplication(app, {
@@ -895,7 +895,7 @@ describe('apps controller', () => {
 
     xit('should be able to fetch app users if group is admin/developer/viewer of same organization', async () => {
       const adminUserData = await createUser(app, {
-        email: 'admin@tooljet.io',
+        email: 'admin@jumpstart.io',
         groups: ['all_users', 'admin'],
       });
 
@@ -904,21 +904,21 @@ describe('apps controller', () => {
 
       const organization = adminUserData.organization;
       const developerUserData = await createUser(app, {
-        email: 'developer@tooljet.io',
+        email: 'developer@jumpstart.io',
         groups: ['all_users', 'developer'],
         organization,
       });
 
-      loggedUser = await authenticateUser(app, 'developer@tooljet.io');
+      loggedUser = await authenticateUser(app, 'developer@jumpstart.io');
       developerUserData['tokenCookie'] = loggedUser.tokenCookie;
 
       const viewerUserData = await createUser(app, {
-        email: 'viewer@tooljet.io',
+        email: 'viewer@jumpstart.io',
         groups: ['all_users', 'viewer'],
         organization,
       });
 
-      loggedUser = await authenticateUser(app, 'viewer@tooljet.io');
+      loggedUser = await authenticateUser(app, 'viewer@jumpstart.io');
       viewerUserData['tokenCookie'] = loggedUser.tokenCookie;
 
       const application = await createApplication(app, {
@@ -946,7 +946,7 @@ describe('apps controller', () => {
     describe('authorization', () => {
       it('should be able to fetch app versions with app read permission group', async () => {
         const adminUserData = await createUser(app, {
-          email: 'admin@tooljet.io',
+          email: 'admin@jumpstart.io',
           groups: ['all_users', 'admin'],
         });
 
@@ -955,12 +955,12 @@ describe('apps controller', () => {
 
         const organization = adminUserData.organization;
         const defaultUserData = await createUser(app, {
-          email: 'developer@tooljet.io',
+          email: 'developer@jumpstart.io',
           groups: ['all_users'],
           organization,
         });
 
-        loggedUser = await authenticateUser(app, 'developer@tooljet.io');
+        loggedUser = await authenticateUser(app, 'developer@jumpstart.io');
         defaultUserData['tokenCookie'] = loggedUser.tokenCookie;
 
         const application = await createApplication(app, {
@@ -993,7 +993,7 @@ describe('apps controller', () => {
 
       it('should be able to fetch app versions only for specific environment', async () => {
         const adminUserData = await createUser(app, {
-          email: 'admin@tooljet.io',
+          email: 'admin@jumpstart.io',
           groups: ['all_users', 'admin'],
         });
 
@@ -1002,12 +1002,12 @@ describe('apps controller', () => {
 
         const organization = adminUserData.organization;
         const defaultUserData = await createUser(app, {
-          email: 'developer@tooljet.io',
+          email: 'developer@jumpstart.io',
           groups: ['all_users'],
           organization,
         });
 
-        loggedUser = await authenticateUser(app, 'developer@tooljet.io');
+        loggedUser = await authenticateUser(app, 'developer@jumpstart.io');
         defaultUserData['tokenCookie'] = loggedUser.tokenCookie;
 
         const application = await createApplication(app, {
@@ -1043,15 +1043,15 @@ describe('apps controller', () => {
       describe('authorization', () => {
         it('should not be able to fetch app versions if user of another organization', async () => {
           const adminUserData = await createUser(app, {
-            email: 'admin@tooljet.io',
+            email: 'admin@jumpstart.io',
             groups: ['all_users', 'admin'],
           });
           const anotherOrgAdminUserData = await createUser(app, {
-            email: 'another@tooljet.io',
+            email: 'another@jumpstart.io',
             groups: ['all_users', 'admin'],
           });
 
-          const loggedUser = await authenticateUser(app, 'another@tooljet.io');
+          const loggedUser = await authenticateUser(app, 'another@jumpstart.io');
           anotherOrgAdminUserData['tokenCookie'] = loggedUser.tokenCookie;
 
           const application = await createApplication(app, {
@@ -1072,7 +1072,7 @@ describe('apps controller', () => {
 
         it('should be able to create a new app version if group is admin or has app update permission group in same organization', async () => {
           const adminUserData = await createUser(app, {
-            email: 'admin@tooljet.io',
+            email: 'admin@jumpstart.io',
             groups: ['all_users', 'admin'],
           });
 
@@ -1080,12 +1080,12 @@ describe('apps controller', () => {
           adminUserData['tokenCookie'] = loggedUser.tokenCookie;
 
           const developerUserData = await createUser(app, {
-            email: 'dev@tooljet.io',
+            email: 'dev@jumpstart.io',
             groups: ['all_users', 'developer'],
             organization: adminUserData.organization,
           });
 
-          loggedUser = await authenticateUser(app, 'dev@tooljet.io');
+          loggedUser = await authenticateUser(app, 'dev@jumpstart.io');
           developerUserData['tokenCookie'] = loggedUser.tokenCookie;
 
           const application = await createApplication(app, {
@@ -1123,7 +1123,7 @@ describe('apps controller', () => {
 
         it('should be able to create a new app version from existing version', async () => {
           const adminUserData = await createUser(app, {
-            email: 'admin@tooljet.io',
+            email: 'admin@jumpstart.io',
           });
 
           const loggedUser = await authenticateUser(app);
@@ -1158,7 +1158,7 @@ describe('apps controller', () => {
 
         it('should not be able to create app versions if user of another organization', async () => {
           const adminUserData = await createUser(app, {
-            email: 'admin@tooljet.io',
+            email: 'admin@jumpstart.io',
             groups: ['all_users', 'admin'],
           });
 
@@ -1166,11 +1166,11 @@ describe('apps controller', () => {
           adminUserData['tokenCookie'] = loggedUser.tokenCookie;
 
           const anotherOrgAdminUserData = await createUser(app, {
-            email: 'another@tooljet.io',
+            email: 'another@jumpstart.io',
             groups: ['all_users', 'admin'],
           });
 
-          loggedUser = await authenticateUser(app, 'another@tooljet.io');
+          loggedUser = await authenticateUser(app, 'another@jumpstart.io');
           anotherOrgAdminUserData['tokenCookie'] = loggedUser.tokenCookie;
 
           const application = await createApplication(app, {
@@ -1197,7 +1197,7 @@ describe('apps controller', () => {
 
         it('should not be able to create app versions if user does not have app create permission group', async () => {
           const adminUserData = await createUser(app, {
-            email: 'admin@tooljet.io',
+            email: 'admin@jumpstart.io',
             groups: ['all_users', 'admin'],
           });
 
@@ -1205,12 +1205,12 @@ describe('apps controller', () => {
           adminUserData['tokenCookie'] = loggedUser.tokenCookie;
 
           const viewerUserData = await createUser(app, {
-            email: 'viewer@tooljet.io',
+            email: 'viewer@jumpstart.io',
             groups: ['all_users'],
             organization: adminUserData.organization,
           });
 
-          loggedUser = await authenticateUser(app, 'viewer@tooljet.io');
+          loggedUser = await authenticateUser(app, 'viewer@jumpstart.io');
           viewerUserData['tokenCookie'] = loggedUser.tokenCookie;
 
           const application = await createApplication(app, {
@@ -1236,7 +1236,7 @@ describe('apps controller', () => {
       describe('Data source and query versioning', () => {
         it('should be able create data sources and queries for each version creation', async () => {
           const adminUserData = await createUser(app, {
-            email: 'admin@tooljet.io',
+            email: 'admin@jumpstart.io',
             groups: ['all_users', 'admin'],
           });
 
@@ -1347,7 +1347,7 @@ describe('apps controller', () => {
         //will fix this
         it('creates new credentials and copies cipher text on data source', async () => {
           const adminUserData = await createUser(app, {
-            email: 'admin@tooljet.io',
+            email: 'admin@jumpstart.io',
           });
 
           const loggedUser = await authenticateUser(app);
@@ -1412,16 +1412,16 @@ describe('apps controller', () => {
     describe('authorization', () => {
       it('should not be able to delete app versions if user of another organization', async () => {
         const adminUserData = await createUser(app, {
-          email: 'admin@tooljet.io',
+          email: 'admin@jumpstart.io',
           groups: ['all_users', 'admin'],
         });
 
         const anotherOrgAdminUserData = await createUser(app, {
-          email: 'another@tooljet.io',
+          email: 'another@jumpstart.io',
           groups: ['all_users', 'admin'],
         });
 
-        const loggedUser = await authenticateUser(app, 'another@tooljet.io');
+        const loggedUser = await authenticateUser(app, 'another@jumpstart.io');
         anotherOrgAdminUserData['tokenCookie'] = loggedUser.tokenCookie;
 
         const application = await createApplication(app, {
@@ -1445,7 +1445,7 @@ describe('apps controller', () => {
 
       it('should be able to delete an app version if group is admin or has app update permission group in same organization', async () => {
         const adminUserData = await createUser(app, {
-          email: 'admin@tooljet.io',
+          email: 'admin@jumpstart.io',
           groups: ['all_users', 'admin'],
         });
 
@@ -1453,12 +1453,12 @@ describe('apps controller', () => {
         adminUserData['tokenCookie'] = loggedUser.tokenCookie;
 
         const developerUserData = await createUser(app, {
-          email: 'dev@tooljet.io',
+          email: 'dev@jumpstart.io',
           groups: ['all_users', 'developer'],
           organization: adminUserData.organization,
         });
 
-        loggedUser = await authenticateUser(app, 'dev@tooljet.io');
+        loggedUser = await authenticateUser(app, 'dev@jumpstart.io');
         developerUserData['tokenCookie'] = loggedUser.tokenCookie;
 
         const application = await createApplication(app, {
@@ -1500,17 +1500,17 @@ describe('apps controller', () => {
 
       it('should not be able to delete app versions if user does not have app update permission group', async () => {
         const adminUserData = await createUser(app, {
-          email: 'admin@tooljet.io',
+          email: 'admin@jumpstart.io',
           groups: ['all_users', 'admin'],
         });
 
         const viewerUserData = await createUser(app, {
-          email: 'viewer@tooljet.io',
+          email: 'viewer@jumpstart.io',
           groups: ['all_users'],
           organization: adminUserData.organization,
         });
 
-        const loggedUser = await authenticateUser(app, 'viewer@tooljet.io');
+        const loggedUser = await authenticateUser(app, 'viewer@jumpstart.io');
         viewerUserData['tokenCookie'] = loggedUser.tokenCookie;
 
         const application = await createApplication(app, {
@@ -1530,7 +1530,7 @@ describe('apps controller', () => {
 
       it('should not be able to delete released app version', async () => {
         const adminUserData = await createUser(app, {
-          email: 'admin@tooljet.io',
+          email: 'admin@jumpstart.io',
           groups: ['all_users', 'admin'],
         });
 
@@ -1563,7 +1563,7 @@ describe('apps controller', () => {
     describe('authorization', () => {
       it('should be able to get app version by users having app read permission within same organization', async () => {
         const adminUserData = await createUser(app, {
-          email: 'admin@tooljet.io',
+          email: 'admin@jumpstart.io',
           groups: ['all_users', 'admin'],
         });
 
@@ -1571,12 +1571,12 @@ describe('apps controller', () => {
         adminUserData['tokenCookie'] = loggedUser.tokenCookie;
 
         const developerUserData = await createUser(app, {
-          email: 'dev@tooljet.io',
+          email: 'dev@jumpstart.io',
           groups: ['all_users'],
           organization: adminUserData.organization,
         });
 
-        loggedUser = await authenticateUser(app, 'dev@tooljet.io');
+        loggedUser = await authenticateUser(app, 'dev@jumpstart.io');
         developerUserData['tokenCookie'] = loggedUser.tokenCookie;
 
         const application = await createApplication(app, {
@@ -1610,11 +1610,11 @@ describe('apps controller', () => {
 
       it('should not be able to get app versions if user of another organization', async () => {
         const adminUserData = await createUser(app, {
-          email: 'admin@tooljet.io',
+          email: 'admin@jumpstart.io',
           groups: ['all_users', 'admin'],
         });
         const anotherOrgAdminUserData = await createUser(app, {
-          email: 'another@tooljet.io',
+          email: 'another@jumpstart.io',
           groups: ['all_users', 'admin'],
         });
         const application = await createApplication(app, {
@@ -1623,7 +1623,7 @@ describe('apps controller', () => {
         });
         const version = await createApplicationVersion(app, application);
 
-        const loggedUser = await authenticateUser(app, 'another@tooljet.io');
+        const loggedUser = await authenticateUser(app, 'another@jumpstart.io');
         anotherOrgAdminUserData['tokenCookie'] = loggedUser.tokenCookie;
 
         const response = await request(app.getHttpServer())
@@ -1643,20 +1643,20 @@ describe('apps controller', () => {
     describe('PUT /api/apps/:id/versions/:version_id', () => {
       it('should be able to update app version if has group admin or app update permission group in same organization', async () => {
         const adminUserData = await createUser(app, {
-          email: 'admin@tooljet.io',
+          email: 'admin@jumpstart.io',
           groups: ['all_users', 'admin'],
         });
 
-        let loggedUser = await authenticateUser(app, 'admin@tooljet.io');
+        let loggedUser = await authenticateUser(app, 'admin@jumpstart.io');
         adminUserData['tokenCookie'] = loggedUser.tokenCookie;
 
         const developerUserData = await createUser(app, {
-          email: 'dev@tooljet.io',
+          email: 'dev@jumpstart.io',
           groups: ['all_users', 'developer'],
           organization: adminUserData.organization,
         });
 
-        loggedUser = await authenticateUser(app, 'dev@tooljet.io');
+        loggedUser = await authenticateUser(app, 'dev@jumpstart.io');
         developerUserData['tokenCookie'] = loggedUser.tokenCookie;
 
         const application = await createApplication(app, {
@@ -1697,11 +1697,11 @@ describe('apps controller', () => {
 
       it('should be able to update the current version without new definition changes, even it is a released versions', async () => {
         const adminUserData = await createUser(app, {
-          email: 'admin@tooljet.io',
+          email: 'admin@jumpstart.io',
           groups: ['all_users', 'admin'],
         });
 
-        const loggedUser = await authenticateUser(app, 'admin@tooljet.io');
+        const loggedUser = await authenticateUser(app, 'admin@jumpstart.io');
         const application = await createApplication(app, {
           user: adminUserData.user,
         });
@@ -1726,16 +1726,16 @@ describe('apps controller', () => {
 
       it('should not be able to update app version if no app create permission within same organization', async () => {
         const adminUserData = await createUser(app, {
-          email: 'admin@tooljet.io',
+          email: 'admin@jumpstart.io',
           groups: ['all_users', 'admin'],
         });
         const viewerUserData = await createUser(app, {
-          email: 'dev@tooljet.io',
+          email: 'dev@jumpstart.io',
           groups: ['all_users'],
           organization: adminUserData.organization,
         });
 
-        const loggedUser = await authenticateUser(app, 'dev@tooljet.io');
+        const loggedUser = await authenticateUser(app, 'dev@jumpstart.io');
         viewerUserData['tokenCookie'] = loggedUser.tokenCookie;
 
         const application = await createApplication(app, {
@@ -1758,16 +1758,16 @@ describe('apps controller', () => {
 
       it('should not be able to update app versions if user of another organization', async () => {
         const adminUserData = await createUser(app, {
-          email: 'admin@tooljet.io',
+          email: 'admin@jumpstart.io',
           groups: ['all_users', 'admin'],
         });
 
         const anotherOrgAdminUserData = await createUser(app, {
-          email: 'another@tooljet.io',
+          email: 'another@jumpstart.io',
           groups: ['all_users', 'admin'],
         });
 
-        const loggedUser = await authenticateUser(app, 'another@tooljet.io');
+        const loggedUser = await authenticateUser(app, 'another@jumpstart.io');
         anotherOrgAdminUserData['tokenCookie'] = loggedUser.tokenCookie;
 
         const application = await createApplication(app, {
@@ -1795,7 +1795,7 @@ describe('apps controller', () => {
 
       it('should not be able to update app versions if the version is already released', async () => {
         const adminUserData = await createUser(app, {
-          email: 'admin@tooljet.io',
+          email: 'admin@jumpstart.io',
           groups: ['all_users', 'admin'],
         });
         const loggedUser = await authenticateUser(app);
@@ -1823,7 +1823,7 @@ describe('apps controller', () => {
 
       it('should be able to release the app if the version is promoted to production', async () => {
         const adminUserData = await createUser(app, {
-          email: 'admin@tooljet.io',
+          email: 'admin@jumpstart.io',
           groups: ['all_users', 'admin'],
         });
         const loggedUser = await authenticateUser(app);
@@ -1871,7 +1871,7 @@ describe('apps controller', () => {
   describe('GET /api/apps/slugs/:slug', () => {
     it('should be able to fetch app using slug if has read permission within an organization', async () => {
       const adminUserData = await createUser(app, {
-        email: 'admin@tooljet.io',
+        email: 'admin@jumpstart.io',
         groups: ['all_users', 'admin'],
       });
 
@@ -1879,21 +1879,21 @@ describe('apps controller', () => {
       adminUserData['tokenCookie'] = loggedUser.tokenCookie;
 
       const developerUserData = await createUser(app, {
-        email: 'developer@tooljet.io',
+        email: 'developer@jumpstart.io',
         groups: ['all_users', 'developer'],
         organization: adminUserData.organization,
       });
 
-      loggedUser = await authenticateUser(app, 'developer@tooljet.io');
+      loggedUser = await authenticateUser(app, 'developer@jumpstart.io');
       developerUserData['tokenCookie'] = loggedUser.tokenCookie;
 
       const viewerUserData = await createUser(app, {
-        email: 'viewer@tooljet.io',
+        email: 'viewer@jumpstart.io',
         groups: ['all_users', 'viewer'],
         organization: adminUserData.organization,
       });
 
-      loggedUser = await authenticateUser(app, 'viewer@tooljet.io');
+      loggedUser = await authenticateUser(app, 'viewer@jumpstart.io');
       viewerUserData['tokenCookie'] = loggedUser.tokenCookie;
 
       const application = await createApplication(app, {
@@ -1940,14 +1940,14 @@ describe('apps controller', () => {
 
     it('should not be able to fetch app using slug if member of another organization', async () => {
       const adminUserData = await createUser(app, {
-        email: 'admin@tooljet.io',
+        email: 'admin@jumpstart.io',
         groups: ['all_users', 'admin'],
       });
       const anotherOrgAdminUserData = await createUser(app, {
-        email: 'another@tooljet.io',
+        email: 'another@jumpstart.io',
         groups: ['all_users', 'admin'],
       });
-      const loggedUser = await authenticateUser(app, 'another@tooljet.io');
+      const loggedUser = await authenticateUser(app, 'another@jumpstart.io');
       anotherOrgAdminUserData['tokenCookie'] = loggedUser.tokenCookie;
 
       const application = await createApplication(app, {
@@ -1968,7 +1968,7 @@ describe('apps controller', () => {
 
     it('should be able to fetch app using slug if a public app ( even if unauthenticated )', async () => {
       const adminUserData = await createUser(app, {
-        email: 'admin@tooljet.io',
+        email: 'admin@jumpstart.io',
         groups: ['all_users', 'admin'],
       });
 
@@ -1989,7 +1989,7 @@ describe('apps controller', () => {
   describe('GET /api/apps/:id/export', () => {
     it('should be able to export app if user has create permission within an organization', async () => {
       const adminUserData = await createUser(app, {
-        email: 'admin@tooljet.io',
+        email: 'admin@jumpstart.io',
         groups: ['all_users', 'admin'],
       });
 
@@ -1997,21 +1997,21 @@ describe('apps controller', () => {
       adminUserData['tokenCookie'] = loggedUser.tokenCookie;
 
       const developerUserData = await createUser(app, {
-        email: 'developer@tooljet.io',
+        email: 'developer@jumpstart.io',
         groups: ['all_users', 'developer'],
         organization: adminUserData.organization,
       });
 
-      loggedUser = await authenticateUser(app, 'developer@tooljet.io');
+      loggedUser = await authenticateUser(app, 'developer@jumpstart.io');
       developerUserData['tokenCookie'] = loggedUser.tokenCookie;
 
       const viewerUserData = await createUser(app, {
-        email: 'viewer@tooljet.io',
+        email: 'viewer@jumpstart.io',
         groups: ['all_users', 'viewer'],
         organization: adminUserData.organization,
       });
 
-      loggedUser = await authenticateUser(app, 'viewer@tooljet.io');
+      loggedUser = await authenticateUser(app, 'viewer@jumpstart.io');
       viewerUserData['tokenCookie'] = loggedUser.tokenCookie;
 
       const application = await createApplication(app, {
@@ -2058,16 +2058,16 @@ describe('apps controller', () => {
 
     it('should not be able to export app if member of another organization', async () => {
       const adminUserData = await createUser(app, {
-        email: 'admin@tooljet.io',
+        email: 'admin@jumpstart.io',
         groups: ['all_users', 'admin'],
       });
 
       const anotherOrgAdminUserData = await createUser(app, {
-        email: 'another@tooljet.io',
+        email: 'another@jumpstart.io',
         groups: ['all_users', 'admin'],
       });
 
-      const loggedUser = await authenticateUser(app, 'another@tooljet.io');
+      const loggedUser = await authenticateUser(app, 'another@jumpstart.io');
       anotherOrgAdminUserData['tokenCookie'] = loggedUser.tokenCookie;
 
       const application = await createApplication(app, {
@@ -2087,7 +2087,7 @@ describe('apps controller', () => {
 
     it('should not be able to export app if it is a public app for an unauthenticated user', async () => {
       const adminUserData = await createUser(app, {
-        email: 'admin@tooljet.io',
+        email: 'admin@jumpstart.io',
         groups: ['all_users', 'admin'],
       });
 
@@ -2106,7 +2106,7 @@ describe('apps controller', () => {
   describe('POST /api/apps/import', () => {
     it('should be able to import app only if user has admin group', async () => {
       const adminUserData = await createUser(app, {
-        email: 'admin@tooljet.io',
+        email: 'admin@jumpstart.io',
         groups: ['all_users', 'admin'],
       });
 
@@ -2115,21 +2115,21 @@ describe('apps controller', () => {
 
       const organization = adminUserData.organization;
       const developerUserData = await createUser(app, {
-        email: 'developer@tooljet.io',
+        email: 'developer@jumpstart.io',
         groups: ['all_users', 'developer'],
         organization,
       });
 
-      loggedUser = await authenticateUser(app, 'developer@tooljet.io');
+      loggedUser = await authenticateUser(app, 'developer@jumpstart.io');
       developerUserData['tokenCookie'] = loggedUser.tokenCookie;
 
       const viewerUserData = await createUser(app, {
-        email: 'viewer@tooljet.io',
+        email: 'viewer@jumpstart.io',
         groups: ['all_users', 'viewer'],
         organization,
       });
 
-      loggedUser = await authenticateUser(app, 'viewer@tooljet.io');
+      loggedUser = await authenticateUser(app, 'viewer@jumpstart.io');
       viewerUserData['tokenCookie'] = loggedUser.tokenCookie;
 
       const application = await createApplication(app, {
@@ -2167,7 +2167,7 @@ describe('apps controller', () => {
   describe('PUT /api/apps/:id/icons', () => {
     it('should be able to update icon of the app if admin of same organization', async () => {
       const adminUserData = await createUser(app, {
-        email: 'admin@tooljet.io',
+        email: 'admin@jumpstart.io',
         groups: ['all_users', 'admin'],
       });
       const application = await createApplication(app, {
@@ -2191,14 +2191,14 @@ describe('apps controller', () => {
 
     it('should not be able to update icon of the app if admin of another organization', async () => {
       const adminUserData = await createUser(app, {
-        email: 'admin@tooljet.io',
+        email: 'admin@jumpstart.io',
         groups: ['all_users', 'admin'],
       });
       const anotherOrgAdminUserData = await createUser(app, {
-        email: 'another@tooljet.io',
+        email: 'another@jumpstart.io',
         groups: ['all_users', 'admin'],
       });
-      const loggedUser = await authenticateUser(app, 'another@tooljet.io');
+      const loggedUser = await authenticateUser(app, 'another@jumpstart.io');
       anotherOrgAdminUserData['tokenCookie'] = loggedUser.tokenCookie;
       const application = await createApplication(app, {
         name: 'name',
@@ -2219,7 +2219,7 @@ describe('apps controller', () => {
 
     it('should not allow custom groups without app create permission to change the name of apps', async () => {
       const adminUserData = await createUser(app, {
-        email: 'admin@tooljet.io',
+        email: 'admin@jumpstart.io',
         groups: ['all_users', 'admin'],
       });
 
@@ -2229,21 +2229,21 @@ describe('apps controller', () => {
       });
 
       const developerUserData = await createUser(app, {
-        email: 'dev@tooljet.io',
+        email: 'dev@jumpstart.io',
         groups: ['all_users', 'developer'],
         organization: adminUserData.organization,
       });
 
-      let loggedUser = await authenticateUser(app, 'dev@tooljet.io');
+      let loggedUser = await authenticateUser(app, 'dev@jumpstart.io');
       developerUserData['tokenCookie'] = loggedUser.tokenCookie;
 
       const viewerUserData = await createUser(app, {
-        email: 'viewer@tooljet.io',
+        email: 'viewer@jumpstart.io',
         groups: ['all_users', 'viewer'],
         organization: adminUserData.organization,
       });
 
-      loggedUser = await authenticateUser(app, 'viewer@tooljet.io');
+      loggedUser = await authenticateUser(app, 'viewer@jumpstart.io');
       viewerUserData['tokenCookie'] = loggedUser.tokenCookie;
 
       let response = await request(app.getHttpServer())

@@ -182,13 +182,13 @@ describe("RunJS", () => {
 
     addInputOnQueryField(
       "runjs",
-      "actions.generateFile('runjscsv', 'csv', [{ name: 'John', email: 'john@tooljet.com' }])"
+      "actions.generateFile('runjscsv', 'csv', [{ name: 'John', email: 'john@jumpstart.com' }])"
     );
     query("run");
 
     cy.readFile("cypress/downloads/runjscsv.csv", "utf-8")
       .should("contain", "name,email")
-      .and("contain", "John,john@tooljet.com");
+      .and("contain", "John,john@jumpstart.com");
 
     // addInputOnQueryField(
     //   "runjs",
@@ -224,14 +224,14 @@ describe("RunJS", () => {
     // query("preview");
     // verifypreview(
     //   "raw",
-    //   `{"email":"dev@tooljet.io","firstName":"The","lastName":"Developer","groups":["all_users","admin"]}`
+    //   `{"email":"dev@jumpstart.io","firstName":"The","lastName":"Developer","groups":["all_users","admin"]}`
     // );
     addInputOnQueryField("runjs", "return globals.currentUser.email");
     query("preview");
-    verifypreview("raw", `dev@tooljet.io`);
+    verifypreview("raw", `dev@jumpstart.io`);
     addInputOnQueryField("runjs", "return globals.currentUser.email");
     query("preview");
-    verifypreview("raw", `dev@tooljet.io`);
+    verifypreview("raw", `dev@jumpstart.io`);
     addInputOnQueryField("runjs", "return globals.currentUser.firstName");
     query("preview");
     verifypreview("raw", `The`);

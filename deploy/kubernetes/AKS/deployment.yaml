@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: tooljet-ce
+  name: jumpstart-ce
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: tooljet-ce
+      app: jumpstart-ce
   template:
     metadata:
       labels:
-        app: tooljet-ce
+        app: jumpstart-ce
     spec:
       nodeSelector:
         "kubernetes.io/os": linux
       containers:
-      - name: tooljet-ce
-        image: tooljet/tooljet-ce:latest
+      - name: jumpstart-ce
+        image: digitranslab/jumpstart-ce:latest
         imagePullPolicy: Always
         args: ["npm", "run", "start:prod"]
         resources:
@@ -40,48 +40,48 @@ spec:
           - name: PG_HOST
             valueFrom:
               secretKeyRef:
-                name: tooljet-secret
+                name: jumpstart-secret
                 key: pg_host
           - name: PG_USER
             valueFrom:
               secretKeyRef:
-                name: tooljet-secret
+                name: jumpstart-secret
                 key: pg_user
           - name: PG_PASS
             valueFrom:
               secretKeyRef:
-                name: tooljet-secret
+                name: jumpstart-secret
                 key: pg_pass
           - name: PG_DB
             valueFrom:
               secretKeyRef:
-                name: tooljet-secret
+                name: jumpstart-secret
                 key: pg_db
           - name: LOCKBOX_MASTER_KEY
             valueFrom:
               secretKeyRef:
-                name: tooljet-secret
+                name: jumpstart-secret
                 key: lockbox_master_key
           - name: SECRET_KEY_BASE
             valueFrom:
               secretKeyRef:
-                name: tooljet-secret
+                name: jumpstart-secret
                 key: secret_key_base
-          - name: TOOLJET_HOST
-            value: "https://tooljet.your-domain.com"
+          - name: JUMPSTART_HOST
+            value: "https://jumpstart.your-domain.com"
           - name: DEPLOYMENT_PLATFORM
             value: "k8s:aks"
-          # Set the env values below for Tooljet Database
-          # - name: ENABLE_TOOLJET_DB
+          # Set the env values below for Jumpstart Database
+          # - name: ENABLE_JUMPSTART_DB
           #   value: "true"
-          # - name: TOOLJET_DB
-          #   value: "tooljet_db"
-          # - name: TOOLJET_DB_USER
-          #   value: "replace_with_tooljet_db_user"
-          # - name: TOOLJET_DB_HOST
-          #   value: "replace_with_tooljet_db_host"
-          # - name: TOOLJET_DB_PASS
-          #   value: "replace_with_tooljet_db_pass"
+          # - name: JUMPSTART_DB
+          #   value: "jumpstart_db"
+          # - name: JUMPSTART_DB_USER
+          #   value: "replace_with_jumpstart_db_user"
+          # - name: JUMPSTART_DB_HOST
+          #   value: "replace_with_jumpstart_db_host"
+          # - name: JUMPSTART_DB_PASS
+          #   value: "replace_with_jumpstart_db_pass"
           # - name: PGRST_HOST
           #   value: "replace_with_postgrest_host"
           # - name: PGRST_JWT_SECRET

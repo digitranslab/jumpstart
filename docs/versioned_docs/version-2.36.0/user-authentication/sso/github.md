@@ -5,9 +5,9 @@ title: GitHub
 
 # GitHub Single Sign-on Configuration
 
-To enable GitHub Single Sign-on (SSO) for your ToolJet instance, follow these steps:
+To enable GitHub Single Sign-on (SSO) for your JumpStart instance, follow these steps:
 
-1. From the ToolJet dashboard, go to **Settings** (⚙️) from the bottom of the left sidebar and select the **Workspace Settings**.
+1. From the JumpStart dashboard, go to **Settings** (⚙️) from the bottom of the left sidebar and select the **Workspace Settings**.
 
 2. In the **Workspace Settings**, select **Workspace login** from the sidebar. On the right, you'll see toggles to enable SSO via different clients. All the client toggles are disabled by default. After turning it on, a modal will appear with input fields for parameters such as Host name, Client ID, and Client secret. At the top left of the modal, there is a toggle to enable this modal. Turn it on, and then, without entering any parameters, click on the **Save changes** button. This will generate a `Redirect URL` that you will need to utilize in the GitHub Developer settings.
 
@@ -15,7 +15,7 @@ To enable GitHub Single Sign-on (SSO) for your ToolJet instance, follow these st
 
 3. Now go to the **[GitHub Developer settings](https://github.com/settings/developers)** and navigate to `OAuth Apps` and create a new OAuth App.
 
-- Enter the **App Name**, **Homepage URL**, and **Authorization callback URL**. The **Authorization callback URL** should be the generated `Redirect URL` in the ToolJet GitHub manage SSO page. Click on the **Register application** button to create the OAuth App.
+- Enter the **App Name**, **Homepage URL**, and **Authorization callback URL**. The **Authorization callback URL** should be the generated `Redirect URL` in the JumpStart GitHub manage SSO page. Click on the **Register application** button to create the OAuth App.
 
   <div style={{textAlign: 'center'}}>
     <img style={{ border:'0', marginBottom:'15px', borderRadius:'5px', boxShadow: '0px 1px 3px rgba(0, 0, 0, 0.2)' }} className="screenshot-full" src="/img/sso/git/register-0auth.png" alt="GitHub SSO" />
@@ -28,15 +28,15 @@ To enable GitHub Single Sign-on (SSO) for your ToolJet instance, follow these st
     <img style={{ border:'0', marginBottom:'15px', borderRadius:'5px', boxShadow: '0px 1px 3px rgba(0, 0, 0, 0.2)' }} className="screenshot-full" src="/img/sso/git/client-id-secret.png" alt="GitHub SSO" />
   </div>
 
-4. Open the ToolJet's GitHub SSO settings and enter the obtained **Client ID** and **Client Secret**.
+4. Open the JumpStart's GitHub SSO settings and enter the obtained **Client ID** and **Client Secret**.
 
   <div style={{textAlign: 'center'}}>
     <img style={{ border:'0', marginBottom:'15px', borderRadius:'5px', boxShadow: '0px 1px 3px rgba(0, 0, 0, 0.2)' }} className="screenshot-full" src="/img/sso/git/enter-creds.png" alt="GitHub SSO" />
   </div>
 
-5. If you are using **GitHub Enterprise** self-hosted, enter the `Host Name`. The host name should be a URL and should not end with `/`, for example, `https://github.tooljet.com`. If it is not self-hosted, you can skip this field.
+5. If you are using **GitHub Enterprise** self-hosted, enter the `Host Name`. The host name should be a URL and should not end with `/`, for example, `https://github.jumpstart.com`. If it is not self-hosted, you can skip this field.
 
-6. Finally, click on the **Save changes** button and the GitHub sign-in button will now be available in your ToolJet login screen.
+6. Finally, click on the **Save changes** button and the GitHub sign-in button will now be available in your JumpStart login screen.
 
 7. Obtain the Login URL from the **[General Settings](/docs/user-authentication/general-settings#login-url)** of the SSO page.
 
@@ -60,7 +60,7 @@ To set GitHub as the default SSO for the instance, use the following environment
 
 ### Exposed ssoUserInfo
 
-Once the GitHub SSO is configured (on ToolJet version **`2.28.0-ee2.12.2`** or above), ToolJet will expose the user info returned by the GitHub. The user info will be available under the `ssoUserInfo` property of the `currentUser` global variable. Check the **[Inspector](/docs/how-to/use-inspector)** doc to learn more.
+Once the GitHub SSO is configured (on JumpStart version **`2.28.0-ee2.12.2`** or above), JumpStart will expose the user info returned by the GitHub. The user info will be available under the `ssoUserInfo` property of the `currentUser` global variable. Check the **[Inspector](/docs/how-to/use-inspector)** doc to learn more.
 
 The exposed user info can be dynamically accessed throughout the apps using JS **`{{globals.currentUser.ssoUserInfo.<key>}}`**
 
@@ -112,11 +112,11 @@ The following is an example of the user info returned by GitHub:
 
 ### Example: Getting User Information Using the access_token
 
-Once a user is logged in to ToolJet using GitHub SSO, the access token of the user becomes available. This access token can be utilized within ToolJet apps to retrieve detailed user information from the GitHub API.
+Once a user is logged in to JumpStart using GitHub SSO, the access token of the user becomes available. This access token can be utilized within JumpStart apps to retrieve detailed user information from the GitHub API.
 
-1. Log in to ToolJet using GitHub Single Sign-on as outlined in the previous setup steps.
+1. Log in to JumpStart using GitHub Single Sign-on as outlined in the previous setup steps.
 
-2. Create a new ToolJet application and then create new REST API query. Set the method to `GET` and the URL to `https://api.github.com/user/followers`. This API call will return the list of followers for the logged-in GitHub user.
+2. Create a new JumpStart application and then create new REST API query. Set the method to `GET` and the URL to `https://api.github.com/user/followers`. This API call will return the list of followers for the logged-in GitHub user.
 
 3. In the Headers section of the query, include the **key** `Authorization` and set the **value** to `Bearer {{globals.currentUser.ssoUserInfo.access_token}}`. This will pass the user's GitHub access token as a Bearer token in the request header.
 

@@ -3,7 +3,7 @@ id: system-requirements-for-contributing
 title: System Requirements 
 ---
 
-This page details the system requirements for setting up and running ToolJet on both Docker local and Bare-Metal setups. 
+This page details the system requirements for setting up and running JumpStart on both Docker local and Bare-Metal setups. 
 
 ## Docker 
 

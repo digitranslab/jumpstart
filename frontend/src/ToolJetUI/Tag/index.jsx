@@ -2,11 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './styles.scss';
 
-const Tag = ({ text, callBack = null, handleIconCallBack, type = 'tooljet-tag-base', dataCy = '', renderIcon }) => {
+const Tag = ({ text, callBack = null, handleIconCallBack, type = 'jumpstart-tag-base', dataCy = '', renderIcon }) => {
   const mapTagType = Object.freeze({
-    base: 'tooljet-tag-base',
-    default: 'tooljet-tag-default',
-    filter: 'tooljet-tag-filter',
+    base: 'jumpstart-tag-base',
+    default: 'jumpstart-tag-default',
+    filter: 'jumpstart-tag-filter',
   });
 
   const Icon = () => renderIcon();

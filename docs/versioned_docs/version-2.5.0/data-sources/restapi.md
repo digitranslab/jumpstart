@@ -3,19 +3,19 @@ id: restapi
 title: REST API 
 ---
 
-ToolJet can establish a connection with any available REST API endpoint and create queries to interact with it.
+JumpStart can establish a connection with any available REST API endpoint and create queries to interact with it.
 
 ## Connection
 
-To establish a connection with the REST API global datasource, you can either click on the `Add new global datasource` button located on the query panel or navigate to the **[Global Datasources](/docs/data-sources/overview)** page through the ToolJet dashboard.
+To establish a connection with the REST API global datasource, you can either click on the `Add new global datasource` button located on the query panel or navigate to the **[Global Datasources](/docs/data-sources/overview)** page through the JumpStart dashboard.
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/datasource-reference/rest-api/restapi2.gif" alt="ToolJet - Data source - REST API" />
+<img className="screenshot-full" src="/img/datasource-reference/rest-api/restapi2.gif" alt="JumpStart - Data source - REST API" />
 
 </div>
 
-**ToolJet requires the following to connect to a REST API datasource:**
+**JumpStart requires the following to connect to a REST API datasource:**
 
 - __Base URL__: REST API endpoint URL
 - __Headers__: Key-value pairs to include as headers with REST API requests.
@@ -26,7 +26,7 @@ To establish a connection with the REST API global datasource, you can either cl
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/datasource-reference/rest-api/oauth.png" alt="ToolJet - Data source - REST API" />
+<img className="screenshot-full" src="/img/datasource-reference/rest-api/oauth.png" alt="JumpStart - Data source - REST API" />
 
 </div>
 
@@ -36,16 +36,16 @@ REST HTTP methods that are supported are **GET, POST, PUT, PATCH & DELETE**.
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/datasource-reference/rest-api/methods.png" alt="ToolJet - Data source - REST API" />
+<img className="screenshot-full" src="/img/datasource-reference/rest-api/methods.png" alt="JumpStart - Data source - REST API" />
 
 </div>
 
 ## Querying REST API
 
-Once you have connected to the REST API datasource, follow these steps to write queries and interact with a REST API in the ToolJet application:
+Once you have connected to the REST API datasource, follow these steps to write queries and interact with a REST API in the JumpStart application:
 
 
-1. Open the ToolJet application and navigate to the query panel at the bottom of the app builder.
+1. Open the JumpStart application and navigate to the query panel at the bottom of the app builder.
 2. Click the `+Add` button to open the list of available `local` and `global datasources`.
 3. Select **REST API** from the global datasource section.
 4. Enter the required query parameters.
@@ -58,7 +58,7 @@ Query results can be transformed using Transformation. For more information on t
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/datasource-reference/rest-api/preview.png" alt="ToolJet - Data source - REST API" />
+<img className="screenshot-full" src="/img/datasource-reference/rest-api/preview.png" alt="JumpStart - Data source - REST API" />
 
 </div>
 
@@ -125,7 +125,7 @@ The JSON response can be easily loaded on the components like **table** and **li
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/datasource-reference/rest-api/json.png" alt="ToolJet - Data source - REST API" />
+<img className="screenshot-full" src="/img/datasource-reference/rest-api/json.png" alt="JumpStart - Data source - REST API" />
 
 </div>
 
@@ -133,7 +133,7 @@ You can also use JS methods like **map** to load data on components like **dropd
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/datasource-reference/rest-api/map.png" alt="ToolJet - Data source - REST API" />
+<img className="screenshot-full" src="/img/datasource-reference/rest-api/map.png" alt="JumpStart - Data source - REST API" />
 
 </div>
 
@@ -147,6 +147,6 @@ Read the guide on **[loading base64 data](/docs/how-to/loading-image-pdf-from-db
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/datasource-reference/rest-api/base64.png" alt="ToolJet - Data source - REST API" />
+<img className="screenshot-full" src="/img/datasource-reference/rest-api/base64.png" alt="JumpStart - Data source - REST API" />
 
 </div>

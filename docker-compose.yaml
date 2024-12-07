@@ -5,7 +5,7 @@ services:
     build:
       context: ./
       dockerfile: ./docker/plugins.Dockerfile.dev
-    image: tooljet-plugins:development
+    image: jumpstart-plugins:development
     container_name: plugins
     platform: linux/x86_64
     volumes:
@@ -16,7 +16,7 @@ services:
     build:
       context: ./
       dockerfile: ./docker/client.Dockerfile.dev
-    image: tooljet-client:development
+    image: jumpstart-client:development
     container_name: client
     platform: linux/x86_64
     volumes:
@@ -35,7 +35,7 @@ services:
     build:
       context: ./
       dockerfile: ./docker/server.Dockerfile.dev
-    image: tooljet-server:development
+    image: jumpstart-server:development
     container_name: server
     platform: linux/x86_64
     depends_on:

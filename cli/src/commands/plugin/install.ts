@@ -7,9 +7,9 @@ export default class Install extends Command {
   static flags = {
     plugin: Flags.string({ required: true }),
   };
-  static description = 'Installs a new npm module inside a tooljet plugin';
+  static description = 'Installs a new npm module inside a jumpstart plugin';
 
-  static examples = [`$ tooljet plugin install <npm_module> --plugin <plugin_name>`];
+  static examples = [`$ jumpstart plugin install <npm_module> --plugin <plugin_name>`];
 
   static args = [{ name: 'npm_module', description: 'Name of the npm module', required: true }];
 
@@ -21,7 +21,7 @@ export default class Install extends Command {
     if (!fs.existsSync(pluginPath)) {
       this.log(
         '\x1b[41m%s\x1b[0m',
-        'Error : Plugin not found, make sure that you are running this command in Tooljet directory'
+        'Error : Plugin not found, make sure that you are running this command in Jumpstart directory'
       );
       process.exit(1);
     }

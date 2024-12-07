@@ -1,21 +1,21 @@
 ---
 id: upgrade-to-v3
-title: ToolJet 3.0 Migration Guide Self-Hosted
+title: JumpStart 3.0 Migration Guide Self-Hosted
 ---
 
-ToolJet 3.0 is a new **major version**, including **breaking changes** that require you to adjust your applications accordingly. We will guide you through this process and mention a few important changes.
+JumpStart 3.0 is a new **major version**, including **breaking changes** that require you to adjust your applications accordingly. We will guide you through this process and mention a few important changes.
 
 :::tip Before upgrading
-Before upgrading, we recommend reviewing your existing applications for any usage of deprecated features. Addressing these ahead of time will help reduce the work needed to upgrade to ToolJet 3.0.
+Before upgrading, we recommend reviewing your existing applications for any usage of deprecated features. Addressing these ahead of time will help reduce the work needed to upgrade to JumpStart 3.0.
 
 For complex applications, we also recommend setting up thorough testing procedures to ensure your apps function correctly after the upgrade.
 :::
 
-## Upgrading to ToolJet 3.0 
+## Upgrading to JumpStart 3.0 
 
 ### Prerequisites ⚠️
 
-Before attempting to upgrade to the ToolJet 3.0:
+Before attempting to upgrade to the JumpStart 3.0:
 
 - **Database Backup**: Create a complete backup of your database
 - **Application Review**: Check your apps for breaking and deprecated features listed in this guide.
@@ -24,7 +24,7 @@ Before attempting to upgrade to the ToolJet 3.0:
 To upgrade, update your Docker image to:
 
 ```bash
-tooljet/tooljet:v3.0.0-ee-lts
+digitranslab/jumpstart:v3.0.0-ee-lts
 ```
 :::warning
 This is a beta release. Test thoroughly in a non-production environment first.
@@ -76,7 +76,7 @@ Instead, use static references to components:
 ## Component and Query Naming
 
 :::note
-This is only an issue during the upgrade process. Once your application is running on ToolJet 3.0, you can use identical names for components and queries without any problems.
+This is only an issue during the upgrade process. Once your application is running on JumpStart 3.0, you can use identical names for components and queries without any problems.
 :::
 
 ### Action Required
@@ -87,7 +87,7 @@ This is only an issue during the upgrade process. Once your application is runni
 
 ### Details and Examples
 
-When upgrading, if a component is referencing a query with the same name, the upgrade process may break that mapping. This occurs because ToolJet previously used a global ID-to-name map for both components and queries, which is now split in 3.0.
+When upgrading, if a component is referencing a query with the same name, the upgrade process may break that mapping. This occurs because JumpStart previously used a global ID-to-name map for both components and queries, which is now split in 3.0.
 
 Example scenario: If a table component named `userData` is referencing a query also named `userData`, this reference may break during the upgrade process.
 
@@ -159,7 +159,7 @@ Future resolution: We will be adding functionality to enforce unique component n
 
 The old deprecated **Kanban Board** component will cease functioning entirely. Applications using this component will crash after the upgrade if not updated.
 <div style={{textAlign: 'center'}}>
-<img className="screenshot-full" src="/img/widgets/kanban/kanban.png" alt="ToolJet - Widget Reference - Kanban widget" />
+<img className="screenshot-full" src="/img/widgets/kanban/kanban.png" alt="JumpStart - Widget Reference - Kanban widget" />
 </div>
 
 #### Required Actions
@@ -224,15 +224,15 @@ The `metadata` object will contain detailed information about the request and re
 
 ## System Changes
 
-### ToolJet Database
+### JumpStart Database
 
-ToolJet Database is now a core requirement for the ToolJet 3.0. 
-To use ToolJet Database, you'd have to set up and deploy PostgREST server which helps querying ToolJet Database. <br/>
+JumpStart Database is now a core requirement for the JumpStart 3.0. 
+To use JumpStart Database, you'd have to set up and deploy PostgREST server which helps querying JumpStart Database. <br/>
 Please check the environment variables that you need to configure to set up:
 - [PostgREST](/docs/setup/env-vars#postgrest-server-required)
-- [ToolJet Database](/docs/setup/env-vars#enable-tooljet-database-required)
+- [JumpStart Database](/docs/setup/env-vars#enable-jumpstart-database-required)
 
 ## Help and Support
 
-- Feel free to join our [Slack Community](https://tooljet.com/slack) or you can also e-mail us at hello@tooljet.com.
-- If you have found a bug, please create a [GitHub issue](https://github.com/ToolJet/ToolJet/issues) for the same.
+- Feel free to join our [Slack Community](https://jumpstart.com/slack) or you can also e-mail us at hello@jumpstart.com.
+- If you have found a bug, please create a [GitHub issue](https://github.com/digitranslab/jumpstart/issues) for the same.

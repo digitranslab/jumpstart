@@ -1,4 +1,4 @@
-import { QueryError, QueryResult, QueryService, ConnectionTestResult } from '@tooljet-plugins/common';
+import { QueryError, QueryResult, QueryService, ConnectionTestResult } from '@jumpstart-plugins/common';
 import { SourceOptions, QueryOptions, Operation } from './types';
 import { listContainers, listBlobs, uploadBlob, readBlob, deleteBlob, createContainer } from './operations';
 const { BlobServiceClient } = require('@azure/storage-blob');

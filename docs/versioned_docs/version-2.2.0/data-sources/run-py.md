@@ -34,7 +34,7 @@ You can write custom Python code to interact with components and queries. To do 
 - The code above has a function `myfunc` which returns a string and we using the component specific action to set the **text component**'s value from the Python query. We are also triggering the button click using `components.button1.click()`
 
 :::tip
-- ToolJet's global variables can be accessed using **tj_globals**. ex: `tj_globals.currentUser.firstName`
+- JumpStart's global variables can be accessed using **tj_globals**. ex: `tj_globals.currentUser.firstName`
 - As of now, Run Python code only supports the [Python standard library](https://docs.python.org/3/library/) only.
 - Check **[RunPy Limitations](/docs/contributing-guide/troubleshooting/runpy-limitations)**
 :::
@@ -52,5 +52,5 @@ You can write custom Python code to interact with components and queries. To do 
 You can also write custom Python code to get the data from **External APIs** and manipulate the response for graphical representation. 
 
 :::info
-Issues with writing custom Python code? Ask in our [Slack community](https://www.tooljet.com/slack).
+Issues with writing custom Python code? Ask in our [Slack community](https://www.jumpstart.com/slack).
 :::

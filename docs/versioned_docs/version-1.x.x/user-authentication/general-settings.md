@@ -9,7 +9,7 @@ title: General Settings
 
   <div style={{textAlign: 'center'}}>
 
-  ![ToolJet - SSO configs](/img/password-login/organization-menu.png)
+  ![JumpStart - SSO configs](/img/password-login/organization-menu.png)
 
   </div>
 
@@ -17,7 +17,7 @@ title: General Settings
 
   <div style={{textAlign: 'center'}}>
 
-  ![ToolJet - SSO configs](/img/sso/general/general-settings.png)
+  ![JumpStart - SSO configs](/img/sso/general/general-settings.png)
 
   </div>
 

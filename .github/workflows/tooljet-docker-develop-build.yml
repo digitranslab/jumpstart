@@ -1,4 +1,4 @@
-name: Tooljet develop docker image build
+name: Jumpstart develop docker image build
 
 on:
   push:
@@ -8,16 +8,16 @@ on:
   workflow_dispatch:
     inputs:
       job-to-run:
-        description: Enter the job name (tooljet-develop-image)
-        options: ["tooljet-develop-image"]
+        description: Enter the job name (jumpstart-develop-image)
+        options: ["jumpstart-develop-image"]
         required: true
 
 jobs:
-  tooljet-develop-image:
+  jumpstart-develop-image:
     runs-on: ubuntu-latest
     if: |
       ${{ github.ref == 'refs/heads/develop' }} &&
-      ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.job-to-run == 'tooljet-develop-image' }}
+      ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.job-to-run == 'jumpstart-develop-image' }}
 
     steps:
       - name: Checkout code
@@ -52,7 +52,7 @@ jobs:
           context: .
           file: docker/production.Dockerfile
           push: true
-          tags: tooljet/tooljet-ce:develop
+          tags: digitranslab/jumpstart-ce:develop
           platforms: linux/amd64
         env:
           DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
@@ -61,5 +61,5 @@ jobs:
       - name: Send Slack Notification on Failure
         if: failure()
         run: |
-          message="Job '${{ env.JOB_NAME }}' failed! tooljet/tooljet-ce:develop"
+          message="Job '${{ env.JOB_NAME }}' failed! digitranslab/jumpstart-ce:develop"
           curl -X POST -H 'Content-type: application/json' --data "{\"text\":\"$message\"}" ${{ secrets.SLACK_WEBHOOK_URL_OPS_CHANNEL }}

@@ -10,14 +10,14 @@ This guide shows how to upload and view images and PDFs using the base64 string 
 
 <div style={{paddingTop:'24px', paddingBottom:'24px'}}>
 
-## 1. Start by Creating a New Table In ToolJet Database
+## 1. Start by Creating a New Table In JumpStart Database
 
 - Create a new table named *testDB*. 
 - The `id` field will be present by default to create a unique identifier for each record in our database table.
 - Click on **Add more columns** button and add two more columns: `pdf` and `image`.
 - Select `varchar` as datatype for the pdf and image columns.
 
-<i>While we are using the ToolJet Database for this guide; feel free to use other databases while applying the same principles.</i>
+<i>While we are using the JumpStart Database for this guide; feel free to use other databases while applying the same principles.</i>
 
 <div style={{ width: '100%', marginBottom:'15px', marginTop:'15px'}}>
 <img className="screenshot-full" src="/img/how-to/load-base64/create-new-table.png" alt="New Table"  />
@@ -51,7 +51,7 @@ This guide shows how to upload and view images and PDFs using the base64 string 
 </div>
 
 - After uploading, you will see the filenames displayed on their respective Filepicker components.
-- Click on the **+ Add** button in the query panel to create a new query, choose Tooljet Database as the data source, select `testDB` as Table name, and `Create Row` as Operations. Name this query *uploadFiles*.
+- Click on the **+ Add** button in the query panel to create a new query, choose Jumpstart Database as the data source, select `testDB` as Table name, and `Create Row` as Operations. Name this query *uploadFiles*.
 - Under the Columns section, add two columns - `pdf` and `image`. 
 - Set the below value for the `pdf` column: 
 ```js
@@ -84,7 +84,7 @@ The upload process is now complete. Whenever files are selected in the Filepicke
 
 ## 3. View Image and PDF Files 
 
-- Create a query named *getFiles* to retrieve base64 strings from testDB: Click on **+ Add** button in the query panel, select Tooljet as Database, `testDB` as Table name, and `List rows` as Operations.
+- Create a query named *getFiles* to retrieve base64 strings from testDB: Click on **+ Add** button in the query panel, select Jumpstart as Database, `testDB` as Table name, and `List rows` as Operations.
 - Enable **Run this query on application load?** and click on the **Run** button to run the getFiles query.
 
 <div style={{ width: '100%', marginBottom:'15px', marginTop:'15px'}}>
@@ -123,6 +123,6 @@ You can also use transformations in the query response and concat `data:image/jp
 <br/>
 <br/>
 
-Using the above logic, you can upload and view files in ToolJet using the base64 data.
+Using the above logic, you can upload and view files in JumpStart using the base64 data.
 
 </div>

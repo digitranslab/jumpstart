@@ -2,19 +2,19 @@
 
 import { INestApplication } from '@nestjs/common';
 import { getManager, getConnection, EntityManager } from 'typeorm';
-import { TooljetDbOperationsService } from '../../src/services/tooljet_db_operations.service';
-import { TooljetDbService } from '../../src/services/tooljet_db.service';
+import { JumpstartDbOperationsService } from '../../src/services/jumpstart_db_operations.service';
+import { JumpstartDbService } from '../../src/services/jumpstart_db.service';
 import { setupPolly } from 'setup-polly-jest';
 import * as NodeHttpAdapter from '@pollyjs/adapter-node-http';
 import * as FSPersister from '@pollyjs/persister-fs';
 import * as path from 'path';
 import { clearDB, createUser } from '../test.helper';
-import { setupTestTables } from '../tooljet-db-test.helper';
+import { setupTestTables } from '../jumpstart-db-test.helper';
 import { InternalTable } from '@entities/internal_table.entity';
 import { Test, TestingModule } from '@nestjs/testing';
 import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { ormconfig, tooljetDbOrmconfig } from '../../ormconfig';
+import { ormconfig, jumpstartDbOrmconfig } from '../../ormconfig';
 import { PostgrestProxyService } from '@services/postgrest_proxy.service';
 import { getEnvVars } from '../../scripts/database-config-utils';
 import { User } from '@entities/user.entity';
@@ -25,12 +25,12 @@ import { GroupPermission } from '@entities/group_permission.entity';
 import { UserGroupPermission } from '@entities/user_group_permission.entity';
 import { App } from '@entities/app.entity';
 
-describe('TooljetDbOperationsService', () => {
+describe('JumpstartDbOperationsService', () => {
   let app: INestApplication;
   let appManager: EntityManager;
   let tjDbManager: EntityManager;
-  let service: TooljetDbOperationsService;
-  let tooljetDbService: TooljetDbService;
+  let service: JumpstartDbOperationsService;
+  let jumpstartDbService: JumpstartDbService;
   let organizationId: string;
   let usersTableId: string;
 
@@ -70,7 +70,7 @@ describe('TooljetDbOperationsService', () => {
           load: [() => getEnvVars()],
         }),
         TypeOrmModule.forRoot(ormconfig),
-        TypeOrmModule.forRoot(tooljetDbOrmconfig),
+        TypeOrmModule.forRoot(jumpstartDbOrmconfig),
         TypeOrmModule.forFeature([
           User,
           Organization,
@@ -82,29 +82,29 @@ describe('TooljetDbOperationsService', () => {
           InternalTable,
         ]),
       ],
-      providers: [TooljetDbOperationsService, TooljetDbService, PostgrestProxyService],
+      providers: [JumpstartDbOperationsService, JumpstartDbService, PostgrestProxyService],
     }).compile();
 
     app = moduleFixture.createNestApplication();
     await app.init();
 
     appManager = getManager();
-    tjDbManager = getConnection('tooljetDb').manager;
+    tjDbManager = getConnection('jumpstartDb').manager;
 
-    service = moduleFixture.get<TooljetDbOperationsService>(TooljetDbOperationsService);
-    tooljetDbService = moduleFixture.get<TooljetDbService>(TooljetDbService);
+    service = moduleFixture.get<JumpstartDbOperationsService>(JumpstartDbOperationsService);
+    jumpstartDbService = moduleFixture.get<JumpstartDbService>(JumpstartDbService);
   });
 
   beforeEach(async () => {
     await clearDB();
 
     const adminUserData = await createUser(app, {
-      email: 'admin@tooljet.io',
+      email: 'admin@jumpstart.io',
       groups: ['all_users', 'admin'],
     });
     organizationId = adminUserData.organization.id;
 
-    await setupTestTables(appManager, tjDbManager, tooljetDbService, organizationId);
+    await setupTestTables(appManager, tjDbManager, jumpstartDbService, organizationId);
     const usersTable = await appManager.findOneOrFail(InternalTable, { organizationId, tableName: 'users' });
     usersTableId = usersTable.id;
   });

@@ -124,7 +124,7 @@ describe("Data source Redis", () => {
     fillDataSourceTextField(
       postgreSqlText.labelUserName,
       postgreSqlText.placeholderEnterUserName,
-      "dev@tooljet.io"
+      "dev@jumpstart.io"
     );
 
     fillDataSourceTextField(

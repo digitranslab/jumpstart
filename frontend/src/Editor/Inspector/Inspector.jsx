@@ -21,8 +21,8 @@ import { useCurrentState } from '@/_stores/currentStateStore';
 import { useDataQueries } from '@/_stores/dataQueriesStore';
 import { useAppVersionStore } from '@/_stores/appVersionStore';
 import { shallow } from 'zustand/shallow';
-import Tabs from '@/ToolJetUI/Tabs/Tabs';
-import Tab from '@/ToolJetUI/Tabs/Tab';
+import Tabs from '@/JumpStartUI/Tabs/Tabs';
+import Tab from '@/JumpStartUI/Tabs/Tab';
 import Student from '@/_ui/Icon/solidIcons/Student';
 import ArrowRight from '@/_ui/Icon/solidIcons/ArrowRight';
 import ArrowLeft from '@/_ui/Icon/solidIcons/ArrowLeft';
@@ -477,8 +477,8 @@ export const Inspector = ({
 };
 const getDocsLink = (componentMeta) => {
   return componentMeta.component == 'ToggleSwitchV2'
-    ? `https://docs.tooljet.io/docs/widgets/toggle-switch`
-    : `https://docs.tooljet.io/docs/widgets/${convertToKebabCase(componentMeta?.component ?? '')}`;
+    ? `https://docs.jumpstart.io/docs/widgets/toggle-switch`
+    : `https://docs.jumpstart.io/docs/widgets/${convertToKebabCase(componentMeta?.component ?? '')}`;
 };
 
 const widgetsWithStyleConditions = {

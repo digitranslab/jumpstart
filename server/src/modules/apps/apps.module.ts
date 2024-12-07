@@ -42,7 +42,7 @@ import { Layout } from 'src/entities/layout.entity';
 import { ComponentsService } from '@services/components.service';
 import { PageService } from '@services/page.service';
 import { EventsService } from '@services/events_handler.service';
-import { TooljetDbModule } from '../tooljet_db/tooljet_db.module';
+import { JumpstartDbModule } from '../jumpstart_db/jumpstart_db.module';
 
 @Module({
   imports: [
@@ -68,7 +68,7 @@ import { TooljetDbModule } from '../tooljet_db/tooljet_db.module';
       EventHandler,
       Layout,
     ]),
-    TooljetDbModule,
+    JumpstartDbModule,
     CaslModule,
   ],
   providers: [

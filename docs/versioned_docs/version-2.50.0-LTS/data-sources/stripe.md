@@ -3,26 +3,26 @@ id: stripe
 title: Stripe
 ---
 
-ToolJet can connect to your Stripe account to read or write customers' and payments' data.
+JumpStart can connect to your Stripe account to read or write customers' and payments' data.
 
 :::info
-Check out the **[Stripe Refund App tutorial](https://blog.tooljet.com/build-a-stripe-refund-tool-using-low-code/)**
+Check out the **[Stripe Refund App tutorial](https://blog.jumpstart.com/build-a-stripe-refund-tool-using-low-code/)**
 :::
 
 <div style={{paddingTop:'24px'}}>
 
 ## Connection
 
-To establish a connection with the Stripe data source, you can either click on the **+ Add new Data source** button located on the query panel or navigate to the **[Data Sources](/docs/data-sources/overview/)** page from the ToolJet dashboard and choose Stripe as the data source.
+To establish a connection with the Stripe data source, you can either click on the **+ Add new Data source** button located on the query panel or navigate to the **[Data Sources](/docs/data-sources/overview/)** page from the JumpStart dashboard and choose Stripe as the data source.
 
-ToolJet requires the following to connect to Stripe datasource.
+JumpStart requires the following to connect to Stripe datasource.
 - **Stripe API key**
 
-<img className="screenshot-full" src="/img/datasource-reference/stripe/connect-v2.png" alt="ToolJet - Data source - Stripe" style={{marginBottom:'15px'}}/>
+<img className="screenshot-full" src="/img/datasource-reference/stripe/connect-v2.png" alt="JumpStart - Data source - Stripe" style={{marginBottom:'15px'}}/>
 
-You can get the Stripe API key from the dashboard of your Stripe account. Go to the Stripe account dashboard, click on the **Developers** on the top right, then on the left-sidebar go to the **API Keys**, you can simple reveal the **Secret Key** and copy-paste on ToolJet.
+You can get the Stripe API key from the dashboard of your Stripe account. Go to the Stripe account dashboard, click on the **Developers** on the top right, then on the left-sidebar go to the **API Keys**, you can simple reveal the **Secret Key** and copy-paste on JumpStart.
 
-<img className="screenshot-full" src="/img/datasource-reference/stripe/apikey.png" alt="ToolJet - Data source - Stripe"/>
+<img className="screenshot-full" src="/img/datasource-reference/stripe/apikey.png" alt="JumpStart - Data source - Stripe"/>
 
 </div>
 
@@ -45,7 +45,7 @@ Query results can be transformed using transformations. Read our transformations
 
 ## Supported Operations
 
-You can check out the some of the operations mentioned below. All the operations for Stripe are available and can be performed from ToolJet. Check out the **[Stripe API documentation](https://stripe.com/docs/api/)** for the detailed information about each operation.
+You can check out the some of the operations mentioned below. All the operations for Stripe are available and can be performed from JumpStart. Check out the **[Stripe API documentation](https://stripe.com/docs/api/)** for the detailed information about each operation.
 
 <div>
 <h3 style={{paddingTop: "15px"}}>Account Operations</h3>

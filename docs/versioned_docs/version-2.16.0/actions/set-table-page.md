@@ -19,6 +19,6 @@ You can also trigger actions from the **JavaScript code**. Check it out [here](/
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/actions/settablepage/page2.png" alt="ToolJet - Action reference - Open webpage" width="700" />
+<img className="screenshot-full" src="/img/actions/settablepage/page2.png" alt="JumpStart - Action reference - Open webpage" width="700" />
 
 </div>

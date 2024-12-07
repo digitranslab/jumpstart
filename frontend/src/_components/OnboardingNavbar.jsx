@@ -10,7 +10,7 @@ function OnboardingNavbar({ darkMode }) {
   return (
     <div className={`onboarding-navbar container-xl`}>
       <Link onClick={() => redirectToDashboard()}>
-        <Logo height="23" width="92" alt="tooljet logo" data-cy="page-logo" />
+        <Logo height="23" width="92" alt="jumpstart logo" data-cy="page-logo" />
       </Link>
     </div>
   );

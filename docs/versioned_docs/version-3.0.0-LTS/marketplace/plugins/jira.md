@@ -5,7 +5,7 @@ title: Jira
 
 # Jira
 
-ToolJet allows you to connect to your Jira instance to perform various operations such as managing issues, users, worklogs, and boards.
+JumpStart allows you to connect to your Jira instance to perform various operations such as managing issues, users, worklogs, and boards.
 
 <div style={{textAlign: 'center'}}>
     <img className="screenshot-full" src="/img/marketplace/plugins/jira/jira-homepage.png" alt="Jira Homepage" />
@@ -14,7 +14,7 @@ ToolJet allows you to connect to your Jira instance to perform various operation
 
 ## Connection
 
-To connect to a Jira data source in ToolJet, you can either click the **+Add new data source** button on the query panel or navigate to the **[Data Sources](/docs/data-sources/overview)** page in the ToolJet dashboard.
+To connect to a Jira data source in JumpStart, you can either click the **+Add new data source** button on the query panel or navigate to the **[Data Sources](/docs/data-sources/overview)** page in the JumpStart dashboard.
 
 To connect to your Jira instance, the following details are required:
 - **URL**: Your Jira instance URL
@@ -40,7 +40,7 @@ Query results can be transformed using transformations. Refer to our transformat
 
 ## Supported Resources and Operations
 
-ToolJet supports the following Jira resources and operations:
+JumpStart supports the following Jira resources and operations:
 
 #### Issue
 

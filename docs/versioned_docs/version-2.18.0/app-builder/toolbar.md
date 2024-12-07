@@ -97,11 +97,11 @@ You can also use **[Keyboard Shortcuts](/docs/tutorial/keyboard-shortcuts)** to 
 
 Share your applications with a unique URL generated automatically or edit the URL slug to personalize it.
 
-- When **Make the application public** is off and URL is shared then the users will have to login to ToolJet to use the application. Toggle on the option then anyone on the internet will be able to access the application without logging in to ToolJet.
-- ToolJet generates the **Embedded link** which can be used to embed application on the webpages.
+- When **Make the application public** is off and URL is shared then the users will have to login to JumpStart to use the application. Toggle on the option then anyone on the internet will be able to access the application without logging in to JumpStart.
+- JumpStart generates the **Embedded link** which can be used to embed application on the webpages.
 
 :::tip
-Learn more about **[Sharing](/docs/app-builder/share)** your tooljet applications.
+Learn more about **[Sharing](/docs/app-builder/share)** your jumpstart applications.
 :::
 
 <div style={{textAlign: 'center'}}>
@@ -125,7 +125,7 @@ Clicking on **Preview** button will open up the currently opened version of the 
 Release the app to publish the current version of the app and push the changes into the production.
 
 :::caution
-ToolJet will block editing of the Released version of an app and will display a prompt to create a new version to make the changes. This is to prevent accidentally pushing an unfinished app to the live version.
+JumpStart will block editing of the Released version of an app and will display a prompt to create a new version to make the changes. This is to prevent accidentally pushing an unfinished app to the live version.
 :::
 
 <div style={{textAlign: 'center'}}>

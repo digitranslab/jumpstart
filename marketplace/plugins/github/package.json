@@ -1,5 +1,5 @@
 {
-  "name": "@tooljet-marketplace/github",
+  "name": "@jumpstart-marketplace/github",
   "version": "1.0.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -15,9 +15,9 @@
     "build": "ncc build lib/index.ts -o dist",
     "watch": "ncc build lib/index.ts -o dist --watch"
   },
-  "homepage": "https://github.com/tooljet/tooljet#readme",
+  "homepage": "https://github.com/digitranslab/jumpstart#readme",
   "dependencies": {
-    "@tooljet-marketplace/common": "^1.0.0",
+    "@jumpstart-marketplace/common": "^1.0.0",
     "octokit": "^2.0.14"
   },
   "devDependencies": {

@@ -12,9 +12,9 @@ export default class Create extends Command {
     type: Flags.string({ options: ['database', 'api', 'cloud-storage'] }),
     build: Flags.boolean({ char: 'b' }),
   };
-  static description = 'Create a new tooljet plugin';
+  static description = 'Create a new jumpstart plugin';
 
-  static examples = [`$ tooljet plugin create <name> --type=<database | api | cloud-storage> [--build]`];
+  static examples = [`$ jumpstart plugin create <name> --type=<database | api | cloud-storage> [--build]`];
 
   static args = [{ name: 'plugin_name', description: 'Name of the plugin', required: true }];
 
@@ -54,7 +54,7 @@ export default class Create extends Command {
     if (!(fs.existsSync(pluginsPath) && fs.existsSync(docsPath) && fs.existsSync(defaultTemplates))) {
       this.log(
         '\x1b[41m%s\x1b[0m',
-        `Error : ${pluginsPath}, docs or ${pluginsPath}/_templates directory missing, make sure that you are running this command in Tooljet directory`
+        `Error : ${pluginsPath}, docs or ${pluginsPath}/_templates directory missing, make sure that you are running this command in Jumpstart directory`
       );
       process.exit(1);
     }
@@ -100,7 +100,7 @@ export default class Create extends Command {
       description: `${type} plugin from ${args.plugin_name}`,
       version: '1.0.0',
       id: `${args.plugin_name.toLowerCase()}`,
-      author: 'Tooljet',
+      author: 'Jumpstart',
       timestamp: new Date().toUTCString(),
     };
 

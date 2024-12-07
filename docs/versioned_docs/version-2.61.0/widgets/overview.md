@@ -42,7 +42,7 @@ You can also create a selection rectangle to select and move multiple components
 </div>
 
 :::tip
-You can also use many other **[Keyboard Shortcuts](/docs/tutorial/keyboard-shortcuts)** in ToolJet to copy, cut, and paste components onto the canvas.
+You can also use many other **[Keyboard Shortcuts](/docs/tutorial/keyboard-shortcuts)** in JumpStart to copy, cut, and paste components onto the canvas.
 :::
 
 </div>
@@ -116,7 +116,7 @@ or
 
 ## Bindings
 
-Bindings allow you to get dynamic data into the components. Anything inside of **`{{}}`** is evaluated as a JavaScript expression in ToolJet.
+Bindings allow you to get dynamic data into the components. Anything inside of **`{{}}`** is evaluated as a JavaScript expression in JumpStart.
 
 Any arbitrary JavaScript code can be written inside **`{{}}`**:
 

@@ -4,8 +4,8 @@ import { requireFromString } from 'module-from-string';
 import { Plugin } from 'src/entities/plugin.entity';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
-import allPlugins from '@tooljet/plugins/dist/server';
-import { TooljetDbOperationsService } from '@services/tooljet_db_operations.service';
+import allPlugins from '@jumpstart/plugins/dist/server';
+import { JumpstartDbOperationsService } from '@services/jumpstart_db_operations.service';
 
 @Injectable()
 export class PluginsHelper {
@@ -15,7 +15,7 @@ export class PluginsHelper {
   constructor(
     @InjectRepository(Plugin)
     private pluginsRepository: Repository<Plugin>,
-    private tooljetDbOperationsService: TooljetDbOperationsService
+    private jumpstartDbOperationsService: JumpstartDbOperationsService
   ) {
     if (PluginsHelper.instance) {
       return PluginsHelper.instance;
@@ -26,11 +26,11 @@ export class PluginsHelper {
   }
 
   async getService(pluginId: string, kind: string) {
-    const isToolJetDatabaseKind = kind === 'tooljetdb';
+    const isJumpStartDatabaseKind = kind === 'jumpstartdb';
     const isMarketplacePlugin = !!pluginId;
 
     try {
-      if (isToolJetDatabaseKind) return this.tooljetDbOperationsService;
+      if (isJumpStartDatabaseKind) return this.jumpstartDbOperationsService;
       if (isMarketplacePlugin) return await this.findMarketplacePluginService(pluginId);
 
       return new allPlugins[kind]();

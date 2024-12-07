@@ -9,7 +9,7 @@ import {
   removeObject,
 } from './query_operations';
 import { S3Client } from '@aws-sdk/client-s3';
-import { QueryError, QueryResult, QueryService, ConnectionTestResult } from '@tooljet-marketplace/common';
+import { QueryError, QueryResult, QueryService, ConnectionTestResult } from '@jumpstart-marketplace/common';
 import { SourceOptions, QueryOptions, Operation } from './types';
 
 export default class S3QueryService implements QueryService {

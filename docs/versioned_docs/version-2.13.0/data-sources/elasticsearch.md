@@ -4,14 +4,14 @@ title: Elasticsearch
 ---
 
 # Elasticsearch
-ToolJet can connect to your Elasticsearch cluster to read and write data.
+JumpStart can connect to your Elasticsearch cluster to read and write data.
 
 ## Connection 
-Please make sure the host/IP of the Elasticsearch cluster is accessible from your VPC if you have self-hosted ToolJet. If you are using ToolJet cloud, please **whitelist our IP**.
+Please make sure the host/IP of the Elasticsearch cluster is accessible from your VPC if you have self-hosted JumpStart. If you are using JumpStart cloud, please **whitelist our IP**.
 
 To add a new Elasticsearch database, click on the `+` button on data sources panel at the left-bottom corner of the app editor. Select Elasticsearch from the modal that pops up.
 
-ToolJet requires the following to connect to your Elasticsearch cluster: 
+JumpStart requires the following to connect to your Elasticsearch cluster: 
 - **Host**
 - **Port**
 - **Username**

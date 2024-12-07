@@ -2,7 +2,7 @@ import { InternalTable } from 'src/entities/internal_table.entity';
 import { MigrationProgress, processDataInBatches } from 'src/helpers/utils.helper';
 import { EntityManager, MigrationInterface, QueryRunner } from 'typeorm';
 import { createConnection } from 'typeorm';
-import { tooljetDbOrmconfig } from 'ormconfig';
+import { jumpstartDbOrmconfig } from 'ormconfig';
 
 // With the new changes in TJDB for primary and foreign keys, we are using
 // TypeORM methods to create constraints. Existing primary key constraints
@@ -11,14 +11,14 @@ import { tooljetDbOrmconfig } from 'ormconfig';
 // them to follow the same naming convention throughout
 export class ReplaceTjDbPrimaryKeyConstraintsForExistingTables1715105945504 implements MigrationInterface {
   public async up(queryRunner: QueryRunner): Promise<void> {
-    if (process.env.ENABLE_TOOLJET_DB !== 'true') return;
+    if (process.env.ENABLE_JUMPSTART_DB !== 'true') return;
     const batchSize = 1000;
     const entityManager = queryRunner.manager;
-    const tooljetDbConnection = await createConnection({
-      ...tooljetDbOrmconfig,
-      name: 'tooljetDbMigration',
+    const jumpstartDbConnection = await createConnection({
+      ...jumpstartDbOrmconfig,
+      name: 'jumpstartDbMigration',
     } as any);
-    const tooljetDbManager = tooljetDbConnection.createEntityManager();
+    const jumpstartDbManager = jumpstartDbConnection.createEntityManager();
     const totalTables = await entityManager.count(InternalTable);
     console.log(`Tables to migrate: ${totalTables}`);
 
@@ -28,7 +28,7 @@ export class ReplaceTjDbPrimaryKeyConstraintsForExistingTables1715105945504 impl
     );
 
     try {
-      await tooljetDbManager.transaction(async (tooljetDbManager) => {
+      await jumpstartDbManager.transaction(async (jumpstartDbManager) => {
         await processDataInBatches(
           entityManager,
           async (entityManager, skip, take) => {
@@ -39,7 +39,7 @@ export class ReplaceTjDbPrimaryKeyConstraintsForExistingTables1715105945504 impl
             });
           },
           async (entityManager: EntityManager, internalTables: InternalTable[]) => {
-            await this.recreatePrimaryKeys(tooljetDbManager, internalTables, migrationProgress);
+            await this.recreatePrimaryKeys(jumpstartDbManager, internalTables, migrationProgress);
           },
           batchSize
         );
@@ -48,12 +48,12 @@ export class ReplaceTjDbPrimaryKeyConstraintsForExistingTables1715105945504 impl
       console.error('Error during processing batches: ', error);
       throw error;
     } finally {
-      await tooljetDbConnection.close();
+      await jumpstartDbConnection.close();
     }
   }
 
   private async recreatePrimaryKeys(
-    tooljetDbManager: EntityManager,
+    jumpstartDbManager: EntityManager,
     internalTables: InternalTable[],
     migrationProgress: MigrationProgress
   ) {
@@ -61,19 +61,19 @@ export class ReplaceTjDbPrimaryKeyConstraintsForExistingTables1715105945504 impl
       const tableName = internalTable.id;
 
       // Fetch current primary key columns
-      const table = await tooljetDbManager.queryRunner.getTable(tableName);
-      const primaryKeyColumns = await getPrimaryKeyDetails(tooljetDbManager, tableName);
+      const table = await jumpstartDbManager.queryRunner.getTable(tableName);
+      const primaryKeyColumns = await getPrimaryKeyDetails(jumpstartDbManager, tableName);
 
       // primary keys created in legacy code is dropped
       if (primaryKeyColumns.length === 1) {
         const primaryKeyDetails = primaryKeyColumns[0];
 
         if (primaryKeyDetails.constraint_name.endsWith('_pkey')) {
-          await tooljetDbManager.queryRunner.query(
+          await jumpstartDbManager.queryRunner.query(
             `ALTER TABLE "${table.name}" DROP CONSTRAINT "${primaryKeyDetails.constraint_name}";`
           );
 
-          await tooljetDbManager.queryRunner.createPrimaryKey(tableName, [primaryKeyDetails.column_name]);
+          await jumpstartDbManager.queryRunner.createPrimaryKey(tableName, [primaryKeyDetails.column_name]);
         }
       }
 
@@ -81,7 +81,7 @@ export class ReplaceTjDbPrimaryKeyConstraintsForExistingTables1715105945504 impl
     }
 
     async function getPrimaryKeyDetails(
-      tooljetDbManager: EntityManager,
+      jumpstartDbManager: EntityManager,
       tableName: string
     ): Promise<{ column_name: string; data_type: string; constraint_name: string }[]> {
       const query = `
@@ -99,7 +99,7 @@ export class ReplaceTjDbPrimaryKeyConstraintsForExistingTables1715105945504 impl
             c.relname = $1
             AND i.indisprimary;
     `;
-      const primaryKeyDetails = await tooljetDbManager.query(query, [tableName]);
+      const primaryKeyDetails = await jumpstartDbManager.query(query, [tableName]);
       return primaryKeyDetails;
     }
   }

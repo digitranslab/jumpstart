@@ -3,27 +3,27 @@ id: ecs
 title: AWS ECS
 ---
 
-# Deploying ToolJet on Amazon ECS
+# Deploying JumpStart on Amazon ECS
 
 :::info
-You should setup a PostgreSQL database manually to be used by ToolJet.
+You should setup a PostgreSQL database manually to be used by JumpStart.
 :::
 
-*If you have any questions feel free to join our [Slack Community](https://tooljet.com/slack) or send us an email at hello@tooljet.com.*
+*If you have any questions feel free to join our [Slack Community](https://jumpstart.com/slack) or send us an email at hello@jumpstart.com.*
 
-Follow the steps below to deploy ToolJet on a ECS cluster.
+Follow the steps below to deploy JumpStart on a ECS cluster.
 
 1.  Setup a PostgreSQL database
-    ToolJet uses a postgres database as the persistent storage for storing data related to users and apps.
+    JumpStart uses a postgres database as the persistent storage for storing data related to users and apps.
 
-2.  Create a target group and an application load balancer to route traffic onto ToolJet containers.
-    You can [reference](https://docs.aws.amazon.com/AmazonECS/latest/userguide/create-application-load-balancer.html) AWS docs to set it up. Please note that ToolJet server exposes `/api/health`, which you can configure for health checks.
+2.  Create a target group and an application load balancer to route traffic onto JumpStart containers.
+    You can [reference](https://docs.aws.amazon.com/AmazonECS/latest/userguide/create-application-load-balancer.html) AWS docs to set it up. Please note that JumpStart server exposes `/api/health`, which you can configure for health checks.
 
     :::note
     This setup follows the old AWS UI for ECS as some options are missing on the latest experience.
     :::
 
-3.  Create task definition for deploying ToolJet app as a service on your preconfigured cluster.
+3.  Create task definition for deploying JumpStart app as a service on your preconfigured cluster.
 
     1.  Select Fargate as launch type compatibility.
         <img className="screenshot-full" src="/img/setup/ecs/launch-type-compatibility.png" alt="select launch type compatibility" />
@@ -39,8 +39,8 @@ Follow the steps below to deploy ToolJet on a ECS cluster.
 
         Within the add container form that is shown:
 
-        - Specify your container name ex: `tooljet-ce`
-        - Set the image you intend to deploy. ex: `tooljet/tooljet-ce:v1.26.0`
+        - Specify your container name ex: `jumpstart-ce`
+        - Set the image you intend to deploy. ex: `digitranslab/jumpstart-ce:v1.26.0`
         - Update port mappings at container port `3000` for tcp protocol.
           <img className="screenshot-full" src="/img/setup/ecs/container-setup.png" alt="container setup" />
 
@@ -52,8 +52,8 @@ Follow the steps below to deploy ToolJet on a ECS cluster.
            <img className="screenshot-full" src="/img/setup/ecs/container-env-setup.png" alt="container env setup" />
 
           :::note
-          For the minimal setup, ToolJet requires:
-          `TOOLJET_HOST`, `PG_HOST`, `PG_DB`, `PG_USER`, `PG_PASSWORD`, `SECRET_KEY_BASE` & `LOCKBOX_MASTER_KEY` keys in the secret.
+          For the minimal setup, JumpStart requires:
+          `JUMPSTART_HOST`, `PG_HOST`, `PG_DB`, `PG_USER`, `PG_PASSWORD`, `SECRET_KEY_BASE` & `LOCKBOX_MASTER_KEY` keys in the secret.
 
           Read **[environment variables reference](/docs/setup/env-vars)**
 
@@ -62,7 +62,7 @@ Follow the steps below to deploy ToolJet on a ECS cluster.
 4.  Create a service to run your task definition within your cluster.
     - Select launch type as Fargate.
     - Set operating system family as Linux
-    - Select task definition family as the one created earlier. ex: `tooljet-ce`
+    - Select task definition family as the one created earlier. ex: `jumpstart-ce`
     - Select the cluster and set the service name
     - You can set the number of tasks to start with as two
     - Rest of the values can be kept as default
@@ -91,4 +91,4 @@ If this is a new installation of the application, you may start directly with th
 
 - Users on versions earlier than v2.23.0-ee2.10.2 must first upgrade to this version before proceeding to the latest version.
 
-For specific issues or questions, refer to our **[Slack](https://tooljet.slack.com/join/shared_invite/zt-25438diev-mJ6LIZpJevG0LXCEcL0NhQ#)**.
+For specific issues or questions, refer to our **[Slack](https://jumpstart.slack.com/join/shared_invite/zt-25438diev-mJ6LIZpJevG0LXCEcL0NhQ#)**.

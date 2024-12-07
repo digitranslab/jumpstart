@@ -111,7 +111,7 @@ In cases where multiple data sources of the same type are connected, easily swit
 
 ### Transformation
 
-Queries can be enhanced with transformations to modify the query results. ToolJet supports transformations using two programming languages: JavaScript & Python. Refer to the detailed documentation on **[Transformations](/docs/tutorial/transformations)** for more information.
+Queries can be enhanced with transformations to modify the query results. JumpStart supports transformations using two programming languages: JavaScript & Python. Refer to the detailed documentation on **[Transformations](/docs/tutorial/transformations)** for more information.
 
 <img className="screenshot-full" src="/img/v2-beta/app-builder/querypanel/newui2/transform-v2.png" alt="Query Editor" style={{marginBottom:'15px'}}/>
 

@@ -9,7 +9,7 @@ Tree Select widget is a group checkboxes in a TreeView which can be expanded or 
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/tree-select/tree-select.gif" alt="ToolJet - Widget Reference - Tree Select" />
+<img className="screenshot-full" src="/img/widgets/tree-select/tree-select.gif" alt="JumpStart - Widget Reference - Tree Select" />
 
 </div>
 
@@ -92,7 +92,7 @@ Similar to checked values, expanded values is an array of values passed to expan
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/tree-select/events.png" alt="ToolJet - Widget Reference - Tree Select" width="500" />
+<img className="screenshot-full" src="/img/widgets/tree-select/events.png" alt="JumpStart - Widget Reference - Tree Select" width="500" />
 
 </div>
 
@@ -116,7 +116,7 @@ On uncheck event is triggered whenever the checkbox value is unchecked.
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/tree-select/layout.png" alt="ToolJet - Widget Reference - Tree Select" width="400" />
+<img className="screenshot-full" src="/img/widgets/tree-select/layout.png" alt="JumpStart - Widget Reference - Tree Select" width="400" />
 
 </div>
 
@@ -132,7 +132,7 @@ Toggle on or off to display the widget in mobile view. You can programmatically 
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/tree-select/styles.png" alt="ToolJet - Widget Reference - Tree Select" width="400" />
+<img className="screenshot-full" src="/img/widgets/tree-select/styles.png" alt="JumpStart - Widget Reference - Tree Select" width="400" />
 
 </div>
 

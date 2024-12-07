@@ -13,6 +13,6 @@ You can also trigger actions from the **JavaScript code**. Check it out [here](/
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/actions/copytoclipboard/copy2.png" alt="ToolJet - Action reference - Copy to clipboard" width="700" />
+<img className="screenshot-full" src="/img/actions/copytoclipboard/copy2.png" alt="JumpStart - Action reference - Copy to clipboard" width="700" />
 
 </div>

@@ -2,7 +2,7 @@
 
 const zendesk = require('../lib');
 
-const ZENDESK_SUBDOMAIN = 'tooljet';
+const ZENDESK_SUBDOMAIN = 'jumpstart';
 
 describe('zendesk', () => {
   const Zendesk = new zendesk.default();

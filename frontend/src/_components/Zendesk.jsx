@@ -54,7 +54,7 @@ const Zendesk = ({
             className="form-control"
             onChange={(e) => optionchanged('subdomain', e.target.value)}
             value={options?.subdomain?.value ?? ''}
-            placeholder="e.g. tooljet"
+            placeholder="e.g. jumpstart"
             workspaceConstants={workspaceConstants}
           />
         </div>

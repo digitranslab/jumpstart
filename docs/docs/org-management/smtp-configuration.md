@@ -5,12 +5,12 @@ title: SMTP Configuration
 
 <div className='badge badge--primary heading-badge'>Available on: Paid plans</div>
 
-ToolJet uses SMTP (Simple Mail Transfer Protocol) to send emails for various purposes, including invitations and password reset requests. This guide will walk you through the process of configuring SMTP settings in ToolJet.
+JumpStart uses SMTP (Simple Mail Transfer Protocol) to send emails for various purposes, including invitations and password reset requests. This guide will walk you through the process of configuring SMTP settings in JumpStart.
 
 ## Prerequisites
 
 Before you begin, ensure you have:
-- Admin access to ToolJet
+- Admin access to JumpStart
 - SMTP server details from your email service provider
 
 :::info
@@ -19,7 +19,7 @@ If you have upgraded from a version prior to v2.62.0, the SMTP variables in your
 
 ## Configuration Without Environment Variables
 
-1. Navigate to the **Settings** section in ToolJet.
+1. Navigate to the **Settings** section in JumpStart.
 2. Select the **Email protocol (SMTP)** tab.
 3. Toggle the switch to enable **Email protocol (SMTP)**.
 4. Configure the following fields:
@@ -38,14 +38,14 @@ If you have upgraded from a version prior to v2.62.0, the SMTP variables in your
 
 ## Configuration With Environment Variables
 
-ToolJet allows you to configure SMTP settings using environment variables. You can enable a toggle in the Email protocol (SMTP) settings to apply or fetch the configuration directly from your .env file.
+JumpStart allows you to configure SMTP settings using environment variables. You can enable a toggle in the Email protocol (SMTP) settings to apply or fetch the configuration directly from your .env file.
 
 <img className="screenshot-full" src="/img/enterprise/smtp/configuration-v2-env.png" alt="SMTP Configuration Without Environment Variables" />
 
 **Example Environment Variables**:<br/>
 
 ```javascript
-DEFAULT_FROM_EMAIL=hello@tooljet.io
+DEFAULT_FROM_EMAIL=hello@jumpstart.io
 SMTP_USERNAME=your-username
 SMTP_PASSWORD=your-password
 SMTP_DOMAIN=smtp.mailgun.org 

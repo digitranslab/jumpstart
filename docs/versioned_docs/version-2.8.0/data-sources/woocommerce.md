@@ -4,7 +4,7 @@ title: WooCommerce
 ---
 # WooCommerce
 
-ToolJet can connect to WooCommerce databases to read and write data.
+JumpStart can connect to WooCommerce databases to read and write data.
 
 - [Connection](#connection)
 - [Getting Started](#querying-woocommerce)
@@ -17,7 +17,7 @@ You may use [HTTP Basic Auth] by providing the REST API Consumer Key as the user
 - **Consumer key**
 - **Consumer secret**
 
-![ToolJet - Data Source - Woocommerce](/img/datasource-reference/woocommerce/woocomerce-auth.png)
+![JumpStart - Data Source - Woocommerce](/img/datasource-reference/woocommerce/woocomerce-auth.png)
 
 :::info
 NOTE: For generating keys visit admin dashboard of woocommerce , more info: https://woocommerce.github.io/woocommerce-rest-api-docs/?javascript#authentication

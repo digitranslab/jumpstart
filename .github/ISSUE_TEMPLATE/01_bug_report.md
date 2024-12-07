@@ -8,7 +8,7 @@ labels: 'bug, needs triage'
 
 ### Environment
 <!--
-    ToolJet Cloud / Docker / Linux / MacOS ...
+    JumpStart Cloud / Docker / Linux / MacOS ...
 -->
 
 ### What is the expected behaviour?

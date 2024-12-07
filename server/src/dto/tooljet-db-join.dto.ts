@@ -115,7 +115,7 @@ class Order {
   direction: string;
 }
 
-export class TooljetDbJoinDto {
+export class JumpstartDbJoinDto {
   @ValidateNested()
   @Type(() => Table)
   @IsNotEmpty({ message: '::Join table is empty' })

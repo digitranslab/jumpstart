@@ -203,7 +203,7 @@ export const generateInviteURL = (
   source?: string,
   redirectTo?: string
 ) => {
-  const host = process.env.TOOLJET_HOST;
+  const host = process.env.JUMPSTART_HOST;
   const subpath = process.env.SUB_PATH;
   const baseURL = `${host}${subpath ? subpath : '/'}`;
   const inviteSupath = `invitations/${invitationToken}`;
@@ -223,7 +223,7 @@ export const generateOrgInviteURL = (
   fullUrl = true,
   redirectTo?: string
 ) => {
-  const host = process.env.TOOLJET_HOST;
+  const host = process.env.JUMPSTART_HOST;
   const subpath = process.env.SUB_PATH;
   return `${fullUrl ? `${host}${subpath ? subpath : '/'}` : '/'}organization-invitations/${organizationToken}${
     organizationId ? `?oid=${organizationId}` : ''
@@ -235,20 +235,20 @@ export function extractMajorVersion(version) {
 }
 
 export function checkVersionCompatibility(importingVersion) {
-  return semver.gte(semver.coerce(globalThis.TOOLJET_VERSION), semver.coerce(importingVersion));
+  return semver.gte(semver.coerce(globalThis.JUMPSTART_VERSION), semver.coerce(importingVersion));
 }
 
 /**
- * Checks if a given Tooljet version is compatible with normalized app definition schemas.
+ * Checks if a given Jumpstart version is compatible with normalized app definition schemas.
  *
  * This function uses the 'semver' library to compare the provided version with a minimum version requirement
  * for normalized app definition schemas (2.24.1). It returns true if the version is greater than or equal to
  * the required version, indicating compatibility.
  *
- * @param {string} version - The Tooljet version to check.
+ * @param {string} version - The Jumpstart version to check.
  * @returns {boolean} - True if the version is compatible, false otherwise.
  */
-export function isTooljetVersionWithNormalizedAppDefinitionSchem(version) {
+export function isJumpstartVersionWithNormalizedAppDefinitionSchem(version) {
   return semver.satisfies(semver.coerce(version), '>= 2.24.0');
 }
 

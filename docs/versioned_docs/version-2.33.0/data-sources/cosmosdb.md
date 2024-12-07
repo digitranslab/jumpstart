@@ -5,13 +5,13 @@ title: CosmosDB
 
 # Cosmosdb
 
-ToolJet can connect to CosmosDB databases to read and write data.
+JumpStart can connect to CosmosDB databases to read and write data.
 
 ## Connection
 
-To establish a connection with the CosmosDB data source, you can either click on the `+Add new data source` button located on the query panel or navigate to the **[Data Sources](/docs/data-sources/overview)** page through the ToolJet dashboard.
+To establish a connection with the CosmosDB data source, you can either click on the `+Add new data source` button located on the query panel or navigate to the **[Data Sources](/docs/data-sources/overview)** page through the JumpStart dashboard.
 
-ToolJet requires the following to connect to your Cosmos DB.
+JumpStart requires the following to connect to your Cosmos DB.
 
 - **Cosmos DB Account End point**
 - **Cosmos DB Account Key**
@@ -24,7 +24,7 @@ You can find the endpoint and key in the **[Azure Portal](https://portal.azure.c
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - Data source - CosmosDB](/img/datasource-reference/cosmosdb/cosmosdb-connect-v2.png)
+![JumpStart - Data source - CosmosDB](/img/datasource-reference/cosmosdb/cosmosdb-connect-v2.png)
 
 </div>
 

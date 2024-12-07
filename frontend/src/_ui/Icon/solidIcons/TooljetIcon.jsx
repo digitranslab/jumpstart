@@ -1,6 +1,6 @@
 import React from 'react';
 
-const TooljetIcon = ({ fill = '#889096', width = '25', className = '', viewBox = '0 0 20 20', style }) => (
+const JumpstartIcon = ({ fill = '#889096', width = '25', className = '', viewBox = '0 0 20 20', style }) => (
   <svg
     width={width}
     height={width}
@@ -21,4 +21,4 @@ const TooljetIcon = ({ fill = '#889096', width = '25', className = '', viewBox =
   </svg>
 );
 
-export default TooljetIcon;
+export default JumpstartIcon;

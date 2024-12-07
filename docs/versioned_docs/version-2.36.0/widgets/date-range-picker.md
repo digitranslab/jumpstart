@@ -26,7 +26,7 @@ Date range picker supports the following events:
 
 | <div style={{ width:"100px"}}> Event  </div>    | <div style={{ width:"100px"}}> Description </div> |
 |:----------- |:----------- |
-| On select | The On select event is triggered when the a start date and end date is selected on the picker. Just like any other event on ToolJet, you can set multiple handlers for on select event. |
+| On select | The On select event is triggered when the a start date and end date is selected on the picker. Just like any other event on JumpStart, you can set multiple handlers for on select event. |
 
 :::info
 Check [Action Reference](/docs/category/actions-reference) docs to get the detailed information about all the **Actions**.

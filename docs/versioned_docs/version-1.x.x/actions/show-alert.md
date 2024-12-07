@@ -15,7 +15,7 @@ You can also trigger actions from the **JavaScript code**. Check it out [here](/
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - Action reference -  Show Alert](/img/actions/show-alert/show-alert.png)
+![JumpStart - Action reference -  Show Alert](/img/actions/show-alert/show-alert.png)
 
 </div>
 

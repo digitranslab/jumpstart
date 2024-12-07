@@ -7,7 +7,7 @@ title: Google (Open ID)
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - SSO configs](/img/password-login/organization-menu.png)
+![JumpStart - SSO configs](/img/password-login/organization-menu.png)
 
 </div>
 
@@ -15,7 +15,7 @@ title: Google (Open ID)
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - SSO configs](/img/sso/google-openid/openid.png)
+![JumpStart - SSO configs](/img/sso/google-openid/openid.png)
 
 </div>
 
@@ -29,7 +29,7 @@ title: Google (Open ID)
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - Google create project](/img/sso/google/create-project.png)
+![JumpStart - Google create project](/img/sso/google/create-project.png)
 
 </div>
 
@@ -37,7 +37,7 @@ title: Google (Open ID)
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - Google create client id](/img/sso/google/create-oauth.png)
+![JumpStart - Google create client id](/img/sso/google/create-oauth.png)
 
 </div>
 
@@ -46,25 +46,25 @@ select 'External'.
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - OAuth user type](/img/sso/google/oauth-type.png)
+![JumpStart - OAuth user type](/img/sso/google/oauth-type.png)
 
 </div>
 
 - You'll be led to an app registration page where you can set OAuth scopes. Select 'Add or remove scopes' and add the scopes
-userinfo.email and userinfo.profile as shown in the image. This will allow ToolJet to store the email and name of the
+userinfo.email and userinfo.profile as shown in the image. This will allow JumpStart to store the email and name of the
 user who is signing in
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - OAuth scope](/img/sso/google/scope.png)
+![JumpStart - OAuth scope](/img/sso/google/scope.png)
 
 </div>
 
-- Set the domain on which ToolJet is hosted as an authorized domain
+- Set the domain on which JumpStart is hosted as an authorized domain
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - authorized domain](/img/sso/google/authorized-urls.png)
+![JumpStart - authorized domain](/img/sso/google/authorized-urls.png)
 
 </div>
 
@@ -72,7 +72,7 @@ user who is signing in
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - authorized redirect urls](/img/sso/google/authorized-redirect-urls.png)
+![JumpStart - authorized redirect urls](/img/sso/google/authorized-redirect-urls.png)
 
 </div>
 

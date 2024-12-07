@@ -15,7 +15,7 @@ import { verifyComponent } from "Support/utils/basicComponents";
 import { commonWidgetText } from "Texts/common";
 
 describe("Editor- CSA", () => {
-  const toolJetImage = "cypress/fixtures/Image/tooljet.png";
+  const jumpStartImage = "cypress/fixtures/Image/jumpstart.png";
   beforeEach(() => {
     const appName1 = `${fake.companyName}-${fake.companyName}-App`;
     cy.apiLogin();
@@ -126,7 +126,7 @@ describe("Editor- CSA", () => {
       .should("be.visible")
       .and(
         "have.text",
-        "ToolJet is an open-source low-code platform for building and deploying internal tools with minimal engineering efforts 🚀"
+        "JumpStart is an open-source low-code platform for building and deploying internal tools with minimal engineering efforts 🚀"
       );
 
     cy.get('[data-cy="real-canvas"]').click("topRight", { force: true });
@@ -158,7 +158,7 @@ describe("Editor- CSA", () => {
     verifyComponent("filepicker1");
     cy.get(
       `${commonWidgetSelector.draggableWidget("filepicker1")} input`
-    ).selectFile(toolJetImage, {
+    ).selectFile(jumpStartImage, {
       force: true,
     });
 

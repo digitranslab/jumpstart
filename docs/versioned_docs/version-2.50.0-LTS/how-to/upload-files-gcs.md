@@ -21,7 +21,7 @@ Before adding the new data source we will need to have a private key for our GCS
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - How To - Upload files using GCS](/img/how-to/upload-files-gcs/adding-account.png)
+![JumpStart - How To - Upload files using GCS](/img/how-to/upload-files-gcs/adding-account.png)
 
 </div>
 
@@ -37,7 +37,7 @@ Before adding the new data source we will need to have a private key for our GCS
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - How To - Upload files using GCS](/img/how-to/upload-files-gcs/result-filepicker.png)
+![JumpStart - How To - Upload files using GCS](/img/how-to/upload-files-gcs/result-filepicker.png)
 
 </div>
 
@@ -53,7 +53,7 @@ Before adding the new data source we will need to have a private key for our GCS
 
 <div style={{textAlign: 'left'}}>
 
-![ToolJet - How To - Upload files using GCS](/img/how-to/upload-files-gcs/config-filepicker.png)
+![JumpStart - How To - Upload files using GCS](/img/how-to/upload-files-gcs/config-filepicker.png)
 
 </div>
 
@@ -83,7 +83,7 @@ Before adding the new data source we will need to have a private key for our GCS
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - How To - Upload files using GCS](/img/how-to/upload-files-gcs/final-result.png)
+![JumpStart - How To - Upload files using GCS](/img/how-to/upload-files-gcs/final-result.png)
 
 </div>
 

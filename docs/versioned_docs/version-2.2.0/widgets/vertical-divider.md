@@ -8,7 +8,7 @@ Vertical Divider widget is used to add vertical separator between components.
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/vertical-divider/vertical-divider.png" alt="ToolJet - Widget Reference - Vertical divider" />
+<img className="screenshot-full" src="/img/widgets/vertical-divider/vertical-divider.png" alt="JumpStart - Widget Reference - Vertical divider" />
 
 </div>
 
@@ -21,7 +21,7 @@ Under the <b>General</b> accordion, you can set the value in the string format. 
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/tooltip.png" alt="ToolJet - Widget Reference - Vertical divider" width="300" />
+<img className="screenshot-full" src="/img/tooltip.png" alt="JumpStart - Widget Reference - Vertical divider" width="300" />
 
 </div>
 
@@ -29,7 +29,7 @@ Under the <b>General</b> accordion, you can set the value in the string format. 
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/divider/layout1.png" alt="ToolJet - Widget Reference - Vertical divider" width="400" />
+<img className="screenshot-full" src="/img/widgets/divider/layout1.png" alt="JumpStart - Widget Reference - Vertical divider" width="400" />
 
 </div>
 
@@ -42,7 +42,7 @@ Under the <b>General</b> accordion, you can set the value in the string format. 
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/divider/styles1.png" alt="ToolJet - Widget Reference - Vertical divider" width="400" />
+<img className="screenshot-full" src="/img/widgets/divider/styles1.png" alt="JumpStart - Widget Reference - Vertical divider" width="400" />
 
 </div>
 

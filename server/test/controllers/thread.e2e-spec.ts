@@ -27,7 +27,7 @@ describe('thread controller', () => {
 
   it('should list all threads in an application', async () => {
     const userData = await createUser(app, {
-      email: 'admin@tooljet.io',
+      email: 'admin@jumpstart.io',
     });
     const application = await createApplication(app, {
       name: 'App',

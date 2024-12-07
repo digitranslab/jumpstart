@@ -1,11 +1,11 @@
-import { QueryError, QueryResult, QueryService } from '@tooljet-plugins/common';
+import { QueryError, QueryResult, QueryService } from '@jumpstart-plugins/common';
 import got, { Headers } from 'got';
 import { SourceOptions, QueryOptions } from './types';
 
 export default class SlackQueryService implements QueryService {
   authUrl(): string {
     const clientId = process.env.SLACK_CLIENT_ID;
-    const host = process.env.TOOLJET_HOST;
+    const host = process.env.JUMPSTART_HOST;
     const subpath = process.env.SUB_PATH;
     const fullUrl = `${host}${subpath ? subpath : '/'}`;
     return `https://slack.com/oauth/v2/authorize?response_type=code&client_id=${clientId}&redirect_uri=${fullUrl}oauth2/authorize`;
@@ -15,7 +15,7 @@ export default class SlackQueryService implements QueryService {
     const accessTokenUrl = 'https://slack.com/api/oauth.v2.access';
     const clientId = process.env.SLACK_CLIENT_ID;
     const clientSecret = process.env.SLACK_CLIENT_SECRET;
-    const host = process.env.TOOLJET_HOST;
+    const host = process.env.JUMPSTART_HOST;
     const subpath = process.env.SUB_PATH;
     const fullUrl = `${host}${subpath ? subpath : '/'}`;
     const redirectUri = `${fullUrl}oauth2/authorize`;

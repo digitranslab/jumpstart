@@ -63,7 +63,7 @@ To add an event, click on the component handle to open the component properties 
 | Card moved | This event is triggered whenever the card's position is changed on the Kanban or using the component specific action. |
 | Card selected | This event is triggered whenever a card is clicked to open the modal. |
 
-Just like any other event on ToolJet, you can set multiple handlers for any of the above mentioned events.
+Just like any other event on JumpStart, you can set multiple handlers for any of the above mentioned events.
 
 :::info
 Check [Action Reference](/docs/category/actions-reference) docs to get the detailed information about all the **Actions**.

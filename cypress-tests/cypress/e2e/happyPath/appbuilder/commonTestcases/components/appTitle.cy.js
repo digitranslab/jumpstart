@@ -44,17 +44,17 @@ describe("Editor title", () => {
   });
   it("should verify titles", () => {
     cy.url().should("include", "/my-workspace");
-    cy.title().should("eq", "Dashboard | ToolJet");
+    cy.title().should("eq", "Dashboard | JumpStart");
     cy.log(data.appName);
 
     cy.openApp();
     cy.url().should("include", Cypress.env("appId"));
-    cy.title().should("eq", `${data.appName} | ToolJet`);
+    cy.title().should("eq", `${data.appName} | JumpStart`);
 
     cy.openInCurrentTab(commonWidgetSelector.previewButton);
 
     cy.url().should("include", `/applications/${Cypress.env("appId")}`);
-    cy.title().should("eq", `Preview - ${data.appName} | ToolJet`);
+    cy.title().should("eq", `Preview - ${data.appName} | JumpStart`);
     cy.go("back");
     cy.releaseApp();
     cy.url().then((url) => cy.visit(`/applications/${url.split("/").pop()}`));

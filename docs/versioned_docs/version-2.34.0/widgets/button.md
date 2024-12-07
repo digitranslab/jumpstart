@@ -26,7 +26,7 @@ Events are actions that can be triggered programmatically when the user interact
 | <div style={{ width:"100px"}}> Event </div> | <div style={{ width:"100px"}}> Description </div> |
 | :----------- | :----------- |
 | On click | The On click event is triggered when the button is clicked. |
-| On hover | The On hover event is triggered when the mouse cursor is moved over the button. Just like any other event on ToolJet, you can set multiple handlers for on click event. |
+| On hover | The On hover event is triggered when the mouse cursor is moved over the button. Just like any other event on JumpStart, you can set multiple handlers for on click event. |
 
 :::info
 Check [Action Reference](/docs/category/actions-reference) docs to get the detailed information about all the **Actions**.
@@ -69,7 +69,7 @@ A Tooltip is often used to display additional information when the user hovers t
 
 <div style={{textAlign: 'left'}}>
 
-<img style={{ border:'0', marginBottom:'15px', borderRadius:'5px', boxShadow: '0px 1px 3px rgba(0, 0, 0, 0.2)' }} className="screenshot-full" src="/img/widgets/button/buttontooltip.png" alt="ToolJet - Widget Reference - Tooltip" />
+<img style={{ border:'0', marginBottom:'15px', borderRadius:'5px', boxShadow: '0px 1px 3px rgba(0, 0, 0, 0.2)' }} className="screenshot-full" src="/img/widgets/button/buttontooltip.png" alt="JumpStart - Widget Reference - Tooltip" />
 
 </div>
 

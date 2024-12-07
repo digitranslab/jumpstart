@@ -6,8 +6,8 @@
   ],
   "sources": [
     {
-      "name": "ToolJet Database",
-      "id": "tooljetdb"
+      "name": "JumpStart Database",
+      "id": "jumpstartdb"
     }
   ],
   "id": "saas-license-management",

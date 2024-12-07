@@ -1,7 +1,7 @@
 
 # Athena
 
-ToolJet can connect to Amazon Athena which is an interactive query service that makes it easy to analyze data in Amazon S3 using standard SQL.
+JumpStart can connect to Amazon Athena which is an interactive query service that makes it easy to analyze data in Amazon S3 using standard SQL.
 
 - [Connection](#connection)
 - [Querying-athena](#querying-amazon-athena)
@@ -9,7 +9,7 @@ ToolJet can connect to Amazon Athena which is an interactive query service that 
 
 ## Connection
 
-ToolJet requires the following to connect to your Athena.
+JumpStart requires the following to connect to your Athena.
 
 - **Database**
 - **S3 output location**

@@ -18,7 +18,7 @@ Left-sidebar has the following options:
 
 ## Pages
 
-Pages allows you to have multiple pages in a single application, making your ToolJet applications more robust and user-friendly.
+Pages allows you to have multiple pages in a single application, making your JumpStart applications more robust and user-friendly.
 
 Check the detailed documentation for **[Pages](/docs/tutorial/pages)**.
 
@@ -30,7 +30,7 @@ Check the detailed documentation for **[Pages](/docs/tutorial/pages)**.
 
 ## Inspector
 
-The Inspector can be used to inspect the data of the **queries**, properties and values of the **components** that are there on the canvas, ToolJet's global variables and the variables that have been set by the user.
+The Inspector can be used to inspect the data of the **queries**, properties and values of the **components** that are there on the canvas, JumpStart's global variables and the variables that have been set by the user.
 
 Check the detailed guide on **[using Inspector](/docs/how-to/use-inspector)**.
 
@@ -60,6 +60,6 @@ Debugger consists of two main sections:
 
 ## Theme Switch
 
-Use the theme switch button to toggle ToolJet between light and dark modes.
+Use the theme switch button to toggle JumpStart between light and dark modes.
 
 While developers can access the current theme's value through global variables using `{{globals.theme.name}}`, it is not currently feasible to change the theme programmatically.

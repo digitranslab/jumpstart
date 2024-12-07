@@ -1,6 +1,6 @@
 import React from 'react';
 // eslint-disable-next-line import/no-unresolved
-import { allSvgs } from '@tooljet/plugins/client';
+import { allSvgs } from '@jumpstart/plugins/client';
 
 const Card = ({
   title,

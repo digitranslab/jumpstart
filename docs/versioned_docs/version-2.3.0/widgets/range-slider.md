@@ -12,7 +12,7 @@ Range Sliders have "Two handles" option which allows user to select within a ran
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/range-slider/range_slider.png" alt="ToolJet - Widget Reference - Range Slider" />
+<img className="screenshot-full" src="/img/widgets/range-slider/range_slider.png" alt="JumpStart - Widget Reference - Range Slider" />
 
 </div>
 
@@ -43,7 +43,7 @@ Under the <b>General</b> accordion, you can set the value in the string format. 
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/tooltip.png" alt="ToolJet - Widget Reference - Range Slider" />
+<img className="screenshot-full" src="/img/tooltip.png" alt="JumpStart - Widget Reference - Range Slider" />
 
 </div>
 

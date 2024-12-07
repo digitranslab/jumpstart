@@ -5,22 +5,22 @@ title: Google Sheets
 
 # Google Sheets
 
-ToolJet has the capability to establish a connection with Google Sheet for both reading and writing data. By utilizing OAuth 2.0, ToolJet can establish a secure connection with Google Sheet, ensuring that the application's access to a user's account is restricted and limited appropriately.
+JumpStart has the capability to establish a connection with Google Sheet for both reading and writing data. By utilizing OAuth 2.0, JumpStart can establish a secure connection with Google Sheet, ensuring that the application's access to a user's account is restricted and limited appropriately.
 
 ## Self-Hosted Configuration
 
-If you decide to self-host ToolJet, there are a few additional steps you need to take:
+If you decide to self-host JumpStart, there are a few additional steps you need to take:
 
 1. Proceed with the setup steps provided in the [Google OAuth 2.0 guide](/docs/setup/env-vars#google-oauth--optional-) to configure the necessary settings.
 2. Assign the corresponding values obtained from the previous step to the following environment variables:
    - `GOOGLE_CLIENT_ID`
    - `GOOGLE_CLIENT_SECRET`
-   - `TOOLJET_HOST`
+   - `JUMPSTART_HOST`
 3. Activate the Google Sheets API within the Google Cloud Platform (GCP) console.
 
 ## Connection
 
-To establish a connection with Google Sheet, you have two options. First, you can click on the **+Add new global datasource** button found on the query panel. Alternatively, you can go to the **[Global Datasources](/docs/data-sources/overview)** page within the ToolJet dashboard.
+To establish a connection with Google Sheet, you have two options. First, you can click on the **+Add new global datasource** button found on the query panel. Alternatively, you can go to the **[Global Datasources](/docs/data-sources/overview)** page within the JumpStart dashboard.
 
 ### Authorization Scopes
 
@@ -77,7 +77,7 @@ Add additional rows to a table by using the append operation.
 | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Spreadsheet ID | Entering the spreadsheet ID is required and can be obtained from the URL of the spreadsheet. For example, in the URL `https://docs.google.com/spreadsheets/d/1W2S4re7zNaPk9vqv6_CqOpPdm_mDEqmLmzjVe7Nb9WM/edit#gid=0`, the `1W2S4re7zNaPk9vqv6_CqOpPdm_mDEqmLmzjVe7Nb9WM` represents the spreadsheet ID. |
 | Sheet          | This is optional. You can specify `sheet name` if it has more than 1 sheets, else it will automatically choose the first sheet.                                                                                                                                                                          |
-| Rows           | To input row data, use the JSON array format where each object represents a single row. Here's an example: **`[ {"name":"John", "email":"John@tooljet.com"},{...},{...} ]`**. Within each object, the `key` corresponds to the **column name**, and the `value` represents the **cell data**.            |
+| Rows           | To input row data, use the JSON array format where each object represents a single row. Here's an example: **`[ {"name":"John", "email":"John@jumpstart.com"},{...},{...} ]`**. Within each object, the `key` corresponds to the **column name**, and the `value` represents the **cell data**.            |
 
 <div style={{textAlign: 'center'}}>
 

@@ -1,5 +1,5 @@
 {
-  "tooljet_database": [],
+  "jumpstart_database": [],
   "app": [
     {
       "definition": {
@@ -996,7 +996,7 @@
               "parent": "eca89da1-d6a9-4d8b-8463-8bdfb71dc364",
               "properties": {
                 "source": {
-                  "value": "https://github.com/ToolJet/ToolJet/assets/127945292/d7c59282-2a44-483b-8de2-5da9b5f0b48d"
+                  "value": "https://github.com/digitranslab/jumpstart/assets/127945292/d7c59282-2a44-483b-8de2-5da9b5f0b48d"
                 }
               },
               "general": {},
@@ -1090,7 +1090,7 @@
               "parent": "eca89da1-d6a9-4d8b-8463-8bdfb71dc364",
               "properties": {
                 "text": {
-                  "value": " ToolJet"
+                  "value": " JumpStart"
                 }
               },
               "general": {},
@@ -1264,8 +1264,8 @@
             },
             {
               "id": "6ae1f8ad-f3ff-4395-a3ac-90f1d40c9589",
-              "name": "tooljetdbdefault",
-              "kind": "tooljetdb",
+              "name": "jumpstartdbdefault",
+              "kind": "jumpstartdb",
               "type": "static",
               "pluginId": null,
               "appVersionId": "698f85c8-a111-4efd-a512-68d9bc23d7fb",
@@ -1421,5 +1421,5 @@
       }
     }
   ],
-  "tooljet_version": "2.36.0"
+  "jumpstart_version": "2.36.0"
 }

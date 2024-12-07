@@ -6,7 +6,7 @@ import {
   QueryService,
   QueryResult,
   QueryError,
-} from '@tooljet-plugins/common';
+} from '@jumpstart-plugins/common';
 import { SourceOptions, QueryOptions } from './types';
 
 export default class MysqlQueryService implements QueryService {

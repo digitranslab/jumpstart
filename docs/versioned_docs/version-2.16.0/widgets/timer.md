@@ -8,7 +8,7 @@ Timer widget lets users to count timer both upward and downward
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/timer/timer.png" alt="ToolJet - Widget Reference - Timer" />
+<img className="screenshot-full" src="/img/widgets/timer/timer.png" alt="JumpStart - Widget Reference - Timer" />
 
 </div>
 
@@ -52,7 +52,7 @@ Under the <b>General</b> accordion, you can set the value in the string format. 
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/tooltip.png" alt="ToolJet - Widget Reference - Timer" />
+<img className="screenshot-full" src="/img/tooltip.png" alt="JumpStart - Widget Reference - Timer" />
 
 </div>
 

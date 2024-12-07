@@ -5,7 +5,7 @@ title: 'Marketplace: Overview'
 
 # Marketplace: Overview
 
-ToolJet Marketplace allows users to enhance their workspaces by adding custom plugins (data sources) tailored to their unique requirements. This functionality facilitates the seamless integration of user-created plugins with ToolJet.
+JumpStart Marketplace allows users to enhance their workspaces by adding custom plugins (data sources) tailored to their unique requirements. This functionality facilitates the seamless integration of user-created plugins with JumpStart.
 
 <div style={{textAlign: 'center'}}>
     <img style={{ border:'0', marginBottom:'15px', borderRadius:'5px', boxShadow: '0px 1px 3px rgba(0, 0, 0, 0.2)' }} className="screenshot-full" src="/img/marketplace/overview/marketplace-v2.png" alt="Marketplace Overview" />
@@ -21,7 +21,7 @@ To **Enable** the marketplace feature, users need to add the following environme
 ENABLE_MARKETPLACE_FEATURE=true
 ```
 
-When running ToolJet locally, ensure that all the plugins are available by building marketplace before starting the server.
+When running JumpStart locally, ensure that all the plugins are available by building marketplace before starting the server.
 
 :::info Note
 The logged-in user should be an **Administrator** to access the marketplace page.
@@ -86,7 +86,7 @@ To remove a plugin, follow these steps:
 - **[Supabase](/docs/marketplace/plugins/marketplace-plugin-supabase)**
 
 :::info For Plugin Developers
-Refer to the **[Plugin Development guide](/docs/contributing-guide/marketplace/marketplace-setup)** to learn how to create plugins for the ToolJet Marketplace.
+Refer to the **[Plugin Development guide](/docs/contributing-guide/marketplace/marketplace-setup)** to learn how to create plugins for the JumpStart Marketplace.
 :::
 
 </div>

@@ -2,13 +2,13 @@ import React, { Suspense } from 'react';
 // eslint-disable-next-line no-unused-vars
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import { authorizeWorkspace } from '@/_helpers/authorizeWorkspace';
-import { authenticationService, tooljetService } from '@/_services';
+import { authenticationService, jumpstartService } from '@/_services';
 import { withRouter } from '@/_hoc/withRouter';
 import { PrivateRoute, AdminRoute, AppsRoute, SwitchWorkspaceRoute, OrganizationInviteRoute } from '@/Routes';
 import { HomePage } from '@/HomePage';
 import { LoginPage } from '@/LoginPage';
 import { SignupPage } from '@/SignupPage';
-import { TooljetDatabase } from '@/TooljetDatabase';
+import { JumpstartDatabase } from '@/JumpstartDatabase';
 import { OrganizationInvitationPage } from '@/ConfirmationPage';
 import { Authorize } from '@/Oauth2';
 import { Authorize as Oauth } from '@/Oauth';
@@ -67,7 +67,7 @@ class AppComponent extends React.Component {
     this.setState({ sidebarNav: val });
   };
   fetchMetadata = () => {
-    tooljetService.fetchMetaData().then((data) => {
+    jumpstartService.fetchMetaData().then((data) => {
       useAppDataStore.getState().actions.setMetadata(data);
       localStorage.setItem('currentVersion', data.installed_version);
       if (data.latest_version && lt(data.installed_version, data.latest_version) && data.version_ignored === false) {
@@ -141,10 +141,10 @@ class AppComponent extends React.Component {
           {updateAvailable && (
             <div className="alert alert-info alert-dismissible" role="alert">
               <h3 className="mb-1">Update available</h3>
-              <p>A new version of ToolJet has been released.</p>
+              <p>A new version of JumpStart has been released.</p>
               <div className="btn-list">
                 <a
-                  href="https://docs.tooljet.io/docs/setup/updating"
+                  href="https://docs.jumpstart.io/docs/setup/updating"
                   target="_blank"
                   className="btn btn-info"
                   rel="noreferrer"
@@ -153,7 +153,7 @@ class AppComponent extends React.Component {
                 </a>
                 <a
                   onClick={() => {
-                    tooljetService.skipVersion();
+                    jumpstartService.skipVersion();
                     this.setState({ updateAvailable: false });
                   }}
                   className="btn"
@@ -337,13 +337,13 @@ class AppComponent extends React.Component {
                   </PrivateRoute>
                 }
               />
-              {window.public_config?.ENABLE_TOOLJET_DB == 'true' && (
+              {window.public_config?.ENABLE_JUMPSTART_DB == 'true' && (
                 <Route
                   exact
                   path="/:workspaceId/database"
                   element={
                     <PrivateRoute>
-                      <TooljetDatabase switchDarkMode={this.switchDarkMode} darkMode={darkMode} />
+                      <JumpstartDatabase switchDarkMode={this.switchDarkMode} darkMode={darkMode} />
                     </PrivateRoute>
                   }
                 />

@@ -24,7 +24,7 @@ The Query Panel consists of two sections:
 ### Configuring the Query
 - You can choose from low-code operations or write an SQL statement, depending on the data source. 
 
-- For instance, you will have to choose the **Table name** and **Operations** (List Rows, Create Row, Update Rows, Delete Rows, Join Tables) for a ToolJet Database. 
+- For instance, you will have to choose the **Table name** and **Operations** (List Rows, Create Row, Update Rows, Delete Rows, Join Tables) for a JumpStart Database. 
 
 <div style={{textAlign: 'center', marginBottom:'15px'}}>
     <img className="screenshot-full" src="/img/v2-beta/app-builder/walkthrough/create-queries/low-code-query-builder.png" alt="Low Code Query Builder" />
@@ -128,7 +128,7 @@ DELETE FROM feature_requests WHERE votes < {{parameters.minimumVotes}};
 
 ## Using Transformations and Events
 
-**Transformations**: After fetching data, you might want to format it (e.g., filtering out unnecessary fields or converting data types). ToolJet allows using JavaScript or Python for these transformations.
+**Transformations**: After fetching data, you might want to format it (e.g., filtering out unnecessary fields or converting data types). JumpStart allows using JavaScript or Python for these transformations.
 
 **Event Handling**: Link queries with application events for dynamic interactions. For example, in the *updateRequest* query, you can set up an event to automatically run the *getAllRequests* query right after *updateRequest*. This ensures that the application retrieves and displays the updated data in the relevant components.
 

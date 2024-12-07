@@ -73,7 +73,7 @@ import EditorSelecto from './EditorSelecto';
 import { diff } from 'deep-object-diff';
 import useAppDarkMode from '@/_hooks/useAppDarkMode';
 import useDebouncedArrowKeyPress from '@/_hooks/useDebouncedArrowKeyPress';
-import useConfirm from '@/Editor/QueryManager/QueryEditors/TooljetDatabase/Confirm';
+import useConfirm from '@/Editor/QueryManager/QueryEditors/JumpstartDatabase/Confirm';
 import { getQueryParams } from '@/_helpers/routes';
 import RightSidebarTabManager from './RightSidebarTabManager';
 import { shallow } from 'zustand/shallow';

@@ -15,7 +15,7 @@ Check Workspace docs [here](/docs/2.4.0/tutorial/workspace_overview).
 
     <div style={{textAlign: 'center'}}>
 
-    ![ToolJet - Workspace sign up](/img/user-lifecycle/signup-mw.png)
+    ![JumpStart - Workspace sign up](/img/user-lifecycle/signup-mw.png)
 
     </div>
 
@@ -23,7 +23,7 @@ Check Workspace docs [here](/docs/2.4.0/tutorial/workspace_overview).
 
     <div style={{textAlign: 'center'}}>
 
-    ![ToolJet - Workspace sign up](/img/user-lifecycle/user-mw.png)
+    ![JumpStart - Workspace sign up](/img/user-lifecycle/user-mw.png)
 
     </div>
 
@@ -31,7 +31,7 @@ Check Workspace docs [here](/docs/2.4.0/tutorial/workspace_overview).
 
     <div style={{textAlign: 'center'}}>
 
-    ![ToolJet - Workspace sign up](/img/user-lifecycle/invite-link-mw.png)
+    ![JumpStart - Workspace sign up](/img/user-lifecycle/invite-link-mw.png)
 
     </div>
 
@@ -39,7 +39,7 @@ Check Workspace docs [here](/docs/2.4.0/tutorial/workspace_overview).
 
     <div style={{textAlign: 'center'}}>
 
-    ![ToolJet - Workspace accept invite](/img/user-lifecycle/sso-onboard-sw.png)
+    ![JumpStart - Workspace accept invite](/img/user-lifecycle/sso-onboard-sw.png)
 
     </div>
 
@@ -47,7 +47,7 @@ Check Workspace docs [here](/docs/2.4.0/tutorial/workspace_overview).
 
     <div style={{textAlign: 'center'}}>
 
-    ![ToolJet - Workspace sign up using SSO](/img/user-lifecycle/sso-enable-signup-sw.png)
+    ![JumpStart - Workspace sign up using SSO](/img/user-lifecycle/sso-enable-signup-sw.png)
 
     </div>
 
@@ -56,7 +56,7 @@ Check Workspace docs [here](/docs/2.4.0/tutorial/workspace_overview).
 
     <div style={{textAlign: 'center'}}>
 
-    ![ToolJet -Workspace Archive user](/img/user-lifecycle/archive-user.png)
+    ![JumpStart -Workspace Archive user](/img/user-lifecycle/archive-user.png)
 
     </div>
 
@@ -65,7 +65,7 @@ Check Workspace docs [here](/docs/2.4.0/tutorial/workspace_overview).
 
     <div style={{textAlign: 'center'}}>
 
-    ![ToolJet - Single-Workspace Unarchive user](/img/user-lifecycle/unarchive-user-mw.png)
+    ![JumpStart - Single-Workspace Unarchive user](/img/user-lifecycle/unarchive-user-mw.png)
 
     </div>
 
@@ -77,7 +77,7 @@ Check Workspace docs [here](/docs/2.4.0/tutorial/workspace_overview).
 
   <div style={{textAlign: 'center'}}>
 
-  ![ToolJet - Workspace sign up using SSO](/img/user-lifecycle/switch.png)
+  ![JumpStart - Workspace sign up using SSO](/img/user-lifecycle/switch.png)
 
   </div>
 
@@ -95,6 +95,6 @@ Check Workspace docs [here](/docs/2.4.0/tutorial/workspace_overview).
 
   <div style={{textAlign: 'center'}}>
 
-  ![ToolJet - SSO Flow](/img/user-lifecycle/sso-flow.png)
+  ![JumpStart - SSO Flow](/img/user-lifecycle/sso-flow.png)
 
   </div>

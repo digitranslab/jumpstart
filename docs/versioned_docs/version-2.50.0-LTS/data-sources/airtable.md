@@ -3,15 +3,15 @@ id: airtable
 title: Airtable
 ---
 
-ToolJet can connect to your **Airtable** account to read and write data.
+JumpStart can connect to your **Airtable** account to read and write data.
 
 <div style={{paddingTop:'24px'}}>
 
 ## Connection
 
-To establish a connection with the **Airtable** data source, you can either click on the **+ Add new Data source** button located on the query panel or navigate to the **[Data Sources](/docs/data-sources/overview/)** page from the ToolJet dashboard.
+To establish a connection with the **Airtable** data source, you can either click on the **+ Add new Data source** button located on the query panel or navigate to the **[Data Sources](/docs/data-sources/overview/)** page from the JumpStart dashboard.
 
-ToolJet requires the following to connect to your Airtable:
+JumpStart requires the following to connect to your Airtable:
 - **Personal Access Token**
 
 You can generate the Personal Access Token by visiting **[Developer Hub from your Airtable profile](https://support.airtable.com/docs/creating-and-using-api-keys-and-access-tokens#understanding-personal-access-token-basic-actions)**.

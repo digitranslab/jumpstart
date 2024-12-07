@@ -1,5 +1,5 @@
 {
-  "tooljet_database": [
+  "jumpstart_database": [
     {
       "id": "04df6269-fec2-47a8-970e-9bcdfd97d59d",
       "table_name": "finance_underwriting",
@@ -4797,8 +4797,8 @@
             },
             {
               "id": "c0cdcea8-e737-4977-ad76-123a33497e57",
-              "name": "tooljetdbdefault",
-              "kind": "tooljetdb",
+              "name": "jumpstartdbdefault",
+              "kind": "jumpstartdb",
               "type": "static",
               "pluginId": null,
               "appVersionId": "3fc344bf-aaa7-4f9d-896e-16b5c0138078",
@@ -5006,5 +5006,5 @@
       }
     }
   ],
-  "tooljet_version": "2.35.4-ee2.15.26-cloud2.3.10"
+  "jumpstart_version": "2.35.4-ee2.15.26-cloud2.3.10"
 }

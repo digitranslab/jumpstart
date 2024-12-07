@@ -3,7 +3,7 @@ id: run-py
 title: Run Python Code
 ---
 
-In ToolJet, custom **Run Python Code** can be used to interact with components and queries, making it possible to customize actions and data handling.
+In JumpStart, custom **Run Python Code** can be used to interact with components and queries, making it possible to customize actions and data handling.
 
 <img className="screenshot-full" src="/img/datasource-reference/custom-python/add-run-py.png" alt="Run Python code" />
 
@@ -29,7 +29,7 @@ p1 = Person(tj_globals.currentUser.firstName, 36)
 components.text1.setText(p1.myfunc())
 ```
 
-4. The above code has a function `myfunc` which returns a string and we are using a **[Component Specific Action](/docs/tooljet-concepts/component-specific-actions)** to set the Text Component's value from the Python query. 
+4. The above code has a function `myfunc` which returns a string and we are using a **[Component Specific Action](/docs/jumpstart-concepts/component-specific-actions)** to set the Text Component's value from the Python query. 
 
 :::tip
 - As of now, Run Python code only supports the [Python standard library](https://docs.python.org/3/library/).
@@ -199,7 +199,7 @@ Just like other dynamic values, you can refer the data returned by **Run Python 
 For instance, if you have a **Run Python code** query named *updatedProductInfo*, you can pass `{{queries.updatedProductInfo.data}}` under the **Data** property of a Table component to populate it with the data returned by the *updatedProductInfo* query. 
 
 :::info
-Issues with writing custom Python code? Ask in our [Slack community](https://www.tooljet.com/slack).
+Issues with writing custom Python code? Ask in our [Slack community](https://www.jumpstart.com/slack).
 :::
 
 </div>

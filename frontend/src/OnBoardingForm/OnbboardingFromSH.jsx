@@ -83,13 +83,13 @@ function OnbboardingFromSH({ darkMode }) {
     'Enter your phone number',
     'Enter your phone number', //dummy placeholder
   ];
-  const FormSubTitles = ['This information will help us improve ToolJet.'];
+  const FormSubTitles = ['This information will help us improve JumpStart.'];
 
   return (
     <div className="flex">
       <div className="onboarding-navbar onboarding-navbar-layout">
-        <div className="tooljet-nav-logo">
-          <Logo height="23" width="92" alt="tooljet logo" data-cy="page-logo" />
+        <div className="jumpstart-nav-logo">
+          <Logo height="23" width="92" alt="jumpstart logo" data-cy="page-logo" />
         </div>
         <div></div>
         <div className="onboarding-checkpoints">

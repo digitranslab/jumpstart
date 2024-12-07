@@ -1,27 +1,27 @@
 ---
-id: tooljet-database
-title: ToolJet Database
+id: jumpstart-database
+title: JumpStart Database
 ---
 
-Use the ToolJet-hosted database to build apps faster, and manage your data with ease. ToolJet database require no setup and give you a powerful user interface for managing your data.
+Use the JumpStart-hosted database to build apps faster, and manage your data with ease. JumpStart database require no setup and give you a powerful user interface for managing your data.
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/v2-beta/database/db.png" alt="ToolJet Database" />
+<img className="screenshot-full" src="/img/v2-beta/database/db.png" alt="JumpStart Database" />
 
 </div>
 
-## Enabling the ToolJet Database for your instance
+## Enabling the JumpStart Database for your instance
 
 Requires:
 - PostgREST server
-- Additional configuration for ToolJet server
+- Additional configuration for JumpStart server
 
-This feature is only enabled if [`ENABLE_TOOLJET_DB`](/docs/setup/env-vars/#enable-tooljet-database--optional--feature-enable--optional-) is set to `true`.
+This feature is only enabled if [`ENABLE_JUMPSTART_DB`](/docs/setup/env-vars/#enable-jumpstart-database--optional--feature-enable--optional-) is set to `true`.
 
 ### PostgREST server
 
-PostgREST is a standalone web server that turns your PostgreSQL database directly into queryable RESTful APIs which is utilized for Tooljet Database. This server only talks with ToolJet server and therefore does not have to be publicly exposed.
+PostgREST is a standalone web server that turns your PostgreSQL database directly into queryable RESTful APIs which is utilized for Jumpstart Database. This server only talks with JumpStart server and therefore does not have to be publicly exposed.
 
 :::tip
 If you have openssl installed, you can run the following command `openssl rand -hex 32` to generate the value for `PGRST_JWT_SECRET`.
@@ -32,24 +32,24 @@ If this parameter is not specified then PostgREST refuses authentication request
 | variable           | description                                     |
 | ------------------ | ----------------------------------------------- |
 | PGRST_JWT_SECRET   | JWT token client provided for authentication    |
-| PGRST_DB_URI       | database connection string for tooljet database |
+| PGRST_DB_URI       | database connection string for jumpstart database |
 | PGRST_LOG_LEVEL    | `info`                                          |
 
 :::info
 Please make sure that DB_URI is given in the format `postgres://[USERNAME]:[PASSWORD]@[HOST]:[PORT]/[DATABASE]`
 :::
 
-#### Additional ToolJet server configuration
+#### Additional JumpStart server configuration
 
 
 | variable           | description                                  |
 | ------------------ | -------------------------------------------- |
-| ENABLE_TOOLJET_DB  | `true` or `false`                            |
-| TOOLJET_DB         | Default value is `tooljet_db`                |
-| TOOLJET_DB_HOST    | database host                                |
-| TOOLJET_DB_USER    | database username                            |
-| TOOLJET_DB_PASS    | database password                            |
-| TOOLJET_DB_PORT    | database port                                |
+| ENABLE_JUMPSTART_DB  | `true` or `false`                            |
+| JUMPSTART_DB         | Default value is `jumpstart_db`                |
+| JUMPSTART_DB_HOST    | database host                                |
+| JUMPSTART_DB_USER    | database username                            |
+| JUMPSTART_DB_PASS    | database password                            |
+| JUMPSTART_DB_PORT    | database port                                |
 | PGRST_JWT_SECRET   | JWT token client provided for authentication |
 | PGRST_HOST         | postgrest database host                      |
 
@@ -57,47 +57,47 @@ Please make sure that DB_URI is given in the format `postgres://[USERNAME]:[PASS
 If you intent to make changes in the above configuration. Please refer [PostgREST configuration docs](https://postgrest.org/en/stable/configuration.html#environment-variables).
 
 :::tip
-When this feature is enabled, the database name provided for `TOOLJET_DB` will be utilized to create a new database during server boot process in all of our production deploy setups.
-Incase you want to trigger it manually, use the command `npm run db:create` on ToolJet server.
+When this feature is enabled, the database name provided for `JUMPSTART_DB` will be utilized to create a new database during server boot process in all of our production deploy setups.
+Incase you want to trigger it manually, use the command `npm run db:create` on JumpStart server.
 :::
 
 ## Features
 
-ToolJet database allows you to:
+JumpStart database allows you to:
 
-- **[Maintain tables of data](#accessing-tooljet-database)** in a secure database that's only accessible within your ToolJet organization.
+- **[Maintain tables of data](#accessing-jumpstart-database)** in a secure database that's only accessible within your JumpStart organization.
 - **[Edit, search, filter, sort, and filter](#database-editor)** data using a spreadsheet-like interface.
-- **[Quickly build applications and write queries](#querying-data-from-the-tooljet-database)** to interact with the ToolJet Database, just like any other datasource but without any setup.
+- **[Quickly build applications and write queries](#querying-data-from-the-jumpstart-database)** to interact with the JumpStart Database, just like any other datasource but without any setup.
 
-## Accessing ToolJet Database
+## Accessing JumpStart Database
 
-Once you log-in to your ToolJet account, from the left sidebar of the dashboard you can navigate to **ToolJet Database**.
+Once you log-in to your JumpStart account, from the left sidebar of the dashboard you can navigate to **JumpStart Database**.
 
-The ToolJet Database is available on: **[ToolJet Cloud](https://tooljet.com)**, **[Self-Host](/docs/setup/)**, and **Enterprise Edition**. You can view and manage your database and the data it contains using the **Database editor UI**.
+The JumpStart Database is available on: **[JumpStart Cloud](https://jumpstart.com)**, **[Self-Host](/docs/setup/)**, and **Enterprise Edition**. You can view and manage your database and the data it contains using the **Database editor UI**.
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/v2-beta/database/dbeditor.png" alt="ToolJet Database editor" width="700"/>
+<img className="screenshot-full" src="/img/v2-beta/database/dbeditor.png" alt="JumpStart Database editor" width="700"/>
 
 </div>
 
 ## Database Editor
 
-You can manage the ToolJet Database directly from the Database Editor. ToolJet Database organizes the data into **tables** that can have different structures. All the tables will be listed lexicographically on the left, click on any of the table to view the table data.
+You can manage the JumpStart Database directly from the Database Editor. JumpStart Database organizes the data into **tables** that can have different structures. All the tables will be listed lexicographically on the left, click on any of the table to view the table data.
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/v2-beta/database/tables.png" alt="ToolJet Database editor" width="700"/>
+<img className="screenshot-full" src="/img/v2-beta/database/tables.png" alt="JumpStart Database editor" width="700"/>
 
 </div>
 
 ### Add table
 
-For creating a new table in ToolJet Database, click on the **Add table** button on the top left corner of the Database editor.
+For creating a new table in JumpStart Database, click on the **Add table** button on the top left corner of the Database editor.
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/v2-beta/database/addtable.png" alt="ToolJet Database editor" width="500"/>
+<img className="screenshot-full" src="/img/v2-beta/database/addtable.png" alt="JumpStart Database editor" width="500"/>
 
 </div>
 
@@ -105,7 +105,7 @@ When the **Add table** button is clicked, a drawer opens up from the right where
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/v2-beta/database/addtable1.png" alt="ToolJet Database editor"/>
+<img className="screenshot-full" src="/img/v2-beta/database/addtable1.png" alt="JumpStart Database editor"/>
 
 </div>
 
@@ -124,7 +124,7 @@ Click on **Create** button to create a new table.
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/v2-beta/database/addtable2.png" alt="ToolJet Database editor" width="600"/>
+<img className="screenshot-full" src="/img/v2-beta/database/addtable2.png" alt="JumpStart Database editor" width="600"/>
 
 </div>
 
@@ -134,7 +134,7 @@ You can enter a search term to search through all tables in the database.
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/v2-beta/database/search.png" alt="ToolJet Database editor" width="600"/>
+<img className="screenshot-full" src="/img/v2-beta/database/search.png" alt="JumpStart Database editor" width="600"/>
 
 </div>
 
@@ -149,7 +149,7 @@ A drawer from the right will open up from where you can create a new column by e
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/v2-beta/database/newcol.png" alt="ToolJet Database editor"/>
+<img className="screenshot-full" src="/img/v2-beta/database/newcol.png" alt="JumpStart Database editor"/>
 
 </div>
 
@@ -180,7 +180,7 @@ You can add as many filter as you want into the table by clicking on the **Filte
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/v2-beta/database/filter.png" alt="ToolJet Database editor" width="700" />
+<img className="screenshot-full" src="/img/v2-beta/database/filter.png" alt="JumpStart Database editor" width="700" />
 
 </div>
 
@@ -190,7 +190,7 @@ To sort the table data, click on the **Sort** button on top, select a **column**
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/v2-beta/database/sort.png" alt="ToolJet Database editor" width="700" />
+<img className="screenshot-full" src="/img/v2-beta/database/sort.png" alt="JumpStart Database editor" width="700" />
 
 </div>
 
@@ -200,7 +200,7 @@ To add a new row to the existing table data, click on the **Add new row** button
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/v2-beta/database/newrow.png" alt="ToolJet Database editor" width="700" />
+<img className="screenshot-full" src="/img/v2-beta/database/newrow.png" alt="JumpStart Database editor" width="700" />
 
 </div>
 
@@ -210,7 +210,7 @@ To delete one or many records/rows, select on the checkbox at the right of the r
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/v2-beta/database/delrec.png" alt="ToolJet Database editor" width="700" />
+<img className="screenshot-full" src="/img/v2-beta/database/delrec.png" alt="JumpStart Database editor" width="700" />
 
 </div>
 
@@ -220,7 +220,7 @@ To delete a particular column, just click on the column name and the **delete** 
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/v2-beta/database/delcol.png" alt="ToolJet Database editor" width="700" />
+<img className="screenshot-full" src="/img/v2-beta/database/delcol.png" alt="JumpStart Database editor" width="700" />
 
 </div>
 
@@ -232,31 +232,31 @@ When you click on the kebab menu (three vertical dots icon) on the right of the 
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/v2-beta/database/deltable.png" alt="ToolJet Database editor" width="500" />
+<img className="screenshot-full" src="/img/v2-beta/database/deltable.png" alt="JumpStart Database editor" width="500" />
 
 </div>
 
-## Querying data from the ToolJet database
+## Querying data from the JumpStart database
 
-Querying ToolJet database is as easy as querying any other datasource on ToolJet.
+Querying JumpStart database is as easy as querying any other datasource on JumpStart.
 
-- Go to the **query panel**, and click on the **+Add** button to add a new query, and select **Run ToolJetDb query**
+- Go to the **query panel**, and click on the **+Add** button to add a new query, and select **Run JumpStartDb query**
     <div style={{textAlign: 'center'}}>
 
-    <img className="screenshot-full" src="/img/v2-beta/database/newquery.png" alt="ToolJet Database editor" />
+    <img className="screenshot-full" src="/img/v2-beta/database/newquery.png" alt="JumpStart Database editor" />
 
     </div>
 
 - Enter the **Name** of the table that you want to query, select an **Operation** from the dropdown, **Create** the query, and then **Run** the query to get the response.
     <div style={{textAlign: 'center'}}>
 
-    <img className="screenshot-full" src="/img/v2-beta/database/users.png" alt="ToolJet Database editor" />
+    <img className="screenshot-full" src="/img/v2-beta/database/users.png" alt="JumpStart Database editor" />
 
     </div>
 
 :::info
 - **Preview** button on the query panel returns the query response without executing the query. Once clicked, the response will be displayed on the Preview section of the query panel which can be viewed in JSON or Raw.
-- When a new query is created, by default the query name is set to `tooljetdbN` (where N is a number) - you can rename the query by click on the query name or from the left sidebar of query panel.
+- When a new query is created, by default the query name is set to `jumpstartdbN` (where N is a number) - you can rename the query by click on the query name or from the left sidebar of query panel.
 :::
 
 ### Available operations
@@ -288,5 +288,5 @@ This operation deletes a record from the table
 - **Filter**: Add a condition by choosing a column, an operation, and the value for deleting a particular record.
 
 :::info
-If you have any other questions or feedback about **ToolJet Database**, please reach us out at hello@tooljet.com or join our **[Slack Community](https://www.tooljet.com/slack)**
+If you have any other questions or feedback about **JumpStart Database**, please reach us out at hello@jumpstart.com or join our **[Slack Community](https://www.jumpstart.com/slack)**
 :::

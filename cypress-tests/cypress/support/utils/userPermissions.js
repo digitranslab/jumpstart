@@ -54,7 +54,7 @@ export const updateWorkspaceName = (email) => {
 
     cy.task("updateId", {
       dbconfig: Cypress.env("app_db"),
-      sql: "select id from users where email='dev@tooljet.io';",
+      sql: "select id from users where email='dev@jumpstart.io';",
     }).then((resp) => {
       defuserId = resp.rows[0].id;
 

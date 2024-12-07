@@ -12,7 +12,7 @@ You can club pagination widget with the List View widget.
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/pagination/pagination.png" alt="ToolJet - Widget Reference - Pagination" />
+<img className="screenshot-full" src="/img/widgets/pagination/pagination.png" alt="JumpStart - Widget Reference - Pagination" />
 
 </div>
 
@@ -40,7 +40,7 @@ Under the <b>General</b> accordion, you can set the value in the string format. 
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/tooltip.png" alt="ToolJet - Widget Reference - Pagination" />
+<img className="screenshot-full" src="/img/tooltip.png" alt="JumpStart - Widget Reference - Pagination" />
 
 </div>
 

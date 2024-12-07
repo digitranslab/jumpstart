@@ -3,7 +3,7 @@ id: marketplace-plugin-openai
 title: OpenAI
 ---
 
-ToolJet integrates with OpenAI to utilize its AI capabilities. This integration enables ToolJet to generate text based on user prompts, facilitate chat interactions, and create images tailored to specific inputs.
+JumpStart integrates with OpenAI to utilize its AI capabilities. This integration enables JumpStart to generate text based on user prompts, facilitate chat interactions, and create images tailored to specific inputs.
 
 :::note
 Before following this guide, it is assumed that you have already completed the process of **[Using Marketplace plugins](/docs/marketplace/marketplace-overview#using-marketplace-plugins)**.
@@ -17,7 +17,7 @@ For connecting to OpenAI, the following credentials are required:
 - **Organization ID**: Find the Organization ID [here](https://platform.openai.com/account/org-settings).
 
 <div style={{textAlign: 'center'}}>
-    <img className="screenshot-full" src="/img/marketplace/plugins/openai/connection-v3.png" alt="Configuring OpenAI in ToolJet" />
+    <img className="screenshot-full" src="/img/marketplace/plugins/openai/connection-v3.png" alt="Configuring OpenAI in JumpStart" />
 </div>
 
 ## Supported queries

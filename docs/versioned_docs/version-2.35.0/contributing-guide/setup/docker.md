@@ -4,13 +4,13 @@ title: Docker
 ---
 
 :::warning
-The following guide is intended for contributors to set-up ToolJet locally. If you're interested in **self-hosting** ToolJet, please refer to the **[Setup](/docs/setup/)** section.
+The following guide is intended for contributors to set-up JumpStart locally. If you're interested in **self-hosting** JumpStart, please refer to the **[Setup](/docs/setup/)** section.
 :::
 
-Docker compose is the easiest way to setup ToolJet server and client locally.
+Docker compose is the easiest way to setup JumpStart server and client locally.
 
 :::info
-If you rather want to try out ToolJet locally with docker, you can follow the steps [here](https://docs.tooljet.com/docs/setup/try-tooljet).
+If you rather want to try out JumpStart locally with docker, you can follow the steps [here](https://docs.jumpstart.com/docs/setup/try-jumpstart).
 :::
 
 ## Prerequisites
@@ -40,7 +40,7 @@ Please find more information [here](https://docs.docker.com/desktop/windows/wsl/
 
 1. Clone the repository
    ```bash
-   git clone https://github.com/tooljet/tooljet.git
+   git clone https://github.com/digitranslab/jumpstart.git
    ```
 
 2. Create a `.env` file by copying `.env.example`. More information on the variables that can be set is given in the [environment variables reference](/docs/setup/env-vars)
@@ -63,7 +63,7 @@ Please find more information [here](https://docs.docker.com/desktop/windows/wsl/
 
    ```bash
     cat .env
-    TOOLJET_HOST=http://localhost:8082
+    JUMPSTART_HOST=http://localhost:8082
     LOCKBOX_MASTER_KEY=13c9b8364ae71f714774c82498ba328813069e48d80029bb29f49d0ada5a8e40
     SECRET_KEY_BASE=ea85064ed42ad02cfc022e66d8bccf452e3fa1142421cbd7a13592d91a2cbb866d6001060b73a98a65be57e65524357d445efae00a218461088a706decd62dcb
     NODE_ENV=development
@@ -72,13 +72,13 @@ Please find more information [here](https://docs.docker.com/desktop/windows/wsl/
     PG_PORT=5432
     PG_USER=postgres
     PG_PASS=postgres
-    PG_DB=tooljet_development
+    PG_DB=jumpstart_development
     ORM_LOGGING=all
    ```
 
    ```bash
     cat .env.test
-    TOOLJET_HOST=http://localhost:8082
+    JUMPSTART_HOST=http://localhost:8082
     LOCKBOX_MASTER_KEY=13c9b8364ae71f714774c82498ba328813069e48d80029bb29f49d0ada5a8e40
     SECRET_KEY_BASE=ea85064ed42ad02cfc022e66d8bccf452e3fa1142421cbd7a13592d91a2cbb866d6001060b73a98a65be57e65524357d445efae00a218461088a706decd62dcb
     NODE_ENV=test
@@ -87,7 +87,7 @@ Please find more information [here](https://docs.docker.com/desktop/windows/wsl/
     PG_PORT=5432
     PG_USER=postgres
     PG_PASS=postgres
-    PG_DB=tooljet_test
+    PG_DB=jumpstart_test
     ORM_LOGGING=error
    ```
 
@@ -98,12 +98,12 @@ Please find more information [here](https://docs.docker.com/desktop/windows/wsl/
    docker compose run --rm  plugins npm run build:plugins
    ```
 
-5. Run ToolJet
+5. Run JumpStart
 
    ```bash
    docker compose up
    ```
-   ToolJet should now be served locally at `http://localhost:8082`.
+   JumpStart should now be served locally at `http://localhost:8082`.
 
 8. To shut down the containers,
    ```bash
@@ -112,16 +112,16 @@ Please find more information [here](https://docs.docker.com/desktop/windows/wsl/
 
 ## Making changes to the codebase
 
-If you make any changes to the codebase/pull the latest changes from upstream, the tooljet server container would hot reload the application without you doing anything.
+If you make any changes to the codebase/pull the latest changes from upstream, the jumpstart server container would hot reload the application without you doing anything.
 
 Caveat:
 
-1. If the changes include database migrations or new npm package additions in the package.json, you would need to restart the ToolJet server container by running `docker compose restart server`.
+1. If the changes include database migrations or new npm package additions in the package.json, you would need to restart the JumpStart server container by running `docker compose restart server`.
 
-2. If you need to add a new binary or system library to the container itself, you would need to add those dependencies in `docker/server.Dockerfile.dev` and then rebuild the ToolJet server image. You can do that by running `docker compose build server`. Once that completes you can start everything normally with `docker compose up`.
+2. If you need to add a new binary or system library to the container itself, you would need to add those dependencies in `docker/server.Dockerfile.dev` and then rebuild the JumpStart server image. You can do that by running `docker compose build server`. Once that completes you can start everything normally with `docker compose up`.
 
 Example:
-Let's say you need to install the `imagemagick` binary in your ToolJet server's container. You'd then need to make sure that `apt` installs `imagemagick` while building the image. The Dockerfile at `docker/server.Dockerfile.dev` for the server would then look something like this:
+Let's say you need to install the `imagemagick` binary in your JumpStart server's container. You'd then need to make sure that `apt` installs `imagemagick` while building the image. The Dockerfile at `docker/server.Dockerfile.dev` for the server would then look something like this:
 
 ```
 FROM node:18.18.2-buster AS builder
@@ -181,4 +181,4 @@ docker compose run --rm server npm --prefix server run test <path-to-file>
 
 ## Troubleshooting
 
-Please open a new issue at https://github.com/ToolJet/ToolJet/issues or join our [Slack Community](https://tooljet.com/slack) if you encounter any issues when trying to run ToolJet locally.
+Please open a new issue at https://github.com/digitranslab/jumpstart/issues or join our [Slack Community](https://jumpstart.com/slack) if you encounter any issues when trying to run JumpStart locally.

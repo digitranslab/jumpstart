@@ -1,7 +1,7 @@
 Cypress.Commands.add(
   "apiLogin",
   (
-    userEmail = "dev@tooljet.io",
+    userEmail = "dev@jumpstart.io",
     userPassword = "password",
     workspaceId = "",
     redirection = "/"

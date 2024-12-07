@@ -164,7 +164,7 @@ import PrimaryKey from './PrimaryKey.jsx';
 import ForeignKey from './ForeignKey.jsx';
 import InformationCircle from './InformationCircle.jsx';
 import Open from './Open.jsx';
-import TooljetIcon from './TooljetIcon.jsx';
+import JumpstartIcon from './JumpstartIcon.jsx';
 import TriangleUpCenter from './TriangleUpCenter.jsx';
 import TriangleDownCenter from './TriangleDownCenter.jsx';
 import ShiftButtonIcon from './ShiftButtonIcon.jsx';
@@ -430,8 +430,8 @@ const Icon = (props) => {
       return <Table {...props} />;
     case 'tick':
       return <Tick {...props} />;
-    case 'tooljet':
-      return <TooljetIcon {...props} />;
+    case 'jumpstart':
+      return <JumpstartIcon {...props} />;
     case 'trash':
       return <Trash {...props} />;
     case 'uparrow':

@@ -5,7 +5,7 @@ title: General Settings
 
 # Single Sign-On General Settings
 
-- Go to the **Workspace Settings** (⚙️) from the left sidebar in the ToolJet dashboard
+- Go to the **Workspace Settings** (⚙️) from the left sidebar in the JumpStart dashboard
   <div style={{textAlign: 'center'}}>
 
   <img className="screenshot-full" src="/img/sso/general/workside.png" alt="General Settings: SSO" width="500"/>

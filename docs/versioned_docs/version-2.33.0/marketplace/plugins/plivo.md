@@ -3,7 +3,7 @@ id: marketplace-plugin-plivo
 title: Plivo
 ---
 
-ToolJet can connect to Plivo account to send SMS.
+JumpStart can connect to Plivo account to send SMS.
 
 <div style={{textAlign: 'center'}}>
 

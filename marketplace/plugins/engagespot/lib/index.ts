@@ -1,4 +1,4 @@
-import { QueryError, QueryResult, QueryService, ConnectionTestResult } from '@tooljet-marketplace/common';
+import { QueryError, QueryResult, QueryService, ConnectionTestResult } from '@jumpstart-marketplace/common';
 import { SourceOptions, QueryOptions, Operation, IEngagespotClientOptions } from './types';
 import { EngagespotClient } from "@engagespot/node";
 

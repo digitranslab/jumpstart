@@ -5,7 +5,7 @@ export class ExportResourcesDto {
   app: ExportAppDto[];
 
   @IsOptional()
-  tooljet_database: ExportTooljetDatabaseDto[];
+  jumpstart_database: ExportJumpstartDatabaseDto[];
 
   @IsUUID()
   organization_id: string;
@@ -19,7 +19,7 @@ export class ExportAppDto {
   search_params: any;
 }
 
-export class ExportTooljetDatabaseDto {
+export class ExportJumpstartDatabaseDto {
   @IsUUID()
   table_id: string;
 

@@ -23,7 +23,7 @@ describe('group permissions controller', () => {
         organization: { defaultUser },
       } = await setupOrganizations(nestApp);
 
-      const loggedUser = await authenticateUser(nestApp, 'developer@tooljet.io');
+      const loggedUser = await authenticateUser(nestApp, 'developer@jumpstart.io');
 
       const response = await request(nestApp.getHttpServer())
         .post('/api/group_permissions')
@@ -143,7 +143,7 @@ describe('group permissions controller', () => {
         organization: { defaultUser },
       } = await setupOrganizations(nestApp);
 
-      const loggedUser = await authenticateUser(nestApp, 'developer@tooljet.io');
+      const loggedUser = await authenticateUser(nestApp, 'developer@jumpstart.io');
 
       const response = await request(nestApp.getHttpServer())
         .get('/api/group_permissions/id')
@@ -224,7 +224,7 @@ describe('group permissions controller', () => {
         organization: { defaultUser },
       } = await setupOrganizations(nestApp);
 
-      const loggedUser = await authenticateUser(nestApp, 'developer@tooljet.io');
+      const loggedUser = await authenticateUser(nestApp, 'developer@jumpstart.io');
 
       const response = await request(nestApp.getHttpServer())
         .put('/api/group_permissions/id')
@@ -441,7 +441,7 @@ describe('group permissions controller', () => {
 
     it('should not allow to remove users from admin group permission without any at least one active admin', async () => {
       const { user, organization } = await createUser(nestApp, {
-        email: 'admin@tooljet.io',
+        email: 'admin@jumpstart.io',
       });
 
       const manager = getManager();
@@ -497,7 +497,7 @@ describe('group permissions controller', () => {
         organization: { defaultUser },
       } = await setupOrganizations(nestApp);
 
-      const loggedUser = await authenticateUser(nestApp, 'developer@tooljet.io');
+      const loggedUser = await authenticateUser(nestApp, 'developer@jumpstart.io');
 
       const response = await request(nestApp.getHttpServer())
         .get('/api/group_permissions')
@@ -563,7 +563,7 @@ describe('group permissions controller', () => {
         organization: { defaultUser },
       } = await setupOrganizations(nestApp);
 
-      const loggedUser = await authenticateUser(nestApp, 'developer@tooljet.io');
+      const loggedUser = await authenticateUser(nestApp, 'developer@jumpstart.io');
 
       const response = await request(nestApp.getHttpServer())
         .get('/api/group_permissions/id/apps')
@@ -619,7 +619,7 @@ describe('group permissions controller', () => {
         organization: { defaultUser },
       } = await setupOrganizations(nestApp);
 
-      const loggedUser = await authenticateUser(nestApp, 'developer@tooljet.io');
+      const loggedUser = await authenticateUser(nestApp, 'developer@jumpstart.io');
 
       const response = await request(nestApp.getHttpServer())
         .get('/api/group_permissions/id/addable_apps')
@@ -694,7 +694,7 @@ describe('group permissions controller', () => {
         organization: { defaultUser },
       } = await setupOrganizations(nestApp);
 
-      const loggedUser = await authenticateUser(nestApp, 'developer@tooljet.io');
+      const loggedUser = await authenticateUser(nestApp, 'developer@jumpstart.io');
 
       const response = await request(nestApp.getHttpServer())
         .get('/api/group_permissions/id/users')
@@ -732,7 +732,7 @@ describe('group permissions controller', () => {
 
       expect(users).toHaveLength(1);
       expect(Object.keys(user).sort()).toEqual(['id', 'email', 'first_name', 'last_name'].sort());
-      expect(user.email).toBe('admin@tooljet.io');
+      expect(user.email).toBe('admin@jumpstart.io');
       expect(user.first_name).toBe('test');
       expect(user.last_name).toBe('test');
     });
@@ -744,7 +744,7 @@ describe('group permissions controller', () => {
         organization: { defaultUser },
       } = await setupOrganizations(nestApp);
 
-      const loggedUser = await authenticateUser(nestApp, 'developer@tooljet.io');
+      const loggedUser = await authenticateUser(nestApp, 'developer@jumpstart.io');
 
       const response = await request(nestApp.getHttpServer())
         .get('/api/group_permissions/id/addable_users')
@@ -755,9 +755,9 @@ describe('group permissions controller', () => {
     });
 
     it('should allow admin to list users not in group permission', async () => {
-      const adminUser = await createUser(nestApp, { email: 'admin@tooljet.io' });
+      const adminUser = await createUser(nestApp, { email: 'admin@jumpstart.io' });
       const userone = await createUser(nestApp, {
-        email: 'userone@tooljet.io',
+        email: 'userone@jumpstart.io',
         groups: ['all_users'],
         organization: adminUser.organization,
       });
@@ -773,7 +773,7 @@ describe('group permissions controller', () => {
       });
       const groupPermissionId = adminGroupPermission.id;
       const response = await request(nestApp.getHttpServer())
-        .get(`/api/group_permissions/${groupPermissionId}/addable_users?input=userone@tooljet.io`)
+        .get(`/api/group_permissions/${groupPermissionId}/addable_users?input=userone@jumpstart.io`)
         .set('tj-workspace-id', adminUser.user.defaultOrganizationId)
         .set('Cookie', loggedUser.tokenCookie);
 
@@ -796,7 +796,7 @@ describe('group permissions controller', () => {
         organization: { defaultUser },
       } = await setupOrganizations(nestApp);
 
-      const loggedUser = await authenticateUser(nestApp, 'developer@tooljet.io');
+      const loggedUser = await authenticateUser(nestApp, 'developer@jumpstart.io');
 
       const response = await request(nestApp.getHttpServer())
         .put('/api/group_permissions/id/app_group_permissions/id')
@@ -932,13 +932,13 @@ describe('group permissions controller', () => {
 
   async function setupOrganizations(nestApp) {
     const adminUserData = await createUser(nestApp, {
-      email: 'admin@tooljet.io',
+      email: 'admin@jumpstart.io',
       groups: ['all_users', 'admin'],
     });
     const adminUser = adminUserData.user;
     const organization = adminUserData.organization;
     const defaultUserData = await createUser(nestApp, {
-      email: 'developer@tooljet.io',
+      email: 'developer@jumpstart.io',
       groups: ['all_users'],
       organization,
     });
@@ -951,13 +951,13 @@ describe('group permissions controller', () => {
     });
 
     const anotherAdminUserData = await createUser(nestApp, {
-      email: 'another_admin@tooljet.io',
+      email: 'another_admin@jumpstart.io',
       groups: ['all_users', 'admin'],
     });
     const anotherAdminUser = anotherAdminUserData.user;
     const anotherOrganization = anotherAdminUserData.organization;
     const anotherDefaultUserData = await createUser(nestApp, {
-      email: 'another_developer@tooljet.io',
+      email: 'another_developer@jumpstart.io',
       groups: ['all_users'],
       organization: anotherOrganization,
     });

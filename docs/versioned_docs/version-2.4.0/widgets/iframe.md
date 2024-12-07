@@ -8,7 +8,7 @@ Iframe widget is used to embed another HTML page into the current one and displa
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/iframe/iframe.png" alt="ToolJet - Widget Reference - Iframe" />
+<img className="screenshot-full" src="/img/widgets/iframe/iframe.png" alt="JumpStart - Widget Reference - Iframe" />
 
 </div>
 
@@ -27,7 +27,7 @@ Under the <b>General</b> accordion, you can set the value in the string format. 
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/tooltip.png" alt="ToolJet - Widget Reference - Iframe" />
+<img className="screenshot-full" src="/img/tooltip.png" alt="JumpStart - Widget Reference - Iframe" />
 
 </div>
 
@@ -35,7 +35,7 @@ Under the <b>General</b> accordion, you can set the value in the string format. 
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/iframe/layout.png" alt="ToolJet - Widget Reference - Iframe" />
+<img className="screenshot-full" src="/img/widgets/iframe/layout.png" alt="JumpStart - Widget Reference - Iframe" />
 
 </div>
 
@@ -50,7 +50,7 @@ Toggle on or off to display the widget in mobile view. You can programmatically 
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/iframe/styles.png" alt="ToolJet - Widget Reference - Iframe" />
+<img className="screenshot-full" src="/img/widgets/iframe/styles.png" alt="JumpStart - Widget Reference - Iframe" />
 
 </div>
 

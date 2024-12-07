@@ -8,7 +8,7 @@
         <script data-required="true">
             let callbackFn = () => {};
             let props = {};
-            window.Tooljet = {
+            window.Jumpstart = {
                 componentId: window.frameElement.getAttribute('data-id'),
                 subscribe: fn => {
                     fn(props);
@@ -20,19 +20,19 @@
                     message: "RUN_QUERY",
                     queryName: name,
                     parameters: JSON.stringify(params || {}),
-                    componentId: window.Tooljet.componentId
+                    componentId: window.Jumpstart.componentId
                 }, "*")},
                 updateProps: obj => window.parent.postMessage({
                     from: 'customComponent',
                     message: "UPDATE_DATA",
                     updatedObj: obj,
-                    componentId: window.Tooljet.componentId
+                    componentId: window.Jumpstart.componentId
                 }, "*"),
                 init: () => {
                     window.parent.postMessage({
                         from: 'customComponent',
                         message: "INIT",
-                        componentId: window.Tooljet.componentId,
+                        componentId: window.Jumpstart.componentId,
                     }, "*");
             
                     window.addEventListener('message', (e) => {
@@ -61,23 +61,23 @@
                 }
             }
             window.addEventListener('load', function() {
-                window.Tooljet.init();
+                window.Jumpstart.init();
             })
         </script>
-        <script type="text/babel" data-required="true"> window.Tooljet.connectComponent = WrappedComponent => {
+        <script type="text/babel" data-required="true"> window.Jumpstart.connectComponent = WrappedComponent => {
             class ConnectedComponent extends React.Component {
                 constructor() {
                     super(), this.state = {}
                 }
                 componentDidMount() {
-                    window.Tooljet.subscribe((e => this.setState({
+                    window.Jumpstart.subscribe((e => this.setState({
                         data: e
                     })))
                 }
                 render() {
                 return <WrappedComponent data={this.state?.data ?? {}} 
-                    updateData={(e) => Tooljet.updateProps(e)} 
-                    runQuery={(e, params) => Tooljet.runQuery(e, params)}/>
+                    updateData={(e) => Jumpstart.updateProps(e)}
+                    runQuery={(e, params) => Jumpstart.runQuery(e, params)}/>
                 }
             }
             return ConnectedComponent;

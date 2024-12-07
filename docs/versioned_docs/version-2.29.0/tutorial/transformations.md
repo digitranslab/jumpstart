@@ -7,7 +7,7 @@ import TabItem from '@theme/TabItem';
 
 # Transformations
 
-Transformations can be enabled on queries to transform the query results. ToolJet allows you to transform the query results using two programming languages: 
+Transformations can be enabled on queries to transform the query results. JumpStart allows you to transform the query results using two programming languages: 
 
 - **[JavaScript](#transform-using-javascript)** 
 - **[Python](#transform-using-python)** 
@@ -62,7 +62,7 @@ return list(map(lambda row: {
 
   </div>
 
-- Now we will transform the returned data using Python that will append a new key in the returned data called `user` and that user will have the value from the exposed global variables of ToolJet which is `globals.currentUser.email`
+- Now we will transform the returned data using Python that will append a new key in the returned data called `user` and that user will have the value from the exposed global variables of JumpStart which is `globals.currentUser.email`
   ```python
   return list(map(lambda item: {**item, "user": f"{globals['currentUser']['email']}"}, data))
   ```

@@ -2,7 +2,7 @@
 to: <%= plugins_path %>/packages/<%= name %>/lib/index.ts
 ---
 
-import { QueryError, QueryResult, QueryService, ConnectionTestResult } from '@tooljet-plugins/common';
+import { QueryError, QueryResult, QueryService, ConnectionTestResult } from '@jumpstart-plugins/common';
 import { SourceOptions, QueryOptions } from './types';
 
 export default class <%= Name %> implements QueryService {

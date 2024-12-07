@@ -1,18 +1,18 @@
 import React, { isValidElement, useCallback, useState, useRef, useEffect } from 'react';
 import Select, { components } from 'react-select';
 import { isEmpty, debounce, throttle } from 'lodash';
-import { authenticationService, tooljetDatabaseService } from '@/_services';
+import { authenticationService, jumpstartDatabaseService } from '@/_services';
 import { toast } from 'react-hot-toast';
 import PostgrestQueryBuilder from '@/_helpers/postgrestQueryBuilder';
 import { ButtonSolid } from '@/_ui/AppButton/AppButton';
 import Search from '@/_ui/Icon/solidIcons/Search';
-import Maximize from '@/TooljetDatabase/Icons/maximize.svg';
+import Maximize from '@/JumpstartDatabase/Icons/maximize.svg';
 import { Form } from 'react-bootstrap';
 import SolidIcon from '@/_ui/Icon/SolidIcons';
 import { getPrivateRoute } from '@/_helpers/routes';
 import cx from 'classnames';
 import { ToolTip } from '@/_components/ToolTip';
-import ArrowRight from '@/TooljetDatabase/Icons/ArrowRight.svg';
+import ArrowRight from '@/JumpstartDatabase/Icons/ArrowRight.svg';
 
 function CustomMenuList({ ...props }) {
   const { selectProps } = props;
@@ -217,7 +217,7 @@ function DataSourceSelect({
     orderQuery.order(referencedColumns?.referenced_column_names[0], 'nullsfirst');
     query = query + `&${filterQuery.url.toString()}&${orderQuery.url.toString()}`;
 
-    tooljetDatabaseService
+    jumpstartDatabaseService
       .findOne(organizationId, referencedColumns?.referenced_table_id, query)
       .then(({ headers, data = [], error }) => {
         if (error) {

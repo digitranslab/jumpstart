@@ -3,13 +3,13 @@ id: postgresql
 title: PostgreSQL
 ---
 
-ToolJet has the capability to connect to PostgreSQL databases for data retrieval and modification.
+JumpStart has the capability to connect to PostgreSQL databases for data retrieval and modification.
 
 ## Establishing a Connection
 
-To establish a connection with the PostgreSQL global datasource, you can take either of the following steps: click on the "Add new global datasource" button in the query panel, or access the [Global Datasources](/docs/data-sources/overview) page through the ToolJet dashboard.
+To establish a connection with the PostgreSQL global datasource, you can take either of the following steps: click on the "Add new global datasource" button in the query panel, or access the [Global Datasources](/docs/data-sources/overview) page through the JumpStart dashboard.
 
-ToolJet requires the following information to connect to your PostgreSQL database:
+JumpStart requires the following information to connect to your PostgreSQL database:
 
 - **Host**
 - **Port**
@@ -20,10 +20,10 @@ ToolJet requires the following information to connect to your PostgreSQL databas
 - **Connection Options**
 - **SSL Certificate**
 
-We recommend creating a new PostgreSQL database user to have control over ToolJet's access levels.
+We recommend creating a new PostgreSQL database user to have control over JumpStart's access levels.
 
 :::caution
-Ensure that the host/IP of the database is accessible from your VPC in case you are using self-hosted ToolJet. If you are using ToolJet cloud, please whitelist our IP.
+Ensure that the host/IP of the database is accessible from your VPC in case you are using self-hosted JumpStart. If you are using JumpStart cloud, please whitelist our IP.
 :::
 
 <div style={{textAlign: 'center'}}>
@@ -32,7 +32,7 @@ Ensure that the host/IP of the database is accessible from your VPC in case you 
 
 </div>
 
-Click the **Test connection** button to verify the correctness of the credentials and the accessibility of the database to ToolJet server. Click the **Save** button to save the data source.
+Click the **Test connection** button to verify the correctness of the credentials and the accessibility of the database to JumpStart server. Click the **Save** button to save the data source.
 
 ## Querying PostgreSQL
 

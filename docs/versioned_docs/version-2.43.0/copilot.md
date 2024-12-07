@@ -1,15 +1,15 @@
 ---
-id: tooljet-copilot
+id: jumpstart-copilot
 title: Copilot
 ---
 
 <div className='badge badge--primary heading-badge'>Available on: Paid plans</div>
 
 :::info BETA
-ToolJet Copilot is currently in private beta for **Business** and **Enterprise** users only.
+JumpStart Copilot is currently in private beta for **Business** and **Enterprise** users only.
 :::
 
-**ToolJet Copilot** helps you write your queries faster. It uses OpenAI to suggest queries based on your data. 
+**JumpStart Copilot** helps you write your queries faster. It uses OpenAI to suggest queries based on your data. 
 
 <div style={{paddingTop:'24px', paddingBottom:'24px'}}>
 
@@ -17,7 +17,7 @@ ToolJet Copilot is currently in private beta for **Business** and **Enterprise**
 
 To gain access to Copilot, all users, including administrators, can individually sign up for the waitlist program. Upon successful sign up, each user will be issued a distinctive API key linked to their account. However, the exclusive authority to activate Copilot within the workspace settings lies solely with administrators. Administrators can proceed to the Copilot section in the workspace settings, where they can utilize their respective API key to set the "Enable Copilot" toggle option.
 
-You can join the waitlist here: **https://tooljet.com/copilot**
+You can join the waitlist here: **https://jumpstart.com/copilot**
 
 :::info
 - Copilot can be used by users who have **permissions to edit** the app with the copilot setup.
@@ -25,7 +25,7 @@ You can join the waitlist here: **https://tooljet.com/copilot**
 
 <div style={{textAlign: 'center'}}>
 
-<img style={{ border:'0', marginBottom:'15px', borderRadius:'5px', boxShadow: '0px 1px 3px rgba(0, 0, 0, 0.2)' }} className="screenshot-full" src="/img/copilot/enable.png" alt="ToolJet Copilot" />
+<img style={{ border:'0', marginBottom:'15px', borderRadius:'5px', boxShadow: '0px 1px 3px rgba(0, 0, 0, 0.2)' }} className="screenshot-full" src="/img/copilot/enable.png" alt="JumpStart Copilot" />
 
 </div>
 
@@ -76,7 +76,7 @@ This example demonstrates the usage of copilot by generating a SQL query to fetc
 
     <div style={{textAlign: 'center'}}>
 
-    <img className="screenshot-full" src="/img/copilot/query.png" alt="ToolJet Copilot" />
+    <img className="screenshot-full" src="/img/copilot/query.png" alt="JumpStart Copilot" />
 
     </div>
 
@@ -109,15 +109,15 @@ This example demonstrates the usage of copilot by generating a SQL query to fetc
 
     <div style={{textAlign: 'center'}}>
 
-    <img className="screenshot-full" src="/img/copilot/copilot1.gif" alt="ToolJet Copilot" />
+    <img className="screenshot-full" src="/img/copilot/copilot1.gif" alt="JumpStart Copilot" />
 
     </div>
 
 </div>
 
 :::caution
-While using ToolJet Copilot, it is important to note that the accuracy of the output cannot be guaranteed by the platform. Ultimately, it is your responsibility to assess and evaluate any query before executing it.
+While using JumpStart Copilot, it is important to note that the accuracy of the output cannot be guaranteed by the platform. Ultimately, it is your responsibility to assess and evaluate any query before executing it.
 :::
 
-If you have feedback or questions about ToolJet Copilot, feel free to join our **[slack community](https://tooljet.com/slack)**.
+If you have feedback or questions about JumpStart Copilot, feel free to join our **[slack community](https://jumpstart.com/slack)**.
 

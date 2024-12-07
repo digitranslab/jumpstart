@@ -20,7 +20,7 @@ Left-sidebar has the following options:
 
 ## Pages
 
-Pages allows you to have multiple pages in a single application, making your ToolJet applications more robust and user-friendly.
+Pages allows you to have multiple pages in a single application, making your JumpStart applications more robust and user-friendly.
 
 Check the detailed documentation for **[Pages](/docs/tutorial/pages)**.
 
@@ -32,7 +32,7 @@ Check the detailed documentation for **[Pages](/docs/tutorial/pages)**.
 
 ## Inspector
 
-The Inspector can be used to inspect the data of the **queries**, properties and values of the **components** that are there on the canvas, ToolJet's global variables and the variables that have been set by the user.
+The Inspector can be used to inspect the data of the **queries**, properties and values of the **components** that are there on the canvas, JumpStart's global variables and the variables that have been set by the user.
 
 Check the detailed guide on **[using Inspector](/docs/how-to/use-inspector)**.
 
@@ -60,9 +60,9 @@ Debugger consists of two main sections:
 
 To configure the app's global settings, click on the kebab menu(three vertical dots) on the left of the app name. Global settings include:
 
-- **Unique app slug**: The unique slug of the application. This slug is used in the URL of the application. By default, the slug is the `app id` of the application. You can change the slug to a custom value. For example, if the slug is `7b56293b-be5a-401f-8806-b71625f8ee0d` you can change it to `<unique-name>` then the new URL of the application will be `https://app.tooljet.com/<workspace-name>/apps/<unique-name>/`
+- **Unique app slug**: The unique slug of the application. This slug is used in the URL of the application. By default, the slug is the `app id` of the application. You can change the slug to a custom value. For example, if the slug is `7b56293b-be5a-401f-8806-b71625f8ee0d` you can change it to `<unique-name>` then the new URL of the application will be `https://app.jumpstart.com/<workspace-name>/apps/<unique-name>/`
 - **App link**: The link to the application. This link can be used to share the application with other users of the workspace. If you want to share the application with users outside the workspace, you can make the application public from the **[Share](/docs/app-builder/share)** modal.
-- **Hide header for launched apps**: Toggle this on to the hide the tooljet's header when the applications are launched
+- **Hide header for launched apps**: Toggle this on to the hide the jumpstart's header when the applications are launched
 - **Maintenance mode**: Toggle this on to put the application in maintenance mode. When in **maintenance mode**, on launching the app, the user will get an error message that **the app is under maintenance**.
 - **Max width of canvas**: Modify the width of the canvas in **px** or **%**. The default width is `1292` px.
 - **Canvas background**: Enter the hex color code or choose a color from the picker to change the background color of the canvas. You can also click on the **fx** to programmatically set the value.
@@ -87,7 +87,7 @@ Comment anywhere on the canvas and collaborate with other users in the workspace
 
 ## Theme Switch
 
-Use the theme switch button to toggle ToolJet between light and dark modes.
+Use the theme switch button to toggle JumpStart between light and dark modes.
 
 While developers can access the current theme's value through global variables using `{{globals.theme.name}}`, it is not currently feasible to change the theme programmatically.
 

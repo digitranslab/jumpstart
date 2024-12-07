@@ -1,7 +1,7 @@
 export const dashboardText = {
-  emptyPageHeader: "Welcome to your new ToolJet workspace",
+  emptyPageHeader: "Welcome to your new JumpStart workspace",
   emptyPageDescription:
-    "You can get started by creating a new application or by creating an application using a template in ToolJet Library.",
+    "You can get started by creating a new application or by creating an application using a template in JumpStart Library.",
   createAppButton: "Create new application",
   importAppButton: "Import an app",
   chooseFromTemplate: "Choose from template",

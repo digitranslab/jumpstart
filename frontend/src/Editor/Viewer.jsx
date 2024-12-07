@@ -49,7 +49,7 @@ import { findComponentsWithReferences } from '@/_helpers/editorHelpers';
 import { findAllEntityReferences } from '@/_stores/utils';
 import { dfs } from '@/_stores/handleReferenceTransactions';
 import useAppDarkMode from '@/_hooks/useAppDarkMode';
-import TooljetBanner from './Viewer/TooljetBanner';
+import JumpstartBanner from './Viewer/JumpstartBanner';
 import { deepClone } from '@/_helpers/utilities/utils.helpers';
 import { fetchAndSetWindowTitle, pageTitles } from '@white-label/whiteLabelling';
 
@@ -860,7 +860,7 @@ class ViewerComponent extends React.Component {
     const isMobilePreviewMode = this.props.versionId && this.props.currentLayout === 'mobile';
     if (this.state.app?.isLoading) {
       return (
-        <div className={cx('tooljet-logo-loader', { 'theme-dark': this.props.darkMode })}>
+        <div className={cx('jumpstart-logo-loader', { 'theme-dark': this.props.darkMode })}>
           <div>
             <div className="loader-logo">
               <ViewerLogoIcon />
@@ -1023,7 +1023,7 @@ class ViewerComponent extends React.Component {
                           </>
                         )}
                       </div>
-                      {isAppLoaded && <TooljetBanner isDarkMode={this.props.darkMode} />}
+                      {isAppLoaded && <JumpstartBanner isDarkMode={this.props.darkMode} />}
                       {/* Following div is a hack to prevent showing mobile drawer navigation coming from left*/}
                       {isMobilePreviewMode && <div className="hide-drawer-transition" style={{ right: 0 }}></div>}
                       {isMobilePreviewMode && <div className="hide-drawer-transition" style={{ left: 0 }}></div>}

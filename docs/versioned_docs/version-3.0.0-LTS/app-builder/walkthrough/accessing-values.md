@@ -3,13 +3,13 @@ id: accessing-values
 title: Access and Reference Values
 ---
 
-ToolJet's flexibility in integrating dynamic data within applications is facilitated through the ability to use custom code, and access and manipulate values derived from components, queries, globals. You can use double curly braces `{{}}` in the app-builder to access values or enter JavaScript code.
+JumpStart's flexibility in integrating dynamic data within applications is facilitated through the ability to use custom code, and access and manipulate values derived from components, queries, globals. You can use double curly braces `{{}}` in the app-builder to access values or enter JavaScript code.
 
 ## Accessing Values
 
 You can check all the accessible values using the left sidebar's **[Inspector](/docs/how-to/use-inspector/)** tab. This functionality can be handy to check data returned by queries and components on the canvas and reference it in queries or components. Inspector also displays other values like global values, variables, page variables, etc. 
 
-![Check Available Values Using Inspector](/img/tooljet-concepts/writing-custom-code/inspector.png)
+![Check Available Values Using Inspector](/img/jumpstart-concepts/writing-custom-code/inspector.png)
 
 ### Example Scenarios
 
@@ -22,13 +22,13 @@ You can check all the accessible values using the left sidebar's **[Inspector](/
 - **Implementation**: Use the expression `{{components.table1.selectedRow.id}}` to get the ID of the selected row in `table1`.
 
 **Accessing Globals**
-- **Purpose**: Access global settings and variables predefined in the ToolJet environment.
+- **Purpose**: Access global settings and variables predefined in the JumpStart environment.
 - **Implementation**: To check the current theme and adjust styles dynamically, use:
 `{{globals.theme.name}}`
 
 ## More on the Left Sidebar
 
-The left sidebar in ToolJet is a hub for navigation and application configuration, featuring several options including Pages, Inspector, Debugger, and Global Settings.
+The left sidebar in JumpStart is a hub for navigation and application configuration, featuring several options including Pages, Inspector, Debugger, and Global Settings.
 
 ### Key Features
 

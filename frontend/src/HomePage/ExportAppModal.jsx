@@ -50,7 +50,7 @@ export default function ExportAppModal({ title, show, closeModal, customClassNam
         const { dataQueries } = tbl;
         const extractedIdData = [];
         dataQueries.forEach((item) => {
-          if (item.kind === 'tooljetdb') {
+          if (item.kind === 'jumpstartdb') {
             const joinOptions = item.options?.join_table?.joins ?? [];
             (joinOptions || []).forEach((join) => {
               const { table, conditions } = join;
@@ -94,7 +94,7 @@ export default function ExportAppModal({ title, show, closeModal, customClassNam
 
     const requestBody = {
       ...appOpts,
-      ...(exportTjDb && { tooljet_database: exportTables }),
+      ...(exportTjDb && { jumpstart_database: exportTables }),
       organization_id: app.organization_id || app.organizationId,
     };
 
@@ -198,7 +198,7 @@ export default function ExportAppModal({ title, show, closeModal, customClassNam
           </BootstrapModal.Body>
           <div className="tj-version-wrap-sub-footer">
             <input type="checkbox" checked={exportTjDb} onChange={() => setExportTjDb(!exportTjDb)} />
-            <p>Export ToolJet table schema</p>
+            <p>Export JumpStart table schema</p>
           </div>
           <BootstrapModal.Footer className="export-app-modal-footer d-flex justify-content-end align-items-center ">
             <ButtonSolid

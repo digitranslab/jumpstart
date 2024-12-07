@@ -42,8 +42,8 @@ RUN apt-get update && apt-get install -y postgresql-client freetds-dev libaio1 w
 
 # Install Instantclient Basic Light Oracle and Dependencies
 WORKDIR /opt/oracle
-RUN wget https://tooljet-plugins-production.s3.us-east-2.amazonaws.com/marketplace-assets/oracledb/instantclients/instantclient-basiclite-linuxx64.zip && \
-    wget https://tooljet-plugins-production.s3.us-east-2.amazonaws.com/marketplace-assets/oracledb/instantclients/instantclient-basiclite-linux.x64-11.2.0.4.0.zip && \
+RUN wget https://jumpstart-plugins-production.s3.us-east-2.amazonaws.com/marketplace-assets/oracledb/instantclients/instantclient-basiclite-linuxx64.zip && \
+    wget https://jumpstart-plugins-production.s3.us-east-2.amazonaws.com/marketplace-assets/oracledb/instantclients/instantclient-basiclite-linux.x64-11.2.0.4.0.zip && \
     unzip instantclient-basiclite-linuxx64.zip && rm -f instantclient-basiclite-linuxx64.zip && \
     unzip instantclient-basiclite-linux.x64-11.2.0.4.0.zip && rm -f instantclient-basiclite-linux.x64-11.2.0.4.0.zip && \
     cd /opt/oracle/instantclient_21_10 && rm -f *jdbc* *occi* *mysql* *mql1* *ipc1* *jar uidrvci genezi adrci && \
@@ -79,11 +79,11 @@ COPY --from=builder /app/server/dist ./app/server/dist
 WORKDIR /app
 
 # ENV defaults
-ENV TOOLJET_HOST=http://localhost:80 \
+ENV JUMPSTART_HOST=http://localhost:80 \
     PGRST_HOST=http://localhost:3000 \
     PGRST_JWT_SECRET=r9iMKoe5CRMgvJBBtp4HrqN7QiPpUToj \
-    TOOLJET_DB=tooljet_db \
-    ENABLE_TOOLJET_DB=true \
+    JUMPSTART_DB=jumpstart_db \
+    ENABLE_JUMPSTART_DB=true \
     PORT=80 \
     LOCKBOX_MASTER_KEY=replace_with_lockbox_master_key \
     SECRET_KEY_BASE=replace_with_secret_key_base \

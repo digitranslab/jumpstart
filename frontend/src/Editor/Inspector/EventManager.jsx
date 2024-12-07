@@ -16,7 +16,7 @@ import RunjsParameters from './ActionConfigurationPanels/RunjsParamters';
 import { useAppDataActions, useAppDataStore } from '@/_stores/appDataStore';
 import { isQueryRunnable } from '@/_helpers/utils';
 import { shallow } from 'zustand/shallow';
-import AddNewButton from '@/ToolJetUI/Buttons/AddNewButton/AddNewButton';
+import AddNewButton from '@/JumpStartUI/Buttons/AddNewButton/AddNewButton';
 import NoListItem from './Components/Table/NoListItem';
 import ManageEventButton from './ManageEventButton';
 import { EditorContext } from '../Context/EditorContextWrapper';

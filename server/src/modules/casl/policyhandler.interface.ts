@@ -1,10 +1,10 @@
 import { AppAbility } from '../casl/casl-ability.factory';
-import { TooljetDbAbility } from './abilities/tooljet-db-ability.factory';
+import { JumpstartDbAbility } from './abilities/jumpstart-db-ability.factory';
 
 interface IPolicyHandler {
-  handle(ability: AppAbility | TooljetDbAbility): boolean;
+  handle(ability: AppAbility | JumpstartDbAbility): boolean;
 }
 
-type PolicyHandlerCallback = (ability: AppAbility | TooljetDbAbility) => boolean;
+type PolicyHandlerCallback = (ability: AppAbility | JumpstartDbAbility) => boolean;
 
 export type PolicyHandler = IPolicyHandler | PolicyHandlerCallback;

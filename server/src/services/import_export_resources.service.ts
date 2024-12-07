@@ -2,7 +2,7 @@ import { Injectable, Optional } from '@nestjs/common';
 import { User } from 'src/entities/user.entity';
 import { ExportResourcesDto } from '@dto/export-resources.dto';
 import { AppImportExportService } from './app_import_export.service';
-import { TooljetDbImportExportService } from './tooljet_db_import_export_service';
+import { JumpstartDbImportExportService } from './jumpstart_db_import_export_service';
 import { ImportResourcesDto } from '@dto/import-resources.dto';
 import { AppsService } from './apps.service';
 import { CloneResourcesDto } from '@dto/clone-resources.dto';
@@ -15,23 +15,23 @@ export class ImportExportResourcesService {
   constructor(
     private readonly appImportExportService: AppImportExportService,
     private readonly appsService: AppsService,
-    private readonly tooljetDbImportExportService: TooljetDbImportExportService,
+    private readonly jumpstartDbImportExportService: JumpstartDbImportExportService,
     // TODO: remove optional decorator when
-    // ENABLE_TOOLJET_DB flag is deprecated
+    // ENABLE_JUMPSTART_DB flag is deprecated
     @Optional()
-    @InjectEntityManager('tooljetDb')
-    private readonly tooljetDbManager: EntityManager
+    @InjectEntityManager('jumpstartDb')
+    private readonly jumpstartDbManager: EntityManager
   ) {}
 
   async export(user: User, exportResourcesDto: ExportResourcesDto) {
     const resourcesExport = {};
-    if (exportResourcesDto.tooljet_database) {
-      resourcesExport['tooljet_database'] = [];
+    if (exportResourcesDto.jumpstart_database) {
+      resourcesExport['jumpstart_database'] = [];
 
-      for (const tjdb of exportResourcesDto.tooljet_database) {
+      for (const tjdb of exportResourcesDto.jumpstart_database) {
         !isEmpty(tjdb) &&
-          resourcesExport['tooljet_database'].push(
-            await this.tooljetDbImportExportService.export(exportResourcesDto.organization_id, tjdb)
+          resourcesExport['jumpstart_database'].push(
+            await this.jumpstartDbImportExportService.export(exportResourcesDto.organization_id, tjdb)
           );
       }
     }
@@ -51,13 +51,13 @@ export class ImportExportResourcesService {
 
   async import(user: User, importResourcesDto: ImportResourcesDto, cloning = false) {
     let tableNameMapping = {};
-    const imports = { app: [], tooljet_database: [] };
-    const importingVersion = importResourcesDto.tooljet_version;
+    const imports = { app: [], jumpstart_database: [] };
+    const importingVersion = importResourcesDto.jumpstart_version;
 
-    if (!isEmpty(importResourcesDto.tooljet_database)) {
-      const res = await this.tooljetDbImportExportService.bulkImport(importResourcesDto, importingVersion, cloning);
+    if (!isEmpty(importResourcesDto.jumpstart_database)) {
+      const res = await this.jumpstartDbImportExportService.bulkImport(importResourcesDto, importingVersion, cloning);
       tableNameMapping = res.tableNameMapping;
-      imports.tooljet_database = res.tooljet_database;
+      imports.jumpstart_database = res.jumpstart_database;
     }
 
     if (!isEmpty(importResourcesDto.app)) {
@@ -68,9 +68,9 @@ export class ImportExportResourcesService {
           appImportDto.definition,
           appImportDto.appName,
           {
-            tooljet_database: tableNameMapping,
+            jumpstart_database: tableNameMapping,
           },
-          importResourcesDto.tooljet_version,
+          importResourcesDto.jumpstart_version,
           cloning
         );
         imports.app.push({ id: createdApp.id, name: createdApp.name });
@@ -81,12 +81,12 @@ export class ImportExportResourcesService {
   }
 
   async clone(user: User, cloneResourcesDto: CloneResourcesDto) {
-    const tablesForApp = await this.appsService.findTooljetDbTables(cloneResourcesDto.app[0].id);
+    const tablesForApp = await this.appsService.findJumpstartDbTables(cloneResourcesDto.app[0].id);
 
     const exportResourcesDto = new ExportResourcesDto();
     exportResourcesDto.organization_id = cloneResourcesDto.organization_id;
     exportResourcesDto.app = [{ id: cloneResourcesDto.app[0].id, search_params: null }];
-    exportResourcesDto.tooljet_database = tablesForApp;
+    exportResourcesDto.jumpstart_database = tablesForApp;
 
     const resourceExport = await this.export(user, exportResourcesDto);
     resourceExport['organization_id'] = cloneResourcesDto.organization_id;

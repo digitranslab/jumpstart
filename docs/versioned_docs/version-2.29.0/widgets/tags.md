@@ -8,7 +8,7 @@ Tags widget can be used to show array of data as tags.
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/tags/tags.png" alt="ToolJet - Widget Reference - Tags" />
+<img className="screenshot-full" src="/img/widgets/tags/tags.png" alt="JumpStart - Widget Reference - Tags" />
 
 </div>
 
@@ -40,7 +40,7 @@ Under the <b>General</b> accordion, you can set the value in the string format. 
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/tooltip.png" alt="ToolJet - Widget Reference - Tags" />
+<img className="screenshot-full" src="/img/tooltip.png" alt="JumpStart - Widget Reference - Tags" />
 
 </div>
 

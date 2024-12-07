@@ -5,11 +5,11 @@ title: Google Sheets
 
 # Google Sheets
 
-ToolJet can connect to Google Sheet using OAuth 2.0, which helps us to limit an application's access to a user's account.
+JumpStart can connect to Google Sheet using OAuth 2.0, which helps us to limit an application's access to a user's account.
 
 ## How to integrate Google Sheets
 
-<iframe height="500" src="https://www.youtube.com/embed/3PO41waW2CQ" title="ToolJet Googlsheet Integration" frameborder="0" allowfullscreen width="100%"></iframe>
+<iframe height="500" src="https://www.youtube.com/embed/3PO41waW2CQ" title="JumpStart Googlsheet Integration" frameborder="0" allowfullscreen width="100%"></iframe>
 
 ## Self-Hosted Configuration
 
@@ -19,7 +19,7 @@ If you are self-hosting the application, you will need to perform some additiona
   2. Set the following environment variables with the values from the previous step:
      * `GOOGLE_CLIENT_ID`
      * `GOOGLE_CLIENT_SECRET`
-     * `TOOLJET_HOST`
+     * `JUMPSTART_HOST`
   3. Enable the Google Sheets API in the GCP console
 
 ## Authorization Scopes 
@@ -65,7 +65,7 @@ You can add more rows to the table using the append operation.
 | ----------- | ----------- |
 | Spreadsheet ID | It is mandatory to enter the spreadsheet-id. The spreadsheet-id can be found in the URL of the spreadsheet. Example URL: https://docs.google.com/spreadsheets/d/1W2S4re7zNaPk9vqv6_CqOpPdm_mDEqmLmzjVe7Nb9WM/edit#gid=0 - in this URL, the `1W2S4re7zNaPk9vqv6_CqOpPdm_mDEqmLmzjVe7Nb9WM` is the spreadsheet-id. |
 | Sheet | This is optional. You can specify `sheet name` if it has more than 1 sheets, else it will automatically choose the first sheet. |
-| Rows  | Enter the row data in the json array form. Each object in an array will represent a single row. Example: `[ {"name":"John", "email":"John@tooljet.com"},{...},{...} ]` In each object, the `key` represents the **column name** and the `value` represents the **cell data**.   |
+| Rows  | Enter the row data in the json array form. Each object in an array will represent a single row. Example: `[ {"name":"John", "email":"John@jumpstart.com"},{...},{...} ]` In each object, the `key` represents the **column name** and the `value` represents the **cell data**.   |
 
 
 <img className="screenshot-full" src="/img/datasource-reference/google-sheets/append-data-op.png" alt="google sheets append" />

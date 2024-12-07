@@ -52,7 +52,7 @@ jobs:
           context: .
           file: docker/production.Dockerfile
           push: true
-          tags: tooljet/tj-osv:${{ env.SAFE_BRANCH_NAME }}
+          tags: digitranslab/tj-osv:${{ env.SAFE_BRANCH_NAME }}
           platforms: linux/amd64
         env:
           DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
@@ -60,22 +60,22 @@ jobs:
 
       - name: Set up environment variables
         run: |
-          echo "TOOLJET_HOST=http://localhost:3000" >> .env
+          echo "JUMPSTART_HOST=http://localhost:3000" >> .env
           echo "LOCKBOX_MASTER_KEY=cd97331a419c09387bef49787f7da8d2a81d30733f0de6bed23ad8356d2068b2" >> .env
           echo "SECRET_KEY_BASE=7073b9a35a15dd20914ae17e36a693093f25b74b96517a5fec461fc901c51e011cd142c731bee48c5081ec8bac321c1f259ef097ef2a16f25df17a3798c03426" >> .env
-          echo "PG_DB=tooljet_development" >> .env
+          echo "PG_DB=jumpstart_development" >> .env
           echo "PG_USER=postgres" >> .env
           echo "PG_HOST=postgres" >> .env
           echo "PG_PASS=postgres" >> .env
           echo "PG_PORT=5432" >> .env
-          echo "ENABLE_TOOLJET_DB=true" >> .env
-          echo "TOOLJET_DB=tooljet_db" >> .env
-          echo "TOOLJET_DB_USER=postgres" >> .env
-          echo "TOOLJET_DB_HOST=postgres" >> .env
-          echo "TOOLJET_DB_PASS=postgres" >> .env
+          echo "ENABLE_JUMPSTART_DB=true" >> .env
+          echo "JUMPSTART_DB=jumpstart_db" >> .env
+          echo "JUMPSTART_DB_USER=postgres" >> .env
+          echo "JUMPSTART_DB_HOST=postgres" >> .env
+          echo "JUMPSTART_DB_PASS=postgres" >> .env
           echo "PGRST_JWT_SECRET=r9iMKoe5CRMgvJBBtp4HrqN7QiPpUToj" >> .env
           echo "PGRST_HOST=postgrest" >> .env
-          echo "PGRST_DB_URI=postgres://postgres:postgres@postgres/tooljet_db" >> .env
+          echo "PGRST_DB_URI=postgres://postgres:postgres@postgres/jumpstart_db" >> .env
           echo "SSO_GIT_OAUTH2_CLIENT_ID=dummy" >> .env
           echo "SSO_GIT_OAUTH2_CLIENT_SECRET=dummy" >> .env
           echo "SSO_GIT_OAUTH2_HOST=dummy" >> .env
@@ -84,13 +84,13 @@ jobs:
 
 
       - name: Pulling the docker-compose file
-        run: curl -LO https://tooljet-test.s3.us-west-1.amazonaws.com/docker-compose.yaml && mkdir postgres_data
+        run: curl -LO https://jumpstart-test.s3.us-west-1.amazonaws.com/docker-compose.yaml && mkdir postgres_data
 
 
       - name: Update docker-compose file
         run: |
             # Update docker-compose.yaml with the new image
-            sed -i '/^[[:space:]]*tooljet:/,/^$/ s|^\([[:space:]]*image:[[:space:]]*\).*|\1tooljet/tj-osv:${{ env.SAFE_BRANCH_NAME }}|' docker-compose.yaml
+            sed -i '/^[[:space:]]*jumpstart:/,/^$/ s|^\([[:space:]]*image:[[:space:]]*\).*|\1digitranslab/tj-osv:${{ env.SAFE_BRANCH_NAME }}|' docker-compose.yaml
 
       - name: Run docker-compose file
         run: docker-compose up -d
@@ -99,7 +99,7 @@ jobs:
         run: docker ps -a
 
       - name: docker logs
-        run: sudo docker logs Tooljet-app
+        run: sudo docker logs jumpstart-app
 
       - name: Wait for the server to be ready
         run: |
@@ -109,7 +109,7 @@ jobs:
           done'
 
       - name: Seeding
-        run: docker exec Tooljet-app npm run db:seed:prod
+        run: docker exec jumpstart-app npm run db:seed:prod
 
       - name: Create Cypress environment file
         id: create-json
@@ -161,36 +161,36 @@ jobs:
         run: docker buildx use mybuilder
 
       - name: Build docker image
-        run: docker buildx build --platform=linux/amd64 -f docker/production.Dockerfile  . -t tooljet/tj-osv:cypressplaform
+        run: docker buildx build --platform=linux/amd64 -f docker/production.Dockerfile  . -t digitranslab/tj-osv:cypressplaform
 
       - name: Set up environment variables
         run: |
-          echo "TOOLJET_HOST=http://localhost:80" >> .env
+          echo "JUMPSTART_HOST=http://localhost:80" >> .env
           echo "LOCKBOX_MASTER_KEY=cd97331a419c09387bef49787f7da8d2a81d30733f0de6bed23ad8356d2068b2" >> .env
           echo "SECRET_KEY_BASE=7073b9a35a15dd20914ae17e36a693093f25b74b96517a5fec461fc901c51e011cd142c731bee48c5081ec8bac321c1f259ef097ef2a16f25df17a3798c03426" >> .env
-          echo "PG_DB=tooljet_development" >> .env
+          echo "PG_DB=jumpstart_development" >> .env
           echo "PG_USER=postgres" >> .env
           echo "PG_HOST=postgres" >> .env
           echo "PG_PASS=postgres" >> .env
           echo "PG_PORT=5432" >> .env
-          echo "ENABLE_TOOLJET_DB=true" >> .env
-          echo "TOOLJET_DB=tooljet_db" >> .env
-          echo "TOOLJET_DB_USER=postgres" >> .env
-          echo "TOOLJET_DB_HOST=postgres" >> .env
-          echo "TOOLJET_DB_PASS=postgres" >> .env
+          echo "ENABLE_JUMPSTART_DB=true" >> .env
+          echo "JUMPSTART_DB=jumpstart_db" >> .env
+          echo "JUMPSTART_DB_USER=postgres" >> .env
+          echo "JUMPSTART_DB_HOST=postgres" >> .env
+          echo "JUMPSTART_DB_PASS=postgres" >> .env
           echo "PGRST_JWT_SECRET=r9iMKoe5CRMgvJBBtp4HrqN7QiPpUToj" >> .env
           echo "PGRST_HOST=postgrest" >> .env
-          echo "PGRST_DB_URI=postgres://postgres:postgres@postgres/tooljet_db" >> .env
+          echo "PGRST_DB_URI=postgres://postgres:postgres@postgres/jumpstart_db" >> .env
           echo "SSO_GIT_OAUTH2_CLIENT_ID=dummy" >> .env
           echo "SSO_GIT_OAUTH2_CLIENT_SECRET=dummy" >> .env
           echo "SSO_GIT_OAUTH2_HOST=dummy" >> .env
           echo "SSO_GOOGLE_OAUTH2_CLIENT_ID=dummy" >> .env
-          echo "SUB_PATH=/apps/tooljet/" >> .env
+          echo "SUB_PATH=/apps/jumpstart/" >> .env
           echo "NODE_ENV=production" >> .env
           echo "SERVE_CLIENT=true" >> .env
 
       - name: Pulling the docker-compose file
-        run: curl -LO https://tooljet-test.s3.us-west-1.amazonaws.com/docker-compose.yaml && mkdir postgres_data
+        run: curl -LO https://jumpstart-test.s3.us-west-1.amazonaws.com/docker-compose.yaml && mkdir postgres_data
 
       - name: Run docker-compose file
         run: docker-compose up -d
@@ -199,17 +199,17 @@ jobs:
         run: docker ps -a
 
       - name: docker logs
-        run: sudo docker logs Tooljet-app
+        run: sudo docker logs jumpstart-app
 
       - name: Wait for the server to be ready
         run: |
           timeout 1500 bash -c '
-          until curl --silent --fail http://localhost:80/apps/tooljet/; do
+          until curl --silent --fail http://localhost:80/apps/jumpstart/; do
             sleep 5
           done'
 
       - name: Seeding
-        run: docker exec Tooljet-app npm run db:seed:prod
+        run: docker exec jumpstart-app npm run db:seed:prod
 
       - name: Create Cypress environment file
         id: create-json
@@ -223,7 +223,7 @@ jobs:
         uses: cypress-io/github-action@v5
         with:
           working-directory: ./cypress-tests
-          config: "baseUrl=http://localhost:80/apps/tooljet/"
+          config: "baseUrl=http://localhost:80/apps/jumpstart/"
           config-file: cypress-marketplace.config.js
 
       - name: Capture Screenshots

@@ -4,7 +4,7 @@ title: Access Values
 ---
 
 
-In ToolJet, double curly braces `{{}}` can be used to retrieve data returned by queries, access values related to components and pass custom code. You can see the list of all accessible values in the **[Inspector](/docs/how-to/use-inspector/)** tab in the left sidebar. 
+In JumpStart, double curly braces `{{}}` can be used to retrieve data returned by queries, access values related to components and pass custom code. You can see the list of all accessible values in the **[Inspector](/docs/how-to/use-inspector/)** tab in the left sidebar. 
 
 <div class="video-container">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/hMzkNaHMFr0?si=s5WeHv2hY6rBrvE_&rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -19,7 +19,7 @@ The **queries** keyword can be used to access data returned by queries. For exam
 Similarly, the **components** keyword can be used to access data in the components and other component-related variables. For example: `{{components.table1.selectedRow.id}}`.
 
 <div style={{textAlign: 'center'}}>
-    <img className="screenshot-full" src="/img/tooljet-concepts/writing-custom-code/inspector.png" alt="Check Available Values Using Inspector" />
+    <img className="screenshot-full" src="/img/jumpstart-concepts/writing-custom-code/inspector.png" alt="Check Available Values Using Inspector" />
 </div>
 
 

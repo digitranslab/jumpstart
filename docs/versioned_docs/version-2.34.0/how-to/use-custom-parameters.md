@@ -39,11 +39,11 @@ Use `parameters.<identifier>` in your query to employ custom parameters. Note th
 
 <div style={{paddingTop:'24px', paddingBottom:'24px'}}>
 
-### Example: Create Row in ToolJetDB with Custom Parameters
+### Example: Create Row in JumpStartDB with Custom Parameters
 
-Let's assume we have a ToolJetDB table with the following columns: `name`, `email`, and `contact`. We will create a new row in the table using custom parameters.
+Let's assume we have a JumpStartDB table with the following columns: `name`, `email`, and `contact`. We will create a new row in the table using custom parameters.
 
-- Create a new ToolJetDB query, select a table from the dropdown and select the `Create Row` operation.
+- Create a new JumpStartDB query, select a table from the dropdown and select the `Create Row` operation.
 
 - Add the following parameters:
   1. **name:** `name` and **value:** `Shubh`
@@ -66,7 +66,7 @@ Let's assume we have a ToolJetDB table with the following columns: `name`, `emai
    <img style={{ border:'0', marginBottom:'15px', borderRadius:'5px', boxShadow: '0px 1px 3px rgba(0, 0, 0, 0.2)' }} className="screenshot-full" src="/img/how-to/custom-parameters/params2.png" alt="How to: use custom parameters" />
   </div>
 
-- Finally, execute the query to create a new row in the ToolJetDB table with the values provided in the custom parameters.
+- Finally, execute the query to create a new row in the JumpStartDB table with the values provided in the custom parameters.
 
 </div>
 
@@ -74,7 +74,7 @@ Let's assume we have a ToolJetDB table with the following columns: `name`, `emai
 
 ### Example: Providing Custom Parameters Using Events
 
-In this example, we will demonstrate how to use custom parameters in a query by providing values from an event. We will use execute a REST API query and on its success, we will execute the ToolJetDB query to create a new row with the response data.
+In this example, we will demonstrate how to use custom parameters in a query by providing values from an event. We will use execute a REST API query and on its success, we will execute the JumpStartDB query to create a new row with the response data.
 
 1. **Create a REST API Query:**
    - Method: `GET`
@@ -89,7 +89,7 @@ In this example, we will demonstrate how to use custom parameters in a query by 
       2. **email:** `{{queries.getSalesData.data.data[0].email}}` This will use the email from the first record of the response data.
       3. **contact:** `4638563845` provided as a constant value just for demonstration.
 
-3. **Execute the REST API query and observe the new row created in the ToolJetDB table.**
+3. **Execute the REST API query and observe the new row created in the JumpStartDB table.**
 
 **Note:** You can also use parameters in JavaScript queries. Learn more about [JS Query Parameter](/docs/data-sources/run-js/#js-parameters). 
 

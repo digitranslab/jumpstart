@@ -9,7 +9,7 @@ Kanban widget allows you to visually organize and prioritize your tasks with a t
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/kanban/kanban.png" alt="ToolJet - Widget Reference - Kanban widget" />
+<img className="screenshot-full" src="/img/widgets/kanban/kanban.png" alt="JumpStart - Widget Reference - Kanban widget" />
 
 </div>
 
@@ -23,7 +23,7 @@ To add an event, click on the widget handle to open the widget properties on the
 - **[Card selected](#card-selected)**
 - **[Card updated](#card-updated)**
 
-Just like any other event on ToolJet, you can set multiple handlers for any of the above mentioned events.
+Just like any other event on JumpStart, you can set multiple handlers for any of the above mentioned events.
 
 :::info
 Check [Action Reference](/docs/category/actions-reference) docs to get the detailed information about all the **Actions**.
@@ -31,7 +31,7 @@ Check [Action Reference](/docs/category/actions-reference) docs to get the detai
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/kanban/kanban-events.png" alt="ToolJet - Widget Reference - Kanban widget" />
+<img className="screenshot-full" src="/img/widgets/kanban/kanban-events.png" alt="JumpStart - Widget Reference - Kanban widget" />
 
 </div>
 
@@ -39,7 +39,7 @@ Check [Action Reference](/docs/category/actions-reference) docs to get the detai
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/kanban/properties.png" alt="ToolJet - Widget Reference - Kanban widget" />
+<img className="screenshot-full" src="/img/widgets/kanban/properties.png" alt="JumpStart - Widget Reference - Kanban widget" />
 
 </div>
 
@@ -63,7 +63,7 @@ Under the <b>General</b> accordion, you can set the value in the string format. 
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/tooltip.png" alt="ToolJet - Widget Reference - Kanban widget" />
+<img className="screenshot-full" src="/img/tooltip.png" alt="JumpStart - Widget Reference - Kanban widget" />
 
 </div>
 
@@ -71,7 +71,7 @@ Under the <b>General</b> accordion, you can set the value in the string format. 
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/kanban/layout.png" alt="ToolJet - Widget Reference - Kanban widget" />
+<img className="screenshot-full" src="/img/widgets/kanban/layout.png" alt="JumpStart - Widget Reference - Kanban widget" />
 
 </div>
 
@@ -84,7 +84,7 @@ Under the <b>General</b> accordion, you can set the value in the string format. 
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/kanban/styles.png" alt="ToolJet - Widget Reference - Kanban widget" />
+<img className="screenshot-full" src="/img/widgets/kanban/styles.png" alt="JumpStart - Widget Reference - Kanban widget" />
 
 </div>
 
@@ -100,7 +100,7 @@ Under the <b>General</b> accordion, you can set the value in the string format. 
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/kanban/variables.png" alt="ToolJet - Widget Reference - Kanban widget" />
+<img className="screenshot-full" src="/img/widgets/kanban/variables.png" alt="JumpStart - Widget Reference - Kanban widget" />
 
 </div>
 

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { resolveWidgetFieldValue } from '@/_helpers/utils';
-import Loader from '@/ToolJetUI/Loader/Loader';
+import Loader from '@/JumpStartUI/Loader/Loader';
 import OverflowTooltip from '@/_components/OverflowTooltip';
 
 export const Checkbox = ({

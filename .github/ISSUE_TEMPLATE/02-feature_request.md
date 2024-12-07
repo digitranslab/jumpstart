@@ -1,6 +1,6 @@
 ---
 name: 🚀 Feature request
-about: Suggest an idea for improving ToolJet
+about: Suggest an idea for improving JumpStart
 labels: 'feature request, needs triage'
 
 ---

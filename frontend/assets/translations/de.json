@@ -41,7 +41,7 @@
     "viewer": "Entschuldigung!. Diese App wird gerade gewartet",
     "app": {
         "updateAvailable": "Update available",
-        "newVersionReleased": "Eine neue Version von ToolJet ist veröffentlicht worden.",
+        "newVersionReleased": "Eine neue Version von JumpStart ist veröffentlicht worden.",
         "readReleaseNotes": "Versionshinweise lesen & Updates",
         "skipVersion": "Diese Version überspringen"
     },
@@ -53,17 +53,17 @@
     },
     "slack": {
         "authorize": "Autorisierung",
-        "connectToolJetToSlack": "ToolJet kann eine Verbindung zu Slack herstellen und Benutzer auflisten, Nachrichten senden, usw. Bitte wählen Sie entsprechende Berechtigungsbereiche.",
+        "connectJumpStartToSlack": "JumpStart kann eine Verbindung zu Slack herstellen und Benutzer auflisten, Nachrichten senden, usw. Bitte wählen Sie entsprechende Berechtigungsbereiche.",
         "chatWrite": "chat:schreiben",
-        "listUsersAndSendMessage": "Ihre ToolJet-Anwendung kann dann Benutzer auflisten und Nachrichten an Benutzer und Kanäle senden.",
+        "listUsersAndSendMessage": "Ihre JumpStart-Anwendung kann dann Benutzer auflisten und Nachrichten an Benutzer und Kanäle senden.",
         "connectSlack": "Mit Slack verbinden"
     },
     "googleSheets": {
         "readOnly": "Nur lesen",
-        "enableReadAndWrite": "Wenn Sie möchten, dass Ihre ToolJet-Apps Ihre Google Sheets ändern können, müssen Sie Lese- und Schreibzugriff auswählen",
-        "readDataFromSheets": "Ihre ToolJet-Apps können nur Daten aus Google Sheets lesen",
+        "enableReadAndWrite": "Wenn Sie möchten, dass Ihre JumpStart-Apps Ihre Google Sheets ändern können, müssen Sie Lese- und Schreibzugriff auswählen",
+        "readDataFromSheets": "Ihre JumpStart-Apps können nur Daten aus Google Sheets lesen",
         "readWrite": "Lesen und Schreiben",
-        "readModifySheets": "Ihre ToolJet-Apps können Daten von Tabellen lesen, Tabellen ändern und vieles mehr.",
+        "readModifySheets": "Ihre JumpStart-Apps können Daten von Tabellen lesen, Tabellen ändern und vieles mehr.",
         "toGoogleSheets": "zu Google Sheets"
     },
     "profile": {
@@ -77,7 +77,7 @@
         "dontHaveAccount": "Sie haben noch kein Konto?",
         "signIn": "Anmelden",
         "signUp": "Registrieren Sie sich",
-        "createToolJetAccount": "Erstellen Sie ein ToolJet-Konto",
+        "createJumpStartAccount": "Erstellen Sie ein JumpStart-Konto",
         "enterBusinessEmail": "Geben Sie Ihre Geschäfts-E-Mail ein",
         "alreadyHaveAnAccount": "Haben Sie schon ein Konto?",
         "password": "Passwort",
@@ -264,7 +264,7 @@
                         "newAccountWillBeCreated": "Für die erste SSO-Anmeldung eines Benutzers wird ein neues Konto erstellt.",
                         "allowedDomains": "Zugelassene Domains",
                         "enterDomains": "Domains eingeben",
-                        "supportMultiDomains": "Unterstützung mehrerer Domains. Geben Sie Domainnamen durch Komma getrennt ein. Beispiel: tooljet.com, tooljet.io, ihreorganisation.com",
+                        "supportMultiDomains": "Unterstützung mehrerer Domains. Geben Sie Domainnamen durch Komma getrennt ein. Beispiel: jumpstart.com, jumpstart.io, ihreorganisation.com",
                         "loginUrl": "Anmelde-URL",
                         "workspaceLogin": "Verwenden Sie diese URL, um sich direkt bei diesem Arbeitsbereich anzumelden",
                         "allowDefaultSso": "Standard-SSO zulassen",
@@ -353,8 +353,8 @@
             "removeFromFolder": "Aus Ordner entfernen"
         },
         "blankPage": {
-            "welcomeToToolJet": "Willkommen bei ToolJet!",
-            "getStartedCreateNewApp": "Sie können mit der Erstellung einer neuen App beginnen oder eine App mit Hilfe einer Vorlage aus der ToolJet Bibliothek erstellen.",
+            "welcomeToJumpStart": "Willkommen bei JumpStart!",
+            "getStartedCreateNewApp": "Sie können mit der Erstellung einer neuen App beginnen oder eine App mit Hilfe einer Vorlage aus der JumpStart Bibliothek erstellen.",
             "importApplication": "Eine App importieren"
         },
         "foldersSection": {
@@ -414,11 +414,11 @@
         "and": "und"
     },
     "onBoarding": {
-        "finishToolJetInstallation": "ToolJet-Installation beenden",
+        "finishJumpStartInstallation": "JumpStart-Installation beenden",
         "organization": "Organisation",
         "name": "Name",
         "email": "Email",
-        "receiveUpdatesFromToolJet": "Sie werden Updates vom ToolJet-Team erhalten(1-2 E-Mails pro Monat, kein Spam)",
+        "receiveUpdatesFromJumpStart": "Sie werden Updates vom JumpStart-Team erhalten(1-2 E-Mails pro Monat, kein Spam)",
         "finishSetup": "Einstellung beenden",
         "skip": "Überspringen"
     },

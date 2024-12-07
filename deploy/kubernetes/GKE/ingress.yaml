@@ -9,7 +9,7 @@ metadata:
 
 spec:
   rules:
-  - host: tooljet.your-domain.com
+  - host: jumpstart.your-domain.com
     http:
       paths:
         - path: /*

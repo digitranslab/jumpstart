@@ -253,7 +253,7 @@ describe("Global Datasource Manager", () => {
 
   it("Should validate the user's global data source permissions on apps created by admin", () => {
     logout();
-    cy.apiLogin("test@tooljet.com", "password");
+    cy.apiLogin("test@jumpstart.com", "password");
     cy.visit("/my-workspace");
 
     cy.get(commonSelectors.globalDataSourceIcon).should("not.exist");
@@ -289,7 +289,7 @@ describe("Global Datasource Manager", () => {
 
     data.appName = `${fake.companyName}-App`;
     logout();
-    cy.apiLogin("test@tooljet.com", "password");
+    cy.apiLogin("test@jumpstart.com", "password");
     cy.apiCreateApp(data.appName);
     cy.openApp();
 

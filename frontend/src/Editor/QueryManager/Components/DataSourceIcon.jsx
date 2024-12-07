@@ -1,7 +1,7 @@
 import React from 'react';
 import { getSvgIcon } from '@/_helpers/appUtils';
 import RunjsIcon from '@/Editor/Icons/runjs.svg';
-import RunTooljetDbIcon from '@/Editor/Icons/tooljetdb.svg';
+import RunJumpstartDbIcon from '@/Editor/Icons/jumpstartdb.svg';
 import RunpyIcon from '@/Editor/Icons/runpy.svg';
 
 const DataSourceIcon = ({ source, height = 25, styles }) => {
@@ -13,8 +13,8 @@ const DataSourceIcon = ({ source, height = 25, styles }) => {
       return <RunjsIcon style={{ height: height, width: height, marginTop: '-3px' }} />;
     case 'runpy':
       return <RunpyIcon style={{ height: height, width: height, marginTop: '-3px' }} />;
-    case 'tooljetdb':
-      return <RunTooljetDbIcon style={{ height: height, width: height, marginTop: '-3px' }} />;
+    case 'jumpstartdb':
+      return <RunJumpstartDbIcon style={{ height: height, width: height, marginTop: '-3px' }} />;
     default:
       return <Icon />;
   }

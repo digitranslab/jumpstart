@@ -2,8 +2,8 @@ import React, { useContext } from 'react';
 import Drawer from '@/_ui/Drawer';
 import { toast } from 'react-hot-toast';
 import CreateColumnForm from '../../Forms/ColumnForm';
-import { TooljetDatabaseContext } from '../../index';
-import { tooljetDatabaseService } from '@/_services';
+import { JumpstartDatabaseContext } from '../../index';
+import { jumpstartDatabaseService } from '@/_services';
 import { getColumnDataType } from '../../constants';
 
 const CreateColumnDrawer = ({
@@ -14,7 +14,7 @@ const CreateColumnDrawer = ({
   setReferencedColumnDetails,
 }) => {
   const { organizationId, selectedTable, setColumns, setPageCount, handleRefetchQuery, pageSize, setForeignKeys } =
-    useContext(TooljetDatabaseContext);
+    useContext(JumpstartDatabaseContext);
 
   return (
     <>
@@ -26,7 +26,7 @@ const CreateColumnDrawer = ({
       >
         <CreateColumnForm
           onCreate={() => {
-            tooljetDatabaseService.viewTable(organizationId, selectedTable.table_name).then(({ data = [], error }) => {
+            jumpstartDatabaseService.viewTable(organizationId, selectedTable.table_name).then(({ data = [], error }) => {
               if (error) {
                 toast.error(error?.message ?? `Error fetching columns for table "${selectedTable}"`);
                 return;

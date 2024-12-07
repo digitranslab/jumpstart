@@ -6,7 +6,7 @@ title: Columns
 Whenever data is loaded into a Table, the columns are automatically generated. You can add, remove, or modify columns by accessing the table properties under the column section. You can also rearrange the columns by dragging and dropping them. 
 
 <div style={{textAlign: 'center'}}>
-    <img className="screenshot-full" src="/img/widgets/table/columns-v2.png" alt="ToolJet - Component Reference - Columns" />
+    <img className="screenshot-full" src="/img/widgets/table/columns-v2.png" alt="JumpStart - Component Reference - Columns" />
 </div>
 
 ### Use dynamic column
@@ -31,7 +31,7 @@ For example, if you enter the below JSON, the table will display a column labele
 ```
 
 <div style={{textAlign: 'center'}}>
-    <img className="screenshot-full" src="/img/widgets/table/dynamic-columns-v2.png" alt="ToolJet - Component Reference - Dynamic Columns" />
+    <img className="screenshot-full" src="/img/widgets/table/dynamic-columns-v2.png" alt="JumpStart - Component Reference - Dynamic Columns" />
 </div>
 
 ## Types of Columns

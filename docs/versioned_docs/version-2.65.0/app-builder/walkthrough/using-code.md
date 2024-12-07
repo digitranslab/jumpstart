@@ -3,7 +3,7 @@ id: using-code
 title: Using Custom Code
 ---
 
-In ToolJet, code serves as a powerful means to enhance and customize your applications. From complex logic implementations using **Run JavaScript code** or **Run Python code** queries to simple dynamic expressions with `fx`, the versatility is immense. Below is a basic demonstration of how you can leverage code within ToolJet.
+In JumpStart, code serves as a powerful means to enhance and customize your applications. From complex logic implementations using **Run JavaScript code** or **Run Python code** queries to simple dynamic expressions with `fx`, the versatility is immense. Below is a basic demonstration of how you can leverage code within JumpStart.
 
 Let's take a look at different examples on how to use code. 
 
@@ -73,4 +73,4 @@ The above code will add today's date as the default in DD/MM/YYYY format.
 {{globals.currentUser.groups.includes("admin") ? true : false }}
 ```
 
-The examples provided are just a starting point for leveraging ToolJet's custom code capabilities. You have the flexibility to fully tailor your applications using our comprehensive custom coding features.
+The examples provided are just a starting point for leveraging JumpStart's custom code capabilities. You have the flexibility to fully tailor your applications using our comprehensive custom coding features.

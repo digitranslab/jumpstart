@@ -30,21 +30,21 @@ describe('data sources controller', () => {
 
   it('should be able to create data sources only if user has admin group or app update permission in same organization', async () => {
     const adminUserData = await createUser(app, {
-      email: 'admin@tooljet.io',
+      email: 'admin@jumpstart.io',
       groups: ['all_users', 'admin'],
     });
     const developerUserData = await createUser(app, {
-      email: 'developer@tooljet.io',
+      email: 'developer@jumpstart.io',
       groups: ['all_users', 'developer'],
       organization: adminUserData.organization,
     });
     const viewerUserData = await createUser(app, {
-      email: 'viewer@tooljet.io',
+      email: 'viewer@jumpstart.io',
       groups: ['all_users'],
       organization: adminUserData.organization,
     });
     const anotherOrgAdminUserData = await createUser(app, {
-      email: 'another@tooljet.io',
+      email: 'another@jumpstart.io',
       groups: ['all_users', 'admin'],
     });
 
@@ -113,21 +113,21 @@ describe('data sources controller', () => {
 
   it('should be able to update data sources only if user has group admin or app update permission in same organization', async () => {
     const adminUserData = await createUser(app, {
-      email: 'admin@tooljet.io',
+      email: 'admin@jumpstart.io',
       groups: ['all_users', 'admin'],
     });
     const developerUserData = await createUser(app, {
-      email: 'developer@tooljet.io',
+      email: 'developer@jumpstart.io',
       groups: ['all_users', 'developer'],
       organization: adminUserData.organization,
     });
     const viewerUserData = await createUser(app, {
-      email: 'viewer@tooljet.io',
+      email: 'viewer@jumpstart.io',
       groups: ['all_users', 'viewer'],
       organization: adminUserData.organization,
     });
     const anotherOrgAdminUserData = await createUser(app, {
-      email: 'another@tooljet.io',
+      email: 'another@jumpstart.io',
       groups: ['all_users', 'admin'],
     });
 
@@ -205,21 +205,21 @@ describe('data sources controller', () => {
 
   it('should be able to list (get) datasources for an app by all users of same organization', async () => {
     const adminUserData = await createUser(app, {
-      email: 'admin@tooljet.io',
+      email: 'admin@jumpstart.io',
       groups: ['all_users', 'admin'],
     });
     const developerUserData = await createUser(app, {
-      email: 'developer@tooljet.io',
+      email: 'developer@jumpstart.io',
       groups: ['all_users'],
       organization: adminUserData.organization,
     });
     const viewerUserData = await createUser(app, {
-      email: 'viewer@tooljet.io',
+      email: 'viewer@jumpstart.io',
       groups: ['all_users'],
       organization: adminUserData.organization,
     });
     const anotherOrgAdminUserData = await createUser(app, {
-      email: 'another@tooljet.io',
+      email: 'another@jumpstart.io',
       groups: ['all_users', 'admin'],
     });
 
@@ -269,21 +269,21 @@ describe('data sources controller', () => {
 
   it('should be able to delete data sources of an app only if admin/developer of same organization', async () => {
     const adminUserData = await createUser(app, {
-      email: 'admin@tooljet.io',
+      email: 'admin@jumpstart.io',
       groups: ['all_users', 'admin'],
     });
     const developerUserData = await createUser(app, {
-      email: 'developer@tooljet.io',
+      email: 'developer@jumpstart.io',
       groups: ['all_users', 'developer'],
       organization: adminUserData.organization,
     });
     const viewerUserData = await createUser(app, {
-      email: 'viewer@tooljet.io',
+      email: 'viewer@jumpstart.io',
       groups: ['all_users', 'viewer'],
       organization: adminUserData.organization,
     });
     const anotherOrgAdminUserData = await createUser(app, {
-      email: 'another@tooljet.io',
+      email: 'another@jumpstart.io',
       groups: ['all_users', 'admin'],
     });
 
@@ -351,7 +351,7 @@ describe('data sources controller', () => {
 
   it('should be able to a delete data sources from a specific version of an app', async () => {
     const adminUserData = await createUser(app, {
-      email: 'admin@tooljet.io',
+      email: 'admin@jumpstart.io',
       groups: ['all_users', 'admin'],
     });
     const application = await createApplication(app, {
@@ -370,7 +370,7 @@ describe('data sources controller', () => {
       dataSource: dataSource1,
       options: {
         method: 'get',
-        url: 'https://api.github.com/repos/tooljet/tooljet/stargazers',
+        url: 'https://api.github.com/repos/digitranslab/jumpstart/stargazers',
         url_params: [],
         headers: [],
         body: [],
@@ -391,7 +391,7 @@ describe('data sources controller', () => {
       dataSource: dataSource2,
       options: {
         method: 'get',
-        url: 'https://api.github.com/repos/tooljet/tooljet/stargazers',
+        url: 'https://api.github.com/repos/digitranslab/jumpstart/stargazers',
         url_params: [],
         headers: [],
         body: [],
@@ -419,7 +419,7 @@ describe('data sources controller', () => {
 
   it('should be able to search data sources with application version id', async () => {
     const adminUserData = await createUser(app, {
-      email: 'admin@tooljet.io',
+      email: 'admin@jumpstart.io',
       groups: ['all_users', 'admin'],
     });
 
@@ -447,11 +447,11 @@ describe('data sources controller', () => {
 
   it('should not be able to authorize OAuth code for a REST API source if user of another organization', async () => {
     const adminUserData = await createUser(app, {
-      email: 'admin@tooljet.io',
+      email: 'admin@jumpstart.io',
       groups: ['all_users', 'admin'],
     });
     const anotherOrgAdminUserData = await createUser(app, {
-      email: 'another@tooljet.io',
+      email: 'another@jumpstart.io',
       groups: ['all_users', 'admin'],
     });
     const { dataSource } = await generateAppDefaults(app, adminUserData.user, {

@@ -3,15 +3,15 @@ id: run-js
 title: Run JavaScript code
 ---
 
-The **Run JavaScript code** query in ToolJet enables users to write and execute custom JavaScript code within their applications. It provides a flexible way to add custom logic and interact with various components. Whether it’s transforming data, manipulating component properties, or performing actions based on certain conditions, Run JavaScript code significantly enhances the capabilities of your ToolJet applications. 
+The **Run JavaScript code** query in JumpStart enables users to write and execute custom JavaScript code within their applications. It provides a flexible way to add custom logic and interact with various components. Whether it’s transforming data, manipulating component properties, or performing actions based on certain conditions, Run JavaScript code significantly enhances the capabilities of your JumpStart applications. 
 
 <div style={{paddingTop:'24px', paddingBottom:'24px'}}>
 
 ## Interacting with Components and Actions
-The JavaScript code you write can interact with various components of the ToolJet application. For example, you could attach an event handler to a button so that when it's clicked, it triggers Run Javascript code to run. Additionally, you can construct the JavaScript code to manipulate the properties of other components. This allows for dynamic interactions within your application.
+The JavaScript code you write can interact with various components of the JumpStart application. For example, you could attach an event handler to a button so that when it's clicked, it triggers Run Javascript code to run. Additionally, you can construct the JavaScript code to manipulate the properties of other components. This allows for dynamic interactions within your application.
 
 <div style={{textAlign: 'center'}}>
-    <img className="screenshot-full" src="/img/tooljet-concepts/run-js/run-js-preview.png" alt="Preview Of Run JS" />
+    <img className="screenshot-full" src="/img/jumpstart-concepts/run-js/run-js-preview.png" alt="Preview Of Run JS" />
 </div>
 
 </div>

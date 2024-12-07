@@ -5,20 +5,20 @@ title: White Label
 
 # White Label
 
-White Label feature will allow you to remove the ToolJet branding from the ToolJet platform and add your own custom logo and text.
+White Label feature will allow you to remove the JumpStart branding from the JumpStart platform and add your own custom logo and text.
 
 This feature allows you to rebrand the following:
 - **App logo** (Logo on login screen, dashboard, and app-editor)
 
-<img className="screenshot-full" src="/img/enterprise/white-label/applogo.png" alt="ToolJet - Enterprise - White label" height="420"/>
+<img className="screenshot-full" src="/img/enterprise/white-label/applogo.png" alt="JumpStart - Enterprise - White label" height="420"/>
 
-<img className="screenshot-full" src="/img/enterprise/white-label/appeditor.png" alt="ToolJet - Enterprise - White label" height="420"/>
+<img className="screenshot-full" src="/img/enterprise/white-label/appeditor.png" alt="JumpStart - Enterprise - White label" height="420"/>
 
 - **Favicon**
 
 - **Page Title** (next to Favicon)
 
-<img className="screenshot-full" src="/img/enterprise/white-label/favicon.png" alt="ToolJet - Enterprise - White label" height="420"/>
+<img className="screenshot-full" src="/img/enterprise/white-label/favicon.png" alt="JumpStart - Enterprise - White label" height="420"/>
 
 ## Configuration
 

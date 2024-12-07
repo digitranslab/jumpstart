@@ -5,7 +5,7 @@ title: Adding actions
 
 # Adding actions
 
-ToolJet supports several actions that can be invoked as the handler for any `event` that is triggered in an application.
+JumpStart supports several actions that can be invoked as the handler for any `event` that is triggered in an application.
 
 ## To add actions
 
@@ -16,14 +16,14 @@ To attach an action for query events, select the query, go to the `advanced` tab
 
 ## Available actions
 
-Some of the actions that ToolJet Support are
+Some of the actions that JumpStart Support are
 
    Action| Description|
    ----| -----------  |
    Show alert | Show an alert message as a bootstrap toast           |
    Run query | Run any of the data queries that you have created           |
    Open webpage | Go to another webpage in a new tab          |
-   Goto app | Go to another ToolJet application          |
+   Goto app | Go to another JumpStart application          |
    Show modal | Open any modal that you've added          |
    Close modal | Close any modal that you've added if its already open          |
    Copy to clipboard | Copy any available text that you see on the application to clipboard          |

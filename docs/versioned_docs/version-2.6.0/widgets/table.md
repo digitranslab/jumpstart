@@ -6,13 +6,13 @@ title: Table
 
 Tables can be used for both displaying and editing data.
 
-<iframe height="500" src="https://www.youtube.com/embed/hTrdkUtz3aA" title="ToolJet Table Widget" frameborder="0" allowfullscreen width="100%"></iframe>
+<iframe height="500" src="https://www.youtube.com/embed/hTrdkUtz3aA" title="JumpStart Table Widget" frameborder="0" allowfullscreen width="100%"></iframe>
 
 ## Table UI
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/table/UI.png" alt="ToolJet - Widget Reference - Table" width="900" />
+<img className="screenshot-full" src="/img/widgets/table/UI.png" alt="JumpStart - Widget Reference - Table" width="900" />
 
 </div>
 
@@ -65,7 +65,7 @@ You can choose which columns to display or hide in the table by clicking on this
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/table/data.png" alt="ToolJet - Widget Reference - Table" width="350" />
+<img className="screenshot-full" src="/img/widgets/table/data.png" alt="JumpStart - Widget Reference - Table" width="350" />
 
 </div>
 
@@ -83,7 +83,7 @@ Whenever data is loaded into a table, the columns are automatically generated. Y
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/table/columntypes.png" alt="ToolJet - Widget Reference - Table" />
+<img className="screenshot-full" src="/img/widgets/table/columntypes.png" alt="JumpStart - Widget Reference - Table" />
 
 </div>
 
@@ -113,7 +113,7 @@ Selecting the column type as "Number" will only load numerical data in the colum
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/table/numbertype.png" alt="ToolJet - Widget Reference - Table" />
+<img className="screenshot-full" src="/img/widgets/table/numbertype.png" alt="JumpStart - Widget Reference - Table" />
 
 </div>
 
@@ -123,7 +123,7 @@ The "Badge" column type is used to display labels on the columns using the colum
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/table/badgetype.png" alt="ToolJet - Widget Reference - Table" />
+<img className="screenshot-full" src="/img/widgets/table/badgetype.png" alt="JumpStart - Widget Reference - Table" />
 
 </div>
 
@@ -133,7 +133,7 @@ Similar to the "Badge" column type, this type is used to display multiple badges
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/table/multibadgetype.png" alt="ToolJet - Widget Reference - Table" />
+<img className="screenshot-full" src="/img/widgets/table/multibadgetype.png" alt="JumpStart - Widget Reference - Table" />
 
 </div>
 
@@ -143,7 +143,7 @@ The "Tags" column type is used to show tags in the column cells using the column
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/table/tagtype.png" alt="ToolJet - Widget Reference - Table" />
+<img className="screenshot-full" src="/img/widgets/table/tagtype.png" alt="JumpStart - Widget Reference - Table" />
 
 </div>
 
@@ -153,7 +153,7 @@ The "Dropdown" column type is used to show a dropdown in the column cells using 
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/table/droptype.png" alt="ToolJet - Widget Reference - Table" />
+<img className="screenshot-full" src="/img/widgets/table/droptype.png" alt="JumpStart - Widget Reference - Table" />
 
 </div>
 
@@ -163,7 +163,7 @@ The "Radio" column type is used to show radio buttons in the column cells using 
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/table/radiotype.png" alt="ToolJet - Widget Reference - Table" />
+<img className="screenshot-full" src="/img/widgets/table/radiotype.png" alt="JumpStart - Widget Reference - Table" />
 
 </div>
 
@@ -173,7 +173,7 @@ The "Multiselect" column type is used to show a multiselect dropdown in the colu
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/table/multiselecttype.png" alt="ToolJet - Widget Reference - Table" />
+<img className="screenshot-full" src="/img/widgets/table/multiselecttype.png" alt="JumpStart - Widget Reference - Table" />
 
 </div>
 
@@ -183,7 +183,7 @@ The "Toggle Switch" column type is used to show a toggle switch in the column ce
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/table/toggletype.png" alt="ToolJet - Widget Reference - Table" />
+<img className="screenshot-full" src="/img/widgets/table/toggletype.png" alt="JumpStart - Widget Reference - Table" />
 
 </div>
 
@@ -205,7 +205,7 @@ The "Display in timezone" is the timezone in which the date should be displayed.
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/table/datetype.png" alt="ToolJet - Widget Reference - Table" />
+<img className="screenshot-full" src="/img/widgets/table/datetype.png" alt="JumpStart - Widget Reference - Table" />
 
 </div>
 
@@ -223,7 +223,7 @@ The "Object fit" option allows you to choose how the image should be fitted with
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/table/imagetype.png" alt="ToolJet - Widget Reference - Table" />
+<img className="screenshot-full" src="/img/widgets/table/imagetype.png" alt="JumpStart - Widget Reference - Table" />
 
 </div>
 
@@ -310,7 +310,7 @@ The **column data** field expects a JSON value:
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/table/dynamic_column.png" alt="ToolJet - Widget Reference - Table" />
+<img className="screenshot-full" src="/img/widgets/table/dynamic_column.png" alt="JumpStart - Widget Reference - Table" />
 
 </div>
 
@@ -337,7 +337,7 @@ If the condition is true, the validation passes, otherwise return a string that 
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/table/action2.png" alt="ToolJet - Widget Reference - Table" width="800" />
+<img className="screenshot-full" src="/img/widgets/table/action2.png" alt="JumpStart - Widget Reference - Table" width="800" />
 
 </div>
 

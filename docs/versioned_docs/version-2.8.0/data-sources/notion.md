@@ -4,10 +4,10 @@ title: Notion
 ---
 # Notion
 
-ToolJet can connect to a Notion workspace to do operations on notion pages, databases and blocks.
+JumpStart can connect to a Notion workspace to do operations on notion pages, databases and blocks.
 ## Connection
 
-For integrating Notion with ToolJet we will need the API token. The API token can be generated from your Notion workspace settings. Read the official Notion docs for [Creating an internal integration with notion API](https://www.notion.so/help/create-integrations-with-the-notion-api).
+For integrating Notion with JumpStart we will need the API token. The API token can be generated from your Notion workspace settings. Read the official Notion docs for [Creating an internal integration with notion API](https://www.notion.so/help/create-integrations-with-the-notion-api).
 
 <div style={{textAlign: 'center'}}>
 

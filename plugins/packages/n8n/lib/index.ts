@@ -1,4 +1,4 @@
-import { QueryError, QueryResult, QueryService } from '@tooljet-plugins/common';
+import { QueryError, QueryResult, QueryService } from '@jumpstart-plugins/common';
 import { QueryOptions, SourceOptions } from './types';
 import got, { HTTPError, OptionsOfTextResponseBody } from 'got';
 

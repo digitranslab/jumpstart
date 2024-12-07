@@ -5,7 +5,7 @@ title: Multi-Environment
 
 <div className='badge badge--primary heading-badge'>Available on: Enterprise Edition</div>
 
-ToolJet's **multi-environment** helps in streamlining workflows, thereby minimizing the chances of errors, and enables effective application management. Using multi-environment ensures that your ToolJet application is rigorously tested before it is made available to users.
+JumpStart's **multi-environment** helps in streamlining workflows, thereby minimizing the chances of errors, and enables effective application management. Using multi-environment ensures that your JumpStart application is rigorously tested before it is made available to users.
 
 <div style={{textAlign: 'center'}}>
 
@@ -15,7 +15,7 @@ ToolJet's **multi-environment** helps in streamlining workflows, thereby minimiz
 
 ### Environments
 
-ToolJet provides three default **environments** that serve different purposes in the application development lifecycle:
+JumpStart provides three default **environments** that serve different purposes in the application development lifecycle:
 
 1. **Development**: The Development environment is where app development and testing take place. It is a dedicated space for spp builders to build and experiment with app changes, configure components, and test app functionality. In this environment, app builders can make frequent updates, iterate on features, and debug issues without impacting the live production environment.
 
@@ -50,7 +50,7 @@ To configure connection settings for different environments, follow these steps:
 
 </div>
 
-1. When you create a new app in ToolJet, the initial version is loaded in the **Development** environment. It is only possible to create new versions from the Development environment, not from the Staging or Production environments.
+1. When you create a new app in JumpStart, the initial version is loaded in the **Development** environment. It is only possible to create new versions from the Development environment, not from the Staging or Production environments.
 
  <div style={{textAlign: 'center'}}>
 
@@ -109,4 +109,4 @@ To configure connection settings for different environments, follow these steps:
  Please note that only one version of the app can be released at a time.
  :::
 
-ToolJet's app builder remembers your last editing state. When you reopen an app, it resumes from where you left off, ensuring a seamless experience. For instance, if you edited an app in the staging environment, it will open in the staging environment when you return.
+JumpStart's app builder remembers your last editing state. When you reopen an app, it resumes from where you left off, ensuring a seamless experience. For instance, if you edited an app in the staging environment, it will open in the staging environment when you return.

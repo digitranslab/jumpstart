@@ -1,11 +1,11 @@
 {
-  "name": "@tooljet/cli",
-  "description": "tooljet cli tool",
+  "name": "@jumpstart/cli",
+  "description": "jumpstart cli tool",
   "version": "0.0.14",
   "bin": {
-    "tooljet": "./bin/run"
+    "jumpstart": "./bin/run"
   },
-  "bugs": "https://github.com/tooljet/tooljet/issues",
+  "bugs": "https://github.com/digitranslab/jumpstart/issues",
   "dependencies": {
     "@oclif/core": "^1.6.0",
     "@oclif/plugin-help": "^5.1.12",
@@ -47,15 +47,15 @@
     "/npm-shrinkwrap.json",
     "/oclif.manifest.json"
   ],
-  "homepage": "https://github.com/tooljet/tooljet",
+  "homepage": "https://github.com/digitranslab/jumpstart",
   "keywords": [
-    "tooljet",
-    "tooljet-cli"
+    "jumpstart",
+    "jumpstart-cli"
   ],
   "license": "MIT",
   "main": "dist/index.js",
   "oclif": {
-    "bin": "tooljet",
+    "bin": "jumpstart",
     "commands": "./dist/commands",
     "plugins": [],
     "topicSeparator": " ",
@@ -67,7 +67,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tooljet/tooljet.git"
+    "url": "git+https://github.com/digitranslab/jumpstart.git"
   },
   "scripts": {
     "build": "shx rm -rf dist && tsc -b",

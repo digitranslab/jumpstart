@@ -32,7 +32,7 @@ describe('organizations controller', () => {
     });
 
     it('should list organization users', async () => {
-      const userData = await createUser(app, { email: 'admin@tooljet.io' });
+      const userData = await createUser(app, { email: 'admin@jumpstart.io' });
       const { user, orgUser } = userData;
 
       const loggedUser = await authenticateUser(app);
@@ -67,7 +67,7 @@ describe('organizations controller', () => {
       });
       it('should create new organization if Multi-Workspace supported', async () => {
         const { user, organization } = await createUser(app, {
-          email: 'admin@tooljet.io',
+          email: 'admin@jumpstart.io',
         });
 
         const loggedUser = await authenticateUser(app);
@@ -86,7 +86,7 @@ describe('organizations controller', () => {
       });
 
       it('should throw error if name is empty', async () => {
-        const { user } = await createUser(app, { email: 'admin@tooljet.io' });
+        const { user } = await createUser(app, { email: 'admin@jumpstart.io' });
         const loggedUser = await authenticateUser(app);
         const response = await request(app.getHttpServer())
           .post('/api/organizations')
@@ -98,7 +98,7 @@ describe('organizations controller', () => {
       });
 
       it('should throw error if name is longer than 50 characters', async () => {
-        const { user } = await createUser(app, { email: 'admin@tooljet.io' });
+        const { user } = await createUser(app, { email: 'admin@jumpstart.io' });
         const loggedUser = await authenticateUser(app);
         const response = await request(app.getHttpServer())
           .post('/api/organizations')
@@ -111,7 +111,7 @@ describe('organizations controller', () => {
 
       it('should create new organization if Multi-Workspace supported and user logged in via SSO', async () => {
         const { user, organization } = await createUser(app, {
-          email: 'admin@tooljet.io',
+          email: 'admin@jumpstart.io',
         });
         const loggedUser = await authenticateUser(app);
         const response = await request(app.getHttpServer())
@@ -127,24 +127,24 @@ describe('organizations controller', () => {
     describe('update organization', () => {
       it('should change organization params if changes are done by admin', async () => {
         const { user, organization } = await createUser(app, {
-          email: 'admin@tooljet.io',
+          email: 'admin@jumpstart.io',
         });
         const loggedUser = await authenticateUser(app);
         const response = await request(app.getHttpServer())
           .patch('/api/organizations')
-          .send({ name: 'new name', domain: 'tooljet.io', enableSignUp: true })
+          .send({ name: 'new name', domain: 'jumpstart.io', enableSignUp: true })
           .set('tj-workspace-id', user.defaultOrganizationId)
           .set('Cookie', loggedUser.tokenCookie);
 
         expect(response.statusCode).toBe(200);
         await organization.reload();
         expect(organization.name).toBe('new name');
-        expect(organization.domain).toBe('tooljet.io');
+        expect(organization.domain).toBe('jumpstart.io');
         expect(organization.enableSignUp).toBeTruthy();
       });
 
       it('should throw error if name is longer than 50 characters', async () => {
-        const { user } = await createUser(app, { email: 'admin@tooljet.io' });
+        const { user } = await createUser(app, { email: 'admin@jumpstart.io' });
         const loggedUser = await authenticateUser(app);
 
         const response = await request(app.getHttpServer())
@@ -157,16 +157,16 @@ describe('organizations controller', () => {
       });
 
       it('should not change organization params if changes are not done by admin', async () => {
-        const { organization } = await createUser(app, { email: 'admin@tooljet.io' });
+        const { organization } = await createUser(app, { email: 'admin@jumpstart.io' });
         const developerUserData = await createUser(app, {
-          email: 'developer@tooljet.io',
+          email: 'developer@jumpstart.io',
           groups: ['all_users'],
           organization,
         });
-        const loggedUser = await authenticateUser(app, 'developer@tooljet.io');
+        const loggedUser = await authenticateUser(app, 'developer@jumpstart.io');
         const response = await request(app.getHttpServer())
           .patch('/api/organizations')
-          .send({ name: 'new name', domain: 'tooljet.io', enableSignUp: true })
+          .send({ name: 'new name', domain: 'jumpstart.io', enableSignUp: true })
           .set('tj-workspace-id', developerUserData.user.defaultOrganizationId)
           .set('Cookie', loggedUser.tokenCookie);
 
@@ -176,7 +176,7 @@ describe('organizations controller', () => {
     describe('update organization configs', () => {
       it('should change organization configs if changes are done by admin', async () => {
         const { user } = await createUser(app, {
-          email: 'admin@tooljet.io',
+          email: 'admin@jumpstart.io',
         });
         const loggedUser = await authenticateUser(app);
         const response = await request(app.getHttpServer())
@@ -195,7 +195,7 @@ describe('organizations controller', () => {
 
       it('should not change organization configs if changes are not done by admin', async () => {
         const { user } = await createUser(app, {
-          email: 'admin@tooljet.io',
+          email: 'admin@jumpstart.io',
           groups: ['all_users'],
         });
         const loggedUser = await authenticateUser(app);
@@ -211,7 +211,7 @@ describe('organizations controller', () => {
     describe('get organization configs', () => {
       it('should get organization details if requested by admin', async () => {
         const { user, organization } = await createUser(app, {
-          email: 'admin@tooljet.io',
+          email: 'admin@jumpstart.io',
         });
         const loggedUser = await authenticateUser(app);
         const response = await request(app.getHttpServer())
@@ -244,7 +244,7 @@ describe('organizations controller', () => {
 
       it('should not get organization configs if request not done by admin', async () => {
         const { user } = await createUser(app, {
-          email: 'admin@tooljet.io',
+          email: 'admin@jumpstart.io',
           groups: ['all_users'],
         });
         const loggedUser = await authenticateUser(app);
@@ -260,7 +260,7 @@ describe('organizations controller', () => {
     describe('get public organization configs', () => {
       it('should get organization specific details for all users for multiple organization deployment', async () => {
         const { user, organization } = await createUser(app, {
-          email: 'admin@tooljet.io',
+          email: 'admin@jumpstart.io',
         });
         const loggedUser = await authenticateUser(app);
         const response = await request(app.getHttpServer())
@@ -320,7 +320,7 @@ describe('organizations controller', () => {
           }
         });
         const { user, organization } = await createUser(app, {
-          email: 'admin@tooljet.io',
+          email: 'admin@jumpstart.io',
         });
 
         const loggedUser = await authenticateUser(app);
@@ -387,7 +387,7 @@ describe('organizations controller', () => {
           }
         });
         const { user, organization } = await createUser(app, {
-          email: 'admin@tooljet.io',
+          email: 'admin@jumpstart.io',
         });
 
         const loggedUser = await authenticateUser(app);

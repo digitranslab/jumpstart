@@ -3,15 +3,15 @@ id: zendesk
 title: Zendesk
 ---
 
-ToolJet can connect to Zendesk APIs to read and write data using OAuth 2.0, which helps us to limit an application's access to a user's account.
+JumpStart can connect to Zendesk APIs to read and write data using OAuth 2.0, which helps us to limit an application's access to a user's account.
 
 <div style={{paddingTop:'24px'}}>
 
 ## Connection 
 
-To establish a connection with the Zendesk data source, you can either click on the **+ Add new Data source** button located on the query panel or navigate to the **[Data Sources](/docs/data-sources/overview)** page from the ToolJet dashboard and choose Zendesk as the data source.
+To establish a connection with the Zendesk data source, you can either click on the **+ Add new Data source** button located on the query panel or navigate to the **[Data Sources](/docs/data-sources/overview)** page from the JumpStart dashboard and choose Zendesk as the data source.
 
-ToolJet connects to your Zendesk app using :
+JumpStart connects to your Zendesk app using :
 - **Zendesk Sub-domain**
 - **Client ID**
 - **Client Secret**
@@ -37,7 +37,7 @@ You must first be a verified user to make Zendesk API requests. This is configur
 3. Select the desired operation and enter the required parameters.
 4. Click on the **Preview** button to preview the output or Click on the **Run** button to trigger the query.
 
-<img className="screenshot-full" src="/img/datasource-reference/zendesk/zendesk-v2.gif" alt="ToolJet - Data source - Zendesk" />
+<img className="screenshot-full" src="/img/datasource-reference/zendesk/zendesk-v2.gif" alt="JumpStart - Data source - Zendesk" />
 
 </div>
 
@@ -58,7 +58,7 @@ You must first be a verified user to make Zendesk API requests. This is configur
 ### List Tickets
 Lists all the tickets in your Zendesk account.
 
-<img className="screenshot-full" src="/img/datasource-reference/zendesk/list-tickets.png" alt="ToolJet - Data source - Zendesk" />
+<img className="screenshot-full" src="/img/datasource-reference/zendesk/list-tickets.png" alt="JumpStart - Data source - Zendesk" />
 
 ### List Requested Tickets
 Lists all the tickets requested by the user. 
@@ -66,7 +66,7 @@ Lists all the tickets requested by the user.
 #### Required Parameter
 - **User ID** 
 
-<img className="screenshot-full" src="/img/datasource-reference/zendesk/list-requested-tickets.png" alt="ToolJet - Data source - Zendesk" />
+<img className="screenshot-full" src="/img/datasource-reference/zendesk/list-requested-tickets.png" alt="JumpStart - Data source - Zendesk" />
 
 ### Show Tickets
 Gets a ticket's properties with the given ID, though not the ticket comments.
@@ -74,7 +74,7 @@ Gets a ticket's properties with the given ID, though not the ticket comments.
 #### Required Parameter
 - **Ticket ID** 
 
-<img className="screenshot-full" src="/img/datasource-reference/zendesk/show.png" alt="ToolJet - Data source - Zendesk" />
+<img className="screenshot-full" src="/img/datasource-reference/zendesk/show.png" alt="JumpStart - Data source - Zendesk" />
 
 ### Update Tickets
 Updates a ticket's properties with the given ID.
@@ -83,12 +83,12 @@ Updates a ticket's properties with the given ID.
 - **Ticket ID** 
 - **Body**
 
-<img className="screenshot-full" src="/img/datasource-reference/zendesk/update.png" alt="ToolJet - Data source - Zendesk" />
+<img className="screenshot-full" src="/img/datasource-reference/zendesk/update.png" alt="JumpStart - Data source - Zendesk" />
 
 ### List Users
 Lists all the users in your Zendesk account.
 
-<img className="screenshot-full" src="/img/datasource-reference/zendesk/list-users.png" alt="ToolJet - Data source - Zendesk" />
+<img className="screenshot-full" src="/img/datasource-reference/zendesk/list-users.png" alt="JumpStart - Data source - Zendesk" />
 
 ### Get User
 Gets a user's profile with the given ID.
@@ -96,7 +96,7 @@ Gets a user's profile with the given ID.
 #### Required Parameter
 - **User ID** 
 
-<img className="screenshot-full" src="/img/datasource-reference/zendesk/get.png" alt="ToolJet - Data source - Zendesk" />
+<img className="screenshot-full" src="/img/datasource-reference/zendesk/get.png" alt="JumpStart - Data source - Zendesk" />
 
 ### Search
 
@@ -111,6 +111,6 @@ Common filters include:
 - `type:organization`
 - `type:ticket organization:12345 status:open`
 
-<img className="screenshot-full" src="/img/datasource-reference/zendesk/search.png" alt="ToolJet - Data source - Zendesk" />
+<img className="screenshot-full" src="/img/datasource-reference/zendesk/search.png" alt="JumpStart - Data source - Zendesk" />
 
 </div>

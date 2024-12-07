@@ -5,7 +5,7 @@ title: Run Actions from RunJS query
 
 # Run `Actions` from RunJS query
 
-Now you can trigger all the `actions` available in ToolJet from within the `RunJS` query. This guide includes the syntax for each action along with the example.
+Now you can trigger all the `actions` available in JumpStart from within the `RunJS` query. This guide includes the syntax for each action along with the example.
 
 ### Run Query
 
@@ -23,7 +23,7 @@ await actions.runQuery('queryName')
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - How To - Run Actions from RunJS query](/img/how-to/run-actions-from-runjs/runquery.png)
+![JumpStart - How To - Run Actions from RunJS query](/img/how-to/run-actions-from-runjs/runquery.png)
 
 </div>
 
@@ -39,7 +39,7 @@ actions.setVariable(variableName, variableValue)
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - How To - Run Actions from RunJS query](/img/how-to/run-actions-from-runjs/setvariable.png)
+![JumpStart - How To - Run Actions from RunJS query](/img/how-to/run-actions-from-runjs/setvariable.png)
 
 </div>
 
@@ -55,7 +55,7 @@ actions.unSetVariable(variableName)
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - How To - Run Actions from RunJS query](/img/how-to/run-actions-from-runjs/unsetvariable.png)
+![JumpStart - How To - Run Actions from RunJS query](/img/how-to/run-actions-from-runjs/unsetvariable.png)
 
 </div>
 
@@ -67,11 +67,11 @@ actions.unSetVariable(variableName)
 actions.logout()
 ```
 
-**Example:** Triggering `actions.logout()` will log out the current logged in user from the ToolJet and will redirect to sign in page.
+**Example:** Triggering `actions.logout()` will log out the current logged in user from the JumpStart and will redirect to sign in page.
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - How To - Run Actions from RunJS query](/img/how-to/run-actions-from-runjs/logout.png)
+![JumpStart - How To - Run Actions from RunJS query](/img/how-to/run-actions-from-runjs/logout.png)
 
 </div>
 
@@ -87,7 +87,7 @@ actions.showModal('modalName')
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - How To - Run Actions from RunJS query](/img/how-to/run-actions-from-runjs/showmodal.png)
+![JumpStart - How To - Run Actions from RunJS query](/img/how-to/run-actions-from-runjs/showmodal.png)
 
 </div>
 
@@ -103,7 +103,7 @@ actions.closeModal('modalName')
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - How To - Run Actions from RunJS query](/img/how-to/run-actions-from-runjs/closemodal.png)
+![JumpStart - How To - Run Actions from RunJS query](/img/how-to/run-actions-from-runjs/closemodal.png)
 
 </div>
 
@@ -117,7 +117,7 @@ actions.setLocalStorage('key','value')
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - How To - Run Actions from RunJS query](/img/how-to/run-actions-from-runjs/setlocalstorage.png)
+![JumpStart - How To - Run Actions from RunJS query](/img/how-to/run-actions-from-runjs/setlocalstorage.png)
 
 </div>
 
@@ -131,7 +131,7 @@ actions.copyToClipboard('contentToCopy')
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - How To - Run Actions from RunJS query](/img/how-to/run-actions-from-runjs/copytoclipboard.png)
+![JumpStart - How To - Run Actions from RunJS query](/img/how-to/run-actions-from-runjs/copytoclipboard.png)
 
 </div>
 
@@ -147,7 +147,7 @@ actions.generateFile('fileName', 'fileType', 'data')
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - How To - Run Actions from RunJS query](/img/how-to/run-actions-from-runjs/generatefile.png)
+![JumpStart - How To - Run Actions from RunJS query](/img/how-to/run-actions-from-runjs/generatefile.png)
 
 </div>
 
@@ -164,7 +164,7 @@ actions.goToApp('slug',queryparams)
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - How To - Run Actions from RunJS query](/img/how-to/run-actions-from-runjs/gotoapp1.png)
+![JumpStart - How To - Run Actions from RunJS query](/img/how-to/run-actions-from-runjs/gotoapp1.png)
 
 </div>
 
@@ -178,7 +178,7 @@ actions.showAlert(alert type , message ) // alert types are info, success, warni
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - How To - Run Actions from RunJS query](/img/how-to/run-actions-from-runjs/showalert.png)
+![JumpStart - How To - Run Actions from RunJS query](/img/how-to/run-actions-from-runjs/showalert.png)
 
 </div>
 

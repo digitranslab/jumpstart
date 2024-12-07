@@ -4,11 +4,11 @@ title: DynamoDB
 ---
 # DynamoDB
 
-DynamoDB is a managed non-relational database service provided by Amazon. ToolJet has the capability to connect to DynamoDB for reading and writing data.
+DynamoDB is a managed non-relational database service provided by Amazon. JumpStart has the capability to connect to DynamoDB for reading and writing data.
 
 ## Connection
 
-To establish a connection with the DynamoDB global datasource, you can either click on the `+Add new global datasource` button located on the query panel or navigate to the **[Global Datasources](/docs/data-sources/overview)** page through the ToolJet dashboard.
+To establish a connection with the DynamoDB global datasource, you can either click on the `+Add new global datasource` button located on the query panel or navigate to the **[Global Datasources](/docs/data-sources/overview)** page through the JumpStart dashboard.
 
 <div style={{textAlign: 'center'}}>
 
@@ -16,7 +16,7 @@ To establish a connection with the DynamoDB global datasource, you can either cl
 
 </div>
 
-ToolJet supports connecting to DynamoDB using three methods: **IAM credentials**, **AWS Instance Profile**, or **AWS ARN Role**.
+JumpStart supports connecting to DynamoDB using three methods: **IAM credentials**, **AWS Instance Profile**, or **AWS ARN Role**.
 
 When using **IAM credentials**, you will need to provide the following information:
 
@@ -24,19 +24,19 @@ When using **IAM credentials**, you will need to provide the following informati
 - **Access key**
 - **Secret key**
 
-It is recommended to create a dedicated IAM user for the database in order to have granular control over ToolJet's access levels.
+It is recommended to create a dedicated IAM user for the database in order to have granular control over JumpStart's access levels.
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/datasource-reference/dynamodb/iam.png" alt="ToolJet - DynamoDB connection" width="600" />
+<img className="screenshot-full" src="/img/datasource-reference/dynamodb/iam.png" alt="JumpStart - DynamoDB connection" width="600" />
 
 </div>
 
-To connect to DynamoDB using an **AWS Instance Profile**, select the option to **Use AWS Instance Profile**. This will utilize the IAM role attached to the EC2 instance where ToolJet is running. The WebIdentityToken parameter obtained from a successful login with an identity provider is used to access the metadata service of an ECS container and the EC2 instance.
+To connect to DynamoDB using an **AWS Instance Profile**, select the option to **Use AWS Instance Profile**. This will utilize the IAM role attached to the EC2 instance where JumpStart is running. The WebIdentityToken parameter obtained from a successful login with an identity provider is used to access the metadata service of an ECS container and the EC2 instance.
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/datasource-reference/dynamodb/awsinstance.png" alt="ToolJet - DynamoDB connection" width="600" />
+<img className="screenshot-full" src="/img/datasource-reference/dynamodb/awsinstance.png" alt="JumpStart - DynamoDB connection" width="600" />
 
 </div>
 
@@ -47,12 +47,12 @@ If you prefer to use an **AWS ARN Role**, you will need to provide the following
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/datasource-reference/dynamodb/arn.png" alt="ToolJet - DynamoDB connection" width="600" />
+<img className="screenshot-full" src="/img/datasource-reference/dynamodb/arn.png" alt="JumpStart - DynamoDB connection" width="600" />
 
 </div>
 
 :::info
-Click the **Test connection** button to verify the correctness of the provided credentials and the accessibility of the database to the ToolJet server. Finally, click the **Save** button to save the data source configuration.
+Click the **Test connection** button to verify the correctness of the provided credentials and the accessibility of the database to the JumpStart server. Finally, click the **Save** button to save the data source configuration.
 :::
 
 ## Querying DynamoDB
@@ -61,7 +61,7 @@ To perform queries on DynamoDB, click the `+` button in the query manager locate
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/datasource-reference/dynamodb/queries.png" alt="ToolJet - DynamoDB connection" />
+<img className="screenshot-full" src="/img/datasource-reference/dynamodb/queries.png" alt="JumpStart - DynamoDB connection" />
 
 </div>
 
@@ -77,7 +77,7 @@ Returns an array of table names associated with the current account and endpoint
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/datasource-reference/dynamodb/listtables.png" alt="ToolJet - DynamoDB operations" />
+<img className="screenshot-full" src="/img/datasource-reference/dynamodb/listtables.png" alt="JumpStart - DynamoDB operations" />
 
 </div>
 
@@ -104,7 +104,7 @@ Syntax for Key name:
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/datasource-reference/dynamodb/getitem.png" alt="ToolJet - DynamoDB operations" />
+<img className="screenshot-full" src="/img/datasource-reference/dynamodb/getitem.png" alt="JumpStart - DynamoDB operations" />
 
 </div>
 
@@ -135,7 +135,7 @@ Syntax for Query condition:
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/datasource-reference/dynamodb/querytable.png" alt="ToolJet - DynamoDB operations" />
+<img className="screenshot-full" src="/img/datasource-reference/dynamodb/querytable.png" alt="JumpStart - DynamoDB operations" />
 
 </div>
 
@@ -154,7 +154,7 @@ Syntax for Scan condition:
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/datasource-reference/dynamodb/scantable.png" alt="ToolJet - DynamoDB operations" />
+<img className="screenshot-full" src="/img/datasource-reference/dynamodb/scantable.png" alt="JumpStart - DynamoDB operations" />
 
 </div>
 
@@ -184,6 +184,6 @@ Syntax for Key name:
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/datasource-reference/dynamodb/deleteitem.png" alt="ToolJet - DynamoDB operations" />
+<img className="screenshot-full" src="/img/datasource-reference/dynamodb/deleteitem.png" alt="JumpStart - DynamoDB operations" />
 
 </div>

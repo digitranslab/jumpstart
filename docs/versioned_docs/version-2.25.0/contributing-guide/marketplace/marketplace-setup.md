@@ -3,7 +3,7 @@ id: marketplace-setup
 title: 'Marketplace: Development Setup'
 ---
 
-The Marketplace offers custom plugins that can be installed in your ToolJet instance. This guide aims to assist you in creating a new plugin for the ToolJet marketplace.
+The Marketplace offers custom plugins that can be installed in your JumpStart instance. This guide aims to assist you in creating a new plugin for the JumpStart marketplace.
 
 ## Requirements
 - [Node.js](https://nodejs.org/en/download/) **(v18.3.0)**
@@ -11,12 +11,12 @@ The Marketplace offers custom plugins that can be installed in your ToolJet inst
 
 ## Getting started
 
-### Step 1. Setup ToolJet locally
+### Step 1. Setup JumpStart locally
 
-To obtain the ToolJet repository via git, use the command:
+To obtain the JumpStart repository via git, use the command:
 
 ```bash
-git clone https://github.com/ToolJet/ToolJet.git
+git clone https://github.com/digitranslab/jumpstart.git
 ```
 
 Next, refer to the appropriate guide for your development environment to follow the Setup instructions:
@@ -27,7 +27,7 @@ Next, refer to the appropriate guide for your development environment to follow 
 
 ### Step 2. Enabling the marketplace for your instance
 
-To enable the marketplace for your ToolJet instance, you need to specify the following environment variables in your **`.env`** file:
+To enable the marketplace for your JumpStart instance, you need to specify the following environment variables in your **`.env`** file:
 
 #### Marketplace feature enable
 
@@ -46,19 +46,19 @@ The use of this environment variable facilitates plugin development by enabling 
 | ENABLE_MARKETPLACE_DEV_MODE | `true` or `false` |
 
 
-Please note that the marketplace is not enabled by default. After updating the variable, restart your ToolJet instance. 
+Please note that the marketplace is not enabled by default. After updating the variable, restart your JumpStart instance. 
 
-For information on running ToolJet on your local machine, please refer to the instructions provided **[here](/docs/2.25.0/contributing-guide/setup/architecture)**. You can access the marketplace by navigating to the **'/integrations'** route.
+For information on running JumpStart on your local machine, please refer to the instructions provided **[here](/docs/2.25.0/contributing-guide/setup/architecture)**. You can access the marketplace by navigating to the **'/integrations'** route.
 
 
-### Step 3: Installation of tooljet-cli
+### Step 3: Installation of jumpstart-cli
 
-In order to manage plugins for the ToolJet marketplace, including creating, updating, and deleting, you will need to utilize **[tooljet-cli](https://www.npmjs.com/package/@tooljet/cli)**. This can be installed via npm by entering the following command:
+In order to manage plugins for the JumpStart marketplace, including creating, updating, and deleting, you will need to utilize **[jumpstart-cli](https://www.npmjs.com/package/@jumpstart/cli)**. This can be installed via npm by entering the following command:
 ```bash
-npm install -g @tooljet/cli
+npm install -g @jumpstart/cli
 
 # Ensure the installation was successful
-tooljet --version
+jumpstart --version
 ```
 
 Having completed the environment setup for Marketplace Developer mode, we can proceed to the next section and commence with [developing the first plugin](/docs/contributing-guide/marketplace/creating-a-plugin).

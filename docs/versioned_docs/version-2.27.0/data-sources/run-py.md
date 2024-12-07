@@ -29,7 +29,7 @@ p1 = Person(tj_globals.currentUser.firstName, 36)
 components.text1.setText(p1.myfunc())
 ```
 
-- The above code has a function `myfunc` which returns a string and we are using a **[Component Specific Action](/docs/tooljet-concepts/component-specific-actions)** to set the Text Component's value from the Python query. 
+- The above code has a function `myfunc` which returns a string and we are using a **[Component Specific Action](/docs/jumpstart-concepts/component-specific-actions)** to set the Text Component's value from the Python query. 
 
 :::tip
 - As of now, Run Python code only supports the [Python standard library](https://docs.python.org/3/library/).
@@ -90,7 +90,7 @@ return sum(product["price"] for product in data["products"] if product["category
 ```
 
 :::info
-Issues with writing custom Python code? Ask in our [Slack community](https://www.tooljet.com/slack).
+Issues with writing custom Python code? Ask in our [Slack community](https://www.jumpstart.com/slack).
 :::
 
 ## Refer Python Query Data in Components

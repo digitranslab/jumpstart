@@ -2,13 +2,13 @@ import React, { useState, useContext } from 'react';
 import { toast } from 'react-hot-toast';
 import Drawer from '@/_ui/Drawer';
 import CreateTableForm from '../../Forms/TableForm';
-import { TooljetDatabaseContext } from '../../index';
-import { tooljetDatabaseService } from '@/_services';
+import { JumpstartDatabaseContext } from '../../index';
+import { jumpstartDatabaseService } from '@/_services';
 import { ButtonSolid } from '@/_ui/AppButton/AppButton';
 import { BreadCrumbContext } from '@/App/App';
 
 export default function CreateTableDrawer() {
-  const { organizationId, setSelectedTable, setTables } = useContext(TooljetDatabaseContext);
+  const { organizationId, setSelectedTable, setTables } = useContext(JumpstartDatabaseContext);
   const [isCreateTableDrawerOpen, setIsCreateTableDrawerOpen] = useState(false);
   const { updateSidebarNAV } = useContext(BreadCrumbContext);
 
@@ -34,7 +34,7 @@ export default function CreateTableDrawer() {
       >
         <CreateTableForm
           onCreate={(tableInfo) => {
-            tooljetDatabaseService.findAll(organizationId).then(({ data = [], error }) => {
+            jumpstartDatabaseService.findAll(organizationId).then(({ data = [], error }) => {
               if (error) {
                 toast.error(error?.message ?? 'Failed to fetch tables');
                 return;

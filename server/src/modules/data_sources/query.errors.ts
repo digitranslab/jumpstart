@@ -1,3 +1,3 @@
-import { QueryError, OAuthUnauthorizedClientError } from '@tooljet/plugins/dist/server';
+import { QueryError, OAuthUnauthorizedClientError } from '@jumpstart/plugins/dist/server';
 
 export { QueryError, OAuthUnauthorizedClientError };

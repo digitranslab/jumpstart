@@ -17,7 +17,7 @@ import {
   sanitizeHeaders,
   sanitizeSearchParams,
   getAuthUrl,
-} from '@tooljet-plugins/common';
+} from '@jumpstart-plugins/common';
 const FormData = require('form-data');
 const JSON5 = require('json5');
 import got, { HTTPError, OptionsOfTextResponseBody } from 'got';

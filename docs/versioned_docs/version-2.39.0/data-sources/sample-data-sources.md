@@ -3,9 +3,9 @@ id: sample-data-sources
 title: Sample Data Sources
 ---
 
-# Sample Data Source in ToolJet
+# Sample Data Source in JumpStart
 
-ToolJet includes a built-in PostgreSQL sample data source that allows you to familiarize yourself with its features and components before connecting your own data. This database contains example tables and data for hands-on experimentation. The sample data source is a shared PostgreSQL connection available across all workspaces and applications. This means any changes or updates made to the data will be reflected in real-time for all users, regardless of the application or workspace. If are using ToolJet Cloud, the sample data resets daily at midnight. However, if you are using a self-hosted version of ToolJet, the data will not be reset.
+JumpStart includes a built-in PostgreSQL sample data source that allows you to familiarize yourself with its features and components before connecting your own data. This database contains example tables and data for hands-on experimentation. The sample data source is a shared PostgreSQL connection available across all workspaces and applications. This means any changes or updates made to the data will be reflected in real-time for all users, regardless of the application or workspace. If are using JumpStart Cloud, the sample data resets daily at midnight. However, if you are using a self-hosted version of JumpStart, the data will not be reset.
 
 
 ### Getting Started with Sample Data Sources

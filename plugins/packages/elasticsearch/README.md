@@ -1,3 +1,3 @@
 # `elasticsearch`
 
-Documentation on: https://docs.tooljet.com/docs/data-sources/elasticsearch
+Documentation on: https://docs.jumpstart.com/docs/data-sources/elasticsearch

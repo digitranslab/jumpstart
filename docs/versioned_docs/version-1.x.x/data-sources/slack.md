@@ -5,11 +5,11 @@ title: Slack
 
 # Slack
 
-ToolJet can connect to your Slack workspace to send messages. 
+JumpStart can connect to your Slack workspace to send messages. 
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - Data source - Slack](/img/datasource-reference/slack/connect.png)
+![JumpStart - Data source - Slack](/img/datasource-reference/slack/connect.png)
 
 </div>
 
@@ -23,7 +23,7 @@ ToolJet can connect to your Slack workspace to send messages.
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - Data source - Slack](/img/datasource-reference/slack/authorize.png)
+![JumpStart - Data source - Slack](/img/datasource-reference/slack/authorize.png)
 
 </div>
 
@@ -44,7 +44,7 @@ This operation will return the data of all the members in your slack workspace.
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - Data source - Slack](/img/datasource-reference/slack/listmembers.png)
+![JumpStart - Data source - Slack](/img/datasource-reference/slack/listmembers.png)
 
 </div>
 
@@ -59,7 +59,7 @@ This operation will send/post the message to a specified channel or posting to d
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - Data source - Slack](/img/datasource-reference/slack/sendmessage.png)
+![JumpStart - Data source - Slack](/img/datasource-reference/slack/sendmessage.png)
 
 </div>
 

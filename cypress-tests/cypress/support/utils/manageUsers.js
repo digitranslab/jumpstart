@@ -174,11 +174,11 @@ export const confirmInviteElements = (email) => {
   cy.get(commonSelectors.termsOfServiceLink)
     .verifyVisibleElement("have.text", commonText.termsOfServiceLink)
     .and("have.attr", "href")
-    .and("equal", "https://www.tooljet.com/terms");
+    .and("equal", "https://www.jumpstart.com/terms");
   cy.get(commonSelectors.privacyPolicyLink)
     .verifyVisibleElement("have.text", commonText.privacyPolicyLink)
     .and("have.attr", "href")
-    .and("equal", "https://www.tooljet.com/privacy");
+    .and("equal", "https://www.jumpstart.com/privacy");
 
   cy.get("body").then(($el) => {
     if ($el.text().includes("Google")) {

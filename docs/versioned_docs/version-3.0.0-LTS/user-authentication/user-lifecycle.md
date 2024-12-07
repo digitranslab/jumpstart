@@ -17,7 +17,7 @@ Check Workspace docs [here](/docs/org-management/workspaces/workspace_overview).
 
     <div style={{textAlign: 'center'}}>
 
-      <img style={{ width:'100%', border:'0', marginBottom:'15px', borderRadius:'5px', boxShadow: '0px 1px 3px rgba(0, 0, 0, 0.2)' }} className="screenshot-full" src="/img/user-lifecycle/signup-mw.png" alt="ToolJet - Workspace sign up" />
+      <img style={{ width:'100%', border:'0', marginBottom:'15px', borderRadius:'5px', boxShadow: '0px 1px 3px rgba(0, 0, 0, 0.2)' }} className="screenshot-full" src="/img/user-lifecycle/signup-mw.png" alt="JumpStart - Workspace sign up" />
 
     </div>
 
@@ -25,7 +25,7 @@ Check Workspace docs [here](/docs/org-management/workspaces/workspace_overview).
 
     <div style={{textAlign: 'center'}}>
 
-    <img style={{ width:'100%', border:'0', marginBottom:'15px', borderRadius:'5px', boxShadow: '0px 1px 3px rgba(0, 0, 0, 0.2)' }} className="screenshot-full" src="/img/user-lifecycle/user-mw.png" alt="ToolJet - Workspace sign up" />
+    <img style={{ width:'100%', border:'0', marginBottom:'15px', borderRadius:'5px', boxShadow: '0px 1px 3px rgba(0, 0, 0, 0.2)' }} className="screenshot-full" src="/img/user-lifecycle/user-mw.png" alt="JumpStart - Workspace sign up" />
 
     </div>
 
@@ -33,7 +33,7 @@ Check Workspace docs [here](/docs/org-management/workspaces/workspace_overview).
 
     <div style={{textAlign: 'center'}}>
 
-    <img style={{ width:'100%', border:'0', marginBottom:'15px', borderRadius:'5px', boxShadow: '0px 1px 3px rgba(0, 0, 0, 0.2)' }} className="screenshot-full" src="/img/user-lifecycle/invite-link-mw.png" alt="ToolJet - Workspace sign up" />
+    <img style={{ width:'100%', border:'0', marginBottom:'15px', borderRadius:'5px', boxShadow: '0px 1px 3px rgba(0, 0, 0, 0.2)' }} className="screenshot-full" src="/img/user-lifecycle/invite-link-mw.png" alt="JumpStart - Workspace sign up" />
 
     </div>
 
@@ -41,7 +41,7 @@ Check Workspace docs [here](/docs/org-management/workspaces/workspace_overview).
 
     <div style={{textAlign: 'center'}}>
 
-    <img style={{ width:'100%', border:'0', marginBottom:'15px', borderRadius:'5px', boxShadow: '0px 1px 3px rgba(0, 0, 0, 0.2)' }} className="screenshot-full" src="/img/user-lifecycle/sso-onboard-sw.png" alt="ToolJet - Workspace accept invite" />
+    <img style={{ width:'100%', border:'0', marginBottom:'15px', borderRadius:'5px', boxShadow: '0px 1px 3px rgba(0, 0, 0, 0.2)' }} className="screenshot-full" src="/img/user-lifecycle/sso-onboard-sw.png" alt="JumpStart - Workspace accept invite" />
 
     </div>
 
@@ -49,7 +49,7 @@ Check Workspace docs [here](/docs/org-management/workspaces/workspace_overview).
 
     <div style={{textAlign: 'center'}}>
 
-    <img style={{ width:'100%', border:'0', marginBottom:'15px', borderRadius:'5px', boxShadow: '0px 1px 3px rgba(0, 0, 0, 0.2)' }} className="screenshot-full" src="/img/user-lifecycle/sso-enable-signup-sw.png" alt="ToolJet - Workspace sign up using SSO" />
+    <img style={{ width:'100%', border:'0', marginBottom:'15px', borderRadius:'5px', boxShadow: '0px 1px 3px rgba(0, 0, 0, 0.2)' }} className="screenshot-full" src="/img/user-lifecycle/sso-enable-signup-sw.png" alt="JumpStart - Workspace sign up using SSO" />
 
     </div>
 
@@ -62,7 +62,7 @@ Check Workspace docs [here](/docs/org-management/workspaces/workspace_overview).
 
     <div style={{textAlign: 'center'}}>
 
-    <img style={{ width:'100%', border:'0', marginBottom:'15px', borderRadius:'5px', boxShadow: '0px 1px 3px rgba(0, 0, 0, 0.2)' }} className="screenshot-full" src="/img/user-lifecycle/archive-user.png" alt="ToolJet -Workspace Archive user" />
+    <img style={{ width:'100%', border:'0', marginBottom:'15px', borderRadius:'5px', boxShadow: '0px 1px 3px rgba(0, 0, 0, 0.2)' }} className="screenshot-full" src="/img/user-lifecycle/archive-user.png" alt="JumpStart -Workspace Archive user" />
 
     </div>
 
@@ -75,7 +75,7 @@ Check Workspace docs [here](/docs/org-management/workspaces/workspace_overview).
 
     <div style={{textAlign: 'center'}}>
 
-    <img style={{ width:'100%', border:'0', marginBottom:'15px', borderRadius:'5px', boxShadow: '0px 1px 3px rgba(0, 0, 0, 0.2)' }} className="screenshot-full" src="/img/user-lifecycle/unarchive-user-mw.png" alt="ToolJet - Single-Workspace Unarchive user" />
+    <img style={{ width:'100%', border:'0', marginBottom:'15px', borderRadius:'5px', boxShadow: '0px 1px 3px rgba(0, 0, 0, 0.2)' }} className="screenshot-full" src="/img/user-lifecycle/unarchive-user-mw.png" alt="JumpStart - Single-Workspace Unarchive user" />
 
     </div>
 
@@ -91,7 +91,7 @@ Check Workspace docs [here](/docs/org-management/workspaces/workspace_overview).
 
   <div style={{textAlign: 'center'}}>
 
-  <img style={{ width:'100%', border:'0', marginBottom:'15px', borderRadius:'5px', boxShadow: '0px 1px 3px rgba(0, 0, 0, 0.2)' }} className="screenshot-full" src="/img/user-lifecycle/switch.png" alt="ToolJet - Workspace sign up using SSO" />
+  <img style={{ width:'100%', border:'0', marginBottom:'15px', borderRadius:'5px', boxShadow: '0px 1px 3px rgba(0, 0, 0, 0.2)' }} className="screenshot-full" src="/img/user-lifecycle/switch.png" alt="JumpStart - Workspace sign up using SSO" />
 
   </div>
 
@@ -117,7 +117,7 @@ Check Workspace docs [here](/docs/org-management/workspaces/workspace_overview).
 
   <div style={{textAlign: 'center'}}>
 
-  ![ToolJet - SSO Flow](/img/user-lifecycle/sso-flow.png)
+  ![JumpStart - SSO Flow](/img/user-lifecycle/sso-flow.png)
 
   </div>
 

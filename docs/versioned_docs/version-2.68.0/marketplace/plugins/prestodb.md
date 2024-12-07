@@ -5,11 +5,11 @@ title: PrestoDB
 
 # PrestoDB
 
-ToolJet allows you to connect to your PrestoDB database to perform SQL queries and retrieve data.
+JumpStart allows you to connect to your PrestoDB database to perform SQL queries and retrieve data.
 
 ## Connection
 
-To connect to a PrestoDB data source in ToolJet, you can either click the **+Add new data source** button on the query panel or navigate to the **[Data Sources](/docs/data-sources/overview)** page in the ToolJet dashboard.
+To connect to a PrestoDB data source in JumpStart, you can either click the **+Add new data source** button on the query panel or navigate to the **[Data Sources](/docs/data-sources/overview)** page in the JumpStart dashboard.
 
 To connect to your PrestoDB database, the following details are required:
 - **Username**
@@ -37,7 +37,7 @@ Query results can be transformed using transformations. Refer to our transformat
 
 ## Supported Operations
 
-ToolJet supports executing SQL queries on PrestoDB databases.
+JumpStart supports executing SQL queries on PrestoDB databases.
 
 ### SQL Query
 

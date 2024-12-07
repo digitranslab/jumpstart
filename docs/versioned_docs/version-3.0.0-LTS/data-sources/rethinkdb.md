@@ -4,15 +4,15 @@ title: RethinkDB
 ---
 # RethinkDB
 
-ToolJet can connect to RethinkDB databases to read and write data. For more info visit this [Rethink Docs](https://rethinkdb.com/api/javascript).
+JumpStart can connect to RethinkDB databases to read and write data. For more info visit this [Rethink Docs](https://rethinkdb.com/api/javascript).
 
 <div style={{paddingTop:'24px'}}>
 
 ## Connection
 
-To establish a connection with the RethinkDB data source, you can either click on the **+ Add new Data source** button located on the query panel or navigate to the **[Data Sources](/docs/data-sources/overview)** page through the ToolJet dashboard.
+To establish a connection with the RethinkDB data source, you can either click on the **+ Add new Data source** button located on the query panel or navigate to the **[Data Sources](/docs/data-sources/overview)** page through the JumpStart dashboard.
 
-ToolJet requires the following to connect to a RethinkDB data source:
+JumpStart requires the following to connect to a RethinkDB data source:
 
 - **Database**
 - **Host**

@@ -9,7 +9,7 @@ Select `Manage SSO` from workspace options
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - SSO configs](/img/password-login/organization-menu.png)
+![JumpStart - SSO configs](/img/password-login/organization-menu.png)
 
 </div>
 
@@ -17,7 +17,7 @@ Select `GitHub`, GitHub login will be disabled by default
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - SSO configs](/img/sso/git/manage-sso-1.png)
+![JumpStart - SSO configs](/img/sso/git/manage-sso-1.png)
 
 </div>
 
@@ -25,7 +25,7 @@ Enable GitHub. You can see `Redirect URL` generated
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - SSO configs](/img/sso/git/manage-sso-2.png)
+![JumpStart - SSO configs](/img/sso/git/manage-sso-2.png)
 
 </div>
 
@@ -33,7 +33,7 @@ Go to [GitHub Developer settings](https://github.com/settings/developers) and na
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - GitHub create project](/img/sso/git/create-project.png)
+![JumpStart - GitHub create project](/img/sso/git/create-project.png)
 
 </div>
 
@@ -41,7 +41,7 @@ Go to [GitHub Developer settings](https://github.com/settings/developers) and na
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - GitHub view client id](/img/sso/git/client-id.png)
+![JumpStart - GitHub view client id](/img/sso/git/client-id.png)
 
 </div>
 
@@ -49,16 +49,16 @@ Go to [GitHub Developer settings](https://github.com/settings/developers) and na
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - GitHub create client secret](/img/sso/git/client-secret.png)
+![JumpStart - GitHub create client secret](/img/sso/git/client-secret.png)
 
 </div>
 
 Lastly, enter `Client Id` and `Client Secret` in GitHub manage SSO page and save.
 
-The GitHub sign-in button will now be available in your ToolJet login screen if you have not enabled Multi-Workspace.
+The GitHub sign-in button will now be available in your JumpStart login screen if you have not enabled Multi-Workspace.
 
 :::info
-Should configure `Host Name` if you are using GitHub Enterprise self hosted. Host name should be a URL and should not ends with `/`, example: `https://github.tooljet.com`
+Should configure `Host Name` if you are using GitHub Enterprise self hosted. Host name should be a URL and should not ends with `/`, example: `https://github.jumpstart.com`
 :::
 
 ## Multi-Workspace

@@ -1,4 +1,4 @@
 
 # Amazon Athena
 
-Documentation on: https://docs.tooljet.com/docs/data-sources/athena
+Documentation on: https://docs.jumpstart.com/docs/data-sources/athena

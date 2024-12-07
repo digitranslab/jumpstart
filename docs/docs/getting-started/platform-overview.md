@@ -4,27 +4,27 @@ title: Platform Overview
 ---
 <div style={{paddingTop:'24px', paddingBottom:'24px'}}>
 
-## What is ToolJet?
+## What is JumpStart?
 
-ToolJet is a low-code platform that enables developers to rapidly build and deploy custom internal tools. It has a drag-and-drop app builder with 45 pre-built components, so developers can create complex applications in minutes. ToolJet also connects to most popular data sources and APIs out of the box, and it has a group-based permission system for easy user access management. ToolJet also comes with a lot of other features, but for now, let’s build a basic ToolJet app.
+JumpStart is a low-code platform that enables developers to rapidly build and deploy custom internal tools. It has a drag-and-drop app builder with 45 pre-built components, so developers can create complex applications in minutes. JumpStart also connects to most popular data sources and APIs out of the box, and it has a group-based permission system for easy user access management. JumpStart also comes with a lot of other features, but for now, let’s build a basic JumpStart app.
 
 </div>
 
 <div style={{paddingTop:'24px', paddingBottom:'24px'}}>
 
-## How ToolJet Works:
+## How JumpStart Works:
 
 <div style={{textAlign: 'center'}}>
     <img style={{ border:'0', marginBottom:'15px', borderRadius:'5px', boxShadow: '0px 1px 3px rgba(0, 0, 0, 0.2)' }} className="screenshot-full" src="/img/platform-overview/platform-overview-v2.png" alt="Platform Overview" />
 </div>
 
-**With ToolJet, you can streamline app development with 4 core steps:** <br/>
+**With JumpStart, you can streamline app development with 4 core steps:** <br/>
 
-**Connect Data Sources**: Leverage ToolJet's robust integration features to connect with any data source. The platform supports seamless data integration across over 50 different applications, databases, and APIs.
+**Connect Data Sources**: Leverage JumpStart's robust integration features to connect with any data source. The platform supports seamless data integration across over 50 different applications, databases, and APIs.
 
 **Design Stunning Interfaces**: Drag and drop UI components like Tables, Charts, Forms, and more build custom applications in minutes. Integrate these components with data sources and incorporate business logic through JavaScript or Python.
 
-**Automate Complex Workflows**: Develop multi-step workflows in ToolJet to automate business processes. In addition to building and automating workflows, ToolJet allows for easy integration of these workflows within your applications.
+**Automate Complex Workflows**: Develop multi-step workflows in JumpStart to automate business processes. In addition to building and automating workflows, JumpStart allows for easy integration of these workflows within your applications.
 
 **Secure and Manage**: Secure your internal tools with detailed permissions settings and audit logs. Maintain quality and consistency with version control, and keep track of performance with comprehensive observability tools.
 
@@ -32,7 +32,7 @@ ToolJet is a low-code platform that enables developers to rapidly build and depl
 
 <div style={{paddingBottom:'24px'}}>
 
-Below is a detailed overview of ToolJet's key functionalities, demonstrating how ToolJet helps teams to build more with less effort and greater efficiency. 
+Below is a detailed overview of JumpStart's key functionalities, demonstrating how JumpStart helps teams to build more with less effort and greater efficiency. 
 
 ### Visual App Builder
 Enables the creation of visually appealing front-ends with a drag-and-drop interface and pre-built components. 
@@ -56,11 +56,11 @@ Offers seamless integration with a wide range of data sources, including over 50
 
 <div style={{paddingTop:'24px', paddingBottom:'24px'}}>
 
-### ToolJet Database
+### JumpStart Database
 A robust, scalable database solution built atop PostgreSQL. It allows for no-code database management, enabling users to build, manage, and scale databases effortlessly.
 
 <div style={{textAlign: 'center'}}>
-    <img style={{ border:'0'}} className="screenshot-full" src="/img/platform-overview/tooljet-db.png" alt="ToolJet Database" />
+    <img style={{ border:'0'}} className="screenshot-full" src="/img/platform-overview/jumpstart-db.png" alt="JumpStart Database" />
 </div>
 
 </div>
@@ -124,4 +124,4 @@ Multiple users can collaboratively work on app development in real-time. Simulta
 
 </div>
 
-Whether you're a seasoned developer or a business professional, ToolJet stands out as a comprehensive solution to fast-track your internal tool development process. 
+Whether you're a seasoned developer or a business professional, JumpStart stands out as a comprehensive solution to fast-track your internal tool development process. 

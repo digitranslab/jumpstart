@@ -10,7 +10,7 @@ import cx from 'classnames';
 const Salesforce = ({ optionchanged, createDataSource, options, isSaving, selectedDataSource, workspaceConstants }) => {
   const [authStatus, setAuthStatus] = useState(null);
   const { t } = useTranslation();
-  const hostUrl = window.public_config?.TOOLJET_HOST;
+  const hostUrl = window.public_config?.JUMPSTART_HOST;
   const subPathUrl = window.public_config?.SUB_PATH;
   const fullUrl = `${hostUrl}${subPathUrl ? subPathUrl : '/'}oauth2/authorize`;
   const redirectUri = fullUrl;

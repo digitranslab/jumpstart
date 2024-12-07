@@ -5,7 +5,7 @@ title: SMTP
 
 # SMTP
 
-The SMTP datasource facilitates the connection between ToolJet applications and email servers, enabling the apps to send emails.
+The SMTP datasource facilitates the connection between JumpStart applications and email servers, enabling the apps to send emails.
 
 ## Connection
 

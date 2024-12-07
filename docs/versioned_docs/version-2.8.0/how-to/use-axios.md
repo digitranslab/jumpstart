@@ -3,7 +3,7 @@ id: use-axios-in-runjs
 title: Use Axios in RunJS
 ---
 
-ToolJet allows you to utilize the three [libraries](/docs/data-sources/run-js#libraries) - **Moment.js**, **Lodash**, and **Axios**. In this guide, we will see a few examples on how to use **Axios** library using RunJS query.
+JumpStart allows you to utilize the three [libraries](/docs/data-sources/run-js#libraries) - **Moment.js**, **Lodash**, and **Axios**. In this guide, we will see a few examples on how to use **Axios** library using RunJS query.
 
 **[Axios](https://axios-http.com/docs/intro)** is a promise-based HTTP library that lets developers make requests to either their own or a third-party server to fetch data. It offers different ways of making requests such as `GET`, `POST`, `PUT/PATCH`, and `DELETE`.
 
@@ -42,7 +42,7 @@ var data = axios.post(url,{
   id: 11,
   name: "Shubhendra",
   username: "camelcaseguy",
-  email: "shubhendra@tooljet.com",})
+  email: "shubhendra@jumpstart.com",})
 
 return data
 ```
@@ -56,7 +56,7 @@ The Axios POST request uses an object after the request URL to define the proper
 </div>
 
 :::tip
-Check out the tutorial on **[Build GitHub star history tracker](https://blog.tooljet.com/build-github-stars-history-app-in-5-minutes-using-low-code/)** that utilizes the axios library.
+Check out the tutorial on **[Build GitHub star history tracker](https://blog.jumpstart.com/build-github-stars-history-app-in-5-minutes-using-low-code/)** that utilizes the axios library.
 :::
 
 

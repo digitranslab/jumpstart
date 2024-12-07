@@ -23,7 +23,7 @@ describe("App Import Functionality", () => {
   data.appReName = `${fake.companyName}-${fake.companyName}-App`;
   let currentVersion = "";
   let otherVersions = "";
-  const toolJetImage = "cypress/fixtures/Image/tooljet.png";
+  const jumpStartImage = "cypress/fixtures/Image/jumpstart.png";
   const appFile = "cypress/fixtures/templates/test-app.json";
   let exportedFilePath;
 
@@ -41,7 +41,7 @@ describe("App Import Functionality", () => {
   it("Verify the Import functionality of an Application", () => {
     cy.visit("/");
     cy.get("body").then(($title) => {
-      if ($title.text().includes(commonText.welcomeTooljetWorkspace)) {
+      if ($title.text().includes(commonText.welcomeJumpstartWorkspace)) {
         cy.get(dashboardSelector.importAppButton).click();
       } else {
         cy.get(importSelectors.dropDownMenu).should("be.visible").click();
@@ -51,7 +51,7 @@ describe("App Import Functionality", () => {
         );
       }
     });
-    cy.get(importSelectors.importOptionInput).eq(0).selectFile(toolJetImage, {
+    cy.get(importSelectors.importOptionInput).eq(0).selectFile(jumpStartImage, {
       force: true,
     });
     cy.verifyToastMessage(

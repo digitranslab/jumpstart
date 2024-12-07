@@ -1,4 +1,4 @@
-tooljet cli
+jumpstart cli
 =================
 <!-- toc -->
 * [Usage](#usage)
@@ -7,48 +7,48 @@ tooljet cli
 # Usage
 <!-- usage -->
 ```sh-session
-$ npm install -g @tooljet/cli
-$ tooljet COMMAND
+$ npm install -g @jumpstart/cli
+$ jumpstart COMMAND
 running command...
-$ tooljet (--version)
-@tooljet/cli/0.0.13 darwin-x64 node-v14.17.3
-$ tooljet --help [COMMAND]
+$ jumpstart (--version)
+@jumpstart/cli/0.0.13 darwin-x64 node-v14.17.3
+$ jumpstart --help [COMMAND]
 USAGE
-  $ tooljet COMMAND
+  $ jumpstart COMMAND
 ...
 ```
 <!-- usagestop -->
 
-Command should be executed inside `Tooljet` directory
+Command should be executed inside `Jumpstart` directory
 
 # Commands
 <!-- commands -->
-* [`tooljet info`](#tooljet-info)
-* [`tooljet plugin create PLUGIN_NAME`](#tooljet-plugin-create-plugin_name)
-* [`tooljet plugin delete PLUGIN_NAME`](#tooljet-plugin-delete-plugin_name)
-* [`tooljet plugin install NPM_MODULE`](#tooljet-plugin-install-npm_module)
+* [`jumpstart info`](#jumpstart-info)
+* [`jumpstart plugin create PLUGIN_NAME`](#jumpstart-plugin-create-plugin_name)
+* [`jumpstart plugin delete PLUGIN_NAME`](#jumpstart-plugin-delete-plugin_name)
+* [`jumpstart plugin install NPM_MODULE`](#jumpstart-plugin-install-npm_module)
 
-## `tooljet info`
+## `jumpstart info`
 
-This command returns the information about where tooljet is being run
+This command returns the information about where jumpstart is being run
 
 ```
 USAGE
-  $ tooljet info
+  $ jumpstart info
 
 DESCRIPTION
-  This command returns the information about where tooljet is being run
+  This command returns the information about where jumpstart is being run
 ```
 
-_See code: [dist/commands/info.ts](https://github.com/tooljet/tooljet/blob/v0.0.13/dist/commands/info.ts)_
+_See code: [dist/commands/info.ts](https://github.com/digitranslab/jumpstart/blob/v0.0.13/dist/commands/info.ts)_
 
-## `tooljet plugin create PLUGIN_NAME`
+## `jumpstart plugin create PLUGIN_NAME`
 
-Create a new tooljet plugin
+Create a new jumpstart plugin
 
 ```
 USAGE
-  $ tooljet plugin create [PLUGIN_NAME] [--type database|api|cloud-storage] [-b] [-m]
+  $ jumpstart plugin create [PLUGIN_NAME] [--type database|api|cloud-storage] [-b] [-m]
 
 ARGUMENTS
   PLUGIN_NAME  Name of the plugin
@@ -59,19 +59,19 @@ FLAGS
   --type=<option>    <options: database|api|cloud-storage>
 
 DESCRIPTION
-  Create a new tooljet plugin
+  Create a new jumpstart plugin
 
 EXAMPLES
-  $ tooljet plugin create <name> --type=<database | api | cloud-storage> [--build]
+  $ jumpstart plugin create <name> --type=<database | api | cloud-storage> [--build]
 ```
 
-## `tooljet plugin delete PLUGIN_NAME`
+## `jumpstart plugin delete PLUGIN_NAME`
 
-Delete a tooljet plugin
+Delete a jumpstart plugin
 
 ```
 USAGE
-  $ tooljet plugin delete [PLUGIN_NAME] [-b]
+  $ jumpstart plugin delete [PLUGIN_NAME] [-b]
 
 ARGUMENTS
   PLUGIN_NAME  Name of the plugin
@@ -80,19 +80,19 @@ FLAGS
   -b, --build
 
 DESCRIPTION
-  Delete a tooljet plugin
+  Delete a jumpstart plugin
 
 EXAMPLES
-  $ tooljet plugin delete <name> [--build]
+  $ jumpstart plugin delete <name> [--build]
 ```
 
-## `tooljet plugin install NPM_MODULE`
+## `jumpstart plugin install NPM_MODULE`
 
-Installs a new npm module inside a tooljet plugin
+Installs a new npm module inside a jumpstart plugin
 
 ```
 USAGE
-  $ tooljet plugin install [NPM_MODULE] --plugin <value>
+  $ jumpstart plugin install [NPM_MODULE] --plugin <value>
 
 ARGUMENTS
   NPM_MODULE  Name of the npm module
@@ -101,9 +101,9 @@ FLAGS
   --plugin=<value>  (required)
 
 DESCRIPTION
-  Installs a new npm module inside a tooljet plugin
+  Installs a new npm module inside a jumpstart plugin
 
 EXAMPLES
-  $ tooljet plugin install <npm_module> --plugin <plugin_name>
+  $ jumpstart plugin install <npm_module> --plugin <plugin_name>
 ```
 <!-- commandsstop -->

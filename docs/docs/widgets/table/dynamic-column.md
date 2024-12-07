@@ -3,7 +3,7 @@ id: dynamic-column
 title: Dynamic Columns
 ---
 
-ToolJet allows users to dynamically set the columns of a **Table** component using a JSON value. This guide explains how to configure dynamic columns in ToolJet.
+JumpStart allows users to dynamically set the columns of a **Table** component using a JSON value. This guide explains how to configure dynamic columns in JumpStart.
 
 <div style={{paddingTop:'24px'}}>
 
@@ -82,7 +82,7 @@ Here, two different schemas are to be displayed based on the current user.
 
 ## Specifiying the Column Type
 
-Dynamic columns in ToolJet support various types, such as strings, numbers, dates, and links. 
+Dynamic columns in JumpStart support various types, such as strings, numbers, dates, and links. 
 
 In this example, you can see how you can specify a column type using dynamic columns.
 

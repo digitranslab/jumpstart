@@ -8,11 +8,11 @@ title: User Lifecycle
 ## Single-Workspace
 
 ### User onboarding
-- If no user is present in the system, there will be `Sign-up` option in the login page. User can sign up by entering their email address. Tooljet will be sending a welcome email with activation URL to the email address. User can follow the activation URL and onboard to ToolJet.
+- If no user is present in the system, there will be `Sign-up` option in the login page. User can sign up by entering their email address. Jumpstart will be sending a welcome email with activation URL to the email address. User can follow the activation URL and onboard to JumpStart.
 
   <div style={{textAlign: 'center'}}>
 
-  ![ToolJet - Single-Workspace sign up](/img/user-lifecycle/single-ws-signup.png)
+  ![JumpStart - Single-Workspace sign up](/img/user-lifecycle/single-ws-signup.png)
 
   </div>
 
@@ -20,15 +20,15 @@ title: User Lifecycle
 
   <div style={{textAlign: 'center'}}>
 
-  ![ToolJet - Single-Workspace invite user](/img/user-lifecycle/user-invite-sw.png)
+  ![JumpStart - Single-Workspace invite user](/img/user-lifecycle/user-invite-sw.png)
 
   </div>
 
-- Invited user will receive welcome email with activation URL, unregistered user can follow the link and setup Tooljet account
+- Invited user will receive welcome email with activation URL, unregistered user can follow the link and setup Jumpstart account
 
   <div style={{textAlign: 'center'}}>
 
-  ![ToolJet - Single-Workspace accept invite](/img/user-lifecycle/accept-invite-sw.png)
+  ![JumpStart - Single-Workspace accept invite](/img/user-lifecycle/accept-invite-sw.png)
 
   </div>
 
@@ -36,7 +36,7 @@ title: User Lifecycle
 
   <div style={{textAlign: 'center'}}>
 
-  ![ToolJet - Single-Workspace accept invite](/img/user-lifecycle/sso-onboard-sw.png)
+  ![JumpStart - Single-Workspace accept invite](/img/user-lifecycle/sso-onboard-sw.png)
 
   </div>
 
@@ -44,7 +44,7 @@ title: User Lifecycle
 
   <div style={{textAlign: 'center'}}>
 
-  ![ToolJet - Single-Workspace sign up using SSO](/img/user-lifecycle/sso-enable-signup-sw.png)
+  ![JumpStart - Single-Workspace sign up using SSO](/img/user-lifecycle/sso-enable-signup-sw.png)
 
   </div>
 
@@ -53,7 +53,7 @@ title: User Lifecycle
 
     <div style={{textAlign: 'center'}}>
 
-    ![ToolJet - Single-Workspace Archive user](/img/user-lifecycle/archive-user.png)
+    ![JumpStart - Single-Workspace Archive user](/img/user-lifecycle/archive-user.png)
 
     </div>
 
@@ -62,7 +62,7 @@ title: User Lifecycle
 
     <div style={{textAlign: 'center'}}>
 
-    ![ToolJet - Single-Workspace Unarchive user](/img/user-lifecycle/unarchive-sw.png)
+    ![JumpStart - Single-Workspace Unarchive user](/img/user-lifecycle/unarchive-sw.png)
 
     </div>
 
@@ -82,7 +82,7 @@ Check Multi-workspace docs [here](/docs/1.x.x/tutorial/multiworkspace/).
 
     <div style={{textAlign: 'center'}}>
 
-    ![ToolJet - Multi-Workspace sign up](/img/user-lifecycle/signup-mw.png)
+    ![JumpStart - Multi-Workspace sign up](/img/user-lifecycle/signup-mw.png)
 
     </div>
 
@@ -90,7 +90,7 @@ Check Multi-workspace docs [here](/docs/1.x.x/tutorial/multiworkspace/).
 
     <div style={{textAlign: 'center'}}>
 
-    ![ToolJet - Multi-Workspace sign up](/img/user-lifecycle/user-mw.png)
+    ![JumpStart - Multi-Workspace sign up](/img/user-lifecycle/user-mw.png)
 
     </div>
 
@@ -98,7 +98,7 @@ Check Multi-workspace docs [here](/docs/1.x.x/tutorial/multiworkspace/).
 
     <div style={{textAlign: 'center'}}>
 
-    ![ToolJet - Multi-Workspace sign up](/img/user-lifecycle/invite-link-mw.png)
+    ![JumpStart - Multi-Workspace sign up](/img/user-lifecycle/invite-link-mw.png)
 
     </div>
 
@@ -106,7 +106,7 @@ Check Multi-workspace docs [here](/docs/1.x.x/tutorial/multiworkspace/).
 
     <div style={{textAlign: 'center'}}>
 
-    ![ToolJet - Single-Workspace accept invite](/img/user-lifecycle/sso-onboard-sw.png)
+    ![JumpStart - Single-Workspace accept invite](/img/user-lifecycle/sso-onboard-sw.png)
 
     </div>
 
@@ -114,7 +114,7 @@ Check Multi-workspace docs [here](/docs/1.x.x/tutorial/multiworkspace/).
 
     <div style={{textAlign: 'center'}}>
 
-    ![ToolJet - Single-Workspace sign up using SSO](/img/user-lifecycle/sso-enable-signup-sw.png)
+    ![JumpStart - Single-Workspace sign up using SSO](/img/user-lifecycle/sso-enable-signup-sw.png)
 
     </div>
 
@@ -123,7 +123,7 @@ Check Multi-workspace docs [here](/docs/1.x.x/tutorial/multiworkspace/).
 
     <div style={{textAlign: 'center'}}>
 
-    ![ToolJet - Single-Workspace Archive user](/img/user-lifecycle/archive-user.png)
+    ![JumpStart - Single-Workspace Archive user](/img/user-lifecycle/archive-user.png)
 
     </div>
 
@@ -132,7 +132,7 @@ Check Multi-workspace docs [here](/docs/1.x.x/tutorial/multiworkspace/).
 
     <div style={{textAlign: 'center'}}>
 
-    ![ToolJet - Single-Workspace Unarchive user](/img/user-lifecycle/unarchive-user-mw.png)
+    ![JumpStart - Single-Workspace Unarchive user](/img/user-lifecycle/unarchive-user-mw.png)
 
     </div>
 
@@ -144,7 +144,7 @@ Check Multi-workspace docs [here](/docs/1.x.x/tutorial/multiworkspace/).
 
   <div style={{textAlign: 'center'}}>
 
-  ![ToolJet - Single-Workspace sign up using SSO](/img/user-lifecycle/switch.png)
+  ![JumpStart - Single-Workspace sign up using SSO](/img/user-lifecycle/switch.png)
 
   </div>
 
@@ -162,6 +162,6 @@ Check Multi-workspace docs [here](/docs/1.x.x/tutorial/multiworkspace/).
 
   <div style={{textAlign: 'center'}}>
 
-    ![ToolJet - SSO Flow](/img/user-lifecycle/sso-flow.png)
+    ![JumpStart - SSO Flow](/img/user-lifecycle/sso-flow.png)
 
   </div>

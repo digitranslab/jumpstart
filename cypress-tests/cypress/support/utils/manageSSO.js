@@ -244,7 +244,7 @@ export const passwordLoginVisible = () => {
 };
 
 export const workspaceLogin = (workspaceName) => {
-  cy.clearAndType(commonSelectors.workEmailInputField, "dev@tooljet.io");
+  cy.clearAndType(commonSelectors.workEmailInputField, "dev@jumpstart.io");
   cy.clearAndType(commonSelectors.passwordInputField, "password");
   cy.get(commonSelectors.loginButton).click();
   cy.wait(2000);
@@ -491,11 +491,11 @@ export const invitePageElements = () => {
   cy.get(commonSelectors.termsOfServiceLink)
     .verifyVisibleElement("have.text", commonText.termsOfServiceLink)
     .and("have.attr", "href")
-    .and("equal", "https://www.tooljet.com/terms");
+    .and("equal", "https://www.jumpstart.com/terms");
   cy.get(commonSelectors.privacyPolicyLink)
     .verifyVisibleElement("have.text", commonText.privacyPolicyLink)
     .and("have.attr", "href")
-    .and("equal", "https://www.tooljet.com/privacy");
+    .and("equal", "https://www.jumpstart.com/privacy");
 };
 
 export const updateId = () => {

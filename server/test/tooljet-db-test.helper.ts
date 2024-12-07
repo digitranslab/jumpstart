@@ -1,13 +1,13 @@
 import { EntityManager } from 'typeorm';
-import { TooljetDbService } from '@services/tooljet_db.service';
+import { JumpstartDbService } from '@services/jumpstart_db.service';
 import { InternalTable } from '@entities/internal_table.entity';
 import {
-  TooljetDatabaseColumn,
-  TooljetDatabaseForeignKey,
-  TooljetDatabaseTable,
-} from 'src/modules/tooljet_db/tooljet-db.types';
+  JumpstartDatabaseColumn,
+  JumpstartDatabaseForeignKey,
+  JumpstartDatabaseTable,
+} from 'src/modules/jumpstart_db/jumpstart-db.types';
 
-const mockTableSchemas: Array<TooljetDatabaseTable> = [
+const mockTableSchemas: Array<JumpstartDatabaseTable> = [
   {
     id: 'user_table_uuid',
     table_name: 'users',
@@ -119,14 +119,14 @@ const mockTableSchemas: Array<TooljetDatabaseTable> = [
 export async function setupTestTables(
   appManager: EntityManager,
   tjdbManager: EntityManager,
-  tooljetDbService: TooljetDbService,
+  jumpstartDbService: JumpstartDbService,
   organizationId: string,
-  tableSchemas: Array<TooljetDatabaseTable> = mockTableSchemas
+  tableSchemas: Array<JumpstartDatabaseTable> = mockTableSchemas
 ): Promise<void> {
   const createTableParams = tableSchemas.map((table) => ({ ...table.schema, table_name: table.table_name }));
 
   for (const params of createTableParams) {
-    await createTable(appManager, tjdbManager, tooljetDbService, organizationId, params);
+    await createTable(appManager, tjdbManager, jumpstartDbService, organizationId, params);
   }
 
   // Wait for the tables to be created and postgrest to reload the schema
@@ -139,21 +139,21 @@ export async function setupTestTables(
 async function createTable(
   appManager: EntityManager,
   tjdbManager: EntityManager,
-  tooljetDbService: TooljetDbService,
+  jumpstartDbService: JumpstartDbService,
   organizationId: string,
-  params: { table_name: string; columns: TooljetDatabaseColumn[]; foreign_keys: TooljetDatabaseForeignKey[] }
+  params: { table_name: string; columns: JumpstartDatabaseColumn[]; foreign_keys: JumpstartDatabaseForeignKey[] }
 ) {
-  await tooljetDbService.perform(organizationId, 'create_table', params, { appManager, tjdbManager });
+  await jumpstartDbService.perform(organizationId, 'create_table', params, { appManager, tjdbManager });
 }
 
 export async function dropTable(
   appManager: EntityManager,
   tjdbManager: EntityManager,
-  tooljetDbService: TooljetDbService,
+  jumpstartDbService: JumpstartDbService,
   organizationId: string,
   tableName: string
 ) {
-  await tooljetDbService.perform(organizationId, 'drop_table', { table_name: tableName }, { appManager, tjdbManager });
+  await jumpstartDbService.perform(organizationId, 'drop_table', { table_name: tableName }, { appManager, tjdbManager });
 
   await appManager.delete(InternalTable, { organizationId, tableName });
 }

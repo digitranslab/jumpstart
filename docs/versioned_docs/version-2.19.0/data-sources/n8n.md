@@ -5,11 +5,11 @@ title: n8n
 
 # n8n
 
-ToolJet can trigger n8n workflows using webhook URLs. Please refer [this](https://docs.n8n.io/) to know more about n8n.
+JumpStart can trigger n8n workflows using webhook URLs. Please refer [this](https://docs.n8n.io/) to know more about n8n.
 
 ## Connection
 
-To establish a connection with the n8n data source, click on the `+Add new data source` button located on the query panel or navigate to the [Data Sources](https://docs.tooljet.com/docs/data-sources/overview) page from the ToolJet dashboard.
+To establish a connection with the n8n data source, click on the `+Add new data source` button located on the query panel or navigate to the [Data Sources](https://docs.jumpstart.com/docs/data-sources/overview) page from the JumpStart dashboard.
 
 n8n webhooks can be called with or without an **Authentication**. You can keep the `Authentication type` as `none` if your webhook didn't have one or if it has one then you can choose the one from the dropdown and provide credentials:
 

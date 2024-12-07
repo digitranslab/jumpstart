@@ -1,4 +1,4 @@
 # `sendgrid`
 
-Documentation on: https://docs.tooljet.com/docs/data-sources/sendgrid
+Documentation on: https://docs.jumpstart.com/docs/data-sources/sendgrid
 

@@ -3,15 +3,15 @@ id: saphana
 title: SAP HANA
 ---
 
-ToolJet can connect to SAP HANA databases to read and write data. 
+JumpStart can connect to SAP HANA databases to read and write data. 
 
 <div style={{paddingTop:'24px'}}>
 
 ## Connection
 
-To establish a connection with the SAP HANA datasource, you can either click on the **+ Add new Data source** button located on the query panel or navigate to the **[Data Sources](/docs/data-sources/overview)** page through the ToolJet dashboard.
+To establish a connection with the SAP HANA datasource, you can either click on the **+ Add new Data source** button located on the query panel or navigate to the **[Data Sources](/docs/data-sources/overview)** page through the JumpStart dashboard.
 
-ToolJet requires the following to connect to your SAP HANA database:
+JumpStart requires the following to connect to your SAP HANA database:
 
 - **Host**
 - **Port**
@@ -19,10 +19,10 @@ ToolJet requires the following to connect to your SAP HANA database:
 - **Password**
 
 :::info
-Please make sure the **Host/IP** of the database is accessible from your VPC if you have self-hosted ToolJet. If you are using ToolJet cloud, please **whitelist** our IP.
+Please make sure the **Host/IP** of the database is accessible from your VPC if you have self-hosted JumpStart. If you are using JumpStart cloud, please **whitelist** our IP.
 :::
 
-<img className="screenshot-full" src="/img/datasource-reference/saphana/connect-v2.png" alt="ToolJet - Data source - SAP HANA" />
+<img className="screenshot-full" src="/img/datasource-reference/saphana/connect-v2.png" alt="JumpStart - Data source - SAP HANA" />
 
 </div>
 

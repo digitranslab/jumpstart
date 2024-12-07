@@ -3,7 +3,7 @@ id: primary-key
 title: Primary Key
 ---
 
-ToolJet Database supports both single field and composite primary keys.
+JumpStart Database supports both single field and composite primary keys.
 
 <div style={{paddingTop:'24px'}}>
 
@@ -17,7 +17,7 @@ The constraints for the primary key column ensure the integrity and uniqueness o
  - This will automatically add the primary key constraint to the column.
  - Click on the **Create** button to create the table.
 
-<img style={{marginBottom:'15px'}} className="screenshot-full" src="/img/v2-beta/database/ux2/single-field-pk.gif" alt="ToolJet database"/>
+<img style={{marginBottom:'15px'}} className="screenshot-full" src="/img/v2-beta/database/ux2/single-field-pk.gif" alt="JumpStart database"/>
 
 ### Constraints
 - The primary key column cannot contain null values.
@@ -41,7 +41,7 @@ By utilizing a composite primary key, you can uniquely identify records based on
  - This will automatically add the primary key constraint to the selected columns.
  - Click on the **Save changes/Create** button to update/create the table.
 
-<img style={{marginBottom:'15px'}} className="screenshot-full" src="/img/v2-beta/database/ux2/composite-pk.gif" alt="ToolJet database"/>
+<img style={{marginBottom:'15px'}} className="screenshot-full" src="/img/v2-beta/database/ux2/composite-pk.gif" alt="JumpStart database"/>
 
 ### Constraints
 - None of the composite key columns can contain null values.
@@ -64,7 +64,7 @@ After creating a table, you can designate any column as the primary key, provide
  - Uncheck the **Primary** checkbox on the existing primary key column. The primary key constraints will still stay in place for this column but are no longer necessary.
  - Click on the **Save changes** button to update the table.
 
-<img className="screenshot-full" src="/img/v2-beta/database/ux2/modify-pk.gif" alt="ToolJet database"/>
+<img className="screenshot-full" src="/img/v2-beta/database/ux2/modify-pk.gif" alt="JumpStart database"/>
 
 </div>
 
@@ -82,6 +82,6 @@ An existing primary key column can be deleted through the **Edit Table** panel. 
 
 You cannot delete a Primary Key of a target table if it is being used as a foreign key in any source table(s).
 
-<img className="screenshot-full" src="/img/v2-beta/database/ux2/delete-pk.gif" alt="ToolJet database"/>
+<img className="screenshot-full" src="/img/v2-beta/database/ux2/delete-pk.gif" alt="JumpStart database"/>
 
 </div>

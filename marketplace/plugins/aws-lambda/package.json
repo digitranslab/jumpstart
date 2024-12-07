@@ -1,5 +1,5 @@
 {
-  "name": "@tooljet-plugins/aws-lambda",
+  "name": "@jumpstart-plugins/aws-lambda",
   "version": "1.0.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -15,10 +15,10 @@
     "build": "ncc build lib/index.ts -o dist",
     "watch": "ncc build lib/index.ts -o dist --watch"
   },
-  "homepage": "https://github.com/tooljet/tooljet#readme",
+  "homepage": "https://github.com/digitranslab/jumpstart#readme",
   "dependencies": {
     "@aws-sdk/client-lambda": "3.461.0",
-    "@tooljet-marketplace/common": "^1.0.0",
+    "@jumpstart-marketplace/common": "^1.0.0",
     "aws-sdk": "^2.1507.0",
     "react": "^17.0.2",
     "rimraf": "^3.0.2"

@@ -6,7 +6,7 @@ import cx from 'classnames';
 
 export default function Sidebar({ collapseSidebar }) {
   return (
-    <div className={cx('tooljet-database-sidebar col', { 'visually-hidden': collapseSidebar })}>
+    <div className={cx('jumpstart-database-sidebar col', { 'visually-hidden': collapseSidebar })}>
       <div className="sidebar-container">
         <CreateTableDrawer />
       </div>

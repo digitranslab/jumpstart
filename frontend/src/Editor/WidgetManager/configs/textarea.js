@@ -58,7 +58,7 @@ export const textareaConfig = {
   },
   exposedVariables: {
     value:
-      'ToolJet is an open-source low-code platform for building and deploying internal tools with minimal engineering efforts 🚀',
+      'JumpStart is an open-source low-code platform for building and deploying internal tools with minimal engineering efforts 🚀',
   },
   actions: [
     {
@@ -79,7 +79,7 @@ export const textareaConfig = {
     properties: {
       value: {
         value:
-          'ToolJet is an open-source low-code platform for building and deploying internal tools with minimal engineering efforts 🚀',
+          'JumpStart is an open-source low-code platform for building and deploying internal tools with minimal engineering efforts 🚀',
       },
       placeholder: { value: 'Placeholder text' },
     },

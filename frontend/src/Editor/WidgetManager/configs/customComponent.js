@@ -52,7 +52,7 @@ export const customComponentConfig = {
         </Button>
       </Container>
   );
-  const ConnectedComponent = Tooljet.connectComponent(MyCustomComponent);
+  const ConnectedComponent = Jumpstart.connectComponent(MyCustomComponent);
   ReactDOM.render(<ConnectedComponent />, document.body);`,
         skipResolve: true,
       },

@@ -31,7 +31,7 @@ On the top of the query manager is search box that can be used to search for a s
 
 ### Add
 
-Add button is used to add more queries in the application. When Add button is clicked, the Query Editor will show you a list of options for creating a query from: **Rest API**, connected **[datasources](/docs/data-sources/overview)**, **[ToolJet Database](/docs/tooljet-database)**, **[JavaScript Code](/docs/data-sources/run-js)**, **[Python Code](/docs/data-sources/run-py)** or Add a new datasource.
+Add button is used to add more queries in the application. When Add button is clicked, the Query Editor will show you a list of options for creating a query from: **Rest API**, connected **[datasources](/docs/data-sources/overview)**, **[JumpStart Database](/docs/jumpstart-database)**, **[JavaScript Code](/docs/data-sources/run-js)**, **[Python Code](/docs/data-sources/run-py)** or Add a new datasource.
 
 <div style={{textAlign: 'center'}}>
 
@@ -137,7 +137,7 @@ Query Parameters are the values required for the query to return a response from
 
 ### Transformation
 
-Transformations can be enabled on queries to transform the query results. ToolJet allows you to transform the query results using two programming languages JavaScript & Python. Check the detailed documentation on **[Transformations](/docs/tutorial/transformations)**.
+Transformations can be enabled on queries to transform the query results. JumpStart allows you to transform the query results using two programming languages JavaScript & Python. Check the detailed documentation on **[Transformations](/docs/tutorial/transformations)**.
 
 <div style={{textAlign: 'center'}}>
 

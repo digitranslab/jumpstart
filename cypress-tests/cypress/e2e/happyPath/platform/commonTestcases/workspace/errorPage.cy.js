@@ -41,7 +41,7 @@ describe("Redirection error pages", () => {
         cy.get(commonSelectors.backToHomeButton).click();
         cy.get(commonSelectors.workEmailLabel).should("be.visible");
 
-        cy.apiLogin("test@tooljet.com", "password");
+        cy.apiLogin("test@jumpstart.com", "password");
         cy.visit(`/applications/${data.lastName}`);
     });
 
@@ -58,7 +58,7 @@ describe("Redirection error pages", () => {
         cy.wait(1000);
         cy.logoutApi();
 
-        cy.apiLogin("test@tooljet.com", "password");
+        cy.apiLogin("test@jumpstart.com", "password");
         cy.visit(`/applications/${data.slug}`);
 
         cy.get(commonSelectors.modalHeader).verifyVisibleElement(
@@ -117,7 +117,7 @@ describe("Redirection error pages", () => {
         cy.get(commonSelectors.pageSectionHeader).should("be.visible");
 
         cy.logoutApi();
-        cy.apiLogin("test@tooljet.com", "password");
+        cy.apiLogin("test@jumpstart.com", "password");
         cy.wait(500);
 
         cy.visit(`http://localhost:8082/applications/${data.slug}`);
@@ -156,7 +156,7 @@ describe("Redirection error pages", () => {
             });
 
         cy.logoutApi();
-        cy.apiLogin("test@tooljet.com", "password");
+        cy.apiLogin("test@jumpstart.com", "password");
         cy.wait(500);
 
         cy.visit(`http://localhost:8082/applications/${data.slug}`);

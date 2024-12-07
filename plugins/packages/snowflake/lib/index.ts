@@ -5,7 +5,7 @@ import {
   ConnectionTestResult,
   cacheConnection,
   getCachedConnection,
-} from '@tooljet-plugins/common';
+} from '@jumpstart-plugins/common';
 import { SourceOptions, QueryOptions } from './types';
 import * as snowflake from 'snowflake-sdk';
 

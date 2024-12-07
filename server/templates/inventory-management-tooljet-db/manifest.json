@@ -1,5 +1,5 @@
 {
-  "name": "Inventory management (ToolJet Database)",
+  "name": "Inventory management (JumpStart Database)",
   "description": "Easily manage, control, and optimise your inventory with our single-page Inventory Management Template.",
   "widgets": [
     "Table",
@@ -7,10 +7,10 @@
   ],
   "sources": [
     {
-      "name": "ToolJet Database",
-      "id": "tooljetdb"
+      "name": "JumpStart Database",
+      "id": "jumpstartdb"
     }
   ],
-  "id": "inventory-management-tooljet-db",
+  "id": "inventory-management-jumpstart-db",
   "category": "operations"
 }

@@ -275,7 +275,7 @@ class OrganizationLogin extends React.Component {
                       <div data-cy="allowed-domain-helper-text">
                         {t(
                           'header.organization.menus.manageSSO.generalSettings.supportMultidomains',
-                          `Support multiple domains. Enter domain names separated by comma. example: tooljet.com,tooljet.io,yourorganization.com`
+                          `Support multiple domains. Enter domain names separated by comma. example: jumpstart.com,jumpstart.io,yourorganization.com`
                         )}
                       </div>
                     </div>
@@ -285,7 +285,7 @@ class OrganizationLogin extends React.Component {
                       </label>
                       <div className="d-flex justify-content-between form-control align-items-center">
                         <p id="login-url" data-cy="workspace-login-url">
-                          {`${window.public_config?.TOOLJET_HOST}${
+                          {`${window.public_config?.JUMPSTART_HOST}${
                             window.public_config?.SUB_PATH ? window.public_config?.SUB_PATH : '/'
                           }login/${
                             authenticationService?.currentSessionValue?.current_organization_slug ||

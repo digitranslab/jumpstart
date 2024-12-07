@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { resolveWidgetFieldValue } from '@/_helpers/utils';
 
 import * as Icons from '@tabler/icons-react';
-import Loader from '@/ToolJetUI/Loader/Loader';
+import Loader from '@/JumpStartUI/Loader/Loader';
 const tinycolor = require('tinycolor2');
 import Label from '@/_ui/Label';
 

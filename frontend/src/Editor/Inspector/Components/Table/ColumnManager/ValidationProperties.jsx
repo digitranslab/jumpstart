@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import CodeHinter from '@/Editor/CodeEditor';
 import ReactDatePicker from 'react-datepicker';
 import moment from 'moment';
-import Timepicker from '@/ToolJetUI/Timepicker/Timepicker';
+import Timepicker from '@/JumpStartUI/Timepicker/Timepicker';
 import CustomDatePickerHeader from '@/Editor/Components/Table/CustomDatePickerHeader';
 import { resolveReferences } from '../../../../../_helpers/utils';
 import cx from 'classnames';

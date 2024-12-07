@@ -7,8 +7,8 @@
   ],
   "sources": [
     {
-      "name": "ToolJet Database",
-      "id": "tooljetdb"
+      "name": "JumpStart Database",
+      "id": "jumpstartdb"
     }
   ],
   "id": "applicant-tracking-system",

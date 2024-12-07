@@ -9,7 +9,7 @@ It should be preferred for blog posts, forum posts or notes sections. The text i
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/richtexteditor/richtexteditor.png" alt="ToolJet - Widget Reference - Rich Text Editor" />
+<img className="screenshot-full" src="/img/widgets/richtexteditor/richtexteditor.png" alt="JumpStart - Widget Reference - Rich Text Editor" />
 
 </div>
 
@@ -32,7 +32,7 @@ Under the <b>General</b> accordion, you can set the value in the string format. 
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/tooltip.png" alt="ToolJet - Widget Reference -Rich Text Editor" />
+<img className="screenshot-full" src="/img/tooltip.png" alt="JumpStart - Widget Reference -Rich Text Editor" />
 
 </div>
 

@@ -76,7 +76,7 @@ jobs:
           context: .
           file: docker/production.Dockerfile
           push: true
-          tags: tooljet/tj-osv:${{ env.SAFE_BRANCH_NAME }}
+          tags: digitranslab/tj-osv:${{ env.SAFE_BRANCH_NAME }}
           platforms: linux/amd64
         env:
           DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
@@ -94,14 +94,14 @@ jobs:
             # Stop the Docker containers
             sudo docker-compose down
 
-            # Remove the existing tooljet/* images
-            sudo docker images -a | grep 'tooljet/' | awk '{print $3}' | xargs sudo docker rmi -f
+            # Remove the existing jumpstart/* images
+            sudo docker images -a | grep 'jumpstart/' | awk '{print $3}' | xargs sudo docker rmi -f
 
             # Check remaining images
             sudo docker images
 
-            # Update docker-compose.yml with the new image for tooljet service
-            sed -i '/^[[:space:]]*tooljet:/,/^[[:space:]]*[^:]*$/ { /^[[:space:]]*image:[[:space:]]*tooljet\/tj-osv/s|\(image:[[:space:]]*\).*|\1tooljet/tj-osv:'"${{ env.SAFE_BRANCH_NAME }}"'| }' docker-compose.yaml
+            # Update docker-compose.yml with the new image for jumpstart service
+            sed -i '/^[[:space:]]*jumpstart:/,/^[[:space:]]*[^:]*$/ { /^[[:space:]]*image:[[:space:]]*jumpstart\/tj-osv/s|\(image:[[:space:]]*\).*|\1digitranslab/tj-osv:'"${{ env.SAFE_BRANCH_NAME }}"'| }' docker-compose.yaml
 
             # Start the Docker containers
             cat docker-compose.yaml

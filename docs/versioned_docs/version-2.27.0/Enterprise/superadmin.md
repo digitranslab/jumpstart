@@ -3,13 +3,13 @@ id: superadmin
 title: Super Admin
 ---
 
-<a href="https://www.tooljet.com/pricing">
+<a href="https://www.jumpstart.com/pricing">
 <div className='badge badge--primary heading-badge'>Available on: Paid plans</div>
 </a>
 
 A Super Admin is the user who has full access to all the Workspaces, Users, and Groups of an instance. An instance can have more than one Super Admin. A Super Admin has full control over other users' workspaces and can create users, groups, and other super admins.
 
-The user details entered while setting up ToolJet will have Super Admin privileges.
+The user details entered while setting up JumpStart will have Super Admin privileges.
 
 ## How is Super Admin different from Admin
 
@@ -23,7 +23,7 @@ The user details entered while setting up ToolJet will have Super Admin privileg
 | [Manage data sources for the user group in their workspace](/docs/data-sources/overview#user-permissions) | ✅ | ✅ |
 | [Access any user's personal workspace (create, edit or delete apps)](#access-any-workspace) | ❌ | ✅ |
 | [Archive Admin or any user of any workspace](#archiveunarchive-users) | ❌ | ✅ |
-| [Access any user's ToolJet database (create, edit or delete database)](#access-tooljet-db-in-any-workspace) | ❌ | ✅ |
+| [Access any user's JumpStart database (create, edit or delete database)](#access-jumpstart-db-in-any-workspace) | ❌ | ✅ |
 | [Manage any workspace's setting (Groups/SSO/Workspace constants)](#manage-workspace-settings-groupsssoworkspace-constants) | ❌ | ✅ |
 | [Manage all users from all the workspaces in the instance](#manage-all-users-in-the-instance) | ❌ | ✅ |
 | [Make any user Super Admin](#make-the-user-super-admin) | ❌ | ✅ |
@@ -69,9 +69,9 @@ If a user is Super Admin, they just need to open the workspace in which they wan
 
 </div>
 
-###  Access ToolJet DB in any workspace
+###  Access JumpStart DB in any workspace
 
-Super Admins have access to the database of any user's workspace - just like Super Admins can access any application in any workspace. They have full access to modify or create any table in the ToolJet DB of any workspace.
+Super Admins have access to the database of any user's workspace - just like Super Admins can access any application in any workspace. They have full access to modify or create any table in the JumpStart DB of any workspace.
 
 ###  Manage Workspace Settings (Groups/SSO/Workspace constants)
 
@@ -155,6 +155,6 @@ Manage the instance license via the **Settings** page. Super Admins have the cap
 Check out the [License](/docs/licensing) page for more details.
 
 ## White labelling
-This feature allows you to customize the ToolJet instance with your own branding. You can change the logo, favicon, and the name of the instance.
+This feature allows you to customize the JumpStart instance with your own branding. You can change the logo, favicon, and the name of the instance.
 
 Check out the [White labelling](/docs/enterprise/white-label/) page for more details.

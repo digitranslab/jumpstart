@@ -3,7 +3,7 @@ id: style-guide
 title: Style Guide
 ---
 
-Welcome to the ToolJet's Style Guide for creating clear, consistent, and accessible documentation. In this guide, you will find recommendations on text formatting, proper use of headers, code snippet styling, accessibility practices, and much more. 
+Welcome to the JumpStart's Style Guide for creating clear, consistent, and accessible documentation. In this guide, you will find recommendations on text formatting, proper use of headers, code snippet styling, accessibility practices, and much more. 
 
 ## 1. Text Formatting Guidelines
 
@@ -13,7 +13,7 @@ a. Italics are used for names given to Queries, Database Tables, and Components.
 
 **Examples:**
 - Create a new query and rename it to *getEmployees*.
-- Select **ToolJetDB** as the the data source and *Employees* table as the data source.
+- Select **JumpStartDB** as the the data source and *Employees* table as the data source.
 - Pass the returned data to the *allEmployees* component.
 
 b. Bold is applied for Workspace Constants, Clickable Buttons, fx, Data Sources, and Components.
@@ -215,7 +215,7 @@ ORDER BY name ASC;
 `[Postgres tables](/schema/postgres/tables.mdx)` links to the Postgres tables page.
 
 - When linking to a specific section within a page, use anchor links to direct the user precisely where needed. **Example**:  <br/>
-`ToolJet supports [multiple environments,](https://docs.tooljet.com/docs/#multiple-environments)` takes the user directly to the specific section.
+`JumpStart supports [multiple environments,](https://docs.jumpstart.com/docs/#multiple-environments)` takes the user directly to the specific section.
 
 
 ---

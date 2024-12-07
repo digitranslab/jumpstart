@@ -5,7 +5,7 @@ title: Use Inspector
 
 In this how-to guide, we will take a look at **Inspector** of the app-builder and see how it can be helpful in building applications.
 
-The Inspector can be used to inspect the data of the queries, properties and values of the components that are there on the canvas, ToolJet's global variables and the variables that have been set by the user.
+The Inspector can be used to inspect the data of the queries, properties and values of the components that are there on the canvas, JumpStart's global variables and the variables that have been set by the user.
 
 <div style={{textAlign: 'center'}}>
 
@@ -100,7 +100,7 @@ The globals section consists of the following sub-sections:
 - **modes:** This variable holds one of three values: **edit**, **preview**, or **view**, depending on the current state of the app. If the app is opened in editing mode, the mode will be set to **edit**. If the app is opened by clicking the preview button on the app builder, the variable will be set to **preview**. If the app is opened using the URL from the **Share** modal, the mode will be set to **view**.
 
 :::tip
-The **environment** and **mode** variables are only available in **ToolJet Enterprise Edition v2.2.3** and above.
+The **environment** and **mode** variables are only available in **JumpStart Enterprise Edition v2.2.3** and above.
 
 <div style={{textAlign: 'center'}}>
 
@@ -110,7 +110,7 @@ The **environment** and **mode** variables are only available in **ToolJet Enter
 :::
 
 :::info
-All the global variables can be accessed anywhere within ToolJet applications. Here's an **[example use-case](/docs/how-to/access-currentuser)** that demonstrates the usage of these variables.
+All the global variables can be accessed anywhere within JumpStart applications. Here's an **[example use-case](/docs/how-to/access-currentuser)** that demonstrates the usage of these variables.
 :::
 
 ### variables

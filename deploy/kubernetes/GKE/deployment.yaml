@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: tooljet-deployment
+  name: jumpstart-deployment
 spec:
   replicas: 2
   strategy:
@@ -11,17 +11,17 @@ spec:
       maxSurge: 1
   selector:
     matchLabels:
-      component: tooljet
+      component: jumpstart
   template:
     metadata:
       labels:
-        component: tooljet
+        component: jumpstart
     spec:
       imagePullSecrets:
         - name: docker-secret
       containers:
         - name: container
-          image: tooljet/tooljet-ce:latest
+          image: digitranslab/jumpstart-ce:latest
           imagePullPolicy: Always
           args: ["npm", "run", "start:prod"]
           resources:
@@ -54,21 +54,21 @@ spec:
               value: ""
             - name: SECRET_KEY_BASE
               value: ""
-            - name: TOOLJET_HOST
-              value: "https://tooljet.your-domain.com"
+            - name: JUMPSTART_HOST
+              value: "https://jumpstart.your-domain.com"
             - name: DEPLOYMENT_PLATFORM
               value: "k8s:gke"
-            # Set the env values below for Tooljet Database
-            # - name: ENABLE_TOOLJET_DB
+            # Set the env values below for Jumpstart Database
+            # - name: ENABLE_JUMPSTART_DB
             #   value: "true"
-            # - name: TOOLJET_DB
-            #   value: "tooljet_db"
-            # - name: TOOLJET_DB_USER
-            #   value: "replace_with_tooljet_db_user"
-            # - name: TOOLJET_DB_HOST
-            #   value: "replace_with_tooljet_db_host"
-            # - name: TOOLJET_DB_PASS
-            #   value: "replace_with_tooljet_db_pass"
+            # - name: JUMPSTART_DB
+            #   value: "jumpstart_db"
+            # - name: JUMPSTART_DB_USER
+            #   value: "replace_with_jumpstart_db_user"
+            # - name: JUMPSTART_DB_HOST
+            #   value: "replace_with_jumpstart_db_host"
+            # - name: JUMPSTART_DB_PASS
+            #   value: "replace_with_jumpstart_db_pass"
             # - name: PGRST_HOST
             #   value: "replace_with_postgrest_host"
             # - name: PGRST_JWT_SECRET

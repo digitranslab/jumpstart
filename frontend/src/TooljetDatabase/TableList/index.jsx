@@ -2,8 +2,8 @@ import React, { useState, useEffect, useContext } from 'react';
 import Skeleton from 'react-loading-skeleton';
 import { toast } from 'react-hot-toast';
 import { isEmpty } from 'lodash';
-import { TooljetDatabaseContext } from '../index';
-import { tooljetDatabaseService } from '@/_services';
+import { JumpstartDatabaseContext } from '../index';
+import { jumpstartDatabaseService } from '@/_services';
 import { ListItem } from '../TableListItem';
 import { BreadCrumbContext } from '../../App/App';
 import Search from '../Search';
@@ -19,7 +19,7 @@ const List = () => {
     setSelectedTable,
     loadingState,
     setLoadingState,
-  } = useContext(TooljetDatabaseContext);
+  } = useContext(JumpstartDatabaseContext);
   const [loading, setLoading] = useState(false);
   const [showInput, setShowInput] = useState(false);
   const { updateSidebarNAV } = useContext(BreadCrumbContext);
@@ -28,7 +28,7 @@ const List = () => {
   async function fetchTables() {
     setLoading(true);
     setLoadingState(true);
-    const { error, data } = await tooljetDatabaseService.findAll(organizationId);
+    const { error, data } = await jumpstartDatabaseService.findAll(organizationId);
     setLoading(false);
     setLoadingState(false);
 

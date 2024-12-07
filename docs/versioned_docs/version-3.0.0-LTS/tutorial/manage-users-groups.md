@@ -5,11 +5,11 @@ title: Managing Users and Groups
 
 # Managing Users and Groups
 
-This guide explains how to manage users and groups in ToolJet. For an overview of the permission system, please refer to the [Permissions](/docs/org-management/permissions) documentation.
+This guide explains how to manage users and groups in JumpStart. For an overview of the permission system, please refer to the [Permissions](/docs/org-management/permissions) documentation.
 
 ## Managing Users Across Workspaces
 
-Admins can view and manage users across all workspaces in their ToolJet instance. To view users across workspaces:
+Admins can view and manage users across all workspaces in their JumpStart instance. To view users across workspaces:
 
 1. Go to **Settings** > **All Users**.
 2. This will let you view all users in your instance across all workspaces.

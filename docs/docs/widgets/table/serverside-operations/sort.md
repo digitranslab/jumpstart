@@ -3,7 +3,7 @@ id: sort
 title: Sort Operation
 ---
 
-This guide explains how to implement a server side sort operation on the **Table** component in ToolJet.
+This guide explains how to implement a server side sort operation on the **Table** component in JumpStart.
 
 <div style={{paddingTop:'24px'}}>
 
@@ -12,7 +12,7 @@ This guide explains how to implement a server side sort operation on the **Table
 Before implementing the sort operation, add the **Table** component and populate it with data:
 
 1. Drag a **Table** component from the right component library to the canvas.
-2. Select a data source and create a new query using the query panel at the bottom. We are going to use ToolJet’s sample data source (Postgres) in this guide. Add the following query to fetch the data from the database:
+2. Select a data source and create a new query using the query panel at the bottom. We are going to use JumpStart’s sample data source (Postgres) in this guide. Add the following query to fetch the data from the database:
 
 ```sql
 SELECT * FROM public.sample_data_orders
@@ -65,6 +65,6 @@ This will run the query and fetch the data every time a sort is applied.
 <img className="screenshot-full" src="/img/widgets/table/serverside-operations/sort-loading.png" alt="Fetch data from the data source" />
 
 
-This is how server side sort operation is implemented in ToolJet's **Table** component. When sorting is applied to a column in the **Table** component, the query is executed on the server, enabling sorting across the entire dataset. This ensures that the sorting is not limited to the data loaded into the **Table** but covers all records in the database.
+This is how server side sort operation is implemented in JumpStart's **Table** component. When sorting is applied to a column in the **Table** component, the query is executed on the server, enabling sorting across the entire dataset. This ensures that the sorting is not limited to the data loaded into the **Table** but covers all records in the database.
 
 </div>

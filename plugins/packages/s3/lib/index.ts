@@ -13,7 +13,7 @@ import { S3Client } from '@aws-sdk/client-s3';
 
 import { fromInstanceMetadata } from '@aws-sdk/credential-providers';
 
-import { QueryError, QueryResult, QueryService, ConnectionTestResult } from '@tooljet-plugins/common';
+import { QueryError, QueryResult, QueryService, ConnectionTestResult } from '@jumpstart-plugins/common';
 import { SourceOptions, QueryOptions, Operation, AssumeRoleCredentials } from './types';
 
 export default class S3QueryService implements QueryService {

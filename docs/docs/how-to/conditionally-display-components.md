@@ -38,7 +38,7 @@ In this app, the `Approve Selected` button should only display if someone from t
     <img style={{ border:'0', marginBottom:'15px' }} className="screenshot-full" src="/img/how-to/conditionally-view-components/manager-view.png" alt="Manager View" />
 </div>
 
-This was a basic implementation of how you can control the visibility of components using **fx** and **Groups** in ToolJet. 
+This was a basic implementation of how you can control the visibility of components using **fx** and **Groups** in JumpStart. 
 
 Feel free to implement the same logic for more advanced use cases. For instance, for conditionally displaying a section or a group of components, you can place all the relevant components inside a **Container** component and apply the same logic.  
 

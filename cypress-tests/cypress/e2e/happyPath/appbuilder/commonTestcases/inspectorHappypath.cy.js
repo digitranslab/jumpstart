@@ -52,7 +52,7 @@ describe("Editor- Inspector", () => {
     verifyValue("name", "String", `"light"`);
 
     openNode("currentUser");
-    verifyValue("email", "String", `"dev@tooljet.io"`);
+    verifyValue("email", "String", `"dev@jumpstart.io"`);
     verifyValue("firstName", "String", `"The"`);
     verifyValue("lastName", "String", `"Developer"`);
     verifyNodeData("groups", "Array", "2 items ");

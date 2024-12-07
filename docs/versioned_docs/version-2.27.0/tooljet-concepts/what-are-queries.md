@@ -13,7 +13,7 @@ title: What Are Queries?
 
 
 <div style={{textAlign: 'center'}}>
-    <img style={{padding: '10px'}} className="screenshot-full" src="/img/tooljet-concepts/what-are-queries/query-panel.png" alt="Query Panel" />
+    <img style={{padding: '10px'}} className="screenshot-full" src="/img/jumpstart-concepts/what-are-queries/query-panel.png" alt="Query Panel" />
 </div>
 
 </div>
@@ -25,7 +25,7 @@ title: What Are Queries?
 Queries run when triggered by app events, such as clicking a button. They can fetch new data or change existing data, and the results can be displayed in the app using tables or charts. This makes data interaction in your app straightforward and effective.
 
 <div style={{textAlign: 'center'}}>
-    <img style={{padding: '10px'}} className="screenshot-full" src="/img/tooljet-concepts/what-are-queries/trigger-query.png" alt="Trigger Query Config" />
+    <img style={{padding: '10px'}} className="screenshot-full" src="/img/jumpstart-concepts/what-are-queries/trigger-query.png" alt="Trigger Query Config" />
 </div>
 
 </div>

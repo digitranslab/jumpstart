@@ -38,14 +38,14 @@ export class MetadataController {
         versionIgnored = false;
       }
 
-      if (process.env.DISABLE_TOOLJET_TELEMETRY !== 'true') {
+      if (process.env.DISABLE_JUMPSTART_TELEMETRY !== 'true') {
         void this.metadataService.sendTelemetryData(metadata);
       }
     }
 
     return {
       instance_id: instanceId,
-      installed_version: globalThis.TOOLJET_VERSION,
+      installed_version: globalThis.JUMPSTART_VERSION,
       latest_version: latestVersion,
       onboarded: onboarded,
       version_ignored: versionIgnored,

@@ -162,7 +162,7 @@ describe("dashboard", () => {
     cy.get(dashboardSelector.appTemplateRow).should("be.visible");
     cy.reload();
     verifyTooltip(commonSelectors.dashboardIcon, "Apps");
-    verifyTooltip(commonSelectors.databaseIcon, "ToolJet Database");
+    verifyTooltip(commonSelectors.databaseIcon, "JumpStart Database");
     verifyTooltip(commonSelectors.globalDataSourceIcon, "Data sources");
     verifyTooltip(
       commonSelectors.workspaceConstantsIcon,

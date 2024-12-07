@@ -5,11 +5,11 @@ title: InfluxDB
 
 # InfluxDB
 
-ToolJet can connect to InfluxDB databases to read and write data. Use the Token authentication scheme to authenticate to the InfluxDB API. For more info visit [InfluxDB docs](https://docs.influxdata.com/).
+JumpStart can connect to InfluxDB databases to read and write data. Use the Token authentication scheme to authenticate to the InfluxDB API. For more info visit [InfluxDB docs](https://docs.influxdata.com/).
 
 ## Connection
 
-ToolJet connects to InfluxDB using :
+JumpStart connects to InfluxDB using :
 
 - **API Token**
 - **Host**
@@ -22,7 +22,7 @@ For generating API Token visit [InfluxDB docs](https://docs.influxdata.com/influ
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - Data source - influxDB](/img/datasource-reference/influxdb/influxauth-v2.png)
+![JumpStart - Data source - influxDB](/img/datasource-reference/influxdb/influxauth-v2.png)
 
 </div>
 

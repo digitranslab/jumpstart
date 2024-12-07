@@ -103,7 +103,7 @@ Any property having `Fx` button next to its field can be **programmatically conf
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/color-picker/colorpickerinspector-v2.png" alt="ToolJet - Widget Reference - Color Picker" />
+<img className="screenshot-full" src="/img/widgets/color-picker/colorpickerinspector-v2.png" alt="JumpStart - Widget Reference - Color Picker" />
 
 </div>
 

@@ -7,7 +7,7 @@ Nodes are graphical representations of each process in a workflow. Each node can
 
 ## Start Trigger Node
 The **Start Trigger** node is the entry point of your workflow. It can be triggered:
-- Manually through ToolJet applications similar to queries
+- Manually through JumpStart applications similar to queries
 - Via webhooks from external systems
 
 The data received by the Start Trigger through parameters is accessible throughout the workflow.

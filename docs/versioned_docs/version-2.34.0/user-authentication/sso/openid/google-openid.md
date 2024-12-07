@@ -3,7 +3,7 @@ id: google-openid
 title: Google (Open ID)
 ---
 
-- Go to the **Workspace Settings** (⚙️) from the left sidebar in the ToolJet dashboard
+- Go to the **Workspace Settings** (⚙️) from the left sidebar in the JumpStart dashboard
   <div style={{textAlign: 'center'}}>
 
   <img style={{ width:'100%', border:'0', marginBottom:'15px', borderRadius:'5px', boxShadow: '0px 1px 3px rgba(0, 0, 0, 0.2)' }} className="screenshot-full" src="/img/sso/general/workside2-new.png" alt="Google Open ID" width="500"/>
@@ -53,7 +53,7 @@ select 'External'.
   </div>
 
 - You'll be led to an app registration page where you can set OAuth scopes. Select 'Add or remove scopes' and add the scopes
-userinfo.email and userinfo.profile as shown in the image. This will allow ToolJet to store the email and name of the
+userinfo.email and userinfo.profile as shown in the image. This will allow JumpStart to store the email and name of the
 user who is signing in
   <div style={{textAlign: 'center'}}>
 
@@ -61,7 +61,7 @@ user who is signing in
 
   </div>
 
-- Set the domain on which ToolJet is hosted as an authorized domain
+- Set the domain on which JumpStart is hosted as an authorized domain
   <div style={{textAlign: 'center'}}>
 
   <img className="screenshot-full" src="/img/sso/google/authorized-urls.png" alt="Google Open ID" width="700"/> 

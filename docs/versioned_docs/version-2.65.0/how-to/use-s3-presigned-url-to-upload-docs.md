@@ -4,9 +4,9 @@ title: Use S3 Signed URL to Upload Documents
 ---
 <div style={{paddingBottom:'24px'}}>
 
-In this how-to guide, we will upload documents to S3 buckets using the **S3 signed URL** from a ToolJet application.
+In this how-to guide, we will upload documents to S3 buckets using the **S3 signed URL** from a JumpStart application.
 
-For this guide, we are going to use one of the existing templates on ToolJet: **S3 File explorer**
+For this guide, we are going to use one of the existing templates on JumpStart: **S3 File explorer**
 
 </div>
 
@@ -14,7 +14,7 @@ For this guide, we are going to use one of the existing templates on ToolJet: **
 
 ## Create an App Using Templates
 
-- On ToolJet Dashboard, click on the ellipses on the right of the **Create new app** button, from the dropdown choose the **Choose from template** option. Select **AWS S3 file explorer** and click on the **Create application from template**.
+- On JumpStart Dashboard, click on the ellipses on the right of the **Create new app** button, from the dropdown choose the **Choose from template** option. Select **AWS S3 file explorer** and click on the **Create application from template**.
 
 
 <div style={{textAlign: 'left'}}>

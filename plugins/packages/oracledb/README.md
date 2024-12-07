@@ -1,4 +1,4 @@
 
 # Oracle DB
 
-Documentation on: https://docs.tooljet.com/docs/data-sources/oracledb
+Documentation on: https://docs.jumpstart.com/docs/data-sources/oracledb

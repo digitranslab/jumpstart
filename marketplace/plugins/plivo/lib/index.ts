@@ -1,4 +1,4 @@
-import { QueryError, QueryService, QueryResult } from '@tooljet-marketplace/common';
+import { QueryError, QueryService, QueryResult } from '@jumpstart-marketplace/common';
 const plivo = require('plivo');
 
 export default class PlivoService implements QueryService {

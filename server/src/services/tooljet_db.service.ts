@@ -4,13 +4,13 @@ import { InjectEntityManager } from '@nestjs/typeorm';
 import { InternalTable } from 'src/entities/internal_table.entity';
 import { isString, isEmpty, camelCase } from 'lodash';
 import {
-  TooljetDatabaseColumn,
-  TooljetDatabaseDataTypes,
-  TooljetDatabaseError,
-  TooljetDatabaseForeignKey,
-  TooljetDbActions,
+  JumpstartDatabaseColumn,
+  JumpstartDatabaseDataTypes,
+  JumpstartDatabaseError,
+  JumpstartDatabaseForeignKey,
+  JumpstartDbActions,
   TJDB,
-} from 'src/modules/tooljet_db/tooljet-db.types';
+} from 'src/modules/jumpstart_db/jumpstart-db.types';
 
 // Patching TypeORM SelectQueryBuilder to handle for right and full outer joins
 declare module 'typeorm' {
@@ -32,21 +32,21 @@ SelectQueryBuilder.prototype.fullOuterJoin = function (entityOrProperty, alias, 
 };
 
 @Injectable()
-export class TooljetDbService {
+export class JumpstartDbService {
   constructor(
     private readonly manager: EntityManager,
     // TODO: remove optional decorator when
-    // ENABLE_TOOLJET_DB flag is deprecated
+    // ENABLE_JUMPSTART_DB flag is deprecated
     @Optional()
-    @InjectEntityManager('tooljetDb')
-    private readonly tooljetDbManager: EntityManager
+    @InjectEntityManager('jumpstartDb')
+    private readonly jumpstartDbManager: EntityManager
   ) {}
 
   async perform(
     organizationId: string,
     action: string,
     params = {},
-    connectionManagers: Record<string, EntityManager> = { appManager: this.manager, tjdbManager: this.tooljetDbManager }
+    connectionManagers: Record<string, EntityManager> = { appManager: this.manager, tjdbManager: this.jumpstartDbManager }
   ) {
     const actionHandler = this.getActionHandler(action);
     if (!actionHandler) {
@@ -56,7 +56,7 @@ export class TooljetDbService {
   }
 
   private getActionHandler(action: string): ((organizationId: string, params: any) => Promise<any>) | undefined {
-    const actionHandlers: Partial<Record<TooljetDbActions, (organizationId: string, params: any) => Promise<any>>> = {
+    const actionHandlers: Partial<Record<JumpstartDbActions, (organizationId: string, params: any) => Promise<any>>> = {
       view_tables: this.viewTables,
       view_table: this.viewTable,
       create_table: this.createTable,
@@ -76,8 +76,8 @@ export class TooljetDbService {
   private async viewTable(
     organizationId: string,
     params,
-    connectionManagers: Record<string, EntityManager> = { appManager: this.manager, tjdbManager: this.tooljetDbManager }
-  ): Promise<{ foreign_keys: TooljetDatabaseForeignKey[]; columns: TooljetDatabaseColumn[] }> {
+    connectionManagers: Record<string, EntityManager> = { appManager: this.manager, tjdbManager: this.jumpstartDbManager }
+  ): Promise<{ foreign_keys: JumpstartDatabaseForeignKey[]; columns: JumpstartDatabaseColumn[] }> {
     const { table_name: tableName, id: id } = params;
     const { appManager, tjdbManager } = connectionManagers;
 
@@ -224,7 +224,7 @@ export class TooljetDbService {
   private async createTable(
     organizationId: string,
     params,
-    connectionManagers: Record<string, EntityManager> = { appManager: this.manager, tjdbManager: this.tooljetDbManager }
+    connectionManagers: Record<string, EntityManager> = { appManager: this.manager, tjdbManager: this.jumpstartDbManager }
   ) {
     const primaryKeyColumnList = params.columns
       .filter((column) => column.constraints_type.is_primary_key)
@@ -291,7 +291,7 @@ export class TooljetDbService {
       await tjdbQueryRunner.createPrimaryKey(internalTable.id, primaryKeyColumnList);
       await queryRunner.commitTransaction();
       await tjdbQueryRunner.commitTransaction();
-      await this.tooljetDbManager.query("NOTIFY pgrst, 'reload schema'");
+      await this.jumpstartDbManager.query("NOTIFY pgrst, 'reload schema'");
 
       //@ts-expect-error queryRunner has property transactionDepth which is not defined in type EntityManager
       if (!queryRunner?.transactionDepth || queryRunner.transactionDepth < 1) await queryRunner.release();
@@ -312,7 +312,7 @@ export class TooljetDbService {
         }
       );
 
-      throw new TooljetDatabaseError(
+      throw new JumpstartDatabaseError(
         err.message,
         {
           origin: 'create_table',
@@ -339,15 +339,15 @@ export class TooljetDbService {
       await queryRunner.manager.delete(InternalTable, { id: internalTable.id });
 
       const query = `DROP TABLE "${internalTable.id}"`;
-      // if tooljetdb query fails in this connection, we must rollback internal table
+      // if jumpstartdb query fails in this connection, we must rollback internal table
       // created in the other connection
-      await this.tooljetDbManager.query(query);
+      await this.jumpstartDbManager.query(query);
 
       await queryRunner.commitTransaction();
       return true;
     } catch (err) {
       await queryRunner.rollbackTransaction();
-      throw new TooljetDatabaseError(
+      throw new JumpstartDatabaseError(
         err.message,
         {
           origin: 'drop_table',
@@ -356,7 +356,7 @@ export class TooljetDbService {
         err
       );
     } finally {
-      await this.tooljetDbManager.query("NOTIFY pgrst, 'reload schema'");
+      await this.jumpstartDbManager.query("NOTIFY pgrst, 'reload schema'");
       await queryRunner.release();
     }
   }
@@ -374,7 +374,7 @@ export class TooljetDbService {
     await queryRunner.connect();
     await queryRunner.startTransaction();
 
-    const tjdbQueryRunner = this.tooljetDbManager.connection.createQueryRunner();
+    const tjdbQueryRunner = this.jumpstartDbManager.connection.createQueryRunner();
     await tjdbQueryRunner.connect();
     await tjdbQueryRunner.startTransaction();
 
@@ -509,7 +509,7 @@ export class TooljetDbService {
 
       await tjdbQueryRunner.commitTransaction();
       await queryRunner.commitTransaction();
-      await this.tooljetDbManager.query("NOTIFY pgrst, 'reload schema'");
+      await this.jumpstartDbManager.query("NOTIFY pgrst, 'reload schema'");
       await tjdbQueryRunner.release();
       await queryRunner.release();
     } catch (error) {
@@ -518,7 +518,7 @@ export class TooljetDbService {
       await tjdbQueryRunner.release();
       await queryRunner.release();
 
-      throw new TooljetDatabaseError(error.message, { origin: 'edit_table', internalTables: [internalTable] }, error);
+      throw new JumpstartDatabaseError(error.message, { origin: 'edit_table', internalTables: [internalTable] }, error);
     }
   }
 
@@ -550,7 +550,7 @@ export class TooljetDbService {
         'Foreign key cannot be created as the referenced column is in the composite primary key.'
       );
 
-    const tjdbQueryRunnner = this.tooljetDbManager.connection.createQueryRunner();
+    const tjdbQueryRunnner = this.jumpstartDbManager.connection.createQueryRunner();
     await tjdbQueryRunnner.connect();
     await tjdbQueryRunnner.startTransaction();
 
@@ -580,7 +580,7 @@ export class TooljetDbService {
       }
 
       await tjdbQueryRunnner.commitTransaction();
-      await this.tooljetDbManager.query("NOTIFY pgrst, 'reload schema'");
+      await this.jumpstartDbManager.query("NOTIFY pgrst, 'reload schema'");
       await tjdbQueryRunnner.release();
     } catch (err) {
       await tjdbQueryRunnner.rollbackTransaction();
@@ -594,7 +594,7 @@ export class TooljetDbService {
         }
       );
 
-      throw new TooljetDatabaseError(
+      throw new JumpstartDatabaseError(
         err.message,
         { origin: 'add_column', internalTables: [internalTable, ...referencedColumnInfoForError] },
         err
@@ -611,14 +611,14 @@ export class TooljetDbService {
     if (!internalTable) throw new NotFoundException('Internal table not found: ' + tableName);
 
     // const query = `ALTER TABLE "${internalTable.id}" DROP COLUMN "${column['column_name']}"`;
-    const tjdbQueryRunnner = this.tooljetDbManager.connection.createQueryRunner();
+    const tjdbQueryRunnner = this.jumpstartDbManager.connection.createQueryRunner();
     await tjdbQueryRunnner.connect();
     try {
       const result = await tjdbQueryRunnner.dropColumn(internalTable.id, column['column_name']);
-      await this.tooljetDbManager.query("NOTIFY pgrst, 'reload schema'");
+      await this.jumpstartDbManager.query("NOTIFY pgrst, 'reload schema'");
       return result;
     } catch (error) {
-      throw new TooljetDatabaseError(error.message, { origin: 'drop_column', internalTables: [internalTable] }, error);
+      throw new JumpstartDatabaseError(error.message, { origin: 'drop_column', internalTables: [internalTable] }, error);
     } finally {
       await tjdbQueryRunnner.release();
     }
@@ -668,7 +668,7 @@ export class TooljetDbService {
       const queryBuilder = this.buildJoinQuery(joinQueryJson, internalTableIdToNameMap);
       return await queryBuilder.getRawMany();
     } catch (error) {
-      throw new TooljetDatabaseError(
+      throw new JumpstartDatabaseError(
         error.message,
         {
           origin: 'join_tables',
@@ -680,7 +680,7 @@ export class TooljetDbService {
   }
 
   private buildJoinQuery(queryJson, internalTableIdToNameMap): SelectQueryBuilder<any> {
-    const queryBuilder: SelectQueryBuilder<any> = this.tooljetDbManager.createQueryBuilder();
+    const queryBuilder: SelectQueryBuilder<any> = this.jumpstartDbManager.createQueryBuilder();
 
     // mandatory attributes
     if (isEmpty(queryJson.fields)) throw new BadRequestException('Select statement is empty');
@@ -795,7 +795,7 @@ export class TooljetDbService {
 
     if (!internalTable) throw new NotFoundException('Internal table not found: ' + tableName);
 
-    const tjdbQueryRunner = this.tooljetDbManager.connection.createQueryRunner();
+    const tjdbQueryRunner = this.jumpstartDbManager.connection.createQueryRunner();
     await tjdbQueryRunner.connect();
     await tjdbQueryRunner.startTransaction();
 
@@ -824,21 +824,21 @@ export class TooljetDbService {
       }
 
       await tjdbQueryRunner.commitTransaction();
-      await this.tooljetDbManager.query("NOTIFY pgrst, 'reload schema'");
+      await this.jumpstartDbManager.query("NOTIFY pgrst, 'reload schema'");
       await tjdbQueryRunner.release();
     } catch (error) {
       await tjdbQueryRunner.rollbackTransaction();
       await tjdbQueryRunner.release();
-      throw new TooljetDatabaseError(error.message, { origin: 'edit_column', internalTables: [internalTable] }, error);
+      throw new JumpstartDatabaseError(error.message, { origin: 'edit_column', internalTables: [internalTable] }, error);
     }
   }
 
-  private prepareColumnListForCreateTable(columns: TooljetDatabaseColumn[]) {
+  private prepareColumnListForCreateTable(columns: JumpstartDatabaseColumn[]) {
     const columnList = columns.map((column) => {
       const { column_name, constraints_type = {} as any } = column;
       const is_primary_key_column = constraints_type?.is_primary_key || false;
 
-      const prepareDataTypeAndDefault = (column): { data_type: TooljetDatabaseDataTypes; column_default: unknown } => {
+      const prepareDataTypeAndDefault = (column): { data_type: JumpstartDatabaseDataTypes; column_default: unknown } => {
         const { data_type, column_default = undefined } = column;
         const isSerial = () => data_type === TJDB.integer && /^nextval\(/.test(column_default);
         const isCharacterVarying = () => data_type === TJDB.character_varying;
@@ -862,7 +862,7 @@ export class TooljetDbService {
     return columnList;
   }
 
-  private prepareForeignKeyDetailsJSON(foreign_keys: TooljetDatabaseForeignKey[], referenced_tables_info) {
+  private prepareForeignKeyDetailsJSON(foreign_keys: JumpstartDatabaseForeignKey[], referenced_tables_info) {
     if (!foreign_keys.length) return [];
     const foreignKeyList = foreign_keys.map((foreignKeyDetail) => {
       const {
@@ -932,7 +932,7 @@ export class TooljetDbService {
   private async createForeignKey(
     organizationId: string,
     params,
-    connectionManagers: Record<string, EntityManager> = { appManager: this.manager, tjdbManager: this.tooljetDbManager }
+    connectionManagers: Record<string, EntityManager> = { appManager: this.manager, tjdbManager: this.jumpstartDbManager }
   ) {
     const { table_name, foreign_keys } = params;
     const { appManager, tjdbManager } = connectionManagers;
@@ -971,7 +971,7 @@ export class TooljetDbService {
       );
       await tjdbQueryRunner.createForeignKeys(internalTable.id, foreignKeys);
       await tjdbQueryRunner.commitTransaction();
-      await this.tooljetDbManager.query("NOTIFY pgrst, 'reload schema'");
+      await this.jumpstartDbManager.query("NOTIFY pgrst, 'reload schema'");
       //@ts-expect-error queryRunner has property transactionDepth which is not defined in type EntityManager
       if (!tjdbQueryRunner?.transactionDepth || tjdbQueryRunner.transactionDepth < 1) await tjdbQueryRunner.release();
 
@@ -989,7 +989,7 @@ export class TooljetDbService {
         }
       );
 
-      throw new TooljetDatabaseError(
+      throw new JumpstartDatabaseError(
         err.message,
         {
           origin: 'create_foreign_key',
@@ -1028,7 +1028,7 @@ export class TooljetDbService {
         'Foreign key cannot be created as the referenced column is in the composite primary key.'
       );
 
-    const tjdbQueryRunner = this.tooljetDbManager.connection.createQueryRunner();
+    const tjdbQueryRunner = this.jumpstartDbManager.connection.createQueryRunner();
     await tjdbQueryRunner.connect();
     await tjdbQueryRunner.startTransaction();
 
@@ -1041,7 +1041,7 @@ export class TooljetDbService {
       await tjdbQueryRunner.createForeignKeys(internalTable.id, foreignKeys);
 
       await tjdbQueryRunner.commitTransaction();
-      await this.tooljetDbManager.query("NOTIFY pgrst, 'reload schema'");
+      await this.jumpstartDbManager.query("NOTIFY pgrst, 'reload schema'");
       await tjdbQueryRunner.release();
       return { statusCode: 200, message: 'Foreign key relation created successfully!' };
     } catch (err) {
@@ -1056,7 +1056,7 @@ export class TooljetDbService {
         }
       );
 
-      throw new TooljetDatabaseError(
+      throw new JumpstartDatabaseError(
         err.message,
         {
           origin: 'update_foreign_key',
@@ -1074,13 +1074,13 @@ export class TooljetDbService {
     });
     if (!internalTable) throw new NotFoundException('Internal table not found: ' + table_name);
     try {
-      const tjdbQueryRunner = this.tooljetDbManager.connection.createQueryRunner();
+      const tjdbQueryRunner = this.jumpstartDbManager.connection.createQueryRunner();
       await tjdbQueryRunner.connect();
       await tjdbQueryRunner.dropForeignKey(internalTable.id, foreign_key_id);
-      await this.tooljetDbManager.query("NOTIFY pgrst, 'reload schema'");
+      await this.jumpstartDbManager.query("NOTIFY pgrst, 'reload schema'");
       return { statusCode: 200, message: 'Foreign key relation deleted successfully!' };
     } catch (error) {
-      throw new TooljetDatabaseError(
+      throw new JumpstartDatabaseError(
         error.message,
         {
           origin: 'delete_foreign_key',
@@ -1094,7 +1094,7 @@ export class TooljetDbService {
   private async checkIfForeignKeyReferencedColumnsAreFromCompositePrimaryKey(
     foreignKeys,
     organizationId,
-    connectionManagers: Record<string, EntityManager> = { appManager: this.manager, tjdbManager: this.tooljetDbManager }
+    connectionManagers: Record<string, EntityManager> = { appManager: this.manager, tjdbManager: this.jumpstartDbManager }
   ) {
     if (!foreignKeys.length) return;
     let isFKfromCompositePK = false;

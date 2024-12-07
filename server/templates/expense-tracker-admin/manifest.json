@@ -1,14 +1,14 @@
 {
   "name": "Expense tracker admin",
-  "description": "Update and manage employee expenses centrally through an admin dashboard built with ToolJet web UI and database.",
+  "description": "Update and manage employee expenses centrally through an admin dashboard built with JumpStart web UI and database.",
   "widgets": [
     "Table",
     "Chart"
   ],
   "sources": [
     {
-      "name": "ToolJet Database",
-      "id": "tooljetdb"
+      "name": "JumpStart Database",
+      "id": "jumpstartdb"
     }
   ],
   "id": "expense-tracker-admin",

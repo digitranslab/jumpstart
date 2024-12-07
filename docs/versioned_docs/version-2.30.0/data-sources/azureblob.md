@@ -3,30 +3,30 @@ id: azureblob
 title: Azure Blob
 ---
 
-ToolJet offers the capability to establish a connection with Azure Blob storage in order to read and store large objects.
+JumpStart offers the capability to establish a connection with Azure Blob storage in order to read and store large objects.
 
 ## Connection
 
-To connect ToolJet with the Azure Blob data source, you have two options:
+To connect JumpStart with the Azure Blob data source, you have two options:
 1. Click on the `+Add new data source` button in the query panel.
-2. Go to the **[Data Sources](/docs/data-sources/overview)** page on the ToolJet dashboard.
+2. Go to the **[Data Sources](/docs/data-sources/overview)** page on the JumpStart dashboard.
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/datasource-reference/azureblob/gdsazure.gif" alt="Azure Blob - ToolJet" />
+<img className="screenshot-full" src="/img/datasource-reference/azureblob/gdsazure.gif" alt="Azure Blob - JumpStart" />
 
 </div>
 
-To successfully establish the connection, ToolJet requires the following details:
+To successfully establish the connection, JumpStart requires the following details:
 - **Connection String**: The connection string can be found on the dashboard of Azure Blob Storage.
 
 Once you have entered the connection string, click on the **Test connection** button to verify the connection's success. To save the data source, click on the **Save** button.
 
 ## Querying Azure Blob
 
-Once you have connected to the Azure Blob data source, follow these steps to create queries and interact with Azure Blob storage from the ToolJet application:
+Once you have connected to the Azure Blob data source, follow these steps to create queries and interact with Azure Blob storage from the JumpStart application:
 
-1. Open the ToolJet application and navigate to the query panel at the bottom of the app builder.
+1. Open the JumpStart application and navigate to the query panel at the bottom of the app builder.
 2. Click the `+Add` button to open the list of available `local` and `data sources`.
 3. Select **Azure Blob** from the data source section.
 4. Select the desired **operation** from the dropdown and enter the required **parameters**.
@@ -39,7 +39,7 @@ Query results can be transformed using Transformation. For more information on t
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/datasource-reference/azureblob/queries.png" alt="Azure Blob - ToolJet" />
+<img className="screenshot-full" src="/img/datasource-reference/azureblob/queries.png" alt="Azure Blob - JumpStart" />
 
 </div>
 

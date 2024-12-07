@@ -1,14 +1,14 @@
 import { Injectable } from '@nestjs/common';
 import PostgrestQueryBuilder from 'src/helpers/postgrest_query_builder';
-import { QueryService, QueryResult } from '@tooljet/plugins/dist/packages/common/lib';
-import { TooljetDbService } from './tooljet_db.service';
+import { QueryService, QueryResult } from '@jumpstart/plugins/dist/packages/common/lib';
+import { JumpstartDbService } from './jumpstart_db.service';
 import { isEmpty } from 'lodash';
 import { PostgrestProxyService } from './postgrest_proxy.service';
 import { maybeSetSubPath } from 'src/helpers/utils.helper';
 
 @Injectable()
-export class TooljetDbOperationsService implements QueryService {
-  constructor(private tooljetDbService: TooljetDbService, private postgrestProxyService: PostgrestProxyService) {}
+export class JumpstartDbOperationsService implements QueryService {
+  constructor(private jumpstartDbService: JumpstartDbService, private postgrestProxyService: PostgrestProxyService) {}
 
   async run(_sourceOptions, queryOptions, _dataSourceCacheId, _dataSourceCacheUpdatedAt): Promise<QueryResult> {
     switch (queryOptions.operation) {
@@ -77,8 +77,8 @@ export class TooljetDbOperationsService implements QueryService {
     const headers = { 'data-query-id': queryOptions.id, 'tj-workspace-id': queryOptions.organization_id };
     const url =
       query.length > 0
-        ? `/api/tooljet-db/proxy/${tableId}` + `?${query.join('&')}`
-        : `/api/tooljet-db/proxy/${tableId}`;
+        ? `/api/jumpstart-db/proxy/${tableId}` + `?${query.join('&')}`
+        : `/api/jumpstart-db/proxy/${tableId}`;
 
     return await this.proxyPostgrest(maybeSetSubPath(url), 'GET', headers);
   }
@@ -91,7 +91,7 @@ export class TooljetDbOperationsService implements QueryService {
 
     const headers = { 'data-query-id': queryOptions.id, 'tj-workspace-id': queryOptions.organization_id };
 
-    const url = maybeSetSubPath(`/api/tooljet-db/proxy/${queryOptions.table_id}`);
+    const url = maybeSetSubPath(`/api/jumpstart-db/proxy/${queryOptions.table_id}`);
     return await this.proxyPostgrest(url, 'POST', headers, columns);
   }
 
@@ -116,7 +116,7 @@ export class TooljetDbOperationsService implements QueryService {
     !isEmpty(whereQuery) && query.push(whereQuery);
 
     const headers = { 'data-query-id': queryOptions.id, 'tj-workspace-id': queryOptions.organization_id };
-    const url = maybeSetSubPath(`/api/tooljet-db/proxy/${tableId}?` + query.join('&') + '&order=id');
+    const url = maybeSetSubPath(`/api/jumpstart-db/proxy/${tableId}?` + query.join('&') + '&order=id');
     return await this.proxyPostgrest(url, 'PATCH', headers, body);
   }
 
@@ -153,7 +153,7 @@ export class TooljetDbOperationsService implements QueryService {
     limit && limit !== '' && query.push(`limit=${limit}&order=id`);
 
     const headers = { 'data-query-id': queryOptions.id, 'tj-workspace-id': queryOptions.organization_id };
-    const url = maybeSetSubPath(`/api/tooljet-db/proxy/${tableId}?` + query.join('&'));
+    const url = maybeSetSubPath(`/api/jumpstart-db/proxy/${tableId}?` + query.join('&'));
     return await this.proxyPostgrest(url, 'DELETE', headers);
   }
 
@@ -195,7 +195,7 @@ export class TooljetDbOperationsService implements QueryService {
     if (sanitizedJoinTableJson?.order_by && !sanitizedJoinTableJson?.order_by.length)
       delete sanitizedJoinTableJson.order_by;
 
-    const result = await this.tooljetDbService.perform(organizationId, 'join_tables', {
+    const result = await this.jumpstartDbService.perform(organizationId, 'join_tables', {
       joinQueryJson: sanitizedJoinTableJson,
     });
 

@@ -3,7 +3,7 @@ id: search
 title: Search Operation
 ---
 
-This guide explains how to perform a server side search operation on the **Table** component in ToolJet.
+This guide explains how to perform a server side search operation on the **Table** component in JumpStart.
 
 <div style={{paddingTop:'24px'}}>
 
@@ -12,7 +12,7 @@ This guide explains how to perform a server side search operation on the **Table
 Before performing the search operation, add the **Table** component and populate it with data:
 
 1. Drag a **Table** component from the right component library to the canvas.
-2. Select a data source and create a new query using the query panel at the bottom. We are going to use ToolJet’s sample data source (Postgres) in this guide. Add the following query to fetch the data from the database:
+2. Select a data source and create a new query using the query panel at the bottom. We are going to use JumpStart’s sample data source (Postgres) in this guide. Add the following query to fetch the data from the database:
     
 ```sql
 SELECT * FROM public.sample_data_orders
@@ -62,6 +62,6 @@ This will run the query and fetch the data every time something is searched.
     
 <img className="screenshot-full" src="/img/widgets/table/serverside-operations/search-loading.png" alt="Add loading state" />
 
-This is how server side search operation is implemented in ToolJet's **Table** component. Now when a search is performed in the **Table** component, the query is executed on the server, allowing the search to be applied across the entire dataset.
+This is how server side search operation is implemented in JumpStart's **Table** component. Now when a search is performed in the **Table** component, the query is executed on the server, allowing the search to be applied across the entire dataset.
 
 </div>

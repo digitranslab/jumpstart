@@ -3,27 +3,27 @@ id: google-cloud-run
 title: Google Cloud Run
 ---
 
-# Deploying ToolJet on Google Cloud Run
+# Deploying JumpStart on Google Cloud Run
 
 :::info
-You should setup a PostgreSQL database manually to be used by ToolJet.
+You should setup a PostgreSQL database manually to be used by JumpStart.
 :::
 
-*If you have any questions feel free to join our [Slack Community](https://tooljet.com/slack) or send us an email at hello@tooljet.com.*
+*If you have any questions feel free to join our [Slack Community](https://jumpstart.com/slack) or send us an email at hello@jumpstart.com.*
 
-Follow the steps below to deploy ToolJet on Cloud run with `gcloud` CLI.
+Follow the steps below to deploy JumpStart on Cloud run with `gcloud` CLI.
 
-## Deploying ToolJet application
+## Deploying JumpStart application
 
-1. Cloud Run requires prebuilt image to be present within cloud registry. You can pull specific tooljet image from docker hub and then tag with your project to push it to cloud registry.
+1. Cloud Run requires prebuilt image to be present within cloud registry. You can pull specific jumpstart image from docker hub and then tag with your project to push it to cloud registry.
 
 *Ensure you change `replace-with-your-project-id` in the below command with your project ID.*  
 
 ```bash
   gcloud auth configure-docker
-  docker pull tooljet/tooljet:EE-LTS-latest
-  docker tag tooljet/tooljet:EE-LTS-latest gcr.io/replace-with-your-project-id/tooljet/tooljet:EE-LTS-latest
-  docker push gcr.io/replace-with-your-project-id/tooljet/tooljet:EE-LTS-latest
+  docker pull digitranslab/jumpstart:EE-LTS-latest
+  docker tag digitranslab/jumpstart:EE-LTS-latest gcr.io/replace-with-your-project-id/digitranslab/jumpstart:EE-LTS-latest
+  docker push gcr.io/replace-with-your-project-id/digitranslab/jumpstart:EE-LTS-latest
 ```
 
 2. Deploy new cloud run service
@@ -33,12 +33,12 @@ This command takes the assumption that certain required environment has already 
 :::
 
    ```bash
-   gcloud run deploy tooljet-ce --image gcr.io/<replace-your-project-id>/tooljet/tooljet-ce:latest  \
+   gcloud run deploy jumpstart-ce --image gcr.io/<replace-your-project-id>/digitranslab/jumpstart-ce:latest  \
    --allow-unauthenticated \
    --cpu 1 \
    --memory 1Gi \
    --min-instances 1 \
-   --set-env-vars "TOOLJET_HOST=https://<replace-your-public-host>.com" \
+   --set-env-vars "JUMPSTART_HOST=https://<replace-your-public-host>.com" \
    --set-secrets "PG_HOST=PG_HOST:latest" \
    --set-secrets "PG_DB=PG_DB:latest" \
    --set-secrets "PG_USER=PG_USER:latest" \
@@ -48,7 +48,7 @@ This command takes the assumption that certain required environment has already 
    --args "npm,run,start:prod"
    ```
 
-Update `TOOLJET_HOST` environment variable if you want to use the default url assigned with Cloud run after the initial deploy.
+Update `JUMPSTART_HOST` environment variable if you want to use the default url assigned with Cloud run after the initial deploy.
 
 
 :::tip
@@ -61,11 +61,11 @@ where `<CLOUD_SQL_CONNECTION_NAME>` is the name of the connection to your Cloud 
 
 3. Create default user (Optional)
 
-Signing up requires [SMTP configuration](https://docs.tooljet.com/docs/setup/env-vars#smtp-configuration--optional-) to be done, but if you want to start off with default user you can run the command by modifying the `args` flag for a one time usage.
+Signing up requires [SMTP configuration](https://docs.jumpstart.com/docs/setup/env-vars#smtp-configuration--optional-) to be done, but if you want to start off with default user you can run the command by modifying the `args` flag for a one time usage.
 
    ```bash
    gcloud run deploy <replace-service-name> \
-   --image gcr.io/<replace-your-project-id>/tooljet/tooljet-ce:latest \
+   --image gcr.io/<replace-your-project-id>/digitranslab/jumpstart-ce:latest \
    --args "npm,run,--prefix,server,db:seed"
    ```
 
@@ -73,21 +73,21 @@ The deployment will fail as it runs a seed script. Check logs to see that defaul
 
    ```bash
    gcloud run deploy <replace-service-name> \
-   --image gcr.io/<replace-your-project-id>/tooljet/tooljet-ce:latest \
+   --image gcr.io/<replace-your-project-id>/digitranslab/jumpstart-ce:latest \
    --args "npm,run,start:prod"
    ```
 
-The default username of the admin is `dev@tooljet.io` and the password is `password`.
+The default username of the admin is `dev@jumpstart.io` and the password is `password`.
 
-## Deploying only ToolJet server
+## Deploying only JumpStart server
 
-1. Cloud Run requires prebuilt image to be present within cloud registry. You can pull specific tooljet image from docker hub and then tag with you project to push it to cloud registry.
+1. Cloud Run requires prebuilt image to be present within cloud registry. You can pull specific jumpstart image from docker hub and then tag with you project to push it to cloud registry.
 
    ```bash
    gcloud auth configure-docker
-   docker pull tooljet/tooljet-server-ce:latest
-   docker tag tooljet/tooljet-server-ce:latest gcr.io/<replace-your-project-id>/tooljet/tooljet-server-ce:latest
-   docker push gcr.io/<replace-your-project-id>/tooljet/tooljet-server-ce:latest
+   docker pull digitranslab/jumpstart-server-ce:latest
+   docker tag digitranslab/jumpstart-server-ce:latest gcr.io/<replace-your-project-id>/digitranslab/jumpstart-server-ce:latest
+   docker push gcr.io/<replace-your-project-id>/digitranslab/jumpstart-server-ce:latest
    ```
 
 2. Deploy new cloud run service
@@ -97,13 +97,13 @@ This command takes the assumption that certain required environment has already 
 :::
 
    ```bash
-   gcloud run deploy tooljet-server-ce --image gcr.io/<replace-your-project-id>/tooljet/tooljet-server-ce:latest  \
+   gcloud run deploy jumpstart-server-ce --image gcr.io/<replace-your-project-id>/digitranslab/jumpstart-server-ce:latest  \
    --allow-unauthenticated \
    --cpu 1 \
    --memory 1Gi \
    --min-instances 1 \
    --set-env-vars "SERVE_CLIENT=false" \
-   --set-env-vars "TOOLJET_HOST=https://<replace-your-public-host>.com" \
+   --set-env-vars "JUMPSTART_HOST=https://<replace-your-public-host>.com" \
    --set-secrets "PG_HOST=PG_HOST:latest" \
    --set-secrets "PG_DB=PG_DB:latest" \
    --set-secrets "PG_USER=PG_USER:latest" \
@@ -122,16 +122,16 @@ where `<CLOUD_SQL_CONNECTION_NAME>` is the name of the connection to your Cloud 
 :::
 
 :::info
-  If there are self signed HTTPS endpoints that Tooljet needs to connect to, please make sure that `NODE_EXTRA_CA_CERTS` environment variable is set to the absolute path containing the certificates. The certificate can be mount as a volume onto the container using secrets.
+  If there are self signed HTTPS endpoints that Jumpstart needs to connect to, please make sure that `NODE_EXTRA_CA_CERTS` environment variable is set to the absolute path containing the certificates. The certificate can be mount as a volume onto the container using secrets.
 :::
 
 3. Create default user **(Optional)**
 
-Signing up requires [SMTP configuration](https://docs.tooljet.com/docs/setup/env-vars#smtp-configuration--optional-) to be done, but if you want to start off with default user you can run the command by modifying the `args` flag for a one time usage.
+Signing up requires [SMTP configuration](https://docs.jumpstart.com/docs/setup/env-vars#smtp-configuration--optional-) to be done, but if you want to start off with default user you can run the command by modifying the `args` flag for a one time usage.
 
    ```bash
    gcloud run deploy <replace-service-name> \
-   --image gcr.io/<replace-your-project-id>/tooljet/tooljet-server-ce:latest \
+   --image gcr.io/<replace-your-project-id>/digitranslab/jumpstart-server-ce:latest \
    --args "npm,run,db:seed:prod"
    ```
 
@@ -139,11 +139,11 @@ The deployment will fail as it only runs a seed script. Check logs to see that d
 
    ```bash
    gcloud run deploy <replace-service-name> \
-   --image gcr.io/<replace-your-project-id>/tooljet/tooljet-server-ce:latest \
+   --image gcr.io/<replace-your-project-id>/digitranslab/jumpstart-server-ce:latest \
    --args "npm,run,start:prod"
    ```
 
-The default username of the admin is `dev@tooljet.io` and the password is `password`.
+The default username of the admin is `dev@jumpstart.io` and the password is `password`.
 
 ## Upgrading to the Latest Version
 
@@ -159,4 +159,4 @@ If this is a new installation of the application, you may start directly with th
 
 - Users on versions earlier than v2.23.0-ee2.10.2 must first upgrade to this version before proceeding to the latest version.
 
-For specific issues or questions, refer to our **[Slack](https://tooljet.slack.com/join/shared_invite/zt-25438diev-mJ6LIZpJevG0LXCEcL0NhQ#)**.
+For specific issues or questions, refer to our **[Slack](https://jumpstart.slack.com/join/shared_invite/zt-25438diev-mJ6LIZpJevG0LXCEcL0NhQ#)**.

@@ -9,7 +9,7 @@ Link widget allows you to add a hyperlink and navigate to the external URL.
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/link/link.png" alt="ToolJet - Widget - Link" />
+<img className="screenshot-full" src="/img/widgets/link/link.png" alt="JumpStart - Widget - Link" />
 
 </div>
 
@@ -17,7 +17,7 @@ Link widget allows you to add a hyperlink and navigate to the external URL.
 
 | Properties  | description | Expected value |
 | ----------- | ----------- | -------------- |
-| Link Target | This property sets the URL where the user needs to be taken on clicking the link | example: `https://dev.to/tooljet` or `{{queries.xyz.data.url}}` | 
+| Link Target | This property sets the URL where the user needs to be taken on clicking the link | example: `https://dev.to/jumpstart` or `{{queries.xyz.data.url}}` | 
 | Link Text | This property sets the text for the link widget  | example: `Click here` or `Open webpage` | 
 | Target Type | This property specifies the link to be opened in the same tab or new tab on clickinh the link | Options: `New Tab` & `Same Tab` |
 
@@ -25,10 +25,10 @@ Link widget allows you to add a hyperlink and navigate to the external URL.
 To add an event to a link, click on the widget handle to open the widget properties on the right sidebar. Go to the **Events** section and click on **Add handler**.
 
 ### On Click
-**On Click** event is triggered when the link is clicked. Just like any other event on ToolJet, you can set multiple handlers for on click event.
+**On Click** event is triggered when the link is clicked. Just like any other event on JumpStart, you can set multiple handlers for on click event.
 
 ### On hover
-**On Hover** event is triggered when the link is hovered. Just like any other event on ToolJet, you can set multiple handlers for on click event.
+**On Hover** event is triggered when the link is hovered. Just like any other event on JumpStart, you can set multiple handlers for on click event.
 
 :::info
 Check [Action Reference](/docs/category/actions-reference) docs to get the detailed information about all the **Actions**.
@@ -52,7 +52,7 @@ Under the <b>General</b> accordion, you can set the value in the string format. 
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/link/styles.png" alt="ToolJet - Widget - Link" />
+<img className="screenshot-full" src="/img/widgets/link/styles.png" alt="JumpStart - Widget - Link" />
 
 </div>
 

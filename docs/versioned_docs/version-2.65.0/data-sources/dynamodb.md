@@ -3,13 +3,13 @@ id: dynamodb
 title: DynamoDB
 ---
 
-**DynamoDB** is a managed non-relational database service provided by Amazon. ToolJet has the capability to connect to DynamoDB for reading and writing data.
+**DynamoDB** is a managed non-relational database service provided by Amazon. JumpStart has the capability to connect to DynamoDB for reading and writing data.
 
 <div style={{paddingTop:'24px'}}>
 
 ## Connection
 
-To establish a connection with the **DynamoDB** data source, you can either click on the **+ Add new Data source** button located on the query panel or navigate to the **[Data sources](/docs/data-sources/overview)** page through the ToolJet dashboard.
+To establish a connection with the **DynamoDB** data source, you can either click on the **+ Add new Data source** button located on the query panel or navigate to the **[Data sources](/docs/data-sources/overview)** page through the JumpStart dashboard.
 
 <div style={{textAlign: 'center'}}>
 
@@ -17,7 +17,7 @@ To establish a connection with the **DynamoDB** data source, you can either clic
 
 </div>
 
-ToolJet supports connecting to DynamoDB using three methods: **IAM Credentials**, **AWS Instance Credentials**, or **AWS ARN Role**.
+JumpStart supports connecting to DynamoDB using three methods: **IAM Credentials**, **AWS Instance Credentials**, or **AWS ARN Role**.
 
 When using **IAM Credentials**, you will need to provide the following information:
 
@@ -25,19 +25,19 @@ When using **IAM Credentials**, you will need to provide the following informati
 - **Access key**
 - **Secret key**
 
-It is recommended to create a dedicated IAM user for the database in order to have granular control over ToolJet's access levels.
+It is recommended to create a dedicated IAM user for the database in order to have granular control over JumpStart's access levels.
 
 <div style={{textAlign: 'center'}}>
 
-<img style={{ border:'0', marginBottom:'15px' }} className="screenshot-full" src="/img/datasource-reference/dynamodb/iam-v2.png" alt="ToolJet - DynamoDB connection" />
+<img style={{ border:'0', marginBottom:'15px' }} className="screenshot-full" src="/img/datasource-reference/dynamodb/iam-v2.png" alt="JumpStart - DynamoDB connection" />
 
 </div>
 
-To connect to DynamoDB using an **AWS Instance Credentials**, select the option to **Use AWS Instance Credentials**. This will utilize the IAM role attached to the EC2 instance where ToolJet is running. The WebIdentityToken parameter obtained from a successful login with an identity provider is used to access the metadata service of an ECS container and the EC2 instance.
+To connect to DynamoDB using an **AWS Instance Credentials**, select the option to **Use AWS Instance Credentials**. This will utilize the IAM role attached to the EC2 instance where JumpStart is running. The WebIdentityToken parameter obtained from a successful login with an identity provider is used to access the metadata service of an ECS container and the EC2 instance.
 
 <div style={{textAlign: 'center'}}>
 
-<img style={{ border:'0', marginBottom:'15px' }} className="screenshot-full" src="/img/datasource-reference/dynamodb/awsinstance-v2.png" alt="ToolJet - DynamoDB connection" />
+<img style={{ border:'0', marginBottom:'15px' }} className="screenshot-full" src="/img/datasource-reference/dynamodb/awsinstance-v2.png" alt="JumpStart - DynamoDB connection" />
 
 </div>
 
@@ -48,7 +48,7 @@ If you prefer to use an **AWS ARN Role**, you will need to provide the following
 
 <div style={{textAlign: 'center'}}>
 
-<img style={{ border:'0', marginBottom:'15px' }} className="screenshot-full" src="/img/datasource-reference/dynamodb/arn-v2.png" alt="ToolJet - DynamoDB connection" />
+<img style={{ border:'0', marginBottom:'15px' }} className="screenshot-full" src="/img/datasource-reference/dynamodb/arn-v2.png" alt="JumpStart - DynamoDB connection" />
 
 </div>
 
@@ -65,7 +65,7 @@ If you prefer to use an **AWS ARN Role**, you will need to provide the following
 
 <div style={{textAlign: 'center'}}>
 
-<img style={{ border:'0', marginBottom:'15px' }} className="screenshot-full" src="/img/datasource-reference/dynamodb/queries-v2.png" alt="ToolJet - DynamoDB connection" />
+<img style={{ border:'0', marginBottom:'15px' }} className="screenshot-full" src="/img/datasource-reference/dynamodb/queries-v2.png" alt="JumpStart - DynamoDB connection" />
 
 </div>
 
@@ -97,7 +97,7 @@ Returns an array of table names associated with the current account and endpoint
 
 <div style={{textAlign: 'center'}}>
 
-<img style={{ border:'0'}} className="screenshot-full" src="/img/datasource-reference/dynamodb/listtables-v2.png" alt="ToolJet - DynamoDB operations" />
+<img style={{ border:'0'}} className="screenshot-full" src="/img/datasource-reference/dynamodb/listtables-v2.png" alt="JumpStart - DynamoDB operations" />
 
 </div>
 
@@ -126,7 +126,7 @@ Retrieves a single item from a table. You must specify the primary key for the i
 
 <div style={{textAlign: 'center'}}>
 
-<img style={{ border:'0'}} className="screenshot-full" src="/img/datasource-reference/dynamodb/getitem-v2.png" alt="ToolJet - DynamoDB operations" />
+<img style={{ border:'0'}} className="screenshot-full" src="/img/datasource-reference/dynamodb/getitem-v2.png" alt="JumpStart - DynamoDB operations" />
 
 </div>
 
@@ -159,7 +159,7 @@ Retrieves all items that have a specific partition key. You must specify the par
 
 <div style={{textAlign: 'center'}}>
 
-<img style={{ border:'0'}} className="screenshot-full" src="/img/datasource-reference/dynamodb/querytable-v2.png" alt="ToolJet - DynamoDB operations" />
+<img style={{ border:'0'}} className="screenshot-full" src="/img/datasource-reference/dynamodb/querytable-v2.png" alt="JumpStart - DynamoDB operations" />
 
 </div>
 
@@ -181,7 +181,7 @@ Retrieves all items in the specified table or index. You can retrieve entire ite
 
 <div style={{textAlign: 'center'}}>
 
-<img style={{ border:'0'}} className="screenshot-full" src="/img/datasource-reference/dynamodb/scantable-v2.png" alt="ToolJet - DynamoDB operations" />
+<img style={{ border:'0'}} className="screenshot-full" src="/img/datasource-reference/dynamodb/scantable-v2.png" alt="JumpStart - DynamoDB operations" />
 
 </div>
 
@@ -213,7 +213,7 @@ Deletes a single item from a table. You must specify the primary key for the ite
 
 <div style={{textAlign: 'center'}}>
 
-<img style={{ border:'0'}} className="screenshot-full" src="/img/datasource-reference/dynamodb/deleteitem-v2.png" alt="ToolJet - DynamoDB operations" />
+<img style={{ border:'0'}} className="screenshot-full" src="/img/datasource-reference/dynamodb/deleteitem-v2.png" alt="JumpStart - DynamoDB operations" />
 
 </div>
 
@@ -244,7 +244,7 @@ Update an item in DynamoDB by specifying the primary key and providing new attri
 
 <div style={{textAlign: 'center'}}>
 
-<img style={{ border:'0'}} className="screenshot-full" src="/img/datasource-reference/dynamodb/updateitem-v2.png" alt="ToolJet - DynamoDB operations" />
+<img style={{ border:'0'}} className="screenshot-full" src="/img/datasource-reference/dynamodb/updateitem-v2.png" alt="JumpStart - DynamoDB operations" />
 
 </div>
 
@@ -258,7 +258,7 @@ This operation in DynamoDB retrieves metadata and configuration details about a 
 
 <div style={{textAlign: 'center'}}>
 
-<img style={{ border:'0'}} className="screenshot-full" src="/img/datasource-reference/dynamodb/describetable-v2.png" alt="ToolJet - DynamoDB operations" />
+<img style={{ border:'0'}} className="screenshot-full" src="/img/datasource-reference/dynamodb/describetable-v2.png" alt="JumpStart - DynamoDB operations" />
 
 </div>
 
@@ -321,7 +321,7 @@ This operation in DynamoDB enables you to create a new table by specifying its n
 
 <div style={{textAlign: 'center'}}>
 
-<img style={{ border:'0'}} className="screenshot-full" src="/img/datasource-reference/dynamodb/createtable-v2.png" alt="ToolJet - DynamoDB operations" />
+<img style={{ border:'0'}} className="screenshot-full" src="/img/datasource-reference/dynamodb/createtable-v2.png" alt="JumpStart - DynamoDB operations" />
 
 </div>
 
@@ -349,6 +349,6 @@ This operation allows you to create or replace an item in a table. It enables yo
 
 <div style={{textAlign: 'center'}}>
 
-<img style={{ border:'0', marginBottom:'15px' }} className="screenshot-full" src="/img/datasource-reference/dynamodb/putitem-v2.png" alt="ToolJet - DynamoDB operations" />
+<img style={{ border:'0', marginBottom:'15px' }} className="screenshot-full" src="/img/datasource-reference/dynamodb/putitem-v2.png" alt="JumpStart - DynamoDB operations" />
 
 </div>

@@ -1,4 +1,4 @@
 
 # Amazon SES
 
-Documentation on: https://docs.tooljet.com/docs/data-sources/amazonses
+Documentation on: https://docs.jumpstart.com/docs/data-sources/amazonses

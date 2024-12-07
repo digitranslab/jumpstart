@@ -4,10 +4,10 @@ title: Ubuntu
 ---
 
 :::warning
-The following guide is intended for contributors to set-up ToolJet locally. If you're interested in **self-hosting** ToolJet, please refer to the **[Setup](/docs/setup/)** section.
+The following guide is intended for contributors to set-up JumpStart locally. If you're interested in **self-hosting** JumpStart, please refer to the **[Setup](/docs/setup/)** section.
 :::
 
-Follow these steps to setup and run ToolJet on Ubuntu. Open terminal and run the commands below.
+Follow these steps to setup and run JumpStart on Ubuntu. Open terminal and run the commands below.
 
 ## Setting up
 
@@ -37,7 +37,7 @@ Follow these steps to setup and run ToolJet on Ubuntu. Open terminal and run the
     1.3 Install PostgREST (optional)
 
     :::info 
-    Required only if ToolJet Database is being used. 
+    Required only if JumpStart Database is being used. 
 
     Please use PostgREST version 10.1.1.x
     :::
@@ -47,7 +47,7 @@ Follow these steps to setup and run ToolJet on Ubuntu. Open terminal and run the
     **Note:** Clone the GitHub repo locally using: 
     
     ```bash
-    git clone https://github.com/ToolJet/ToolJet.git
+    git clone https://github.com/digitranslab/jumpstart.git
     ```
 
     
@@ -68,7 +68,7 @@ Follow these steps to setup and run ToolJet on Ubuntu. Open terminal and run the
    Example:
    ```bash
    cat .env
-   TOOLJET_HOST=http://localhost:8082
+   JUMPSTART_HOST=http://localhost:8082
    LOCKBOX_MASTER_KEY=1d291a926ddfd221205a23adb4cc1db66cb9fcaf28d97c8c1950e3538e3b9281
    SECRET_KEY_BASE=4229d5774cfe7f60e75d6b3bf3a1dbb054a696b6d21b6d5de7b73291899797a222265e12c0a8e8d844f83ebacdf9a67ec42584edf1c2b23e1e7813f8a3339041
    ```

@@ -3,17 +3,17 @@ id: restapi
 title: REST API
 ---
 
-ToolJet can establish connections with any available REST API endpoint, allowing you to create queries and interact with external data sources seamlessly.
+JumpStart can establish connections with any available REST API endpoint, allowing you to create queries and interact with external data sources seamlessly.
 
 <div style={{paddingTop:'24px'}}>
 
 ## Connection
 
-To establish a connection with the REST API data source, you can either click on the **+ Add new Data source** button located on the query panel or navigate to the **[Data Sources](/docs/data-sources/overview)** page through the ToolJet dashboard.
+To establish a connection with the REST API data source, you can either click on the **+ Add new Data source** button located on the query panel or navigate to the **[Data Sources](/docs/data-sources/overview)** page through the JumpStart dashboard.
 
-<img className="screenshot-full" src="/img/datasource-reference/rest-api/restconnect.gif" alt="ToolJet - Data source - REST API" style={{marginBottom:'15px'}} />
+<img className="screenshot-full" src="/img/datasource-reference/rest-api/restconnect.gif" alt="JumpStart - Data source - REST API" style={{marginBottom:'15px'}} />
 
-ToolJet requires the following to connect to a REST API data source:
+JumpStart requires the following to connect to a REST API data source:
 
 - **Base URL**: REST API endpoint URL
 - **Headers**: Key-value pairs to include as headers with REST API requests
@@ -37,7 +37,7 @@ ToolJet requires the following to connect to a REST API data source:
   - **Client Certificate**: Requires a client certificate and private key to authenticate with the server.
 - **Cookies**: Key-value pairs to include as cookies with REST API requests. These cookies will be sent with every query created using this data source instance.
 
-<img className="screenshot-full" src="/img/datasource-reference/rest-api/oauth-v2.png" alt="ToolJet - Data source - REST API" />
+<img className="screenshot-full" src="/img/datasource-reference/rest-api/oauth-v2.png" alt="JumpStart - Data source - REST API" />
 
 </div>
 
@@ -45,7 +45,7 @@ ToolJet requires the following to connect to a REST API data source:
 
 ## Retry on Network Errors
 
-ToolJet provides an option to automatically retry REST API requests in case of certain network errors or specific HTTP status codes. By default, this feature is enabled and will retry the request up to 3 times in case of failure. This feature can be toggled on or off at both the data source level and the individual query level. When enabled, retries will occur for the following scenarios:
+JumpStart provides an option to automatically retry REST API requests in case of certain network errors or specific HTTP status codes. By default, this feature is enabled and will retry the request up to 3 times in case of failure. This feature can be toggled on or off at both the data source level and the individual query level. When enabled, retries will occur for the following scenarios:
 
 1. Specific HTTP status codes: 408, 413, 429, 500, 502, 503, 504, 521, 522, 524.
 2. Network errors:
@@ -62,11 +62,11 @@ You can configure this feature at two levels:
 
 1. **Data Source Level**: In the REST API data source configuration, you'll find a toggle for **Retry on network errors** This sets the default behavior for all queries using this data source.
 
-<img className="screenshot-full" src="/img/datasource-reference/rest-api/rest-api-data-source.png" alt="ToolJet - Data source - REST API" />
+<img className="screenshot-full" src="/img/datasource-reference/rest-api/rest-api-data-source.png" alt="JumpStart - Data source - REST API" />
 
 2. **Query Level**: In the query builder for each REST API query, you'll find a similar toggle for for **Retry on network errors** under the **Settings** tab. This sets the behavior for that specific query.
 
-<img className="screenshot-full" src="/img/datasource-reference/rest-api/query-builder-retry.png" alt="ToolJet - Data source - REST API" />
+<img className="screenshot-full" src="/img/datasource-reference/rest-api/query-builder-retry.png" alt="JumpStart - Data source - REST API" />
 
 :::info
 If the data source-level configuration is enabled but a specific query has it disabled, the query-level setting takes precedence.
@@ -78,7 +78,7 @@ If the data source-level configuration is enabled but a specific query has it di
 
 ## Querying REST API
 
-Once you have connected to the REST API data source, follow these steps to write queries and interact with a REST API in the ToolJet application:
+Once you have connected to the REST API data source, follow these steps to write queries and interact with a REST API in the JumpStart application:
 
 1. Click on **+ Add** button of the query manager at the bottom panel of the editor.
 2. Select **REST API** from the Data Source section.
@@ -89,14 +89,14 @@ Once you have connected to the REST API data source, follow these steps to write
 Query results can be transformed using the **[Transformations](/docs/how-to/transformations)** feature.
 :::
 
-ToolJet supports the following REST HTTP methods 
+JumpStart supports the following REST HTTP methods 
 - **GET**
 - **POST**
 - **PUT**
 - **PATCH**
 - **DELETE**
 
-<img className="screenshot-full" src="/img/datasource-reference/rest-api/restquery.png" alt="ToolJet - Data source - REST API" />
+<img className="screenshot-full" src="/img/datasource-reference/rest-api/restquery.png" alt="JumpStart - Data source - REST API" />
 
 </div>
 
@@ -104,9 +104,9 @@ ToolJet supports the following REST HTTP methods
 
 ## Additional header
 
-Whenever a request is made to the REST API, a **tj-x-forwarded-for** header is added to the request, the value of the header will be the IP address of the user who is logged in to the ToolJet application. This header can be used to identify the user who is making the request to the REST API.
+Whenever a request is made to the REST API, a **tj-x-forwarded-for** header is added to the request, the value of the header will be the IP address of the user who is logged in to the JumpStart application. This header can be used to identify the user who is making the request to the REST API.
 
-<img className="screenshot-full" src="/img/datasource-reference/rest-api/header.png" alt="ToolJet - Data source - REST API"/>
+<img className="screenshot-full" src="/img/datasource-reference/rest-api/header.png" alt="JumpStart - Data source - REST API"/>
 
 </div>
 
@@ -125,7 +125,7 @@ To add cookies:
 You can use both static values and dynamic values for cookie values.
 
 <div style={{textAlign: 'center'}}>
-<img className="screenshot-full" src="/img/datasource-reference/rest-api/query-cookies.png" alt="ToolJet - Query Builder - REST API Cookies" />
+<img className="screenshot-full" src="/img/datasource-reference/rest-api/query-cookies.png" alt="JumpStart - Query Builder - REST API Cookies" />
 </div>
 
  :::info
@@ -146,9 +146,9 @@ For example, to send a **multipart/form-data** body, you can add the following h
   Content-Type: multipart/form-data;
 ```
 
-<img className="screenshot-full" src="/img/datasource-reference/rest-api/form-headers.png" alt="ToolJet - Data source - REST API" />
+<img className="screenshot-full" src="/img/datasource-reference/rest-api/form-headers.png" alt="JumpStart - Data source - REST API" />
 
-<img className="screenshot-full" src="/img/datasource-reference/rest-api/form-body.png" alt="ToolJet - Data source - REST API" />
+<img className="screenshot-full" src="/img/datasource-reference/rest-api/form-body.png" alt="JumpStart - Data source - REST API" />
 
 </div>
 
@@ -221,7 +221,7 @@ The JSON response can be easily loaded on the components like **table** and **li
 
 You can also use JS methods like **map** to load data on components like **dropdown** using **`{{queries.restapi1.data.map(i => i.title)}}`**
 
-<img className="screenshot-full" src="/img/datasource-reference/rest-api/map.png" alt="ToolJet - Data source - REST API" style={{marginBottom:'15px'}} />
+<img className="screenshot-full" src="/img/datasource-reference/rest-api/map.png" alt="JumpStart - Data source - REST API" style={{marginBottom:'15px'}} />
 
 <details>
 <summary>**Example base64 response**</summary>
@@ -232,7 +232,7 @@ iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAA/FBMVEVAYt79/f1AYt/9/f79/ftAY9s/
 
 Read the guide on **[loading base64 data](/docs/how-to/loading-image-pdf-from-db)**
 
-<img className="screenshot-full" src="/img/datasource-reference/rest-api/base64.png" alt="ToolJet - Data source - REST API" />
+<img className="screenshot-full" src="/img/datasource-reference/rest-api/base64.png" alt="JumpStart - Data source - REST API" />
 
 </div>
 
@@ -299,7 +299,7 @@ While accessing the properties of the metadata object, which contains a hyphen, 
 
 ## OAuth 2.0 Method for Authenticating REST APIs
 
-ToolJet’s REST API data source supports OAuth 2.0 as the authentication type. Supported OAuth 2.0 grant types are Authorization Code and Client Credentials.
+JumpStart’s REST API data source supports OAuth 2.0 as the authentication type. Supported OAuth 2.0 grant types are Authorization Code and Client Credentials.
 
 - **Authorization Code Grant Type**: This grant type is used by confidential and public clients to exchange an authorization code for an access token.
 - **Client Credentials Grant Type**: This grant type is used by clients to obtain an access token outside of the context of a user.
@@ -307,7 +307,7 @@ ToolJet’s REST API data source supports OAuth 2.0 as the authentication type. 
 ### Setting up Google Cloud Platform
 
 :::info
-Before setting up the REST API data source in ToolJet, we need to configure the **Google Cloud Platform** to gather the API keys required for the authorization access.
+Before setting up the REST API data source in JumpStart, we need to configure the **Google Cloud Platform** to gather the API keys required for the authorization access.
 :::
 
 Google Cloud Platform provides access to more than 350 APIs and Services that can allow us to access data from our Google account and its services. Let's create an OAuth application that can be given permission to use our Google profile data such as Name and Profile picture.
@@ -317,17 +317,17 @@ Google Cloud Platform provides access to more than 350 APIs and Services that ca
 3. Enter the Application details and select the appropriate scopes for your application. We will select the profile and the email scopes. 
 4. Once you have created the OAuth consent screen, Create new credentials for the **OAuth client ID** from the **Credentials** section in the left sidebar.
 5. Select the application type, enter the application name, and then add the following URIs under Authorized Redirect URIs:
-    1. `https://app.tooljet.com/oauth2/authorize` (if you’re using ToolJet cloud)
-    2. `http://localhost:8082/oauth2/authorize` (if you’re using ToolJet locally)
+    1. `https://app.jumpstart.com/oauth2/authorize` (if you’re using JumpStart cloud)
+    2. `http://localhost:8082/oauth2/authorize` (if you’re using JumpStart locally)
 6. Now save and then you’ll get the **Client ID and Client secret** for your application.
 
-<img class="screenshot-full" src="/img/how-to/oauth2-authorization/gcp.png" alt="ToolJet - How To - REST API authentication using OAuth 2.0" style={{marginBottom:'15px'}}/>
+<img class="screenshot-full" src="/img/how-to/oauth2-authorization/gcp.png" alt="JumpStart - How To - REST API authentication using OAuth 2.0" style={{marginBottom:'15px'}}/>
 
-### Configuring ToolJet Application with Google's OAuth 2.0 API
+### Configuring JumpStart Application with Google's OAuth 2.0 API
 
-Let's follow the steps to authorize ToolJet to access your Google profile data:
+Let's follow the steps to authorize JumpStart to access your Google profile data:
 
-1. Go to the **Data Sources** page from the ToolJet dashboard, select API category on sidebar and choose the **REST API** data source.
+1. Go to the **Data Sources** page from the JumpStart dashboard, select API category on sidebar and choose the **REST API** data source.
 2. In the **Base URL** field, enter the base URL `https://www.googleapis.com/oauth2/v1/userinfo`; the base URL specifies the network address of the API service.
 3. Select **Authentication** type as *OAuth 2.0*
 4. Keep the default values for **Grant Type**, **Add Access Token To**, and **Header Prefix** i.e. *Authorization Code*, *Request Header*, and *Bearer* respectively.
@@ -338,10 +338,10 @@ Let's follow the steps to authorize ToolJet to access your Google profile data:
 9. Create three **Custom Authentication Parameters:**
     1. **response_type**: code ( `code` refers to the Authorization Code)
     2. **client_id**: Client ID
-    3. **redirect_url**: `http://localhost:8082/oauth2/authorize` if using ToolJet locally or enter this `https://app.tooljet.com/oauth2/authorize` if using ToolJet Cloud.
+    3. **redirect_url**: `http://localhost:8082/oauth2/authorize` if using JumpStart locally or enter this `https://app.jumpstart.com/oauth2/authorize` if using JumpStart Cloud.
 10. Keep the default selection for **Client Authentication** and **Save** the data source.
 
-<img class="screenshot-full" src="/img/how-to/oauth2-authorization/restapi-v2.png" alt="ToolJet - How To - REST API authentication using OAuth 2.0" style={{marginBottom:'15px'}}/>
+<img class="screenshot-full" src="/img/how-to/oauth2-authorization/restapi-v2.png" alt="JumpStart - How To - REST API authentication using OAuth 2.0" style={{marginBottom:'15px'}}/>
 
 ### Authenticating REST API
 
@@ -358,26 +358,26 @@ Let’s create a query to make a `GET` request to the URL, it will pop a new win
 
 ## Bearer Token Method for Authenticating REST APIs
 
-ToolJet’s REST API data source supports Bearer Token as the authentication type. Bearer Token is a security token that is issued by the authentication server to the client. The client then uses the token to access the protected resources hosted by the resource server.
+JumpStart’s REST API data source supports Bearer Token as the authentication type. Bearer Token is a security token that is issued by the authentication server to the client. The client then uses the token to access the protected resources hosted by the resource server.
 
 ### Configuring REST API Data Source with Bearer Token
 
-1. Go to the **Data Sources** page from the ToolJet dashboard, select **API** category on sidebar and choose the **REST API** data source.
+1. Go to the **Data Sources** page from the JumpStart dashboard, select **API** category on sidebar and choose the **REST API** data source.
 2. In the **Base URL** field, enter the base URL. The base URL specifies the network address of the API service. For example, `http://localhost:3001/api/bearer-auth`
 3. Enter the **Headers** if required. Headers are key-value pairs to include as headers with REST API requests.
 4. Select **Authentication** type as *Bearer* from the dropdown.
 5. Enter the **Token** in the field. The token is a security token that is issued by the authentication server to the client. The client then uses the token to access the protected resources hosted by the resource server.
   
-<img className="screenshot-full" src="/img/datasource-reference/rest-api/none.png" alt="ToolJet - Data source - REST API" />
+<img className="screenshot-full" src="/img/datasource-reference/rest-api/none.png" alt="JumpStart - Data source - REST API" />
 
 6. Now you have option to select the **SSL Certificate** if required. SSL certificate is used to verify the server certificate. By default, it is set to *None*. You can provide the **CA Certificate** or **Client Certificate** from the dropdown.
     1. **CA Certificate**: Requires a CA certificate to verify the server certificate. Copy the content of `server.crt` file and paste it in the **CA Cert** field. `server.crt` file is the certificate file that is used to verify the server certificate.
   
-        <img className="screenshot-full" src="/img/datasource-reference/rest-api/cacert.png" alt="ToolJet - Data source - REST API" />
+        <img className="screenshot-full" src="/img/datasource-reference/rest-api/cacert.png" alt="JumpStart - Data source - REST API" />
 
     2. **Client Certificate**: Requires a client certificate to authenticate with the server. **client.key**, **client.crt**, and **server.crt** files are the certificate files that are used to authenticate with the server. Copy the content of **client.key** file and paste it in the **Client Key** field. Copy the content of **client.crt** file and paste it in the **Client Cert** field. Copy the content of **server.crt** file and paste it in the **CA Cert** field.
   
-        <img className="screenshot-full" src="/img/datasource-reference/rest-api/clientcert.png" alt="ToolJet - Data source - REST API" />
+        <img className="screenshot-full" src="/img/datasource-reference/rest-api/clientcert.png" alt="JumpStart - Data source - REST API" />
 
 7. Once you have configured the REST API data source, click on the **Save** button.
 
@@ -387,7 +387,7 @@ Create a query to make a `GET` request to the URL, and it will return a success 
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/datasource-reference/rest-api/bearersuccess.png" alt="ToolJet - Data source - REST API" />
+<img className="screenshot-full" src="/img/datasource-reference/rest-api/bearersuccess.png" alt="JumpStart - Data source - REST API" />
 
 </div>
 

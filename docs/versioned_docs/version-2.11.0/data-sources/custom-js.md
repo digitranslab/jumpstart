@@ -118,7 +118,7 @@ In this code, the resulting ID will have the format "timestamp + randomHex", whe
 Both code snippets will produce IDs that are highly likely to be unique. However, Code 1 generates shorter IDs and follows a more straightforward approach with a fixed prefix ("id"). On the other hand, Code 2 generates longer IDs by incorporating the current timestamp and using a combination of base-32 and hexadecimal representations. The choice between the two methods depends on the specific requirements of the application and the desired length of the generated IDs.
 
 :::tip Resources
-- You can also write custom JavaScript code to get the data from **External APIs** and manipulate the response for graphical representation. Here's the [tutorial](https://blog.tooljet.com/build-github-stars-history-app-in-5-minutes-using-low-code/) on how we used custom JavaScript code to build an app using GitHub API.
+- You can also write custom JavaScript code to get the data from **External APIs** and manipulate the response for graphical representation. Here's the [tutorial](https://blog.jumpstart.com/build-github-stars-history-app-in-5-minutes-using-low-code/) on how we used custom JavaScript code to build an app using GitHub API.
 - [Import external libraries](/docs/how-to/import-external-libraries-using-runjs) using RunJS.
 - [Intentionally Fail](/docs/how-to/intentionally-fail-js-query) a RunJS query.
 - [Trigger query at specified intervals](/docs/how-to/run-query-at-specified-intervals) using RunJS.
@@ -126,7 +126,7 @@ Both code snippets will produce IDs that are highly likely to be unique. However
 
 ## Libraries
 
-ToolJet allows you to internally utilize these libraries:
+JumpStart allows you to internally utilize these libraries:
 
 | Name        | Documentation |
 | ----------- | ----------- |
@@ -135,5 +135,5 @@ ToolJet allows you to internally utilize these libraries:
 | Axios       | [https://axios-http.com/docs/intro](https://axios-http.com/docs/intro) |
 
 :::info
-Issues with writing custom JavaScript code? Ask in our [Slack Community](https://tooljet.com/slack).
+Issues with writing custom JavaScript code? Ask in our [Slack Community](https://jumpstart.com/slack).
 :::

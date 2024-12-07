@@ -8,7 +8,7 @@ Circular progress bar widget can be used to show progress in a progress circle.
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/circular-progressbar/cpb.png" alt="ToolJet - Widget Reference - Circular progress bar" />
+<img className="screenshot-full" src="/img/widgets/circular-progressbar/cpb.png" alt="JumpStart - Widget Reference - Circular progress bar" />
 
 </div>
 
@@ -20,7 +20,7 @@ Any property having `Fx` button next to its field can be **programmatically conf
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/circular-progressbar/prop.png" alt="ToolJet - Widget Reference - Circular progress bar" />
+<img className="screenshot-full" src="/img/widgets/circular-progressbar/prop.png" alt="JumpStart - Widget Reference - Circular progress bar" />
 
 </div>
 
@@ -38,7 +38,7 @@ Under the <b>General</b> accordion, you can set the value in the string format. 
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/tooltip.png" alt="ToolJet - Widget Reference - Circular progress bar" />
+<img className="screenshot-full" src="/img/tooltip.png" alt="JumpStart - Widget Reference - Circular progress bar" />
 
 </div>
 
@@ -46,7 +46,7 @@ Under the <b>General</b> accordion, you can set the value in the string format. 
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/circular-progressbar/layout.png" alt="ToolJet - Widget Reference - Circular progress bar" />
+<img className="screenshot-full" src="/img/widgets/circular-progressbar/layout.png" alt="JumpStart - Widget Reference - Circular progress bar" />
 
 </div>
 
@@ -59,7 +59,7 @@ Under the <b>General</b> accordion, you can set the value in the string format. 
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/circular-progressbar/styles.png" alt="ToolJet - Widget Reference - Circular progress bar" />
+<img className="screenshot-full" src="/img/widgets/circular-progressbar/styles.png" alt="JumpStart - Widget Reference - Circular progress bar" />
 
 </div>
 

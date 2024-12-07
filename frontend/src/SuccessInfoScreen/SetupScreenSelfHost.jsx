@@ -26,8 +26,8 @@ function SetupScreenSelfHost({ darkMode }) {
       {!showSelfHostOboarding ? (
         <div className="sh-setup-banner">
           <div className="onboarding-navbar onboarding-navbar-layout setup-page-navbar">
-            <div className="tooljet-nav-logo">
-              <Logo height="23" width="92" alt="tooljet logo" data-cy="page-logo" />
+            <div className="jumpstart-nav-logo">
+              <Logo height="23" width="92" alt="jumpstart logo" data-cy="page-logo" />
             </div>
           </div>
           {/* placeholders for image */}
@@ -36,22 +36,22 @@ function SetupScreenSelfHost({ darkMode }) {
           <div className="sh-setup-card" data-cy="setup-card">
             <img
               src="assets/images/onboardingassets/Illustrations/Dots.svg"
-              alt="tooljet onboarding"
+              alt="jumpstart onboarding"
               loading="lazy"
               data-cy="setup-card-image"
             />
             <h1 data-cy="setup-card-header">
               Hello,
               <br /> Welcome to <br />
-              <span>ToolJet!</span>
+              <span>JumpStart!</span>
             </h1>
-            <p data-cy="setup-card-sub-header">Let’s set up your workspace to get started with ToolJet</p>
+            <p data-cy="setup-card-sub-header">Let’s set up your workspace to get started with JumpStart</p>
             <ButtonSolid
               className="sh-setup-button"
               onClick={() => setShowSelfHostOboarding(true)}
-              data-cy="setup-tooljet-button"
+              data-cy="setup-jumpstart-button"
             >
-              <span>Set up ToolJet</span>
+              <span>Set up JumpStart</span>
               <EnterIcon className="enter-icon-onboard" fill={'#fff'} />
             </ButtonSolid>
           </div>

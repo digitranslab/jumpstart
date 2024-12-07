@@ -5,7 +5,7 @@ title: Workspace Login
 
 ## Accessing Workspace Login
 
-To access the Workspace Login, navigate to the ToolJet dashboard and click on the gear icon (⚙️) located at the bottom of the left sidebar. From the dropdown, select `Workspace Settings` and then select the `Workspace Login` tab. Workspace login/SSO can be configured by both workspace admins and super admins.
+To access the Workspace Login, navigate to the JumpStart dashboard and click on the gear icon (⚙️) located at the bottom of the left sidebar. From the dropdown, select `Workspace Settings` and then select the `Workspace Login` tab. Workspace login/SSO can be configured by both workspace admins and super admins.
 
 <div style={{textAlign: 'center'}}>
  <img style={{ border:'0', marginBottom:'15px', borderRadius:'5px', boxShadow: '0px 1px 3px rgba(0, 0, 0, 0.2)' }} className="screenshot-full" src="/img/sso/workspace-settings/login-sso-v2.png" alt="Workspace settings" />

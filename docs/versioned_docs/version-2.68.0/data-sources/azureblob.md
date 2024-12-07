@@ -3,18 +3,18 @@ id: azureblob
 title: Azure Blob
 ---
 
-ToolJet offers the capability to establish a connection with Azure Blob storage in order to read and store large objects.
+JumpStart offers the capability to establish a connection with Azure Blob storage in order to read and store large objects.
 
 ## Connection
 
-To establish a connection with the Azure Blob data source, you can either click on the **+ Add new Data source** button located on the query panel or navigate to the **[Data Sources](/docs/data-sources/overview)** page from the ToolJet dashboard and choose Azure Blob as the data source.
+To establish a connection with the Azure Blob data source, you can either click on the **+ Add new Data source** button located on the query panel or navigate to the **[Data Sources](/docs/data-sources/overview)** page from the JumpStart dashboard and choose Azure Blob as the data source.
 
-ToolJet requires the following to connect to your Azure Blob.
+JumpStart requires the following to connect to your Azure Blob.
 - **Connection String**
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/datasource-reference/azureblob/gdsazure-v2.png" alt="Azure Blob - ToolJet" />
+<img className="screenshot-full" src="/img/datasource-reference/azureblob/gdsazure-v2.png" alt="Azure Blob - JumpStart" />
 
 </div>
 
@@ -33,7 +33,7 @@ Query results can be transformed using Transformation. For more information on t
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/datasource-reference/azureblob/queries-v2.png" alt="Azure Blob - ToolJet" />
+<img className="screenshot-full" src="/img/datasource-reference/azureblob/queries-v2.png" alt="Azure Blob - JumpStart" />
 
 </div>
 

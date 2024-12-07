@@ -1,6 +1,6 @@
 {
     "$schema": "https://json-schema.org/",
-    "$id": "https://tooljet.io/Runpy.schema.json",
+    "$id": "https://jumpstart.io/Runpy.schema.json",
     "title": "Runpy datasource",
     "description": "A schema defining runpy datasource",
     "type": "object",

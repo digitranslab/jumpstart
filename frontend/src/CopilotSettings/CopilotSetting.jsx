@@ -202,7 +202,7 @@ const EducativeLebel = ({ darkMode }) => {
   const title = () => {
     return (
       <>
-        Learn about ToolJet <strong style={{ fontWeight: 700, color: '#3E63DD' }}>AI copilot</strong>
+        Learn about JumpStart <strong style={{ fontWeight: 700, color: '#3E63DD' }}>AI copilot</strong>
       </>
     );
   };
@@ -212,7 +212,7 @@ const EducativeLebel = ({ darkMode }) => {
       <div className="transformation-popover card text-center">
         <img src="/assets/images/icons/copilot.svg" alt="AI copilot" height={64} width={64} />
         <div className="d-flex flex-column card-body">
-          <h4 className="mb-2">ToolJet x OpenAI</h4>
+          <h4 className="mb-2">JumpStart x OpenAI</h4>
           <p className="mb-2">
             <strong style={{ fontWeight: 700, color: '#3E63DD' }}>AI copilot</strong> helps you write your queries
             faster. It uses OpenAI&apos;s GPT-3.5 to suggest queries based on your data.
@@ -223,7 +223,7 @@ const EducativeLebel = ({ darkMode }) => {
             size="sm"
             classNames="default-secondary-button"
             styles={{ width: '100%', fontSize: '12px', fontWeight: 700, borderColor: darkMode && 'transparent' }}
-            onClick={() => window.open('https://docs.tooljet.com/docs/tooljet-copilot', '_blank')}
+            onClick={() => window.open('https://docs.jumpstart.com/docs/jumpstart-copilot', '_blank')}
           >
             <Button.Content title={'Read more'} />
           </Button>

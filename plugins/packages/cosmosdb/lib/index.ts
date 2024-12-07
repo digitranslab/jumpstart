@@ -1,4 +1,4 @@
-import { QueryError, QueryResult, QueryService, ConnectionTestResult } from '@tooljet-plugins/common';
+import { QueryError, QueryResult, QueryService, ConnectionTestResult } from '@jumpstart-plugins/common';
 import { SourceOptions, QueryOptions } from './types';
 import { CosmosClient } from '@azure/cosmos';
 import { deleteItem, getItem, insertItems, listContainers, listDatabases, queryDatabase } from './operations';

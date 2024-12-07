@@ -18,11 +18,11 @@ import { componentTypes } from '@/Editor/WidgetManager/components';
 import generateCSV from '@/_lib/generate-csv';
 import generateFile from '@/_lib/generate-file';
 import RunjsIcon from '@/Editor/Icons/runjs.svg';
-import RunTooljetDbIcon from '@/Editor/Icons/tooljetdb.svg';
+import RunJumpstartDbIcon from '@/Editor/Icons/jumpstartdb.svg';
 import RunPyIcon from '@/Editor/Icons/runpy.svg';
 import { v4 as uuidv4 } from 'uuid';
 // eslint-disable-next-line import/no-unresolved
-import { allSvgs } from '@tooljet/plugins/client';
+import { allSvgs } from '@jumpstart/plugins/client';
 import urlJoin from 'url-join';
 import { authenticationService } from '@/_services/authentication.service';
 import { setCookie } from '@/_helpers/cookie';
@@ -575,7 +575,7 @@ function executeActionWithDebounce(_ref, event, mode, customVariables) {
           _ref.navigate(url);
         } else {
           if (confirm('The app will be opened in a new tab as the action is triggered from the editor.')) {
-            window.open(urlJoin(window.public_config?.TOOLJET_HOST, url));
+            window.open(urlJoin(window.public_config?.JUMPSTART_HOST, url));
           }
         }
         return Promise.resolve();
@@ -1041,7 +1041,7 @@ export function previewQuery(_ref, query, calledFromQuery = false, userSuppliedP
             queryStatusCode === 400 ||
             queryStatusCode === 404 ||
             queryStatusCode === 422: {
-            const err = query.kind == 'tooljetdb' ? data?.error || data : _.isEmpty(data.data) ? data : data.data;
+            const err = query.kind == 'jumpstartdb' ? data?.error || data : _.isEmpty(data.data) ? data : data.data;
             toast.error(`${err.message}`);
             break;
           }
@@ -1201,7 +1201,7 @@ export function runQuery(
               case 'runpy':
                 errorData = data.data;
                 break;
-              case 'tooljetdb':
+              case 'jumpstartdb':
                 if (data?.error) {
                   errorData = {
                     message: data?.error?.message || 'Something went wrong',
@@ -1262,7 +1262,7 @@ export function runQuery(
 
             useResolveStore.getState().actions.updateResolvedRefsOfHints(toUpdateRefs);
             if (mode !== 'view') {
-              const err = query.kind == 'tooljetdb' ? data?.error || data : data;
+              const err = query.kind == 'jumpstartdb' ? data?.error || data : data;
               toast.error(err?.message ? err?.message : 'Something went wrong');
             }
             return;
@@ -1464,7 +1464,7 @@ export function computeComponentState(components = {}) {
 export const getSvgIcon = (key, height = 50, width = 50, iconFile = undefined, styles = {}) => {
   if (iconFile) return <img src={`data:image/svg+xml;base64,${iconFile}`} style={{ height, width }} />;
   if (key === 'runjs') return <RunjsIcon style={{ height, width }} />;
-  if (key === 'tooljetdb') return <RunTooljetDbIcon style={{ height, width }} />;
+  if (key === 'jumpstartdb') return <RunJumpstartDbIcon style={{ height, width }} />;
   if (key === 'runpy') return <RunPyIcon style={{ height, width }} />;
 
   if (typeof localStorage !== 'undefined') {
@@ -1503,7 +1503,7 @@ export const debuggerActions = {
     const errorsArr = [];
     Object.entries(errors).forEach(([key, value]) => {
       const errorType =
-        value.type === 'query' && (value.kind === 'restapi' || value.kind === 'tooljetdb' || value.kind === 'runjs')
+        value.type === 'query' && (value.kind === 'restapi' || value.kind === 'jumpstartdb' || value.kind === 'runjs')
           ? value.kind
           : value.type;
 
@@ -1526,7 +1526,7 @@ export const debuggerActions = {
           error.response = value.data.data.responseObject;
           break;
 
-        case 'tooljetdb':
+        case 'jumpstartdb':
           generalProps.message = value.data.message;
           generalProps.description = value.data.description;
           error.substitutedVariables = value.options;

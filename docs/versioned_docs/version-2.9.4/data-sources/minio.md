@@ -5,7 +5,7 @@ title: MinIO
 
 # MinIO
 
-ToolJet can connect to minio and perform various operation on them.
+JumpStart can connect to minio and perform various operation on them.
 
 ## Supported operations
 
@@ -22,7 +22,7 @@ ToolJet can connect to minio and perform various operation on them.
 
 To add a new minio source, click on the **Add or edit datasource** icon on the left sidebar of the app editor and click on `Add datasource` button. Select Minio from the modal that pops up.
 
-ToolJet requires the following to connect to your DynamoDB:
+JumpStart requires the following to connect to your DynamoDB:
 
 - **Host**
 - **Port**
@@ -35,7 +35,7 @@ ToolJet requires the following to connect to your DynamoDB:
 
 </div>
 
-Click on **Test connection** button to verify if the credentials are correct and that the database is accessible to ToolJet server. Click on **Save** button to save the data source.
+Click on **Test connection** button to verify if the credentials are correct and that the database is accessible to JumpStart server. Click on **Save** button to save the data source.
 
 ## Querying Minio
 

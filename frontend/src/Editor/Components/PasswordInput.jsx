@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { resolveWidgetFieldValue } from '@/_helpers/utils';
 
 import * as Icons from '@tabler/icons-react';
-import Loader from '@/ToolJetUI/Loader/Loader';
+import Loader from '@/JumpStartUI/Loader/Loader';
 import SolidIcon from '@/_ui/Icon/SolidIcons';
 import Label from '@/_ui/Label';
 

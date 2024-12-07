@@ -24,7 +24,7 @@ To add an event to a button group, click on the widget handle to open the widget
 </div>
 
 #### On click
-On click event is triggered when the button group is clicked. Just like any other event on ToolJet, you can set multiple handlers for on click event.
+On click event is triggered when the button group is clicked. Just like any other event on JumpStart, you can set multiple handlers for on click event.
 
 :::info
 Check [Action Reference](/docs/category/actions-reference) docs to get the detailed information about all the **Actions**.

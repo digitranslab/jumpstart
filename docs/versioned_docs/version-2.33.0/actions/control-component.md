@@ -47,7 +47,7 @@ Check out the **[demo](https://youtu.be/JIhSH3YeM3E)** of Component specific act
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - Action reference - Control Component](/img/actions/controlcomponent/inspector.png)
+![JumpStart - Action reference - Control Component](/img/actions/controlcomponent/inspector.png)
 
 </div>
 
@@ -55,7 +55,7 @@ Check out the **[demo](https://youtu.be/JIhSH3YeM3E)** of Component specific act
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - Action reference - Control Component](/img/actions/controlcomponent/updated.png)
+![JumpStart - Action reference - Control Component](/img/actions/controlcomponent/updated.png)
 
 </div>
 
@@ -63,7 +63,7 @@ Check out the **[demo](https://youtu.be/JIhSH3YeM3E)** of Component specific act
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - Action reference - Control Component](/img/actions/controlcomponent/button.png)
+![JumpStart - Action reference - Control Component](/img/actions/controlcomponent/button.png)
 
 </div>
 
@@ -71,7 +71,7 @@ Check out the **[demo](https://youtu.be/JIhSH3YeM3E)** of Component specific act
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - Action reference - Control Component](/img/actions/controlcomponent/set.png)
+![JumpStart - Action reference - Control Component](/img/actions/controlcomponent/set.png)
 
 </div>
 
@@ -87,14 +87,14 @@ await components.textinput1.clear()
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - Action reference - Control Component](/img/actions/controlcomponent/jsoption.png)
+![JumpStart - Action reference - Control Component](/img/actions/controlcomponent/jsoption.png)
 
 </div>
 
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - Action reference - Control Component](/img/actions/controlcomponent/clear.png)
+![JumpStart - Action reference - Control Component](/img/actions/controlcomponent/clear.png)
 
 </div>
 

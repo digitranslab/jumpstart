@@ -22,7 +22,7 @@ You can create new versions from **App Version Manager** on the top-right corner
 
   </div>
 
-- Click on **Create new version** button present at the bottom of the dropdown and a modal will pop-up. Enter a **Version Name** and click on **Create version from** dropdown that will include all the versions of the app, choose a version from the dropdown that you want to use for your new version or ToolJet will automatically select the last created version, and then click on `Create new Version` button to add a new version.
+- Click on **Create new version** button present at the bottom of the dropdown and a modal will pop-up. Enter a **Version Name** and click on **Create version from** dropdown that will include all the versions of the app, choose a version from the dropdown that you want to use for your new version or JumpStart will automatically select the last created version, and then click on `Create new Version` button to add a new version.
   <div style={{textAlign: 'center'}}>
 
   <img className="screenshot-full" src="/img/tutorial/versioning-and-release/newpopup.png" alt="modal" width="400"/>
@@ -80,7 +80,7 @@ To release a version:
 
 
 :::caution
-To prevent the unintended publishing of an unfinished app, ToolJet will prompt you to create a new version for making any edits to the `Released version` of an app. Editing of the `Released version` will be blocked until a new version is created.
+To prevent the unintended publishing of an unfinished app, JumpStart will prompt you to create a new version for making any edits to the `Released version` of an app. Editing of the `Released version` will be blocked until a new version is created.
 <div style={{textAlign: 'center'}}>
 
 <img className="screenshot-full" src="/img/tutorial/versioning-and-release/releasepopup.gif" alt="release" />

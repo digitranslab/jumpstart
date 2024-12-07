@@ -3,15 +3,15 @@ id: postgresql
 title: PostgreSQL
 ---
 
-ToolJet has the capability to connect to PostgreSQL databases for data retrieval and modification.
+JumpStart has the capability to connect to PostgreSQL databases for data retrieval and modification.
 
 <div style={{paddingTop:'24px'}}>
 
 ## Establishing a Connection
 
-To establish a connection with the PostgreSQL data source, you can either click on the **+ Add new Data source** button located on the query panel or navigate to the **[Data Sources](/docs/data-sources/overview)** page from the ToolJet dashboard and choose PostgreSQL as the data source.
+To establish a connection with the PostgreSQL data source, you can either click on the **+ Add new Data source** button located on the query panel or navigate to the **[Data Sources](/docs/data-sources/overview)** page from the JumpStart dashboard and choose PostgreSQL as the data source.
 
-ToolJet requires the following information to connect to your PostgreSQL database:
+JumpStart requires the following information to connect to your PostgreSQL database:
 
 - **Host**
 - **Port**
@@ -22,10 +22,10 @@ ToolJet requires the following information to connect to your PostgreSQL databas
 - **Connection Options**
 - **SSL Certificate**
 
-**Note:** We recommend creating a new PostgreSQL database user to have control over ToolJet's access levels.
+**Note:** We recommend creating a new PostgreSQL database user to have control over JumpStart's access levels.
 
 :::info
-Please make sure the **Host/IP** of the database is accessible from your VPC if you have self-hosted ToolJet. If you are using ToolJet cloud, please **whitelist** our IP.
+Please make sure the **Host/IP** of the database is accessible from your VPC if you have self-hosted JumpStart. If you are using JumpStart cloud, please **whitelist** our IP.
 :::
 
 <img className="screenshot-full" src="/img/datasource-reference/postgresql/pgconnection.png" alt="PG connection"/>

@@ -16,7 +16,7 @@ export default function GoogleSSOLoginButton(props) {
     props.setRedirectUrlToCookie && props.setRedirectUrlToCookie();
     const { client_id } = props.configs;
     const authUrl = buildURLWithQuery('https://accounts.google.com/o/oauth2/auth', {
-      redirect_uri: `${window.public_config?.TOOLJET_HOST}${window.public_config?.SUB_PATH ?? '/'}sso/google${
+      redirect_uri: `${window.public_config?.JUMPSTART_HOST}${window.public_config?.SUB_PATH ?? '/'}sso/google${
         props.configId ? `/${props.configId}` : ''
       }`,
       response_type: 'id_token',

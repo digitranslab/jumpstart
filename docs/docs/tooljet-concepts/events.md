@@ -12,10 +12,10 @@ Events are used to run queries, show alerts and other functionalities based on t
 <div style={{paddingTop:'24px', paddingBottom:'24px'}}>
 
 ## Triggering Events
-Suppose you have a query that refreshes data when a user clicks on a button, and you also want to display a pop-up alert upon successful data refresh. In ToolJet, you can configure an event to trigger a query upon clicking the button, followed by another event to display a pop-up alert confirming the successful data refresh after the query execution is completed.
+Suppose you have a query that refreshes data when a user clicks on a button, and you also want to display a pop-up alert upon successful data refresh. In JumpStart, you can configure an event to trigger a query upon clicking the button, followed by another event to display a pop-up alert confirming the successful data refresh after the query execution is completed.
 
 <div style={{textAlign: 'center'}}>
-    <img className="screenshot-full" src="/img/tooljet-concepts/what-are-events/events-configuration.png" alt="Event Configuration" />
+    <img className="screenshot-full" src="/img/jumpstart-concepts/what-are-events/events-configuration.png" alt="Event Configuration" />
 </div>
 
 </div>
@@ -24,7 +24,7 @@ Suppose you have a query that refreshes data when a user clicks on a button, and
 
 ## Setting Up Event Handlers
 
-Setting up event handlers to manage such triggers and responses is a straightforward process in ToolJet. For instance, to set up an event that triggers on the click of a button, you simply navigate to the button component's configuration, click on **New Event Handler**, and define the Event and the Action to be taken. The actions could range from running a query, showing an alert, or even switching to a different page. 
+Setting up event handlers to manage such triggers and responses is a straightforward process in JumpStart. For instance, to set up an event that triggers on the click of a button, you simply navigate to the button component's configuration, click on **New Event Handler**, and define the Event and the Action to be taken. The actions could range from running a query, showing an alert, or even switching to a different page. 
 
 </div>
 

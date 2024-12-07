@@ -6,12 +6,12 @@ title: AWS EC2
 # AWS EC2
 
 :::info
-You should setup a PostgreSQL database manually to be used by the ToolJet server.
+You should setup a PostgreSQL database manually to be used by the JumpStart server.
 
 :::
-*If you have any questions feel free to join our [Slack Community](https://tooljet.com/slack) or send us an email at hello@tooljet.com.*
+*If you have any questions feel free to join our [Slack Community](https://jumpstart.com/slack) or send us an email at hello@jumpstart.com.*
 
-Follow the steps below to deploy ToolJet on AWS EC2 instances.
+Follow the steps below to deploy JumpStart on AWS EC2 instances.
 
 1. Setup a PostgreSQL database and make sure that the database is accessible from the EC2 instance.
 
@@ -19,9 +19,9 @@ Follow the steps below to deploy ToolJet on AWS EC2 instances.
 
 3. Under the `Images` section, click on the `AMIs` button.
 
-4. Find the [ToolJet version](https://github.com/ToolJet/ToolJet/releases) you want to deploy. Now, from the AMI search page, select the search type as "Public Images" and input the version you'd want `AMI Name : tooljet_vX.X.X.ubuntu_bionic` in the search bar.
+4. Find the [JumpStart version](https://github.com/digitranslab/jumpstart/releases) you want to deploy. Now, from the AMI search page, select the search type as "Public Images" and input the version you'd want `AMI Name : jumpstart_vX.X.X.ubuntu_bionic` in the search bar.
 
-5. Select ToolJet's AMI and bootup an EC2 instance.
+5. Select JumpStart's AMI and bootup an EC2 instance.
 
   Creating a new security group is recommended. For example, if the installation should receive traffic from the internet, the inbound rules of the security group should look like this:
 
@@ -38,10 +38,10 @@ Follow the steps below to deploy ToolJet on AWS EC2 instances.
 
    The default `.env` file looks like this:
    ```bash
-   TOOLJET_HOST=http://<example>
+   JUMPSTART_HOST=http://<example>
    LOCKBOX_MASTER_KEY=<example>
    SECRET_KEY_BASE=<example>
-   PG_DB=tooljet_prod
+   PG_DB=jumpstart_prod
    PG_USER=<pg user name>
    PG_HOST=<pg host>
    PG_PASS=<pg user password>
@@ -49,35 +49,35 @@ Follow the steps below to deploy ToolJet on AWS EC2 instances.
    Read **[environment variables reference](/docs/setup/env-vars)**
 
    :::info
-   If there are self signed HTTPS endpoints that Tooljet needs to connect to, please make sure that `NODE_EXTRA_CA_CERTS` environment variable is set to the absolute path containing the certificates.
+   If there are self signed HTTPS endpoints that Jumpstart needs to connect to, please make sure that `NODE_EXTRA_CA_CERTS` environment variable is set to the absolute path containing the certificates.
    :::
 
-8. `TOOLJET_HOST` environment variable determines where you can access the ToolJet client. It can either be the public ipv4 address of your instance or a custom domain that you want to use.
+8. `JUMPSTART_HOST` environment variable determines where you can access the JumpStart client. It can either be the public ipv4 address of your instance or a custom domain that you want to use.
 
    Examples:
-   `TOOLJET_HOST=http://12.34.56.78` or
-   `TOOLJET_HOST=https://yourdomain.com` or
-   `TOOLJET_HOST=https://tooljet.yourdomain.com`
+   `JUMPSTART_HOST=http://12.34.56.78` or
+   `JUMPSTART_HOST=https://yourdomain.com` or
+   `JUMPSTART_HOST=https://jumpstart.yourdomain.com`
 
    :::info
    We use a [lets encrypt](https://letsencrypt.org/) plugin on top of nginx to create TLS certificates on the fly.
    :::
 
    :::info
-   Please make sure that `TOOLJET_HOST` starts with either `http://` or `https://`
+   Please make sure that `JUMPSTART_HOST` starts with either `http://` or `https://`
    :::
 
-9. Once you've configured the `.env` file, run `./setup_app`. This script will install all the dependencies of ToolJet and then will start the required services.
+9. Once you've configured the `.env` file, run `./setup_app`. This script will install all the dependencies of JumpStart and then will start the required services.
 
-10. If you've set a custom domain for `TOOLJET_HOST`, add a `A record` entry in your DNS settings to point to the IP address of the EC2 instance.
+10. If you've set a custom domain for `JUMPSTART_HOST`, add a `A record` entry in your DNS settings to point to the IP address of the EC2 instance.
 
-12. You're all done, ToolJet client would now be served at the value you've set in `TOOLJET_HOST`.
+12. You're all done, JumpStart client would now be served at the value you've set in `JUMPSTART_HOST`.
 
-#### Deploying Tooljet Database
+#### Deploying Jumpstart Database
 
-ToolJet AMI comes inbuilt with PostgREST. If you intend to use this feature, you'd only have to setup the environment variables in `~/app/.env` file and run `./setup_app` script.
+JumpStart AMI comes inbuilt with PostgREST. If you intend to use this feature, you'd only have to setup the environment variables in `~/app/.env` file and run `./setup_app` script.
 
-You can learn more about this feature [here](/docs/tooljet-database).
+You can learn more about this feature [here](/docs/jumpstart-database).
 
 ## Upgrading to the Latest Version
 
@@ -93,7 +93,7 @@ If this is a new installation of the application, you may start directly with th
 
 - Users on versions earlier than v2.23.0-ee2.10.2 must first upgrade to this version before proceeding to the latest version.
 
-For specific issues or questions, refer to our **[Slack](https://tooljet.slack.com/join/shared_invite/zt-25438diev-mJ6LIZpJevG0LXCEcL0NhQ#)**.
+For specific issues or questions, refer to our **[Slack](https://jumpstart.slack.com/join/shared_invite/zt-25438diev-mJ6LIZpJevG0LXCEcL0NhQ#)**.
 
 
 

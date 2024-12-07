@@ -2,26 +2,26 @@ import { BadRequestException, Injectable, NotFoundException, Optional } from '@n
 import { EntityManager } from 'typeorm';
 import { InternalTable } from 'src/entities/internal_table.entity';
 import * as csv from 'fast-csv';
-import { TooljetDbService } from './tooljet_db.service';
+import { JumpstartDbService } from './jumpstart_db.service';
 import { InjectEntityManager } from '@nestjs/typeorm';
 import { isEmpty } from 'lodash';
 import { pipeline } from 'stream/promises';
 import { PassThrough } from 'stream';
 import { v4 as uuid } from 'uuid';
-import { TJDB, TooljetDatabaseColumn, TooljetDatabaseDataTypes } from 'src/modules/tooljet_db/tooljet-db.types';
+import { TJDB, JumpstartDatabaseColumn, JumpstartDatabaseDataTypes } from 'src/modules/jumpstart_db/jumpstart-db.types';
 
 const MAX_ROW_COUNT = 1000;
 
 @Injectable()
-export class TooljetDbBulkUploadService {
+export class JumpstartDbBulkUploadService {
   constructor(
     private readonly manager: EntityManager,
     // TODO: remove optional decorator when
-    // ENABLE_TOOLJET_DB flag is deprecated
+    // ENABLE_JUMPSTART_DB flag is deprecated
     @Optional()
-    @InjectEntityManager('tooljetDb')
-    private readonly tooljetDbManager: EntityManager,
-    private readonly tooljetDbService: TooljetDbService
+    @InjectEntityManager('jumpstartDb')
+    private readonly jumpstartDbManager: EntityManager,
+    private readonly jumpstartDbService: JumpstartDbService
   ) {}
 
   async perform(organizationId: string, tableName: string, fileBuffer: Buffer) {
@@ -34,8 +34,8 @@ export class TooljetDbBulkUploadService {
       throw new NotFoundException(`Table ${tableName} not found`);
     }
 
-    const { columns: internalTableDatabaseColumn }: { columns: TooljetDatabaseColumn[] } =
-      await this.tooljetDbService.perform(organizationId, 'view_table', {
+    const { columns: internalTableDatabaseColumn }: { columns: JumpstartDatabaseColumn[] } =
+      await this.jumpstartDbService.perform(organizationId, 'view_table', {
         table_name: tableName,
       });
 
@@ -44,7 +44,7 @@ export class TooljetDbBulkUploadService {
 
   async bulkUploadCsv(
     internalTableId: string,
-    internalTableDatabaseColumn: TooljetDatabaseColumn[],
+    internalTableDatabaseColumn: JumpstartDatabaseColumn[],
     fileBuffer: Buffer
   ): Promise<{ processedRows: number }> {
     const rowsToUpsert = [];
@@ -102,18 +102,18 @@ export class TooljetDbBulkUploadService {
 
     await pipeline(passThrough, csvStream);
 
-    await this.tooljetDbManager.transaction(async (tooljetDbManager) => {
-      await this.bulkUpsertRows(tooljetDbManager, rowsToUpsert, internalTableId, internalTableDatabaseColumn);
+    await this.jumpstartDbManager.transaction(async (jumpstartDbManager) => {
+      await this.bulkUpsertRows(jumpstartDbManager, rowsToUpsert, internalTableId, internalTableDatabaseColumn);
     });
 
     return { processedRows: rowsProcessed };
   }
 
   async bulkUpsertRows(
-    tooljetDbManager: EntityManager,
+    jumpstartDbManager: EntityManager,
     rowsToUpsert: unknown[],
     internalTableId: string,
-    internalTableDatabaseColumn: TooljetDatabaseColumn[]
+    internalTableDatabaseColumn: JumpstartDatabaseColumn[]
   ) {
     if (isEmpty(rowsToUpsert)) return;
 
@@ -161,11 +161,11 @@ export class TooljetDbBulkUploadService {
       `ON CONFLICT (${primaryKeyColumnsQuoted.join(', ')}) ` +
       `DO UPDATE SET ${onConflictUpdate};`;
 
-    await tooljetDbManager.query(queryText, allPlaceholders);
+    await jumpstartDbManager.query(queryText, allPlaceholders);
   }
 
   async validateHeadersAsColumnSubset(
-    internalTableDatabaseColumn: TooljetDatabaseColumn[],
+    internalTableDatabaseColumn: JumpstartDatabaseColumn[],
     headers: string[],
     csvStream: csv.CsvParserStream<csv.ParserRow<any>, csv.ParserRow<any>>
   ) {
@@ -180,15 +180,15 @@ export class TooljetDbBulkUploadService {
     }
   }
 
-  findPrimaryKey(columnName: string, primaryKeyColumns: TooljetDatabaseColumn[]) {
+  findPrimaryKey(columnName: string, primaryKeyColumns: JumpstartDatabaseColumn[]) {
     return primaryKeyColumns.find(
       (colDetails) => colDetails.column_name === columnName && colDetails.keytype === 'PRIMARY KEY'
     );
   }
 
   validateAndParseColumnDataType(
-    internalTableDatabaseColumn: TooljetDatabaseColumn[],
-    primaryKeyColumnSchema: TooljetDatabaseColumn[],
+    internalTableDatabaseColumn: JumpstartDatabaseColumn[],
+    primaryKeyColumnSchema: JumpstartDatabaseColumn[],
     row: unknown,
     rowsProcessed: number,
     csvStream: csv.CsvParserStream<csv.ParserRow<any>, csv.ParserRow<any>>
@@ -214,7 +214,7 @@ export class TooljetDbBulkUploadService {
     }
   }
 
-  convertToDataType(columnValue: string, supportedDataType: TooljetDatabaseDataTypes) {
+  convertToDataType(columnValue: string, supportedDataType: JumpstartDatabaseDataTypes) {
     if (!columnValue) return null;
 
     switch (supportedDataType) {

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Popover from 'react-bootstrap/Popover';
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
-import DropDownSelect from '@/Editor/QueryManager/QueryEditors/TooljetDatabase/DropDownSelect';
+import DropDownSelect from '@/Editor/QueryManager/QueryEditors/JumpstartDatabase/DropDownSelect';
 import { ButtonSolid } from '@/_ui/AppButton/AppButton';
 import Information from '@/_ui/Icon/solidIcons/Information';
 import SolidIcon from '@/_ui/Icon/SolidIcons';

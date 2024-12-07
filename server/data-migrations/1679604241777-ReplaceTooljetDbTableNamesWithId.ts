@@ -5,7 +5,7 @@ import { InternalTable } from 'src/entities/internal_table.entity';
 import { Organization } from 'src/entities/organization.entity';
 import { DataQuery } from 'src/entities/data_query.entity';
 
-export class ReplaceTooljetDbTableNamesWithId1679604241777 implements MigrationInterface {
+export class ReplaceJumpstartDbTableNamesWithId1679604241777 implements MigrationInterface {
   public async up(queryRunner: QueryRunner): Promise<void> {
     let progress = 0;
     const entityManager = queryRunner.manager;
@@ -15,7 +15,7 @@ export class ReplaceTooljetDbTableNamesWithId1679604241777 implements MigrationI
 
     for (const organization of organizations) {
       console.log(
-        `ReplaceTooljetDbTableNamesWithId1679604241777 Progress ${Math.round((progress / orgCount) * 100)} %`
+        `ReplaceJumpstartDbTableNamesWithId1679604241777 Progress ${Math.round((progress / orgCount) * 100)} %`
       );
       console.log(`Replacing for organization ${organization.name}: ${organization.id}`);
 
@@ -26,7 +26,7 @@ export class ReplaceTooljetDbTableNamesWithId1679604241777 implements MigrationI
         .innerJoin('app_versions.app', 'apps', 'apps.organizationId = :organizationId', {
           organizationId: organization.id,
         })
-        .where('data_sources.kind = :kind', { kind: 'tooljetdb' })
+        .where('data_sources.kind = :kind', { kind: 'jumpstartdb' })
         .getRawMany();
 
       const tjDbDataSourcesCount = tjDbDataSources.length;

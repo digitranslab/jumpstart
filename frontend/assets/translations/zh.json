@@ -45,7 +45,7 @@
     "viewer": "抱歉！此应用正在维护中",
     "app": {
         "updateAvailable": "有更新可用",
-        "newVersionReleased": "ToolJet 的新版本已发布",
+        "newVersionReleased": "JumpStart 的新版本已发布",
         "readReleaseNotes": "阅读发布说明并更新",
         "skipVersion": "跳过此版本"
     },
@@ -57,17 +57,17 @@
     },
     "slack": {
         "authorize": "授权",
-        "connectToolJetToSlack": "ToolJet可以连接到Slack并列出用户、发送消息等。请选择适当的权限范围",
+        "connectJumpStartToSlack": "JumpStart可以连接到Slack并列出用户、发送消息等。请选择适当的权限范围",
         "chatWrite": "聊天:写",
-        "listUsersAndSendMessage": "您的ToolJet应用程序将能够列出用户并向用户和频道发送消息",
+        "listUsersAndSendMessage": "您的JumpStart应用程序将能够列出用户并向用户和频道发送消息",
         "connectSlack": "连接到Slack"
     },
     "googleSheets": {
         "readOnly": "只读",
-        "enableReadAndWrite": "如果您希望您的ToolJet应用程序修改您的Google表格，请确保选择读取和写入访问权限",
-        "readDataFromSheets": "您的ToolJet应用程序只能从Google表格中读取数据",
+        "enableReadAndWrite": "如果您希望您的JumpStart应用程序修改您的Google表格，请确保选择读取和写入访问权限",
+        "readDataFromSheets": "您的JumpStart应用程序只能从Google表格中读取数据",
         "readWrite": "读取和写入",
-        "readModifySheets": "您的ToolJet应用程序可以读取表格数据、修改表格以及执行更多操作",
+        "readModifySheets": "您的JumpStart应用程序可以读取表格数据、修改表格以及执行更多操作",
         "toGoogleSheets": "到Google表格"
     },
     "profile": {
@@ -81,7 +81,7 @@
         "password": "密码",
         "acceptInvite": "接受邀请",
         "successfullyVerifiedEmail": "电子邮件已成功验证",
-        "setupTooljet": "设置ToolJet"
+        "setupJumpstart": "设置JumpStart"
     },
     "loginSignupPage": {
         "forgotPassword": "忘记密码",
@@ -93,7 +93,7 @@
         "resetPassword": "重置密码",
         "signIn": "登录",
         "signUp": "注册",
-        "createToolJetAccount": "创建账户",
+        "createJumpStartAccount": "创建账户",
         "password": "密码",
         "showPassword": "显示密码",
         "loginTo": "登录到",
@@ -102,12 +102,12 @@
         "emailConfirmLink": "请检查您的电子邮件以获取确认链接",
         "newPassword": "新密码",
         "passwordConfirmation": "密码确认",
-        "newToTooljet": "新来的吗？",
+        "newToJumpstart": "新来的吗？",
         "enterWorkEmail": "输入您的电子邮件",
         "enterPassword": "输入密码",
         "forgot": "忘记了吗？",
         "workEmail": "电子邮件",
-        "joinTooljet": "加入ToolJet",
+        "joinJumpstart": "加入JumpStart",
         "getStartedForFree": "免费开始使用",
         "passwordCharacter": "密码必须至少5个字符",
         "enterFullName": "输入您的全名",
@@ -181,7 +181,7 @@
             "notificationDuration": "通知持续时间（秒）",
             "events": "事件",
             "transformation": {
-                "transformationToolTip": "可以在查询上启用转换以转换查询结果。ToolJet允许您使用JavaScript和Python两种编程语言转换查询结果",
+                "transformationToolTip": "可以在查询上启用转换以转换查询结果。JumpStart允许您使用JavaScript和Python两种编程语言转换查询结果",
                 "transformations": "转换"
             }
         },
@@ -294,7 +294,7 @@
                         "newAccountWillBeCreated": "对于用户首次单点登录，将创建新账户",
                         "allowedDomains": "允许的域名",
                         "enterDomains": "输入域名",
-                        "supportMultiDomains": "支持多个域名。使用逗号分隔域名。例如：tooljet.com,tooljet.io,yourorganization.com",
+                        "supportMultiDomains": "支持多个域名。使用逗号分隔域名。例如：jumpstart.com,jumpstart.io,yourorganization.com",
                         "loginUrl": "登录URL",
                         "workspaceLogin": "使用此URL直接登录到此工作区",
                         "allowDefaultSso": "允许默认单点登录",
@@ -384,8 +384,8 @@
             "removeFromFolder": "从文件夹中移除"
         },
         "blankPage": {
-            "welcomeToToolJet": "欢迎来到你的新 ToolJet 工作区",
-            "getStartedCreateNewApp": "你可以通过创建新应用或使用 ToolJet 库中的模板创建应用来开始使用",
+            "welcomeToJumpStart": "欢迎来到你的新 JumpStart 工作区",
+            "getStartedCreateNewApp": "你可以通过创建新应用或使用 JumpStart 库中的模板创建应用来开始使用",
             "importApplication": "导入应用"
         },
         "foldersSection": {
@@ -445,11 +445,11 @@
         "and": "和"
     },
     "onBoarding": {
-        "finishToolJetInstallation": "完成 ToolJet 安装",
+        "finishJumpStartInstallation": "完成 JumpStart 安装",
         "organization": "组织",
         "name": "姓名",
         "email": "邮箱",
-        "receiveUpdatesFromToolJet": "你将收到 ToolJet 团队的更新（每月1-2封电子邮件，我们不会发送垃圾邮件）",
+        "receiveUpdatesFromJumpStart": "你将收到 JumpStart 团队的更新（每月1-2封电子邮件，我们不会发送垃圾邮件）",
         "finishSetup": "完成设置",
         "skip": "跳过"
     },

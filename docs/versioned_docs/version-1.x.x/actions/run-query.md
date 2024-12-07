@@ -11,6 +11,6 @@ You can also trigger actions from the **JavaScript code**. Check it out [here](/
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - Action reference -  Run Query](/img/actions/run-query/run-query.png)
+![JumpStart - Action reference -  Run Query](/img/actions/run-query/run-query.png)
 
 </div>

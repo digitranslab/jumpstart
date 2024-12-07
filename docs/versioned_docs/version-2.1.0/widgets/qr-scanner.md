@@ -7,7 +7,7 @@ Scan QR codes using device camera and hold the data they carry.
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/qr-scanner/qr-scanner.jpeg" alt="ToolJet - Widget Reference - QR Scanner" />
+<img className="screenshot-full" src="/img/widgets/qr-scanner/qr-scanner.jpeg" alt="JumpStart - Widget Reference - QR Scanner" />
 
 </div>
 
@@ -47,7 +47,7 @@ Now hovering over the widget will display the string as the tooltip.
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/tooltip.png" alt="ToolJet - Widget Reference - QR Scanner" />
+<img className="screenshot-full" src="/img/tooltip.png" alt="JumpStart - Widget Reference - QR Scanner" />
 
 </div>
 

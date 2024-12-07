@@ -85,5 +85,5 @@ export const editRowText = {
 export const bulkUploadDataText = {
   bulkUploadbuttonText: "Bulk upload data",
   templateHelperText:
-    "Download the template to add your data or format your file in the same as the template. ToolJet won’t be able to recognise files in any other format.",
+    "Download the template to add your data or format your file in the same as the template. JumpStart won’t be able to recognise files in any other format.",
 };

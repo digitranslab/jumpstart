@@ -3,7 +3,7 @@ id: canvas
 title: Canvas
 ---
 
-Canvas is the center area of the ToolJet app builder where the application is built. You arrange the **components** by dragging them from the Components library(right-sidebar).
+Canvas is the center area of the JumpStart app builder where the application is built. You arrange the **components** by dragging them from the Components library(right-sidebar).
 
 <div style={{textAlign: 'center'}}>
 
@@ -47,7 +47,7 @@ You can precisely set the position of selected components using keyboard arrow k
 
 ### Group Components
 
-ToolJet comes with flexible components to group other components together, such as **[Container](/docs/widgets/container/)** and **[Form](/docs/widgets/form/)**. When you drag and drop components in containers/forms they create a group of nested components. All components can be nested in this way.
+JumpStart comes with flexible components to group other components together, such as **[Container](/docs/widgets/container/)** and **[Form](/docs/widgets/form/)**. When you drag and drop components in containers/forms they create a group of nested components. All components can be nested in this way.
 
 ### Hide or Disable Components
 

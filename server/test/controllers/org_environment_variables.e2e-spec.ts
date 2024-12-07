@@ -32,20 +32,20 @@ describe('organization environment variables controller', () => {
 
     it('should list decrypted organization environment variables', async () => {
       const adminUserData = await createUser(app, {
-        email: 'admin@tooljet.io',
+        email: 'admin@jumpstart.io',
         groups: ['admin', 'all_users'],
       });
 
       const organization = adminUserData.organization;
 
       const developerUserData = await createUser(app, {
-        email: 'developer@tooljet.io',
+        email: 'developer@jumpstart.io',
         groups: ['developer', 'all_users'],
         organization,
       });
 
       const viewerUserData = await createUser(app, {
-        email: 'viewer@tooljet.io',
+        email: 'viewer@jumpstart.io',
         groups: ['viewer', 'all_users'],
         organization,
       });
@@ -54,7 +54,7 @@ describe('organization environment variables controller', () => {
         {
           variable_name: 'email',
           variable_type: 'server',
-          value: 'test@tooljet.io',
+          value: 'test@jumpstart.io',
           encrypted: true,
         },
         {
@@ -68,10 +68,10 @@ describe('organization environment variables controller', () => {
       let loggedUser = await authenticateUser(app);
       adminUserData['tokenCookie'] = loggedUser.tokenCookie;
 
-      loggedUser = await authenticateUser(app, 'developer@tooljet.io');
+      loggedUser = await authenticateUser(app, 'developer@jumpstart.io');
       developerUserData['tokenCookie'] = loggedUser.tokenCookie;
 
-      loggedUser = await authenticateUser(app, 'viewer@tooljet.io');
+      loggedUser = await authenticateUser(app, 'viewer@jumpstart.io');
       viewerUserData['tokenCookie'] = loggedUser.tokenCookie;
 
       const variableArray = [];
@@ -115,17 +115,17 @@ describe('organization environment variables controller', () => {
   describe('POST /api/organization-variables/', () => {
     it('should be able to create a new variable if group is admin or has create permission in the same organization', async () => {
       const adminUserData = await createUser(app, {
-        email: 'admin@tooljet.io',
+        email: 'admin@jumpstart.io',
         groups: ['all_users', 'admin'],
       });
       const developerUserData = await createUser(app, {
-        email: 'dev@tooljet.io',
+        email: 'dev@jumpstart.io',
         groups: ['all_users', 'developer'],
         organization: adminUserData.organization,
       });
 
       const viewerUserData = await createUser(app, {
-        email: 'viewer@tooljet.io',
+        email: 'viewer@jumpstart.io',
         groups: ['viewer', 'all_users'],
         organization: adminUserData.organization,
       });
@@ -141,17 +141,17 @@ describe('organization environment variables controller', () => {
       let loggedUser = await authenticateUser(app);
       adminUserData['tokenCookie'] = loggedUser.tokenCookie;
 
-      loggedUser = await authenticateUser(app, 'dev@tooljet.io');
+      loggedUser = await authenticateUser(app, 'dev@jumpstart.io');
       developerUserData['tokenCookie'] = loggedUser.tokenCookie;
 
-      loggedUser = await authenticateUser(app, 'viewer@tooljet.io');
+      loggedUser = await authenticateUser(app, 'viewer@jumpstart.io');
       viewerUserData['tokenCookie'] = loggedUser.tokenCookie;
 
       await request(app.getHttpServer())
         .post(`/api/organization-variables/`)
         .set('Cookie', adminUserData['tokenCookie'])
         .set('tj-workspace-id', adminUserData.user.defaultOrganizationId)
-        .send({ variable_name: 'email', variable_type: 'server', value: 'test@tooljet.io', encrypted: true })
+        .send({ variable_name: 'email', variable_type: 'server', value: 'test@jumpstart.io', encrypted: true })
         .expect(201);
 
       await request(app.getHttpServer())
@@ -173,17 +173,17 @@ describe('organization environment variables controller', () => {
   describe('PATCH /api/organization-variables/:id', () => {
     it('should be able to update an existing variable if group is admin or has update permission in the same organization', async () => {
       const adminUserData = await createUser(app, {
-        email: 'admin@tooljet.io',
+        email: 'admin@jumpstart.io',
         groups: ['all_users', 'admin'],
       });
       const developerUserData = await createUser(app, {
-        email: 'dev@tooljet.io',
+        email: 'dev@jumpstart.io',
         groups: ['all_users', 'developer'],
         organization: adminUserData.organization,
       });
 
       const viewerUserData = await createUser(app, {
-        email: 'viewer@tooljet.io',
+        email: 'viewer@jumpstart.io',
         groups: ['viewer', 'all_users'],
         organization: adminUserData.organization,
       });
@@ -191,10 +191,10 @@ describe('organization environment variables controller', () => {
       let loggedUser = await authenticateUser(app);
       adminUserData['tokenCookie'] = loggedUser.tokenCookie;
 
-      loggedUser = await authenticateUser(app, 'dev@tooljet.io');
+      loggedUser = await authenticateUser(app, 'dev@jumpstart.io');
       developerUserData['tokenCookie'] = loggedUser.tokenCookie;
 
-      loggedUser = await authenticateUser(app, 'viewer@tooljet.io');
+      loggedUser = await authenticateUser(app, 'viewer@jumpstart.io');
       viewerUserData['tokenCookie'] = loggedUser.tokenCookie;
 
       const developerGroup = await getManager().findOneOrFail(GroupPermission, {
@@ -207,7 +207,7 @@ describe('organization environment variables controller', () => {
 
       const response = await createVariable(app, adminUserData, {
         variable_name: 'email',
-        value: 'test@tooljet.io',
+        value: 'test@jumpstart.io',
         variable_type: 'server',
         encrypted: true,
       });
@@ -229,7 +229,7 @@ describe('organization environment variables controller', () => {
         .patch(`/api/organization-variables/${response.body.variable.id}`)
         .set('tj-workspace-id', viewerUserData.user.defaultOrganizationId)
         .set('Cookie', viewerUserData['tokenCookie'])
-        .send({ variable_name: 'email', value: 'test3@tooljet.io' })
+        .send({ variable_name: 'email', value: 'test3@jumpstart.io' })
         .expect(403);
     });
   });
@@ -237,17 +237,17 @@ describe('organization environment variables controller', () => {
   describe('DELETE /api/organization-variables/:id', () => {
     it('should be able to delete an existing variable if group is admin or has delete permission in the same organization', async () => {
       const adminUserData = await createUser(app, {
-        email: 'admin@tooljet.io',
+        email: 'admin@jumpstart.io',
         groups: ['all_users', 'admin'],
       });
       const developerUserData = await createUser(app, {
-        email: 'dev@tooljet.io',
+        email: 'dev@jumpstart.io',
         groups: ['all_users', 'developer'],
         organization: adminUserData.organization,
       });
 
       const viewerUserData = await createUser(app, {
-        email: 'viewer@tooljet.io',
+        email: 'viewer@jumpstart.io',
         groups: ['viewer', 'all_users'],
         organization: adminUserData.organization,
       });
@@ -255,10 +255,10 @@ describe('organization environment variables controller', () => {
       let loggedUser = await authenticateUser(app);
       adminUserData['tokenCookie'] = loggedUser.tokenCookie;
 
-      loggedUser = await authenticateUser(app, 'dev@tooljet.io');
+      loggedUser = await authenticateUser(app, 'dev@jumpstart.io');
       developerUserData['tokenCookie'] = loggedUser.tokenCookie;
 
-      loggedUser = await authenticateUser(app, 'viewer@tooljet.io');
+      loggedUser = await authenticateUser(app, 'viewer@jumpstart.io');
       viewerUserData['tokenCookie'] = loggedUser.tokenCookie;
 
       const developerGroup = await getManager().findOneOrFail(GroupPermission, {
@@ -272,7 +272,7 @@ describe('organization environment variables controller', () => {
       for (const userData of [adminUserData, developerUserData]) {
         const response = await createVariable(app, adminUserData, {
           variable_name: 'email',
-          value: 'test@tooljet.io',
+          value: 'test@jumpstart.io',
           variable_type: 'server',
           encrypted: true,
         });
@@ -292,7 +292,7 @@ describe('organization environment variables controller', () => {
 
       const response = await createVariable(app, adminUserData, {
         variable_name: 'email',
-        value: 'test@tooljet.io',
+        value: 'test@jumpstart.io',
         variable_type: 'server',
         encrypted: true,
       });

@@ -5,7 +5,7 @@ title: OpenAPI
 
 # OpenAPI
 
-ToolJet has a data source for generating REST API operations from OpenAPI Specs.
+JumpStart has a data source for generating REST API operations from OpenAPI Specs.
 
 ## Connection
 - Connections are generated from OpenAPI specifications. Currently supports Basic Auth, API Key, Bearer Token, OAuth 2.0

@@ -1,5 +1,5 @@
 {
-  "name": "tooljet-marketplace",
+  "name": "jumpstart-marketplace",
   "type": "module",
   "workspaces": [
     "plugins/*"

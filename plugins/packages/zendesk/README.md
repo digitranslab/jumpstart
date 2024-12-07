@@ -1,4 +1,4 @@
 
 # Zendesk
 
-Documentation on: https://docs.tooljet.com/docs/data-sources/zendesk
+Documentation on: https://docs.jumpstart.com/docs/data-sources/zendesk

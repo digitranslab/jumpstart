@@ -30,7 +30,7 @@ In the input field under **Tooltip**, you can enter some text and the component 
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/tooltip.png" alt="ToolJet - Component Reference - Password input" />
+<img className="screenshot-full" src="/img/tooltip.png" alt="JumpStart - Component Reference - Password input" />
 
 </div>
 

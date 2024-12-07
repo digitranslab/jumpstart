@@ -3,7 +3,7 @@ id: import-external-libraries-using-runpy
 title: Import external libraries using RunPy
 ---
 
-ToolJet allows you to utilize python packages in your app by importing them using the [RunPy query](/docs/data-sources/run-py). 
+JumpStart allows you to utilize python packages in your app by importing them using the [RunPy query](/docs/data-sources/run-py). 
 In this how-to guide, we will import a few packages and use it in the application.
 
 :::caution Unsupported modules

@@ -28,7 +28,7 @@ You can create new versions from **App Version Manager** on the top-right corner
 
   </div>
 
-- Click on **Create new version** button present at the bottom of the dropdown and a modal will pop-up. Enter a **Version Name** and click on **Create version from** dropdown that will include all the versions of the app, choose a version from the dropdown that you want to use for your new version or ToolJet will automatically select the last created version, and then click on `Create new Version` button to add a new version.
+- Click on **Create new version** button present at the bottom of the dropdown and a modal will pop-up. Enter a **Version Name** and click on **Create version from** dropdown that will include all the versions of the app, choose a version from the dropdown that you want to use for your new version or JumpStart will automatically select the last created version, and then click on `Create new Version` button to add a new version.
   <div style={{textAlign: 'center'}}>
 
   <img style={{ width:'100%', border:'0', marginBottom:'15px', borderRadius:'5px', boxShadow: '0px 1px 3px rgba(0, 0, 0, 0.2)' }} className="screenshot-full" src="/img/tutorial/versioning-and-release/newpopup.png" alt="modal"/>
@@ -100,7 +100,7 @@ To release a version:
 :::caution
 - When an app is made **Public** without being released, it functions similarly to previewing the application. This means that the version that is loaded when accessing the app through its Public app URL will be the same version of the app currently loaded in the app builder.
 
-- To prevent the unintended publishing of an unfinished app, ToolJet will prompt you to create a new version for making any edits to the `Released version` of an app. Editing of the `Released version` will be blocked until a new version is created.
+- To prevent the unintended publishing of an unfinished app, JumpStart will prompt you to create a new version for making any edits to the `Released version` of an app. Editing of the `Released version` will be blocked until a new version is created.
 
 <div style={{textAlign: 'center'}}>
 

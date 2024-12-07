@@ -1,4 +1,4 @@
-import { QueryError, QueryResult, QueryService } from '@tooljet-plugins/common';
+import { QueryError, QueryResult, QueryService } from '@jumpstart-plugins/common';
 import { Twilio } from 'twilio';
 import { SourceOptions, QueryOptions } from './types';
 

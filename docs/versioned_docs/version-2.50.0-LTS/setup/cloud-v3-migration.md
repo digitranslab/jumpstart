@@ -1,11 +1,11 @@
 ---
 id: cloud-v3-migration
-title: ToolJet 3.0 Cloud Migration Guide
+title: JumpStart 3.0 Cloud Migration Guide
 ---
 
-# ToolJet 3.0 Cloud Migration Guide
+# JumpStart 3.0 Cloud Migration Guide
 
-ToolJet Cloud will be upgraded to 3.0 on November 11th, 2024. This update includes breaking changes that may affect your applications. Please review and update your applications before November 11th to ensure they continue working after the upgrade.
+JumpStart Cloud will be upgraded to 3.0 on November 11th, 2024. This update includes breaking changes that may affect your applications. Please review and update your applications before November 11th to ensure they continue working after the upgrade.
 
 :::warning Important
 
@@ -55,7 +55,7 @@ Instead, use static references to components:
 ## Component and Query Naming
 
 :::note
-This is only an issue during the upgrade process. Once your application is running on ToolJet 3.0, you can use identical names for components and queries without any problems.
+This is only an issue during the upgrade process. Once your application is running on JumpStart 3.0, you can use identical names for components and queries without any problems.
 :::
 
 ### Action Required
@@ -66,7 +66,7 @@ This is only an issue during the upgrade process. Once your application is runni
 
 ### Details and Examples
 
-When upgrading, if a component is referencing a query with the same name, the upgrade process may break that mapping. This occurs because ToolJet previously used a global ID-to-name map for both components and queries, which is now split in 3.0.
+When upgrading, if a component is referencing a query with the same name, the upgrade process may break that mapping. This occurs because JumpStart previously used a global ID-to-name map for both components and queries, which is now split in 3.0.
 
 Example scenario: If a table component named `userData` is referencing a query also named `userData`, this reference may break during the upgrade process.
 
@@ -139,7 +139,7 @@ Future resolution: We will be adding functionality to enforce unique component n
 
 The old deprecated **Kanban Board** component will cease functioning entirely. Applications using this component will crash after the upgrade if not updated.
 <div style={{textAlign: 'center'}}>
-<img className="screenshot-full" src="/img/widgets/kanban/kanban.png" alt="ToolJet - Widget Reference - Kanban widget" />
+<img className="screenshot-full" src="/img/widgets/kanban/kanban.png" alt="JumpStart - Widget Reference - Kanban widget" />
 </div>
 
 #### Required Actions
@@ -204,5 +204,5 @@ The `metadata` object will contain detailed information about the request and re
 
 ## Help and Support
 
-- Feel free to join our [Slack Community](https://tooljet.com/slack) or you can also e-mail us at hello@tooljet.com.
-- If you have found a bug, please create a [GitHub issue](https://github.com/ToolJet/ToolJet/issues) for the same.
+- Feel free to join our [Slack Community](https://jumpstart.com/slack) or you can also e-mail us at hello@jumpstart.com.
+- If you have found a bug, please create a [GitHub issue](https://github.com/digitranslab/jumpstart/issues) for the same.

@@ -1,5 +1,5 @@
 {
-  "tooljet_database": [
+  "jumpstart_database": [
     {
       "id": "0c78ec76-2bc2-43b1-b421-da99256f3317",
       "table_name": "marketplace_products",
@@ -7615,8 +7615,8 @@
             },
             {
               "id": "8cf86e2e-ff9f-4fcd-9b5a-e5a62eef5ed6",
-              "name": "tooljetdbdefault",
-              "kind": "tooljetdb",
+              "name": "jumpstartdbdefault",
+              "kind": "jumpstartdb",
               "type": "static",
               "pluginId": null,
               "appVersionId": "a25091bd-dde2-4740-8c6e-8f7b37e72bf0",
@@ -7824,5 +7824,5 @@
       }
     }
   ],
-  "tooljet_version": "2.38.0-ee2.15.28-cloud2.3.11"
+  "jumpstart_version": "2.38.0-ee2.15.28-cloud2.3.11"
 }

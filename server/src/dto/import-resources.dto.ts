@@ -5,13 +5,13 @@ export class ImportResourcesDto {
   organization_id: string;
 
   @IsString()
-  tooljet_version: string;
+  jumpstart_version: string;
 
   @IsOptional()
   app: ImportAppDto[];
 
   @IsOptional()
-  tooljet_database: ImportTooljetDatabaseDto[];
+  jumpstart_database: ImportJumpstartDatabaseDto[];
 }
 
 export class ImportAppDto {
@@ -22,7 +22,7 @@ export class ImportAppDto {
   appName: string;
 }
 
-export class ImportTooljetDatabaseDto {
+export class ImportJumpstartDatabaseDto {
   @IsUUID()
   id: string;
 

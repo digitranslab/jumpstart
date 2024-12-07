@@ -8,7 +8,7 @@ title: Code Editor
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/code-editor/editor.png" alt="ToolJet - Widget Reference - Code editor" />
+<img className="screenshot-full" src="/img/widgets/code-editor/editor.png" alt="JumpStart - Widget Reference - Code editor" />
 
 </div>
 

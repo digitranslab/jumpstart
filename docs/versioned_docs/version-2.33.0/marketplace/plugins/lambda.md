@@ -3,7 +3,7 @@ id: marketplace-plugin-aws-lambda
 title: AWS Lambda
 ---
 
-ToolJet can connect to AWS Lambda to run serverless functions.
+JumpStart can connect to AWS Lambda to run serverless functions.
 
 ## Connection
 
@@ -14,7 +14,7 @@ To connect to AWS Lambda plugin, you need to provide the following details:
 - **Region**: The region where the AWS Lambda is hosted.
 
 <div style={{textAlign: 'center'}}>
-    <img style={{ border:'0', marginBottom:'15px', borderRadius:'5px', boxShadow: '0px 1px 3px rgba(0, 0, 0, 0.2)' }} className="screenshot-full" src="/img/marketplace/plugins/lambda/awslambdaconfig.png" alt="ToolJet database" />
+    <img style={{ border:'0', marginBottom:'15px', borderRadius:'5px', boxShadow: '0px 1px 3px rgba(0, 0, 0, 0.2)' }} className="screenshot-full" src="/img/marketplace/plugins/lambda/awslambdaconfig.png" alt="JumpStart database" />
 </div>
 
 ## Supported queries
@@ -27,6 +27,6 @@ This query is used to invoke a Lambda function. The following parameters are req
 - **Payload**: The JSON payload to be sent to the Lambda function.
 
 <div style={{textAlign: 'center'}}>
-    <img style={{ border:'0', marginBottom:'15px', borderRadius:'5px', boxShadow: '0px 1px 3px rgba(0, 0, 0, 0.2)' }} className="screenshot-full" src="/img/marketplace/plugins/lambda/lambdaquery.png" alt="ToolJet database" />
+    <img style={{ border:'0', marginBottom:'15px', borderRadius:'5px', boxShadow: '0px 1px 3px rgba(0, 0, 0, 0.2)' }} className="screenshot-full" src="/img/marketplace/plugins/lambda/lambdaquery.png" alt="JumpStart database" />
 </div>
 

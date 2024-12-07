@@ -6,15 +6,15 @@ title: Docker
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Deploying ToolJet using Docker Compose
+# Deploying JumpStart using Docker Compose
 
-Follow the steps below to deploy ToolJet on a server using Docker Compose. ToolJet requires a PostgreSQL database to store applications definitions, (encrypted) credentials for datasources and user authentication data.
+Follow the steps below to deploy JumpStart on a server using Docker Compose. JumpStart requires a PostgreSQL database to store applications definitions, (encrypted) credentials for datasources and user authentication data.
 
 :::info
-If you rather want to try out ToolJet on your local machine with Docker, you can follow the steps [here](/docs/2.7.0/setup/try-tooljet).
+If you rather want to try out JumpStart on your local machine with Docker, you can follow the steps [here](/docs/2.7.0/setup/try-jumpstart).
 :::
 
-*If you have any questions feel free to join our [Slack Community](https://tooljet.com/slack) or send us an email at hello@tooljet.com.*
+*If you have any questions feel free to join our [Slack Community](https://jumpstart.com/slack) or send us an email at hello@jumpstart.com.*
 
 ### Installing Docker and Docker Compose
 Install docker and docker-compose on the server.
@@ -23,11 +23,11 @@ Install docker and docker-compose on the server.
 
 ### Deployment options
 
-There are two options to deploy ToolJet using Docker Compose:
+There are two options to deploy JumpStart using Docker Compose:
 1. **With in-built PostgreSQL database (recommended)**. This setup uses the official Docker image of PostgreSQL.
 2.   **With external PostgreSQL database**. This setup is recommended if you want to use a managed PostgreSQL service such as AWS RDS or Google Cloud SQL.
 
-Confused about which setup to select? Feel free to ask the community via Slack: https://tooljet.com/slack.
+Confused about which setup to select? Feel free to ask the community via Slack: https://jumpstart.com/slack.
 
 
 <Tabs>
@@ -35,7 +35,7 @@ Confused about which setup to select? Feel free to ask the community via Slack: 
 
   1. Download our production docker-compose file into the server.
   ```bash
-  curl -LO https://raw.githubusercontent.com/ToolJet/ToolJet/main/deploy/docker/docker-compose-db.yaml
+  curl -LO https://raw.githubusercontent.com/digitranslab/jumpstart/main/deploy/docker/docker-compose-db.yaml
   mv docker-compose-db.yaml docker-compose.yaml
   mkdir postgres_data
   ```
@@ -43,8 +43,8 @@ Confused about which setup to select? Feel free to ask the community via Slack: 
   2. Create `.env` file in the current directory (where the docker-compose.yaml file is downloaded as in step 1):
 
   ```bash
-  curl -LO https://raw.githubusercontent.com/ToolJet/ToolJet/main/deploy/docker/.env.internal.example
-  curl -LO https://raw.githubusercontent.com/ToolJet/ToolJet/main/deploy/docker/internal.sh && chmod +x internal.sh
+  curl -LO https://raw.githubusercontent.com/digitranslab/jumpstart/main/deploy/docker/.env.internal.example
+  curl -LO https://raw.githubusercontent.com/digitranslab/jumpstart/main/deploy/docker/internal.sh && chmod +x internal.sh
   mv .env.internal.example .env && ./internal.sh
   ```
 
@@ -54,18 +54,18 @@ Confused about which setup to select? Feel free to ask the community via Slack: 
   docker-compose up -d
   ```
 
-  4. **(Optional)** `TOOLJET_HOST` environment variable can either be the public ipv4 address of your server or a custom domain that you want to use. Which can be modified in the .env file.
+  4. **(Optional)** `JUMPSTART_HOST` environment variable can either be the public ipv4 address of your server or a custom domain that you want to use. Which can be modified in the .env file.
 
   Also, for setting up additional environment variables in the .env file, please check our documentation on [environment variable](/docs/setup/env-vars)
 
   Examples:
-  `TOOLJET_HOST=http://12.34.56.78` or
-  `TOOLJET_HOST=https://tooljet.yourdomain.com`
+  `JUMPSTART_HOST=http://12.34.56.78` or
+  `JUMPSTART_HOST=https://jumpstart.yourdomain.com`
   
-  If you've set a custom domain for `TOOLJET_HOST`, add a `A record` entry in your DNS settings to point to the IP address of the server. 
+  If you've set a custom domain for `JUMPSTART_HOST`, add a `A record` entry in your DNS settings to point to the IP address of the server. 
 
   :::info
-  i. Please make sure that `TOOLJET_HOST` starts with either `http://` or `https://`
+  i. Please make sure that `JUMPSTART_HOST` starts with either `http://` or `https://`
 
   ii. Setup docker to run without root privileges by following the instructions written here https://docs.docker.com/engine/install/linux-postinstall/
 
@@ -82,7 +82,7 @@ Confused about which setup to select? Feel free to ask the community via Slack: 
 
   2. Download our production docker-compose file into the server.
   ```bash
-  curl -LO https://raw.githubusercontent.com/ToolJet/ToolJet/main/deploy/docker/docker-compose.yaml
+  curl -LO https://raw.githubusercontent.com/digitranslab/jumpstart/main/deploy/docker/docker-compose.yaml
   ```
 
   3. Create `.env` file in the current directory (where the docker-compose.yaml file is downloaded as in step 1):
@@ -96,8 +96,8 @@ Confused about which setup to select? Feel free to ask the community via Slack: 
   </div> 
 
   ```bash
-  curl -LO https://raw.githubusercontent.com/ToolJet/ToolJet/main/deploy/docker/.env.external.example
-  curl -LO https://raw.githubusercontent.com/ToolJet/ToolJet/main/deploy/docker/external.sh && chmod +x external.sh
+  curl -LO https://raw.githubusercontent.com/digitranslab/jumpstart/main/deploy/docker/.env.external.example
+  curl -LO https://raw.githubusercontent.com/digitranslab/jumpstart/main/deploy/docker/external.sh && chmod +x external.sh
   mv .env.external.example .env && ./external.sh
   ```
 
@@ -107,20 +107,20 @@ Confused about which setup to select? Feel free to ask the community via Slack: 
   docker-compose up -d
   ```
 
-  5. **(Optional)** `TOOLJET_HOST` environment variable can either be the public ipv4 address of your server or a custom domain that you want to use. Which can be modified in the .env file.
+  5. **(Optional)** `JUMPSTART_HOST` environment variable can either be the public ipv4 address of your server or a custom domain that you want to use. Which can be modified in the .env file.
 
   Also, for setting up additional environment variables in the .env file, please check our documentation on [environment variable](/docs/setup/env-vars)
 
   Examples:
-  `TOOLJET_HOST=http://12.34.56.78` or
-  `TOOLJET_HOST=https://tooljet.yourdomain.com`
+  `JUMPSTART_HOST=http://12.34.56.78` or
+  `JUMPSTART_HOST=https://jumpstart.yourdomain.com`
   
-  If you've set a custom domain for `TOOLJET_HOST`, add a `A record` entry in your DNS settings to point to the IP address of the server.
+  If you've set a custom domain for `JUMPSTART_HOST`, add a `A record` entry in your DNS settings to point to the IP address of the server.
 
   :::info
-  i. Please make sure that `TOOLJET_HOST` starts with either `http://` or `https://`
+  i. Please make sure that `JUMPSTART_HOST` starts with either `http://` or `https://`
 
-  ii. If there are self signed HTTPS endpoints that Tooljet needs to connect to, please make sure that `NODE_EXTRA_CA_CERTS` environment variable is set to the absolute path containing the certificates.
+  ii. If there are self signed HTTPS endpoints that Jumpstart needs to connect to, please make sure that `NODE_EXTRA_CA_CERTS` environment variable is set to the absolute path containing the certificates.
 
   iii. If you're running a linux server, `docker` might need sudo permissions. In that case you can either run:
   `sudo docker-compose up -d`
@@ -145,7 +145,7 @@ If this is a new installation of the application, you may start directly with th
 
 - Users on versions earlier than v2.23.0-ee2.10.2 must first upgrade to this version before proceeding to the latest version.
 
-For specific issues or questions, refer to our **[Slack](https://tooljet.slack.com/join/shared_invite/zt-25438diev-mJ6LIZpJevG0LXCEcL0NhQ#)**.
+For specific issues or questions, refer to our **[Slack](https://jumpstart.slack.com/join/shared_invite/zt-25438diev-mJ6LIZpJevG0LXCEcL0NhQ#)**.
 
 
 

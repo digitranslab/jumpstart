@@ -3,18 +3,18 @@ id: sendgrid
 title: SendGrid
 ---
 
-ToolJet can connect to your SendGrid account to send emails.
+JumpStart can connect to your SendGrid account to send emails.
 
 <div style={{paddingTop:'24px'}}>
 
 ## Connection
 
-To establish a connection with the SendGrid datasource, you can either click on the **+ Add new Data source** button located on the query panel or navigate to the **[Data Sources](/docs/data-sources/overview)** page through the ToolJet dashboard.
+To establish a connection with the SendGrid datasource, you can either click on the **+ Add new Data source** button located on the query panel or navigate to the **[Data Sources](/docs/data-sources/overview)** page through the JumpStart dashboard.
 
-ToolJet requires the following to connect to your SendGrid database:
+JumpStart requires the following to connect to your SendGrid database:
 - **SendGrid API key**
 
-<img class="screenshot-full" src="/img/datasource-reference/sendgrid/sendgrid-datasource-v2.png" alt="ToolJet - Data source - SendGrid" />
+<img class="screenshot-full" src="/img/datasource-reference/sendgrid/sendgrid-datasource-v2.png" alt="JumpStart - Data source - SendGrid" />
 
 :::info
 The SendGrid API Datasource supports for interaction with the mail endpoint of the [SendGrid v3 API](https://docs.sendgrid.com/api-reference/how-to-use-the-sendgrid-v3-api/authentication).
@@ -50,15 +50,15 @@ The SendGrid API Datasource supports for interaction with the mail endpoint of t
 #### Optional Parameter
 - **Body as HTML**
 
-<img class="screenshot-full" src="/img/datasource-reference/sendgrid/sendgrid-query-v2.png" alt="ToolJet - Query SendGrid"/>
+<img class="screenshot-full" src="/img/datasource-reference/sendgrid/sendgrid-query-v2.png" alt="JumpStart - Query SendGrid"/>
 
 :::info
 **Send mail to** - accepts an array/list of emails separated by comma.
 For example:
-`{{["dev@tooljet.io", "admin@tooljet.io"]}}`.
+`{{["dev@jumpstart.io", "admin@jumpstart.io"]}}`.
 
 **Send mail from** - accepts a string.
-For example: `admin@tooljet.io`
+For example: `admin@jumpstart.io`
 :::
 
 :::tip

@@ -6,7 +6,7 @@ import {
   QueryService,
   cacheConnection,
   getCachedConnection,
-} from '@tooljet-plugins/common';
+} from '@jumpstart-plugins/common';
 import { SourceOptions, QueryOptions } from './types';
 
 export default class MssqlQueryService implements QueryService {

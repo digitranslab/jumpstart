@@ -3,19 +3,19 @@ id: mssql
 title: MS SQL Server / Azure SQL Databases
 ---
 
-ToolJet can connect to MS SQL Server & Azure SQL databases to read and write data. 
+JumpStart can connect to MS SQL Server & Azure SQL databases to read and write data. 
 
 <div style={{paddingTop:'24px'}}>
 
 ## Connection
 
-To establish a connection with the MS SQL Server data source, click on the **+ Add new Data source** button located on the query panel or navigate to the [Data Sources](/docs/data-sources/overview) page from the ToolJet dashboard.
+To establish a connection with the MS SQL Server data source, click on the **+ Add new Data source** button located on the query panel or navigate to the [Data Sources](/docs/data-sources/overview) page from the JumpStart dashboard.
 
 :::info
-Please make sure the **Host/IP** of the database is accessible from your VPC if you have self-hosted ToolJet. If you are using ToolJet cloud, please **whitelist** our IP.
+Please make sure the **Host/IP** of the database is accessible from your VPC if you have self-hosted JumpStart. If you are using JumpStart cloud, please **whitelist** our IP.
 :::
 
-ToolJet requires the following to connect to your PostgreSQL database.
+JumpStart requires the following to connect to your PostgreSQL database.
 
 - **Host**
 - **Port**
@@ -23,9 +23,9 @@ ToolJet requires the following to connect to your PostgreSQL database.
 - **Password**
 - **Azure**  (Select this option if you are using Azure SQL databases)
 
-**Note:** It is recommended to create a new database user so that you can control the access levels of ToolJet. 
+**Note:** It is recommended to create a new database user so that you can control the access levels of JumpStart. 
 
-<img className="screenshot-full" src="/img/datasource-reference/mssql/connect.png" alt="ToolJet mssql"/>
+<img className="screenshot-full" src="/img/datasource-reference/mssql/connect.png" alt="JumpStart mssql"/>
 
 
 </div>
@@ -52,7 +52,7 @@ SQL mode can be used to query MS SQL Server / Azure SQL Databases using SQL quer
 SELECT * FROM users
 ```
 
-<img className="screenshot-full" src="/img/datasource-reference/mssql/sql mode.png" alt="ToolJet mssql sql mode" style={{marginBottom:'15px'}}/>
+<img className="screenshot-full" src="/img/datasource-reference/mssql/sql mode.png" alt="JumpStart mssql sql mode" style={{marginBottom:'15px'}}/>
 
 ### GUI Mode
 
@@ -69,7 +69,7 @@ GUI mode can be used to query MS SQL Server / Azure SQL Databases without writin
 {{ [ {id: 1, channel: 33}, {id: 2, channel: 24} ] }}
 ```
 
-<img className="screenshot-full" src="/img/datasource-reference/mssql/gui mode.png" alt="ToolJet mssql gui mode"/>
+<img className="screenshot-full" src="/img/datasource-reference/mssql/gui mode.png" alt="JumpStart mssql gui mode"/>
 
 :::tip
 Query results can be transformed using transformations. Read our transformations documentation to see how: [link](/docs/tutorial/transformations)

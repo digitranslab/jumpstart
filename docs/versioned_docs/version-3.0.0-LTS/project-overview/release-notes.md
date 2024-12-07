@@ -3,9 +3,9 @@ id: release-notes
 title: Release Notes
 ---
 
-# ToolJet 3.0 Release Notes
+# JumpStart 3.0 Release Notes
 
-This document outlines the key improvements introduced in ToolJet 3.0, a major upgrade focused on performance, scalability, and developer experience.
+This document outlines the key improvements introduced in JumpStart 3.0, a major upgrade focused on performance, scalability, and developer experience.
 
 ## App Builder
 
@@ -21,20 +21,20 @@ This document outlines the key improvements introduced in ToolJet 3.0, a major u
 
 ## Platform Enhancements
 
-1. **[Group Sync OIDC](/docs/user-authentication/sso/oidc/)**: Easily manage user access to ToolJet applications from your Identity Provider (IDP) directly
+1. **[Group Sync OIDC](/docs/user-authentication/sso/oidc/)**: Easily manage user access to JumpStart applications from your Identity Provider (IDP) directly
 2. **[Secrets constants](/docs/org-management/workspaces/workspace_constants/#using-secrets)**: Ability to store encrypted credentials 
 3. **[User metadata](/docs/tutorial/manage-users-groups/#user-metadata)**: Store custom metadata with user details & access them while building applications
 4. User roles: Revamped user groups with granular access control
-5. **[User APIs](/docs/tutorial/tooljet-api/#get-all-users)**: External API for creating and managing users
+5. **[User APIs](/docs/tutorial/jumpstart-api/#get-all-users)**: External API for creating and managing users
 6. Security fixes: Various improvements to enhance platform security
 
-## ToolJet Database (TJ DB)
+## JumpStart Database (TJ DB)
 
-1. **[Custom primary key](/docs/tooljet-db/database-editor/#primary-key)** and **[foreign key support](/docs/tooljet-db/database-editor/#foreign-key)**
+1. **[Custom primary key](/docs/jumpstart-db/database-editor/#primary-key)** and **[foreign key support](/docs/jumpstart-db/database-editor/#foreign-key)**
 2. Support for more data types for advanced use cases
-3. **[SQL mode](/docs/tooljet-db/querying-tooljet-db#sql-editor)** for complex querying 
+3. **[SQL mode](/docs/jumpstart-db/querying-jumpstart-db#sql-editor)** for complex querying 
 4. Bulk upload using CSV 
-5. GUI for **[complex SQL queries](/docs/tooljet-db/querying-tooljet-db#gui-mode)** like joins, aggregates, and group by
+5. GUI for **[complex SQL queries](/docs/jumpstart-db/querying-jumpstart-db#gui-mode)** like joins, aggregates, and group by
 
 ## Integrations
 
@@ -62,11 +62,11 @@ Build AI apps using **[OpenAI](/docs/marketplace/plugins/marketplace-plugin-open
 
 ## Migration Steps
 
-Ready to upgrade to ToolJet 3.0? Follow our migration guides:
+Ready to upgrade to JumpStart 3.0? Follow our migration guides:
 - **[For Self-Hosted Users](/docs/setup/upgrade-to-v3)**
 - **[For Cloud Users](/docs/setup/cloud-v3-migration)**
 
-This release significantly enhances ToolJet's capabilities across its platform, focusing on improved performance, expanded integrations, and smoother development experience for building complex applications. The addition of AI-powered features and the release of Workflows provide users with advanced tools for creating sophisticated, automated solutions.
+This release significantly enhances JumpStart's capabilities across its platform, focusing on improved performance, expanded integrations, and smoother development experience for building complex applications. The addition of AI-powered features and the release of Workflows provide users with advanced tools for creating sophisticated, automated solutions.
 
 
 

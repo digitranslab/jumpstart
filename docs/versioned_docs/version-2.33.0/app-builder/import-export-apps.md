@@ -3,7 +3,7 @@ id: importing-exporting-applications
 title: Importing and Exporting Applications
 ---
 
-This documentation explains the process of exporting and importing applications in ToolJet.
+This documentation explains the process of exporting and importing applications in JumpStart.
 
 <div style={{paddingTop:'24px', paddingBottom:'24px'}}>
 
@@ -18,7 +18,7 @@ This documentation explains the process of exporting and importing applications 
 </div>
 
 - If you select `Export All`, all the versions of the application will be exported in JSON format. If you select `Export selected version`, only the selected version will be exported in JSON format.
-- Ticking the `Export ToolJet table schema` checkbox will also export the related ToolJet Database table schemas with your application. In this case, when you import the application in a workspace, the related ToolJet Database tables will also be created.
+- Ticking the `Export JumpStart table schema` checkbox will also export the related JumpStart Database table schemas with your application. In this case, when you import the application in a workspace, the related JumpStart Database tables will also be created.
 
 <div style={{textAlign: 'center', marginBottom:'15px'}}>
     <img className="screenshot-full" src="/img/v2-beta/app-builder/import-export-apps/export-options-v2.png" alt="Export App Options" />

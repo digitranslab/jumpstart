@@ -3,15 +3,15 @@ id: smtp
 title: SMTP
 ---
 
-The SMTP datasource facilitates the connection between ToolJet applications and email servers, enabling the apps to send emails.
+The SMTP datasource facilitates the connection between JumpStart applications and email servers, enabling the apps to send emails.
 
 <div style={{paddingTop:'24px'}}>
 
 ## Connection
 
-To establish a connection with the SMTP data source, you can either click on the **+ Add new Data source** button located on the query panel or navigate to the **[Data Sources](/docs/data-sources/overview/)** page from the ToolJet dashboard and choose SMTP as the data source.
+To establish a connection with the SMTP data source, you can either click on the **+ Add new Data source** button located on the query panel or navigate to the **[Data Sources](/docs/data-sources/overview/)** page from the JumpStart dashboard and choose SMTP as the data source.
 
-ToolJet requires the following to connect to SMTP server:
+JumpStart requires the following to connect to SMTP server:
 
 - **Host** 
 - **Port** 

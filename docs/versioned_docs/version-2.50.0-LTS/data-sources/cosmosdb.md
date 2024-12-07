@@ -3,13 +3,13 @@ id: cosmosdb
 title: CosmosDB
 ---
 
-ToolJet can connect to CosmosDB databases to read and write data.
+JumpStart can connect to CosmosDB databases to read and write data.
 
 ## Connection
 
-To establish a connection with the CosmosDB data source, you can either click on the **+ Add new data source** button located on the query panel or navigate to the **[Data Sources](/docs/data-sources/overview)** page through the ToolJet dashboard.
+To establish a connection with the CosmosDB data source, you can either click on the **+ Add new data source** button located on the query panel or navigate to the **[Data Sources](/docs/data-sources/overview)** page through the JumpStart dashboard.
 
-ToolJet requires the following to connect to your Cosmos DB.
+JumpStart requires the following to connect to your Cosmos DB.
 
 - **Cosmos DB Account End point**
 - **Cosmos DB Account Key**
@@ -22,7 +22,7 @@ You can find the endpoint and key in the **[Azure Portal](https://portal.azure.c
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/datasource-reference/cosmosdb/cosmosdb-connect-v2.png" alt="ToolJet - Data source - CosmosDB"/>
+<img className="screenshot-full" src="/img/datasource-reference/cosmosdb/cosmosdb-connect-v2.png" alt="JumpStart - Data source - CosmosDB"/>
 
 </div>
 
@@ -35,7 +35,7 @@ You can find the endpoint and key in the **[Azure Portal](https://portal.azure.c
 3. Select the operation you want to perform and enter the query.
 4. Click on the **Preview** button to preview the output or Click on the **Run** button to create and trigger the query.
 
-<img className="screenshot-full" src="/img/datasource-reference/cosmosdb/operations.png" alt="ToolJet - Data source - CosmosDB"/>
+<img className="screenshot-full" src="/img/datasource-reference/cosmosdb/operations.png" alt="JumpStart - Data source - CosmosDB"/>
 
 </div>
 
@@ -54,7 +54,7 @@ You can find the endpoint and key in the **[Azure Portal](https://portal.azure.c
 
 This query lists all the databases in a Cosmos DB.
 
-<img className="screenshot-full" src="/img/datasource-reference/cosmosdb/listDatabase.png" alt="ToolJet - Data source - CosmosDB" style={{marginBottom:'15px'}}/>
+<img className="screenshot-full" src="/img/datasource-reference/cosmosdb/listDatabase.png" alt="JumpStart - Data source - CosmosDB" style={{marginBottom:'15px'}}/>
 
 ### List Containers
 
@@ -63,7 +63,7 @@ This query lists all the containers of a database in a Cosmos DB.
 #### Required Parameter
 - **Database**
 
-<img className="screenshot-full" src="/img/datasource-reference/cosmosdb/listContainers.png" alt="ToolJet - Data source - CosmosDB" style={{marginBottom:'15px'}}/>
+<img className="screenshot-full" src="/img/datasource-reference/cosmosdb/listContainers.png" alt="JumpStart - Data source - CosmosDB" style={{marginBottom:'15px'}}/>
 
 ### Insert Items
 
@@ -74,7 +74,7 @@ This query inserts one or more items in a container of a database in a Cosmos DB
 - **Container**
 - **Items**
 
-<img className="screenshot-full" src="/img/datasource-reference/cosmosdb/insertItems.png" alt="ToolJet - Data source - CosmosDB" style={{marginBottom:'15px'}}/>
+<img className="screenshot-full" src="/img/datasource-reference/cosmosdb/insertItems.png" alt="JumpStart - Data source - CosmosDB" style={{marginBottom:'15px'}}/>
 
 #### Example
 
@@ -96,7 +96,7 @@ To read a single item from a container of a database in a Cosmos DB, use the fol
 - **Container**
 - **Item ID**
 
-<img className="screenshot-full" src="/img/datasource-reference/cosmosdb/readItem.png" alt="ToolJet - Data source - CosmosDB" style={{marginBottom:'15px'}}/>
+<img className="screenshot-full" src="/img/datasource-reference/cosmosdb/readItem.png" alt="JumpStart - Data source - CosmosDB" style={{marginBottom:'15px'}}/>
 
 ### Delete Item
 
@@ -107,7 +107,7 @@ To delete an item from a container of a database in a Cosmos DB, use the followi
 - **Container**
 - **Item ID**
 
-<img className="screenshot-full" src="/img/datasource-reference/cosmosdb/deleteItem.png" alt="ToolJet - Data source - CosmosDB" style={{marginBottom:'15px'}}/>
+<img className="screenshot-full" src="/img/datasource-reference/cosmosdb/deleteItem.png" alt="JumpStart - Data source - CosmosDB" style={{marginBottom:'15px'}}/>
 
 ### Query Database
 
@@ -118,7 +118,7 @@ To query documents from a container of a database in a Cosmos DB using SQL-like 
 - **Container**
 - **Query**
 
-<img className="screenshot-full" src="/img/datasource-reference/cosmosdb/queryDatabase.png" alt="ToolJet - Data source - CosmosDB" style={{marginBottom:'15px'}}/>
+<img className="screenshot-full" src="/img/datasource-reference/cosmosdb/queryDatabase.png" alt="JumpStart - Data source - CosmosDB" style={{marginBottom:'15px'}}/>
 
 #### Example
 ```yaml

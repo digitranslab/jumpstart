@@ -8,7 +8,7 @@ import { importText } from "Texts/exportImport";
 
 Cypress.Commands.add(
   "login",
-  (email = "dev@tooljet.io", password = "password") => {
+  (email = "dev@jumpstart.io", password = "password") => {
     cy.visit("/");
     cy.clearAndType(commonSelectors.workEmailInputField, email);
     cy.clearAndType(commonSelectors.passwordInputField, password);
@@ -92,7 +92,7 @@ Cypress.Commands.add(
 
 Cypress.Commands.add("appUILogin", () => {
   cy.visit("/");
-  cy.clearAndType(commonSelectors.workEmailInputField, "dev@tooljet.io");
+  cy.clearAndType(commonSelectors.workEmailInputField, "dev@jumpstart.io");
   cy.clearAndType(commonSelectors.passwordInputField, "password");
   cy.get(commonSelectors.signInButton).click();
   cy.wait(2000);

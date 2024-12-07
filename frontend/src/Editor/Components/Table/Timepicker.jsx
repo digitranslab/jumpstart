@@ -1,6 +1,6 @@
 import React from 'react';
 import moment from 'moment';
-import TimePickerComponent from '@/ToolJetUI/Timepicker/Timepicker';
+import TimePickerComponent from '@/JumpStartUI/Timepicker/Timepicker';
 
 export const TimePicker = ({ value, onChange, component }) => {
   const currentDay = moment().format('YYYY-MM-DD');

@@ -3,7 +3,7 @@ id: marketplace-plugin-plivo
 title: Plivo
 ---
 
-You can integrate your ToolJet application with Plivo for SMS functionality.
+You can integrate your JumpStart application with Plivo for SMS functionality.
 
 :::note
 Before following this guide, it is assumed that you have already completed the process of **[Using Marketplace plugins](/docs/marketplace/marketplace-overview#using-marketplace-plugins)**.
@@ -23,7 +23,7 @@ To use the Plivo plugin, you need the following credentials:
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/marketplace/plugins/plivo/connection-v2.png" alt="Configuring Plivo In ToolJet" />
+<img className="screenshot-full" src="/img/marketplace/plugins/plivo/connection-v2.png" alt="Configuring Plivo In JumpStart" />
 
 </div>
 

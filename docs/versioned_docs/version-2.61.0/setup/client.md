@@ -1,25 +1,25 @@
 ---
 id: client
-title: Deploying ToolJet client
+title: Deploying JumpStart client
 ---
 
-# Deploying ToolJet client
+# Deploying JumpStart client
 
-ToolJet client is a standalone application and can be deployed on static website hosting services such as Netlify, Firebase, S3/Cloudfront, etc.
+JumpStart client is a standalone application and can be deployed on static website hosting services such as Netlify, Firebase, S3/Cloudfront, etc.
 
 You can build standalone client with the below command:
 ```bash
 SERVE_CLIENT=false npm run build
 ```
 
-*If you have any questions feel free to join our [Slack Community](https://tooljet.com/slack) or send us an email at hello@tooljet.com.*
+*If you have any questions feel free to join our [Slack Community](https://jumpstart.com/slack) or send us an email at hello@jumpstart.com.*
 
-## Deploying ToolJet client on Firebase
+## Deploying JumpStart client on Firebase
 
 :::tip
-You should set the environment variable `TOOLJET_SERVER_URL` ( URL of the server ) while building the frontend and also set `SERVE_CLIENT` to `false`` for standalone client build.
+You should set the environment variable `JUMPSTART_SERVER_URL` ( URL of the server ) while building the frontend and also set `SERVE_CLIENT` to `false`` for standalone client build.
 
-For example: `SERVE_CLIENT=false TOOLJET_SERVER_URL=https://server.tooljet.com npm run build && firebase deploy`
+For example: `SERVE_CLIENT=false JUMPSTART_SERVER_URL=https://server.jumpstart.com npm run build && firebase deploy`
 :::
 
 1. Initialize firebase project
@@ -32,18 +32,18 @@ For example: `SERVE_CLIENT=false TOOLJET_SERVER_URL=https://server.tooljet.com n
     firebase deploy
    ```
 
-## Deploying ToolJet client with Google Cloud Storage
+## Deploying JumpStart client with Google Cloud Storage
 
 :::tip
-You should set the environment variable `TOOLJET_SERVER_URL` ( URL of the server ) while building the frontend.
+You should set the environment variable `JUMPSTART_SERVER_URL` ( URL of the server ) while building the frontend.
 
 
-For example: `SERVE_CLIENT=false TOOLJET_SERVER_URL=https://server.tooljet.io npm run build`
+For example: `SERVE_CLIENT=false JUMPSTART_SERVER_URL=https://server.jumpstart.io npm run build`
 :::
 
 #### Using Load balancer
 
-ToolJet client can be hosted from Cloud Storage bucket just like hosting any other static website.
+JumpStart client can be hosted from Cloud Storage bucket just like hosting any other static website.
 Follow the instructions from google documentation [here](https://cloud.google.com/storage/docs/hosting-static-website).
 
 Summarizing the steps below:
@@ -84,22 +84,22 @@ Summarizing the steps below:
 
 3. Activate cloud shell on your browser and create build folder
    ```bash
-   mkdir tooljet-assets
+   mkdir jumpstart-assets
    ```
 
 4. Copy the uploaded files onto an assets folder which is to be served
    ```bash
-   gsutil rsync -r gs://your-bucket-name/path-to-assets ./tooljet-assets
+   gsutil rsync -r gs://your-bucket-name/path-to-assets ./jumpstart-assets
    ```
 
 5. Deploy static assets to be served
    ```bash
-   cd tooljet-assets && gcloud app deploy
+   cd jumpstart-assets && gcloud app deploy
    ```
 
 ## Upgrading to the Latest LTS Version
 
-New LTS versions are released every 3-5 months with an end-of-life of atleast 18 months. To check the latest LTS version, visit the [ToolJet Docker Hub](https://hub.docker.com/r/tooljet/tooljet/tags) page. The LTS tags follow a naming convention with the prefix `LTS-` followed by the version number, for example `tooljet/tooljet:EE-LTS-latest`.
+New LTS versions are released every 3-5 months with an end-of-life of atleast 18 months. To check the latest LTS version, visit the [JumpStart Docker Hub](https://hub.docker.com/r/digitranslab/jumpstart/tags) page. The LTS tags follow a naming convention with the prefix `LTS-` followed by the version number, for example `digitranslab/jumpstart:EE-LTS-latest`.
 
 If this is a new installation of the application, you may start directly with the latest version. This guide is not required for new installations.
 
@@ -109,4 +109,4 @@ If this is a new installation of the application, you may start directly with th
 
 - Users on versions earlier than **v2.23.0-ee2.10.2** must first upgrade to this version before proceeding to the LTS version.
 
-For specific issues or questions, refer to our **[Slack](https://tooljet.slack.com/join/shared_invite/zt-25438diev-mJ6LIZpJevG0LXCEcL0NhQ#)**.
+For specific issues or questions, refer to our **[Slack](https://jumpstart.slack.com/join/shared_invite/zt-25438diev-mJ6LIZpJevG0LXCEcL0NhQ#)**.

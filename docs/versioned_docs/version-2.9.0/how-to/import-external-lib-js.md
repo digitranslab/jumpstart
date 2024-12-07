@@ -3,7 +3,7 @@ id: import-external-libraries-using-runjs
 title: Import external libraries using RunJS
 ---
 
-ToolJet allows you to utilize external libraries in your app by importing them using the [RunJS query](/docs/data-sources/run-js).
+JumpStart allows you to utilize external libraries in your app by importing them using the [RunJS query](/docs/data-sources/run-js).
 
 In this how-to guide, we will import a few JavaScript libraries and use it in the application.
 

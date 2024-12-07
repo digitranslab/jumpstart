@@ -5,13 +5,13 @@ title: Amazon SES
 
 # Amazon SES
 
-ToolJet can connect to your Amazon SES account to send emails.
+JumpStart can connect to your Amazon SES account to send emails.
 
 ## Connection
 
 To add a new Amazon SES API datasource, click the **Datasource manager** icon on the left-sidebar of the app builder and click on the `Add datasource` button, then select Amazon SES from the modal that pops up.
 
-ToolJet supports connecting to Amazon SES using **IAM credentials**, **AWS Instance Profile** or **AWS ARN Role**. 
+JumpStart supports connecting to Amazon SES using **IAM credentials**, **AWS Instance Profile** or **AWS ARN Role**. 
 
 If you are using **IAM credentials**, you will need to provide the following details:
 
@@ -19,7 +19,7 @@ If you are using **IAM credentials**, you will need to provide the following det
 - **Access key**
 - **Secret key**
 
-It is recommended to create a new IAM user for the database so that you can control the access levels of ToolJet.
+It is recommended to create a new IAM user for the database so that you can control the access levels of JumpStart.
 
 <div style={{textAlign: 'center'}}>
 
@@ -27,7 +27,7 @@ It is recommended to create a new IAM user for the database so that you can cont
 
 </div>
 
-To connect to Amazon SES using **AWS Instance Profile**, select the **Use AWS Instance Profile**. This will use the IAM role attached to the EC2 instance where ToolJet is running.
+To connect to Amazon SES using **AWS Instance Profile**, select the **Use AWS Instance Profile**. This will use the IAM role attached to the EC2 instance where JumpStart is running.
 To access the metadata service of an ECS container and the EC2 instance, we use the WebIdentityToken parameter which is obtained from a successful login with an identity provider.
 
 <div style={{textAlign: 'center'}}>
@@ -66,10 +66,10 @@ Optional parameters:
 :::info
 **Send mail to** - accepts an array/list of emails separated by comma.
 For example:
-`{{["dev@tooljet.io", "admin@tooljet.io"]}}`.
+`{{["dev@jumpstart.io", "admin@jumpstart.io"]}}`.
 
 **Send mail from** - accepts a string.
-For example: `admin@tooljet.io`
+For example: `admin@jumpstart.io`
 :::
 
 :::tip

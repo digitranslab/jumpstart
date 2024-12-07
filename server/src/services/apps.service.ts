@@ -735,7 +735,7 @@ export class AppsService {
 
     if (!versionFrom) {
       //create default data sources
-      for (const defaultSource of ['restapi', 'runjs', 'tooljetdb']) {
+      for (const defaultSource of ['restapi', 'runjs', 'jumpstartdb']) {
         const dataSource = await this.dataSourcesService.createDefaultDataSource(
           defaultSource,
           appVersion.id,
@@ -1092,18 +1092,18 @@ export class AppsService {
     return app;
   }
 
-  async findTooljetDbTables(appId: string): Promise<{ table_id: string }[]> {
+  async findJumpstartDbTables(appId: string): Promise<{ table_id: string }[]> {
     return await dbTransactionWrap(async (manager: EntityManager) => {
-      const tooljetDbDataQueries = await manager
+      const jumpstartDbDataQueries = await manager
         .createQueryBuilder(DataQuery, 'data_queries')
         .innerJoin(DataSource, 'data_sources', 'data_queries.data_source_id = data_sources.id')
         .innerJoin(AppVersion, 'app_versions', 'app_versions.id = data_sources.app_version_id')
         .where('app_versions.app_id = :appId', { appId })
-        .andWhere('data_sources.kind = :kind', { kind: 'tooljetdb' })
+        .andWhere('data_sources.kind = :kind', { kind: 'jumpstartdb' })
         .getMany();
 
       const uniqTableIds = new Set();
-      tooljetDbDataQueries.forEach((dq) => {
+      jumpstartDbDataQueries.forEach((dq) => {
         if (dq.options?.operation === 'join_tables') {
           const joinOptions = dq.options?.join_table?.joins ?? [];
           (joinOptions || []).forEach((join) => {

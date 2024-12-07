@@ -5,7 +5,7 @@ title: CouchDB
 
 # CouchDB
 
-ToolJet can connect to CouchDB databases to read and write data. CocuhDB uses basic auth for authentication , username and password for the database is required to create an CouchDB data source on ToolJet. For more info visit [CouchDB docs](https://docs.couchdb.org/en/stable/).
+JumpStart can connect to CouchDB databases to read and write data. CocuhDB uses basic auth for authentication , username and password for the database is required to create an CouchDB data source on JumpStart. For more info visit [CouchDB docs](https://docs.couchdb.org/en/stable/).
 
 
 <img className="screenshot-full" src="/img/datasource-reference/couchdb/auth_couch.gif" alt="Couch auth" />
@@ -117,7 +117,7 @@ The returned JSON is the JSON of the document, including the document ID and rev
 #### Example Records:
 
 ```json
-  [{"name":"tooljet"}]
+  [{"name":"jumpstart"}]
 ```
 
 Click on the `run` button to run the query.
@@ -153,7 +153,7 @@ You get the document as JSON in the response. For each update to the document, t
 #### Example body:
 
 ```json
-  [{"name":"tooljet"}]
+  [{"name":"jumpstart"}]
 ```
 
 

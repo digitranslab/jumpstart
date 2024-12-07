@@ -5,7 +5,7 @@ title: Custom Styles
 
 <div className='badge badge--primary heading-badge'>Available on: Paid plans</div>
 
-The Custom Styles feature in ToolJet allows users to apply their own CSS, overriding the default app styles. This enables easy customization of app appearance, and maintains consistent themes across all ToolJet apps. By using standardized styles, users avoid the repetitive task of manually styling components for each new app, enhancing development efficiency and ensuring visual coherence for a seamless user experience
+The Custom Styles feature in JumpStart allows users to apply their own CSS, overriding the default app styles. This enables easy customization of app appearance, and maintains consistent themes across all JumpStart apps. By using standardized styles, users avoid the repetitive task of manually styling components for each new app, enhancing development efficiency and ensuring visual coherence for a seamless user experience
 
 <div style={{textAlign: 'center'}}>
     <img className="screenshot-full" src="/img/v2-beta/app-builder/customcss/customcss-v2.gif" alt="Custom CSS" /> 
@@ -13,16 +13,16 @@ The Custom Styles feature in ToolJet allows users to apply their own CSS, overri
 
 ## Applying Custom Styles To All Components
 
-Follow these steps to apply custom styles in your ToolJet apps:
+Follow these steps to apply custom styles in your JumpStart apps:
 
-- Navigate to the **Custom Styles** page from **Workspace Settings** on the ToolJet dashboard
+- Navigate to the **Custom Styles** page from **Workspace Settings** on the JumpStart dashboard
 
 <div style={{textAlign: 'center'}}>
     <img className="screenshot-full" src="/img/v2-beta/app-builder/customcss/custom-styles.png" alt="Custom CSS" />
 </div>
 <br/>
 
-- To modify the default colors of components, use their class names, which follow the format `_tooljet-<component>`. 
+- To modify the default colors of components, use their class names, which follow the format `_jumpstart-<component>`. 
 
 <div style={{textAlign: 'center'}}>
     <img className="screenshot-full" src="/img/v2-beta/app-builder/customcss/component-class.png" alt="Component Class" />
@@ -40,7 +40,7 @@ properties.
 - After locating the specific sub-class(or HTML tag), refer it in the **Custom Styles** section and add styling to it. For instance, for the Button component above, the the below CSS will change the background color:
 
 ```css
-._tooljet-Button button {
+._jumpstart-Button button {
     background-color: #152A65 !important;
 }
 ```
@@ -53,7 +53,7 @@ properties.
 - Similarly, the code below can be used to change the background color of the Filter button on a Table component.
 
 ```css
-._tooljet-Table .table-card-header button {
+._jumpstart-Table .table-card-header button {
     background-color: #152A65 !important;
 }
 ```
@@ -66,13 +66,13 @@ properties.
 - The code below will change the font size and color of the Text Input and Number Input labels.
 
 ```css
-._tooljet-TextInput p  {
+._jumpstart-TextInput p  {
 	color: #152A65 !important;
     font-size: 16px !important;
     font-weight: bold !important;
 }
 
-._tooljet-NumberInput p  {
+._jumpstart-NumberInput p  {
 	color: #152A65 !important;
     font-size: 16px !important;
     font-weight: bold !important;
@@ -85,7 +85,7 @@ properties.
 
 ## Applying Custom Styles To Individual Components
 
-To modify the colors of individual components, use their class names, which follow the format `_tooljet-<component_name>`. Here, the component name refers to the name of the component that is set in the application.
+To modify the colors of individual components, use their class names, which follow the format `_jumpstart-<component_name>`. Here, the component name refers to the name of the component that is set in the application.
 
 <div style={{textAlign: 'center'}}>
     <img className="screenshot-full" src="/img/v2-beta/app-builder/customcss/individual-class.png" alt="Individual Class Custom CSS" />
@@ -95,7 +95,7 @@ To modify the colors of individual components, use their class names, which foll
 - The color of the Button component above can be changed using the code below:
 
 ```css
-._tooljet-addIncomeButton button {
+._jumpstart-addIncomeButton button {
     background-color: blue !important;
 }
 ```

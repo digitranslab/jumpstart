@@ -1,16 +1,16 @@
 {
-  "name": "KPI management dashboard (ToolJet Database)",
-  "description": "Monitor essential product metrics with the AARRR pirate metrics framework using dynamic dashboards and the ToolJet database.",
+  "name": "KPI management dashboard (JumpStart Database)",
+  "description": "Monitor essential product metrics with the AARRR pirate metrics framework using dynamic dashboards and the JumpStart database.",
   "widgets": [
     "Table",
     "Chart"
   ],
   "sources": [
     {
-      "name": "ToolJet Database",
-      "id": "tooljetdb"
+      "name": "JumpStart Database",
+      "id": "jumpstartdb"
     }
   ],
-  "id": "kpi-management-dashboard-tooljet-db",
+  "id": "kpi-management-dashboard-jumpstart-db",
   "category": "data-and-analytics"
 }

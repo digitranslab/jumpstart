@@ -1,6 +1,6 @@
 
 {
-  "$schema": "https://raw.githubusercontent.com/ToolJet/ToolJet/develop/plugins/schemas/manifest.schema.json",
+  "$schema": "https://raw.githubusercontent.com/digitranslab/jumpstart/develop/plugins/schemas/manifest.schema.json",
   "title": "Plivo datasource",
   "description": "A schema defining Plivo datasource",
   "type": "api",

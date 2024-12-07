@@ -1,23 +1,23 @@
 ---
-id: tooljet-cloud
-title: ToolJet Cloud
+id: jumpstart-cloud
+title: JumpStart Cloud
 ---
 
 <div className='badge badge--primary heading-badge'>Available on: Paid plans</div>
 
-## Choosing Your ToolJet Cloud Subscription
+## Choosing Your JumpStart Cloud Subscription
 
-This comprehensive guide aims to assist you in the process of configuring paid plans for ToolJet Cloud. If you are looking for self-hosted/on-premises plans, please navigate to **[Self Hosted](/docs/org-management/licensing/self-hosted)** . For ToolJet Cloud, we offer three different types of subscriptions tailored to your specific requirements. Let's explore how to get the most out of ToolJet's powerful features! 🚀
+This comprehensive guide aims to assist you in the process of configuring paid plans for JumpStart Cloud. If you are looking for self-hosted/on-premises plans, please navigate to **[Self Hosted](/docs/org-management/licensing/self-hosted)** . For JumpStart Cloud, we offer three different types of subscriptions tailored to your specific requirements. Let's explore how to get the most out of JumpStart's powerful features! 🚀
 
 Let's look into three types of subscriptions:
 
 1. **Free Trial**: This is a free subscription that grants access to premium features for a 14-day trial period.
 
    - **New Users**: Select the 14-day trial option during the onboarding process.
-   - **Existing Users**: If eligible, a start trial banner will be visible on your ToolJet dashboard.
+   - **Existing Users**: If eligible, a start trial banner will be visible on your JumpStart dashboard.
 
-2. **Business Subscription**: This is a paid monthly subscription that you can [upgrade](#a-chosen-plan-business-plan) to from within the ToolJet app.
-3. **Enterprise Subscription**: This is a paid subscription with customizable options. To obtain this subscription, you have to contact our **[sales](https://tooljet.com/slack)** team.
+2. **Business Subscription**: This is a paid monthly subscription that you can [upgrade](#a-chosen-plan-business-plan) to from within the JumpStart app.
+3. **Enterprise Subscription**: This is a paid subscription with customizable options. To obtain this subscription, you have to contact our **[sales](https://jumpstart.com/slack)** team.
 
 ---
 
@@ -26,7 +26,7 @@ Let's look into three types of subscriptions:
 If you are an existing user and wish to update to trial subscriptions, follow these steps:
 
 1. Navigate to the desired Workspace.
-2. If you are not currently on a paid plan and have not yet used your free trial, you will see a **Start Trial** banner within the ToolJet dashboard. Click on the **Start free trial** button inside this banner to initiate your 14-day trial.
+2. If you are not currently on a paid plan and have not yet used your free trial, you will see a **Start Trial** banner within the JumpStart dashboard. Click on the **Start free trial** button inside this banner to initiate your 14-day trial.
 
 <div style={{textAlign: 'center'}}>
 
@@ -35,7 +35,7 @@ If you are an existing user and wish to update to trial subscriptions, follow th
 </div>
 
 :::caution Note
-Your trial subscription is active for 14 days. To upgrade to our Business subscription, simply click the Upgrade or Renew button or connect with our team on Slack for the Enterprise subscription. Premium features like OpenID SSO login and Audit logs will be restricted after the trial ends. However, you can still upgrade to any of our premium plans and continue to enjoy the full benefits of ToolJet.
+Your trial subscription is active for 14 days. To upgrade to our Business subscription, simply click the Upgrade or Renew button or connect with our team on Slack for the Enterprise subscription. Premium features like OpenID SSO login and Audit logs will be restricted after the trial ends. However, you can still upgrade to any of our premium plans and continue to enjoy the full benefits of JumpStart.
 :::
 
 ## Upgrading to a Paid Subscription
@@ -51,7 +51,7 @@ If you want to upgrade from the basic or trial subscription and you decide to pr
 - The subscription tab displays a subscription overview card summarizing your current plan. Locate the **Upgrade** button in the lower left corner and click on it.
 - A modal window will appear. Enter the desired number of builder and end user seats, then click the **Upgrade** button within the modal.
 - You'll be directed to a payment gateway. Provide your payment details and finalize the purchase.
-- Upon successful payment, you'll return to the ToolJet subscription tab. A success message will display, and your subscription overview card will update shortly to reflect your new plan.
+- Upon successful payment, you'll return to the JumpStart subscription tab. A success message will display, and your subscription overview card will update shortly to reflect your new plan.
 
 <div style={{textAlign: 'center'}}>
 
@@ -85,7 +85,7 @@ Example: If you add a builder seat halfway through your monthly billing cycle, y
 
 ### B) Enterprise Plan
 
-- You can directly reach out to us via **[Slack](https://tooljet.com/slack)** or **[email](mailto:hello@tooljet.com)** and we will be happy to provide you the support.
+- You can directly reach out to us via **[Slack](https://jumpstart.com/slack)** or **[email](mailto:hello@jumpstart.com)** and we will be happy to provide you the support.
 
 ## Invoice History
 
@@ -106,14 +106,14 @@ You can find your past invoices in the subscriptions overview card. Here's how t
 
 ### B) Enterprise Plan
 
-- You can directly reach out to us via **[Slack](https://tooljet.com/slack)** or **[email](mailto:hello@tooljet.com)** and we will be happy to provide you the support.
+- You can directly reach out to us via **[Slack](https://jumpstart.com/slack)** or **[email](mailto:hello@jumpstart.com)** and we will be happy to provide you the support.
 
 
 ## Frequently Asked Questions (FAQs)
 
 ### 1) How can I upgrade or renew my subscription?
 
-If your enterprise edition subscription is nearing expiration, please click the **Upgrade** button or contact us via email at hello@tooljet.com to extend your subscription.
+If your enterprise edition subscription is nearing expiration, please click the **Upgrade** button or contact us via email at hello@jumpstart.com to extend your subscription.
 
 <div style={{textAlign: 'center'}}>
 
@@ -131,4 +131,4 @@ If you have an active subscription, you can find its validity period in the Sett
 
 ### 3) What happens if my subscription expires?
 
-If your business or enterprise subscription expires, your instance will revert to operating as a free plan. While you can still create unlimited apps, workspaces, and add users, premium features such as OpenID and Audit logs will no longer be accessible. For further information, please refer to the relevant **[plans](https://www.tooljet.com/pricing)**.
+If your business or enterprise subscription expires, your instance will revert to operating as a free plan. While you can still create unlimited apps, workspaces, and add users, premium features such as OpenID and Audit logs will no longer be accessible. For further information, please refer to the relevant **[plans](https://www.jumpstart.com/pricing)**.

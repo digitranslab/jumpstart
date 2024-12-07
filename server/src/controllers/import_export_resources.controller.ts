@@ -31,7 +31,7 @@ export class ImportExportResourcesController {
     const result = await this.importExportResourcesService.export(user, exportResourcesDto);
     return {
       ...result,
-      tooljet_version: globalThis.TOOLJET_VERSION,
+      jumpstart_version: globalThis.JUMPSTART_VERSION,
     };
   }
 
@@ -43,7 +43,7 @@ export class ImportExportResourcesController {
     if (!ability.can('importApp', App)) {
       throw new ForbiddenException('You do not have permissions to perform this action');
     }
-    const isNotCompatibleVersion = !checkVersionCompatibility(importResourcesDto.tooljet_version);
+    const isNotCompatibleVersion = !checkVersionCompatibility(importResourcesDto.jumpstart_version);
     if (isNotCompatibleVersion) {
       throw new BadRequestException(APP_ERROR_TYPE.IMPORT_EXPORT_SERVICE.UNSUPPORTED_VERSION_ERROR);
     }

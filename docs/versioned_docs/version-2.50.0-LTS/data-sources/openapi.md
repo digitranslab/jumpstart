@@ -3,13 +3,13 @@ id: openapi
 title: OpenAPI
 ---
 
-OpenAPI is a specification for designing and documenting RESTful APIs. Using OpenAPI datasource, ToolJet can generate REST API operations from OpenAPI Specs.
+OpenAPI is a specification for designing and documenting RESTful APIs. Using OpenAPI datasource, JumpStart can generate REST API operations from OpenAPI Specs.
 
 <div style={{paddingTop:'24px'}}>
 
 ## Connection
 
-To establish a connection with the OpenAPI datasource, you can either click on the **+ Add new Data source** button located on the query panel or navigate to the **[Data sources](/docs/data-sources/overview)** page through the ToolJet dashboard.
+To establish a connection with the OpenAPI datasource, you can either click on the **+ Add new Data source** button located on the query panel or navigate to the **[Data sources](/docs/data-sources/overview)** page through the JumpStart dashboard.
 
 Connections are created based on OpenAPI specifications. The available authentication methods currently supported are Basic Auth, API Key, Bearer Token, and OAuth 2.0. It is also possible to use specifications that require multiple authentications. Learn more [here](https://swagger.io/docs/specification/authentication/).
 

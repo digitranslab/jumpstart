@@ -3,13 +3,13 @@ id: permissions
 title: Permissions
 ---
 
-# Permissions in ToolJet
+# Permissions in JumpStart
 
-Permissions in ToolJet determine what actions users can perform and what resources they can access within a workspace. ToolJet uses a Role-Based Access Control (RBAC) system to manage these permissions efficiently.
+Permissions in JumpStart determine what actions users can perform and what resources they can access within a workspace. JumpStart uses a Role-Based Access Control (RBAC) system to manage these permissions efficiently.
 
 ## User Roles
 
-ToolJet has three default user roles, each with different levels of access:
+JumpStart has three default user roles, each with different levels of access:
 
 1. **Admin**: Full access to manage the workspace, including users, groups, and all resources.
 2. **Builder**: Can create and edit apps, data sources, and other resources.

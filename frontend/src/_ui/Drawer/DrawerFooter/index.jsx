@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { ButtonSolid } from '../../AppButton/AppButton';
-import Student from '../../../TooljetDatabase/Icons/Student.svg';
-import DeleteIcon from '@/TooljetDatabase/Icons/DeleteIcon.svg';
+import Student from '../../../JumpstartDatabase/Icons/Student.svg';
+import DeleteIcon from '@/JumpstartDatabase/Icons/DeleteIcon.svg';
 import './styles.scss';
 import { ToolTip } from '@/_components/ToolTip';
 import { triggerKeyboardShortcut } from '@/_helpers/utils';
@@ -84,11 +84,11 @@ function DrawerFooter({
   ]);
 
   const drawerDocumentationsLinks = {
-    CreateTableForm: 'https://docs.tooljet.com/docs/tooljet-db/database-editor/#create-new-table',
-    EditTableForm: 'https://docs.tooljet.com/docs/tooljet-db/database-editor/#rename-table',
-    CreateColumnForm: 'https://docs.tooljet.com/docs/tooljet-db/database-editor/#add-new-column',
-    EditColumnForm: 'https://docs.tooljet.com/docs/tooljet-db/database-editor/#edit-column',
-    ForeignKeyTableForm: 'https://docs.tooljet.com/docs/tooljet-db/database-editor/#foreign-key',
+    CreateTableForm: 'https://docs.jumpstart.com/docs/jumpstart-db/database-editor/#create-new-table',
+    EditTableForm: 'https://docs.jumpstart.com/docs/jumpstart-db/database-editor/#rename-table',
+    CreateColumnForm: 'https://docs.jumpstart.com/docs/jumpstart-db/database-editor/#add-new-column',
+    EditColumnForm: 'https://docs.jumpstart.com/docs/jumpstart-db/database-editor/#edit-column',
+    ForeignKeyTableForm: 'https://docs.jumpstart.com/docs/jumpstart-db/database-editor/#foreign-key',
   };
   const drawerNames = Object.keys(drawerDocumentationsLinks);
   const isDrawerWithDocumentation = drawerNames.some((drawerName) => drawerName === initiator);

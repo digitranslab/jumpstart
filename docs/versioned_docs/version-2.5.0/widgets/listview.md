@@ -8,7 +8,7 @@ List view widget allows to create a list of repeatable rows of data. Just like a
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/list-view/listviewapp.png" alt="ToolJet - List view widget" />
+<img className="screenshot-full" src="/img/widgets/list-view/listviewapp.png" alt="JumpStart - List view widget" />
 
 </div>
 
@@ -22,13 +22,13 @@ List view widget allows to create a list of repeatable rows of data. Just like a
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/list-view/event.png" alt="ToolJet - List view widget" />
+<img className="screenshot-full" src="/img/widgets/list-view/event.png" alt="JumpStart - List view widget" />
 
 </div>
 
 To add an event to a button, click on the widget handle to open the widget properties on the right sidebar. Go to the **Events** section and click on **Add handler**.
 
-**Row clicked** event is triggered when the button is clicked. Just like any other event on ToolJet, you can set multiple actions for a row clicked event.
+**Row clicked** event is triggered when the button is clicked. Just like any other event on JumpStart, you can set multiple actions for a row clicked event.
 
 :::info
 Check [Action Reference](/docs/category/actions-reference) docs to get the detailed information about all the **Actions**.
@@ -38,7 +38,7 @@ Check [Action Reference](/docs/category/actions-reference) docs to get the detai
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/list-view/props2.png" alt="ToolJet - List view widget" width="300"/>
+<img className="screenshot-full" src="/img/widgets/list-view/props2.png" alt="JumpStart - List view widget" width="300"/>
 
 </div>
 
@@ -59,7 +59,7 @@ Under the <b>General</b> accordion, you can set the value in the string format. 
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/tooltip.png" alt="ToolJet - List view widget" />
+<img className="screenshot-full" src="/img/tooltip.png" alt="JumpStart - List view widget" />
 
 </div>
 
@@ -67,7 +67,7 @@ Under the <b>General</b> accordion, you can set the value in the string format. 
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/list-view/listlayout.png" alt="ToolJet - List view widget" />
+<img className="screenshot-full" src="/img/widgets/list-view/listlayout.png" alt="JumpStart - List view widget" />
 
 </div>
 
@@ -80,7 +80,7 @@ Under the <b>General</b> accordion, you can set the value in the string format. 
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/list-view/style.png" alt="ToolJet - List view widget" />
+<img className="screenshot-full" src="/img/widgets/list-view/style.png" alt="JumpStart - List view widget" />
 
 </div>
 
@@ -102,7 +102,7 @@ Any property having `Fx` button next to its field can be **programmatically conf
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/list-view/emptylist.png" alt="ToolJet - List view widget" />
+<img className="screenshot-full" src="/img/widgets/list-view/emptylist.png" alt="JumpStart - List view widget" />
 
 </div>
 
@@ -110,7 +110,7 @@ Any property having `Fx` button next to its field can be **programmatically conf
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/list-view/data.gif" alt="ToolJet - List view widget" />
+<img className="screenshot-full" src="/img/widgets/list-view/data.gif" alt="JumpStart - List view widget" />
 
 </div>
 
@@ -119,7 +119,7 @@ Any property having `Fx` button next to its field can be **programmatically conf
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/list-view/datadisplay.png" alt="ToolJet - List view widget" />
+<img className="screenshot-full" src="/img/widgets/list-view/datadisplay.png" alt="JumpStart - List view widget" />
 
 </div>
 
@@ -128,7 +128,7 @@ Any property having `Fx` button next to its field can be **programmatically conf
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/list-view/addingwidgets.gif" alt="ToolJet - List view widget" />
+<img className="screenshot-full" src="/img/widgets/list-view/addingwidgets.gif" alt="JumpStart - List view widget" />
 
 </div>
 

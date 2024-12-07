@@ -105,7 +105,7 @@ To unarchive a user:
 
 ## Managing Groups
 
-On ToolJet, Admins and Super Admins can create groups for users added in a workspace and grant them access to particular app(s) with specific permissions. To manage groups, just go to the **Workspace Settings** from the left-sidebar of the dashboard and click on the **Groups**.
+On JumpStart, Admins and Super Admins can create groups for users added in a workspace and grant them access to particular app(s) with specific permissions. To manage groups, just go to the **Workspace Settings** from the left-sidebar of the dashboard and click on the **Groups**.
 
 <div style={{textAlign: 'center'}}>
     
@@ -115,7 +115,7 @@ On ToolJet, Admins and Super Admins can create groups for users added in a works
 
 ### Group properties
 
-Every group on ToolJet has **four** sections:
+Every group on JumpStart has **four** sections:
 
 - [Apps](#apps)
 - [Users](#users)

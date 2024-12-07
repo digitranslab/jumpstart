@@ -18,7 +18,7 @@ Presently, the only file type supported is `CSV`.
 
 ### Data format for CSV
 
-For `CSV` file type, the data field should be supplied with an array objects. ToolJet assumes that the keys of each of
+For `CSV` file type, the data field should be supplied with an array objects. JumpStart assumes that the keys of each of
 these objects are the same and that they represent the column headers of the csv file.
 
 Example:
@@ -26,8 +26,8 @@ Example:
 ```javascript
 {{
   [
-    { name: 'John', email: 'john@tooljet.com' },
-    { name: 'Sarah', email: 'sarah@tooljet.com' },
+    { name: 'John', email: 'john@jumpstart.com' },
+    { name: 'Sarah', email: 'sarah@jumpstart.com' },
   ]
 }}
 ```
@@ -36,6 +36,6 @@ Supplying the above snippet will generate a csv file which looks like this:
 
 ```csv
 name,email
-John,john@tooljet.com
-Sarah,sarah@tooljet.com
+John,john@jumpstart.com
+Sarah,sarah@jumpstart.com
 ```

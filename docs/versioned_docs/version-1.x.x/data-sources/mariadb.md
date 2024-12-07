@@ -5,13 +5,13 @@ title: MariaDB
 
 # MariaDB
 
-ToolJet can connect to MariaDB to read and write data.
+JumpStart can connect to MariaDB to read and write data.
 
 ## Connection
 
 To add a new MariaDB data source, click on the `+` button on datasources panel at the left sidebar of the app builder. Select MariaDB from the modal that pops up.
 
-ToolJet requires the following to connect to your DynamoDB.
+JumpStart requires the following to connect to your DynamoDB.
 
 - **Host**
 - **Username**
@@ -28,7 +28,7 @@ ToolJet requires the following to connect to your DynamoDB.
 
 </div>
 
-Click on **Test connection** button to verify if the credentials are correct and that the database is accessible to ToolJet server. Click on **Save** button to save the data source.
+Click on **Test connection** button to verify if the credentials are correct and that the database is accessible to JumpStart server. Click on **Save** button to save the data source.
 
 ## Querying MariaDB
 

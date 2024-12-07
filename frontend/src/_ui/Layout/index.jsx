@@ -90,9 +90,9 @@ function Layout({
                     </Link>
                   </ToolTip>
                 </li>
-                {window.public_config?.ENABLE_TOOLJET_DB == 'true' && admin && (
+                {window.public_config?.ENABLE_JUMPSTART_DB == 'true' && admin && (
                   <li className="text-center  cursor-pointer" data-cy={`database-icon`}>
-                    <ToolTip message="ToolJet Database" placement="right">
+                    <ToolTip message="JumpStart Database" placement="right">
                       <Link
                         to={getPrivateRoute('database')}
                         onClick={(event) => checkForUnsavedChanges(getPrivateRoute('database'), event)}

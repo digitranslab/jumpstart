@@ -1,4 +1,4 @@
-import { ConnectionTestResult, QueryError, QueryResult, QueryService } from '@tooljet-plugins/common';
+import { ConnectionTestResult, QueryError, QueryResult, QueryService } from '@jumpstart-plugins/common';
 import Redis from 'ioredis';
 import { SourceOptions, QueryOptions } from './types';
 

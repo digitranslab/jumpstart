@@ -5,7 +5,7 @@ title: Bulk update multiple rows in table
 
 # Bulk update multiple rows in table
 
-Currently, the data sources in ToolJet have operation for **bulk update(GUI mode)** but that only works for changes made in the single row. We will soon be adding a new operation for bulk updating the multiple rows but for now we can bulk update multiple rows by creating a Custom JS query. 
+Currently, the data sources in JumpStart have operation for **bulk update(GUI mode)** but that only works for changes made in the single row. We will soon be adding a new operation for bulk updating the multiple rows but for now we can bulk update multiple rows by creating a Custom JS query. 
 
 In this guide, We have assumed that you have successfully connected the data source. For this guide, we will be using the PostgreSQL data source as an example database. Currently, this workaround can be used only for PostgreSQL and MySQL.
 
@@ -14,14 +14,14 @@ In this guide, We have assumed that you have successfully connected the data sou
 - Create a postgresql query in **SQL mode** and enter 
   
 ```sql
-SELECT * FROM tooljet // replace tooljet with your table name
+SELECT * FROM jumpstart // replace jumpstart with your table name
 ```
 
 - Hit **Run** to fetch the data from the database
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - How To - Bulk update multiple rows in table](/img/how-to/bulk-update-multiple/new/data.png)
+![JumpStart - How To - Bulk update multiple rows in table](/img/how-to/bulk-update-multiple/new/data.png)
 
 </div>
 
@@ -33,7 +33,7 @@ SELECT * FROM tooljet // replace tooljet with your table name
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - How To - Bulk update multiple rows in table](/img/how-to/bulk-update-multiple/new/populate.png)
+![JumpStart - How To - Bulk update multiple rows in table](/img/how-to/bulk-update-multiple/new/populate.png)
 
 </div>
 
@@ -44,7 +44,7 @@ SELECT * FROM tooljet // replace tooljet with your table name
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - How To - Bulk update multiple rows in table](/img/how-to/bulk-update-multiple/new/editable.png)
+![JumpStart - How To - Bulk update multiple rows in table](/img/how-to/bulk-update-multiple/new/editable.png)
 
 </div>
 
@@ -54,7 +54,7 @@ SELECT * FROM tooljet // replace tooljet with your table name
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - How To - Bulk update multiple rows in table](/img/how-to/bulk-update-multiple/new/rowselect.png)
+![JumpStart - How To - Bulk update multiple rows in table](/img/how-to/bulk-update-multiple/new/rowselect.png)
 
 </div>
 
@@ -87,7 +87,7 @@ Update **table1** with the name of the table you are using.
 :::
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - How To - Bulk update multiple rows in table](/img/how-to/bulk-update-multiple/new/runjs1.png)
+![JumpStart - How To - Bulk update multiple rows in table](/img/how-to/bulk-update-multiple/new/runjs1.png)
 
 </div>
 
@@ -103,7 +103,7 @@ Update **table1** with the name of the table you are using.
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - How To - Bulk update multiple rows in table](/img/how-to/bulk-update-multiple/new/update.png)
+![JumpStart - How To - Bulk update multiple rows in table](/img/how-to/bulk-update-multiple/new/update.png)
 
 </div>
 
@@ -118,7 +118,7 @@ Update **table1** with the name of the table you are using.
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - How To - Bulk update multiple rows in table](/img/how-to/bulk-update-multiple/new/savechanges.png)
+![JumpStart - How To - Bulk update multiple rows in table](/img/how-to/bulk-update-multiple/new/savechanges.png)
 
 </div>
 
@@ -126,7 +126,7 @@ Update **table1** with the name of the table you are using.
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - How To - Bulk update multiple rows in table](/img/how-to/bulk-update-multiple/new/querysuccess.png)
+![JumpStart - How To - Bulk update multiple rows in table](/img/how-to/bulk-update-multiple/new/querysuccess.png)
 
 </div>
 

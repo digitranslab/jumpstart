@@ -4,8 +4,8 @@ import Select, { components } from 'react-select';
 import DrawerFooter from '@/_ui/Drawer/DrawerFooter';
 import { isEmpty } from 'lodash';
 import { toast } from 'react-hot-toast';
-import { tooljetDatabaseService } from '@/_services';
-import { TooljetDatabaseContext } from '../index';
+import { jumpstartDatabaseService } from '@/_services';
+import { JumpstartDatabaseContext } from '../index';
 import tjdbDropdownStyles, { dataTypes, formatOptionLabel } from '../constants';
 import Drawer from '@/_ui/Drawer';
 import ForeignKeyTableForm from './ForeignKeyTableForm';
@@ -13,7 +13,7 @@ import Tick from '../Icons/Tick.svg';
 import ForeignKeyRelationIcon from '../Icons/Fk-relation.svg';
 import EditIcon from '../Icons/EditColumn.svg';
 import { ConfirmDialog } from '@/_components';
-import DropDownSelect from '../../Editor/QueryManager/QueryEditors/TooljetDatabase/DropDownSelect';
+import DropDownSelect from '../../Editor/QueryManager/QueryEditors/JumpstartDatabase/DropDownSelect';
 import { ToolTip } from '@/_components/ToolTip';
 import Information from '@/_ui/Icon/solidIcons/Information';
 import './styles.scss';
@@ -32,7 +32,7 @@ const ColumnForm = ({
   const [defaultValue, setDefaultValue] = useState('');
   const [dataType, setDataType] = useState();
   const [fetching, setFetching] = useState(false);
-  const { organizationId, selectedTable, foreignKeys } = useContext(TooljetDatabaseContext);
+  const { organizationId, selectedTable, foreignKeys } = useContext(JumpstartDatabaseContext);
   const [onDeletePopup, setOnDeletePopup] = useState(false);
   const [isNotNull, setIsNotNull] = useState(false);
   const [isForeignKey, setIsForeignKey] = useState(false);
@@ -159,7 +159,7 @@ const ColumnForm = ({
     const isCheckingValues = foreignKeyDetails?.length > 0 && isForeignKey ? true : false;
 
     setFetching(true);
-    const { error } = await tooljetDatabaseService.createColumn(
+    const { error } = await jumpstartDatabaseService.createColumn(
       organizationId,
       selectedTable.table_name,
       columnName,

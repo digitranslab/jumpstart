@@ -3,15 +3,15 @@ id: postgresql
 title: PostgreSQL
 ---
 
-ToolJet has the capability to connect to PostgreSQL databases for data retrieval and modification.
+JumpStart has the capability to connect to PostgreSQL databases for data retrieval and modification.
 
 <div style={{paddingTop:'24px'}}>
 
 ## Establishing a Connection
 
-To establish a connection with the PostgreSQL data source, you can either click on the **+ Add new Data source** button located on the query panel or navigate to the **[Data Sources](/docs/data-sources/overview)** page from the ToolJet dashboard and choose PostgreSQL as the data source.
+To establish a connection with the PostgreSQL data source, you can either click on the **+ Add new Data source** button located on the query panel or navigate to the **[Data Sources](/docs/data-sources/overview)** page from the JumpStart dashboard and choose PostgreSQL as the data source.
 
-ToolJet offers two connection types to connect to your PostgreSQL database:
+JumpStart offers two connection types to connect to your PostgreSQL database:
 
 - **[Manual connection](#manual-connection)**
 - **[Connection string](#connection-string)**
@@ -41,10 +41,10 @@ To connect to PostgreSQL using a connection string, select **Connection String**
 
 <br/><br/><br/>
 
-**Note:** We recommend creating a new PostgreSQL database user to have control over ToolJet's access levels.
+**Note:** We recommend creating a new PostgreSQL database user to have control over JumpStart's access levels.
 
 :::info
-Please make sure the **Host/IP** of the database is accessible from your VPC if you have self-hosted ToolJet. If you are using ToolJet cloud, please **whitelist** our IP.
+Please make sure the **Host/IP** of the database is accessible from your VPC if you have self-hosted JumpStart. If you are using JumpStart cloud, please **whitelist** our IP.
 :::
 
 </div>
@@ -68,7 +68,7 @@ To execute SQL queries, select the SQL mode from the dropdown and enter your que
 
 #### Parameterized Queries:
 
-ToolJet offers support for parameterized SQL queries, which enhance security by preventing SQL injection and allow for dynamic query construction. To implement parameterized queries:
+JumpStart offers support for parameterized SQL queries, which enhance security by preventing SQL injection and allow for dynamic query construction. To implement parameterized queries:
 
 1. Use `:parameter_name` as placeholders in your SQL query where you want to insert parameters.
 2. In the **Parameters** section below the query editor, add key-value pairs for each parameter.

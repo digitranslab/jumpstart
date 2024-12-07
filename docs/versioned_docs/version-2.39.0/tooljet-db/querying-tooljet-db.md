@@ -1,14 +1,14 @@
 ---
-id: querying-tooljet-db
+id: querying-jumpstart-db
 title: Querying Data
 ---
 
-Querying the ToolJet database is as easy as querying any other data source on ToolJet.
+Querying the JumpStart database is as easy as querying any other data source on JumpStart.
 
-- Go to the **Query panel**, and click on the **+Add** button to add a new query, and select **ToolJet Database**
+- Go to the **Query panel**, and click on the **+Add** button to add a new query, and select **JumpStart Database**
     <div style={{textAlign: 'center'}}>
 
-    <img className="screenshot-full" src="/img/v2-beta/database/newui/qtjdb.png" alt="ToolJet Database editor" />
+    <img className="screenshot-full" src="/img/v2-beta/database/newui/qtjdb.png" alt="JumpStart Database editor" />
 
     </div>
 
@@ -16,7 +16,7 @@ Querying the ToolJet database is as easy as querying any other data source on To
 
     <div style={{textAlign: 'center'}}>
 
-    <img className="screenshot-full" src="/img/v2-beta/database/newui/qtjdb2.png" alt="ToolJet Database editor" />
+    <img className="screenshot-full" src="/img/v2-beta/database/newui/qtjdb2.png" alt="JumpStart Database editor" />
 
     </div>
 
@@ -73,7 +73,7 @@ This operation deletes a record in the table. You can delete a single record or 
 
 ### Join Tables
 
-You can join two or more tables in the ToolJet database by using the **Join** operation.
+You can join two or more tables in the JumpStart database by using the **Join** operation.
 
 #### Required Parameters
 - **From**: In the From section, the following parameters are available:
@@ -85,11 +85,11 @@ You can join two or more tables in the ToolJet database by using the **Join** op
 
   <div style={{textAlign: 'center'}}>
 
-  <img className="screenshot-full" src="/img/v2-beta/database/newui/join1.png" alt="ToolJet Database editor" />
+  <img className="screenshot-full" src="/img/v2-beta/database/newui/join1.png" alt="JumpStart Database editor" />
 
   </div>
 
-- **Filter**: Add a condition by choosing a column, an operation, and the value for filtering the records. The operations supported are same as the [filter operations](/docs/tooljet-db/database-editor#available-operations-are) for the **List rows** operation.
+- **Filter**: Add a condition by choosing a column, an operation, and the value for filtering the records. The operations supported are same as the [filter operations](/docs/jumpstart-db/database-editor#available-operations-are) for the **List rows** operation.
 - **Sort**: Sort the query response by choosing a column and the order (ascending or descending).
 - **Limit**: Limit the number of records to be returned by entering a number. 
 - **Offset**: Offset the number of records to be returned by entering a number. This parameter is used for pagination.
@@ -97,12 +97,12 @@ You can join two or more tables in the ToolJet database by using the **Join** op
 
   <div style={{textAlign: 'center'}}>
 
-  <img className="screenshot-full" src="/img/v2-beta/database/newui/join2.png" alt="ToolJet Database editor" />
+  <img className="screenshot-full" src="/img/v2-beta/database/newui/join2.png" alt="JumpStart Database editor" />
 
   </div>
 
 :::info
-If you have any other questions or feedback about **ToolJet Database**, please reach us out at hello@tooljet.com or join our **[Slack Community](https://www.tooljet.com/slack)**
+If you have any other questions or feedback about **JumpStart Database**, please reach us out at hello@jumpstart.com or join our **[Slack Community](https://www.jumpstart.com/slack)**
 :::
 
 </div>

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const TooljetLogoIcon = ({ fill = '#FFFFFF', width = '15', className = '', viewBox = '0 0 25 25', style }) => (
+const JumpstartLogoIcon = ({ fill = '#FFFFFF', width = '15', className = '', viewBox = '0 0 25 25', style }) => (
   <svg xmlns="http://www.w3.org/2000/svg" width={width} height={width} viewBox="0 0 15 16" fill="none">
     <g clipPath="url(#clip0_2000_5220)">
       <path
@@ -20,4 +20,4 @@ const TooljetLogoIcon = ({ fill = '#FFFFFF', width = '15', className = '', viewB
   </svg>
 );
 
-export default TooljetLogoIcon;
+export default JumpstartLogoIcon;

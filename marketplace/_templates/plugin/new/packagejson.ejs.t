@@ -2,7 +2,7 @@
 to: <%= plugins_path %>/plugins/<%= name %>/package.json
 ---
 {
-  "name": "@tooljet-marketplace/<%= name %>",
+  "name": "@jumpstart-marketplace/<%= name %>",
   "version": "1.0.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -18,9 +18,9 @@ to: <%= plugins_path %>/plugins/<%= name %>/package.json
     "build": "ncc build lib/index.ts -o dist",
     "watch": "ncc build lib/index.ts -o dist --watch"
   },
-  "homepage": "https://github.com/tooljet/tooljet#readme",
+  "homepage": "https://github.com/digitranslab/jumpstart#readme",
   "dependencies": {
-    "@tooljet-marketplace/common": "^1.0.0"
+    "@jumpstart-marketplace/common": "^1.0.0"
   },
   "devDependencies": {
     "typescript": "^4.7.4",

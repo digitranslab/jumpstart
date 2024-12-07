@@ -3,7 +3,7 @@ id: run-actions-from-runjs
 title: Run Actions from RunJS query
 ---
 
-ToolJet allows you to execute various [actions](/docs/actions/show-alert) within RunJS queries. This guide outlines the syntax and examples for each action.
+JumpStart allows you to execute various [actions](/docs/actions/show-alert) within RunJS queries. This guide outlines the syntax and examples for each action.
 
 <div style={{paddingTop:'24px', paddingBottom:'24px'}}>
 
@@ -124,7 +124,7 @@ return actions.getPageVariable('number');
 
 ### Logout
 
-To log out the current logged-in user from the ToolJet, use the below function:
+To log out the current logged-in user from the JumpStart, use the below function:
 
 ```javascript
 actions.logout();

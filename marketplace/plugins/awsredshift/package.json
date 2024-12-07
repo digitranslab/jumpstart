@@ -1,5 +1,5 @@
 {
-  "name": "@tooljet-marketplace/awsredshift",
+  "name": "@jumpstart-marketplace/awsredshift",
   "version": "1.0.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -15,9 +15,9 @@
     "build": "ncc build lib/index.ts -o dist",
     "watch": "ncc build lib/index.ts -o dist --watch"
   },
-  "homepage": "https://github.com/tooljet/tooljet#readme",
+  "homepage": "https://github.com/digitranslab/jumpstart#readme",
   "dependencies": {
-    "@tooljet-marketplace/common": "^1.0.0",
+    "@jumpstart-marketplace/common": "^1.0.0",
     "@aws-sdk/client-redshift-data": "^3.511.0"
   },
   "devDependencies": {

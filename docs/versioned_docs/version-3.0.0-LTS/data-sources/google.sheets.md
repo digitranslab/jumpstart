@@ -3,19 +3,19 @@ id: googlesheets
 title: Google Sheets
 ---
 
-ToolJet has the capability to establish a connection with Google Sheet for both reading and writing data. By utilizing OAuth 2.0, ToolJet can establish a secure connection with Google Sheet, ensuring that the application's access to a user's account is restricted and limited appropriately.
+JumpStart has the capability to establish a connection with Google Sheet for both reading and writing data. By utilizing OAuth 2.0, JumpStart can establish a secure connection with Google Sheet, ensuring that the application's access to a user's account is restricted and limited appropriately.
 
 <div style={{paddingTop:'24px'}}>
 
 ## Self-Hosted Configuration
 
-If you decide to self-host ToolJet, there are a few additional steps you need to take:
+If you decide to self-host JumpStart, there are a few additional steps you need to take:
 
 1. Proceed with the setup steps provided in the [Google OAuth 2.0 guide](/docs/setup/env-vars#google-oauth--optional-) to configure the necessary settings.
 2. Assign the corresponding values obtained from the previous step to the following environment variables:
    - **GOOGLE_CLIENT_ID**
    - **GOOGLE_CLIENT_SECRET**
-   - **TOOLJET_HOST**
+   - **JUMPSTART_HOST**
 3. Activate the Google Sheets API within the Google Cloud Platform (GCP) console.
 
 </div>
@@ -24,7 +24,7 @@ If you decide to self-host ToolJet, there are a few additional steps you need to
 
 ## Connection
 
-To establish a connection with the Google Sheet datasource, you can either click on the **+ Add new Data source** button located on the query panel or navigate to the **[Data Sources](/docs/data-sources/overview)** page through the ToolJet dashboard.
+To establish a connection with the Google Sheet datasource, you can either click on the **+ Add new Data source** button located on the query panel or navigate to the **[Data Sources](/docs/data-sources/overview)** page through the JumpStart dashboard.
 
 ### Authorization Scopes
 
@@ -135,21 +135,21 @@ Add additional rows to a table by using the append operation.
 [
   {
     "name": "John",
-    "email": "john@tooljet.com",
+    "email": "john@jumpstart.com",
     "date": "2024-09-16",
     "status": "Confirmed",
     "phone": "+123456789"
   },
   {
     "name": "Jane",
-    "email": "jane@tooljet.com",
+    "email": "jane@jumpstart.com",
     "date": "2024-09-17",
     "status": "Pending",
     "phone": "+987654321"
   },
   {
     "name": "Doe",
-    "email": "doe@tooljet.com",
+    "email": "doe@jumpstart.com",
     "date": "2024-09-18",
     "status": "Cancelled",
     "phone": "+112233445"

@@ -1,4 +1,4 @@
-import { QueryResult, QueryService, ConnectionTestResult } from '@tooljet-plugins/common';
+import { QueryResult, QueryService, ConnectionTestResult } from '@jumpstart-plugins/common';
 import { SourceOptions, QueryOptions } from './types';
 import { customerOpeations, productOperations, orderOperations, couponOperations } from './operation';
 const WooCommerceRestApi = require('@woocommerce/woocommerce-rest-api').default;

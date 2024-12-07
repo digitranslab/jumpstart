@@ -3,7 +3,7 @@ id: marketplace-plugin-textract
 title: Amazon Textract
 ---
 
-ToolJet can connect to Amazon Textract to extract text and data from scanned documents, forms, and tables. Textract can process documents of various formats, including PDF, JPEG/JPG, and PNG.
+JumpStart can connect to Amazon Textract to extract text and data from scanned documents, forms, and tables. Textract can process documents of various formats, including PDF, JPEG/JPG, and PNG.
 
 <div style={{textAlign: 'center'}}>
 

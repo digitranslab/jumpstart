@@ -1,4 +1,4 @@
-name: Tooljet release docker images build
+name: Jumpstart release docker images build
 
 on:
   release:
@@ -7,15 +7,15 @@ on:
   workflow_dispatch:
     inputs:
       job-to-run:
-        description: Enter the job name (tooljet-ce)
-        options: ["tooljet-ce"]
+        description: Enter the job name (jumpstart-ce)
+        options: ["jumpstart-ce"]
         required: true
       image:
         description: "Enter the latest image tag"
         required: true
 
 jobs:
-  build-tooljet-ce-image:
+  build-jumpstart-ce-image:
     runs-on: ubuntu-latest
     if: "${{ github.event.release }}"
 
@@ -66,7 +66,7 @@ jobs:
           context: .
           file: docker/production.Dockerfile
           push: true
-          tags: tooljet/tooljet-ce:${{ github.event.release.tag_name }},tooljet/tooljet-ce:ce-latest
+          tags: digitranslab/jumpstart-ce:${{ github.event.release.tag_name }},digitranslab/jumpstart-ce:ce-latest
           platforms: linux/amd64
         env:
           DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
@@ -79,7 +79,7 @@ jobs:
           context: .
           file: docker/production.Dockerfile
           push: true
-          tags: tooljet/tooljet-ce:${{ github.event.release.tag_name }}
+          tags: digitranslab/jumpstart-ce:${{ github.event.release.tag_name }}
           platforms: linux/amd64
         env:
           DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
@@ -92,7 +92,7 @@ jobs:
           context: .
           file: docker/production.Dockerfile
           push: true
-          tags: tooljet/tooljet-ce:${{ github.event.release.tag_name }},tooljet/tooljet-ce:ce-lts-latest
+          tags: digitranslab/jumpstart-ce:${{ github.event.release.tag_name }},digitranslab/jumpstart-ce:ce-lts-latest
           platforms: linux/amd64
         env:
           DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
@@ -101,18 +101,18 @@ jobs:
       - name: Send Slack Notification
         run: |
           if [[ "${{ job.status }}" == "success" ]]; then
-            message="ToolJet community image published:\n\`tooljet/tooljet-ce:${{ github.event.release.tag_name }}\`"
+            message="JumpStart community image published:\n\`digitranslab/jumpstart-ce:${{ github.event.release.tag_name }}\`"
           else
-            message="Job '${{ env.JOB_NAME }}' failed! tooljet/tooljet-ce:${{ github.event.release.tag_name }}"
+            message="Job '${{ env.JOB_NAME }}' failed! digitranslab/jumpstart-ce:${{ github.event.release.tag_name }}"
           fi
 
           curl -X POST -H 'Content-type: application/json' --data "{\"text\":\"$message\"}" ${{ secrets.SLACK_WEBHOOK_URL }}
 
   #   #Below code helps to trigger the workflow separately
 
-  tooljet-ce:
+  jumpstart-ce:
     runs-on: ubuntu-latest
-    if: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.job-to-run == 'tooljet-ce' }}
+    if: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.job-to-run == 'jumpstart-ce' }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -147,7 +147,7 @@ jobs:
           context: .
           file: docker/production.Dockerfile
           push: true
-          tags: tooljet/tooljet-ce:${{ github.event.inputs.image }},tooljet/tooljet-ce:latest
+          tags: digitranslab/jumpstart-ce:${{ github.event.inputs.image }},digitranslab/jumpstart-ce:latest
           platforms: linux/amd64
         env:
           DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
@@ -160,7 +160,7 @@ jobs:
           context: .
           file: docker/production.Dockerfile
           push: true
-          tags: tooljet/tooljet-ce:${{ github.event.inputs.image }},tooljet/tooljet-ce:CE-LTS-latest
+          tags: digitranslab/jumpstart-ce:${{ github.event.inputs.image }},digitranslab/jumpstart-ce:CE-LTS-latest
           platforms: linux/amd64
         env:
           DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
@@ -169,16 +169,16 @@ jobs:
       - name: Send Slack Notification
         run: |
           if [[ "${{ job.status }}" == "success" ]]; then
-            message="ToolJet community image published:\n\`tooljet/tooljet-ce:${{ github.event.inputs.image }}\`"
+            message="JumpStart community image published:\n\`digitranslab/jumpstart-ce:${{ github.event.inputs.image }}\`"
           else
-            message="Job '${{ env.JOB_NAME }}' failed! tooljet/tooljet-ce:${{ github.event.inputs.image }}"
+            message="Job '${{ env.JOB_NAME }}' failed! digitranslab/jumpstart-ce:${{ github.event.inputs.image }}"
           fi
 
           curl -X POST -H 'Content-type: application/json' --data "{\"text\":\"$message\"}" ${{ secrets.SLACK_WEBHOOK_URL }}
 
   update-lts-machine:
     runs-on: ubuntu-latest
-    needs: build-tooljet-ce-image
+    needs: build-jumpstart-ce-image
 
     if: "contains(github.event.release.tag_name, 'CE-LTS')"
 
@@ -198,14 +198,14 @@ jobs:
             # Check remaining images
             sudo docker images
 
-            # Remove the existing tooljet/* images
-            sudo docker images -a | grep 'tooljet/' | awk '{print $3}' | xargs sudo docker rmi -f
+            # Remove the existing jumpstart/* images
+            sudo docker images -a | grep 'jumpstart/' | awk '{print $3}' | xargs sudo docker rmi -f
 
             # Check remaining images
             sudo docker images
 
-            # Update docker-compose.yml with the new image for tooljet service
-            sed -i '/^[[:space:]]*tooljet:/,/^[[:space:]]*[^[:space:]]/ { /^[[:space:]]*image:/s|image:.*|image: tooljet/tooljet-ce:'"${{ github.event.release.tag_name }}"'| }' docker-compose.yml
+            # Update docker-compose.yml with the new image for jumpstart service
+            sed -i '/^[[:space:]]*jumpstart:/,/^[[:space:]]*[^[:space:]]/ { /^[[:space:]]*image:/s|image:.*|image: digitranslab/jumpstart-ce:'"${{ github.event.release.tag_name }}"'| }' docker-compose.yml
 
             # check the updated docker-compose.yml file
             cat docker-compose.yml

@@ -1,5 +1,5 @@
 {
-  "name": "@tooljet-plugins/saphana",
+  "name": "@jumpstart-plugins/saphana",
   "version": "1.0.0",
   "private": true,
   "main": "dist/index.js",
@@ -16,10 +16,10 @@
     "build": "tsc -b",
     "clean": "rimraf ./dist && rimraf tsconfig.tsbuildinfo"
   },
-  "homepage": "https://github.com/tooljet/tooljet#readme",
+  "homepage": "https://github.com/digitranslab/jumpstart#readme",
   "dependencies": {
     "@sap/hana-client": "^2.12.22",
-    "@tooljet-plugins/common": "file:../common",
+    "@jumpstart-plugins/common": "file:../common",
     "react": "^17.0.2"
   }
 }

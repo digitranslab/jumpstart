@@ -1,5 +1,5 @@
 {
-  "name": "Sales analytics dashboard (ToolJet Database)",
+  "name": "Sales analytics dashboard (JumpStart Database)",
   "description": "The Sales Analytics Dashboard template offers comprehensive sales monitoring and insights with four key sections: Main Dashboard (critical metrics), Orders (order details), Customers (demographics & history), and Products (product performance).",
   "widgets": [
     "Table",
@@ -7,10 +7,10 @@
   ],
   "sources": [
     {
-      "name": "ToolJet Database",
-      "id": "tooljetdb"
+      "name": "JumpStart Database",
+      "id": "jumpstartdb"
     }
   ],
-  "id": "sales-analytics-dashboard-tooljet-db",
+  "id": "sales-analytics-dashboard-jumpstart-db",
   "category": "data-and-analytics"
 }

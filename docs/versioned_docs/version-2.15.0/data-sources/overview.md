@@ -8,7 +8,7 @@ title: Overview
 Data Sources pull in and push data to any source including databases, external APIs, or services. Once a data source is connected to a workspace, the connection can be shared with any app of that workspace.
 
 :::caution
-Data Source page is available only on **ToolJet version 2.3.0 and above**.
+Data Source page is available only on **JumpStart version 2.3.0 and above**.
 :::
 
 <div style={{textAlign: 'center'}}>
@@ -70,8 +70,8 @@ Data Source page is available only on **ToolJet version 2.3.0 and above**.
 
 ## Default data sources
 
-By default, 4 data sources will be available on every app on ToolJet:
-- **[ToolJet Database](/docs/tooljet-database/)**
+By default, 4 data sources will be available on every app on JumpStart:
+- **[JumpStart Database](/docs/jumpstart-database/)**
 - **[RestAPI](/docs/data-sources/restapi/)**
 - **[Run JavaScript Query](/docs/data-sources/run-js/)**
 - **[Run Python Query](/docs/data-sources/run-py/)**
@@ -122,11 +122,11 @@ To configure these permissions, navigate to **Workspace Settings** -> **Groups S
 
 <br/>
 
-## Changing scope of data sources on an app created on older versions of ToolJet
+## Changing scope of data sources on an app created on older versions of JumpStart
 
-On ToolJet versions below 2.3.0, the data source connection was made from within the individual apps. To make it backward compatible, we added an option to change the scope of the data sources and make it global data source.
+On JumpStart versions below 2.3.0, the data source connection was made from within the individual apps. To make it backward compatible, we added an option to change the scope of the data sources and make it global data source.
 
-1. When dealing with apps that were created using ToolJet versions prior to 2.3.0, you will notice the presence of the data source manager in the left sidebar of the App Builder.
+1. When dealing with apps that were created using JumpStart versions prior to 2.3.0, you will notice the presence of the data source manager in the left sidebar of the App Builder.
   <div style={{textAlign: 'center'}}>
 
   <img className="screenshot-full" src="/img/datasource-reference/overview/leftsidebar.png" alt="Data Sources: Overview" />

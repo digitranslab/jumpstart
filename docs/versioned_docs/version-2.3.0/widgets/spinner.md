@@ -8,7 +8,7 @@ Spinner widget can be used to provide a visual indication that an action is in p
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/spinner/spinner.png" alt="ToolJet - Widget Reference - Spinner" />
+<img className="screenshot-full" src="/img/widgets/spinner/spinner.png" alt="JumpStart - Widget Reference - Spinner" />
 
 </div>
 
@@ -21,7 +21,7 @@ Under the <b>General</b> accordion, you can set the value in the string format. 
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/tooltip.png" alt="ToolJet - Widget Reference - Spinner" />
+<img className="screenshot-full" src="/img/tooltip.png" alt="JumpStart - Widget Reference - Spinner" />
 
 </div>
 

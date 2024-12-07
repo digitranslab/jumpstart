@@ -48,7 +48,7 @@ Modal supports the following two events:
 - **On close**
 
 :::info
-Just like any other event on ToolJet, you can set multiple handlers for the events supported by Modal. Check all the [actions here](/docs/category/actions-reference).
+Just like any other event on JumpStart, you can set multiple handlers for the events supported by Modal. Check all the [actions here](/docs/category/actions-reference).
 :::
 
 </div>

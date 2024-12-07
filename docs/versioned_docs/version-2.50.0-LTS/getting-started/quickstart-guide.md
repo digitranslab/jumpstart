@@ -5,7 +5,7 @@ title: Quickstart Guide
 
 <!-- <div style={{paddingTop:'24px', paddingBottom:'24px'}}> -->
 
-This quickstart guide walks you through the process of creating an employee directory app using ToolJet. The application lets users track and update employee details while working with core features of the platform, all within a user-friendly interface. Here are the step-by-step instructions:
+This quickstart guide walks you through the process of creating an employee directory app using JumpStart. The application lets users track and update employee details while working with core features of the platform, all within a user-friendly interface. Here are the step-by-step instructions:
 
 **[1. Create Your First Application](#1-create-your-first-application)**  <br/>
 **[2. Create a Database Table](#2-create-a-database-table)**  <br/>
@@ -21,7 +21,7 @@ This quickstart guide walks you through the process of creating an employee dire
 
 ### 1. Create Your First Application
 
-To begin, create a free **[ToolJet](https://www.tooljet.com/signup)** account and follow the steps below.
+To begin, create a free **[JumpStart](https://www.jumpstart.com/signup)** account and follow the steps below.
 
 <div class="video-container">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/Cdi9XW-0rkA?si=ue3XS5986NZiaoLC&rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -40,7 +40,7 @@ To begin, create a free **[ToolJet](https://www.tooljet.com/signup)** account an
 <div style={{paddingTop:'24px', paddingBottom:'24px'}}>
 
 ### 2. Create a Database Table
-Now, create a new table in **[ToolJet’s Database](/docs/tooljet-db/tooljet-database/)** to store employee records. 
+Now, create a new table in **[JumpStart’s Database](/docs/jumpstart-db/jumpstart-database/)** to store employee records. 
 
 <div class="video-container">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/GKOZsWcOxgI?si=qXGYetr1u9KLdl1Z&rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -64,7 +64,7 @@ To display employees in the application, you will first have to fetch the data f
 <br/>
 
 - Click on the **Add** button in the **[Query Panel](/docs/app-builder/query-panel/)** to create a new query.
-- Select **ToolJet Database** as the data source for the query.
+- Select **JumpStart Database** as the data source for the query.
 - Rename the query to *getEmployees*.
 - Choose *employees* as the Table name, and List rows as the Operation.
 - To automatically run the query when the app starts, enable the toggle for Run this query on application load? setting.
@@ -105,7 +105,7 @@ In the bottom-right corner of the Table component, there is a **+(Add new row)**
 </div>
 <br/>
 
-- Click on the **Add** button in the query panel, and select **ToolJet Database** as the data source.
+- Click on the **Add** button in the query panel, and select **JumpStart Database** as the data source.
 - Select *employees* as the Table name, and Create row as the Operation.
 - Rename the query to *addEmployees*.
 - Click on **Add Column** to add the required columns.
@@ -154,9 +154,9 @@ The preview, release and share buttons are at the top-right of the App-Builder.
 - Once the development is done and you are ready to use the application, click on the **Release** button to deploy the app.
 - Finally, share your application with your end users using the **Share** button.
 
-Congratulations on completing the tutorial! You've successfully built an employee directory application and, in the process, learnt the fundamentals of ToolJet. 
+Congratulations on completing the tutorial! You've successfully built an employee directory application and, in the process, learnt the fundamentals of JumpStart. 
 
-To learn more about how ToolJet works, explore the subjects covered in **[ToolJet Concepts](/docs/tooljet-concepts/what-are-components)**.
+To learn more about how JumpStart works, explore the subjects covered in **[JumpStart Concepts](/docs/jumpstart-concepts/what-are-components)**.
 
 </div>
 

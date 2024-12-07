@@ -17,7 +17,7 @@ export const iframeConfig = {
       displayName: 'URL',
       validation: {
         schema: { type: 'string' },
-        defaultValue: 'https://tooljet.io/',
+        defaultValue: 'https://jumpstart.io/',
       },
     },
   },
@@ -47,7 +47,7 @@ export const iframeConfig = {
       showOnMobile: { value: '{{false}}' },
     },
     properties: {
-      source: { value: 'https://tooljet.io/' },
+      source: { value: 'https://jumpstart.io/' },
       visible: { value: '{{true}}' },
     },
     events: [],

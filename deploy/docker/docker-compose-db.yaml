@@ -1,11 +1,11 @@
 version: "3"
 
 services:
-  tooljet:
+  jumpstart:
     tty: true
     stdin_open: true
-    container_name: Tooljet-app
-    image: tooljet/tooljet-ce:latest
+    container_name: jumpstart-app
+    image: digitranslab/jumpstart-ce:latest
     restart: always
     env_file: .env
     ports:

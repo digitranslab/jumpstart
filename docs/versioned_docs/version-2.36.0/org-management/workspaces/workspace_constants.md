@@ -20,7 +20,7 @@ Users can define environment-specific configurations by setting different values
 Workspace constants are designed to be resolved on the server side only. This means that when you make network calls, the payload sent will not include the actual values of the constants. Instead, the server will resolve the constants and use their actual values while processing the requests. This ensures that the constants remain secure and are not exposed to the client-side.<br/>
 Workspace constants are encrypted before being stored in the database, providing an additional layer of security for sensitive data like API keys, tokens, and other confidential values.
 :::info
-Workspace constants encryption was introduced in ToolJet version 2.34.1. If you are upgrading from a version prior to 2.34.1, all your existing workspace constants will be automatically encrypted. You can continue utilizing the workspace constants as before, while benefiting from the added security provided by the encryption feature.
+Workspace constants encryption was introduced in JumpStart version 2.34.1. If you are upgrading from a version prior to 2.34.1, all your existing workspace constants will be automatically encrypted. You can continue utilizing the workspace constants as before, while benefiting from the added security provided by the encryption feature.
 :::
 
 </div>
@@ -55,7 +55,7 @@ To use a workspace constant, you need to follow the syntax: **`{{constants.const
 
 To create workspace constants, follow these steps:
 
-- Access the ToolJet Dashboard and navigate to Workspace Settings.
+- Access the JumpStart Dashboard and navigate to Workspace Settings.
 - Select the Workspace Constants tab.
 - Click on the **Create New Constant** button.
 - A drawer will appear. Enter the desired name and value for the constant.

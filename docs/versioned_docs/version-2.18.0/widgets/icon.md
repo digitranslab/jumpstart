@@ -7,7 +7,7 @@ An Icon widget can be used to add icons(sourced from icon library). It supports 
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/icon/icon.png" alt="ToolJet - Widget - Icon" />
+<img className="screenshot-full" src="/img/widgets/icon/icon.png" alt="JumpStart - Widget - Icon" />
 
 </div>
 
@@ -21,7 +21,7 @@ An Icon widget can be used to add icons(sourced from icon library). It supports 
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/icon/events.png" alt="ToolJet - Widget - Icon" />
+<img className="screenshot-full" src="/img/widgets/icon/events.png" alt="JumpStart - Widget - Icon" />
 
 </div>
 
@@ -34,7 +34,7 @@ The Icon widget supports the following events:
 | On hover      | This event is triggered when the cursor is hovered over the icon|
 | On click      | This event is triggered when the icon is clicked |
 
-Just like any other event on ToolJet, you can set multiple handlers for any of the above-mentioned events.
+Just like any other event on JumpStart, you can set multiple handlers for any of the above-mentioned events.
 
 :::info
 Check [Action Reference](/docs/category/actions-reference) docs to get the detailed information about all the **Actions**.

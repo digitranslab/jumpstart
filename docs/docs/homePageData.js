@@ -10,15 +10,15 @@ export const featureCards = [
         icon: Grid3x3,
         title: "App Builder",
         color: "text-blue-500",
-        content: "Design and create applications with ToolJet's intuitive app builder, featuring a drag-and-drop interface and powerful pre-built components to streamline development.",
+        content: "Design and create applications with JumpStart's intuitive app builder, featuring a drag-and-drop interface and powerful pre-built components to streamline development.",
         href: "/docs/beta/app-builder/overview"
     },
     {
         icon: Database,
-        title: "ToolJet Database",
+        title: "JumpStart Database",
         color: "text-blue-500",
-        content: "Powered by PostgreSQL, offering a user-friendly UI editor. ToolJet Database allows you to manage, edit, and interact with your data directly within the platform.",
-        href: "/docs/beta/tooljet-db/tooljet-database"
+        content: "Powered by PostgreSQL, offering a user-friendly UI editor. JumpStart Database allows you to manage, edit, and interact with your data directly within the platform.",
+        href: "/docs/beta/jumpstart-db/jumpstart-database"
     },
     {
         icon: Workflow,
@@ -32,30 +32,30 @@ export const featureCards = [
 export const setupCards = [
     {
         icon: Cog,
-        title: "Try ToolJet",
+        title: "Try JumpStart",
         color: "text-blue-500",
-        content: "Get started with ToolJet in under 2 minutes by running it with Docker. Experience a seamless setup and explore the full capabilities of ToolJet.",
-        href: "/docs/beta/setup/try-tooljet"
+        content: "Get started with JumpStart in under 2 minutes by running it with Docker. Experience a seamless setup and explore the full capabilities of JumpStart.",
+        href: "/docs/beta/setup/try-jumpstart"
     },
     {
         icon: Cog,
         title: "System Requirements",
         color: "text-blue-500",
-        content: "Ensure your system meets the requirements for running ToolJet. Check hardware and software specifications to get the best performance from the platform.",
+        content: "Ensure your system meets the requirements for running JumpStart. Check hardware and software specifications to get the best performance from the platform.",
         href: "/docs/beta/setup/system-requirements"
     },
     {
         icon: Target,
-        title: "Choose Your ToolJet",
+        title: "Choose Your JumpStart",
         color: "text-blue-500",
-        content: "Discover the ideal ToolJet version for your development needs. Choose between our Long-Term Support (LTS) versions for stability and reliability, or explore Pre-Release versions to access the latest features. Select the option that best aligns with your project requirements ",
-        href: "/docs/beta/setup/choose-your-tooljet/"
+        content: "Discover the ideal JumpStart version for your development needs. Choose between our Long-Term Support (LTS) versions for stability and reliability, or explore Pre-Release versions to access the latest features. Select the option that best aligns with your project requirements ",
+        href: "/docs/beta/setup/choose-your-jumpstart/"
     },
     {
         icon: Scale,
         title: "Upgrade to LTS",
         color: "text-blue-500",
-        content: "Upgrade to the Long Term Support (LTS) version of ToolJet for extended support, stability, and access to critical updates.",
+        content: "Upgrade to the Long Term Support (LTS) version of JumpStart for extended support, stability, and access to critical updates.",
         href: "/docs/beta/setup/upgrade-to-lts"
     }
 ];
@@ -82,28 +82,28 @@ export const dataCards = [
         icon: Layers,
         title: "Overview",
         color: "text-blue-500",
-        content: "Gain a broad understanding of ToolJet's features and capabilities. Learn how it simplifies app development with powerful tools and an intuitive interface.",
+        content: "Gain a broad understanding of JumpStart's features and capabilities. Learn how it simplifies app development with powerful tools and an intuitive interface.",
         href: "/docs/beta/data-sources/overview"
     },
     {
         icon: FileSpreadsheet,
         title: "Sample Data Source",
         color: "text-blue-500",
-        content: "Explore sample data sources to quickly integrate with ToolJet. Test features and workflows using predefined datasets.",
+        content: "Explore sample data sources to quickly integrate with JumpStart. Test features and workflows using predefined datasets.",
         href: "/docs/beta/data-sources/sample-data-sources"
     },
     {
         icon: Folder,
         title: "Datasource Library",
         color: "text-blue-500",
-        content: "Browse ToolJet's datasource library to connect with databases, APIs, and external services seamlessly.",
-        href: "/docs/beta/tooljet-concepts/what-are-datasources/"
+        content: "Browse JumpStart's datasource library to connect with databases, APIs, and external services seamlessly.",
+        href: "/docs/beta/jumpstart-concepts/what-are-datasources/"
     },
     {
         icon: Wand2,
         title: "Transformation",
         color: "text-blue-500",
-        content: "Leverage ToolJet's transformation capabilities to manipulate and format data from various sources with ease.",
+        content: "Leverage JumpStart's transformation capabilities to manipulate and format data from various sources with ease.",
         href: "/docs/beta/tutorial/transformations/"
     }
 ];
@@ -125,7 +125,7 @@ export const releaseCards = [
         icon: GitBranch,
         title: "Git Sync",
         color: "text-blue-500",
-        content: "Sync your ToolJet projects with Git repositories, enabling version control and collaboration across teams.",
+        content: "Sync your JumpStart projects with Git repositories, enabling version control and collaboration across teams.",
         href: "/docs/beta/gitsync"
     },
     {
@@ -149,65 +149,65 @@ export const resourceCards = [
         icon: ShoppingBag,
         title: "Marketplace",
         color: "text-blue-500",
-        content: "Discover a variety of plugins, extensions and integrations in ToolJet's marketplace to enhance your app-building experience.",
+        content: "Discover a variety of plugins, extensions and integrations in JumpStart's marketplace to enhance your app-building experience.",
         href: "/docs/beta/marketplace/marketplace-overview"
     },
     {
         icon: Wand,
         title: "Copilot",
         color: "text-blue-500",
-        content: "Boost productivity with ToolJet Copilot. Get AI-powered suggestions and assistance while building your applications.",
-        href: "/docs/beta/tooljet-copilot"
+        content: "Boost productivity with JumpStart Copilot. Get AI-powered suggestions and assistance while building your applications.",
+        href: "/docs/beta/jumpstart-copilot"
     },
     {
         icon: Flag,
         title: "Tracking",
         color: "text-blue-5000",
-        content: "ToolJet ensures user privacy by acting as a proxy, never storing data from sources. It offers anonymous usage tracking with options to disable features for enhanced control.",
+        content: "JumpStart ensures user privacy by acting as a proxy, never storing data from sources. It offers anonymous usage tracking with options to disable features for enhanced control.",
         href: "/docs/beta/tracking"
     },
     {
         icon: ShieldCheck,
         title: "Security",
         color: "text-blue-500",
-        content: "ToolJet guarantees your data security with SOC 2 compliance, robust encryption, and secure credential handling. We never store your data, ensuring peace of mind with every connection",
+        content: "JumpStart guarantees your data security with SOC 2 compliance, robust encryption, and secure credential handling. We never store your data, ensuring peace of mind with every connection",
         href: "/docs/beta/security"
     }
 ];
 
 export const textLabels = {
     title: {
-        prefix: "ToolJet",
+        prefix: "JumpStart",
         highlight: "Documentation"
     },
-    subtitle: "Learn how to get up and running with ToolJet",
+    subtitle: "Learn how to get up and running with JumpStart",
     gettingStarted: {
         title: "Getting Started",
         description: "Discover how to create and publish apps within minutes"
     },
-    setupToolJet: {
-        title: "Setup ToolJet",
-        description: "Learn about the different methods you can use to deploy ToolJet"
+    setupJumpStart: {
+        title: "Setup JumpStart",
+        description: "Learn about the different methods you can use to deploy JumpStart"
     },
     deployOn: {
         title: "Deploy on"
     },
     exploreMore: "Explore more details",
     bringData: {
-        title: "Bring your data to ToolJet",
-        description: "Learn how to connect your data sources to ToolJet"
+        title: "Bring your data to JumpStart",
+        description: "Learn how to connect your data sources to JumpStart"
     },
     manageOrganization: {
         title: "Manage your organization",
-        description: "Learn how to secure your apps and manage user authentication in ToolJet."
+        description: "Learn how to secure your apps and manage user authentication in JumpStart."
     },
     manageReleases: {
         title: "Manage releases",
-        description: "Learn how you can efficiently control the release cycle in ToolJet"
+        description: "Learn how you can efficiently control the release cycle in JumpStart"
     },
     additionalResources: {
         title: "Additional resources",
-        description: "Learn more about Marketplace Plugins, ToolJet Copilot, App Performance, and Security."
+        description: "Learn more about Marketplace Plugins, JumpStart Copilot, App Performance, and Security."
     }
 };
 

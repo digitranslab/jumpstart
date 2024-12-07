@@ -1,5 +1,5 @@
-import ToggleGroup from '@/ToolJetUI/SwitchGroup/ToggleGroup';
-import ToggleGroupItem from '@/ToolJetUI/SwitchGroup/ToggleGroupItem';
+import ToggleGroup from '@/JumpStartUI/SwitchGroup/ToggleGroup';
+import ToggleGroupItem from '@/JumpStartUI/SwitchGroup/ToggleGroupItem';
 import React from 'react';
 import cx from 'classnames';
 

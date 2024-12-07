@@ -37,8 +37,8 @@ async function createDatabase(): Promise<void> {
     await createDb(envVars, dbNameFromArg);
   } else {
     await createDb(envVars, envVars.PG_DB);
-    if (process.env.ENABLE_TOOLJET_DB === 'true') {
-      await createTooljetDb(envVars, envVars.TOOLJET_DB);
+    if (process.env.ENABLE_JUMPSTART_DB === 'true') {
+      await createJumpstartDb(envVars, envVars.JUMPSTART_DB);
     }
   }
 }
@@ -77,22 +77,22 @@ async function createDb(envVars, dbName): Promise<void> {
   }
 }
 
-async function createTooljetDb(envVars, dbName): Promise<void> {
+async function createJumpstartDb(envVars, dbName): Promise<void> {
   if (isEmpty(dbName)) {
     throw new Error('Database name cannot be empty');
   }
 
   try {
     executeCreateDb(
-      envVars.TOOLJET_DB_HOST,
-      envVars.TOOLJET_DB_PORT,
-      envVars.TOOLJET_DB_USER,
-      envVars.TOOLJET_DB_PASS,
+      envVars.JUMPSTART_DB_HOST,
+      envVars.JUMPSTART_DB_PORT,
+      envVars.JUMPSTART_DB_USER,
+      envVars.JUMPSTART_DB_PASS,
       dbName
     );
   } catch (error) {
     if (error.message.includes(`database "${dbName}" already exists`)) {
-      console.log(`Using Tooljet database\nTOOLJET_DB: ${dbName}\nTOOLJET_DB_HOST: ${envVars.TOOLJET_DB_HOST}\n`);
+      console.log(`Using Jumpstart database\nJUMPSTART_DB: ${dbName}\nJUMPSTART_DB_HOST: ${envVars.JUMPSTART_DB_HOST}\n`);
     } else {
       throw error;
     }

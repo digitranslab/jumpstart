@@ -8,7 +8,7 @@ Star rating widget can be used to display as well as input ratings. The widget s
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/star/star-rating.png" alt="ToolJet - Widget Reference - Star rating" />
+<img className="screenshot-full" src="/img/widgets/star/star-rating.png" alt="JumpStart - Widget Reference - Star rating" />
 
 </div>
 
@@ -53,7 +53,7 @@ Under the <b>General</b> accordion, you can set the value in the string format. 
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/tooltip.png" alt="ToolJet - Widget Reference - Star rating" />
+<img className="screenshot-full" src="/img/tooltip.png" alt="JumpStart - Widget Reference - Star rating" />
 
 </div>
 

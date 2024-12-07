@@ -23,14 +23,14 @@ export enum Action {
 
 type Subjects = 'all';
 
-export type TooljetDbAbility = Ability<[Action, Subjects]>;
+export type JumpstartDbAbility = Ability<[Action, Subjects]>;
 
 @Injectable()
-export class TooljetDbAbilityFactory {
+export class JumpstartDbAbilityFactory {
   constructor(private usersService: UsersService) {}
 
   async actions(user: User, params: any) {
-    const { can, build } = new AbilityBuilder<Ability<[Action, Subjects]>>(Ability as AbilityClass<TooljetDbAbility>);
+    const { can, build } = new AbilityBuilder<Ability<[Action, Subjects]>>(Ability as AbilityClass<JumpstartDbAbility>);
     const { organizationId, dataQuery } = params;
     const isPublicAppRequest = isEmpty(organizationId) && !isEmpty(dataQuery) && dataQuery.app.isPublic;
     const isUserLoggedin = !isEmpty(user) && !isEmpty(organizationId);

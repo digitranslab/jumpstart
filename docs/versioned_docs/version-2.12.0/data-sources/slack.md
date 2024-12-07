@@ -5,11 +5,11 @@ title: Slack
 
 # Slack
 
-ToolJet can connect to your Slack workspace to send messages. 
+JumpStart can connect to your Slack workspace to send messages. 
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/datasource-reference/slack/connect.png" alt="Slack datasource: ToolJet"/>
+<img className="screenshot-full" src="/img/datasource-reference/slack/connect.png" alt="Slack datasource: JumpStart"/>
 
 </div>
 
@@ -22,7 +22,7 @@ ToolJet can connect to your Slack workspace to send messages.
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/datasource-reference/slack/authorize.png" alt="Slack datasource: ToolJet"/>
+<img className="screenshot-full" src="/img/datasource-reference/slack/authorize.png" alt="Slack datasource: JumpStart"/>
 
 </div>
 
@@ -45,7 +45,7 @@ This operation will return the data of all the members in your slack workspace.
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/datasource-reference/slack/listmembers.png" alt="Slack datasource: ToolJet"/>
+<img className="screenshot-full" src="/img/datasource-reference/slack/listmembers.png" alt="Slack datasource: JumpStart"/>
 
 </div>
 
@@ -60,7 +60,7 @@ This operation will send/post the message to a specified channel or posting to d
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/datasource-reference/slack/sendmessage.png" alt="Slack datasource: ToolJet"/>
+<img className="screenshot-full" src="/img/datasource-reference/slack/sendmessage.png" alt="Slack datasource: JumpStart"/>
 
 </div>
 
@@ -76,6 +76,6 @@ This operation will get the messages from a specified channel.
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/datasource-reference/slack/listmessages.png" alt="Slack datasource: ToolJet"/>
+<img className="screenshot-full" src="/img/datasource-reference/slack/listmessages.png" alt="Slack datasource: JumpStart"/>
 
 </div>

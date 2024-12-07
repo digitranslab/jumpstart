@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
-import { TooljetDatabaseContext } from '@/TooljetDatabase/index';
+import { JumpstartDatabaseContext } from '@/JumpstartDatabase/index';
 import DropDownSelect from './DropDownSelect';
 import { ButtonSolid } from '@/_ui/AppButton/AppButton';
 import Trash from '@/_ui/Icon/solidIcons/Trash';
@@ -10,7 +10,7 @@ import SolidIcon from '@/_ui/Icon/SolidIcons';
 
 export default function JoinSort({ darkMode }) {
   const { tableInfo, joinOrderByOptions, setJoinOrderByOptions, joinOptions, findTableDetails } =
-    useContext(TooljetDatabaseContext);
+    useContext(JumpstartDatabaseContext);
 
   const tableSet = new Set();
   (joinOptions || []).forEach((join) => {

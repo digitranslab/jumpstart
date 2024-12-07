@@ -7,11 +7,11 @@ title: SMTP Configuration
 
 # Configuring SMTP
 
-ToolJet uses SMTP (Simple Mail Transfer Protocol) to send emails for various purposes, including invitations and password reset requests. This guide will walk you through the process of configuring SMTP settings in ToolJet.
+JumpStart uses SMTP (Simple Mail Transfer Protocol) to send emails for various purposes, including invitations and password reset requests. This guide will walk you through the process of configuring SMTP settings in JumpStart.
 ## Prerequisites
 
 Before you begin, ensure you have:
-- Admin access to ToolJet
+- Admin access to JumpStart
 - SMTP server details from your email service provider
 
 :::info
@@ -23,7 +23,7 @@ For Community Edition, SMTP configuration will still be managed via environment 
 
 ## Configuration
 
-1. Navigate to the **Settings** section in ToolJet.
+1. Navigate to the **Settings** section in JumpStart.
 2. Select the **Email protocol (SMTP)** tab.
 3. Toggle the switch to enable **Email protocol (SMTP)**.
 4. Configure the following fields:

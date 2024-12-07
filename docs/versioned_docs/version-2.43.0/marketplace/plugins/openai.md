@@ -3,7 +3,7 @@ id: marketplace-plugin-openai
 title: OpenAI
 ---
 
-ToolJet can integrate with OpenAI to access two main services: Completions and Chat. The Completions service enables ToolJet to produce text from a given prompt or context. Meanwhile, the Chat service facilitates user interaction with an AI-driven chatbot based on OpenAI's language models. 
+JumpStart can integrate with OpenAI to access two main services: Completions and Chat. The Completions service enables JumpStart to produce text from a given prompt or context. Meanwhile, the Chat service facilitates user interaction with an AI-driven chatbot based on OpenAI's language models. 
 
 :::note
 Before following this guide, it is assumed that you have already completed the process of **[Using Marketplace plugins](/docs/marketplace/marketplace-overview#using-marketplace-plugins)**.
@@ -16,7 +16,7 @@ For connecting to OpenAI, following credentials are required:
 - **Organization ID**: Find the Organization ID here: https://platform.openai.com/account/org-settings
 
 <div style={{textAlign: 'center'}}>
-    <img className="screenshot-full" src="/img/marketplace/plugins/openai/connection-v2.png" alt="Configuring OpenAI in ToolJet" />
+    <img className="screenshot-full" src="/img/marketplace/plugins/openai/connection-v2.png" alt="Configuring OpenAI in JumpStart" />
 </div>
 
 ## Supported queries

@@ -1,4 +1,4 @@
-import { QueryError, QueryResult, QueryService, ConnectionTestResult } from '@tooljet-marketplace/common';
+import { QueryError, QueryResult, QueryService, ConnectionTestResult } from '@jumpstart-marketplace/common';
 import { SourceOptions, QueryOptions, Operation } from './types';
 import OpenAI from 'openai';  // Correct import for SDK 4.56.0
 import { getCompletion, getChatCompletion, generateImage } from './query_operations';

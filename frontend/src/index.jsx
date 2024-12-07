@@ -31,13 +31,13 @@ appService
       });
 
     if (window.public_config.APM_VENDOR === 'sentry') {
-      const tooljetServerUrl = window.public_config.TOOLJET_SERVER_URL;
+      const jumpstartServerUrl = window.public_config.JUMPSTART_SERVER_URL;
       const tracingOrigins = ['localhost', /^\//];
       const releaseVersion = window.public_config.RELEASE_VERSION
-        ? `tooljet-${window.public_config.RELEASE_VERSION}`
-        : 'tooljet';
+        ? `jumpstart-${window.public_config.RELEASE_VERSION}`
+        : 'jumpstart';
 
-      if (tooljetServerUrl) tracingOrigins.push(tooljetServerUrl);
+      if (jumpstartServerUrl) tracingOrigins.push(jumpstartServerUrl);
 
       Sentry.init({
         dsn: window.public_config.SENTRY_DNS,

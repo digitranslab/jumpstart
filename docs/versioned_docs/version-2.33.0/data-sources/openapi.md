@@ -5,11 +5,11 @@ title: OpenAPI
 
 # OpenAPI
 
-OpenAPI is a specification for designing and documenting RESTful APIs. Using OpenAPI datasource, ToolJet can generate REST API operations from OpenAPI Specs.
+OpenAPI is a specification for designing and documenting RESTful APIs. Using OpenAPI datasource, JumpStart can generate REST API operations from OpenAPI Specs.
 
 ## Connection
 
-To establish a connection with the OpenAPI global datasource, you can either click on the `+Add new global datasource` button located on the query panel or navigate to the **[Global Datasources](/docs/data-sources/overview)** page through the ToolJet dashboard.
+To establish a connection with the OpenAPI global datasource, you can either click on the `+Add new global datasource` button located on the query panel or navigate to the **[Global Datasources](/docs/data-sources/overview)** page through the JumpStart dashboard.
 
 - Connections are created based on OpenAPI specifications.
 - The available authentication methods currently supported are Basic Auth, API Key, Bearer Token, and OAuth 2.0.

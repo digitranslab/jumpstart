@@ -459,7 +459,7 @@ export class AppsController {
       throw new ForbiddenException('You do not have permissions to perform this action');
     }
 
-    const result = await this.appsService.findTooljetDbTables(app.id);
+    const result = await this.appsService.findJumpstartDbTables(app.id);
     return { tables: result };
   }
 }

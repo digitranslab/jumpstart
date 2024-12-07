@@ -14,9 +14,9 @@ only self-hosted deployments will have access to a gRPC datasource that is capab
 
 ## Setup
 
-### Step 1: Upgrade ToolJet to the version 2.5 or above
+### Step 1: Upgrade JumpStart to the version 2.5 or above
 
-Find instructions on how to do this in the setup guides located here: https://docs.tooljet.com/docs/setup/.
+Find instructions on how to do this in the setup guides located here: https://docs.jumpstart.com/docs/setup/.
 
 ### Step 2: Add proto files
 
@@ -58,7 +58,7 @@ After setting up your proto files, you should be able to establish a connection 
 
 ### Connect the gRPC datasource
 
-ToolJet requires the following to connect to gRPC servers:
+JumpStart requires the following to connect to gRPC servers:
 
 - **Server URL**
 - **Authentication type** (None, Basic, Bearer, and API key)

@@ -5,7 +5,7 @@ title: GitHub
 
 # GitHub Single Sign-on
 
-- Go to the **Workspace Settings** (⚙️) from the left sidebar in the ToolJet dashboard
+- Go to the **Workspace Settings** (⚙️) from the left sidebar in the JumpStart dashboard
   <div style={{textAlign: 'center'}}>
 
   <img className="screenshot-full" src="/img/sso/general/workside2.png" alt="General Settings: SSO" width="500"/>
@@ -49,10 +49,10 @@ title: GitHub
 
 Lastly, enter **Client Id** and **Client Secret** in GitHub manage SSO page and save.
 
-The GitHub sign-in button will now be available in your ToolJet login screen.
+The GitHub sign-in button will now be available in your JumpStart login screen.
 
 :::info
-Should configure `Host Name` if you are using GitHub Enterprise self hosted. Host name should be a URL and should not ends with `/`, example: `https://github.tooljet.com`
+Should configure `Host Name` if you are using GitHub Enterprise self hosted. Host name should be a URL and should not ends with `/`, example: `https://github.jumpstart.com`
 :::
 
 ## Setting default SSO

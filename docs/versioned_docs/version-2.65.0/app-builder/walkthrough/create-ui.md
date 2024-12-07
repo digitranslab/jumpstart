@@ -3,7 +3,7 @@ id: create-ui
 title: Creating UI
 ---
 
-ToolJet offers a variety of pre-built components that streamline the development process and allow for rapid prototyping and deployment of internal tools. This guide is focused on building a basic UI for a Support Desk Dashboard application.
+JumpStart offers a variety of pre-built components that streamline the development process and allow for rapid prototyping and deployment of internal tools. This guide is focused on building a basic UI for a Support Desk Dashboard application.
 
 ## Creating the Header
 - Drag and drop a **Text** component on the top left of the canvas. 
@@ -158,4 +158,4 @@ Click on the **Settings** button on the left sidebar. The `App mode` property wi
 When you keep the `App mode` as auto, it will follow the color scheme of the browser.
 
 
-This guide has outlined the steps to create a Support Desk Dashboard UI using ToolJet's components. You now have a visually appealing interface that will help manage and track support tickets efficiently. Continue to explore ToolJet to learn about adding functionality to the UI. 
+This guide has outlined the steps to create a Support Desk Dashboard UI using JumpStart's components. You now have a visually appealing interface that will help manage and track support tickets efficiently. Continue to explore JumpStart to learn about adding functionality to the UI. 

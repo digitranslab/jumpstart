@@ -27,7 +27,7 @@ Query Manager will list all the queries that has been created in the application
 
 ### Add
 
-Add button is used to add new query in the application. When Add button is clicked, a menu will open with a list of options for creating a query from **Default** datasources such as **Rest API**, **ToolJet Database**, **JavaScript Code**, **Python Code** or from connected **Global Datasources**.
+Add button is used to add new query in the application. When Add button is clicked, a menu will open with a list of options for creating a query from **Default** datasources such as **Rest API**, **JumpStart Database**, **JavaScript Code**, **Python Code** or from connected **Global Datasources**.
 
 <div style={{textAlign: 'center'}}>
 
@@ -170,7 +170,7 @@ In cases where multiple datasources of the same type are connected, you can easi
 
 ### Transformation
 
-Transformations can be enabled on queries to transform the query results. ToolJet allows you to transform the query results using two programming languages JavaScript & Python. Check the detailed documentation on **[Transformations](/docs/tutorial/transformations)**.
+Transformations can be enabled on queries to transform the query results. JumpStart allows you to transform the query results using two programming languages JavaScript & Python. Check the detailed documentation on **[Transformations](/docs/tutorial/transformations)**.
 
 <div style={{textAlign: 'center'}}>
 

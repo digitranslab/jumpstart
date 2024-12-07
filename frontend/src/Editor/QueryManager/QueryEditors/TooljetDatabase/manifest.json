@@ -1,11 +1,11 @@
 {
-  "$schema": "https://raw.githubusercontent.com/ToolJet/ToolJet/develop/plugins/schemas/manifest.schema.json",
-  "title": "ToolJetDb datasource",
-  "description": "A schema defining TooljetDb datasource",
+  "$schema": "https://raw.githubusercontent.com/digitranslab/jumpstart/develop/plugins/schemas/manifest.schema.json",
+  "title": "JumpStartDb datasource",
+  "description": "A schema defining JumpstartDb datasource",
   "type": "database",
   "source": {
-    "name": "ToolJetDb",
-    "kind": "tooljetdb",
+    "name": "JumpStartDb",
+    "kind": "jumpstartdb",
     "exposedVariables": {
       "isLoading": false,
       "data": [],

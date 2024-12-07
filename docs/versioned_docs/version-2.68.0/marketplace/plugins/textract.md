@@ -3,11 +3,11 @@ id: marketplace-plugin-textract
 title: Amazon Textract
 ---
 
-ToolJet integrates with Amazon Textract to facilitate the extraction of text and data from various document types, such as scanned documents, forms, and tables. Supported document formats include PDF, JPEG/JPG, and PNG.
+JumpStart integrates with Amazon Textract to facilitate the extraction of text and data from various document types, such as scanned documents, forms, and tables. Supported document formats include PDF, JPEG/JPG, and PNG.
 
 ## Connection
 
-To connect ToolJet with Amazon Textract, you will need the following credentials:
+To connect JumpStart with Amazon Textract, you will need the following credentials:
 - **Access key**
 - **Secret key**
 - **Region**

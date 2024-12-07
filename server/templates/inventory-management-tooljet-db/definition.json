@@ -1,5 +1,5 @@
 {
-    "tooljet_database": [
+    "jumpstart_database": [
         {
             "id": "8e3161de-ffa9-4502-9f4c-6d06c0f5884c",
             "table_name": "inventory_management",
@@ -95,8 +95,8 @@
                 "appV2": {
                     "id": "814c14d7-2c8c-4e30-9013-63dfcfe16d77",
                     "type": "front-end",
-                    "name": "Inventory Management - ToolJet DB",
-                    "slug": "inventory-management-tooljet-db",
+                    "name": "Inventory Management - JumpStart DB",
+                    "slug": "inventory-management-jumpstart-db",
                     "isPublic": false,
                     "isMaintenanceOn": false,
                     "icon": "layers",
@@ -540,7 +540,7 @@
                                                             "message": "Hello World!",
                                                             "alertType": "info",
                                                             "queryId": "7345388e-eda4-494d-8a44-fac9d0e11f49",
-                                                            "queryName": "tooljetdbGetProducts",
+                                                            "queryName": "jumpstartdbGetProducts",
                                                             "parameters": {}
                                                         }
                                                     ],
@@ -581,11 +581,11 @@
                                                             "value": "{{true}}"
                                                         },
                                                         "loadingState": {
-                                                            "value": "{{queries.tooljetdbGetProducts.isLoading}}",
+                                                            "value": "{{queries.jumpstartdbGetProducts.isLoading}}",
                                                             "fxActive": true
                                                         },
                                                         "data": {
-                                                            "value": "{{queries.tooljetdbGetProducts.data}}"
+                                                            "value": "{{queries.jumpstartdbGetProducts.data}}"
                                                         },
                                                         "useDynamicColumn": {
                                                             "value": "{{false}}"
@@ -1281,7 +1281,7 @@
                                                             "message": "Hello world!",
                                                             "alertType": "info",
                                                             "queryId": "0bed2d35-61e3-4a6e-ab63-e22a0b2fc899",
-                                                            "queryName": "tooljetdbAddProduct",
+                                                            "queryName": "jumpstartdbAddProduct",
                                                             "parameters": {}
                                                         }
                                                     ],
@@ -1323,7 +1323,7 @@
                                                             "value": "Add product"
                                                         },
                                                         "loadingState": {
-                                                            "value": "{{queries.tooljetdbAddProduct.isLoading}}",
+                                                            "value": "{{queries.jumpstartdbAddProduct.isLoading}}",
                                                             "fxActive": true
                                                         }
                                                     },
@@ -3721,7 +3721,7 @@
                                                     "height": 100
                                                 },
                                                 "exposedVariables": {
-                                                    "value": "ToolJet is an open-source low-code platform for building and deploying internal tools with minimal engineering efforts 🚀"
+                                                    "value": "JumpStart is an open-source low-code platform for building and deploying internal tools with minimal engineering efforts 🚀"
                                                 },
                                                 "actions": [
                                                     {
@@ -7665,7 +7665,7 @@
                                                             "value": "{{queries?.getProductStats?.data?.quantityInTotal ?? 0}}"
                                                         },
                                                         "loadingState": {
-                                                            "value": "{{queries.tooljetdbGetProducts.isLoading || queries.getProductStats.isLoading}}",
+                                                            "value": "{{queries.jumpstartdbGetProducts.isLoading || queries.getProductStats.isLoading}}",
                                                             "fxActive": true
                                                         }
                                                     },
@@ -8755,7 +8755,7 @@
                                                             "value": "{{queries?.getProductStats?.data?.quantityInStock ?? 0}}"
                                                         },
                                                         "loadingState": {
-                                                            "value": "{{queries.tooljetdbGetProducts.isLoading || queries.getProductStats.isLoading}}",
+                                                            "value": "{{queries.jumpstartdbGetProducts.isLoading || queries.getProductStats.isLoading}}",
                                                             "fxActive": true
                                                         }
                                                     },
@@ -9119,7 +9119,7 @@
                                                             "value": "{{queries?.getProductStats?.data?.lowInStock ?? 0}}"
                                                         },
                                                         "loadingState": {
-                                                            "value": "{{queries.tooljetdbGetProducts.isLoading || queries.getProductStats.isLoading}}",
+                                                            "value": "{{queries.jumpstartdbGetProducts.isLoading || queries.getProductStats.isLoading}}",
                                                             "fxActive": true
                                                         }
                                                     },
@@ -9846,7 +9846,7 @@
                                                             "value": "{{queries?.getProductStats?.data?.outOfStock ?? 0}}"
                                                         },
                                                         "loadingState": {
-                                                            "value": "{{queries.tooljetdbGetProducts.isLoading || queries.getProductStats.isLoading}}",
+                                                            "value": "{{queries.jumpstartdbGetProducts.isLoading || queries.getProductStats.isLoading}}",
                                                             "fxActive": true
                                                         }
                                                     },
@@ -10976,7 +10976,7 @@
                                                             "message": "Hello world!",
                                                             "alertType": "info",
                                                             "queryId": "1fd7199d-3feb-4c93-a2b6-070a77c075eb",
-                                                            "queryName": "tooljetdbRemoveProduct",
+                                                            "queryName": "jumpstartdbRemoveProduct",
                                                             "parameters": {}
                                                         }
                                                     ],
@@ -11017,7 +11017,7 @@
                                                             "value": "Remove"
                                                         },
                                                         "loadingState": {
-                                                            "value": "{{queries.tooljetdbRemoveProduct.isLoading}}",
+                                                            "value": "{{queries.jumpstartdbRemoveProduct.isLoading}}",
                                                             "fxActive": true
                                                         }
                                                     },
@@ -11806,7 +11806,7 @@
                                                             "message": "Hello world!",
                                                             "alertType": "info",
                                                             "queryId": "65d4cafc-537f-4874-8153-393f4108c0cb",
-                                                            "queryName": "tooljetdbUpdateProduct",
+                                                            "queryName": "jumpstartdbUpdateProduct",
                                                             "parameters": {}
                                                         }
                                                     ],
@@ -11848,7 +11848,7 @@
                                                             "value": "Save changes"
                                                         },
                                                         "loadingState": {
-                                                            "value": "{{queries.tooljetdbUpdateProduct.isLoading}}",
+                                                            "value": "{{queries.jumpstartdbUpdateProduct.isLoading}}",
                                                             "fxActive": true
                                                         }
                                                     },
@@ -14246,7 +14246,7 @@
                                                     "height": 100
                                                 },
                                                 "exposedVariables": {
-                                                    "value": "ToolJet is an open-source low-code platform for building and deploying internal tools with minimal engineering efforts 🚀"
+                                                    "value": "JumpStart is an open-source low-code platform for building and deploying internal tools with minimal engineering efforts 🚀"
                                                 },
                                                 "actions": [
                                                     {
@@ -16474,7 +16474,7 @@
                                             "message": "Hello world!",
                                             "alertType": "info",
                                             "queryId": "7345388e-eda4-494d-8a44-fac9d0e11f49",
-                                            "queryName": "tooljetdbGetProducts",
+                                            "queryName": "jumpstartdbGetProducts",
                                             "parameters": {}
                                         }
                                     ]
@@ -17762,7 +17762,7 @@
                                     "value": "{{queries?.getProductStats?.data?.quantityInTotal ?? 0}}"
                                 },
                                 "loadingState": {
-                                    "value": "{{queries.tooljetdbGetProducts.isLoading || queries.getProductStats.isLoading}}",
+                                    "value": "{{queries.jumpstartdbGetProducts.isLoading || queries.getProductStats.isLoading}}",
                                     "fxActive": true
                                 }
                             },
@@ -18036,7 +18036,7 @@
                                     "value": "{{queries?.getProductStats?.data?.quantityInStock ?? 0}}"
                                 },
                                 "loadingState": {
-                                    "value": "{{queries.tooljetdbGetProducts.isLoading || queries.getProductStats.isLoading}}",
+                                    "value": "{{queries.jumpstartdbGetProducts.isLoading || queries.getProductStats.isLoading}}",
                                     "fxActive": true
                                 }
                             },
@@ -18128,7 +18128,7 @@
                                     "value": "{{queries?.getProductStats?.data?.lowInStock ?? 0}}"
                                 },
                                 "loadingState": {
-                                    "value": "{{queries.tooljetdbGetProducts.isLoading || queries.getProductStats.isLoading}}",
+                                    "value": "{{queries.jumpstartdbGetProducts.isLoading || queries.getProductStats.isLoading}}",
                                     "fxActive": true
                                 }
                             },
@@ -18311,7 +18311,7 @@
                                     "value": "{{queries?.getProductStats?.data?.outOfStock ?? 0}}"
                                 },
                                 "loadingState": {
-                                    "value": "{{queries.tooljetdbGetProducts.isLoading || queries.getProductStats.isLoading}}",
+                                    "value": "{{queries.jumpstartdbGetProducts.isLoading || queries.getProductStats.isLoading}}",
                                     "fxActive": true
                                 }
                             },
@@ -18657,7 +18657,7 @@
                                     "value": "Remove"
                                 },
                                 "loadingState": {
-                                    "value": "{{queries.tooljetdbRemoveProduct.isLoading}}",
+                                    "value": "{{queries.jumpstartdbRemoveProduct.isLoading}}",
                                     "fxActive": true
                                 }
                             },
@@ -18892,7 +18892,7 @@
                                     "value": "Save changes"
                                 },
                                 "loadingState": {
-                                    "value": "{{queries.tooljetdbUpdateProduct.isLoading}}",
+                                    "value": "{{queries.jumpstartdbUpdateProduct.isLoading}}",
                                     "fxActive": true
                                 }
                             },
@@ -20159,7 +20159,7 @@
                                     "value": "Add product"
                                 },
                                 "loadingState": {
-                                    "value": "{{queries.tooljetdbAddProduct.isLoading}}",
+                                    "value": "{{queries.jumpstartdbAddProduct.isLoading}}",
                                     "fxActive": true
                                 }
                             },
@@ -20601,11 +20601,11 @@
                                     "value": "{{true}}"
                                 },
                                 "loadingState": {
-                                    "value": "{{queries.tooljetdbGetProducts.isLoading}}",
+                                    "value": "{{queries.jumpstartdbGetProducts.isLoading}}",
                                     "fxActive": true
                                 },
                                 "data": {
-                                    "value": "{{queries.tooljetdbGetProducts.data}}"
+                                    "value": "{{queries.jumpstartdbGetProducts.data}}"
                                 },
                                 "useDynamicColumn": {
                                     "value": "{{false}}"
@@ -20950,7 +20950,7 @@
                                 "queryId": "7345388e-eda4-494d-8a44-fac9d0e11f49",
                                 "actionId": "run-query",
                                 "alertType": "info",
-                                "queryName": "tooljetdbGetProducts",
+                                "queryName": "jumpstartdbGetProducts",
                                 "parameters": {}
                             },
                             "sourceId": "64d1d2b0-1282-43df-92ef-2bbffc8bc06b",
@@ -20969,7 +20969,7 @@
                                 "queryId": "7345388e-eda4-494d-8a44-fac9d0e11f49",
                                 "actionId": "run-query",
                                 "alertType": "info",
-                                "queryName": "tooljetdbGetProducts",
+                                "queryName": "jumpstartdbGetProducts",
                                 "parameters": {}
                             },
                             "sourceId": "c65a93f0-89b1-44d8-bde9-e1aa062fbbab",
@@ -20988,7 +20988,7 @@
                                 "queryId": "0bed2d35-61e3-4a6e-ab63-e22a0b2fc899",
                                 "actionId": "run-query",
                                 "alertType": "info",
-                                "queryName": "tooljetdbAddProduct",
+                                "queryName": "jumpstartdbAddProduct",
                                 "parameters": {}
                             },
                             "sourceId": "42aec703-8d4d-46c3-9b0c-54dc57448805",
@@ -21007,7 +21007,7 @@
                                 "queryId": "1fd7199d-3feb-4c93-a2b6-070a77c075eb",
                                 "actionId": "run-query",
                                 "alertType": "info",
-                                "queryName": "tooljetdbRemoveProduct",
+                                "queryName": "jumpstartdbRemoveProduct",
                                 "parameters": {}
                             },
                             "sourceId": "d9080647-38ff-4202-934c-0fadbcb200f9",
@@ -21026,7 +21026,7 @@
                                 "queryId": "65d4cafc-537f-4874-8153-393f4108c0cb",
                                 "actionId": "run-query",
                                 "alertType": "info",
-                                "queryName": "tooljetdbUpdateProduct",
+                                "queryName": "jumpstartdbUpdateProduct",
                                 "parameters": {}
                             },
                             "sourceId": "762b9ea5-a5b8-4dcf-b091-e31dfb45cc04",
@@ -21061,7 +21061,7 @@
                                 "queryId": "7345388e-eda4-494d-8a44-fac9d0e11f49",
                                 "actionId": "run-query",
                                 "alertType": "info",
-                                "queryName": "tooljetdbGetProducts",
+                                "queryName": "jumpstartdbGetProducts",
                                 "parameters": {}
                             },
                             "sourceId": "65d4cafc-537f-4874-8153-393f4108c0cb",
@@ -21131,7 +21131,7 @@
                                 "queryId": "7345388e-eda4-494d-8a44-fac9d0e11f49",
                                 "actionId": "run-query",
                                 "alertType": "info",
-                                "queryName": "tooljetdbGetProducts",
+                                "queryName": "jumpstartdbGetProducts",
                                 "parameters": {}
                             },
                             "sourceId": "1fd7199d-3feb-4c93-a2b6-070a77c075eb",
@@ -21182,7 +21182,7 @@
                                 "queryId": "7345388e-eda4-494d-8a44-fac9d0e11f49",
                                 "actionId": "run-query",
                                 "alertType": "info",
-                                "queryName": "tooljetdbGetProducts",
+                                "queryName": "jumpstartdbGetProducts",
                                 "parameters": {}
                             },
                             "sourceId": "0bed2d35-61e3-4a6e-ab63-e22a0b2fc899",
@@ -21387,7 +21387,7 @@
                             "id": "1ea07b28-2161-4030-b6cb-3b10c0f28999",
                             "name": "getProductStats",
                             "options": {
-                                "code": "totalQty = 0;\ninStockQty = 0;\nlowInStock = 0;\noutOfStock = 0;\nyetToReceive = 0;\n\nqueries.tooljetdbGetProducts.data.forEach((product) => {\n  totalQty += product.quantity;\n  inStockQty += product.status == \"in_stock\" ? product.quantity : 0;\n  yetToReceive += product.status == \"yet_to_receive\" ? product.quantity : 0;\n  lowInStock += product.quantity <= 10 && product.quantity > 0 ? 1 : 0;\n  outOfStock += product.quantity == 0 ? 1 : 0;\n});\n\nreturn {\n  quantityInTotal: totalQty,\n  quantityInStock: inStockQty,\n  quantityYetToReceive: yetToReceive,\n  lowInStock: lowInStock,\n  outOfStock: outOfStock,\n};",
+                                "code": "totalQty = 0;\ninStockQty = 0;\nlowInStock = 0;\noutOfStock = 0;\nyetToReceive = 0;\n\nqueries.jumpstartdbGetProducts.data.forEach((product) => {\n  totalQty += product.quantity;\n  inStockQty += product.status == \"in_stock\" ? product.quantity : 0;\n  yetToReceive += product.status == \"yet_to_receive\" ? product.quantity : 0;\n  lowInStock += product.quantity <= 10 && product.quantity > 0 ? 1 : 0;\n  outOfStock += product.quantity == 0 ? 1 : 0;\n});\n\nreturn {\n  quantityInTotal: totalQty,\n  quantityInStock: inStockQty,\n  quantityYetToReceive: yetToReceive,\n  lowInStock: lowInStock,\n  outOfStock: outOfStock,\n};",
                                 "hasParamSupport": true,
                                 "parameters": []
                             },
@@ -21398,7 +21398,7 @@
                         },
                         {
                             "id": "65d4cafc-537f-4874-8153-393f4108c0cb",
-                            "name": "tooljetdbUpdateProduct",
+                            "name": "jumpstartdbUpdateProduct",
                             "options": {
                                 "operation": "update_rows",
                                 "transformationLanguage": "javascript",
@@ -21461,7 +21461,7 @@
                                         "message": "Hello world!",
                                         "alertType": "info",
                                         "queryId": "7345388e-eda4-494d-8a44-fac9d0e11f49",
-                                        "queryName": "tooljetdbGetProducts",
+                                        "queryName": "jumpstartdbGetProducts",
                                         "parameters": {}
                                     },
                                     {
@@ -21538,7 +21538,7 @@
                         },
                         {
                             "id": "0bed2d35-61e3-4a6e-ab63-e22a0b2fc899",
-                            "name": "tooljetdbAddProduct",
+                            "name": "jumpstartdbAddProduct",
                             "options": {
                                 "operation": "create_row",
                                 "transformationLanguage": "javascript",
@@ -21600,7 +21600,7 @@
                                         "message": "Hello world!",
                                         "alertType": "info",
                                         "queryId": "7345388e-eda4-494d-8a44-fac9d0e11f49",
-                                        "queryName": "tooljetdbGetProducts",
+                                        "queryName": "jumpstartdbGetProducts",
                                         "parameters": {}
                                     },
                                     {
@@ -21677,7 +21677,7 @@
                         },
                         {
                             "id": "7345388e-eda4-494d-8a44-fac9d0e11f49",
-                            "name": "tooljetdbGetProducts",
+                            "name": "jumpstartdbGetProducts",
                             "options": {
                                 "operation": "list_rows",
                                 "transformationLanguage": "javascript",
@@ -21799,7 +21799,7 @@
                         },
                         {
                             "id": "1fd7199d-3feb-4c93-a2b6-070a77c075eb",
-                            "name": "tooljetdbRemoveProduct",
+                            "name": "jumpstartdbRemoveProduct",
                             "options": {
                                 "operation": "update_rows",
                                 "transformationLanguage": "javascript",
@@ -21842,7 +21842,7 @@
                                         "message": "Hello world!",
                                         "alertType": "info",
                                         "queryId": "7345388e-eda4-494d-8a44-fac9d0e11f49",
-                                        "queryName": "tooljetdbGetProducts",
+                                        "queryName": "jumpstartdbGetProducts",
                                         "parameters": {}
                                     },
                                     {
@@ -21956,8 +21956,8 @@
                         },
                         {
                             "id": "109c8bf3-ba3a-4e78-94b3-ba3e75551d82",
-                            "name": "tooljetdbdefault",
-                            "kind": "tooljetdb",
+                            "name": "jumpstartdbdefault",
+                            "kind": "jumpstartdb",
                             "type": "static",
                             "pluginId": null,
                             "appVersionId": "96949e73-05ba-4a42-aa7b-6c8772f7a78e",
@@ -22412,7 +22412,7 @@
                                                                 "message": "Hello World!",
                                                                 "alertType": "info",
                                                                 "queryId": "7345388e-eda4-494d-8a44-fac9d0e11f49",
-                                                                "queryName": "tooljetdbGetProducts",
+                                                                "queryName": "jumpstartdbGetProducts",
                                                                 "parameters": {}
                                                             }
                                                         ],
@@ -22453,11 +22453,11 @@
                                                                 "value": "{{true}}"
                                                             },
                                                             "loadingState": {
-                                                                "value": "{{queries.tooljetdbGetProducts.isLoading}}",
+                                                                "value": "{{queries.jumpstartdbGetProducts.isLoading}}",
                                                                 "fxActive": true
                                                             },
                                                             "data": {
-                                                                "value": "{{queries.tooljetdbGetProducts.data}}"
+                                                                "value": "{{queries.jumpstartdbGetProducts.data}}"
                                                             },
                                                             "useDynamicColumn": {
                                                                 "value": "{{false}}"
@@ -23153,7 +23153,7 @@
                                                                 "message": "Hello world!",
                                                                 "alertType": "info",
                                                                 "queryId": "0bed2d35-61e3-4a6e-ab63-e22a0b2fc899",
-                                                                "queryName": "tooljetdbAddProduct",
+                                                                "queryName": "jumpstartdbAddProduct",
                                                                 "parameters": {}
                                                             }
                                                         ],
@@ -23195,7 +23195,7 @@
                                                                 "value": "Add product"
                                                             },
                                                             "loadingState": {
-                                                                "value": "{{queries.tooljetdbAddProduct.isLoading}}",
+                                                                "value": "{{queries.jumpstartdbAddProduct.isLoading}}",
                                                                 "fxActive": true
                                                             }
                                                         },
@@ -25593,7 +25593,7 @@
                                                         "height": 100
                                                     },
                                                     "exposedVariables": {
-                                                        "value": "ToolJet is an open-source low-code platform for building and deploying internal tools with minimal engineering efforts 🚀"
+                                                        "value": "JumpStart is an open-source low-code platform for building and deploying internal tools with minimal engineering efforts 🚀"
                                                     },
                                                     "actions": [
                                                         {
@@ -29537,7 +29537,7 @@
                                                                 "value": "{{queries?.getProductStats?.data?.quantityInTotal ?? 0}}"
                                                             },
                                                             "loadingState": {
-                                                                "value": "{{queries.tooljetdbGetProducts.isLoading || queries.getProductStats.isLoading}}",
+                                                                "value": "{{queries.jumpstartdbGetProducts.isLoading || queries.getProductStats.isLoading}}",
                                                                 "fxActive": true
                                                             }
                                                         },
@@ -30627,7 +30627,7 @@
                                                                 "value": "{{queries?.getProductStats?.data?.quantityInStock ?? 0}}"
                                                             },
                                                             "loadingState": {
-                                                                "value": "{{queries.tooljetdbGetProducts.isLoading || queries.getProductStats.isLoading}}",
+                                                                "value": "{{queries.jumpstartdbGetProducts.isLoading || queries.getProductStats.isLoading}}",
                                                                 "fxActive": true
                                                             }
                                                         },
@@ -30991,7 +30991,7 @@
                                                                 "value": "{{queries?.getProductStats?.data?.lowInStock ?? 0}}"
                                                             },
                                                             "loadingState": {
-                                                                "value": "{{queries.tooljetdbGetProducts.isLoading || queries.getProductStats.isLoading}}",
+                                                                "value": "{{queries.jumpstartdbGetProducts.isLoading || queries.getProductStats.isLoading}}",
                                                                 "fxActive": true
                                                             }
                                                         },
@@ -31718,7 +31718,7 @@
                                                                 "value": "{{queries?.getProductStats?.data?.outOfStock ?? 0}}"
                                                             },
                                                             "loadingState": {
-                                                                "value": "{{queries.tooljetdbGetProducts.isLoading || queries.getProductStats.isLoading}}",
+                                                                "value": "{{queries.jumpstartdbGetProducts.isLoading || queries.getProductStats.isLoading}}",
                                                                 "fxActive": true
                                                             }
                                                         },
@@ -32848,7 +32848,7 @@
                                                                 "message": "Hello world!",
                                                                 "alertType": "info",
                                                                 "queryId": "1fd7199d-3feb-4c93-a2b6-070a77c075eb",
-                                                                "queryName": "tooljetdbRemoveProduct",
+                                                                "queryName": "jumpstartdbRemoveProduct",
                                                                 "parameters": {}
                                                             }
                                                         ],
@@ -32889,7 +32889,7 @@
                                                                 "value": "Remove"
                                                             },
                                                             "loadingState": {
-                                                                "value": "{{queries.tooljetdbRemoveProduct.isLoading}}",
+                                                                "value": "{{queries.jumpstartdbRemoveProduct.isLoading}}",
                                                                 "fxActive": true
                                                             }
                                                         },
@@ -33678,7 +33678,7 @@
                                                                 "message": "Hello world!",
                                                                 "alertType": "info",
                                                                 "queryId": "65d4cafc-537f-4874-8153-393f4108c0cb",
-                                                                "queryName": "tooljetdbUpdateProduct",
+                                                                "queryName": "jumpstartdbUpdateProduct",
                                                                 "parameters": {}
                                                             }
                                                         ],
@@ -33720,7 +33720,7 @@
                                                                 "value": "Save changes"
                                                             },
                                                             "loadingState": {
-                                                                "value": "{{queries.tooljetdbUpdateProduct.isLoading}}",
+                                                                "value": "{{queries.jumpstartdbUpdateProduct.isLoading}}",
                                                                 "fxActive": true
                                                             }
                                                         },
@@ -36118,7 +36118,7 @@
                                                         "height": 100
                                                     },
                                                     "exposedVariables": {
-                                                        "value": "ToolJet is an open-source low-code platform for building and deploying internal tools with minimal engineering efforts 🚀"
+                                                        "value": "JumpStart is an open-source low-code platform for building and deploying internal tools with minimal engineering efforts 🚀"
                                                     },
                                                     "actions": [
                                                         {
@@ -38346,7 +38346,7 @@
                                                 "message": "Hello world!",
                                                 "alertType": "info",
                                                 "queryId": "7345388e-eda4-494d-8a44-fac9d0e11f49",
-                                                "queryName": "tooljetdbGetProducts",
+                                                "queryName": "jumpstartdbGetProducts",
                                                 "parameters": {}
                                             }
                                         ]
@@ -38543,5 +38543,5 @@
             }
         }
     ],
-    "tooljet_version": "2.26.2-ee2.11.2-cloud2.1.11"
+    "jumpstart_version": "2.26.2-ee2.11.2-cloud2.1.11"
 }

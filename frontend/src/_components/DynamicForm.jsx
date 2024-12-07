@@ -14,7 +14,7 @@ import Slack from '@/_components/Slack';
 import Zendesk from '@/_components/Zendesk';
 import { ConditionFilter, CondtionSort, MultiColumn } from '@/_components/MultiConditions';
 import Salesforce from '@/_components/Salesforce';
-import ToolJetDbOperations from '@/Editor/QueryManager/QueryEditors/TooljetDatabase/ToolJetDbOperations';
+import JumpStartDbOperations from '@/Editor/QueryManager/QueryEditors/JumpstartDatabase/JumpStartDbOperations';
 import { orgEnvironmentVariableService, orgEnvironmentConstantService } from '../_services';
 import { find, isEmpty } from 'lodash';
 import { ButtonSolid } from './AppButton';
@@ -128,8 +128,8 @@ const DynamicForm = ({
         return Checkbox;
       case 'checkbox-group':
         return CheckboxGroup;
-      case 'tooljetdb-operations':
-        return ToolJetDbOperations;
+      case 'jumpstartdb-operations':
+        return JumpStartDbOperations;
       case 'react-component-headers':
         return Headers;
       case 'react-component-oauth-authentication':
@@ -300,7 +300,7 @@ const DynamicForm = ({
           workspaceConstants: currentOrgEnvironmentConstants,
           optionsChanged,
         };
-      case 'tooljetdb-operations':
+      case 'jumpstartdb-operations':
         return {
           optionchanged,
           createDataSource,
@@ -417,7 +417,7 @@ const DynamicForm = ({
         {Object.keys(obj).map((key) => {
           const { label, type, encrypted, className, key: propertyKey } = obj[key];
           const Element = getElement(type);
-          const isSpecificComponent = ['tooljetdb-operations'].includes(type);
+          const isSpecificComponent = ['jumpstartdb-operations'].includes(type);
 
           return (
             <div

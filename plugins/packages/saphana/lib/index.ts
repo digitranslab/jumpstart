@@ -1,4 +1,4 @@
-import { ConnectionTestResult, QueryService, QueryResult, QueryError } from '@tooljet-plugins/common';
+import { ConnectionTestResult, QueryService, QueryResult, QueryError } from '@jumpstart-plugins/common';
 import { SourceOptions, QueryOptions } from './types';
 
 const hana = require('@sap/hana-client');

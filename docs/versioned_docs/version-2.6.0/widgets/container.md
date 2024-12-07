@@ -8,7 +8,7 @@ Containers are used to group widgets together. You can move the desired number o
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/container/container.png" alt="ToolJet - Widget Reference - Container" />
+<img className="screenshot-full" src="/img/widgets/container/container.png" alt="JumpStart - Widget Reference - Container" />
 
 </div>
 
@@ -18,7 +18,7 @@ To enable the vertical scroll on the container, drag and place any component to 
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/container/scrollcontainer.png" alt="ToolJet - Widget Reference - Container" />
+<img className="screenshot-full" src="/img/widgets/container/scrollcontainer.png" alt="JumpStart - Widget Reference - Container" />
 
 </div>
 
@@ -31,7 +31,7 @@ Under the <b>General</b> accordion, you can set the value in the string format. 
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/tooltip.png" alt="ToolJet - Widget Reference - Container" />
+<img className="screenshot-full" src="/img/tooltip.png" alt="JumpStart - Widget Reference - Container" />
 
 </div>
 
@@ -39,7 +39,7 @@ Under the <b>General</b> accordion, you can set the value in the string format. 
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/container/layout.png" alt="ToolJet - Widget Reference - Container" />
+<img className="screenshot-full" src="/img/widgets/container/layout.png" alt="JumpStart - Widget Reference - Container" />
 
 </div>
 
@@ -52,7 +52,7 @@ Under the <b>General</b> accordion, you can set the value in the string format. 
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/container/styles.png" alt="ToolJet - Widget Reference - Container" />
+<img className="screenshot-full" src="/img/widgets/container/styles.png" alt="JumpStart - Widget Reference - Container" />
 
 </div>
 

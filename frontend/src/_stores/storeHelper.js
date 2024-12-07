@@ -1,5 +1,5 @@
 import { schemaUnavailableOptions } from '@/Editor/QueryManager/constants';
-import { allOperations } from '@tooljet/plugins/client';
+import { allOperations } from '@jumpstart/plugins/client';
 import { capitalize } from 'lodash';
 import { DATA_SOURCE_TYPE } from '@/_helpers/constants';
 import { useDataQueriesStore } from '@/_stores/dataQueriesStore';

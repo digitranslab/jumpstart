@@ -1,7 +1,7 @@
 import config from 'config';
 import { authHeader, handleResponse } from '@/_helpers';
 
-export const tooljetService = {
+export const jumpstartService = {
   fetchMetaData,
   skipVersion,
   skipOnboarding,

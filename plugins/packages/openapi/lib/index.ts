@@ -8,7 +8,7 @@ import {
   getRefreshedToken,
   validateAndSetRequestOptionsBasedOnAuthType,
   getAuthUrl,
-} from '@tooljet-plugins/common';
+} from '@jumpstart-plugins/common';
 import { SourceOptions, QueryOptions, RestAPIResult } from './types';
 import got, { HTTPError, OptionsOfTextResponseBody } from 'got';
 import urrl from 'url';

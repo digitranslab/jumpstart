@@ -52,7 +52,7 @@ const Slack = ({ optionchanged, createDataSource, options, isSaving, _selectedDa
             <div className="form-label">{t('slack.authorize', 'Authorize')}</div>
             <p>
               {t(
-                'slack.connectToolJetToSlack',
+                'slack.connectJumpStartToSlack',
                 '${whiteLabelText} can connect to Slack and list users, send messages, etc. Please select appropriate permission scopes.',
                 { whiteLabelText }
               )}

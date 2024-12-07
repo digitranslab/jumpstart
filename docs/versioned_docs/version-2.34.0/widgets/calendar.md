@@ -11,7 +11,7 @@ Calendar widget comes with the following features:
 
 <div style={{textAlign: 'center'}}>
 
-<img style={{ border:'0', marginBottom:'15px', borderRadius:'5px', boxShadow: '0px 1px 3px rgba(0, 0, 0, 0.2)' }} className="screenshot-full" src="/img/widgets/calendar/calendar.png" alt="ToolJet - Widget Reference - Calendar" />
+<img style={{ border:'0', marginBottom:'15px', borderRadius:'5px', boxShadow: '0px 1px 3px rgba(0, 0, 0, 0.2)' }} className="screenshot-full" src="/img/widgets/calendar/calendar.png" alt="JumpStart - Widget Reference - Calendar" />
 
 </div>
 
@@ -96,7 +96,7 @@ If we specify the `resourceId` of any of the events as `1`, then that event will
 
 <div style={{textAlign: 'center'}}>
 
-<img style={{ border:'0', marginBottom:'15px', borderRadius:'5px', boxShadow: '0px 1px 3px rgba(0, 0, 0, 0.2)' }} className="screenshot-full" src="/img/widgets/calendar/calendar-resource.png" alt="ToolJet - Widget Reference - Calendar" />
+<img style={{ border:'0', marginBottom:'15px', borderRadius:'5px', boxShadow: '0px 1px 3px rgba(0, 0, 0, 0.2)' }} className="screenshot-full" src="/img/widgets/calendar/calendar-resource.png" alt="JumpStart - Widget Reference - Calendar" />
 
 </div>
 
@@ -226,7 +226,7 @@ A Tooltip is often used to specify extra information about something when the us
 |:-----:|:-----------:|
 | **Visibility** | Toggle on or off to control the visibility of the widget. You can programmatically change its value by clicking on the `Fx` button next to it. If `{{false}}` the widget will not be visible after the app is deployed. By default, it's set to `{{true}}`. |
 | **Cell Size in Views Classified by Resource** | When `resources` are specified, the calendar could take up quite a lot of horizontal space, making the horizontal scroll bar of calendar having to be relied upon all the time. |
-| **Header Date Format on Week View** | This format determines how the column header for each day in week view will be displayed. As with every other date format field in ToolJet, this follows the momentjs standard of date formatting. By default, its set to `DD MMM`. |
+| **Header Date Format on Week View** | This format determines how the column header for each day in week view will be displayed. As with every other date format field in JumpStart, this follows the momentjs standard of date formatting. By default, its set to `DD MMM`. |
 
 :::info
 Any property having `Fx` button next to its field can be **programmatically configured**.

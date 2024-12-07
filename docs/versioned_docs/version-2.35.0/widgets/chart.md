@@ -140,7 +140,7 @@ It offers four different modes:
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/chart/barmodes.png" alt="ToolJet - Widget Reference - Chart" />
+<img className="screenshot-full" src="/img/widgets/chart/barmodes.png" alt="JumpStart - Widget Reference - Chart" />
 
 </div>
 
@@ -184,7 +184,7 @@ In the **JSON description**, the value needs to be the `data` array with x and y
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/chart/plotly/line.png" alt="ToolJet - Widget Reference - Chart" />
+<img className="screenshot-full" src="/img/widgets/chart/plotly/line.png" alt="JumpStart - Widget Reference - Chart" />
 
 </div>
 
@@ -246,7 +246,7 @@ In the **JSON description**, the value needs to be the `data` array with x and y
 ```
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/chart/plotly/bar2.png" alt="ToolJet - Widget Reference - Chart" />
+<img className="screenshot-full" src="/img/widgets/chart/plotly/bar2.png" alt="JumpStart - Widget Reference - Chart" />
 
 </div>
 
@@ -334,7 +334,7 @@ In the **JSON description**, the value needs to be the `data` array with x and y
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/chart/plotly/area.png" alt="ToolJet - Widget Reference - Chart" />
+<img className="screenshot-full" src="/img/widgets/chart/plotly/area.png" alt="JumpStart - Widget Reference - Chart" />
 
 </div>
 

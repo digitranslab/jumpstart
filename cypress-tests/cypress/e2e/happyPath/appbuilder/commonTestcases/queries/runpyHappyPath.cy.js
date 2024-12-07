@@ -188,7 +188,7 @@ actions.unsetPageVariable('pageVar')`
 
     // addInputOnQueryField(
     //   "runpy",
-    //   "actions.generateFile('runpycsv', 'csv', [{ 'name': 'John', 'email': 'john@tooljet.com' }])"
+    //   "actions.generateFile('runpycsv', 'csv', [{ 'name': 'John', 'email': 'john@jumpstart.com' }])"
     // );
     // query("run");
 
@@ -201,7 +201,7 @@ actions.unsetPageVariable('pageVar')`
 
     // cy.readFile("cypress/downloads/runpycsv.csv", "utf-8")
     //   .should("contain", "name,email")
-    //   .and("contain", "John,john@tooljet.com");
+    //   .and("contain", "John,john@jumpstart.com");
 
     // addInputOnQueryField(
     //   "runpy",
@@ -232,10 +232,10 @@ actions.unsetPageVariable('pageVar')`
 
     addInputOnQueryField("runpy", "tj_globals.currentUser.email");
     query("preview");
-    verifypreview("raw", `dev@tooljet.io`);
+    verifypreview("raw", `dev@jumpstart.io`);
     addInputOnQueryField("runpy", "tj_globals.currentUser.email");
     query("preview");
-    verifypreview("raw", `dev@tooljet.io`);
+    verifypreview("raw", `dev@jumpstart.io`);
     addInputOnQueryField("runpy", "tj_globals.currentUser.firstName");
     query("preview");
     verifypreview("raw", `The`);

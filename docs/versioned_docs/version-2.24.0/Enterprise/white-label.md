@@ -5,7 +5,7 @@ title: White Label
 
 <div className='badge badge--primary heading-badge'>Available on: Paid plans</div>
 
-The White Label feature allows you to completely remove ToolJet's branding from the ToolJet platform, allowing you to replace it with your own customized logo, favicon and page title. This feature grants you full control over the visual identity of your ToolJet-powered application, ensuring a seamless and personalized user experience.
+The White Label feature allows you to completely remove JumpStart's branding from the JumpStart platform, allowing you to replace it with your own customized logo, favicon and page title. This feature grants you full control over the visual identity of your JumpStart-powered application, ensuring a seamless and personalized user experience.
 
 With this feature, you gain the ability to rebrand the following key elements:
 
@@ -13,7 +13,7 @@ With this feature, you gain the ability to rebrand the following key elements:
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/enterprise/white-label/newdash.png" alt="ToolJet - Enterprise - White label"/>
+<img className="screenshot-full" src="/img/enterprise/white-label/newdash.png" alt="JumpStart - Enterprise - White label"/>
 
 </div>
 
@@ -21,7 +21,7 @@ With this feature, you gain the ability to rebrand the following key elements:
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/enterprise/white-label/newfav.png" alt="ToolJet - Enterprise - White label"/>
+<img className="screenshot-full" src="/img/enterprise/white-label/newfav.png" alt="JumpStart - Enterprise - White label"/>
 
 </div>
 
@@ -29,7 +29,7 @@ With this feature, you gain the ability to rebrand the following key elements:
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/enterprise/white-label/title.png" alt="ToolJet - Enterprise - White label" />
+<img className="screenshot-full" src="/img/enterprise/white-label/title.png" alt="JumpStart - Enterprise - White label" />
 
 </div>
 
@@ -43,6 +43,6 @@ To enable white labelling, you'll need to go to the **Settings** from the Dashbo
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/enterprise/white-label/whitelabelsettings.png" alt="ToolJet - Enterprise - White label" />
+<img className="screenshot-full" src="/img/enterprise/white-label/whitelabelsettings.png" alt="JumpStart - Enterprise - White label" />
 
 </div>

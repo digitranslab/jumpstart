@@ -1,70 +1,70 @@
 ---
 id: getting-started
 title: Getting Started
-description: ToolJet is an open-source low-code framework to build and deploy custom internal tools. ToolJet can connect to your data sources such as databases ( PostgreSQL, MongoDB, MS SQL Server, Snowflake, , BigQuery, etc ), API/GraphQL endpoints, SaaS tools ( Airtable, Stripe, Google Sheets, etc ) and cloud object storage services ( AWS S3, Google Cloud Storage and Minio ). Once the data sources are connected, ToolJet can run queries on these data sources to fetch and update data. The data fetched from data sources can be visualised and modified using the UI widgets such as tables, charts, forms, etc.
+description: JumpStart is an open-source low-code framework to build and deploy custom internal tools. JumpStart can connect to your data sources such as databases ( PostgreSQL, MongoDB, MS SQL Server, Snowflake, , BigQuery, etc ), API/GraphQL endpoints, SaaS tools ( Airtable, Stripe, Google Sheets, etc ) and cloud object storage services ( AWS S3, Google Cloud Storage and Minio ). Once the data sources are connected, JumpStart can run queries on these data sources to fetch and update data. The data fetched from data sources can be visualised and modified using the UI widgets such as tables, charts, forms, etc.
 slug: /
 ---
 
-# Welcome to ToolJet Docs
+# Welcome to JumpStart Docs
 
 ---
 
-## What is ToolJet
+## What is JumpStart
 
-ToolJet is an **open-source low-code framework** to build and deploy custom internal tools. 
+JumpStart is an **open-source low-code framework** to build and deploy custom internal tools. 
 
-ToolJet ships with its built-in database called **[ToolJet DB](/docs/tooljet-database)** (built on top of PostgreSQL). You can also connect to the **external data sources** such as **databases** ( PostgreSQL, MongoDB, MS SQL Server, Snowflake, , BigQuery, etc ), **API/GraphQL endpoints**, **SaaS tools** ( Airtable, Stripe, Google Sheets, etc ) and **cloud object storage services** ( AWS S3, Google Cloud Storage and Minio ). 
+JumpStart ships with its built-in database called **[JumpStart DB](/docs/jumpstart-database)** (built on top of PostgreSQL). You can also connect to the **external data sources** such as **databases** ( PostgreSQL, MongoDB, MS SQL Server, Snowflake, , BigQuery, etc ), **API/GraphQL endpoints**, **SaaS tools** ( Airtable, Stripe, Google Sheets, etc ) and **cloud object storage services** ( AWS S3, Google Cloud Storage and Minio ). 
 
-Once the data sources are connected, ToolJet can run **queries** on these data sources to fetch and update data. The data fetched from data sources can be **visualised and modified** using the UI widgets such as tables, charts, forms, etc. You can also use **[Javascript](/docs/data-sources/run-js)** or **[Python](/docs/data-sources/run-py)** queries for writing business logic or interacting with the user interface of the application.
+Once the data sources are connected, JumpStart can run **queries** on these data sources to fetch and update data. The data fetched from data sources can be **visualised and modified** using the UI widgets such as tables, charts, forms, etc. You can also use **[Javascript](/docs/data-sources/run-js)** or **[Python](/docs/data-sources/run-py)** queries for writing business logic or interacting with the user interface of the application.
 
 <img src="/img/v2-beta/getting_started/intro.webp" alt="Getting started Demo app" width="100%" height="100%" loading="eager" />
 
 
 
-## How ToolJet works
+## How JumpStart works
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/v2-beta/getting_started/howtjworks.webp" width="100%" height="100%" alt="How ToolJet works flow" />
+<img className="screenshot-full" src="/img/v2-beta/getting_started/howtjworks.webp" width="100%" height="100%" alt="How JumpStart works flow" />
 
 </div>
 
-**With ToolJet, you can build apps in 3 simple steps:**
+**With JumpStart, you can build apps in 3 simple steps:**
 
-1. **Connect to datasources:** Connect to the ToolJet's built-in database **[ToolJet DB](/docs/tooljet-database)** (built on top of PostgreSQL) or your existing data sources such as PostgreSQL, MySQL, Firestore, Stripe, Google Sheets, API endpoints, etc.
+1. **Connect to datasources:** Connect to the JumpStart's built-in database **[JumpStart DB](/docs/jumpstart-database)** (built on top of PostgreSQL) or your existing data sources such as PostgreSQL, MySQL, Firestore, Stripe, Google Sheets, API endpoints, etc.
 
-2. **Build queries:** ToolJet comes with query builders for all supported data sources. You can also write **[Javascript](/docs/data-sources/run-js)** or **[Python](/docs/data-sources/run-py)** queries or use **[Transformations](/docs/tutorial/transformations)** to transform the query response.
+2. **Build queries:** JumpStart comes with query builders for all supported data sources. You can also write **[Javascript](/docs/data-sources/run-js)** or **[Python](/docs/data-sources/run-py)** queries or use **[Transformations](/docs/tutorial/transformations)** to transform the query response.
 
-3. **Build User Interface:** ToolJet's visual **[App Builder](/docs/app-builder/overview)** allows you to drag and drop components ( Eg: tables, charts, forms, etc ) to quickly build the user-interface of the apps. Components have events such as `on click`, `on row selected`, `on page changed`, etc. ToolJet apps can be used in light and dark mode.
+3. **Build User Interface:** JumpStart's visual **[App Builder](/docs/app-builder/overview)** allows you to drag and drop components ( Eg: tables, charts, forms, etc ) to quickly build the user-interface of the apps. Components have events such as `on click`, `on row selected`, `on page changed`, etc. JumpStart apps can be used in light and dark mode.
 
     :::tip
-    ToolJet binds together the datasources, queries and components to convert business logic into custom applications. You can also secure your ToolJet apps with **[Group & Permissions](/docs/org-management/permissions)** and **[Audit Logging](/docs/Enterprise/audit_logs)**.
+    JumpStart binds together the datasources, queries and components to convert business logic into custom applications. You can also secure your JumpStart apps with **[Group & Permissions](/docs/org-management/permissions)** and **[Audit Logging](/docs/Enterprise/audit_logs)**.
     :::
-## Choose your ToolJet
+## Choose your JumpStart
 
-There are a few different ways to set up ToolJet depending on how you intend to use it:
+There are a few different ways to set up JumpStart depending on how you intend to use it:
 
-- **[ToolJet Cloud](https://www.tooljet.com)**: hosted solution, just sign-up for free and start building apps in seconds.
+- **[JumpStart Cloud](https://www.jumpstart.com)**: hosted solution, just sign-up for free and start building apps in seconds.
 - **[Deploy on premise](/docs/setup/)**: recommended method for production or customized use cases. You'll find Server setup guides for popular platforms (AWS, GCP, Kubernetes etc) and one-click deployment guides (Heroku, DigitalOcean etc).
-- **[Try ToolJet on local machine](/docs/setup/try-tooljet/)**: the fastest way to try out ToolJet on your computer using docker.
+- **[Try JumpStart on local machine](/docs/setup/try-jumpstart/)**: the fastest way to try out JumpStart on your computer using docker.
 
 :::info
-- Data security is top priority at ToolJet, read about our **[data security here](/docs/security)**.
+- Data security is top priority at JumpStart, read about our **[data security here](/docs/security)**.
 :::
 
 ## Quickstart Guide
 
-In this quickstart guide, we'll cover the fundamentals of ToolJet by building a **Time Tracking Application** that will allow end-users to record their daily working hours with supporting details. 
+In this quickstart guide, we'll cover the fundamentals of JumpStart by building a **Time Tracking Application** that will allow end-users to record their daily working hours with supporting details. 
 
 <div style={{textAlign: 'center'}}>
     <img style={{padding: '10px'}} className="screenshot-full" src="/img/quickstart-guide/time-tracker-final-preview.png" alt="Application Preview" />
 </div>
 
-If you don't already have a ToolJet account, head over to **[tooljet.com](https://tooljet.com)** to sign up for free. Existing users can simply log in.
+If you don't already have a JumpStart account, head over to **[jumpstart.com](https://jumpstart.com)** to sign up for free. Existing users can simply log in.
 
 ### Create Database Table
 
-We'll first create a table in ToolJet's built-in **[database](/docs/tooljet-database)**. 
+We'll first create a table in JumpStart's built-in **[database](/docs/jumpstart-database)**. 
 
 Navigate to the **Database** tab from the left sidebar. Click on the **Create new table** button on the top-left. A dialog box will slide from the right to configure the database table properties. 
 
@@ -91,7 +91,7 @@ Navigate to the **Database** tab from the left sidebar. Click on the **Create ne
     </p>
   </div>
   <div style={{flex: 1, padding: '10px'}}>
-    <img className="screenshot-full" src="/img/quickstart-guide/database-setup.png" alt="ToolJet Database Table" />
+    <img className="screenshot-full" src="/img/quickstart-guide/database-setup.png" alt="JumpStart Database Table" />
   </div>
 </div>
 <br/>
@@ -104,9 +104,9 @@ Add three rows of dummy data by clicking on the **Add New Row** button and enter
     <img style={{padding: '10px'}} className="screenshot-full" src="/img/quickstart-guide/dummy-data.png" alt="Add Dummy Data" />
 </div>
 
-### Create UI For Home Page Using ToolJet App-Builder
+### Create UI For Home Page Using JumpStart App-Builder
 
-We'll now go ahead and build the Home page of our application using the **ToolJet** **[App-Builder](/docs/app-builder/overview)**. 
+We'll now go ahead and build the Home page of our application using the **JumpStart** **[App-Builder](/docs/app-builder/overview)**. 
 
 Click on the **Dashboard** button on the sidebar and click on the **Create new app** button. A new application will be created with an empty canvas. 
 
@@ -156,7 +156,7 @@ Let's build the header of our application. Click and drag an **[Image](/docs/wid
 Enter the below value as **URL**:
 
 ```js
-https://static-00.iconduck.com/assets.00/tooljet-icon-1024x908-0mi0u3op.png
+https://static-00.iconduck.com/assets.00/jumpstart-icon-1024x908-0mi0u3op.png
 ```
 
 <div style={{textAlign: 'center'}}>
@@ -185,11 +185,11 @@ Drag and drop a table component on the canvas. Adjust the width and make it slig
     <img style={{padding: '10px'}} className="screenshot-full" src="/img/quickstart-guide/rename-table.png" alt="Drag and Drop Table Component" />
 </div>
 
-### Create Your First Query In ToolJet
+### Create Your First Query In JumpStart
 
 It's time to add some real data to our application. 
 
-Click on the **Show Query Panel** button on the top-left of the **Query Panel** to expand it. Click on the **+Add** and select **ToolJet Database** - a new query will be created. Rename the query to *getTrackerSummary*. Select *timeTracker* (the database table that we had created at the start) as the Table name and **List Rows** as Operations. 
+Click on the **Show Query Panel** button on the top-left of the **Query Panel** to expand it. Click on the **+Add** and select **JumpStart Database** - a new query will be created. Rename the query to *getTrackerSummary*. Select *timeTracker* (the database table that we had created at the start) as the Table name and **List Rows** as Operations. 
 
 <div style={{textAlign: 'center'}}>
     <img style={{padding: '10px'}} className="screenshot-full" src="/img/quickstart-guide/first-query.gif" alt="Create a Get Query" />
@@ -205,7 +205,7 @@ To see the preview of the returned data, press on the **Preview** button in the 
 
 ### Adding Queried Data To The Table
 
-We need to use double curly braces `{{}}` to write custom JavaScript code or access values such as query results, component variables and other variables available in the ToolJet App-Builder.
+We need to use double curly braces `{{}}` to write custom JavaScript code or access values such as query results, component variables and other variables available in the JumpStart App-Builder.
 
 The general format to access queries is:
 
@@ -279,7 +279,7 @@ We are ready with the labels, let's place the input components next to the label
     <img style={{padding: '10px'}} className="screenshot-full" src="/img/quickstart-guide/modal-with-inputs.png" alt="Modal With Input Fields" />
 </div>
 
-For the **Date Picker** field, we are using double curly braces to pass JavaScript code. Using the **Moment.js** library, we are getting today's date in the dd/mm/yyyy format. ToolJet comes with **Moment.js**, **Lodash** and **Axios** libraries to make it more convenient for you to work with custom JavaScript code.
+For the **Date Picker** field, we are using double curly braces to pass JavaScript code. Using the **Moment.js** library, we are getting today's date in the dd/mm/yyyy format. JumpStart comes with **Moment.js**, **Lodash** and **Axios** libraries to make it more convenient for you to work with custom JavaScript code.
 
 We'll close the modal by clicking on the `X`/close button on the top-right. 
 
@@ -289,7 +289,7 @@ We'll close the modal by clicking on the `X`/close button on the top-right.
 
 ### Creating Query To Write Data 
 
-We are ready with the form. Now we need to create a query that will help us add new entries to the *timeTracker* table in the database. Click on the **+ Add** button in the Query Panel. Select **ToolJet Database** from the list of available sources. 
+We are ready with the form. Now we need to create a query that will help us add new entries to the *timeTracker* table in the database. Click on the **+ Add** button in the Query Panel. Select **JumpStart Database** from the list of available sources. 
 
 Rename the query to *addLog*, select **Create row** as Operations and use the below configuration for the columns. We'll see how we can use custom code and use different keys to access the data available in the app-builder in the below table. 
 
@@ -377,7 +377,7 @@ Now every time we click on the **Submit** button on the modal, the *addLog* quer
 
 Let's create a way to delete entries from the **Table** component using **Actions**. 
 
-We'll first create the required query to perform the action. Click on the **+ Add** button in the Query Panel. Select **ToolJet Database** from the list of available sources. Rename the query to *deleteLog*, select **Delete rows** as Operations. 
+We'll first create the required query to perform the action. Click on the **+ Add** button in the Query Panel. Select **JumpStart Database** from the list of available sources. Rename the query to *deleteLog*, select **Delete rows** as Operations. 
 
 For the **Filter**, select **id** as the column(first field), **equals** as the operation(second field) and paste the below code in the **key** input(third field):
 ```js
@@ -430,40 +430,40 @@ Add some new entries to the Time Tracker. Earlier, we had put some test entries 
     <img style={{padding: '10px'}} className="screenshot-full" src="/img/quickstart-guide/logged-in-user-data.png" alt="Filtered Data For Logged-In User" />
 </div>
 
-Congratulations! You've successfully built a time tracker application and, in the process, covered the essential fundamentals of ToolJet. Now you're well-equipped to take on more complex projects. Happy building!
+Congratulations! You've successfully built a time tracker application and, in the process, covered the essential fundamentals of JumpStart. Now you're well-equipped to take on more complex projects. Happy building!
 
 
-## What Can I Do With ToolJet
+## What Can I Do With JumpStart
 
 If you are building internal tool for your organization, here are few tutorials of sample use-cases for you to get started: 
 
 - **[Build a Feature Request Management App](https://youtu.be/c2sbFTDUMzs)**
-- **[Build a Ticket Triaging App with Baserow and ToolJet](https://blog.tooljet.com/build-a-ticket-triaging-app-with-baserow-and-tooljet/)**
-- **[Building a MinIO file explorer app](https://blog.tooljet.com/building-a-minio-file-explorer-app-in-30-minutes/)**
-- **[Building a Google Cloud Storage (GCS) file explorer app](https://blog.tooljet.com/build-internal-file-explorer-application-using-google-cloud-storage-gcs-and-tooljet/)**
-- **[Build an AWS S3 file explorer app](https://blog.tooljet.com/building-an-app-to-view-and-upload-files-in-aws-s3-bucket/)**
-- **[Build Stripe Refund App](https://blog.tooljet.com/build-a-stripe-refund-tool-using-low-code/)**
-- **[Build a WhatsApp CRM](https://blog.tooljet.com/build-a-whatsapp-crm-using-tooljet-within-10-mins/)**
-- **[Build a cryptocurrency dashboard](https://blog.tooljet.com/how-to-build-a-cryptocurrency-dashboard-in-10-minutes/)**
-- **[Build a Redis GUI](https://blog.tooljet.com/building-a-redis-gui-using-tooljet-in-5-minutes/)**
+- **[Build a Ticket Triaging App with Baserow and JumpStart](https://blog.jumpstart.com/build-a-ticket-triaging-app-with-baserow-and-jumpstart/)**
+- **[Building a MinIO file explorer app](https://blog.jumpstart.com/building-a-minio-file-explorer-app-in-30-minutes/)**
+- **[Building a Google Cloud Storage (GCS) file explorer app](https://blog.jumpstart.com/build-internal-file-explorer-application-using-google-cloud-storage-gcs-and-jumpstart/)**
+- **[Build an AWS S3 file explorer app](https://blog.jumpstart.com/building-an-app-to-view-and-upload-files-in-aws-s3-bucket/)**
+- **[Build Stripe Refund App](https://blog.jumpstart.com/build-a-stripe-refund-tool-using-low-code/)**
+- **[Build a WhatsApp CRM](https://blog.jumpstart.com/build-a-whatsapp-crm-using-jumpstart-within-10-mins/)**
+- **[Build a cryptocurrency dashboard](https://blog.jumpstart.com/how-to-build-a-cryptocurrency-dashboard-in-10-minutes/)**
+- **[Build a Redis GUI](https://blog.jumpstart.com/building-a-redis-gui-using-jumpstart-in-5-minutes/)**
 
-Find more Tutorials on our **[Blog](https://blog.tooljet.com/)**.
+Find more Tutorials on our **[Blog](https://blog.jumpstart.com/)**.
 
-## For ToolJet Contributors
+## For JumpStart Contributors
 
-To contribute to ToolJet code, plugins, and documentation, refer to our **[Contributing Guide](/docs/2.18.0/category/contributing-guide)**.
+To contribute to JumpStart code, plugins, and documentation, refer to our **[Contributing Guide](/docs/2.18.0/category/contributing-guide)**.
 
-[![GitHub contributors](https://img.shields.io/github/contributors/tooljet/tooljet)](https://github.com/ToolJet/ToolJet/contributors)
-[![GitHub issues](https://img.shields.io/github/issues/ToolJet/ToolJet)](https://github.com/ToolJet/ToolJet/issues)
-[![GitHub stars](https://img.shields.io/github/stars/ToolJet/ToolJet)](https://github.com/ToolJet/ToolJet/stargazers)
-[![GitHub license](https://img.shields.io/github/license/ToolJet/ToolJet)](https://github.com/ToolJet/ToolJet)
+[![GitHub contributors](https://img.shields.io/github/contributors/digitranslab/jumpstart)](https://github.com/digitranslab/jumpstart/contributors)
+[![GitHub issues](https://img.shields.io/github/issues/digitranslab/jumpstart)](https://github.com/digitranslab/jumpstart/issues)
+[![GitHub stars](https://img.shields.io/github/stars/digitranslab/jumpstart)](https://github.com/digitranslab/jumpstart/stargazers)
+[![GitHub license](https://img.shields.io/github/license/digitranslab/jumpstart)](https://github.com/digitranslab/jumpstart)
 
-<a href="https://github.com/tooljet/tooljet/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=tooljet/tooljet&max=360&columns=20" width="100%" height="100%" alt="contributors" />
+<a href="https://github.com/digitranslab/jumpstart/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=digitranslab/jumpstart&max=360&columns=20" width="100%" height="100%" alt="contributors" />
 </a>
 
 ## Help and Support
-- We have extensively documented the features of ToolJet, but in case you are stuck, please feel free to e-mail us at **hello@tooljet.com**
-- If you are using ToolJet cloud, click on the chat icon at the bottom-left corner for instant help.
-- If you have found a bug, please create a **[GitHub issue](https://github.com/ToolJet/ToolJet/issues)** for the same.
-- Feel free to join our highly active **[Slack Community](https://www.tooljet.com/slack)**.
+- We have extensively documented the features of JumpStart, but in case you are stuck, please feel free to e-mail us at **hello@jumpstart.com**
+- If you are using JumpStart cloud, click on the chat icon at the bottom-left corner for instant help.
+- If you have found a bug, please create a **[GitHub issue](https://github.com/digitranslab/jumpstart/issues)** for the same.
+- Feel free to join our highly active **[Slack Community](https://www.jumpstart.com/slack)**.

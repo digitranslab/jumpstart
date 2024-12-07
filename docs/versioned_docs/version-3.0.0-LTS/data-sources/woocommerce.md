@@ -3,20 +3,20 @@ id: woocommerce
 title: WooCommerce
 ---
 
-ToolJet can connect to WooCommerce databases to read and write data.
+JumpStart can connect to WooCommerce databases to read and write data.
 
 <div style={{paddingTop:'24px'}}>
 
 ## Connection
 
-To establish a connection with the WooCommerce data source, you can either click on the **+ Add new Data source** button located on the query panel or navigate to the **[Data Sources](/docs/data-sources/overview)** page from the ToolJet dashboard and choose WooCommerce as the data source.
+To establish a connection with the WooCommerce data source, you can either click on the **+ Add new Data source** button located on the query panel or navigate to the **[Data Sources](/docs/data-sources/overview)** page from the JumpStart dashboard and choose WooCommerce as the data source.
 
-ToolJet requires the following to connect to WooCommerce
+JumpStart requires the following to connect to WooCommerce
 - **Host**
 - **Consumer key**
 - **Consumer secret**
 
-<img className="screenshot-full" src="/img/datasource-reference/woocommerce/woocomerce-auth-v2.png" alt="ToolJet - Data Source - Woocommerce" />
+<img className="screenshot-full" src="/img/datasource-reference/woocommerce/woocomerce-auth-v2.png" alt="JumpStart - Data Source - Woocommerce" />
 
 :::info
 NOTE: For generating keys visit admin dashboard of woocommerce , more info: https://woocommerce.github.io/woocommerce-rest-api-docs/?javascript#authentication

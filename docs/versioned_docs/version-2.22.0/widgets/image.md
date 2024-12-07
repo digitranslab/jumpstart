@@ -8,7 +8,7 @@ Image widget is used to display images in your app.
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/image/image.png" alt="ToolJet - Widget Reference - Image" />
+<img className="screenshot-full" src="/img/widgets/image/image.png" alt="JumpStart - Widget Reference - Image" />
 
 </div>
 
@@ -16,7 +16,7 @@ Image widget is used to display images in your app.
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/image/events.png" alt="ToolJet - Widget Reference - Image" />
+<img className="screenshot-full" src="/img/widgets/image/events.png" alt="JumpStart - Widget Reference - Image" />
 
 </div>
 
@@ -32,7 +32,7 @@ Check [Action Reference](/docs/category/actions-reference) docs to get the detai
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/image/props.png" alt="ToolJet - Widget Reference - Image" />
+<img className="screenshot-full" src="/img/widgets/image/props.png" alt="JumpStart - Widget Reference - Image" />
 
 </div>
 
@@ -60,7 +60,7 @@ Under the <b>General</b> accordion, you can set the value in the string format. 
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/tooltip.png" alt="ToolJet - Widget Reference - Image" />
+<img className="screenshot-full" src="/img/tooltip.png" alt="JumpStart - Widget Reference - Image" />
 
 </div>
 

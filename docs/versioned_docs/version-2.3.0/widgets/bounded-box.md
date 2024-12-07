@@ -49,7 +49,7 @@ To add an event to a bounded-box, click on the component handle to open its prop
 
 ### On change
 
-On change event is triggered when the label from the dropdown in the selector is changed in the bounded box. Just like any other event on ToolJet, you can set multiple handlers for on-change event.
+On change event is triggered when the label from the dropdown in the selector is changed in the bounded box. Just like any other event on JumpStart, you can set multiple handlers for on-change event.
 
 :::info
 Check [Action Reference](/docs/category/actions-reference) docs to get the detailed information about all the **Actions**.

@@ -3,7 +3,7 @@ id: workspace-constants
 title: Workspace Constants and Secrets
 ---
 
-Workspace Constants and Secrets in ToolJet help in maintaining consistency and security across your applications. These are essentially predefined values that remain unaltered during an application's runtime, serving two main purposes: reusable values (Global Constants) and secure storage of sensitive information (Secrets).
+Workspace Constants and Secrets in JumpStart help in maintaining consistency and security across your applications. These are essentially predefined values that remain unaltered during an application's runtime, serving two main purposes: reusable values (Global Constants) and secure storage of sensitive information (Secrets).
 
 <div class="video-container">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/rwXruKCUOqA?si=u3Cly11OeRYjqVmf&rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -22,7 +22,7 @@ One of the key functionalities of Workspace Constants and Secrets is allowing en
 To enhance security, both Global Constants and Secrets are resolved server-side. This means the actual values are not sent with network payloads; instead, the server resolves these values, thereby keeping them secure from client-side exposure. Additionally, Secrets are masked in the frontend, providing an extra layer of protection for sensitive information.
 
 <div style={{textAlign: 'center'}}>
-    <img className="screenshot-full" src="/img/tooljet-concepts/workspace-constants/workspace-constants-preview-v2.png" alt="Workspace Constants and Secrets Preview" />
+    <img className="screenshot-full" src="/img/jumpstart-concepts/workspace-constants/workspace-constants-preview-v2.png" alt="Workspace Constants and Secrets Preview" />
 </div>
 
 </div>

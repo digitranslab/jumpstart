@@ -2,9 +2,9 @@ previewsEnabled: false
 previewsExpireAfterDays: 2
 services:
   - type: web
-    name: ToolJet
+    name: JumpStart
     env: docker
-    repo: https://github.com/ToolJet/ToolJet.git
+    repo: https://github.com/digitranslab/jumpstart.git
     dockerfilePath: ./docker/preview.Dockerfile
     dockerContext: ./
     healthCheckPath: /api/health
@@ -13,14 +13,14 @@ services:
         fromDatabase:
           name: postgres-preview
           property: connectionString
-      - key: TOOLJET_DB
-        value: 'tooljet_db'
-      - key: ENABLE_TOOLJET_DB
+      - key: JUMPSTART_DB
+        value: 'jumpstart_db'
+      - key: ENABLE_JUMPSTART_DB
         value: 'true'
-      - key: TOOLJET_HOST
+      - key: JUMPSTART_HOST
         fromService:
           type: web
-          name: ToolJet
+          name: JumpStart
           envVarKey: RENDER_EXTERNAL_URL
       - key: PGRST_HOST
         fromService:
@@ -29,11 +29,11 @@ services:
           envVarKey: RENDER_EXTERNAL_URL
       - key: PORT
         value: 80
-      - fromGroup: tooljet-preview-env
+      - fromGroup: jumpstart-preview-env
   - type: web
     name: PostgREST
     env: docker
-    repo: https://github.com/ToolJet/ToolJet.git
+    repo: https://github.com/digitranslab/jumpstart.git
     dockerfilePath: ./docker/postgrest.render.Dockerfile
     dockerContext: ./
     envVars:
@@ -48,5 +48,5 @@ services:
 databases:
   - name: postgres-preview
     plan: starter
-    databaseName: tooljet_preview
+    databaseName: jumpstart_preview
     postgresMajorVersion: 13

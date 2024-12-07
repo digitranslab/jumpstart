@@ -4,9 +4,9 @@ title: Audit logs
 ---
 # Audit logs
 
-The audit log is the report of all the activities done in your ToolJet account. It will capture and display events automatically by recording who performed an activity, what when, and where the activity was performed, along with other information such as IP address.
+The audit log is the report of all the activities done in your JumpStart account. It will capture and display events automatically by recording who performed an activity, what when, and where the activity was performed, along with other information such as IP address.
 
-<img class="screenshot-full" src="/img/enterprise/audit_logs/audit_logs.gif" alt="ToolJet - Enterprise - Audit logs" height="420"/>
+<img class="screenshot-full" src="/img/enterprise/audit_logs/audit_logs.gif" alt="JumpStart - Enterprise - Audit logs" height="420"/>
 
 ### Filter audit logs
 
@@ -57,7 +57,7 @@ It is mandatory to set a Data Range in `From` and `To` to filter audit logs.
 
 ### Understanding information from logs
 
-<img class="screenshot-full" src="/img/enterprise/audit_logs/reading_logs.png" alt="ToolJet - Enterprise - Reading logs" />
+<img class="screenshot-full" src="/img/enterprise/audit_logs/reading_logs.png" alt="JumpStart - Enterprise - Reading logs" />
 
 | Property  | description |
 | ----------- | ----------- |
@@ -65,9 +65,9 @@ It is mandatory to set a Data Range in `From` and `To` to filter audit logs.
 | created_at | Displays the date and time of a logged event.  |
 | id | Every event logged has a specific event id associated with it. |
 | ip_address | Displays the IP address from where the event was logged. |
-| metadata | Metadata includes two sub-properties - `tooljet_version` and `user_agent`. `tooljet_version` displays the version of ToolJet used for the logged event and `user_agent` contains information about the device and browser used for that event. |
-| organization_id | Every organization in ToolJet has an id associated with it and is recorded when an event occurs. |
+| metadata | Metadata includes two sub-properties - `jumpstart_version` and `user_agent`. `jumpstart_version` displays the version of JumpStart used for the logged event and `user_agent` contains information about the device and browser used for that event. |
+| organization_id | Every organization in JumpStart has an id associated with it and is recorded when an event occurs. |
 | resource_id | There are several [resources](#select-resources) and for each resource that is created, an id gets associated with it.|
 | resource_name | Displays the name of the [resources](#select-resources) that were logged in the event. For example, if an app was created or deleted then it will display the name of the app. |
 | resource_type | Displays the type of the [resources](#select-resources) that were logged in the event. |
-| user_id | Every user account in ToolJet has an id associated with it and is recorded when an event occurs. |
+| user_id | Every user account in JumpStart has an id associated with it and is recorded when an event occurs. |

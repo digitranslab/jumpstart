@@ -3,15 +3,15 @@ id: couchdb
 title: CouchDB
 ---
 
-ToolJet can connect to CouchDB databases to read and write data. 
+JumpStart can connect to CouchDB databases to read and write data. 
 
 <div style={{paddingTop:'24px'}}>
 
 ## Connection
 
-To establish a connection with the CouchDB data source, you can either click on the **+ Add new Data source** button located on the query panel or navigate to the **[Data Sources](/docs/data-sources/overview)** page through the ToolJet dashboard.
+To establish a connection with the CouchDB data source, you can either click on the **+ Add new Data source** button located on the query panel or navigate to the **[Data Sources](/docs/data-sources/overview)** page through the JumpStart dashboard.
 
-ToolJet requires the following to connect to your CouchDB.
+JumpStart requires the following to connect to your CouchDB.
 - **Username**
 - **Password**
 
@@ -128,7 +128,7 @@ Inserts a new record into the database.
 #### Example
 
 ```json
-  [{"name":"tooljet"}]
+  [{"name":"jumpstart"}]
 ```
 
 <details>
@@ -158,7 +158,7 @@ You get the document as JSON in the response. For each update to the document, t
 #### Example
 
 ```json
-[{"name":"tooljet"}]
+[{"name":"jumpstart"}]
 ```
 
 <details>

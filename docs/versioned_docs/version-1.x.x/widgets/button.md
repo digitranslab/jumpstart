@@ -6,7 +6,7 @@ title: Button
 
 Button widget can be used to take actions.
 
-<iframe height="500"src="https://www.youtube.com/embed/zw3yxC7WUOg" title="Tooljet Button Widget" frameborder="0" allowfullscreen width="100%"></iframe>
+<iframe height="500"src="https://www.youtube.com/embed/zw3yxC7WUOg" title="Jumpstart Button Widget" frameborder="0" allowfullscreen width="100%"></iframe>
 
 ## Properties
 
@@ -16,7 +16,7 @@ To add an event to a button, click on the widget handle to open the widget prope
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/button/button-actions.png" alt="ToolJet - Widget Reference - Button Events List" />
+<img className="screenshot-full" src="/img/widgets/button/button-actions.png" alt="JumpStart - Widget Reference - Button Events List" />
 
 </div>
 
@@ -26,7 +26,7 @@ To add an event to a button, click on the widget handle to open the widget prope
 
 #### On hover
 
-**On hover** event is triggered when the mouse cursor is moved over the button. Just like any other event on ToolJet, you can set multiple handlers for on click event.
+**On hover** event is triggered when the mouse cursor is moved over the button. Just like any other event on JumpStart, you can set multiple handlers for on click event.
 
 :::info
 Check [Action Reference](/docs/category/actions-reference) docs to get the detailed information about all the **Actions**.
@@ -36,7 +36,7 @@ Check [Action Reference](/docs/category/actions-reference) docs to get the detai
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/button/properties.png" alt="ToolJet - Widget Reference - Button Properties" />
+<img className="screenshot-full" src="/img/widgets/button/properties.png" alt="JumpStart - Widget Reference - Button Properties" />
 
 </div>
 
@@ -55,7 +55,7 @@ Under the <b>General</b> accordion, you can set the value in the string format. 
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/tooltip.png" alt="ToolJet - Widget Reference - Tooltip" />
+<img className="screenshot-full" src="/img/tooltip.png" alt="JumpStart - Widget Reference - Tooltip" />
 
 </div>
 
@@ -63,7 +63,7 @@ Under the <b>General</b> accordion, you can set the value in the string format. 
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/list-view/listlayout.png" alt="ToolJet - Widget Reference - Layout" />
+<img className="screenshot-full" src="/img/widgets/list-view/listlayout.png" alt="JumpStart - Widget Reference - Layout" />
 
 </div>
 
@@ -76,7 +76,7 @@ Under the <b>General</b> accordion, you can set the value in the string format. 
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/button/styles.png" alt="ToolJet - Widget Reference - Button Styles" />
+<img className="screenshot-full" src="/img/widgets/button/styles.png" alt="JumpStart - Widget Reference - Button Styles" />
 
 </div>
 

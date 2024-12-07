@@ -1,32 +1,32 @@
 import { Injectable, NotFoundException, Optional } from '@nestjs/common';
-import { ExportTooljetDatabaseDto } from '@dto/export-resources.dto';
-import { ImportResourcesDto, ImportTooljetDatabaseDto } from '@dto/import-resources.dto';
-import { TooljetDbService } from './tooljet_db.service';
+import { ExportJumpstartDatabaseDto } from '@dto/export-resources.dto';
+import { ImportResourcesDto, ImportJumpstartDatabaseDto } from '@dto/import-resources.dto';
+import { JumpstartDbService } from './jumpstart_db.service';
 import { EntityManager } from 'typeorm';
 import { InternalTable } from 'src/entities/internal_table.entity';
 import { transformTjdbImportDto } from 'src/helpers/tjdb_dto_transforms';
 import { InjectEntityManager } from '@nestjs/typeorm';
 
 @Injectable()
-export class TooljetDbImportExportService {
+export class JumpstartDbImportExportService {
   constructor(
-    private readonly tooljetDbService: TooljetDbService,
+    private readonly jumpstartDbService: JumpstartDbService,
     private readonly manager: EntityManager,
     // TODO: remove optional decorator when
-    // ENABLE_TOOLJET_DB flag is deprecated
+    // ENABLE_JUMPSTART_DB flag is deprecated
     @Optional()
-    @InjectEntityManager('tooljetDb')
-    private readonly tooljetDbManager: EntityManager
+    @InjectEntityManager('jumpstartDb')
+    private readonly jumpstartDbManager: EntityManager
   ) {}
 
-  async export(organizationId: string, tjDbDto: ExportTooljetDatabaseDto) {
+  async export(organizationId: string, tjDbDto: ExportJumpstartDatabaseDto) {
     const internalTable = await this.manager.findOne(InternalTable, {
       where: { organizationId, id: tjDbDto.table_id },
     });
 
-    if (!internalTable) throw new NotFoundException('Tooljet database table not found');
+    if (!internalTable) throw new NotFoundException('Jumpstart database table not found');
 
-    const { columns, foreign_keys } = await this.tooljetDbService.perform(organizationId, 'view_table', {
+    const { columns, foreign_keys } = await this.jumpstartDbService.perform(organizationId, 'view_table', {
       id: tjDbDto.table_id,
     });
 
@@ -43,7 +43,7 @@ export class TooljetDbImportExportService {
     const tableNameForeignKeyMapping = {};
     const transformedTableNameMapping = {};
     const queryRunner = this.manager.connection.createQueryRunner();
-    const tjdbQueryRunner = this.tooljetDbManager.connection.createQueryRunner();
+    const tjdbQueryRunner = this.jumpstartDbManager.connection.createQueryRunner();
     const connectionManagers = { appManager: queryRunner.manager, tjdbManager: tjdbQueryRunner.manager };
     await tjdbQueryRunner.connect();
     await tjdbQueryRunner.startTransaction();
@@ -51,7 +51,7 @@ export class TooljetDbImportExportService {
     await queryRunner.startTransaction();
 
     try {
-      for (const tjdbImportDto of importResourcesDto.tooljet_database) {
+      for (const tjdbImportDto of importResourcesDto.jumpstart_database) {
         const transformedDto = transformTjdbImportDto(tjdbImportDto, importingVersion);
         const { foreign_keys } = transformedDto.schema;
         const createdTable = await this.import(
@@ -73,7 +73,7 @@ export class TooljetDbImportExportService {
               transformedTableNameMapping?.[ele.referenced_table_name] || ele.referenced_table_name,
           };
         });
-        await this.tooljetDbService.perform(
+        await this.jumpstartDbService.perform(
           importResourcesDto.organization_id,
           'create_foreign_key',
           {
@@ -86,8 +86,8 @@ export class TooljetDbImportExportService {
 
       await tjdbQueryRunner.commitTransaction();
       await queryRunner.commitTransaction();
-      await this.tooljetDbManager.query("NOTIFY pgrst, 'reload schema'");
-      return { tableNameMapping, tooljet_database: tjdbDatabase };
+      await this.jumpstartDbManager.query("NOTIFY pgrst, 'reload schema'");
+      return { tableNameMapping, jumpstart_database: tjdbDatabase };
     } catch (err) {
       await tjdbQueryRunner.rollbackTransaction();
       await queryRunner.rollbackTransaction();
@@ -100,7 +100,7 @@ export class TooljetDbImportExportService {
 
   async import(
     organizationId: string,
-    tjDbDto: ImportTooljetDatabaseDto,
+    tjDbDto: ImportJumpstartDatabaseDto,
     cloning = false,
     connectionManagers: Record<string, EntityManager> = {}
   ) {
@@ -126,7 +126,7 @@ export class TooljetDbImportExportService {
     // TODO: Add support for foreign keys
     const { columns } = tjDbDto.schema;
 
-    return await this.tooljetDbService.perform(
+    return await this.jumpstartDbService.perform(
       organizationId,
       'create_table',
       {
@@ -137,10 +137,10 @@ export class TooljetDbImportExportService {
     );
   }
 
-  async isTableColumnsSubset(internalTable: InternalTable, tjDbDto: ImportTooljetDatabaseDto): Promise<boolean> {
+  async isTableColumnsSubset(internalTable: InternalTable, tjDbDto: ImportJumpstartDatabaseDto): Promise<boolean> {
     const dtoColumns = new Set<string>(tjDbDto.schema.columns.map((c) => c.column_name));
 
-    const internalTableColumnSchema = await this.tooljetDbService.perform(internalTable.organizationId, 'view_table', {
+    const internalTableColumnSchema = await this.jumpstartDbService.perform(internalTable.organizationId, 'view_table', {
       id: internalTable.id,
     });
     const internalTableColumns = new Set<string>(internalTableColumnSchema.map((c) => c.column_name));

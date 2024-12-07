@@ -4,7 +4,7 @@ title: Run Query at Specified Intervals
 ---
 <div style={{paddingBottom:'24px'}}>
 
-In this guide, we'll walk through the process of building a ToolJet application that automates data retrieval at specific intervals. By utilizing the RunJS queries, we can set up intervals for triggering queries, ensuring that the data is fetched dynamically and efficiently.
+In this guide, we'll walk through the process of building a JumpStart application that automates data retrieval at specific intervals. By utilizing the RunJS queries, we can set up intervals for triggering queries, ensuring that the data is fetched dynamically and efficiently.
 
 </div>
 
@@ -12,7 +12,7 @@ In this guide, we'll walk through the process of building a ToolJet application 
 
 ## Step 1: Create a New Application
 
-Begin by creating a new application in the ToolJet dashboard. Once the app builder opens, Drag a table component onto the canvas. This component will display the data fetched from the REST API query.
+Begin by creating a new application in the JumpStart dashboard. Once the app builder opens, Drag a table component onto the canvas. This component will display the data fetched from the REST API query.
 
 <div style={{textAlign: 'center'}}>
  <img style={{ border:'0', marginBottom:'15px', borderRadius:'5px', boxShadow: '0px 1px 3px rgba(0, 0, 0, 0.2)' }} className="screenshot-full" src="/img/how-to/setinterval/table.png" alt="Table Component With Data" />
@@ -110,6 +110,6 @@ Drag a button on the canvas to act as a user-triggered stop mechanism. Attach an
 
 <div style={{paddingTop:'24px', paddingBottom:'24px'}}>
 
-By following these steps, your ToolJet application will dynamically fetch data at specified intervals, providing an efficient and automated user experience.
+By following these steps, your JumpStart application will dynamically fetch data at specified intervals, providing an efficient and automated user experience.
 
 </div>

@@ -1,5 +1,5 @@
 {
-  "name": "@tooljet-marketplace/pinecone",
+  "name": "@jumpstart-marketplace/pinecone",
   "version": "1.0.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -15,11 +15,11 @@
     "build": "ncc build lib/index.ts -o dist",
     "watch": "ncc build lib/index.ts -o dist --watch"
   },
-  "homepage": "https://github.com/tooljet/tooljet#readme",
+  "homepage": "https://github.com/digitranslab/jumpstart#readme",
   "dependencies": {
     "@grpc/grpc-js": "^1.12.2",
     "@pinecone-database/pinecone": "^3.0.3",
-    "@tooljet-marketplace/common": "^1.0.0"
+    "@jumpstart-marketplace/common": "^1.0.0"
   },
   "devDependencies": {
     "@vercel/ncc": "^0.34.0",

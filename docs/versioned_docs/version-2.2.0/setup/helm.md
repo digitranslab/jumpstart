@@ -3,18 +3,18 @@ id: helm
 title: Helm
 ---
 
-# Deploying ToolJet with Helm Chart
+# Deploying JumpStart with Helm Chart
 
-This repository contains Helm charts for deploying [ToolJet](https://github.com/ToolJet/helm-charts) on a Kubernetes Cluster using Helm v3. The charts include an integrated PostgreSQL server that is enabled by default. However, you have the option to disable it and configure a different PostgreSQL server by updating the `values.yml` file.
+This repository contains Helm charts for deploying [JumpStart](https://github.com/digitranslab/helm-charts) on a Kubernetes Cluster using Helm v3. The charts include an integrated PostgreSQL server that is enabled by default. However, you have the option to disable it and configure a different PostgreSQL server by updating the `values.yml` file.
 
-*If you have any questions feel free to join our [Slack Community](https://tooljet.com/slack) or send us an email at hello@tooljet.com.*
+*If you have any questions feel free to join our [Slack Community](https://jumpstart.com/slack) or send us an email at hello@jumpstart.com.*
 
 ## Installation
 
 ### From Helm repo
 ```bash
-helm repo add tooljet https://github.com/ToolJet/helm-charts.git
-helm install tooljet tooljet/tooljet
+helm repo add jumpstart https://github.com/digitranslab/helm-charts.git
+helm install jumpstart digitranslab/jumpstart
 ```
 
 ### From the source
@@ -25,15 +25,15 @@ helm install tooljet tooljet/tooljet
 
 Remember to replace the variables with your specific configuration values.
 
-**ToolJet Database**
+**JumpStart Database**
 
-ToolJet offers a hosted database solution that allows you to build applications quickly and manage your data effortlessly. The ToolJet database requires no setup and provides a user-friendly interface for data management.
+JumpStart offers a hosted database solution that allows you to build applications quickly and manage your data effortlessly. The JumpStart database requires no setup and provides a user-friendly interface for data management.
 
-For more information about the ToolJet database, you can visit [here](/docs/tooljet-database).
+For more information about the JumpStart database, you can visit [here](/docs/jumpstart-database).
 
-If you plan to use this feature, you need to set up and deploy the PostgREST server, which facilitates querying the ToolJet Database.
+If you plan to use this feature, you need to set up and deploy the PostgREST server, which facilitates querying the JumpStart Database.
 
-To enable the ToolJet database, please set the environment variable `ENABLE_TOOLJET_DB` to true in the `values.yaml` file.
+To enable the JumpStart database, please set the environment variable `ENABLE_JUMPSTART_DB` to true in the `values.yaml` file.
 
 ## Upgrading to the Latest Version
 
@@ -49,4 +49,4 @@ If this is a new installation of the application, you may start directly with th
 
 - Users on versions earlier than v2.23.0-ee2.10.2 must first upgrade to this version before proceeding to the latest version.
 
-For specific issues or questions, refer to our **[Slack](https://tooljet.slack.com/join/shared_invite/zt-25438diev-mJ6LIZpJevG0LXCEcL0NhQ#)**.
+For specific issues or questions, refer to our **[Slack](https://jumpstart.slack.com/join/shared_invite/zt-25438diev-mJ6LIZpJevG0LXCEcL0NhQ#)**.

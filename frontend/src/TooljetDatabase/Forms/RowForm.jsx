@@ -1,12 +1,12 @@
 import React, { useState, useContext, useEffect, useRef } from 'react';
 import { toast } from 'react-hot-toast';
 import DrawerFooter from '@/_ui/Drawer/DrawerFooter';
-import { TooljetDatabaseContext } from '../index';
-import { tooljetDatabaseService } from '@/_services';
+import { JumpstartDatabaseContext } from '../index';
+import { jumpstartDatabaseService } from '@/_services';
 import { postgresErrorCode, renderDatatypeIcon } from '../constants';
 import { ToolTip } from '@/_components/ToolTip';
 import SolidIcon from '@/_ui/Icon/SolidIcons';
-import DropDownSelect from '../../Editor/QueryManager/QueryEditors/TooljetDatabase/DropDownSelect';
+import DropDownSelect from '../../Editor/QueryManager/QueryEditors/JumpstartDatabase/DropDownSelect';
 import Information from '@/_ui/Icon/solidIcons/Information';
 import ForeignKeyIndicator from '../Icons/ForeignKeyIndicator.svg';
 import ArrowRight from '../Icons/ArrowRight.svg';
@@ -24,7 +24,7 @@ const RowForm = ({
   shouldResetRowForm,
 }) => {
   const darkMode = localStorage.getItem('darkMode') === 'true';
-  const { organizationId, selectedTable, columns, foreignKeys } = useContext(TooljetDatabaseContext);
+  const { organizationId, selectedTable, columns, foreignKeys } = useContext(JumpstartDatabaseContext);
   const inputRefs = useRef({});
   const primaryKeyColumns = [];
   const nonPrimaryKeyColumns = [];
@@ -247,7 +247,7 @@ const RowForm = ({
       setFetching(false);
       return;
     }
-    const { error } = await tooljetDatabaseService.createRow(organizationId, selectedTable.id, data);
+    const { error } = await jumpstartDatabaseService.createRow(organizationId, selectedTable.id, data);
     setFetching(false);
     if (error) {
       // TODO: Need all of this logic on the backend should ideally just get list of columns with error messages to map over

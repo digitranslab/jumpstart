@@ -24,7 +24,7 @@ else
   exit 1
 fi
 
-if $ENABLE_TOOLJET_DB == "true"
+if $ENABLE_JUMPSTART_DB == "true"
 then
     if sudo systemctl start postgrest
     then
@@ -39,7 +39,7 @@ npm --prefix server run db:setup:prod
 
 if sudo systemctl start nest
 then
-  echo "The app will be served at ${TOOLJET_HOST}"
+  echo "The app will be served at ${JUMPSTART_HOST}"
 else
   echo "Failed to start the server!"
   exit 1

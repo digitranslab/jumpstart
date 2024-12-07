@@ -56,7 +56,7 @@ jobs:
         uses: hashicorp/packer-github-actions@master
         with:
           command: build
-          arguments: -color=false -on-error=abort -var ami_name=tooljet_${{ env.RELEASE_VERSION }}.ubuntu_focal
+          arguments: -color=false -on-error=abort -var ami_name=jumpstart_${{ env.RELEASE_VERSION }}.ubuntu_focal
           target: .
           working_directory: deploy/ec2
         env:
@@ -65,9 +65,9 @@ jobs:
       - name: Send Slack Notification
         run: |
           if [[ "${{ job.status }}" == "success" ]]; then
-            message="Job '${{ env.JOB_NAME }}' succeeded! AMI = tooljet_${{ env.RELEASE_VERSION }}.ubuntu_focal"
+            message="Job '${{ env.JOB_NAME }}' succeeded! AMI = jumpstart_${{ env.RELEASE_VERSION }}.ubuntu_focal"
           else
-            message="Job '${{ env.JOB_NAME }}' failed! AMI = tooljet_${{ env.RELEASE_VERSION }}.ubuntu_focal"
+            message="Job '${{ env.JOB_NAME }}' failed! AMI = jumpstart_${{ env.RELEASE_VERSION }}.ubuntu_focal"
           fi
 
           curl -X POST -H 'Content-type: application/json' --data "{\"text\":\"$message\"}" ${{ secrets.SLACK_WEBHOOK_URL }} 

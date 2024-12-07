@@ -5,7 +5,7 @@ title: Run query at specified intervals
 
 In this how-to guide, we will learn how to make a query trigger at the specific intervals.
 
-- Let's go to the ToolJet dashboard and **create a new application**
+- Let's go to the JumpStart dashboard and **create a new application**
 - Once the app builder opens up, drag a **table** component to canvas
 - Now, create a new REST API query from the query panel at the bottom of the app builder. We will be using the data from the mock **REST API** and then load the data on the table. Let's create a REST API, choose `GET` method from the dropdown, enter the endpoint `(https://jsonplaceholder.typicode.com/posts)`, name the query `post` and then **save and run** it
     <div style={{textAlign: 'center'}}>

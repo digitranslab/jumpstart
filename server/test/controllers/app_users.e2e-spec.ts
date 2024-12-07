@@ -27,14 +27,14 @@ describe('app_users controller', () => {
 
   it('should be able to create a new app user if admin of same organization', async () => {
     const adminUserData = await createUser(app, {
-      email: 'admin@tooljet.io',
+      email: 'admin@jumpstart.io',
       groups: ['all_users', 'admin'],
     });
 
     const loggedUser = await authenticateUser(app);
 
     const developerUserData = await createUser(app, {
-      email: 'dev@tooljet.io',
+      email: 'dev@jumpstart.io',
       groups: ['all_users', 'developer'],
       organization: adminUserData.organization,
     });
@@ -58,17 +58,17 @@ describe('app_users controller', () => {
 
   it('should not be able to create new app user if admin of another organization', async () => {
     const adminUserData = await createUser(app, {
-      email: 'admin@tooljet.io',
+      email: 'admin@jumpstart.io',
       groups: ['all_users', 'admin'],
     });
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const developerUserData = await createUser(app, {
-      email: 'dev@tooljet.io',
+      email: 'dev@jumpstart.io',
       groups: ['all_users', 'developer'],
       organization: adminUserData.organization,
     });
     const anotherOrgAdminUserData = await createUser(app, {
-      email: 'another@tooljet.io',
+      email: 'another@jumpstart.io',
       groups: ['all_users', 'admin'],
     });
     const application = await createApplication(app, {
@@ -76,7 +76,7 @@ describe('app_users controller', () => {
       user: adminUserData.user,
     });
 
-    const loggedUser = await authenticateUser(app, 'another@tooljet.io');
+    const loggedUser = await authenticateUser(app, 'another@jumpstart.io');
 
     const response = await request(app.getHttpServer())
       .post(`/api/app_users`)
@@ -95,7 +95,7 @@ describe('app_users controller', () => {
 
   it('should not allow developers and viewers to create app users', async () => {
     const adminUserData = await createUser(app, {
-      email: 'admin@tooljet.io',
+      email: 'admin@jumpstart.io',
       groups: ['all_users', 'admin'],
     });
     const application = await createApplication(app, {
@@ -104,17 +104,17 @@ describe('app_users controller', () => {
     });
 
     const developerUserData = await createUser(app, {
-      email: 'dev@tooljet.io',
+      email: 'dev@jumpstart.io',
       groups: ['all_users', 'developer'],
       organization: adminUserData.organization,
     });
     const viewerUserData = await createUser(app, {
-      email: 'viewer@tooljet.io',
+      email: 'viewer@jumpstart.io',
       groups: ['all_users', 'viewer'],
       organization: adminUserData.organization,
     });
 
-    const loggedUser = await authenticateUser(app, 'dev@tooljet.io');
+    const loggedUser = await authenticateUser(app, 'dev@jumpstart.io');
 
     let response = await request(app.getHttpServer())
       .post(`/api/app_users/`)
@@ -128,7 +128,7 @@ describe('app_users controller', () => {
     expect(response.statusCode).toBe(403);
 
     await logoutUser(app, loggedUser.tokenCookie, developerUserData.user.defaultOrganizationId);
-    const loggedDeveloperUser = await authenticateUser(app, 'viewer@tooljet.io');
+    const loggedDeveloperUser = await authenticateUser(app, 'viewer@jumpstart.io');
 
     response = response = await request(app.getHttpServer())
       .post(`/api/app_users/`)

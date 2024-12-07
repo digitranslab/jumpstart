@@ -43,7 +43,7 @@ Currently, Component specific actions are supported only by the above listed wid
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - Action reference - Control Component](/img/actions/controlcomponent/inspector.png)
+![JumpStart - Action reference - Control Component](/img/actions/controlcomponent/inspector.png)
 
 </div>
 
@@ -51,7 +51,7 @@ Currently, Component specific actions are supported only by the above listed wid
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - Action reference - Control Component](/img/actions/controlcomponent/updated.png)
+![JumpStart - Action reference - Control Component](/img/actions/controlcomponent/updated.png)
 
 </div>
 
@@ -59,7 +59,7 @@ Currently, Component specific actions are supported only by the above listed wid
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - Action reference - Control Component](/img/actions/controlcomponent/button.png)
+![JumpStart - Action reference - Control Component](/img/actions/controlcomponent/button.png)
 
 </div>
 
@@ -67,7 +67,7 @@ Currently, Component specific actions are supported only by the above listed wid
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - Action reference - Control Component](/img/actions/controlcomponent/set.png)
+![JumpStart - Action reference - Control Component](/img/actions/controlcomponent/set.png)
 
 </div>
 
@@ -83,14 +83,14 @@ await components.textinput1.clear()
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - Action reference - Control Component](/img/actions/controlcomponent/jsoption.png)
+![JumpStart - Action reference - Control Component](/img/actions/controlcomponent/jsoption.png)
 
 </div>
 
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - Action reference - Control Component](/img/actions/controlcomponent/clear.png)
+![JumpStart - Action reference - Control Component](/img/actions/controlcomponent/clear.png)
 
 </div>
 

@@ -5,7 +5,7 @@ title: Google Cloud Storage
 
 # Google Cloud Storage
 
-ToolJet can connect to GCS buckets and perform various operation on them.
+JumpStart can connect to GCS buckets and perform various operation on them.
 
 ## Supported operations
 
@@ -18,13 +18,13 @@ ToolJet can connect to GCS buckets and perform various operation on them.
 
 ## Connection
 
-To establish a connection with the Google Cloud Storage data source, you can either click on the `+Add new data source` button located on the query panel or navigate to the **[Data Sources](/docs/data-sources/overview)** page through the ToolJet dashboard.
+To establish a connection with the Google Cloud Storage data source, you can either click on the `+Add new data source` button located on the query panel or navigate to the **[Data Sources](/docs/data-sources/overview)** page through the JumpStart dashboard.
 
 To connect to GCS, you need to provide the JSON Private Key of a service account that has access to the bucket. You can follow the [google documentation](https://cloud.google.com/docs/authentication/getting-started) to get started.
 
 <img className="screenshot-full" src="/img/datasource-reference/gcs-connect.png"  alt="gcs connection" />
 
-Click on **Test connection** button to verify if the credentials are correct and that the database is accessible to ToolJet server. Click on **Save** button to save the data source.
+Click on **Test connection** button to verify if the credentials are correct and that the database is accessible to JumpStart server. Click on **Save** button to save the data source.
 
 ## Querying GCS
 

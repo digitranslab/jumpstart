@@ -56,7 +56,7 @@ jobs:
       
       - name: Build marketplace plugins 
         run: |
-          cd marketplace && AWS_BUCKET=tooljet-plugins-stage node scripts/upload-to-s3.js
+          cd marketplace && AWS_BUCKET=jumpstart-plugins-stage node scripts/upload-to-s3.js
 
       - name: Comment deployment URL
         uses: actions/github-script@v5

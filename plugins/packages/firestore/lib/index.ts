@@ -1,4 +1,4 @@
-import { ConnectionTestResult, QueryError, QueryResult, QueryService, parseJson } from '@tooljet-plugins/common';
+import { ConnectionTestResult, QueryError, QueryResult, QueryService, parseJson } from '@jumpstart-plugins/common';
 
 import {
   addDocument,
