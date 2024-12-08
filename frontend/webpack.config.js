@@ -199,7 +199,7 @@ module.exports = {
       ENABLE_MARKETPLACE_FEATURE: process.env.ENABLE_MARKETPLACE_FEATURE ?? true,
       ENABLE_MARKETPLACE_DEV_MODE: process.env.ENABLE_MARKETPLACE_DEV_MODE,
       JUMPSTART_MARKETPLACE_URL:
-        process.env.JUMPSTART_MARKETPLACE_URL || 'https://jumpstart-plugins-production.s3.us-east-2.amazonaws.com',
+        process.env.JUMPSTART_MARKETPLACE_URL || 'https://tooljet-plugins-production.s3.us-east-2.amazonaws.com',
     }),
   },
 };
