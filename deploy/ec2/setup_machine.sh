@@ -30,7 +30,7 @@ sudo chown -R www-data:www-data /etc/resty-auto-ssl
 # Oracle db client library setup
 sudo apt install -y libaio1 
 curl -o instantclient-basiclite.zip https://download.oracle.com/otn_software/linux/instantclient/instantclient-basiclite-linuxx64.zip -SL && \
-curl -o instantclient-basiclite-11.zip https://jumpstart-plugins-production.s3.us-east-2.amazonaws.com/marketplace-assets/oracledb/instantclients/instantclient-basiclite-linux.x64-11.2.0.4.0.zip -SL && \
+curl -o instantclient-basiclite-11.zip https://tooljet-plugins-production.s3.us-east-2.amazonaws.com/marketplace-assets/oracledb/instantclients/instantclient-basiclite-linux.x64-11.2.0.4.0.zip -SL && \
     unzip instantclient-basiclite.zip && \
     unzip instantclient-basiclite-11.zip && \
     sudo mkdir -p /usr/lib/instantclient && sudo mv instantclient*/ /usr/lib/instantclient && \
