@@ -112,10 +112,10 @@ jobs:
     runs-on: ubuntu-latest
     if: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.job-to-run == 'jumpstart-ce' }}
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-        with:
-          ref: main
+#      - name: Checkout code
+#        uses: actions/checkout@v2
+#        with:
+#          ref: main
 
       # Create Docker Buildx builder with platform configuration
       - name: Set up Docker Buildx
